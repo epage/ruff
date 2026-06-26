@@ -12,28 +12,23 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 anstyle = { workspace = true }
-memchr = { workspace = true }
+memchr = { workspace = true, optional = true }
 unicode-width = { workspace = true }
 
 [dev-dependencies]
 ruff_annotate_snippets = { path = ".", features = ["testing-colors"] }
-
 anstream = { workspace = true }
-serde = { workspace = true, features = ["derive"] }
-snapbox = { workspace = true, features = ["diff", "term-svg", "cmd", "examples"] }
-toml = { workspace = true }
-tryfn = { workspace = true }
+snapbox = { workspace = true }
 
 [features]
-default = []
+default = ["std"]
+std = ["anstyle/std", "memchr?/std"]
+simd = ["dep:memchr"]
 testing-colors = []
-
-[[test]]
-name = "fixtures"
-harness = false
 
 [lints]
 workspace = true
 
 [lib]
+name = "annotate_snippets"
 test = false

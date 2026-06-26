@@ -14,7 +14,7 @@ license = "MIT"
 
 [workspace.dependencies]
 ruff = { version = "0.15.20", path = "crates/ruff" }
-ruff_annotate_snippets = { version = "0.0.3", path = "crates/ruff_annotate_snippets" }
+ruff_annotate_snippets = { version = "0.0.3", path = "crates/ruff_annotate_snippets", features = ["simd"] }
 ruff_cache = { version = "0.0.3", path = "crates/ruff_cache" }
 ruff_db = { version = "0.0.3", path = "crates/ruff_db", default-features = false }
 ruff_diagnostics = { version = "0.0.3", path = "crates/ruff_diagnostics" }
