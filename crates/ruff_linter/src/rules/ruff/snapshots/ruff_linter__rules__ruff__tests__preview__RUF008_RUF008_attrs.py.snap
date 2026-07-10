@@ -10,7 +10,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 14 |     immutable_annotation: typing.Sequence[int] = []
 15 |     without_annotation = []
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:23:34
@@ -21,7 +20,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 24 |     immutable_annotation: Sequence[int] = []
 25 |     without_annotation = []
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:33:34
@@ -32,7 +30,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 34 |     immutable_annotation: Sequence[int] = []
 35 |     without_annotation = []
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:42:34
@@ -43,7 +40,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 43 |     immutable_annotation: Sequence[int] = []
 44 |     without_annotation = []
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:53:54
@@ -54,7 +50,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                      ^^
 54 |     mutable_default2: dict[str, int] = attrs.field(default={})  # RUF008
 55 |     mutable_default3: set[int] = attrs.field(default=set())  # RUF008
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:54:60
@@ -65,7 +60,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                            ^^
 55 |     mutable_default3: set[int] = attrs.field(default=set())  # RUF008
 56 |     mutable_default4: dict[str, int] = attrs.field(default=dict())  # RUF008
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:55:54
@@ -76,7 +70,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                      ^^^^^
 56 |     mutable_default4: dict[str, int] = attrs.field(default=dict())  # RUF008
 57 |     correct_factory: list[int] = attrs.field(factory=list)  # okay
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:56:60
@@ -87,7 +80,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                            ^^^^^^
 57 |     correct_factory: list[int] = attrs.field(factory=list)  # okay
 58 |     immutable_default: tuple[int, ...] = attrs.field(default=())  # okay
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:67:50
@@ -98,7 +90,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                  ^^
 68 |     mutable_default2: dict[str, int] = attr.ib(default={})  # RUF008
 69 |     correct_factory: list[int] = attr.ib(factory=list)  # okay
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:68:56
@@ -109,7 +100,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                        ^^
 69 |     correct_factory: list[int] = attr.ib(factory=list)  # okay
 70 |     immutable_default: tuple[int, ...] = attr.ib(default=())  # okay
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:75:54
@@ -120,7 +110,6 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                                      ^^
 76 |     mutable_default2: set[int] = attr.attrib(default=set())  # RUF008
 77 |     correct_factory: list[int] = attr.attrib(factory=list)  # okay
-   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:76:54
@@ -130,4 +119,3 @@ RUF008 Do not use mutable default values for dataclass attributes
 76 |     mutable_default2: set[int] = attr.attrib(default=set())  # RUF008
    |                                                      ^^^^^
 77 |     correct_factory: list[int] = attr.attrib(factory=list)  # okay
-   |

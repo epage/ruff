@@ -10,4 +10,3 @@ ARG005 Unused lambda argument: `x`
    |        ^
 29 |
 30 | lambda: print("Hello, world!")
-   |

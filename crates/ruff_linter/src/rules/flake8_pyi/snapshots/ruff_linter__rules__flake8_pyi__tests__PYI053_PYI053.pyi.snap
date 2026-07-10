@@ -10,7 +10,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 | ) -> None: ...
 9 | def f3(
-  |
 help: Replace with `...`
   |
 6 | def f2(
@@ -28,7 +27,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 | ) -> None: ...
 15 | def f5(
-   |
 help: Replace with `...`
    |
 12 | def f4(
@@ -45,7 +43,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
 25 |     x: bytes = b"51 character byte stringgggggggggggggggggggggggggg\xff",  # Error: PYI053
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 | ) -> None: ...
-   |
 help: Replace with `...`
    |
 24 | def f8(
@@ -63,7 +60,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 31 |
 32 | baz: bytes = b"50 character byte stringgggggggggggggggggggggggggg"  # OK
-   |
 help: Replace with `...`
    |
 29 |
@@ -81,7 +77,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 35 |
 36 | ffoo: str = f"50 character stringggggggggggggggggggggggggggggggg"  # OK
-   |
 help: Replace with `...`
    |
 33 |
@@ -99,7 +94,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 39 |
 40 | class Demo:
-   |
 help: Replace with `...`
    |
 37 |
@@ -116,7 +110,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 65 | )
 66 | def not_a_deprecated_function() -> None: ...
-   |
 help: Replace with `...`
    |
 63 | @not_warnings_dot_deprecated(
@@ -134,7 +127,6 @@ PYI053 [*] String and bytes literals longer than 50 characters are not permitted
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 69 |
 70 | from typing import TypeAlias, Literal, Annotated
-   |
 help: Replace with `...`
    |
 67 |

@@ -279,14 +279,12 @@ Module(
   |
 
 
-  |
 5 | {,}
 6 |
 7 | {1,,2}
   |    ^ Syntax Error: Expected an expression or a '}'
 8 |
 9 | {1,,}
-  |
 
 
    |
@@ -332,4 +330,3 @@ Module(
 21 |
 22 | [*]
    |   ^ Syntax Error: Expected an expression
-   |

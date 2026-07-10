@@ -9,7 +9,6 @@ B903 Class could be dataclass or namedtuple
 8 | |         self.x = x
 9 | |         self.y = y
   | |__________________^
-  |
 
 B903 Class could be dataclass or namedtuple
   --> class_as_data_structure.py:40:1
@@ -23,7 +22,6 @@ B903 Class could be dataclass or namedtuple
    | |__________________^
 44 |
 45 |   class D:   # B903
-   |
 
 B903 Class could be dataclass or namedtuple
   --> class_as_data_structure.py:45:1
@@ -38,7 +36,6 @@ B903 Class could be dataclass or namedtuple
    | |__________________^
 50 |
 51 |   # <--- begin flake8-bugbear tests below
-   |
 
 B903 Class could be dataclass or namedtuple
   --> class_as_data_structure.py:63:1
@@ -50,7 +47,6 @@ B903 Class could be dataclass or namedtuple
 67 | |         self.foo = foo
 68 | |         self.bar = bar
    | |______________________^
-   |
 
 B903 Class could be dataclass or namedtuple
   --> class_as_data_structure.py:85:1
@@ -60,11 +56,9 @@ B903 Class could be dataclass or namedtuple
 87 | |         self.foo = foo
 88 | |         self.bar = bar
    | |______________________^
-   |
 
 B903 Class could be dataclass or namedtuple
   --> class_as_data_structure.py:91:1
-   |
 91 | / class WarningsWithDocstring:
 92 | |     """A docstring should not be an impediment to a warning"""
 93 | |
@@ -72,7 +66,6 @@ B903 Class could be dataclass or namedtuple
 95 | |         self.foo = foo
 96 | |         self.bar = bar
    | |______________________^
-   |
 
 B903 Class could be dataclass or namedtuple
    --> class_as_data_structure.py:99:1
@@ -84,4 +77,3 @@ B903 Class could be dataclass or namedtuple
     | |______________________^
 103 |
 104 |   # <-- end flake8-bugbear tests
-    |

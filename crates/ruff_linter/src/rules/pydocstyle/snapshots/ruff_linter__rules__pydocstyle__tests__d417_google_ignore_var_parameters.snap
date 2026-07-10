@@ -7,7 +7,6 @@ D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
 1 | def f(x, y, z):
   |     ^
 2 |     """Do something.
-  |
 
 D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
   --> D417.py:14:5
@@ -15,7 +14,6 @@ D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
 14 | def f(x, y, z):
    |     ^
 15 |     """Do something.
-   |
 
 D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
   --> D417.py:27:5
@@ -23,7 +21,6 @@ D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
 27 | def f(x, y, z):
    |     ^
 28 |     """Do something.
-   |
 
 D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
   --> D417.py:39:5
@@ -31,7 +28,6 @@ D417 Missing argument descriptions in the docstring for `f`: `y`, `z`
 39 | def f(x, y, z):
    |     ^
 40 |     """Do something.
-   |
 
 D417 Missing argument description in the docstring for `f`: `y`
   --> D417.py:52:5
@@ -39,7 +35,6 @@ D417 Missing argument description in the docstring for `f`: `y`
 52 | def f(x, y, z):
    |     ^
 53 |     """Do something.
-   |
 
 D417 Missing argument description in the docstring for `f`: `y`
   --> D417.py:65:5
@@ -47,7 +42,6 @@ D417 Missing argument description in the docstring for `f`: `y`
 65 | def f(x, y, z):
    |     ^
 66 |     """Do something.
-   |
 
 D417 Missing argument description in the docstring for `f`: `y`
   --> D417.py:77:5
@@ -55,7 +49,6 @@ D417 Missing argument description in the docstring for `f`: `y`
 77 | def f(x, y, z):
    |     ^
 78 |     """Do something.
-   |
 
 D417 Missing argument description in the docstring for `f`: `x`
   --> D417.py:98:5
@@ -63,7 +56,6 @@ D417 Missing argument description in the docstring for `f`: `x`
 98 | def f(x, *args, **kwargs):
    |     ^
 99 |     """Do something.
-   |
 
 D417 Missing argument description in the docstring for `select_data`: `auto_save`
    --> D417.py:155:5
@@ -72,7 +64,6 @@ D417 Missing argument description in the docstring for `select_data`: `auto_save
     |     ^^^^^^^^^^^
 156 |     query: str,
 157 |     args: tuple,
-    |
 
 D417 Missing argument description in the docstring for `should_fail`: `Args`
    --> D417.py:199:5
@@ -82,7 +73,6 @@ D417 Missing argument description in the docstring for `should_fail`: `Args`
     |     ^^^^^^^^^^^
 200 |     """
 201 |     Send a message.
-    |
 
 D417 Missing argument description in the docstring for `function_with_unpack_and_missing_arg_doc_should_fail`: `query`
    --> D417.py:238:5
@@ -92,4 +82,3 @@ D417 Missing argument description in the docstring for `function_with_unpack_and
 238 | def function_with_unpack_and_missing_arg_doc_should_fail(query: str, **kwargs: Unpack[User]):
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 239 |     """Function with Unpack kwargs but missing query arg documentation.
-    |

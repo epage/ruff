@@ -9,7 +9,6 @@ RUF104 Suppression comment without matching `#ruff:enable` comment
 11 |     # ruff:disable[E741,F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |     I = 1
-   |
 
 E741 Ambiguous variable name: `I`
   --> suppressions.py:18:5
@@ -19,7 +18,6 @@ E741 Ambiguous variable name: `I`
 18 |     I = 1
    |     ^
 19 |     # ruff: enable[E741, F841]
-   |
 
 F841 [*] Local variable `I` is assigned to but never used
   --> suppressions.py:18:5
@@ -29,9 +27,7 @@ F841 [*] Local variable `I` is assigned to but never used
 18 |     I = 1
    |     ^
 19 |     # ruff: enable[E741, F841]
-   |
 help: Remove assignment to unused variable `I`
-   |
 17 |     # should be generated.
    -     I = 1
 18 +     pass
@@ -46,7 +42,6 @@ RUF103 [*] Invalid suppression comment: no matching 'disable' comment
 18 |     I = 1
 19 |     # ruff: enable[E741, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Remove suppression comment
    |
 18 |     I = 1
@@ -63,7 +58,6 @@ F841 [*] Local variable `I` is assigned to but never used
 26 |     I = 1
    |     ^
 27 |     # ruff: enable[E741]
-   |
 help: Remove assignment to unused variable `I`
    |
 25 |     # ruff: disable[E741]
@@ -82,7 +76,6 @@ F841 [*] Local variable `l` is assigned to but never used
    |     ^
 36 |     # ruff: disable[F841]
 37 |     O = 1
-   |
 help: Remove assignment to unused variable `l`
    |
 34 |     # ruff: disable[E741]
@@ -99,7 +92,6 @@ E741 Ambiguous variable name: `I`
 39 |     I = 2
    |     ^
 40 |     # ruff: enable[F841]
-   |
 
 RUF100 [*] Unused suppression (non-enabled: `E501`)
   --> suppressions.py:46:5
@@ -111,7 +103,6 @@ RUF100 [*] Unused suppression (non-enabled: `E501`)
 47 |     I = 1
 48 |     # ruff: enable[E501]
    |     --------------------
-   |
 help: Remove unused suppression
    |
 45 |     # An unused suppression diagnostic should also be logged.
@@ -129,7 +120,6 @@ E741 Ambiguous variable name: `I`
 47 |     I = 1
    |     ^
 48 |     # ruff: enable[E501]
-   |
 
 F841 [*] Local variable `I` is assigned to but never used
   --> suppressions.py:47:5
@@ -139,7 +129,6 @@ F841 [*] Local variable `I` is assigned to but never used
 47 |     I = 1
    |     ^
 48 |     # ruff: enable[E501]
-   |
 help: Remove assignment to unused variable `I`
    |
 46 |     # ruff: disable[E501]
@@ -157,7 +146,6 @@ RUF100 [*] Unused `noqa` directive (unused: `E741`, `F841`)
 55 |     I = 1  # noqa: E741,F841
    |            ^^^^^^^^^^^^^^^^^
 56 |     # ruff:enable[E741,F841]
-   |
 help: Remove unused `noqa` directive
    |
 54 |     # ruff:disable[E741,F841]
@@ -174,7 +162,6 @@ RUF104 Suppression comment without matching `#ruff:enable` comment
 61 |     # ruff: disable[F841, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 62 |     foo = 0
-   |
 
 RUF100 [*] Unused suppression (duplicated: `F841`)
   --> suppressions.py:61:5
@@ -184,7 +171,6 @@ RUF100 [*] Unused suppression (duplicated: `F841`)
 61 |     # ruff: disable[F841, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 62 |     foo = 0
-   |
 help: Remove unused suppression
    |
 60 |     # Duplicate codes that are actually used.
@@ -202,7 +188,6 @@ RUF104 Suppression comment without matching `#ruff:enable` comment
    |     ^^^^^^^^^^^^^^^^^^^^^
 69 |     # ruff: disable[F841]
 70 |     foo = 0
-   |
 
 RUF100 [*] Unused suppression (unused: `F841`)
   --> suppressions.py:69:5
@@ -212,13 +197,11 @@ RUF100 [*] Unused suppression (unused: `F841`)
 69 |     # ruff: disable[F841]
    |     ^^^^^^^^^^^^^^^^^^^^^
 70 |     foo = 0
-   |
 help: Remove unused suppression
    |
 68 |     # ruff: disable[F841]
    -     # ruff: disable[F841]
 69 |     foo = 0
-   |
 
 RUF104 Suppression comment without matching `#ruff:enable` comment
   --> suppressions.py:75:5
@@ -228,7 +211,6 @@ RUF104 Suppression comment without matching `#ruff:enable` comment
 75 |     # ruff: disable[E741, F401, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 76 |     foo = 0
-   |
 
 RUF100 [*] Unused suppression (unused: `E741`; non-enabled: `F401`)
   --> suppressions.py:75:5
@@ -238,7 +220,6 @@ RUF100 [*] Unused suppression (unused: `E741`; non-enabled: `F401`)
 75 |     # ruff: disable[E741, F401, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 76 |     foo = 0
-   |
 help: Remove unused suppression
    |
 74 |     # Multiple codes but only one is used
@@ -255,7 +236,6 @@ RUF104 Suppression comment without matching `#ruff:enable` comment
 81 |     # ruff: disable[E741, F401, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 82 |     I = 0
-   |
 
 RUF100 [*] Unused suppression (non-enabled: `F401`)
   --> suppressions.py:81:5
@@ -265,7 +245,6 @@ RUF100 [*] Unused suppression (non-enabled: `F401`)
 81 |     # ruff: disable[E741, F401, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 82 |     I = 0
-   |
 help: Remove unused suppression
    |
 80 |     # Multiple codes but only two are used
@@ -282,7 +261,6 @@ RUF100 [*] Unused suppression (unused: `E741`, `F841`; non-enabled: `F401`)
 87 |     # ruff: disable[E741, F401, F841]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 88 |     print("hello")
-   |
 help: Remove unused suppression
    |
 86 |     # Multiple codes but none are used
@@ -302,7 +280,6 @@ RUF102 [*] Invalid rule code in suppression: YF829
 96 |     # ruff: enable[F841, RQW320]
 97 |     # ruff: enable[YF829]
    |                    -----
-   |
 help: Add non-Ruff rule codes to the `lint.external` configuration option
 help: Remove the suppression comment
    |
@@ -326,7 +303,6 @@ RUF102 [*] Invalid rule code in suppression: RQW320
 96 |     # ruff: enable[F841, RQW320]
    |                          ------
 97 |     # ruff: enable[YF829]
-   |
 help: Add non-Ruff rule codes to the `lint.external` configuration option
 help: Remove the rule code `RQW320`
    |
@@ -341,16 +317,13 @@ help: Remove the rule code `RQW320`
 
 RUF103 [*] Invalid suppression comment: missing suppression codes like `[E501, ...]`
    --> suppressions.py:109:5
-    |
 107 | def f():
 108 |     # Empty or missing rule codes
 109 |     # ruff: disable
     |     ^^^^^^^^^^^^^^^
 110 |     # ruff: disable[]
 111 |     print("hello")
-    |
 help: Remove suppression comment
-    |
 108 |     # Empty or missing rule codes
     -     # ruff: disable
 109 |     # ruff: disable[]
@@ -365,7 +338,6 @@ RUF103 [*] Invalid suppression comment: missing suppression codes like `[E501, .
 110 |     # ruff: disable[]
     |     ^^^^^^^^^^^^^^^^^
 111 |     print("hello")
-    |
 help: Remove suppression comment
     |
 109 |     # ruff: disable
@@ -381,7 +353,6 @@ F841 [*] Local variable `bar` is assigned to but never used
 117 |     foo = 0
 118 |     bar = 0
     |     ^^^
-    |
 help: Remove assignment to unused variable `bar`
     |
 117 |     foo = 0
@@ -397,7 +368,6 @@ F841 [*] Local variable `bar` is assigned to but never used
 123 |     foo = 0  # ruff: ignore[F841]
 124 |     bar = 0
     |     ^^^
-    |
 help: Remove assignment to unused variable `bar`
     |
 123 |     foo = 0  # ruff: ignore[F841]
@@ -413,7 +383,6 @@ F841 [*] Local variable `bar` is assigned to but never used
 131 |     """  # ruff: ignore[F841]
 132 |     bar = 0
     |     ^^^
-    |
 help: Remove assignment to unused variable `bar`
     |
 131 |     """  # ruff: ignore[F841]
@@ -431,7 +400,6 @@ ARG001 Unused function argument: `bar`
     |     ^^^
 147 | ):
 148 |     print("hello")
-    |
 
 ARG001 Unused function argument: `bar`
    --> suppressions.py:153:5
@@ -442,7 +410,6 @@ ARG001 Unused function argument: `bar`
     |     ^^^
 154 | ):
 155 |     print("hello")
-    |
 
 RUF100 [*] Unused suppression (unused: `ARG001`)
    --> suppressions.py:161:5
@@ -452,7 +419,6 @@ RUF100 [*] Unused suppression (unused: `ARG001`)
 161 | ):  # ruff: ignore[ARG001]  should cover nothing and be marked as unused
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 162 |     pass
-    |
 help: Remove unused suppression
     |
 160 |     bar,
@@ -469,7 +435,6 @@ RUF100 [*] Unused suppression (unused: `ARG002`)
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 167 |     def bar(self, arg1, arg2):
 168 |         print("hello")
-    |
 help: Remove unused suppression
     |
 165 | class Foo:
@@ -487,7 +452,6 @@ RUF100 [*] Unused suppression (non-enabled: `F401`)
 176 | print("goodbye")
 177 | # ruff:enable[F401]
     | -------------------
-    |
 help: Remove unused suppression
     |
 174 | # https://github.com/astral-sh/ruff/issues/23235

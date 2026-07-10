@@ -3,13 +3,11 @@ source: crates/ruff_linter/src/rules/pylint/mod.rs
 ---
 PLR0912 Too many branches (13 > 12)
   --> too_many_branches.py:8:5
-   |
  7 | # pylint: disable=using-constant-test
  8 | def wrong(): # [too-many-branches]
    |     ^^^^^
  9 |     """ Has too many branches. """
 10 |     if 1:
-   |
 
 PLR0912 Too many branches (13 > 12)
   --> too_many_branches.py:80:5
@@ -20,4 +18,3 @@ PLR0912 Too many branches (13 > 12)
    |     ^^^^^^^^^^^^^^^^^^^^
 81 |     """statements inside the with statement should get counted"""
 82 |     with suppress(Exception):
-   |

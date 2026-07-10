@@ -12,7 +12,6 @@ B033 [*] Sets should not contain duplicate item `"value1"`
   |                  Previous occurrence here
 5 | incorrect_set = {1, 1, 2}
 6 | incorrect_set_multiline = {
-  |
 help: Remove duplicate item
   |
 3 | ###
@@ -32,7 +31,6 @@ B033 [*] Sets should not contain duplicate item `1`
   |                  Previous occurrence here
 6 | incorrect_set_multiline = {
 7 |     "value1",
-  |
 help: Remove duplicate item
   |
 4 | incorrect_set = {"value1", 23, 5, "value1"}
@@ -54,7 +52,6 @@ B033 [*] Sets should not contain duplicate item `"value1"`
    |     ^^^^^^^^
 11 |     # B033
 12 | }
-   |
 help: Remove duplicate item
    |
 9  |     5,
@@ -73,7 +70,6 @@ B033 [*] Sets should not contain duplicate item `1`
    |                  Previous occurrence here
 14 | incorrect_set = {1, 1,}
 15 | incorrect_set = {0, 1, 1,}
-   |
 help: Remove duplicate item
    |
 12 | }
@@ -93,7 +89,6 @@ B033 [*] Sets should not contain duplicate item `1`
    |                  Previous occurrence here
 15 | incorrect_set = {0, 1, 1,}
 16 | incorrect_set = {0, 1, 1}
-   |
 help: Remove duplicate item
    |
 13 | incorrect_set = {1, 1}
@@ -113,7 +108,6 @@ B033 [*] Sets should not contain duplicate item `1`
    |                     Previous occurrence here
 16 | incorrect_set = {0, 1, 1}
 17 | incorrect_set = {
-   |
 help: Remove duplicate item
    |
 14 | incorrect_set = {1, 1,}
@@ -133,7 +127,6 @@ B033 [*] Sets should not contain duplicate item `1`
    |                     Previous occurrence here
 17 | incorrect_set = {
 18 |     0,
-   |
 help: Remove duplicate item
    |
 15 | incorrect_set = {0, 1, 1,}
@@ -153,7 +146,6 @@ B033 [*] Sets should not contain duplicate item `1`
    |     ^
 21 | }
 22 | incorrect_set = {False, 1, 0}
-   |
 help: Remove duplicate item
    |
 19 |     1,
@@ -172,7 +164,6 @@ B033 [*] Sets should not contain duplicate items, but `False` and `0` has the sa
    |                  Previous occurrence here
 23 | incorrect_set_multiline_with_comment = {
 24 |     "value1",
-   |
 help: Remove duplicate item
    |
 21 | }
@@ -193,7 +184,6 @@ B033 [*] Sets should not contain duplicate item `"value1"`
 27 |     "value1",
    |     ^^^^^^^^
 28 | }
-   |
 help: Remove duplicate item
    |
 25 |     23,

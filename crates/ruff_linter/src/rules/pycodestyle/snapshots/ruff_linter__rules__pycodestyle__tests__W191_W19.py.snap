@@ -7,7 +7,6 @@ W191 Indentation contains tabs
 1 |     '''File starts with a tab
   | ^^^^
 2 |     multiline string with tab in it'''
-  |
 
 invalid-syntax: Unexpected indentation
  --> W19.py:1:1
@@ -15,7 +14,6 @@ invalid-syntax: Unexpected indentation
 1 |     '''File starts with a tab
   | ^^^^
 2 |     multiline string with tab in it'''
-  |
 
 invalid-syntax: Expected a statement
  --> W19.py:5:1
@@ -25,7 +23,6 @@ invalid-syntax: Expected a statement
   | ^
 6 |     print  # indented with 1 tab
 7 | #:
-  |
 
 W191 Indentation contains tabs
  --> W19.py:6:1
@@ -35,7 +32,6 @@ W191 Indentation contains tabs
 6 |     print  # indented with 1 tab
   | ^^^^
 7 | #:
-  |
 
 W191 Indentation contains tabs
   --> W19.py:12:1
@@ -46,7 +42,6 @@ W191 Indentation contains tabs
    | ^^^^
 13 | #: E101 W191 W504
 14 | if (
-   |
 
 W191 Indentation contains tabs
   --> W19.py:19:1
@@ -57,7 +52,6 @@ W191 Indentation contains tabs
    | ^^^^
 20 | #: E101 W191
 21 | if x == 2 \
-   |
 
 W191 Indentation contains tabs
   --> W19.py:24:1
@@ -68,7 +62,6 @@ W191 Indentation contains tabs
    | ^^^^
 25 | #: E101 W191
 26 | if x == 2 \
-   |
 
 W191 Indentation contains tabs
   --> W19.py:29:1
@@ -78,7 +71,6 @@ W191 Indentation contains tabs
 29 |     pass
    | ^^^^
 30 | #:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:35:1
@@ -89,7 +81,6 @@ W191 Indentation contains tabs
    | ^^^^
 36 | #: E101 W191 W504
 37 | if (
-   |
 
 W191 Indentation contains tabs
   --> W19.py:41:1
@@ -99,7 +90,6 @@ W191 Indentation contains tabs
 41 |     pass
    | ^^^^
 42 | #:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:47:1
@@ -110,7 +100,6 @@ W191 Indentation contains tabs
    | ^^^^
 48 |             "indented for visual indent")
 49 | #:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:48:1
@@ -120,7 +109,6 @@ W191 Indentation contains tabs
 48 |             "indented for visual indent")
    | ^^^^^^^^^^^^
 49 | #:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:57:1
@@ -131,7 +119,6 @@ W191 Indentation contains tabs
    | ^^^^
 58 | #: E101 W191 W504
 59 | if ((row < 0 or self.moduleCount <= row or
-   |
 
 W191 Indentation contains tabs
   --> W19.py:61:1
@@ -142,7 +129,6 @@ W191 Indentation contains tabs
    | ^^^^
 62 | #: E101 E101 E101 E101 W191 W191 W191 W191 W191 W191
 63 | if bar:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:64:1
@@ -153,18 +139,15 @@ W191 Indentation contains tabs
    | ^^^^
 65 |         start, 'E121 lines starting with a '
 66 |         'closing bracket should be indented '
-   |
 
 W191 Indentation contains tabs
   --> W19.py:65:1
-   |
 63 | if bar:
 64 |     return (
 65 |         start, 'E121 lines starting with a '
    | ^^^^^^^^
 66 |         'closing bracket should be indented '
 67 |         "to match that of the opening "
-   |
 
 W191 Indentation contains tabs
   --> W19.py:66:1
@@ -175,7 +158,6 @@ W191 Indentation contains tabs
    | ^^^^^^^^
 67 |         "to match that of the opening "
 68 |         "bracket's line"
-   |
 
 W191 Indentation contains tabs
   --> W19.py:67:1
@@ -186,7 +168,6 @@ W191 Indentation contains tabs
    | ^^^^^^^^
 68 |         "bracket's line"
 69 |     )
-   |
 
 W191 Indentation contains tabs
   --> W19.py:68:1
@@ -197,7 +178,6 @@ W191 Indentation contains tabs
    | ^^^^^^^^
 69 |     )
 70 | #
-   |
 
 W191 Indentation contains tabs
   --> W19.py:69:1
@@ -208,7 +188,6 @@ W191 Indentation contains tabs
    | ^^^^
 70 | #
 71 | #: E101 W191 W504
-   |
 
 W191 Indentation contains tabs
   --> W19.py:76:1
@@ -219,7 +198,6 @@ W191 Indentation contains tabs
    | ^^^^
 77 | #: E101 W191 W504
 78 | # also ok, but starting to look like LISP
-   |
 
 W191 Indentation contains tabs
   --> W19.py:81:1
@@ -230,7 +208,6 @@ W191 Indentation contains tabs
    | ^^^^
 82 | #: E101 W191 W504
 83 | if (a == 2 or
-   |
 
 W191 Indentation contains tabs
   --> W19.py:86:1
@@ -241,7 +218,6 @@ W191 Indentation contains tabs
    | ^^^^
 87 | #: E101 W191 W504
 88 | if (a == 2 or
-   |
 
 W191 Indentation contains tabs
   --> W19.py:91:1
@@ -252,7 +228,6 @@ W191 Indentation contains tabs
    | ^^^^
 92 | #: W191:2:1 W191:3:1 E101:3:2
 93 | if length > options.max_line_length:
-   |
 
 W191 Indentation contains tabs
   --> W19.py:94:1
@@ -262,7 +237,6 @@ W191 Indentation contains tabs
 94 |     return options.max_line_length, \
    | ^^^^
 95 |         "E501 line too long (%d characters)" % length
-   |
 
 W191 Indentation contains tabs
   --> W19.py:95:1
@@ -271,18 +245,15 @@ W191 Indentation contains tabs
 94 |     return options.max_line_length, \
 95 |         "E501 line too long (%d characters)" % length
    | ^^^^^^^^
-   |
 
 W191 Indentation contains tabs
    --> W19.py:101:1
-    |
  99 | #: E101 W191 W191 W504
 100 | if os.path.exists(os.path.join(path, PEP8_BIN)):
 101 |     cmd = ([os.path.join(path, PEP8_BIN)] +
     | ^^^^
 102 |            self._pep8_options(targetfile))
 103 | #: W191 - okay
-    |
 
 W191 Indentation contains tabs
    --> W19.py:102:1
@@ -293,7 +264,6 @@ W191 Indentation contains tabs
     | ^^^^^^^^^^^
 103 | #: W191 - okay
 104 | '''
-    |
 
 W191 Indentation contains tabs
    --> W19.py:128:1
@@ -302,7 +272,6 @@ W191 Indentation contains tabs
 127 |         blah == 'yeah':
 128 |     blah = 'yeahnah'
     | ^^^^
-    |
 
 W191 Indentation contains tabs
    --> W19.py:134:1
@@ -313,7 +282,6 @@ W191 Indentation contains tabs
     | ^^^^
 135 |         1,
 136 |         2)
-    |
 
 W191 Indentation contains tabs
    --> W19.py:135:1
@@ -324,7 +292,6 @@ W191 Indentation contains tabs
     | ^^^^^^^^
 136 |         2)
 137 | #: W191 W191 W191 W191 W191
-    |
 
 W191 Indentation contains tabs
    --> W19.py:136:1
@@ -335,7 +302,6 @@ W191 Indentation contains tabs
     | ^^^^^^^^
 137 | #: W191 W191 W191 W191 W191
 138 | def test_keys(self):
-    |
 
 W191 Indentation contains tabs
    --> W19.py:139:1
@@ -346,7 +312,6 @@ W191 Indentation contains tabs
     | ^^^^
 140 |     expected = set([
 141 |         u'Norrbotten',
-    |
 
 W191 Indentation contains tabs
    --> W19.py:140:1
@@ -357,7 +322,6 @@ W191 Indentation contains tabs
     | ^^^^
 141 |         u'Norrbotten',
 142 |         u'V\xe4sterbotten',
-    |
 
 W191 Indentation contains tabs
    --> W19.py:141:1
@@ -368,7 +332,6 @@ W191 Indentation contains tabs
     | ^^^^^^^^
 142 |         u'V\xe4sterbotten',
 143 |     ])
-    |
 
 W191 Indentation contains tabs
    --> W19.py:142:1
@@ -379,7 +342,6 @@ W191 Indentation contains tabs
     | ^^^^^^^^
 143 |     ])
 144 | #: W191
-    |
 
 W191 Indentation contains tabs
    --> W19.py:143:1
@@ -390,7 +352,6 @@ W191 Indentation contains tabs
     | ^^^^
 144 | #: W191
 145 | x = [
-    |
 
 W191 Indentation contains tabs
    --> W19.py:146:1
@@ -401,7 +362,6 @@ W191 Indentation contains tabs
     | ^^^^
 147 | ]
 148 | #: W191 - okay
-    |
 
 W191 Indentation contains tabs
    --> W19.py:157:1
@@ -410,7 +370,6 @@ W191 Indentation contains tabs
 157 |     tab_indented_should_be_flagged
     | ^^^^
 158 | }    <- this tab is fine"
-    |
 
 W191 Indentation contains tabs
    --> W19.py:161:1
@@ -419,4 +378,3 @@ W191 Indentation contains tabs
 161 |     tab_indented_should_be_flagged
     | ^^^^
 162 | }    <- this tab is fine"""
-    |

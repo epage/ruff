@@ -866,7 +866,6 @@ error[invalid-frozen-dataclass-subclass]: Non-frozen dataclass cannot inherit fr
 8 | # snapshot: invalid-frozen-dataclass-subclass
 9 | class Child(FrozenBase):
   |       ^^^^^^----------^ Subclass `Child` is not frozen but base class `FrozenBase` is
-  |
 info: This causes the class creation to fail
 info: Base class definition
  --> src/foo.py:3:1
@@ -875,7 +874,6 @@ info: Base class definition
   | ----------------------- `FrozenBase` dataclass parameters
 4 | class FrozenBase:
   |       ^^^^^^^^^^ `FrozenBase` definition
-  |
 ```
 
 Frozen dataclasses inheriting from non-frozen dataclasses are also illegal:
@@ -1842,7 +1840,6 @@ error[missing-argument]: No argument provided for required parameter `y`
    |
 13 | C(3, "")
    | ^^^^^^^^
-   |
 
 
 error[too-many-positional-arguments]: Too many positional arguments: expected 1, got 2
@@ -1850,7 +1847,6 @@ error[too-many-positional-arguments]: Too many positional arguments: expected 1,
    |
 13 | C(3, "")
    |      ^^
-   |
 ```
 
 Declaration order still controls `KW_ONLY` when a later field name was already referenced by an

@@ -10,7 +10,6 @@ TC003 [*] Move standard library import `uuid.UUID` into a type-checking block
   |                  ^^^^
 7 | from collections.abc import Sequence
 8 | from pydantic import validate_call
-  |
 help: Move into type-checking block
    |
 5  | from dataclasses import dataclass

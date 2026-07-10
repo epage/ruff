@@ -9,4 +9,3 @@ PT030 `pytest.warns(foo.FooWarning)` is too broad, set the `match` parameter or 
 22 |     with pytest.warns(FooWarning):
    |                       ^^^^^^^^^^
 23 |         pass
-   |

@@ -10,7 +10,6 @@ PYI017 Stubs should not contain assignments to attributes or multiple targets
   | ^^^^^^^^^^^
 5 |
 6 | a.b = int  # PYI017
-  |
 
 PYI017 Stubs should not contain assignments to attributes or multiple targets
  --> PYI017.pyi:6:1
@@ -21,18 +20,15 @@ PYI017 Stubs should not contain assignments to attributes or multiple targets
   | ^^^^^^^^^
 7 |
 8 | d, e = int, str  # PYI017
-  |
 
 PYI017 Stubs should not contain assignments to attributes or multiple targets
   --> PYI017.pyi:8:1
-   |
  6 | a.b = int  # PYI017
  7 |
  8 | d, e = int, str  # PYI017
    | ^^^^^^^^^^^^^^^
  9 |
 10 | f, g, h = int, str, TypeVar("T")  # PYI017
-   |
 
 PYI017 Stubs should not contain assignments to attributes or multiple targets
   --> PYI017.pyi:10:1
@@ -43,4 +39,3 @@ PYI017 Stubs should not contain assignments to attributes or multiple targets
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | i: TypeAlias = int | str  # OK
-   |

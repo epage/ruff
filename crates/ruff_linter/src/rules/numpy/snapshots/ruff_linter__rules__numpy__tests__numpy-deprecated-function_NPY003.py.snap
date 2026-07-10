@@ -10,7 +10,6 @@ NPY003 [*] `np.round_` is deprecated; use `np.round` instead
   |     ^^^^^^^^^
 5 |     np.product(np.random.rand(5, 5))
 6 |     np.cumproduct(np.random.rand(5, 5))
-  |
 help: Replace with `np.round`
   |
 3 |
@@ -27,7 +26,6 @@ NPY003 [*] `np.product` is deprecated; use `np.prod` instead
   |     ^^^^^^^^^^
 6 |     np.cumproduct(np.random.rand(5, 5))
 7 |     np.sometrue(np.random.rand(5, 5))
-  |
 help: Replace with `np.prod`
   |
 4 |     np.round_(np.random.rand(5, 5), 2)
@@ -45,7 +43,6 @@ NPY003 [*] `np.cumproduct` is deprecated; use `np.cumprod` instead
   |     ^^^^^^^^^^^^^
 7 |     np.sometrue(np.random.rand(5, 5))
 8 |     np.alltrue(np.random.rand(5, 5))
-  |
 help: Replace with `np.cumprod`
   |
 5 |     np.product(np.random.rand(5, 5))
@@ -56,13 +53,11 @@ help: Replace with `np.cumprod`
 
 NPY003 [*] `np.sometrue` is deprecated; use `np.any` instead
  --> NPY003.py:7:5
-  |
 5 |     np.product(np.random.rand(5, 5))
 6 |     np.cumproduct(np.random.rand(5, 5))
 7 |     np.sometrue(np.random.rand(5, 5))
   |     ^^^^^^^^^^^
 8 |     np.alltrue(np.random.rand(5, 5))
-  |
 help: Replace with `np.any`
   |
 6 |     np.cumproduct(np.random.rand(5, 5))
@@ -78,7 +73,6 @@ NPY003 [*] `np.alltrue` is deprecated; use `np.all` instead
 7 |     np.sometrue(np.random.rand(5, 5))
 8 |     np.alltrue(np.random.rand(5, 5))
   |     ^^^^^^^^^^
-  |
 help: Replace with `np.all`
   |
 7 |     np.sometrue(np.random.rand(5, 5))
@@ -96,7 +90,6 @@ NPY003 [*] `np.round_` is deprecated; use `np.round` instead
    |     ^^^^^^
 15 |     product(np.random.rand(5, 5))
 16 |     cumproduct(np.random.rand(5, 5))
-   |
 help: Replace with `np.round`
    |
 1  + from numpy import round
@@ -116,7 +109,6 @@ NPY003 [*] `np.product` is deprecated; use `np.prod` instead
    |     ^^^^^^^
 16 |     cumproduct(np.random.rand(5, 5))
 17 |     sometrue(np.random.rand(5, 5))
-   |
 help: Replace with `np.prod`
    |
 1  + from numpy import prod
@@ -137,9 +129,7 @@ NPY003 [*] `np.cumproduct` is deprecated; use `np.cumprod` instead
    |     ^^^^^^^^^^
 17 |     sometrue(np.random.rand(5, 5))
 18 |     alltrue(np.random.rand(5, 5))
-   |
 help: Replace with `np.cumprod`
-   |
 1  + from numpy import cumprod
 2  | def func():
 --------------------------------------------------------------------------------
@@ -157,7 +147,6 @@ NPY003 [*] `np.sometrue` is deprecated; use `np.any` instead
 17 |     sometrue(np.random.rand(5, 5))
    |     ^^^^^^^^
 18 |     alltrue(np.random.rand(5, 5))
-   |
 help: Replace with `np.any`
    |
 1  + from numpy import any
@@ -176,7 +165,6 @@ NPY003 [*] `np.alltrue` is deprecated; use `np.all` instead
 17 |     sometrue(np.random.rand(5, 5))
 18 |     alltrue(np.random.rand(5, 5))
    |     ^^^^^^^
-   |
 help: Replace with `np.all`
    |
 1  + from numpy import all

@@ -9,7 +9,6 @@ B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid conf
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | re.sub("a", "b", "aaa", 5)
 7 | re.sub("a", "b", "aaa", 5, re.IGNORECASE)
-  |
 
 B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
  --> B034.py:6:1
@@ -20,7 +19,6 @@ B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid conf
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | re.sub("a", "b", "aaa", 5, re.IGNORECASE)
 8 | re.subn("a", "b", "aaa", re.IGNORECASE)
-  |
 
 B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
  --> B034.py:7:1
@@ -35,25 +33,21 @@ B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid conf
 
 B034 `re.subn` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:8:1
-   |
  6 | re.sub("a", "b", "aaa", 5)
  7 | re.sub("a", "b", "aaa", 5, re.IGNORECASE)
  8 | re.subn("a", "b", "aaa", re.IGNORECASE)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | re.subn("a", "b", "aaa", 5)
 10 | re.subn("a", "b", "aaa", 5, re.IGNORECASE)
-   |
 
 B034 `re.subn` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:9:1
-   |
  7 | re.sub("a", "b", "aaa", 5, re.IGNORECASE)
  8 | re.subn("a", "b", "aaa", re.IGNORECASE)
  9 | re.subn("a", "b", "aaa", 5)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | re.subn("a", "b", "aaa", 5, re.IGNORECASE)
 11 | re.split(" ", "a a a a", re.I)
-   |
 
 B034 `re.subn` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:10:1
@@ -64,7 +58,6 @@ B034 `re.subn` should pass `count` and `flags` as keyword arguments to avoid con
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | re.split(" ", "a a a a", re.I)
 12 | re.split(" ", "a a a a", 2)
-   |
 
 B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:11:1
@@ -75,7 +68,6 @@ B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | re.split(" ", "a a a a", 2)
 13 | re.split(" ", "a a a a", 2, re.I)
-   |
 
 B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:12:1
@@ -86,7 +78,6 @@ B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 | re.split(" ", "a a a a", 2, re.I)
 14 | sub("a", "b", "aaa", re.IGNORECASE)
-   |
 
 B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:13:1
@@ -96,7 +87,6 @@ B034 `re.split` should pass `maxsplit` and `flags` as keyword arguments to avoid
 13 | re.split(" ", "a a a a", 2, re.I)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 | sub("a", "b", "aaa", re.IGNORECASE)
-   |
 
 B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid confusion due to unintuitive argument positions
   --> B034.py:14:1
@@ -107,4 +97,3 @@ B034 `re.sub` should pass `count` and `flags` as keyword arguments to avoid conf
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |
 16 | # OK
-   |

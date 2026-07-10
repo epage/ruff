@@ -9,7 +9,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^
 19 | delattr(foo, "_123abc")
 20 | delattr(foo, "__123abc__")
-   |
 help: Replace `delattr` with `del` statement
    |
 17 | # Invalid usage
@@ -27,7 +26,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^
 20 | delattr(foo, "__123abc__")
 21 | delattr(foo, "abc123")
-   |
 help: Replace `delattr` with `del` statement
    |
 18 | delattr(foo, "bar")
@@ -45,7 +43,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 | delattr(foo, "abc123")
 22 | delattr(foo, r"abc123")
-   |
 help: Replace `delattr` with `del` statement
    |
 19 | delattr(foo, "_123abc")
@@ -62,7 +59,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
 21 | delattr(foo, "abc123")
    | ^^^^^^^^^^^^^^^^^^^^^^
 22 | delattr(foo, r"abc123")
-   |
 help: Replace `delattr` with `del` statement
    |
 20 | delattr(foo, "__123abc__")
@@ -80,7 +76,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^
 23 |
 24 | # Starred argument
-   |
 help: Replace `delattr` with `del` statement
    |
 21 | delattr(foo, "abc123")
@@ -97,19 +92,16 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^
 29 |
 30 | # Comment in expression (unsafe fix)
-   |
 help: Replace `delattr` with `del` statement
    |
 27 | # Non-NFKC attribute name (unsafe fix)
    - delattr(foo, "\u017f")
 28 + del foo.ſ
 29 |
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 B043 [*] Do not call `delattr` with a constant attribute value. It is not any safer than normal property deletion.
   --> B043.py:31:1
-   |
 30 |   # Comment in expression (unsafe fix)
 31 | / delattr(
 32 | |     obj,
@@ -119,7 +111,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
    | |_^
 36 |
 37 |   import builtins
-   |
 help: Replace `delattr` with `del` statement
    |
 30 | # Comment in expression (unsafe fix)
@@ -139,7 +130,6 @@ B043 [*] Do not call `delattr` with a constant attribute value. It is not any sa
 37 | import builtins
 38 | builtins.delattr(foo, "bar")
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace `delattr` with `del` statement
    |
 37 | import builtins

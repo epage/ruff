@@ -8,7 +8,6 @@ C419 [*] Unnecessary list comprehension
   |     ^^^^^^^^^^^^^^^^^^^
 2 | all([x.id for x in bar])
 3 | any(  # first comment
-  |
 help: Remove unnecessary comprehension
   |
   - any([x.id for x in bar])
@@ -25,7 +24,6 @@ C419 [*] Unnecessary list comprehension
   |     ^^^^^^^^^^^^^^^^^^^
 3 | any(  # first comment
 4 |     [x.id for x in bar],  # second comment
-  |
 help: Remove unnecessary comprehension
   |
 1 | any([x.id for x in bar])
@@ -44,7 +42,6 @@ C419 [*] Unnecessary list comprehension
   |     ^^^^^^^^^^^^^^^^^^^
 5 | )  # third comment
 6 | all(  # first comment
-  |
 help: Remove unnecessary comprehension
   |
 3 | any(  # first comment
@@ -63,7 +60,6 @@ C419 [*] Unnecessary list comprehension
   |     ^^^^^^^^^^^^^^^^^^^
 8 | )  # third comment
 9 | any({x.id for x in bar})
-  |
 help: Remove unnecessary comprehension
   |
 6 | all(  # first comment
@@ -75,14 +71,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 C419 [*] Unnecessary set comprehension
   --> C419.py:9:5
-   |
  7 |     [x.id for x in bar],  # second comment
  8 | )  # third comment
  9 | any({x.id for x in bar})
    |     ^^^^^^^^^^^^^^^^^^^
 10 |
 11 | # OK
-   |
 help: Remove unnecessary comprehension
    |
 8  | )  # third comment
@@ -106,7 +100,6 @@ C419 [*] Unnecessary list comprehension
    | |_____^
 34 |       # trailing comment
 35 |   )
-   |
 help: Remove unnecessary comprehension
    |
 27 | any(
@@ -136,7 +129,6 @@ C419 [*] Unnecessary list comprehension
 42 | |     ]  # rpar comment
    | |_____^
 43 |   )
-   |
 help: Remove unnecessary comprehension
    |
 38 | # on the same line.
@@ -159,7 +151,6 @@ C419 [*] Unnecessary set comprehension
 49 | any({x.id for x in bar})
    |     ^^^^^^^^^^^^^^^^^^^
 50 | all({x.id for x in bar})
-   |
 help: Remove unnecessary comprehension
    |
 48 | # should be linted...
@@ -178,7 +169,6 @@ C419 [*] Unnecessary set comprehension
    |     ^^^^^^^^^^^^^^^^^^^
 51 |
 52 | # should be linted in preview...
-   |
 help: Remove unnecessary comprehension
    |
 49 | any({x.id for x in bar})

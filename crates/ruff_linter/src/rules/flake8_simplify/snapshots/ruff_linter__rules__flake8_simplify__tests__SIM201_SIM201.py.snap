@@ -8,7 +8,6 @@ SIM201 [*] Use `a != b` instead of `not a == b`
 2 | if not a == b:
   |    ^^^^^^^^^^
 3 |     pass
-  |
 help: Replace with `!=` operator
   |
 1 | # SIM201
@@ -25,7 +24,6 @@ SIM201 [*] Use `a != b + c` instead of `not a == b + c`
 6 | if not a == (b + c):
   |    ^^^^^^^^^^^^^^^^
 7 |     pass
-  |
 help: Replace with `!=` operator
   |
 5 | # SIM201
@@ -42,7 +40,6 @@ SIM201 [*] Use `a + b != c` instead of `not a + b == c`
 10 | if not (a + b) == c:
    |    ^^^^^^^^^^^^^^^^
 11 |     pass
-   |
 help: Replace with `!=` operator
    |
 9  | # SIM201

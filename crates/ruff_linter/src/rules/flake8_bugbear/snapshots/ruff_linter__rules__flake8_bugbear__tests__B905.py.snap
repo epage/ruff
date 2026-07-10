@@ -9,7 +9,6 @@ B905 [*] `zip()` without an explicit `strict=` parameter
   | ^^^^^^^^^^^^^
 5 | zip("a", "b", *zip("c"))
 6 | zip(zip("a", "b"), strict=False)
-  |
 help: Add explicit value for parameter `strict=`
   |
 3 | # Errors
@@ -28,7 +27,6 @@ B905 [*] `zip()` without an explicit `strict=` parameter
   | ^^^^^^^^^^^^^^^^^^^^^^^^
 6 | zip(zip("a", "b"), strict=False)
 7 | zip(zip("a", strict=True),"b")
-  |
 help: Add explicit value for parameter `strict=`
   |
 4 | zip("a", "b")
@@ -46,7 +44,6 @@ B905 [*] `zip()` without an explicit `strict=` parameter
 6 | zip(zip("a", "b"), strict=False)
   |     ^^^^^^^^^^^^^
 7 | zip(zip("a", strict=True),"b")
-  |
 help: Add explicit value for parameter `strict=`
   |
 5 | zip("a", "b", *zip("c"))
@@ -65,7 +62,6 @@ B905 [*] `zip()` without an explicit `strict=` parameter
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |
 9 | # OK
-  |
 help: Add explicit value for parameter `strict=`
   |
 6 | zip(zip("a", "b"), strict=False)
@@ -82,26 +78,22 @@ B905 [*] `zip()` without an explicit `strict=` parameter
 22 | zip([1, 2, 3], repeat(1, 1))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | zip([1, 2, 3], repeat(1, times=4))
-   |
 help: Add explicit value for parameter `strict=`
    |
 21 | # Errors (limited iterators).
    - zip([1, 2, 3], repeat(1, 1))
 22 + zip([1, 2, 3], repeat(1, 1), strict=False)
 23 | zip([1, 2, 3], repeat(1, times=4))
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 B905 [*] `zip()` without an explicit `strict=` parameter
   --> B905.py:23:1
-   |
 21 | # Errors (limited iterators).
 22 | zip([1, 2, 3], repeat(1, 1))
 23 | zip([1, 2, 3], repeat(1, times=4))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 |
 25 | import builtins
-   |
 help: Add explicit value for parameter `strict=`
    |
 22 | zip([1, 2, 3], repeat(1, 1))
@@ -118,7 +110,6 @@ B905 [*] `zip()` without an explicit `strict=` parameter
 33 | # Error
 34 | zip(*lot_of_iterators)
    | ^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Add explicit value for parameter `strict=`
    |
 33 | # Error

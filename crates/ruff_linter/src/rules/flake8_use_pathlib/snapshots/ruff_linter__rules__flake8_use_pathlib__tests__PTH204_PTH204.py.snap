@@ -8,7 +8,6 @@ PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
   | ^^^^^^^^^^^^^^^^
 7 | os.path.getmtime(b"filename")
 8 | os.path.getmtime(Path("filename"))
-  |
 help: Replace with `Path.stat(...).st_mtime`
 
 PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
@@ -18,17 +17,14 @@ PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
 7 | os.path.getmtime(b"filename")
   | ^^^^^^^^^^^^^^^^
 8 | os.path.getmtime(Path("filename"))
-  |
 help: Replace with `Path.stat(...).st_mtime`
 
 PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
  --> PTH204.py:8:1
-  |
 6 | os.path.getmtime("filename")
 7 | os.path.getmtime(b"filename")
 8 | os.path.getmtime(Path("filename"))
   | ^^^^^^^^^^^^^^^^
-  |
 help: Replace with `Path.stat(...).st_mtime`
 
 PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
@@ -38,17 +34,14 @@ PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
    | ^^^^^^^^
 12 | getmtime(b"filename")
 13 | getmtime(Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_mtime`
 
 PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
   --> PTH204.py:12:1
-   |
 11 | getmtime("filename")
 12 | getmtime(b"filename")
    | ^^^^^^^^
 13 | getmtime(Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_mtime`
 
 PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
@@ -58,5 +51,4 @@ PTH204 `os.path.getmtime` should be replaced by `Path.stat().st_mtime`
 12 | getmtime(b"filename")
 13 | getmtime(Path("filename"))
    | ^^^^^^^^
-   |
 help: Replace with `Path.stat(...).st_mtime`

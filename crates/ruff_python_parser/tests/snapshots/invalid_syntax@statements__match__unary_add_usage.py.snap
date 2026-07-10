@@ -425,14 +425,12 @@ Module(
   |
 
 
-  |
 5 |     case 1 | +2 | -3:
 6 |         pass
 7 |     case [1, +2, -3]:
   |              ^^ Syntax Error: Unary '+' is not allowed as a literal pattern
 8 |         pass
 9 |     case Foo(x=+1, y=-2):
-  |
 
 
    |

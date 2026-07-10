@@ -9,7 +9,6 @@ PLW1510 [*] `subprocess.run` without explicit `check` argument
   | ^^^^^^^^^^^^^^
 5 | subprocess.run("ls", shell=True)
 6 | subprocess.run(
-  |
 help: Add explicit `check=False`
   |
 3 | # Errors.
@@ -28,7 +27,6 @@ PLW1510 [*] `subprocess.run` without explicit `check` argument
   | ^^^^^^^^^^^^^^
 6 | subprocess.run(
 7 |     ["ls"],
-  |
 help: Add explicit `check=False`
   |
 4 | subprocess.run("ls")
@@ -47,7 +45,6 @@ PLW1510 [*] `subprocess.run` without explicit `check` argument
   | ^^^^^^^^^^^^^^
 7 |     ["ls"],
 8 |     shell=False,
-  |
 help: Add explicit `check=False`
   |
 7 |     ["ls"],
@@ -66,7 +63,6 @@ PLW1510 [*] `subprocess.run` without explicit `check` argument
    | ^^^^^^^^^^^^^^
 11 |
 12 | # Non-errors.
-   |
 help: Add explicit `check=False`
    |
 9  | )

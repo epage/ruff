@@ -10,7 +10,6 @@ UP029 [*] Unnecessary builtin import: `pow`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^
 20 |
 21 |     pow(1, 1, 1)
-   |
 help: Remove unnecessary builtin import
    |
 18 |     from math import *
@@ -29,7 +28,6 @@ UP029 [*] Unnecessary builtin import: `str`
    | |_____^
 28 |
 29 |       str(1)
-   |
 help: Remove unnecessary builtin import
    |
 24 | def unsafe_fix():

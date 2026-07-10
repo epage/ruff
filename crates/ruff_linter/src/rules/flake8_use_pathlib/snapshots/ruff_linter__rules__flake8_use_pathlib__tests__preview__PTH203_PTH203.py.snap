@@ -10,7 +10,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
   | ^^^^^^^^^^^^^^^^
 6 | os.path.getatime(b"filename")
 7 | os.path.getatime(Path("filename"))
-  |
 help: Replace with `Path.stat(...).st_atime`
   |
 4 |
@@ -26,14 +25,11 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
 6 | os.path.getatime(b"filename")
   | ^^^^^^^^^^^^^^^^
 7 | os.path.getatime(Path("filename"))
-  |
 help: Replace with `Path.stat(...).st_atime`
-  |
 5 | os.path.getatime("filename")
   - os.path.getatime(b"filename")
 6 + Path(b"filename").stat().st_atime
 7 | os.path.getatime(Path("filename"))
-  |
 
 PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
  --> PTH203.py:7:1
@@ -42,7 +38,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
 6 | os.path.getatime(b"filename")
 7 | os.path.getatime(Path("filename"))
   | ^^^^^^^^^^^^^^^^
-  |
 help: Replace with `Path.stat(...).st_atime`
   |
 6 | os.path.getatime(b"filename")
@@ -58,7 +53,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^
 11 | getatime(b"filename")
 12 | getatime(Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 9  |
@@ -69,12 +63,10 @@ help: Replace with `Path.stat(...).st_atime`
 
 PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
   --> PTH203.py:11:1
-   |
 10 | getatime("filename")
 11 | getatime(b"filename")
    | ^^^^^^^^
 12 | getatime(Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 10 | getatime("filename")
@@ -90,7 +82,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
 11 | getatime(b"filename")
 12 | getatime(Path("filename"))
    | ^^^^^^^^
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 11 | getatime(b"filename")
@@ -108,7 +99,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^^^^^^^^^
 18 | os.path.getatime(filename="filename")
 19 | os.path.getatime(filename=Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 16 |
@@ -124,7 +114,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
 18 | os.path.getatime(filename="filename")
    | ^^^^^^^^^^^^^^^^
 19 | os.path.getatime(filename=Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 17 | os.path.getatime(file)
@@ -142,7 +131,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^^^^^^^^^
 20 |
 21 | os.path.getatime(  # comment 1
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 18 | os.path.getatime(filename="filename")
@@ -160,7 +148,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^^^^^^^^^
 22 |     # comment 2
 23 |     "filename"  # comment 3
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 20 |
@@ -185,9 +172,7 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^^^^^^^^^
 30 |
 31 | getatime(Path("filename").resolve())
-   |
 help: Replace with `Path.stat(...).st_atime`
-   |
 28 |
    - os.path.getatime("file" + "name")
 29 + Path("file" + "name").stat().st_atime
@@ -203,7 +188,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^
 32 |
 33 | os.path.getatime(pathlib.Path("filename"))
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 30 |
@@ -221,7 +205,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
    | ^^^^^^^^^^^^^^^^
 34 |
 35 | getatime(Path("dir") / "file.txt")
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 32 |
@@ -237,7 +220,6 @@ PTH203 [*] `os.path.getatime` should be replaced by `Path.stat().st_atime`
 34 |
 35 | getatime(Path("dir") / "file.txt")
    | ^^^^^^^^
-   |
 help: Replace with `Path.stat(...).st_atime`
    |
 34 |

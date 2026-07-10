@@ -10,7 +10,6 @@ E304 [*] Blank lines found after function decorator (1)
    | ^^^
 46 |     pass
 47 | # end
-   |
 help: Remove extraneous blank line(s)
    |
 43 | @decorator

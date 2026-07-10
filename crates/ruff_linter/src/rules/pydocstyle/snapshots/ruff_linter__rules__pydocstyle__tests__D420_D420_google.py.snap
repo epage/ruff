@@ -10,7 +10,6 @@ D420 Section "Args" appears after section "Returns" but should be before it
    |     ^^^^
 37 |         x: Description.
 38 |     """
-   |
 
 D420 Section "Returns" appears after section "Raises" but should be before it
   --> D420_google.py:47:5
@@ -21,7 +20,6 @@ D420 Section "Returns" appears after section "Raises" but should be before it
    |     ^^^^^^^
 48 |         int
 49 |     """
-   |
 
 D420 Section "Args" appears after section "Raises" but should be before it
   --> D420_google.py:58:5
@@ -31,7 +29,6 @@ D420 Section "Args" appears after section "Raises" but should be before it
 58 |     Args:
    |     ^^^^
 59 |         x: Description.
-   |
 
 D420 Section "Returns" appears after section "Raises" but should be before it
   --> D420_google.py:61:5
@@ -42,7 +39,6 @@ D420 Section "Returns" appears after section "Raises" but should be before it
    |     ^^^^^^^
 62 |         int
 63 |     """
-   |
 
 D420 Section "Arguments" appears after section "Returns" but should be before it
    --> D420_google.py:106:5
@@ -53,7 +49,6 @@ D420 Section "Arguments" appears after section "Returns" but should be before it
     |     ^^^^^^^^^
 107 |         x: Description.
 108 |     """
-    |
 
 D420 Section "Args" appears after section "Returns" but should be before it
    --> D420_google.py:155:5
@@ -64,7 +59,6 @@ D420 Section "Args" appears after section "Returns" but should be before it
     |     ^^^^
 156 |         x: Description.
 157 |     """
-    |
 
 D420 Section "Args" appears after section "Returns" but should be before it
    --> D420_google.py:189:5
@@ -75,4 +69,3 @@ D420 Section "Args" appears after section "Returns" but should be before it
     |     ^^^^
 190 |         x: Description.
 191 |     """
-    |

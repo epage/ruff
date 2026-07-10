@@ -10,4 +10,3 @@ F821 Undefined name `Record`
   |                        ^^^^^^
 4 |
 5 | from collections.abc import Callable
-  |

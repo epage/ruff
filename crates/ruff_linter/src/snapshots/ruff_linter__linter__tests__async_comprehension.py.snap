@@ -9,11 +9,9 @@ PLE1142 `await` should be used within an async function
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 |
 7 |     async with elements(1) as x:
-  |
 
 PLE1142 `await` should be used within an async function
   --> resources/test/fixtures/syntax_errors/async_comprehension.py:7:5
-   |
  5 |       [x async for x in elements(1)]
  6 |
  7 | /     async with elements(1) as x:
@@ -21,7 +19,6 @@ PLE1142 `await` should be used within an async function
    | |____________^
  9 |
 10 |       async for _ in elements(1):
-   |
 
 PLE1142 `await` should be used within an async function
   --> resources/test/fixtures/syntax_errors/async_comprehension.py:10:5
@@ -31,4 +28,3 @@ PLE1142 `await` should be used within an async function
 10 | /     async for _ in elements(1):
 11 | |         pass
    | |____________^
-   |

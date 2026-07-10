@@ -9,21 +9,16 @@ PLW0131 Named expression used without context
   |  ^^^^^^^
 3 | if True:
 4 |     (b := 1)
-  |
 
 PLW0131 Named expression used without context
  --> named_expr_without_context.py:4:6
-  |
 2 | (a := 42)
 3 | if True:
 4 |     (b := 1)
   |      ^^^^^^
-  |
 
 PLW0131 Named expression used without context
  --> named_expr_without_context.py:8:6
-  |
 7 | class Foo:
 8 |     (c := 1)
   |      ^^^^^^
-  |

@@ -556,24 +556,20 @@ Module(
   |
 
 
-  |
 5 |     case {*key: 1}:
 6 |         pass
 7 |     case {*key 1}:
   |           ^^^^ Syntax Error: Star pattern cannot be used here
 8 |         pass
 9 |     case {*key, None: 1}:
-  |
 
 
-  |
 5 |     case {*key: 1}:
 6 |         pass
 7 |     case {*key 1}:
   |                ^ Syntax Error: Expected `:`, found int
 8 |         pass
 9 |     case {*key, None: 1}:
-  |
 
 
    |
@@ -646,4 +642,3 @@ Module(
 22 | match subject:
 23 |     case {Foo(a as b): 1}: ...
    |           ^^^^^^^^^^^ Syntax Error: Invalid mapping pattern key
-   |

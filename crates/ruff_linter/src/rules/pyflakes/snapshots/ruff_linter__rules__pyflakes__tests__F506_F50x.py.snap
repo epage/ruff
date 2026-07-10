@@ -9,7 +9,6 @@ F506 `%`-format string has mixed positional and named placeholders
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | '%(foo)s %s' % {'foo': 'bar'}  # F506
 4 | '%j' % (1,)  # F509
-  |
 
 F506 `%`-format string has mixed positional and named placeholders
  --> F50x.py:3:1
@@ -20,7 +19,6 @@ F506 `%`-format string has mixed positional and named placeholders
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 | '%j' % (1,)  # F509
 5 | '%s %s' % (1,)  # F507
-  |
 
 F506 `%`-format string has mixed positional and named placeholders
   --> F50x.py:11:1
@@ -31,4 +29,3 @@ F506 `%`-format string has mixed positional and named placeholders
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |
 13 | # ok: single %s with mapping
-   |

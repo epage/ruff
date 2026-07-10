@@ -7,7 +7,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
 5 | class A(metaclass=type):
   |         ^^^^^^^^^^^^^^
 6 |     ...
-  |
 help: Remove `metaclass=type`
   |
 4 |
@@ -24,7 +23,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 11 | ):
 12 |     ...
-   |
 help: Remove `metaclass=type`
    |
 8  |
@@ -43,7 +41,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 17 |     #
 18 | ):
-   |
 help: Remove `metaclass=type`
    |
 14 |
@@ -65,7 +62,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 25 | ):
 26 |     ...
-   |
 help: Remove `metaclass=type`
    |
 21 |
@@ -86,7 +82,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 31 |     #
 32 | ):
-   |
 help: Remove `metaclass=type`
    |
 28 |
@@ -108,7 +103,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 39 |     #
 40 | ):
-   |
 help: Remove `metaclass=type`
    |
 35 |
@@ -128,7 +122,6 @@ UP050 [*] Class `B` uses `metaclass=type`, which is redundant
 44 | class B(A, metaclass=type):
    |            ^^^^^^^^^^^^^^
 45 |     ...
-   |
 help: Remove `metaclass=type`
    |
 43 |
@@ -146,7 +139,6 @@ UP050 [*] Class `B` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 51 | ):
 52 |     ...
-   |
 help: Remove `metaclass=type`
    |
 49 |     A,
@@ -163,7 +155,6 @@ UP050 [*] Class `B` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 59 | ):
 60 |     ...
-   |
 help: Remove `metaclass=type`
    |
 56 |     A,
@@ -181,7 +172,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
    |     ^^^^^^^^^^^^^^
 70 |     ,
 71 | ):
-   |
 help: Remove `metaclass=type`
    |
 67 |
@@ -202,7 +192,6 @@ UP050 [*] Class `A` uses `metaclass=type`, which is redundant
 83 | class A(metaclass=builtins.type):
    |         ^^^^^^^^^^^^^^^^^^^^^^^
 84 |     ...
-   |
 help: Remove `metaclass=type`
    |
 82 |

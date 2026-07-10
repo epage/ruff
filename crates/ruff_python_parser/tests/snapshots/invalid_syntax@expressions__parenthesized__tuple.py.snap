@@ -302,14 +302,12 @@ Module(
   |
 
 
-  |
 5 | (1,,2)
 6 |
 7 | (1,,)
   |    ^ Syntax Error: Expected an expression or a ')'
 8 |
 9 | # Missing comma
-  |
 
 
    |
@@ -421,4 +419,3 @@ Module(
 20 | # Unparenthesized named expression is not allowed
 21 | x, y := 2, z
    |      ^^ Syntax Error: Expected `,`, found `:=`
-   |

@@ -10,7 +10,6 @@ RUF050 [*] Empty `if` statement
   | |________^
 6 |
 7 |   # Simple if with ellipsis
-  |
 help: Remove the `if` statement
   |
 3 | # Simple if with pass
@@ -21,14 +20,12 @@ help: Remove the `if` statement
 
 RUF050 [*] Empty `if` statement
   --> RUF050.py:8:1
-   |
  7 |   # Simple if with ellipsis
  8 | / if True:
  9 | |     ...
    | |_______^
 10 |
 11 |   # Side-effect-free condition (comparison)
-   |
 help: Remove the `if` statement
   |
 7 | # Simple if with ellipsis
@@ -47,7 +44,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 15 |
 16 |   # Side-effect-free condition (boolean operator)
-   |
 help: Remove the `if` statement
    |
 12 | import sys
@@ -65,7 +61,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 19 |
 20 |   # Nested in function
-   |
 help: Remove the `if` statement
    |
 16 | # Side-effect-free condition (boolean operator)
@@ -84,7 +79,6 @@ RUF050 [*] Empty `if` statement
    | |____________^
 24 |
 25 |   # Single-line form (pass)
-   |
 help: Remove the `if` statement
    |
 21 | def nested():
@@ -102,7 +96,6 @@ RUF050 [*] Empty `if` statement
    | ^^^^^^^^^^^^^
 27 |
 28 | # Single-line form (ellipsis)
-   |
 help: Remove the `if` statement
    |
 25 | # Single-line form (pass)
@@ -118,7 +111,6 @@ RUF050 [*] Empty `if` statement
    | ^^^^^^^^^^^^
 30 |
 31 | # Multiple pass statements
-   |
 help: Remove the `if` statement
    |
 28 | # Single-line form (ellipsis)
@@ -136,7 +128,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 35 |
 36 |   # Mixed pass and ellipsis
-   |
 help: Remove the `if` statement
    |
 31 | # Multiple pass statements
@@ -156,7 +147,6 @@ RUF050 [*] Empty `if` statement
    | |_______^
 40 |
 41 |   # Only statement in a with block
-   |
 help: Remove the `if` statement
    |
 36 | # Mixed pass and ellipsis
@@ -174,7 +164,6 @@ RUF050 [*] Empty `if` statement
 43 | /     if obj1:
 44 | |         pass
    | |____________^
-   |
 help: Remove the `if` statement
    |
 42 | with pytest.raises(ValueError, match=msg):
@@ -193,7 +182,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 52 |
 53 |   # Method call
-   |
 help: Remove the `if` statement
    |
 49 | # Function call
@@ -212,7 +200,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 56 |
 57 |   # Nested call in boolean operator
-   |
 help: Remove the `if` statement
    |
 53 | # Method call
@@ -231,7 +218,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 60 |
 61 |   # Multiline expression that needs outer parentheses
-   |
 help: Remove the `if` statement
    |
 57 | # Nested call in boolean operator
@@ -253,7 +239,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 67 |
 68 |   # Multiline call stays a single expression statement
-   |
 help: Remove the `if` statement
    |
 61 | # Multiline expression that needs outer parentheses
@@ -269,7 +254,6 @@ help: Remove the `if` statement
 
 RUF050 [*] Empty `if` statement
   --> RUF050.py:69:1
-   |
 68 |   # Multiline call stays a single expression statement
 69 | / if foo(
 70 | |     1,
@@ -279,7 +263,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 74 |
 75 |   # Walrus operator with call
-   |
 help: Remove the `if` statement
    |
 68 | # Multiline call stays a single expression statement
@@ -302,7 +285,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 78 |
 79 |   # Walrus operator without call
-   |
 help: Remove the `if` statement
    |
 75 | # Walrus operator with call
@@ -321,7 +303,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 82 |
 83 |   # Only statement in a suite
-   |
 help: Remove the `if` statement
    |
 79 | # Walrus operator without call
@@ -339,7 +320,6 @@ RUF050 [*] Empty `if` statement
 85 | /     if foo():
 86 | |         pass
    | |____________^
-   |
 help: Remove the `if` statement
    |
 84 | class Foo:

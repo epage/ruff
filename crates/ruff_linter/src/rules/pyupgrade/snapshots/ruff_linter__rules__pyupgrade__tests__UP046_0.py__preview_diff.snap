@@ -16,7 +16,6 @@ UP046 [*] Generic class `DefaultTypeVar` uses `Generic` subclass instead of type
 129 | class DefaultTypeVar(Generic[V]):  # -> [V: str = Any]
     |                      ^^^^^^^^^^
 130 |     var: V
-    |
 help: Use type parameters
     |
 128 |
@@ -33,7 +32,6 @@ UP046 [*] Generic class `DefaultOnlyTypeVar` uses `Generic` subclass instead of 
 137 | class DefaultOnlyTypeVar(Generic[W]):  # -> [W = int]
     |                          ^^^^^^^^^^
 138 |     var: W
-    |
 help: Use type parameters
     |
 136 |

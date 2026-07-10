@@ -10,7 +10,6 @@ RUF009 Do not perform function call `default_function` in dataclass defaults
    |                                         ^^^^^^^^^^^^^^^^^^
 47 |     another_dataclass: A = A()
 48 |     not_optimal: ImmutableType = ImmutableType(20)
-   |
 
 RUF009 Do not perform function call `A` in dataclass defaults
   --> RUF009_attrs.py:47:28
@@ -21,7 +20,6 @@ RUF009 Do not perform function call `A` in dataclass defaults
    |                            ^^^
 48 |     not_optimal: ImmutableType = ImmutableType(20)
 49 |     good_variant: ImmutableType = DEFAULT_IMMUTABLETYPE_FOR_ALL_DATACLASSES
-   |
 
 RUF009 Do not perform function call `ImmutableType` in dataclass defaults
   --> RUF009_attrs.py:48:34
@@ -32,17 +30,14 @@ RUF009 Do not perform function call `ImmutableType` in dataclass defaults
    |                                  ^^^^^^^^^^^^^^^^^
 49 |     good_variant: ImmutableType = DEFAULT_IMMUTABLETYPE_FOR_ALL_DATACLASSES
 50 |     okay_variant: A = DEFAULT_A_FOR_ALL_DATACLASSES
-   |
 
 RUF009 Do not perform function call `F` in dataclass defaults
    --> RUF009_attrs.py:108:12
-    |
 106 | @attr.attrs
 107 | class H:
 108 |     f: F = F()
     |            ^^^
 109 |     g: G = G()
-    |
 
 RUF009 Do not perform function call `G` in dataclass defaults
    --> RUF009_attrs.py:109:12
@@ -51,17 +46,14 @@ RUF009 Do not perform function call `G` in dataclass defaults
 108 |     f: F = F()
 109 |     g: G = G()
     |            ^^^
-    |
 
 RUF009 Do not perform function call `F` in dataclass defaults
    --> RUF009_attrs.py:114:12
-    |
 112 | @attr.define
 113 | class I:
 114 |     f: F = F()
     |            ^^^
 115 |     g: G = G()
-    |
 
 RUF009 Do not perform function call `G` in dataclass defaults
    --> RUF009_attrs.py:115:12
@@ -70,17 +62,14 @@ RUF009 Do not perform function call `G` in dataclass defaults
 114 |     f: F = F()
 115 |     g: G = G()
     |            ^^^
-    |
 
 RUF009 Do not perform function call `F` in dataclass defaults
    --> RUF009_attrs.py:120:12
-    |
 118 | @attr.frozen
 119 | class J:
 120 |     f: F = F()
     |            ^^^
 121 |     g: G = G()
-    |
 
 RUF009 Do not perform function call `G` in dataclass defaults
    --> RUF009_attrs.py:121:12
@@ -89,7 +78,6 @@ RUF009 Do not perform function call `G` in dataclass defaults
 120 |     f: F = F()
 121 |     g: G = G()
     |            ^^^
-    |
 
 RUF009 Do not perform function call `F` in dataclass defaults
    --> RUF009_attrs.py:126:12
@@ -99,7 +87,6 @@ RUF009 Do not perform function call `F` in dataclass defaults
 126 |     f: F = F()
     |            ^^^
 127 |     g: G = G()
-    |
 
 RUF009 Do not perform function call `G` in dataclass defaults
    --> RUF009_attrs.py:127:12
@@ -108,7 +95,6 @@ RUF009 Do not perform function call `G` in dataclass defaults
 126 |     f: F = F()
 127 |     g: G = G()
     |            ^^^
-    |
 
 RUF009 Do not perform function call `list` in dataclass defaults
    --> RUF009_attrs.py:144:20
@@ -117,4 +103,3 @@ RUF009 Do not perform function call `list` in dataclass defaults
 143 | class TestAttrAttributes:
 144 |     x: list[int] = list()  # RUF009
     |                    ^^^^^^
-    |

@@ -10,7 +10,6 @@ ICN001 `altair` should be imported as `alt`
   |        ^^^^^^
 4 | import dask.array  # unconventional
 5 | import dask.dataframe  # unconventional
-  |
 help: Alias `altair` to `alt`
 
 ICN001 `dask.array` should be imported as `da`
@@ -21,7 +20,6 @@ ICN001 `dask.array` should be imported as `da`
   |        ^^^^^^^^^^
 5 | import dask.dataframe  # unconventional
 6 | import matplotlib.pyplot  # unconventional
-  |
 help: Alias `dask.array` to `da`
 
 ICN001 `dask.dataframe` should be imported as `dd`
@@ -33,7 +31,6 @@ ICN001 `dask.dataframe` should be imported as `dd`
   |        ^^^^^^^^^^^^^^
 6 | import matplotlib.pyplot  # unconventional
 7 | import numpy  # unconventional
-  |
 help: Alias `dask.dataframe` to `dd`
 
 ICN001 `matplotlib.pyplot` should be imported as `plt`
@@ -45,7 +42,6 @@ ICN001 `matplotlib.pyplot` should be imported as `plt`
   |        ^^^^^^^^^^^^^^^^^
 7 | import numpy  # unconventional
 8 | import pandas  # unconventional
-  |
 help: Alias `matplotlib.pyplot` to `plt`
 
 ICN001 `numpy` should be imported as `np`
@@ -57,31 +53,26 @@ ICN001 `numpy` should be imported as `np`
   |        ^^^^^
 8 | import pandas  # unconventional
 9 | import seaborn  # unconventional
-  |
 help: Alias `numpy` to `np`
 
 ICN001 `pandas` should be imported as `pd`
   --> custom.py:8:8
-   |
  6 | import matplotlib.pyplot  # unconventional
  7 | import numpy  # unconventional
  8 | import pandas  # unconventional
    |        ^^^^^^
  9 | import seaborn  # unconventional
 10 | import tensorflow  # unconventional
-   |
 help: Alias `pandas` to `pd`
 
 ICN001 `seaborn` should be imported as `sns`
   --> custom.py:9:8
-   |
  7 | import numpy  # unconventional
  8 | import pandas  # unconventional
  9 | import seaborn  # unconventional
    |        ^^^^^^^
 10 | import tensorflow  # unconventional
 11 | import holoviews  # unconventional
-   |
 help: Alias `seaborn` to `sns`
 
 ICN001 `tensorflow` should be imported as `tf`
@@ -93,7 +84,6 @@ ICN001 `tensorflow` should be imported as `tf`
    |        ^^^^^^^^^^
 11 | import holoviews  # unconventional
 12 | import panel  # unconventional
-   |
 help: Alias `tensorflow` to `tf`
 
 ICN001 `holoviews` should be imported as `hv`
@@ -105,7 +95,6 @@ ICN001 `holoviews` should be imported as `hv`
    |        ^^^^^^^^^
 12 | import panel  # unconventional
 13 | import plotly.express  # unconventional
-   |
 help: Alias `holoviews` to `hv`
 
 ICN001 `panel` should be imported as `pn`
@@ -117,7 +106,6 @@ ICN001 `panel` should be imported as `pn`
    |        ^^^^^
 13 | import plotly.express  # unconventional
 14 | import matplotlib  # unconventional
-   |
 help: Alias `panel` to `pn`
 
 ICN001 `plotly.express` should be imported as `px`
@@ -129,7 +117,6 @@ ICN001 `plotly.express` should be imported as `px`
    |        ^^^^^^^^^^^^^^
 14 | import matplotlib  # unconventional
 15 | import polars  # unconventional
-   |
 help: Alias `plotly.express` to `px`
 
 ICN001 `matplotlib` should be imported as `mpl`
@@ -141,7 +128,6 @@ ICN001 `matplotlib` should be imported as `mpl`
    |        ^^^^^^^^^^
 15 | import polars  # unconventional
 16 | import pyarrow  # unconventional
-   |
 help: Alias `matplotlib` to `mpl`
 
 ICN001 `polars` should be imported as `pl`
@@ -152,7 +138,6 @@ ICN001 `polars` should be imported as `pl`
 15 | import polars  # unconventional
    |        ^^^^^^
 16 | import pyarrow  # unconventional
-   |
 help: Alias `polars` to `pl`
 
 ICN001 `pyarrow` should be imported as `pa`
@@ -164,7 +149,6 @@ ICN001 `pyarrow` should be imported as `pa`
    |        ^^^^^^^
 17 |
 18 | import altair as altr  # unconventional
-   |
 help: Alias `pyarrow` to `pa`
 
 ICN001 `altair` should be imported as `alt`
@@ -176,7 +160,6 @@ ICN001 `altair` should be imported as `alt`
    |                  ^^^^
 19 | import matplotlib.pyplot as plot  # unconventional
 20 | import dask.array as darray  # unconventional
-   |
 help: Alias `altair` to `alt`
 
 ICN001 `matplotlib.pyplot` should be imported as `plt`
@@ -187,7 +170,6 @@ ICN001 `matplotlib.pyplot` should be imported as `plt`
    |                             ^^^^
 20 | import dask.array as darray  # unconventional
 21 | import dask.dataframe as ddf  # unconventional
-   |
 help: Alias `matplotlib.pyplot` to `plt`
 
 ICN001 `dask.array` should be imported as `da`
@@ -199,7 +181,6 @@ ICN001 `dask.array` should be imported as `da`
    |                      ^^^^^^
 21 | import dask.dataframe as ddf  # unconventional
 22 | import numpy as nmp  # unconventional
-   |
 help: Alias `dask.array` to `da`
 
 ICN001 `dask.dataframe` should be imported as `dd`
@@ -211,7 +192,6 @@ ICN001 `dask.dataframe` should be imported as `dd`
    |                          ^^^
 22 | import numpy as nmp  # unconventional
 23 | import pandas as pdas  # unconventional
-   |
 help: Alias `dask.dataframe` to `dd`
 
 ICN001 `numpy` should be imported as `np`
@@ -223,7 +203,6 @@ ICN001 `numpy` should be imported as `np`
    |                 ^^^
 23 | import pandas as pdas  # unconventional
 24 | import seaborn as sbrn  # unconventional
-   |
 help: Alias `numpy` to `np`
 
 ICN001 `pandas` should be imported as `pd`
@@ -235,7 +214,6 @@ ICN001 `pandas` should be imported as `pd`
    |                  ^^^^
 24 | import seaborn as sbrn  # unconventional
 25 | import tensorflow as tfz  # unconventional
-   |
 help: Alias `pandas` to `pd`
 
 ICN001 `seaborn` should be imported as `sns`
@@ -247,7 +225,6 @@ ICN001 `seaborn` should be imported as `sns`
    |                   ^^^^
 25 | import tensorflow as tfz  # unconventional
 26 | import holoviews as hsv  # unconventional
-   |
 help: Alias `seaborn` to `sns`
 
 ICN001 `tensorflow` should be imported as `tf`
@@ -259,7 +236,6 @@ ICN001 `tensorflow` should be imported as `tf`
    |                      ^^^
 26 | import holoviews as hsv  # unconventional
 27 | import panel as pns  # unconventional
-   |
 help: Alias `tensorflow` to `tf`
 
 ICN001 `holoviews` should be imported as `hv`
@@ -271,7 +247,6 @@ ICN001 `holoviews` should be imported as `hv`
    |                     ^^^
 27 | import panel as pns  # unconventional
 28 | import plotly.express as pltx  # unconventional
-   |
 help: Alias `holoviews` to `hv`
 
 ICN001 `panel` should be imported as `pn`
@@ -283,7 +258,6 @@ ICN001 `panel` should be imported as `pn`
    |                 ^^^
 28 | import plotly.express as pltx  # unconventional
 29 | import matplotlib as ml  # unconventional
-   |
 help: Alias `panel` to `pn`
 
 ICN001 `plotly.express` should be imported as `px`
@@ -295,7 +269,6 @@ ICN001 `plotly.express` should be imported as `px`
    |                          ^^^^
 29 | import matplotlib as ml  # unconventional
 30 | import polars as ps # unconventional
-   |
 help: Alias `plotly.express` to `px`
 
 ICN001 `matplotlib` should be imported as `mpl`
@@ -307,7 +280,6 @@ ICN001 `matplotlib` should be imported as `mpl`
    |                      ^^
 30 | import polars as ps # unconventional
 31 | import pyarrow as arr  # unconventional
-   |
 help: Alias `matplotlib` to `mpl`
 
 ICN001 `polars` should be imported as `pl`
@@ -318,7 +290,6 @@ ICN001 `polars` should be imported as `pl`
 30 | import polars as ps # unconventional
    |                  ^^
 31 | import pyarrow as arr  # unconventional
-   |
 help: Alias `polars` to `pl`
 
 ICN001 `pyarrow` should be imported as `pa`
@@ -330,7 +301,6 @@ ICN001 `pyarrow` should be imported as `pa`
    |                   ^^^
 32 |
 33 | import altair as alt  # conventional
-   |
 help: Alias `pyarrow` to `pa`
 
 ICN001 `numpy.typing` should be imported as `npt`
@@ -342,7 +312,6 @@ ICN001 `numpy.typing` should be imported as `npt`
    |        ^^^^^^^^^^^^
 51 | import numpy.typing as nt  # unconventional
 52 | import numpy.typing as npt  # conventional
-   |
 help: Alias `numpy.typing` to `npt`
 
 ICN001 `numpy.typing` should be imported as `npt`
@@ -352,5 +321,4 @@ ICN001 `numpy.typing` should be imported as `npt`
 51 | import numpy.typing as nt  # unconventional
    |                        ^^
 52 | import numpy.typing as npt  # conventional
-   |
 help: Alias `numpy.typing` to `npt`

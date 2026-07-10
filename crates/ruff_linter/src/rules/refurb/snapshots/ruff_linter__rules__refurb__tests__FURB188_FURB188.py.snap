@@ -3,14 +3,12 @@ source: crates/ruff_linter/src/rules/refurb/mod.rs
 ---
 FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
   --> FURB188.py:7:5
-   |
  6 |   def remove_extension_via_slice(filename: str) -> str:
  7 | /     if filename.endswith(".txt"):
  8 | |         filename = filename[:-4]
    | |________________________________^
  9 |
 10 |       return filename
-   |
 help: Use removesuffix instead of assignment conditional upon endswith.
   |
 6 | def remove_extension_via_slice(filename: str) -> str:
@@ -29,7 +27,6 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
    | |_____________________________________________^
 16 |
 17 |       return filename
-   |
 help: Use removesuffix instead of assignment conditional upon endswith.
    |
 13 | def remove_extension_via_slice_len(filename: str, extension: str) -> str:
@@ -37,7 +34,6 @@ help: Use removesuffix instead of assignment conditional upon endswith.
    -         filename = filename[:-len(extension)]
 14 +     filename = filename.removesuffix(extension)
 15 |
-   |
 
 FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
   --> FURB188.py:21:12
@@ -45,9 +41,7 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
 20 | def remove_extension_via_ternary(filename: str) -> str:
 21 |     return filename[:-4] if filename.endswith(".txt") else filename
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use removesuffix instead of ternary expression conditional upon endswith.
-   |
 20 | def remove_extension_via_ternary(filename: str) -> str:
    -     return filename[:-4] if filename.endswith(".txt") else filename
 21 +     return filename.removesuffix(".txt")
@@ -60,9 +54,7 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
 24 | def remove_extension_via_ternary_with_len(filename: str, extension: str) -> str:
 25 |     return filename[:-len(extension)] if filename.endswith(extension) else filename
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use removesuffix instead of ternary expression conditional upon endswith.
-   |
 24 | def remove_extension_via_ternary_with_len(filename: str, extension: str) -> str:
    -     return filename[:-len(extension)] if filename.endswith(extension) else filename
 25 +     return filename.removesuffix(extension)
@@ -75,9 +67,7 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
 28 | def remove_prefix(filename: str) -> str:
 29 |     return filename[4:] if filename.startswith("abc-") else filename
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use removeprefix instead of ternary expression conditional upon startswith.
-   |
 28 | def remove_prefix(filename: str) -> str:
    -     return filename[4:] if filename.startswith("abc-") else filename
 29 +     return filename.removeprefix("abc-")
@@ -90,7 +80,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
 32 | def remove_prefix_via_len(filename: str, prefix: str) -> str:
 33 |     return filename[len(prefix):] if filename.startswith(prefix) else filename
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use removeprefix instead of ternary expression conditional upon startswith.
    |
 32 | def remove_prefix_via_len(filename: str, prefix: str) -> str:
@@ -108,7 +97,6 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 147 |
 148 | def remove_prefix_comparable_literal_expr() -> None:
-    |
 help: Use removesuffix instead of ternary expression conditional upon endswith.
     |
 145 |
@@ -125,7 +113,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 150 |
 151 | def shadow_builtins(filename: str, extension: str) -> None:
-    |
 help: Use removeprefix instead of ternary expression conditional upon startswith.
     |
 148 | def remove_prefix_comparable_literal_expr() -> None:
@@ -143,7 +130,6 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 155 |
 156 | def okay_steps():
-    |
 help: Use removesuffix instead of ternary expression conditional upon endswith.
     |
 153 |
@@ -162,7 +148,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
     | |_________________________^
 160 |       if text.startswith("!"):
 161 |           text = text[1::True]
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 157 |     text = "!x!y!z"
@@ -174,7 +159,6 @@ help: Use removeprefix instead of assignment conditional upon startswith.
 
 FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
    --> FURB188.py:160:5
-    |
 158 |       if text.startswith("!"):
 159 |           text = text[1::1]
 160 | /     if text.startswith("!"):
@@ -182,7 +166,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
     | |____________________________^
 162 |       if text.startswith("!"):
 163 |           text = text[1::None]
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 159 |         text = text[1::1]
@@ -201,7 +184,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
 163 | |         text = text[1::None]
     | |____________________________^
 164 |       print(text)
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 161 |         text = text[1::True]
@@ -219,7 +201,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
 183 | /     if text.startswith("ř"): 
 184 | |         text = text[1:]
     | |_______________________^
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 182 |     text = "řetězec"
@@ -239,7 +220,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
     | |_______________________^
 192 |       text = "\U00010000heythere"
 193 |       if text.startswith("\U00010000"):
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 189 |     text = "\ud800\udc00heythere"
@@ -259,7 +239,6 @@ FURB188 [*] Prefer `str.removeprefix()` over conditionally replacing with slice.
     | |_______________________^
 195 |       
 196 |       # should not be linted
-    |
 help: Use removeprefix instead of assignment conditional upon startswith.
     |
 192 |     text = "\U00010000heythere"
@@ -278,7 +257,6 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
 206 | |         a = a[: -len("foo")]
     | |____________________________^
 207 |       print(a)
-    |
 help: Use removesuffix instead of assignment conditional upon endswith.
     |
 204 |     a = "sjdfaskldjfakljklfoo"
@@ -298,7 +276,6 @@ FURB188 [*] Prefer `str.removesuffix()` over conditionally replacing with slice.
 214 | |         else filename
     | |_____________________^
 215 |       )
-    |
 help: Use removesuffix instead of ternary expression conditional upon endswith.
     |
 211 |     filename = (

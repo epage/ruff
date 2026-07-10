@@ -9,7 +9,6 @@ PLW0211 First argument of a static method should not be named `self`
 3 |     def eat(self):  # [bad-staticmethod-argument]
   |             ^^^^
 4 |         pass
-  |
 
 PLW0211 First argument of a static method should not be named `cls`
   --> bad_staticmethod_argument.py:15:13
@@ -19,7 +18,6 @@ PLW0211 First argument of a static method should not be named `cls`
 15 |     def eat(cls, x, y, z):  # [bad-staticmethod-argument]
    |             ^^^
 16 |         pass
-   |
 
 PLW0211 First argument of a static method should not be named `self`
   --> bad_staticmethod_argument.py:19:15
@@ -28,7 +26,6 @@ PLW0211 First argument of a static method should not be named `self`
 19 |     def sleep(self, x, y, z):  # [bad-staticmethod-argument]
    |               ^^^^
 20 |         pass
-   |
 
 PLW0211 First argument of a static method should not be named `self`
   --> bad_staticmethod_argument.py:55:17
@@ -38,4 +35,3 @@ PLW0211 First argument of a static method should not be named `self`
 55 |     def __new__(self, x, y, z):  # [bad-staticmethod-argument]
    |                 ^^^^
 56 |         pass
-   |

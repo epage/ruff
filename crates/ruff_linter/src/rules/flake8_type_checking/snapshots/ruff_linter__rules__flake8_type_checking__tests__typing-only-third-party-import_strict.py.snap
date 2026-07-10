@@ -10,7 +10,6 @@ TC002 [*] Move third-party import `pkg.bar.A` into a type-checking block
    |                         ^
 55 |
 56 |     def test(value: A):
-   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -34,7 +33,6 @@ TC002 [*] Move third-party import `pkg` into a type-checking block
 91 |     import pkg
    |            ^^^
 92 |     import pkgfoo.bar as B
-   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations

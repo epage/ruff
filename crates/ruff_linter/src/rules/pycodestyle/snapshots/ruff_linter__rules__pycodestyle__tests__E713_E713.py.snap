@@ -9,7 +9,6 @@ E713 [*] Test for membership should be `not in`
   |        ^^^^^^
 3 |     pass
 4 | #: E713
-  |
 help: Convert to `not in`
   |
 1 | #: E713
@@ -27,7 +26,6 @@ E713 [*] Test for membership should be `not in`
   |        ^^^^^^^^
 6 |     pass
 7 | #: E713
-  |
 help: Convert to `not in`
   |
 4 | #: E713
@@ -38,14 +36,12 @@ help: Convert to `not in`
 
 E713 [*] Test for membership should be `not in`
   --> E713.py:8:8
-   |
  6 |     pass
  7 | #: E713
  8 | if not X in Y and Z == "zero":
    |        ^^^^^^
  9 |     pass
 10 | #: E713
-   |
 help: Convert to `not in`
   |
 7 | #: E713
@@ -63,24 +59,20 @@ E713 [*] Test for membership should be `not in`
    |                       ^^^^^^
 12 |     pass
 13 | #: E713
-   |
 help: Convert to `not in`
    |
 10 | #: E713
    - if X == "zero" or not Y in Z:
 11 + if X == "zero" or Y not in Z:
 12 |     pass
-   |
 
 E713 [*] Test for membership should be `not in`
   --> E713.py:14:9
-   |
 12 |     pass
 13 | #: E713
 14 | if not (X in Y):
    |         ^^^^^^
 15 |     pass
-   |
 help: Convert to `not in`
    |
 13 | #: E713
@@ -96,7 +88,6 @@ E713 [*] Test for membership should be `not in`
 39 | assert not (re.search(r"^.:\\Users\\[^\\]*\\Downloads\\.*") is None)
 40 | assert not('name' in request)or not request['name']
    |            ^^^^^^^^^^^^^^^^^
-   |
 help: Convert to `not in`
    |
 39 | assert not (re.search(r"^.:\\Users\\[^\\]*\\Downloads\\.*") is None)

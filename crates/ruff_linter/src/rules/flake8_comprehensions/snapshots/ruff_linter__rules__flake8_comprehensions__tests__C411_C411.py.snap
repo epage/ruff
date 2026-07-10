@@ -9,7 +9,6 @@ C411 [*] Unnecessary `list()` call (remove the outer call to `list()`)
   | ^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | # Skip when too many positional arguments
-  |
 help: Remove outer `list()` call
   |
 1 | x = [1, 2, 3]

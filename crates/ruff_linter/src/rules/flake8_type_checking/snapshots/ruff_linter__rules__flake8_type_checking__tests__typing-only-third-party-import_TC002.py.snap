@@ -9,7 +9,6 @@ TC002 [*] Move third-party import `pandas` into a type-checking block
   |                      ^^
 6 |
 7 |     x: pd.DataFrame
-  |
 help: Move into type-checking block
   |
 1 | """Tests to determine accurate detection of typing-only imports."""
@@ -33,7 +32,6 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
    |                        ^^^^^^^^^
 12 |
 13 |     x: DataFrame
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -57,7 +55,6 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
    |                                     ^^
 18 |
 19 |     x: df
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -81,7 +78,6 @@ TC002 [*] Move third-party import `pandas` into a type-checking block
    |                      ^^
 24 |
 25 |     x: pd.DataFrame = 1
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -105,7 +101,6 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
    |                        ^^^^^^^^^
 30 |
 31 |     x: DataFrame = 2
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -129,7 +124,6 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
    |                                     ^^
 36 |
 37 |     x: df = 3
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -153,7 +147,6 @@ TC002 [*] Move third-party import `pandas` into a type-checking block
    |                      ^^
 42 |
 43 |     x: "pd.DataFrame" = 1
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""
@@ -177,7 +170,6 @@ TC002 [*] Move third-party import `pandas` into a type-checking block
    |                      ^^
 48 |
 49 |     x = dict["pd.DataFrame", "pd.DataFrame"]
-   |
 help: Move into type-checking block
    |
 1  | """Tests to determine accurate detection of typing-only imports."""

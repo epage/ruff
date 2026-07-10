@@ -363,7 +363,6 @@ mod tests {
           |
         1 | import os
           |        ^^
-          |
         help: Remove unused import: `os`
 
         error[F841]: Local variable `x` is assigned to but never used
@@ -375,24 +374,19 @@ mod tests {
           |     ^
         7 |     if n == 0:
         8 |         return 0
-          |
         help: Remove assignment to unused variable `x`
 
         error[F821]: Undefined name `a`
          --> undef.py:1:4
-          |
         1 | if a == 1: pass
           |    ^
-          |
 
         error[F821]: Undefined name `fibonaccii`
           --> fib.py:12:16
-           |
         10 |         return 1
         11 |     else:
         12 |         return fibonaccii(n - 1) + fibonacci(n - 2)
            |                ^^^^^^^^^^          -
-           |
         info: Did you mean to import it from `/some/path/def.py`?
          --> fib.py:4:5
           |
@@ -402,7 +396,6 @@ mod tests {
           |     ------------------------------------------------------- `fibonacci` is documented here
         6 |     x = 1
         7 |     if n == 0:
-          |
         "###);
     }
 
@@ -417,18 +410,15 @@ mod tests {
           |               ^
         2 |
         3 | if call(foo
-          |
 
         error[invalid-syntax]: Expected ')', found newline
          --> syntax_errors.py:3:12
-          |
         1 | from os import
         2 |
         3 | if call(foo
           |            ^
         4 |     def bar():
         5 |         pass
-          |
         ");
     }
 
@@ -442,10 +432,8 @@ mod tests {
         insta::assert_snapshot!(env.render_diagnostics(&diagnostics), @r#"
         F401 [*] `os` imported but unused
          --> fib.py:1:8
-          |
         1 | import os
           |        ^^
-          |
         help: Remove unused import: `os`
 
         F841 [*] Local variable `x` is assigned to but never used
@@ -457,7 +445,6 @@ mod tests {
           |     ^
         7 |     if n == 0:
         8 |         return 0
-          |
         help: Remove assignment to unused variable `x`
 
         F821 Undefined name `a`
@@ -465,16 +452,13 @@ mod tests {
           |
         1 | if a == 1: pass
           |    ^
-          |
 
         F821 Undefined name `fibonaccii`
           --> fib.py:12:16
-           |
         10 |         return 1
         11 |     else:
         12 |         return fibonaccii(n - 1) + fibonacci(n - 2)
            |                ^^^^^^^^^^          -
-           |
         info: Did you mean to import it from `/some/path/def.py`?
          --> fib.py:4:5
           |
@@ -484,7 +468,6 @@ mod tests {
           |     ------------------------------------------------------- `fibonacci` is documented here
         6 |     x = 1
         7 |     if n == 0:
-          |
         "#);
     }
 
@@ -501,7 +484,6 @@ mod tests {
           |               ^
         2 |
         3 | if call(foo
-          |
 
         invalid-syntax: Expected ')', found newline
          --> syntax_errors.py:3:12
@@ -512,7 +494,6 @@ mod tests {
           |            ^
         4 |     def bar():
         5 |         pass
-          |
         ");
     }
 
@@ -559,7 +540,6 @@ print()
         2 | if False:
         3 | print()
           | ^
-          |
         ");
     }
 
@@ -596,10 +576,8 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r#"
         error[invalid-character-sub]: Invalid unescaped character SUB, use "\x1a" instead
          --> example.py:1:25
-          |
         1 | nested_fstrings = f'␈{f'␚{f'␛'}'}'
           |                         ^
-          |
         "#);
     }
 
@@ -621,10 +599,8 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r#"
         error[invalid-character-sub]: Invalid unescaped character SUB, use "\x1a" instead
          --> example.py:1:2
-          |
         1 | ␈␚␛
           |  ^
-          |
         "#);
 
         Ok(())
@@ -643,11 +619,9 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r"
         error[test-diagnostic]: main diagnostic message
          --> example.py:2:2
-          |
         1 | def foo():
         2 |     return 1
           |     ^^^^^^^^
-          |
         ");
     }
 
@@ -683,7 +657,6 @@ print()
         1 | # cell 1
         2 | import os
           |        ^^
-          |
         help: Remove unused import: `os`
 
         error[F401][*]: `math` imported but unused
@@ -694,7 +667,6 @@ print()
           |        ^^^^
         3 |
         4 | print('hello world')
-          |
         help: Remove unused import: `math`
 
         error[F841]: Local variable `x` is assigned to but never used
@@ -704,7 +676,6 @@ print()
         3 |     print()
         4 |     x = 1
           |     ^
-          |
         help: Remove assignment to unused variable `x`
         "###);
     }
@@ -739,11 +710,9 @@ print()
         insta::assert_snapshot!(env.render_diagnostics(&diagnostics), @r"
         error[unused-import]: `os` imported but unused
          --> notebook.ipynb:cell 1:2:8
-          |
         1 | # cell 1
         2 | import os
           |        ^^
-          |
          ::: notebook.ipynb:cell 2:2:8
           |
         1 | # cell 2
@@ -751,7 +720,6 @@ print()
           |        ---- second cell
         3 |
         4 | print('hello world')
-          |
         help: Remove unused import: `os`
 
         error[unused-import]: `os` imported but unused
@@ -767,7 +735,6 @@ print()
         3 |     print()
         4 |     x = 1
           |     - second cell
-          |
         help: Remove unused import: `os`
 
         error[test-diagnostic]: main diagnostic message
@@ -779,7 +746,6 @@ print()
         3 |
         4 | print('hello world')
           | ----- print statement
-          |
         help: Remove `print` statement
         ");
     }
@@ -836,13 +802,11 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r"
         error[test-diagnostic]: main diagnostic message
          --> example.py:2:1
-          |
         1 | # Keep parenthesis around preserved CR
         2 | int(-
           | ^
         3 |     1)
         4 | int(+
-          |
         ");
     }
 
@@ -863,10 +827,8 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r"
         error[test-diagnostic]: main diagnostic message
          --> example.py:1:1
-          |
         1 | import foo
           | ^
-          |
         ");
     }
 
@@ -884,10 +846,8 @@ print()
         insta::assert_snapshot!(env.render(&diagnostic), @r"
         error[test-diagnostic]: main diagnostic message
          --> example.py:1:1
-          |
         1 | import foo
           | ^
-          |
         ");
     }
 
@@ -914,7 +874,6 @@ print()
           |
         1 | unexpected eof
           |               ^
-          |
         ");
     }
 
@@ -968,21 +927,18 @@ line 10
         insta::assert_snapshot!(env.render(&diagnostic), @"
         error[test-diagnostic][*]: main diagnostic message
          --> example.py:3:1
-          |
         1 | line 1
         2 | line 2
         3 | line 3
           | ^^^^^^ label
         4 | line 4
         5 | line 5
-          |
         help: Start of diff:
           |
         6 | line 6
           - line 7
         7 + fixed line 7
         8 | line 8
-          |
         note: This is an unsafe fix and may change runtime behavior
         ");
     }
@@ -1032,7 +988,6 @@ line 13
           |
         2 | line 2
           | ^^^^^^
-          |
         help: Replace three lines
            |
         1  | line 1

@@ -10,7 +10,6 @@ TC003 [*] Move standard library import `uuid.UUID` into a type-checking block
   |                  ^^^^
 6 |
 7 | import pydantic
-  |
 help: Move into type-checking block
    |
 4  | import pathlib

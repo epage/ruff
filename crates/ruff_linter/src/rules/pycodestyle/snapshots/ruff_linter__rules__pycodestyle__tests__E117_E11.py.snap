@@ -10,18 +10,15 @@ E117 Over-indented
   | ^^^^^
 7 | #: E112
 8 | if False:
-  |
 
 invalid-syntax: Expected an indented block after `if` statement
   --> E11.py:9:1
-   |
  7 | #: E112
  8 | if False:
  9 | print()
    | ^^^^^
 10 | #: E113
 11 | print()
-   |
 
 invalid-syntax: Unexpected indentation
   --> E11.py:12:1
@@ -32,7 +29,6 @@ invalid-syntax: Unexpected indentation
    | ^^^^
 13 | #: E114 E116
 14 | mimetype = 'application/x-directory'
-   |
 
 invalid-syntax: Expected a statement
   --> E11.py:14:1
@@ -43,7 +39,6 @@ invalid-syntax: Expected a statement
    | ^
 15 |      # 'httpd/unix-directory'
 16 | create_date = False
-   |
 
 E117 Over-indented
   --> E11.py:39:1
@@ -54,7 +49,6 @@ E117 Over-indented
    | ^^^^^^^^
 40 | #: E117 W191
 41 | def start():
-   |
 
 E117 Over-indented
   --> E11.py:42:1
@@ -65,7 +59,6 @@ E117 Over-indented
    | ^^^^^^^^
 43 | #: E112
 44 | if False:  #
-   |
 
 invalid-syntax: Expected an indented block after `if` statement
   --> E11.py:45:1
@@ -76,4 +69,3 @@ invalid-syntax: Expected an indented block after `if` statement
    | ^^^^^
 46 | #:
 47 | if False:
-   |

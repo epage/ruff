@@ -9,7 +9,6 @@ FURB101 [*] `Path.open()` followed by `read()` can be replaced by `Path("file.tx
 4 | with Path("file.txt").open() as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |     contents = f.read()
-  |
 help: Replace with `Path("file.txt").read_text()`
   |
 3 |
@@ -27,7 +26,6 @@ FURB101 [*] `Path.open()` followed by `read()` can be replaced by `Path("file.tx
 7 | with Path("file.txt").open("r") as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |     contents = f.read()
-  |
 help: Replace with `Path("file.txt").read_text()`
   |
 6 |

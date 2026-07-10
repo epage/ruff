@@ -10,7 +10,6 @@ I001 Import block is un-sorted or un-formatted
   | |_________^
 3 |
 4 |   if True:
-  |
 help: Organize imports
 
 I001 Import block is un-sorted or un-formatted
@@ -23,19 +22,16 @@ I001 Import block is un-sorted or un-formatted
   | |_____________^
 7 |
 8 |   if True:
-  |
 help: Organize imports
 
 I001 Import block is un-sorted or un-formatted
   --> leading_prefix.py:10:9
-   |
  8 | if True:
  9 |     x = 1; \
 10 |         import os
    |         ^^^^^^^^^
 11 |
 12 | x = 1; \
-   |
 help: Organize imports
 
 I001 Import block is un-sorted or un-formatted
@@ -44,5 +40,4 @@ I001 Import block is un-sorted or un-formatted
 12 | x = 1; \
 13 | import os
    | ^^^^^^^^^
-   |
 help: Organize imports

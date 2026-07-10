@@ -9,7 +9,6 @@ E241 [*] Multiple spaces after comma
   |        ^^
 3 | #: Okay
 4 | b = (1, 20)
-  |
 help: Replace with single space
   |
 1 | #: E241
@@ -27,7 +26,6 @@ E241 [*] Multiple spaces after comma
    |                  ^^^^
 12 |                ef,  +h,
 13 |                c,   -d]
-   |
 help: Replace with single space
    |
 10 | # issue 135
@@ -44,9 +42,7 @@ E241 [*] Multiple spaces after comma
 12 |                ef,  +h,
    |                   ^^
 13 |                c,   -d]
-   |
 help: Replace with single space
-   |
 11 | more_spaces = [a,    b,
    -                ef,  +h,
 12 +                ef, +h,
@@ -60,7 +56,6 @@ E241 [*] Multiple spaces after comma
 12 |                ef,  +h,
 13 |                c,   -d]
    |                  ^^^
-   |
 help: Replace with single space
    |
 12 |                ef,  +h,

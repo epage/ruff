@@ -18,7 +18,6 @@ DOC501 Raised exception `FasterThanLightError` missing from docstring
    | |_______^
 43 |       try:
 44 |           return distance / time
-   |
 help: Add `FasterThanLightError` to the docstring
 
 DOC501 Raised exception `ValueError` missing from docstring
@@ -38,7 +37,6 @@ DOC501 Raised exception `ValueError` missing from docstring
    | |_______^
 60 |       try:
 61 |           return distance / time
-   |
 help: Add `ValueError` to the docstring
 
 DOC501 Raised exception `FasterThanLightError` missing from docstring
@@ -58,7 +56,6 @@ DOC501 Raised exception `FasterThanLightError` missing from docstring
    | |_______^
 60 |       try:
 61 |           return distance / time
-   |
 help: Add `FasterThanLightError` to the docstring
 
 DOC501 Raised exception `ZeroDivisionError` missing from docstring
@@ -78,7 +75,6 @@ DOC501 Raised exception `ZeroDivisionError` missing from docstring
    | |_______^
 79 |       try:
 80 |           return distance / time
-   |
 help: Add `ZeroDivisionError` to the docstring
 
 DOC501 Raised exception `ValueError` missing from docstring
@@ -98,7 +94,6 @@ DOC501 Raised exception `ValueError` missing from docstring
    | |_______^
 97 |       try:
 98 |           return distance / time
-   |
 help: Add `ValueError` to the docstring
 
 DOC501 Raised exception `ZeroDivisionError` missing from docstring
@@ -118,7 +113,6 @@ DOC501 Raised exception `ZeroDivisionError` missing from docstring
    | |_______^
 97 |       try:
 98 |           return distance / time
-   |
 help: Add `ZeroDivisionError` to the docstring
 
 DOC501 Raised exception `AnotherError` missing from docstring
@@ -137,7 +131,6 @@ DOC501 Raised exception `AnotherError` missing from docstring
 114 | |     """
     | |_______^
 115 |       raise AnotherError
-    |
 help: Add `AnotherError` to the docstring
 
 DOC501 Raised exception `AnotherError` missing from docstring
@@ -156,7 +149,6 @@ DOC501 Raised exception `AnotherError` missing from docstring
 128 | |     """
     | |_______^
 129 |       raise AnotherError()
-    |
 help: Add `AnotherError` to the docstring
 
 DOC501 Raised exception `SomeError` missing from docstring
@@ -171,7 +163,6 @@ DOC501 Raised exception `SomeError` missing from docstring
 138 | |     """
     | |_______^
 139 |       raise something.SomeError
-    |
 help: Add `SomeError` to the docstring
 
 DOC501 Raised exception `ZeroDivisionError` missing from docstring
@@ -194,7 +185,6 @@ DOC501 Raised exception `ZeroDivisionError` missing from docstring
     | |_______^
 209 |       try:
 210 |           return distance / time
-    |
 help: Add `ZeroDivisionError` to the docstring
 
 DOC501 Raised exception `TypeError` missing from docstring
@@ -209,7 +199,6 @@ DOC501 Raised exception `TypeError` missing from docstring
     | |_______^
 243 |       if True:
 244 |           raise TypeError  # DOC501
-    |
 help: Add `TypeError` to the docstring
 
 DOC501 Raised exception `ValueError` missing from docstring
@@ -224,5 +213,4 @@ DOC501 Raised exception `ValueError` missing from docstring
     | |_______^
 243 |       if True:
 244 |           raise TypeError  # DOC501
-    |
 help: Add `ValueError` to the docstring

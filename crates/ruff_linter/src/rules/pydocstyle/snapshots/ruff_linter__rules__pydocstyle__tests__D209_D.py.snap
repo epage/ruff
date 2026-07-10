@@ -10,7 +10,6 @@ D209 [*] Multi-line docstring closing quotes should be on a separate line
 282 | |
 283 | |     Description."""
     | |___________________^
-    |
 help: Move closing quotes to new line
     |
 282 |
@@ -22,14 +21,12 @@ help: Move closing quotes to new line
 
 D209 [*] Multi-line docstring closing quotes should be on a separate line
    --> D.py:588:5
-    |
 586 |   @expect('D213: Multi-line docstring summary should start at the second line')
 587 |   def asdfljdjgf24():
 588 | /     """Summary.
 589 | |
 590 | |     Description.  """
     | |_____________________^
-    |
 help: Move closing quotes to new line
     |
 589 |

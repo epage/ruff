@@ -8,4 +8,3 @@ PLR0914 Too many local variables (16 > 15)
    |     ^^^^
 21 |     first = 1
 22 |     second = 2
-   |

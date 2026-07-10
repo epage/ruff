@@ -9,7 +9,6 @@ N803 Argument name `stillBad` should be lowercase
 4 | def func(_, a, stillBad):
   |                ^^^^^^^^
 5 |     return _, a, stillBad
-  |
 
 N803 Argument name `stillBad` should be lowercase
   --> N803.py:11:28
@@ -19,4 +18,3 @@ N803 Argument name `stillBad` should be lowercase
 11 |     def method(self, _, a, stillBad):
    |                            ^^^^^^^^
 12 |         return _, a, stillBad
-   |

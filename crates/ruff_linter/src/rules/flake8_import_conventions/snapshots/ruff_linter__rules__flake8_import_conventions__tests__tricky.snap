@@ -10,7 +10,6 @@ ICN001 [*] `pandas` should be imported as `pd`
   |                ^^^^^^
 8 |     except ImportError:
 9 |         return False
-  |
 help: Alias `pandas` to `pd`
   |
 5 |     try:

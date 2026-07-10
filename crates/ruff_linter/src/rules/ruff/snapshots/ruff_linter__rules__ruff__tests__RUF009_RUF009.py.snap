@@ -10,7 +10,6 @@ RUF009 Do not perform function call `default_function` in dataclass defaults
    |                                         ^^^^^^^^^^^^^^^^^^
 21 |     class_variable: typing.ClassVar[list[int]] = default_function()
 22 |     another_class_var: ClassVar[list[int]] = default_function()
-   |
 
 RUF009 Do not perform function call `default_function` in dataclass defaults
   --> RUF009.py:43:41
@@ -21,7 +20,6 @@ RUF009 Do not perform function call `default_function` in dataclass defaults
    |                                         ^^^^^^^^^^^^^^^^^^
 44 |     another_dataclass: A = A()
 45 |     not_optimal: ImmutableType = ImmutableType(20)
-   |
 
 RUF009 Do not perform function call `A` in dataclass defaults
   --> RUF009.py:44:28
@@ -32,7 +30,6 @@ RUF009 Do not perform function call `A` in dataclass defaults
    |                            ^^^
 45 |     not_optimal: ImmutableType = ImmutableType(20)
 46 |     good_variant: ImmutableType = DEFAULT_IMMUTABLETYPE_FOR_ALL_DATACLASSES
-   |
 
 RUF009 Do not perform function call `ImmutableType` in dataclass defaults
   --> RUF009.py:45:34
@@ -43,7 +40,6 @@ RUF009 Do not perform function call `ImmutableType` in dataclass defaults
    |                                  ^^^^^^^^^^^^^^^^^
 46 |     good_variant: ImmutableType = DEFAULT_IMMUTABLETYPE_FOR_ALL_DATACLASSES
 47 |     okay_variant: A = DEFAULT_A_FOR_ALL_DATACLASSES
-   |
 
 RUF009 Do not perform function call `ListOfStrings` in dataclass defaults
   --> RUF009.py:91:24
@@ -54,7 +50,6 @@ RUF009 Do not perform function call `ListOfStrings` in dataclass defaults
    |                        ^^^^^^^^^^^^^^^^^
 92 |     b: StringsToInts = StringsToInts()
 93 |     c: Invalid1 = Invalid1()
-   |
 
 RUF009 Do not perform function call `StringsToInts` in dataclass defaults
   --> RUF009.py:92:24
@@ -65,7 +60,6 @@ RUF009 Do not perform function call `StringsToInts` in dataclass defaults
    |                        ^^^^^^^^^^^^^^^
 93 |     c: Invalid1 = Invalid1()
 94 |     d: Invalid2 = Invalid2()
-   |
 
 RUF009 Do not perform function call `Invalid1` in dataclass defaults
   --> RUF009.py:93:19
@@ -76,7 +70,6 @@ RUF009 Do not perform function call `Invalid1` in dataclass defaults
    |                   ^^^^^^^^^^
 94 |     d: Invalid2 = Invalid2()
 95 |     e: Invalid3 = Invalid3()
-   |
 
 RUF009 Do not perform function call `Invalid2` in dataclass defaults
   --> RUF009.py:94:19
@@ -86,7 +79,6 @@ RUF009 Do not perform function call `Invalid2` in dataclass defaults
 94 |     d: Invalid2 = Invalid2()
    |                   ^^^^^^^^^^
 95 |     e: Invalid3 = Invalid3()
-   |
 
 RUF009 Do not perform function call `Invalid3` in dataclass defaults
   --> RUF009.py:95:19
@@ -97,7 +89,6 @@ RUF009 Do not perform function call `Invalid3` in dataclass defaults
    |                   ^^^^^^^^^^
 96 |
 97 |     # No errors
-   |
 
 RUF009 Do not perform function call `default_function` in dataclass defaults
    --> RUF009.py:109:35
@@ -108,4 +99,3 @@ RUF009 Do not perform function call `default_function` in dataclass defaults
     |                                   ^^^^^^^^^^^^^^^^^^
 110 |     # ignored
 111 |     this_is_fine: int = f()
-    |

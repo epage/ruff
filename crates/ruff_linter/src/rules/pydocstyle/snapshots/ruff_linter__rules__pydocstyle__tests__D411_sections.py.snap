@@ -9,7 +9,6 @@ D411 [*] Missing blank line before section ("Yields")
 80 |     Yields
    |     ^^^^^^
 81 |     ------
-   |
 help: Add blank line before "Yields"
    |
 79 |     -------
@@ -25,7 +24,6 @@ D411 [*] Missing blank line before section ("Returns")
     |     ^^^^^^^
 135 |     -------
 136 |     A value of some sort.
-    |
 help: Add blank line before "Returns"
     |
 133 |     The function's description.
@@ -41,7 +39,6 @@ D411 [*] Missing blank line before section ("Raises")
 227 |     Raises:
     |     ^^^^^^
 228 |     My attention.
-    |
 help: Add blank line before "Raises"
     |
 226 |     Many many wonderful things.

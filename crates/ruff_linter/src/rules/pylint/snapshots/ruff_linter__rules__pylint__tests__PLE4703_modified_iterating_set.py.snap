@@ -10,7 +10,6 @@ PLE4703 [*] Iterated set `nums` is modified within the `for` loop
   | |_____________________^
 6 |
 7 |   animals = {"dog", "cat", "cow"}
-  |
 help: Iterate over a copy of `nums`
   |
 3 | nums = {1, 2, 3}
@@ -22,14 +21,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLE4703 [*] Iterated set `animals` is modified within the `for` loop
   --> modified_iterating_set.py:8:1
-   |
  7 |   animals = {"dog", "cat", "cow"}
  8 | / for animal in animals:
  9 | |     animals.pop("cow")
    | |______________________^
 10 |
 11 |   fruits = {"apple", "orange", "grape"}
-   |
 help: Iterate over a copy of `animals`
   |
 7 | animals = {"dog", "cat", "cow"}
@@ -48,7 +45,6 @@ PLE4703 [*] Iterated set `fruits` is modified within the `for` loop
    | |__________________^
 14 |
 15 |   planets = {"mercury", "venus", "earth"}
-   |
 help: Iterate over a copy of `fruits`
    |
 11 | fruits = {"apple", "orange", "grape"}
@@ -67,7 +63,6 @@ PLE4703 [*] Iterated set `planets` is modified within the `for` loop
    | |______________________________^
 18 |
 19 |   colors = {"red", "green", "blue"}
-   |
 help: Iterate over a copy of `planets`
    |
 15 | planets = {"mercury", "venus", "earth"}
@@ -86,7 +81,6 @@ PLE4703 [*] Iterated set `colors` is modified within the `for` loop
    | |________________________^
 22 |
 23 |   odds = {1, 3, 5}
-   |
 help: Iterate over a copy of `colors`
    |
 19 | colors = {"red", "green", "blue"}
@@ -106,7 +100,6 @@ PLE4703 [*] Iterated set `odds` is modified within the `for` loop
    | |_________________________^
 27 |
 28 |   # OK
-   |
 help: Iterate over a copy of `odds`
    |
 23 | odds = {1, 3, 5}

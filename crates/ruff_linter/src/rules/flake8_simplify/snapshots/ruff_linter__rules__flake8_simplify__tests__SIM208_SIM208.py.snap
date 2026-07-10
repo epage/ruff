@@ -7,7 +7,6 @@ SIM208 [*] Use `a` instead of `not (not a)`
 1 | if not (not a):  # SIM208
   |    ^^^^^^^^^^^
 2 |     pass
-  |
 help: Replace with `a`
   |
   - if not (not a):  # SIM208
@@ -23,7 +22,6 @@ SIM208 [*] Use `a == b` instead of `not (not a == b)`
 4 | if not (not (a == b)):  # SIM208
   |    ^^^^^^^^^^^^^^^^^^
 5 |     pass
-  |
 help: Replace with `a == b`
   |
 3 |
@@ -41,7 +39,6 @@ SIM208 [*] Use `b` instead of `not (not b)`
    |     ^^^^^^^^^
 17 |
 18 | f(not not a)  # SIM208
-   |
 help: Replace with `b`
    |
 15 |
@@ -59,7 +56,6 @@ SIM208 [*] Use `a` instead of `not (not a)`
    |   ^^^^^^^^^
 19 |
 20 | if 1 + (not (not a)):  # SIM208
-   |
 help: Replace with `a`
    |
 17 |
@@ -76,7 +72,6 @@ SIM208 [*] Use `a` instead of `not (not a)`
 20 | if 1 + (not (not a)):  # SIM208
    |         ^^^^^^^^^^^
 21 |     pass
-   |
 help: Replace with `a`
    |
 19 |

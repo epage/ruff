@@ -17,7 +17,6 @@ DOC403 Docstring has a "Yields" section but the function doesn't yield anything
 22 | |     """
    | |_______^
 23 |       print('test')
-   |
 help: Remove the "Yields" section
 
 DOC403 Docstring has a "Yields" section but the function doesn't yield anything
@@ -36,5 +35,4 @@ DOC403 Docstring has a "Yields" section but the function doesn't yield anything
 38 | |         """
    | |___________^
 39 |           print('test')
-   |
 help: Remove the "Yields" section

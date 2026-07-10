@@ -7,7 +7,6 @@ SLOT002 Subclasses of `collections.namedtuple()` should define `__slots__`
 6 | class Bad(namedtuple("foo", ["str", "int"])):  # SLOT002
   |       ^^^
 7 |     pass
-  |
 
 SLOT002 Subclasses of call-based `typing.NamedTuple()` should define `__slots__`
   --> SLOT002.py:10:7
@@ -15,7 +14,6 @@ SLOT002 Subclasses of call-based `typing.NamedTuple()` should define `__slots__`
 10 | class UnusualButStillBad(NamedTuple("foo", [("x", int, "y", int)])):  # SLOT002
    |       ^^^^^^^^^^^^^^^^^^
 11 |     pass
-   |
 
 SLOT002 Subclasses of `collections.namedtuple()` should define `__slots__`
   --> SLOT002.py:30:7
@@ -23,7 +21,6 @@ SLOT002 Subclasses of `collections.namedtuple()` should define `__slots__`
 30 | class UnusualButStillBad(namedtuple("foo", ["str", "int"]), NamedTuple("foo", [("x", int, "y", int)])):
    |       ^^^^^^^^^^^^^^^^^^
 31 |     pass
-   |
 
 SLOT002 Subclasses of `collections.namedtuple()` should define `__slots__`
   --> SLOT002.py:34:7
@@ -31,4 +28,3 @@ SLOT002 Subclasses of `collections.namedtuple()` should define `__slots__`
 34 | class UnusualButStillBad(namedtuple("foo", ["str", "int"]), object):
    |       ^^^^^^^^^^^^^^^^^^
 35 |     pass
-   |

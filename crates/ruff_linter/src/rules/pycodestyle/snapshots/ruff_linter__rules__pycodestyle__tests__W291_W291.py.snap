@@ -7,7 +7,6 @@ W291 [*] Trailing whitespace
 1 | '''trailing whitespace 
   |                       ^
 2 | inside a multiline string'''
-  |
 help: Remove trailing whitespace
   |
   - '''trailing whitespace 
@@ -24,7 +23,6 @@ W291 [*] Trailing whitespace
 4 | f'''trailing whitespace 
   |                        ^
 5 | inside a multiline f-string'''
-  |
 help: Remove trailing whitespace
   |
 3 |
@@ -36,13 +34,11 @@ note: This is an unsafe fix and may change runtime behavior
 
 W291 [*] Trailing whitespace
   --> W291.py:8:8
-   |
  7 | # Trailing whitespace after `{`
  8 | f'abc { 
    |        ^
  9 |     1 + 2
 10 | }'
-   |
 help: Remove trailing whitespace
   |
 7 | # Trailing whitespace after `{`
@@ -59,7 +55,6 @@ W291 [*] Trailing whitespace
 14 |     1 + 2 
    |          ^
 15 | }'
-   |
 help: Remove trailing whitespace
    |
 13 | f'abc {

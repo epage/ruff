@@ -9,7 +9,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                           ^^^^^
 118 |
 119 | # dict.get in an if statement
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 116 | # dict.get in ternary expression
@@ -25,7 +24,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 120 | if my_dict.get("key", False):  # [RUF056]
     |                       ^^^^^
 121 |     pass
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 119 | # dict.get in an if statement
@@ -41,7 +39,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 124 | if True and my_dict.get("key", False):  # [RUF056]
     |                                ^^^^^
 125 |     pass
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 123 | # dict.get in compound if statement
@@ -58,7 +55,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 127 | if my_dict.get("key", False) or True:  # [RUF056]
     |                       ^^^^^
 128 |     pass
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 126 |
@@ -75,7 +71,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                           ^^^^^
 132 |
 133 | # dict.get in a while statement
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 130 | # dict.get in an assert statement
@@ -91,7 +86,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 134 | while my_dict.get("key", False):  # [RUF056]
     |                          ^^^^^
 135 |     pass
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 133 | # dict.get in a while statement
@@ -108,7 +102,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^^
 139 |
 140 | # testing all falsy fallbacks
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 137 | # dict.get in unary not expression
@@ -125,7 +118,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^^
 142 | value = not my_dict.get("key", [])  # [RUF056]
 143 | value = not my_dict.get("key", list())  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 140 | # testing all falsy fallbacks
@@ -143,7 +135,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^
 143 | value = not my_dict.get("key", list())  # [RUF056]
 144 | value = not my_dict.get("key", {})  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 141 | value = not my_dict.get("key", False)  # [RUF056]
@@ -161,7 +152,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^^^
 144 | value = not my_dict.get("key", {})  # [RUF056]
 145 | value = not my_dict.get("key", dict())  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 142 | value = not my_dict.get("key", [])  # [RUF056]
@@ -179,7 +169,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^
 145 | value = not my_dict.get("key", dict())  # [RUF056]
 146 | value = not my_dict.get("key", set())  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 143 | value = not my_dict.get("key", list())  # [RUF056]
@@ -197,7 +186,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^^^
 146 | value = not my_dict.get("key", set())  # [RUF056]
 147 | value = not my_dict.get("key", None)  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 144 | value = not my_dict.get("key", {})  # [RUF056]
@@ -215,7 +203,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^^
 147 | value = not my_dict.get("key", None)  # [RUF056]
 148 | value = not my_dict.get("key", 0)  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 145 | value = not my_dict.get("key", dict())  # [RUF056]
@@ -233,7 +220,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^^^
 148 | value = not my_dict.get("key", 0)  # [RUF056]
 149 | value = not my_dict.get("key", 0.0)  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 146 | value = not my_dict.get("key", set())  # [RUF056]
@@ -251,7 +237,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^
 149 | value = not my_dict.get("key", 0.0)  # [RUF056]
 150 | value = not my_dict.get("key", "")  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 147 | value = not my_dict.get("key", None)  # [RUF056]
@@ -268,7 +253,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 149 | value = not my_dict.get("key", 0.0)  # [RUF056]
     |                                ^^^
 150 | value = not my_dict.get("key", "")  # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 148 | value = not my_dict.get("key", 0)  # [RUF056]
@@ -286,7 +270,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
     |                                ^^
 151 |
 152 | # testing invalid dict.get call with inline comment
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 149 | value = not my_dict.get("key", 0.0)  # [RUF056]
@@ -303,7 +286,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 154 |                      [] # comment2
     |                      ^^
 155 |                      ) # [RUF056]
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 152 | # testing invalid dict.get call with inline comment
@@ -311,7 +293,6 @@ help: Remove falsy fallback from `dict.get()`
     -                      [] # comment2
 153 + value = not my_dict.get("key" # comment2
 154 |                      ) # [RUF056]
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -322,7 +303,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                        ^^^^^
 164 |
 165 | # `default` is positional-only, so these are invalid
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -333,7 +313,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                        ^^^^^^^^^^^^^
 167 | not my_dict.get(key="key", default=False)
 168 | not my_dict.get(default=[], key="key")
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -345,7 +324,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                            ^^^^^^^^^^^^^
 168 | not my_dict.get(default=[], key="key")
 169 | not my_dict.get(default=False)
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -357,7 +335,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                 ^^^^^^^^^^
 169 | not my_dict.get(default=False)
 170 | not my_dict.get(key="key", other="something", default=False)
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -369,7 +346,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                 ^^^^^^^^^^^^^
 170 | not my_dict.get(key="key", other="something", default=False)
 171 | not my_dict.get(default=False, other="something", key="test")
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -380,7 +356,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
 170 | not my_dict.get(key="key", other="something", default=False)
     |                                               ^^^^^^^^^^^^^
 171 | not my_dict.get(default=False, other="something", key="test")
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -392,7 +367,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                 ^^^^^^^^^^^^^
 172 |
 173 | # comments don't really matter here because of the kwargs but include them for
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -404,7 +378,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |     ^^^^^^^^^^^^^
 178 | )  # comment 3
 179 | not my_dict.get(
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -416,7 +389,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |     ^^^^^^^^^^
 181 |     key="key",  # comment2
 182 | )  # comment 3
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -428,7 +400,6 @@ RUF056 Avoid providing a falsy fallback to `dict.get()` in boolean test position
     |                        ^^^^^
 188 |
 189 | # https://github.com/astral-sh/ruff/issues/18798
-    |
 help: Remove falsy fallback from `dict.get()`
 
 RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test positions. The default fallback `None` is already falsy.
@@ -438,7 +409,6 @@ RUF056 [*] Avoid providing a falsy fallback to `dict.get()` in boolean test posi
 190 | d = {}
 191 | not d.get("key", (False))
     |                   ^^^^^
-    |
 help: Remove falsy fallback from `dict.get()`
     |
 190 | d = {}

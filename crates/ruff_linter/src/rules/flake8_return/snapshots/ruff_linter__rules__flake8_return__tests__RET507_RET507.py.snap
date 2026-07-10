@@ -3,14 +3,12 @@ source: crates/ruff_linter/src/rules/flake8_return/mod.rs
 ---
 RET507 [*] Unnecessary `elif` after `continue` statement
   --> RET507.py:8:9
-   |
  6 |         if i < y:  # [no-else-continue]
  7 |             continue
  8 |         elif i < w:
    |         ^^^^
  9 |             continue
 10 |         else:
-   |
 help: Remove unnecessary `elif`
   |
 7 |             continue
@@ -28,7 +26,6 @@ RET507 [*] Unnecessary `elif` after `continue` statement
    |         ^^^^
 23 |             c = 2
 24 |         else:
-   |
 help: Remove unnecessary `elif`
    |
 21 |             continue
@@ -45,7 +42,6 @@ RET507 [*] Unnecessary `else` after `continue` statement
 36 |         else:
    |         ^^^^
 37 |             a = z
-   |
 help: Remove unnecessary `else`
    |
 35 |             continue
@@ -64,7 +60,6 @@ RET507 [*] Unnecessary `else` after `continue` statement
    |             ^^^^
 48 |                 c = 3
 49 |                 continue
-   |
 help: Remove unnecessary `else`
    |
 46 |                 continue
@@ -85,7 +80,6 @@ RET507 [*] Unnecessary `else` after `continue` statement
    |         ^^^^
 64 |             c = 3
 65 |         continue
-   |
 help: Remove unnecessary `else`
    |
 62 |             continue
@@ -104,7 +98,6 @@ RET507 [*] Unnecessary `else` after `continue` statement
    |             ^^^^
 75 |                 b = 2
 76 |         else:
-   |
 help: Remove unnecessary `else`
    |
 73 |                 continue
@@ -123,7 +116,6 @@ RET507 [*] Unnecessary `else` after `continue` statement
    |         ^^^^
 86 |             try:
 87 |                 return
-   |
 help: Remove unnecessary `else`
    |
 84 |             continue

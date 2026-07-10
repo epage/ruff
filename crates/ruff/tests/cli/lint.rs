@@ -4349,7 +4349,6 @@ fn show_fixes_in_full_output_with_preview_enabled() {
       |
     1 | import math
       |        ^^^^
-      |
     help: Remove unused import: `math`
       |
       - import math

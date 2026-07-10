@@ -10,7 +10,6 @@ PLR0203 [*] Static method defined without decorator
    |     ^
 16 |         """staticmethod to pick one fruit color"""
 17 |         return choice(Fruit.COLORS)
-   |
 help: Add @staticmethod decorator
    |
 14 |
@@ -31,7 +30,6 @@ PLR0203 [*] Static method defined without decorator
 27 |     def static_method():
    |     ^
 28 |         pass
-   |
 help: Add @staticmethod decorator
    |
 26 |

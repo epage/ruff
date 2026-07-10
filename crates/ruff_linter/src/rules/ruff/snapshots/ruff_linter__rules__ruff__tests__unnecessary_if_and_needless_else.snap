@@ -11,7 +11,6 @@ RUF047 [*] Empty `else` clause
   | |________^
 8 |
 9 |   # Same with elif.
-  |
 help: Remove the `else` clause
   |
 5 |     pass
@@ -30,9 +29,7 @@ RUF047 [*] Empty `else` clause
    | |________^
 16 |
 17 |   # Side-effect in condition: RUF047 removes the else, then RUF050
-   |
 help: Remove the `else` clause
-   |
 13 |     pass
    - else:
    -     pass
@@ -47,7 +44,6 @@ RUF047 [*] Empty `else` clause
 21 | / else:
 22 | |     pass
    | |________^
-   |
 help: Remove the `else` clause
    |
 20 |     pass

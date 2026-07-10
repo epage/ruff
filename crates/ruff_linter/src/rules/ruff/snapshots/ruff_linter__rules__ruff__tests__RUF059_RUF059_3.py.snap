@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/ruff/mod.rs
 ---
 RUF059 [*] Unpacked variable `b` is never used
   --> RUF059_3.py:13:5
-   |
 11 | def bar():
 12 |     a = foo()
 13 |     b, c = foo()
    |     ^
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 12 |     a = foo()
@@ -20,12 +18,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF059 [*] Unpacked variable `c` is never used
   --> RUF059_3.py:13:8
-   |
 11 | def bar():
 12 |     a = foo()
 13 |     b, c = foo()
    |        ^
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 12 |     a = foo()

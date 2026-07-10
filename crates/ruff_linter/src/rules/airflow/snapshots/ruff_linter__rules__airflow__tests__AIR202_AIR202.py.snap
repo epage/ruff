@@ -8,7 +8,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 16 | def annotated_dict() -> dict:  # AIR202
 17 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 14 |
@@ -25,7 +24,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^^^
 21 | def annotated_dict_subscript() -> dict[str, int]:  # AIR202
 22 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 19 |
@@ -42,7 +40,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 26 | def annotated_typing_dict() -> Dict[str, int]:  # AIR202
 27 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 24 |
@@ -59,7 +56,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 31 | def annotated_typing_mapping() -> Mapping[str, int]:  # AIR202
 32 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 29 |
@@ -76,7 +72,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 36 | def annotated_collections_abc_mapping() -> collections.abc.Mapping:  # AIR202
 37 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 34 |
@@ -93,7 +88,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 41 | def annotated_mutable_mapping() -> MutableMapping[str, int]:  # AIR202
 42 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 39 |
@@ -110,7 +104,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 50 | def annotated_typed_dict() -> MyTD:  # AIR202
 51 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 48 |
@@ -127,7 +120,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^^^^^
 55 | def annotated_dict_via_sdk() -> dict:  # AIR202
 56 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 53 |
@@ -144,7 +136,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 63 | def body_dict_literal():  # AIR202
 64 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=False`
    |
 61 |
@@ -161,7 +152,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 68 | def body_dict_comp():  # AIR202
 69 |     return {k: v for k, v in enumerate(range(3))}
-   |
 help: Add `multiple_outputs=False`
    |
 66 |
@@ -178,7 +168,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 73 | def body_dict_call():  # AIR202
 74 |     return dict(a=1)
-   |
 help: Add `multiple_outputs=False`
    |
 71 |
@@ -195,7 +184,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^
 78 | def body_dict_literal_annotated_non_mapping() -> int:  # AIR202
 79 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=False`
    |
 76 |
@@ -212,7 +200,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | ^^^^^^^^^^^^^^^^
 86 | def call_form_with_kwarg() -> dict:  # AIR202
 87 |     return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 84 |
@@ -231,7 +218,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
    | |_^
 93 |   def call_form_multiline() -> dict:  # AIR202
 94 |       return {"x": 1}
-   |
 help: Add `multiple_outputs=True`
    |
 90 | @task(
@@ -248,7 +234,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^
 101 | def variant_branch():  # AIR202
 102 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=False`
     |
 99  |
@@ -265,7 +250,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^^^^^^^^
 106 | def variant_short_circuit():  # AIR202
 107 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=False`
     |
 104 |
@@ -282,7 +266,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^^^^^
 111 | def variant_virtualenv() -> dict:  # AIR202
 112 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=True`
     |
 109 |
@@ -299,7 +282,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 116 | def variant_docker() -> Mapping[str, int]:  # AIR202
 117 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=True`
     |
 114 |
@@ -316,7 +298,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^^^^^
 121 | def variant_kubernetes():  # AIR202
 122 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=False`
     |
 119 |
@@ -333,7 +314,6 @@ AIR202 [*] `@task`-decorated function relies on `multiple_outputs` inference
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 126 | def variant_short_circuit_call() -> dict:  # AIR202
 127 |     return {"a": 1}
-    |
 help: Add `multiple_outputs=True`
     |
 124 |

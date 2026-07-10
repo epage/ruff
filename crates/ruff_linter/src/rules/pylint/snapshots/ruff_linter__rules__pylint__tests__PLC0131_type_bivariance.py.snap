@@ -9,7 +9,6 @@ PLC0131 `TypeVar` "T" cannot be both covariant and contravariant
 5 | T = TypeVar("T", covariant=True, contravariant=True)
   |     ^^^^^^^
 6 | T = TypeVar(name="T", covariant=True, contravariant=True)
-  |
 
 PLC0131 `TypeVar` "T" cannot be both covariant and contravariant
  --> type_bivariance.py:6:5
@@ -19,7 +18,6 @@ PLC0131 `TypeVar` "T" cannot be both covariant and contravariant
   |     ^^^^^^^
 7 |
 8 | T = ParamSpec("T", covariant=True, contravariant=True)
-  |
 
 PLC0131 `ParamSpec` "T" cannot be both covariant and contravariant
  --> type_bivariance.py:8:5
@@ -29,14 +27,11 @@ PLC0131 `ParamSpec` "T" cannot be both covariant and contravariant
 8 | T = ParamSpec("T", covariant=True, contravariant=True)
   |     ^^^^^^^^^
 9 | T = ParamSpec(name="T", covariant=True, contravariant=True)
-  |
 
 PLC0131 `ParamSpec` "T" cannot be both covariant and contravariant
   --> type_bivariance.py:9:5
-   |
  8 | T = ParamSpec("T", covariant=True, contravariant=True)
  9 | T = ParamSpec(name="T", covariant=True, contravariant=True)
    |     ^^^^^^^^^
 10 |
 11 | # Non-errors.
-   |

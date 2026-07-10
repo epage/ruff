@@ -14,26 +14,22 @@ help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
   --> TID252.py:8:1
-   |
  6 | # TID252
  7 | from . import sibling
  8 | from .sibling import example
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | from .. import parent
 10 | from ..parent import example
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
   --> TID252.py:9:1
-   |
  7 | from . import sibling
  8 | from .sibling import example
  9 | from .. import parent
    | ^^^^^^^^^^^^^^^^^^^^^
 10 | from ..parent import example
 11 | from ... import grandparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -45,7 +41,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | from ... import grandparent
 12 | from ...grandparent import example
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -57,7 +52,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | from ...grandparent import example
 13 | from  .parent import hello
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -69,7 +63,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 | from  .parent import hello
 14 | from .\
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -81,7 +74,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 | from .\
 15 |     parent import \
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -95,7 +87,6 @@ TID252 Prefer absolute imports over relative imports
    | |___________________^
 17 |   from \
 18 |       ..parent\
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -110,7 +101,6 @@ TID252 Prefer absolute imports over relative imports
    | |_______________^
 21 |   from ..... import ultragrantparent
 22 |   from ...... import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -122,19 +112,16 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 | from ...... import ultragrantparent
 23 | from ....... import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
   --> TID252.py:22:1
-   |
 20 |     world_hello
 21 | from ..... import ultragrantparent
 22 | from ...... import ultragrantparent
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | from ....... import ultragrantparent
 24 | from ......... import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -146,7 +133,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 | from ......... import ultragrantparent
 25 | from ........................... import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -158,7 +144,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | from ........................... import ultragrantparent
 26 | from .....parent import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -170,7 +155,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 | from .....parent import ultragrantparent
 27 | from .........parent import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -182,7 +166,6 @@ TID252 Prefer absolute imports over relative imports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 | from .........parent import ultragrantparent
 28 | from ...........................parent import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -193,7 +176,6 @@ TID252 Prefer absolute imports over relative imports
 27 | from .........parent import ultragrantparent
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | from ...........................parent import ultragrantparent
-   |
 help: Replace relative imports with absolute imports
 
 TID252 Prefer absolute imports over relative imports
@@ -203,5 +185,4 @@ TID252 Prefer absolute imports over relative imports
 27 | from .........parent import ultragrantparent
 28 | from ...........................parent import ultragrantparent
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace relative imports with absolute imports

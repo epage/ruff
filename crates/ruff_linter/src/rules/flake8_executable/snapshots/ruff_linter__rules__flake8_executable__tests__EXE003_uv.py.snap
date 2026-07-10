@@ -9,4 +9,3 @@ EXE003 Shebang should contain `python`, `pytest`, or `uv run`
 22 | #!/usr/bin/env uv_not_really_run
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | print("this should fail")
-   |

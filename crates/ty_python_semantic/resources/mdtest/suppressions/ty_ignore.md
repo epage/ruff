@@ -28,7 +28,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive
   |
 3 | a = test + 3  # ty: ignore[possibly-unresolved-reference]
   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression comment
   |
 2 | # snapshot
@@ -52,7 +51,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive
   |
 3 | a = test + 3  # ty: ignore[possibly-unresolved-reference]
   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression comment
   |
 2 | # error: [unresolved-reference]
@@ -86,7 +84,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive: 'unused-ignore-co
   |
 2 | a = 10 / 0  # ty: ignore[division-by-zero, unused-ignore-comment]
   |                                            ^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression code
   |
 1 | # snapshot
@@ -110,7 +107,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive
   |
 2 | a = 10 / 2  # ty: ignore[division-by-zero, unresolved-reference]
   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression comment
   |
 1 | # snapshot
@@ -132,7 +128,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive: 'invalid-assignme
   |
 5 | a = 10 / 0  # ty: ignore[invalid-assignment, division-by-zero, unresolved-reference]
   |                          ^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression code
   |
 4 | # snapshot
@@ -147,7 +142,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive: 'unresolved-refer
   |
 5 | a = 10 / 0  # ty: ignore[invalid-assignment, division-by-zero, unresolved-reference]
   |                                                                ^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression code
   |
 4 | # snapshot
@@ -168,7 +162,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive: 'invalid-assignme
   |
 7 | a = 10 / 0  # ty: ignore[invalid-assignment, unresolved-reference, division-by-zero]
   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression codes
   |
 6 | # snapshot
@@ -300,7 +293,6 @@ warning[ignore-comment-unknown-rule]: Unknown rule `division-by-zer`. Did you me
   |
 2 | a = 10 + 4  # ty: ignore[division-by-zer]
   |                          ^^^^^^^^^^^^^^^
-  |
 ```
 
 ## Code with `lint:` prefix

@@ -8,7 +8,6 @@ FIX002 Line contains TODO, consider resolving the issue
   |   ^^^^
 2 | # todo: todo
 3 | # XXX: xxx
-  |
 
 FIX002 Line contains TODO, consider resolving the issue
  --> T00.py:2:3
@@ -18,13 +17,10 @@ FIX002 Line contains TODO, consider resolving the issue
   |   ^^^^
 3 | # XXX: xxx
 4 | # xxx: xxx
-  |
 
 FIX002 Line contains TODO, consider resolving the issue
   --> T00.py:10:10
-   |
  8 | # fixme: fixme
  9 |
 10 | # test # TODO: todo
    |          ^^^^
-   |

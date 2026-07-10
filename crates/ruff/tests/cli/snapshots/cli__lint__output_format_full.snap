@@ -23,7 +23,6 @@ F401 [*] `os` imported but unused
   |        ^^
 2 | x = y      # F821
 3 | match 42:  # invalid-syntax
-  |
 help: Remove unused import: `os`
 
 F821 Undefined name `y`
@@ -34,7 +33,6 @@ F821 Undefined name `y`
   |     ^
 3 | match 42:  # invalid-syntax
 4 |     case _: ...
-  |
 
 invalid-syntax: Cannot use `match` statement on Python 3.9 (syntax was added in Python 3.10)
  --> input.py:3:1
@@ -44,7 +42,6 @@ invalid-syntax: Cannot use `match` statement on Python 3.9 (syntax was added in 
 3 | match 42:  # invalid-syntax
   | ^^^^^
 4 |     case _: ...
-  |
 
 Found 3 errors.
 [*] 1 fixable with the `--fix` option.

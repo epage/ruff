@@ -9,7 +9,6 @@ RUF066 `missing_return` is a property without a `return` statement
 6 |     def missing_return(self):  # ERROR: No return
   |         ^^^^^^^^^^^^^^
 7 |         x = 1
-  |
 
 RUF066 `builtin_property` is a property without a `return` statement
   --> RUF066_custom_property_decorator.py:14:9
@@ -18,4 +17,3 @@ RUF066 `builtin_property` is a property without a `return` statement
 14 |     def builtin_property(self):  # ERROR: No return (builtin @property still works)
    |         ^^^^^^^^^^^^^^^^
 15 |         x = 1
-   |

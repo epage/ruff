@@ -691,7 +691,6 @@ error[inconsistent-mro]: Cannot create a consistent method resolution order (MRO
   |
 7 | class Foo1(Generic[K, V], dict): ...  # snapshot: inconsistent-mro
   |       ^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Move `Generic[K, V]` to the end of the bases list
   |
 6 | # error: [missing-type-argument]
@@ -729,7 +728,6 @@ error[inconsistent-mro]: Cannot create a consistent method resolution order (MRO
 16 | |     # comment5
 17 | | ): ...
    | |_^
-   |
 help: Move `Generic[K, V]` to the end of the bases list
    |
 11 |     # comment1
@@ -751,10 +749,8 @@ class Foo3(Generic[K, V], dict, metaclass=type): ...  # snapshot: inconsistent-m
 ```snapshot
 error[inconsistent-mro]: Cannot create a consistent method resolution order (MRO) for class `Foo3` with bases list `[<special-form 'typing.Generic[K, V]'>, <class 'dict'>]`
   --> src/mdtest_snippet.py:19:7
-   |
 19 | class Foo3(Generic[K, V], dict, metaclass=type): ...  # snapshot: inconsistent-mro
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Move `Generic[K, V]` to the end of the bases list
    |
 18 | # error: [missing-type-argument]
@@ -796,7 +792,6 @@ error[inconsistent-mro]: Cannot create a consistent method resolution order (MRO
 28 | |     # comment7
 29 | | ): ...
    | |_^
-   |
 help: Move `Generic[K, V]` to the end of the bases list
    |
 21 |     # comment1
@@ -825,10 +820,8 @@ Dup = type("Dup", (A, A), {})
 ```snapshot
 error[duplicate-base]: Duplicate base class <class 'A'> in class `Dup`
  --> src/mdtest_snippet.py:4:7
-  |
 4 | Dup = type("Dup", (A, A), {})
   |       ^^^^^^^^^^^^^^^^^^^^^^^
-  |
 ```
 
 ## Metaclass conflicts
@@ -953,18 +946,14 @@ X = type("X", (A, B), {})
 ```snapshot
 error[instance-layout-conflict]: Class will raise `TypeError` at runtime due to incompatible bases
  --> src/mdtest_snippet.py:8:5
-  |
 8 | X = type("X", (A, B), {})
   |     ^^^^^^^^^^^^^^^^^^^^^ Bases `A` and `B` cannot be combined in multiple inheritance
-  |
 info: Two classes cannot coexist in a class's MRO if their instances have incompatible memory layouts
  --> src/mdtest_snippet.py:8:16
-  |
 8 | X = type("X", (A, B), {})
   |                -  - `B` instances have a distinct memory layout because `B` defines non-empty `__slots__`
   |                |
   |                `A` instances have a distinct memory layout because `A` defines non-empty `__slots__`
-  |
 ```
 
 When the bases are not a tuple literal (e.g., a variable), the diagnostic is emitted without

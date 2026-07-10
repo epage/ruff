@@ -9,7 +9,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
 43 | |         len([])
 44 | |         [].size
    | |_______________^
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:48:5
@@ -21,7 +20,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 51 |
 52 |       with pytest.raises(AttributeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:52:5
@@ -34,7 +32,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 55 |
 56 |       with pytest.raises(AttributeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:56:5
@@ -47,11 +44,9 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 59 |
 60 |       with pytest.raises(AttributeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:60:5
-   |
 58 |               [].size
 59 |
 60 | /     with pytest.raises(AttributeError):
@@ -60,11 +55,9 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 63 |
 64 |       with pytest.raises(AttributeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:64:5
-   |
 62 |               [].size
 63 |
 64 | /     with pytest.raises(AttributeError):
@@ -72,7 +65,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
 66 | |             if True:
 67 | |                 raise Exception
    | |_______________________________^
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:71:5
@@ -84,7 +76,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
 74 | |         except:
 75 | |             raise
    | |_________________^
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:83:5
@@ -97,11 +88,9 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 86 |
 87 |       with pytest.raises(RuntimeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:87:5
-   |
 85 |               print()
 86 |
 87 | /     with pytest.raises(RuntimeError):
@@ -110,7 +99,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |______________________^
 90 |
 91 |       with pytest.raises(RuntimeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:91:5
@@ -123,7 +111,6 @@ PT012 `pytest.raises()` block should contain a single simple statement
    | |___________________^
 94 |
 95 |       with pytest.raises(RuntimeError):
-   |
 
 PT012 `pytest.raises()` block should contain a single simple statement
   --> PT012.py:95:5
@@ -134,4 +121,3 @@ PT012 `pytest.raises()` block should contain a single simple statement
 96 | |         async for a in b:
 97 | |             assert foo
    | |______________________^
-   |

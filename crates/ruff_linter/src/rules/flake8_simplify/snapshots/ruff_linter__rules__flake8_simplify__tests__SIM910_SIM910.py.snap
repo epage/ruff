@@ -9,7 +9,6 @@ SIM910 [*] Use `{}.get(key)` instead of `{}.get(key, None)`
   | ^^^^^^^^^^^^^^^^^
 3 |
 4 | # SIM910
-  |
 help: Replace `{}.get(key, None)` with `{}.get(key)`
   |
 1 | # SIM910
@@ -26,7 +25,6 @@ SIM910 [*] Use `{}.get("key")` instead of `{}.get("key", None)`
   | ^^^^^^^^^^^^^^^^^^^
 6 |
 7 | # OK
-  |
 help: Replace `{}.get("key", None)` with `{}.get("key")`
   |
 4 | # SIM910
@@ -42,7 +40,6 @@ SIM910 [*] Use `{}.get(key)` instead of `{}.get(key, None)`
 20 | if a := {}.get(key, None):
    |         ^^^^^^^^^^^^^^^^^
 21 |     pass
-   |
 help: Replace `{}.get(key, None)` with `{}.get(key)`
    |
 19 | # SIM910
@@ -59,7 +56,6 @@ SIM910 [*] Use `{}.get(key)` instead of `{}.get(key, None)`
    |     ^^^^^^^^^^^^^^^^^
 25 |
 26 | # SIM910
-   |
 help: Replace `{}.get(key, None)` with `{}.get(key)`
    |
 23 | # SIM910
@@ -76,7 +72,6 @@ SIM910 [*] Use `({}).get(key)` instead of `({}).get(key, None)`
    | ^^^^^^^^^^^^^^^^^^^
 28 |
 29 | # SIM910
-   |
 help: Replace `({}).get(key, None)` with `({}).get(key)`
    |
 26 | # SIM910
@@ -94,7 +89,6 @@ SIM910 [*] Use `ages.get("Cat")` instead of `ages.get("Cat", None)`
    |       ^^^^^^^^^^^^^^^^^^^^^
 32 |
 33 | # OK
-   |
 help: Replace `ages.get("Cat", None)` with `ages.get("Cat")`
    |
 30 | ages = {"Tom": 23, "Maria": 23, "Dog": 11}
@@ -112,9 +106,7 @@ SIM910 [*] Use `kwargs.get('a')` instead of `kwargs.get('a', None)`
    |         ^^^^^^^^^^^^^^^^^^^^^
 40 |
 41 | # SIM910
-   |
 help: Replace `kwargs.get('a', None)` with `kwargs.get('a')`
-   |
 38 | def foo(**kwargs):
    -     a = kwargs.get('a', None)
 39 +     a = kwargs.get('a')
@@ -130,7 +122,6 @@ SIM910 [*] Use `some_dict.get('a')` instead of `some_dict.get('a', None)`
    |         ^^^^^^^^^^^^^^^^^^^^^^^^
 44 |
 45 | # OK
-   |
 help: Replace `some_dict.get('a', None)` with `some_dict.get('a')`
    |
 42 | def foo(some_dict: dict):
@@ -146,7 +137,6 @@ SIM910 [*] Use `dict.get("Cat")` instead of `dict.get("Cat", None)`
 56 |     dict = {"Tom": 23, "Maria": 23, "Dog": 11}
 57 |     age = dict.get("Cat", None)
    |           ^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace `dict.get("Cat", None)` with `dict.get("Cat")`
    |
 56 |     dict = {"Tom": 23, "Maria": 23, "Dog": 11}
@@ -164,9 +154,7 @@ SIM910 [*] Use `ages.get(key_source.get("Thomas", "Tom"))` instead of `ages.get(
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 65 |
 66 | # Property access as key
-   |
 help: Replace `ages.get(key_source.get("Thomas", "Tom"), None)` with `ages.get(key_source.get("Thomas", "Tom"))`
-   |
 63 | key_source = {"Thomas": "Tom"}
    - age = ages.get(key_source.get("Thomas", "Tom"), None)
 64 + age = ages.get(key_source.get("Thomas", "Tom"))
@@ -182,9 +170,7 @@ SIM910 [*] Use `ages.get(data.name)` instead of `ages.get(data.name, None)`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^
 74 |
 75 | # Complex expression as key
-   |
 help: Replace `ages.get(data.name, None)` with `ages.get(data.name)`
-   |
 72 | ages = {"Tom": 23, "Maria": 23, "Dog": 11}
    - age = ages.get(data.name, None)
 73 + age = ages.get(data.name)
@@ -200,7 +186,6 @@ SIM910 [*] Use `ages.get("Tom" if True else "Maria")` instead of `ages.get("Tom"
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 78 |
 79 | # Function call as key
-   |
 help: Replace `ages.get("Tom" if True else "Maria", None)` with `ages.get("Tom" if True else "Maria")`
    |
 76 | ages = {"Tom": 23, "Maria": 23, "Dog": 11}
@@ -215,7 +200,6 @@ SIM910 [*] Use `ages.get(get_key())` instead of `ages.get(get_key(), None)`
 83 | ages = {"Tom": 23, "Maria": 23, "Dog": 11}
 84 | age = ages.get(get_key(), None)
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace `ages.get(get_key(), None)` with `ages.get(get_key())`
    |
 83 | ages = {"Tom": 23, "Maria": 23, "Dog": 11}
@@ -234,7 +218,6 @@ SIM910 [*] Use `dict.get()` without default value
 90 | |     None,
 91 | | )
    | |_^
-   |
 help: Remove default value
    |
 86 |

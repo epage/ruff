@@ -16,7 +16,6 @@ FA100 [*] Add `from __future__ import annotations` to simplify `typing.Union`
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |          ^^^^^
 6 |     ...
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -31,7 +30,6 @@ FA100 [*] Add `from __future__ import annotations` to simplify `typing.Union`
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |                          ^^^^^
 6 |     ...
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -42,11 +40,9 @@ note: This is an unsafe fix and may change runtime behavior
 
 FA100 [*] Add `from __future__ import annotations` to simplify `typing.Union`
   --> UP007_2.py:9:10
-   |
  9 | def f(x: typing.Union[str, int]) -> None:
    |          ^^^^^^^^^^^^
 10 |     ...
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -63,7 +59,6 @@ UP007 [*] Use `X | Y` for type annotations
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 |     ...
-  |
 help: Convert to `X | Y`
   |
 1 + from __future__ import annotations
@@ -84,7 +79,6 @@ UP007 [*] Use `X | Y` for type annotations
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |                          ^^^^^^^^^^^^^^^^^^^
 6 |     ...
-  |
 help: Convert to `X | Y`
   |
 1 + from __future__ import annotations
@@ -101,11 +95,9 @@ note: This is an unsafe fix and may change runtime behavior
 
 UP007 [*] Use `X | Y` for type annotations
   --> UP007_2.py:9:10
-   |
  9 | def f(x: typing.Union[str, int]) -> None:
    |          ^^^^^^^^^^^^^^^^^^^^^^
 10 |     ...
-   |
 help: Convert to `X | Y`
    |
 1  + from __future__ import annotations

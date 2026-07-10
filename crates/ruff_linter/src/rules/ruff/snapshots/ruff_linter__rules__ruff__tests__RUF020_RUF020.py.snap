@@ -10,7 +10,6 @@ RUF020 [*] `Union[Never, T]` is equivalent to `T`
   |       ^^^^^
 4 | Union[NoReturn, int]
 5 | Never | int
-  |
 help: Remove `Never`
   |
 2 |
@@ -27,7 +26,6 @@ RUF020 [*] `Union[NoReturn, T]` is equivalent to `T`
   |       ^^^^^^^^
 5 | Never | int
 6 | NoReturn | int
-  |
 help: Remove `NoReturn`
   |
 3 | Union[Never, int]
@@ -45,7 +43,6 @@ RUF020 [*] `Never | T` is equivalent to `T`
   | ^^^^^
 6 | NoReturn | int
 7 | Union[Union[Never, int], Union[NoReturn, int]]
-  |
 help: Remove `Never`
   |
 4 | Union[NoReturn, int]
@@ -63,7 +60,6 @@ RUF020 [*] `NoReturn | T` is equivalent to `T`
   | ^^^^^^^^
 7 | Union[Union[Never, int], Union[NoReturn, int]]
 8 | Union[NoReturn, int, float]
-  |
 help: Remove `NoReturn`
   |
 5 | Never | int
@@ -80,9 +76,7 @@ RUF020 [*] `Union[Never, T]` is equivalent to `T`
 7 | Union[Union[Never, int], Union[NoReturn, int]]
   |             ^^^^^
 8 | Union[NoReturn, int, float]
-  |
 help: Remove `Never`
-  |
 6 | NoReturn | int
   - Union[Union[Never, int], Union[NoReturn, int]]
 7 + Union[int, Union[NoReturn, int]]
@@ -97,7 +91,6 @@ RUF020 [*] `Union[NoReturn, T]` is equivalent to `T`
 7 | Union[Union[Never, int], Union[NoReturn, int]]
   |                                ^^^^^^^^
 8 | Union[NoReturn, int, float]
-  |
 help: Remove `NoReturn`
   |
 6 | NoReturn | int
@@ -113,7 +106,6 @@ RUF020 [*] `Union[NoReturn, T]` is equivalent to `T`
 7 | Union[Union[Never, int], Union[NoReturn, int]]
 8 | Union[NoReturn, int, float]
   |       ^^^^^^^^
-  |
 help: Remove `NoReturn`
   |
 7 | Union[Union[Never, int], Union[NoReturn, int]]
@@ -124,24 +116,20 @@ help: Remove `NoReturn`
 
 RUF020 `Never | T` is equivalent to `T`
   --> RUF020.py:12:11
-   |
 11 | # Regression tests for https://github.com/astral-sh/ruff/issues/14567
 12 | x: None | Never | None
    |           ^^^^^
 13 | y: (None | Never) | None
 14 | z: None | (Never | None)
-   |
 help: Remove `Never`
 
 RUF020 `Never | T` is equivalent to `T`
   --> RUF020.py:13:12
-   |
 11 | # Regression tests for https://github.com/astral-sh/ruff/issues/14567
 12 | x: None | Never | None
 13 | y: (None | Never) | None
    |            ^^^^^
 14 | z: None | (Never | None)
-   |
 help: Remove `Never`
 
 RUF020 `Never | T` is equivalent to `T`
@@ -153,7 +141,6 @@ RUF020 `Never | T` is equivalent to `T`
    |            ^^^^^
 15 |
 16 | a: int | Never | None
-   |
 help: Remove `Never`
 
 RUF020 `Never | T` is equivalent to `T`
@@ -164,7 +151,6 @@ RUF020 `Never | T` is equivalent to `T`
 16 | a: int | Never | None
    |          ^^^^^
 17 | b: Never | Never | None
-   |
 help: Remove `Never`
 
 RUF020 `Never | T` is equivalent to `T`
@@ -173,7 +159,6 @@ RUF020 `Never | T` is equivalent to `T`
 16 | a: int | Never | None
 17 | b: Never | Never | None
    |    ^^^^^
-   |
 help: Remove `Never`
 
 RUF020 `Never | T` is equivalent to `T`
@@ -182,7 +167,6 @@ RUF020 `Never | T` is equivalent to `T`
 16 | a: int | Never | None
 17 | b: Never | Never | None
    |            ^^^^^
-   |
 help: Remove `Never`
 
 RUF020 [*] `Never | T` is equivalent to `T`
@@ -193,7 +177,6 @@ RUF020 [*] `Never | T` is equivalent to `T`
    |         ^^^^^
 22 |         | # text
 23 |         int
-   |
 help: Remove `Never`
    |
 20 | def func() -> (
@@ -211,7 +194,6 @@ RUF020 [*] `Union[Never, T]` is equivalent to `T`
    |     ^^^^^
 33 |     Literal["LongLiteralNumberOne"]
 34 |     | Literal["LongLiteralNumberTwo"]
-   |
 help: Remove `Never`
    |
 30 |

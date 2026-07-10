@@ -9,7 +9,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^
 11 | random.random()
 12 | random.randrange()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:11:1
@@ -20,7 +19,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^
 12 | random.randrange()
 13 | random.randint()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:12:1
@@ -31,7 +29,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^^^^
 13 | random.randint()
 14 | random.choice()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:13:1
@@ -42,7 +39,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^^
 14 | random.choice()
 15 | random.choices()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:14:1
@@ -53,7 +49,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^
 15 | random.choices()
 16 | random.uniform()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:15:1
@@ -64,7 +59,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^^
 16 | random.uniform()
 17 | random.triangular()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:16:1
@@ -75,7 +69,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^^
 17 | random.triangular()
 18 | random.randbytes()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:17:1
@@ -85,7 +78,6 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
 17 | random.triangular()
    | ^^^^^^^^^^^^^^^^^^^
 18 | random.randbytes()
-   |
 
 S311 Standard pseudo-random generators are not suitable for cryptographic purposes
   --> S311.py:18:1
@@ -96,4 +88,3 @@ S311 Standard pseudo-random generators are not suitable for cryptographic purpos
    | ^^^^^^^^^^^^^^^^^^
 19 |
 20 | # Unrelated
-   |

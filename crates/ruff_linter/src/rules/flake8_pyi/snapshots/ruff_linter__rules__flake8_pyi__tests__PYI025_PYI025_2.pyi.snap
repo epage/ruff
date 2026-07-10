@@ -10,7 +10,6 @@ PYI025 [*] Use `from collections.abc import Set as AbstractSet` to avoid confusi
   |                             ^^^
 4 |
 5 | __all__ = ["Set"]
-  |
 help: Alias `Set` to `AbstractSet`
    |
 2  |

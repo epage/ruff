@@ -10,7 +10,6 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
    |         ^^^^^^^^^^^^^^^
 11 |     raise UserWarning
 12 | except AssertionError:
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:11:5
@@ -21,7 +20,6 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
    |     ^^^^^^^^^^^^^^^^^
 12 | except AssertionError:
 13 |     raise  # Bare `raise` should not be an error
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:16:5
@@ -32,18 +30,15 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 | except BaseException as err:
 18 |     raise err
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:20:5
-   |
 18 |     raise err
 19 | except BaseException as err:
 20 |     raise some_other_err
    |     ^^^^^^^^^^^^^^^^^^^^
 21 | finally:
 22 |     raise Exception("Nothing to chain from, so no warning here")
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:63:9
@@ -54,7 +49,6 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 64 |     else:
 65 |         raise RuntimeError("bang!")
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:65:9
@@ -63,7 +57,6 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
 64 |     else:
 65 |         raise RuntimeError("bang!")
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 
 B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:73:13
@@ -74,7 +67,6 @@ B904 Within an `except` clause, raise exceptions with `raise ... from err` or `r
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 74 |
 75 | try:
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:79:9
@@ -85,7 +77,6 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 80 |     else:
 81 |         raise RuntimeError("bang!")
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:81:9
@@ -96,7 +87,6 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 82 |
 83 | try:
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:87:9
@@ -107,7 +97,6 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |         ^^^^^^^^^^^^^^^
 88 |     raise UserWarning
 89 | except* AssertionError:
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:88:5
@@ -118,7 +107,6 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |     ^^^^^^^^^^^^^^^^^
 89 | except* AssertionError:
 90 |     raise  # Bare `raise` should not be an error
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:93:5
@@ -129,7 +117,6 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 94 | except* BaseException as err:
 95 |     raise err
-   |
 
 B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
   --> B904.py:97:5
@@ -140,4 +127,3 @@ B904 Within an `except*` clause, raise exceptions with `raise ... from err` or `
    |     ^^^^^^^^^^^^^^^^^^^^
 98 | finally:
 99 |     raise Exception("Nothing to chain from, so no warning here")
-   |

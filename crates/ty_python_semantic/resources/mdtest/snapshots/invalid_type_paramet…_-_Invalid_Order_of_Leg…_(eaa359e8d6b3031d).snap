@@ -68,7 +68,6 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
  4 |
  5 | T2 = TypeVar("T2")
    | ------------------ `T2` defined here
-   |
 
 ```
 
@@ -90,7 +89,6 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
  5 | T2 = TypeVar("T2")
  6 | T3 = TypeVar("T3")
    | ------------------ `T3` defined here
-   |
 
 ```
 
@@ -111,7 +109,6 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
  4 |
  5 | T2 = TypeVar("T2")
    | ------------------ `T2` defined here
-   |
 
 ```
 
@@ -132,17 +129,14 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
  4 |
  5 | T2 = TypeVar("T2")
    | ------------------ `T2` defined here
-   |
 
 ```
 
 ```
 error[invalid-generic-class]: Cannot both inherit from subscripted `Protocol` and subscripted `Generic`
   --> src/mdtest_snippet.py:32:5
-   |
 32 |     Protocol[T1, T2, DefaultStrT, T3],
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Remove the type parameters from the `Protocol` base
    |
 31 |     # error: [invalid-generic-class]
@@ -171,6 +165,5 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
  4 |
  5 | T2 = TypeVar("T2")
    | ------------------ `T2` defined here
-   |
 
 ```

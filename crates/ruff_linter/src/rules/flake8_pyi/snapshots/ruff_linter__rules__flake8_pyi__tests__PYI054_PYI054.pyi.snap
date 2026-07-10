@@ -9,7 +9,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
   |                ^^^^^^^^^^^
 3 | field03: int = -0xFFFFFFFF
 4 | field04: int = -0xFFFFFFFFF  # Error: PYI054
-  |
 help: Replace with `...`
   |
 1 | field01: int = 0xFFFFFFFF
@@ -27,7 +26,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
   |                 ^^^^^^^^^^^
 5 |
 6 | field05: int = 1234567890
-  |
 help: Replace with `...`
   |
 3 | field03: int = -0xFFFFFFFF
@@ -38,14 +36,12 @@ help: Replace with `...`
 
 PYI054 [*] Numeric literals with a string representation longer than ten characters are not permitted
   --> PYI054.pyi:8:16
-   |
  6 | field05: int = 1234567890
  7 | field06: int = 12_456_890
  8 | field07: int = 12345678901  # Error: PYI054
    |                ^^^^^^^^^^^
  9 | field08: int = -1234567801
 10 | field09: int = -234_567_890  # Error: PYI054
-   |
 help: Replace with `...`
   |
 7 | field06: int = 12_456_890
@@ -63,7 +59,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
    |                 ^^^^^^^^^^^
 11 |
 12 | field10: float = 123.456789
-   |
 help: Replace with `...`
    |
 9  | field08: int = -1234567801
@@ -80,7 +75,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
    |                  ^^^^^^^^^^^
 14 | field12: float = -123.456789
 15 | field13: float = -123.567_890  # Error: PYI054
-   |
 help: Replace with `...`
    |
 12 | field10: float = 123.456789
@@ -98,9 +92,7 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
    |                   ^^^^^^^^^^^
 16 |
 17 | field14: complex = 1e1234567j
-   |
 help: Replace with `...`
-   |
 14 | field12: float = -123.456789
    - field13: float = -123.567_890  # Error: PYI054
 15 + field13: float = -...  # Error: PYI054
@@ -115,7 +107,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
    |                    ^^^^^^^^^^^
 19 | field16: complex = -1e1234567j
 20 | field17: complex = 1e123456789j  # Error: PYI054
-   |
 help: Replace with `...`
    |
 17 | field14: complex = 1e1234567j
@@ -131,7 +122,6 @@ PYI054 [*] Numeric literals with a string representation longer than ten charact
 19 | field16: complex = -1e1234567j
 20 | field17: complex = 1e123456789j  # Error: PYI054
    |                    ^^^^^^^^^^^^
-   |
 help: Replace with `...`
    |
 19 | field16: complex = -1e1234567j

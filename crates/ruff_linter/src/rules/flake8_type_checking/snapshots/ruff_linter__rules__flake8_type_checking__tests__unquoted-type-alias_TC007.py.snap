@@ -10,7 +10,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^
 16 | d: TypeAlias = Foo | None  # TC007
 17 | e: TypeAlias = OptStr   # TC007
-   |
 help: Add quotes
    |
 14 | b: TypeAlias = Dict  # OK
@@ -29,7 +28,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^
 17 | e: TypeAlias = OptStr   # TC007
 18 | f: TypeAlias = Bar   # TC007
-   |
 help: Add quotes
    |
 15 | c: TypeAlias = Foo   # TC007
@@ -48,7 +46,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^^^^
 18 | f: TypeAlias = Bar   # TC007
 19 | g: TypeAlias = Foo | Bar  # TC007 x2
-   |
 help: Add quotes
    |
 16 | d: TypeAlias = Foo | None  # TC007
@@ -67,7 +64,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^
 19 | g: TypeAlias = Foo | Bar  # TC007 x2
 20 | h: TypeAlias = Foo[str]  # TC007
-   |
 help: Add quotes
    |
 17 | e: TypeAlias = OptStr   # TC007
@@ -86,7 +82,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^
 20 | h: TypeAlias = Foo[str]  # TC007
 21 | i: TypeAlias = (Foo |  # TC007 x2 (fix removes comment currently)
-   |
 help: Add quotes
    |
 18 | f: TypeAlias = Bar   # TC007
@@ -105,7 +100,6 @@ TC007 [*] Add quotes to type alias
    |                      ^^^
 20 | h: TypeAlias = Foo[str]  # TC007
 21 | i: TypeAlias = (Foo |  # TC007 x2 (fix removes comment currently)
-   |
 help: Add quotes
    |
 18 | f: TypeAlias = Bar   # TC007
@@ -124,7 +118,6 @@ TC007 [*] Add quotes to type alias
    |                ^^^
 21 | i: TypeAlias = (Foo |  # TC007 x2 (fix removes comment currently)
 22 |     Bar)
-   |
 help: Add quotes
    |
 19 | g: TypeAlias = Foo | Bar  # TC007 x2
@@ -142,7 +135,6 @@ TC007 [*] Add quotes to type alias
 21 | i: TypeAlias = (Foo |  # TC007 x2 (fix removes comment currently)
    |                 ^^^
 22 |     Bar)
-   |
 help: Add quotes
    |
 20 | h: TypeAlias = Foo[str]  # TC007
@@ -162,7 +154,6 @@ TC007 [*] Add quotes to type alias
    |     ^^^
 23 |
 24 | type C = Foo   # OK
-   |
 help: Add quotes
    |
 20 | h: TypeAlias = Foo[str]  # TC007

@@ -10,7 +10,6 @@ PYI012 [*] Class body must not contain `pass`
   |     ^^^^
 6 |
 7 | class OneAttributeClassRev:
-  |
 help: Remove unnecessary `pass`
   |
 4 |     value: int
@@ -25,7 +24,6 @@ PYI012 [*] Class body must not contain `pass`
 8 |     pass  # PYI012 Class body must not contain `pass`
   |     ^^^^
 9 |     value: int
-  |
 help: Remove unnecessary `pass`
   |
 7 | class OneAttributeClassRev:
@@ -42,7 +40,6 @@ PYI012 [*] Class body must not contain `pass`
    |     ^^^^
 17 |
 18 | class NonEmptyChild(Exception):
-   |
 help: Remove unnecessary `pass`
    |
 15 |
@@ -59,7 +56,6 @@ PYI012 [*] Class body must not contain `pass`
    |     ^^^^
 21 |
 22 | class NonEmptyChild2(Exception):
-   |
 help: Remove unnecessary `pass`
    |
 19 |     value: int
@@ -74,7 +70,6 @@ PYI012 [*] Class body must not contain `pass`
 23 |     pass  # PYI012 Class body must not contain `pass`
    |     ^^^^
 24 |     value: int
-   |
 help: Remove unnecessary `pass`
    |
 22 | class NonEmptyChild2(Exception):
@@ -91,7 +86,6 @@ PYI012 [*] Class body must not contain `pass`
    |     ^^^^
 29 |
 30 |     def __init__():
-   |
 help: Remove unnecessary `pass`
    |
 27 |     value: int

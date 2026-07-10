@@ -9,7 +9,6 @@ PLR2004 Magic value used in comparison, consider replacing `-2.0` with a constan
 56 | if argc != -2.0:  # [magic-value-comparison]
    |            ^^^^
 57 |     pass
-   |
 
 PLR2004 Magic value used in comparison, consider replacing `+2.0` with a constant variable
   --> magic_value_comparison.py:59:12
@@ -19,7 +18,6 @@ PLR2004 Magic value used in comparison, consider replacing `+2.0` with a constan
 59 | if argc != +2.0:  # [magic-value-comparison]
    |            ^^^^
 60 |     pass
-   |
 
 PLR2004 Magic value used in comparison, consider replacing `"Hunter2"` with a constant variable
   --> magic_value_comparison.py:74:22
@@ -29,7 +27,6 @@ PLR2004 Magic value used in comparison, consider replacing `"Hunter2"` with a co
 74 | if input_password == "Hunter2":  # correct
    |                      ^^^^^^^^^
 75 |     pass
-   |
 
 PLR2004 Magic value used in comparison, consider replacing `3.141592653589793238` with a constant variable
   --> magic_value_comparison.py:80:21
@@ -39,7 +36,6 @@ PLR2004 Magic value used in comparison, consider replacing `3.141592653589793238
 80 | if pi_estimation == 3.141592653589793238:  # [magic-value-comparison]
    |                     ^^^^^^^^^^^^^^^^^^^^
 81 |     pass
-   |
 
 PLR2004 Magic value used in comparison, consider replacing `b"something"` with a constant variable
   --> magic_value_comparison.py:92:18
@@ -49,4 +45,3 @@ PLR2004 Magic value used in comparison, consider replacing `b"something"` with a
 92 | if user_input == b"something":  # correct
    |                  ^^^^^^^^^^^^
 93 |     pass
-   |

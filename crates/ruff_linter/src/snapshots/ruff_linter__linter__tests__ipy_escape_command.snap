@@ -10,14 +10,12 @@ F401 [*] `os` imported but unused
   |        ^^
 6 |
 7 | _ = math.pi
-  |
 help: Remove unused import: `os`
  ::: cell 1
   |
 4 |
   - import os
 5 |
-  |
 
 F401 [*] `sys` imported but unused
  --> ipy_escape_command.ipynb:cell 2:2:8
@@ -25,7 +23,6 @@ F401 [*] `sys` imported but unused
 1 | %%timeit
 2 | import sys
   |        ^^^
-  |
 help: Remove unused import: `sys`
  ::: cell 2
   |

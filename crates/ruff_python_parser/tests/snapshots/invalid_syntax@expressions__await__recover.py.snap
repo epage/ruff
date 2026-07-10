@@ -294,12 +294,10 @@ Module(
   |
 
 
-  |
 7 | # Starred expressions
 8 | await *x
   |       ^^ Syntax Error: Starred expression cannot be used here
 9 | await (*x)
-  |
 
 
    |
@@ -365,4 +363,3 @@ Module(
 16 | await ~x
 17 | await not x
    |       ^^^^^ Syntax Error: Boolean 'not' expression cannot be used here
-   |

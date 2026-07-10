@@ -9,7 +9,6 @@ F841 [*] Local variable `x` is assigned to but never used
 8 |         except ValueError as x:
   |                              ^
 9 |             pass
-  |
 help: Remove assignment to unused variable `x`
   |
 7 |             pass
@@ -20,9 +19,7 @@ help: Remove assignment to unused variable `x`
 
 F821 Undefined name `x`
   --> <filename>:13:15
-   |
 11 |         # This should raise an F821 error, rather than resolving to the
 12 |         # `x` in `x = 1`.
 13 |         print(x)
    |               ^
-   |

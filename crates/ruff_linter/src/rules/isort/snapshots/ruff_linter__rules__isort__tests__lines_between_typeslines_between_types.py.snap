@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> lines_between_types.py:1:1
-   |
  1 | / from __future__ import annotations
  2 | |
  3 | | import datetime
@@ -21,7 +20,6 @@ I001 [*] Import block is un-sorted or un-formatted
 15 | | from . import config
 16 | | from .data import Data
    | |______________________^
-   |
 help: Organize imports
    |
 11 |

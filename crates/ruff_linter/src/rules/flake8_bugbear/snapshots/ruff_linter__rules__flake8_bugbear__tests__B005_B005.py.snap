@@ -10,7 +10,6 @@ B005 Using `.strip()` with multi-character strings is misleading
   | ^^^^^^^^^^^^^^^^^^^^^^^^
 5 | s.strip("e")  # no warning
 6 | s.strip("\n\t ")  # no warning
-  |
 
 B005 Using `.strip()` with multi-character strings is misleading
  --> B005.py:7:1
@@ -21,7 +20,6 @@ B005 Using `.strip()` with multi-character strings is misleading
   | ^^^^^^^^^^^^^^^^^
 8 | s.lstrip(s)  # no warning
 9 | s.lstrip("we")  # no warning
-  |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:10:1
@@ -32,7 +30,6 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | s.lstrip("e")  # no warning
 12 | s.lstrip("\n\t ")  # no warning
-   |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:13:1
@@ -43,7 +40,6 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^^^^
 14 | s.rstrip(s)  # no warning
 15 | s.rstrip("we")  # warning
-   |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:16:1
@@ -54,7 +50,6 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 17 | s.rstrip("e")  # no warning
 18 | s.rstrip("\n\t ")  # no warning
-   |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:19:1
@@ -65,7 +60,6 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^^^^
 20 | s.strip("a")  # no warning
 21 | s.strip("あ")  # no warning
-   |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:22:1
@@ -76,7 +70,6 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^
 23 | s.strip("\ufeff")  # no warning
 24 | s.strip("\u0074\u0065\u0073\u0074")  # warning
-   |
 
 B005 Using `.strip()` with multi-character strings is misleading
   --> B005.py:24:1
@@ -87,4 +80,3 @@ B005 Using `.strip()` with multi-character strings is misleading
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 |
 26 | from somewhere import other_type, strip
-   |

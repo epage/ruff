@@ -7,7 +7,6 @@ PYI025 [*] Use `from collections.abc import Set as AbstractSet` to avoid confusi
  9 | def f():
 10 |     from collections.abc import Set  # PYI025
    |                                 ^^^
-   |
 help: Alias `Set` to `AbstractSet`
    |
 9  | def f():
@@ -24,7 +23,6 @@ PYI025 [*] Use `from collections.abc import Set as AbstractSet` to avoid confusi
    |                                                   ^^^
 15 |
 16 |     GLOBAL: Set[int] = set()
-   |
 help: Alias `Set` to `AbstractSet`
    |
 13 | def f():

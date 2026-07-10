@@ -9,7 +9,6 @@ E225 [*] Missing whitespace around operator
    |           ^^
 55 | #: E225
 56 | submitted+= 1
-   |
 help: Add missing whitespace
    |
 53 | #: E225
@@ -27,7 +26,6 @@ E225 [*] Missing whitespace around operator
    |          ^^
 57 | #: E225
 58 | c =-1
-   |
 help: Add missing whitespace
    |
 55 | #: E225
@@ -45,7 +43,6 @@ E225 [*] Missing whitespace around operator
    |   ^
 59 | #: E225
 60 | x = x /2 - 1
-   |
 help: Add missing whitespace
    |
 57 | #: E225
@@ -63,7 +60,6 @@ E225 [*] Missing whitespace around operator
    |  ^
 77 | #: E225 E225
 78 | i=i +1
-   |
 help: Add missing whitespace
    |
 75 | #: E225 E225
@@ -81,7 +77,6 @@ E225 [*] Missing whitespace around operator
    |  ^
 79 | #: E225
 80 | i = 1and 1
-   |
 help: Add missing whitespace
    |
 77 | #: E225 E225
@@ -99,7 +94,6 @@ E225 [*] Missing whitespace around operator
    |      ^^^
 81 | #: E225
 82 | i = 1or 0
-   |
 help: Add missing whitespace
    |
 79 | #: E225
@@ -117,7 +111,6 @@ E225 [*] Missing whitespace around operator
    |      ^^
 83 | #: E225
 84 | 1is 1
-   |
 help: Add missing whitespace
    |
 81 | #: E225
@@ -135,7 +128,6 @@ E225 [*] Missing whitespace around operator
    |  ^^
 85 | #: E225
 86 | 1in []
-   |
 help: Add missing whitespace
    |
 83 | #: E225
@@ -153,7 +145,6 @@ E225 [*] Missing whitespace around operator
    |  ^^
 87 | #: E225
 88 | i = 1 @2
-   |
 help: Add missing whitespace
    |
 85 | #: E225
@@ -171,7 +162,6 @@ E225 [*] Missing whitespace around operator
    |  ^
 93 | #: E225 E226
 94 | i =i+1
-   |
 help: Add missing whitespace
    |
 91 | #: E225 E226
@@ -189,7 +179,6 @@ E225 [*] Missing whitespace around operator
    |   ^
 95 | #: E225 E226
 96 | i= i+1
-   |
 help: Add missing whitespace
    |
 93 | #: E225 E226
@@ -207,7 +196,6 @@ E225 [*] Missing whitespace around operator
    |  ^
 97 | #: E225 E226
 98 | c = (a +b)*(a - b)
-   |
 help: Add missing whitespace
    |
 95 | #: E225 E226

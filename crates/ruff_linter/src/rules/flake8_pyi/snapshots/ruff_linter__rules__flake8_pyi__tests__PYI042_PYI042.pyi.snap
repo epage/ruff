@@ -10,7 +10,6 @@ PYI042 Type alias `just_literals_pipe_union` should be CamelCase
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 11 |     Literal[True] | Literal["idk"]
 12 | )  # PYI042, since not camel case
-   |
 
 PYI042 Type alias `snake_case_alias1` should be CamelCase
   --> PYI042.pyi:19:1
@@ -21,7 +20,6 @@ PYI042 Type alias `snake_case_alias1` should be CamelCase
    | ^^^^^^^^^^^^^^^^^
 20 | _snake_case_alias2: TypeAlias = Literal["whatever"]  # PYI042, since not camel case
 21 | Snake_case_alias: TypeAlias = int | float  # PYI042, since not camel case
-   |
 
 PYI042 Type alias `_snake_case_alias2` should be CamelCase
   --> PYI042.pyi:20:1
@@ -30,7 +28,6 @@ PYI042 Type alias `_snake_case_alias2` should be CamelCase
 20 | _snake_case_alias2: TypeAlias = Literal["whatever"]  # PYI042, since not camel case
    | ^^^^^^^^^^^^^^^^^^
 21 | Snake_case_alias: TypeAlias = int | float  # PYI042, since not camel case
-   |
 
 PYI042 Type alias `foo_bar` should be CamelCase
   --> PYI042.pyi:27:6
@@ -39,4 +36,3 @@ PYI042 Type alias `foo_bar` should be CamelCase
 27 | type foo_bar = int | str
    |      ^^^^^^^
 28 | type FooBar = int | str
-   |

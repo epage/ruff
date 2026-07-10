@@ -7,7 +7,6 @@ E742 Ambiguous class name: `l`
 1 | class l:
   |       ^
 2 |     pass
-  |
 
 E742 Ambiguous class name: `I`
  --> E742.py:5:7
@@ -15,12 +14,9 @@ E742 Ambiguous class name: `I`
 5 | class I:
   |       ^
 6 |     pass
-  |
 
 E742 Ambiguous class name: `O`
   --> E742.py:9:7
-   |
  9 | class O:
    |       ^
 10 |     pass
-   |

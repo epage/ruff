@@ -10,7 +10,6 @@ F821 Undefined name `key`
    |          ^^^
 12 |
 13 | # OK
-   |
 
 F821 Undefined name `value`
   --> F821_3.py:11:17
@@ -21,4 +20,3 @@ F821 Undefined name `value`
    |                 ^^^^^
 12 |
 13 | # OK
-   |

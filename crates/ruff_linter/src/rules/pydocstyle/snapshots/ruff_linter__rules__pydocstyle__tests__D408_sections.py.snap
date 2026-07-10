@@ -9,7 +9,6 @@ D408 [*] Section underline should be in the line following the section's name ("
 98 |     -------
    |     ^^^^^^^
 99 |     A value of some sort.
-   |
 help: Add underline to "Returns"
    |
 96 |     Returns

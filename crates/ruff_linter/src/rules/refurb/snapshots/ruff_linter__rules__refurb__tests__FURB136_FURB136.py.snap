@@ -10,7 +10,6 @@ FURB136 [*] Replace `x if x > y else y` with `max(y, x)`
   | ^^^^^^^^^^^^^^^^^
 5 |
 6 | x if x >= y else y  # FURB136
-  |
 help: Replace with `max(y, x)`
   |
 3 |
@@ -28,7 +27,6 @@ FURB136 [*] Replace `x if x >= y else y` with `max(x, y)`
   | ^^^^^^^^^^^^^^^^^^
 7 |
 8 | x if x < y else y  # FURB136
-  |
 help: Replace with `max(x, y)`
   |
 5 |
@@ -39,14 +37,12 @@ help: Replace with `max(x, y)`
 
 FURB136 [*] Replace `x if x < y else y` with `min(y, x)`
   --> FURB136.py:8:1
-   |
  6 | x if x >= y else y  # FURB136
  7 |
  8 | x if x < y else y  # FURB136
    | ^^^^^^^^^^^^^^^^^
  9 |
 10 | x if x <= y else y  # FURB136
-   |
 help: Replace with `min(y, x)`
   |
 7 |
@@ -64,7 +60,6 @@ FURB136 [*] Replace `x if x <= y else y` with `min(x, y)`
    | ^^^^^^^^^^^^^^^^^^
 11 |
 12 | y if x > y else x  # FURB136
-   |
 help: Replace with `min(x, y)`
    |
 9  |
@@ -82,7 +77,6 @@ FURB136 [*] Replace `y if x > y else x` with `min(x, y)`
    | ^^^^^^^^^^^^^^^^^
 13 |
 14 | y if x >= y else x  # FURB136
-   |
 help: Replace with `min(x, y)`
    |
 11 |
@@ -100,7 +94,6 @@ FURB136 [*] Replace `y if x >= y else x` with `min(y, x)`
    | ^^^^^^^^^^^^^^^^^^
 15 |
 16 | y if x < y else x  # FURB136
-   |
 help: Replace with `min(y, x)`
    |
 13 |
@@ -111,14 +104,12 @@ help: Replace with `min(y, x)`
 
 FURB136 [*] Replace `y if x < y else x` with `max(x, y)`
   --> FURB136.py:16:1
-   |
 14 | y if x >= y else x  # FURB136
 15 |
 16 | y if x < y else x  # FURB136
    | ^^^^^^^^^^^^^^^^^
 17 |
 18 | y if x <= y else x  # FURB136
-   |
 help: Replace with `max(x, y)`
    |
 15 |
@@ -136,7 +127,6 @@ FURB136 [*] Replace `y if x <= y else x` with `max(y, x)`
    | ^^^^^^^^^^^^^^^^^^
 19 |
 20 | x + y if x > y else y  # OK
-   |
 help: Replace with `max(y, x)`
    |
 17 |
@@ -155,7 +145,6 @@ FURB136 [*] Replace `if` expression with `max(y, x)`
 24 | |     > y
 25 | | ) else y  # FURB136
    | |________^
-   |
 help: Replace with `max(y, x)`
    |
 21 |
@@ -177,7 +166,6 @@ FURB136 [*] Replace `if` expression with `max(y, x)`
 32 | |     else y
    | |__________^
 33 |   )
-   |
 help: Replace with `max(y, x)`
    |
 28 | highest_score = (

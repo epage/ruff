@@ -10,7 +10,6 @@ E274 [*] Tab before keyword
    |  ^^^^^^^^
 30 | #: E273 E274
 31 | this        and    False
-   |
 help: Replace with single space
    |
 28 | #: E274
@@ -28,7 +27,6 @@ E274 [*] Tab before keyword
    |     ^^^^^^^^
 32 | #: Okay
 33 | from u import (a, b)
-   |
 help: Replace with single space
    |
 30 | #: E273 E274

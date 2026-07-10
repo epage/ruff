@@ -10,7 +10,6 @@ E301 [*] Expected 1 blank line, found 0
     |     ^^^
 479 |         pass
 480 | # end
-    |
 help: Add missing blank line
     |
 477 |         pass
@@ -27,7 +26,6 @@ E301 [*] Expected 1 blank line, found 0
     |     ^^^
 490 |         pass
 491 | # end
-    |
 help: Add missing blank line
     |
 487 |         pass
@@ -43,7 +41,6 @@ E301 [*] Expected 1 blank line, found 0
     |     ^
 500 |     def cls_method(cls) -> None:
 501 |         pass
-    |
 help: Add missing blank line
     |
 498 |     columns = []
@@ -60,7 +57,6 @@ E301 [*] Expected 1 blank line, found 0
     |     ^
 512 |     def cls_method(cls) -> None:
 513 |         pass
-    |
 help: Add missing blank line
     |
 510 |         pass
@@ -77,7 +73,6 @@ E301 [*] Expected 1 blank line, found 0
     |     ^^^
 527 |         return x
 528 | # end
-    |
 help: Add missing blank line
     |
 525 |         ...
@@ -94,7 +89,6 @@ E301 [*] Expected 1 blank line, found 0
     |         ^^^
 994 |             pass
 995 | # end
-    |
 help: Add missing blank line
     |
 992 |         print("conditional")

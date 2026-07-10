@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> sort_similar_imports.py:1:1
-   |
  1 | / from a import b
  2 | | from a import BAD as DEF
  3 | | from a import B
@@ -31,7 +30,6 @@ I001 [*] Import block is un-sorted or un-formatted
 25 | | import x
 26 | | import x as a
    | |_____________^
-   |
 help: Organize imports
    |
    - from a import b

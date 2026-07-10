@@ -10,7 +10,6 @@ D406 [*] Section name should end with a newline ("Returns")
    |     ^^^^^^^
 33 |     -------
 34 |     A value of some sort.
-   |
 help: Add newline after "Returns"
    |
 31 |
@@ -27,7 +26,6 @@ D406 [*] Section name should end with a newline ("Raises")
 227 |     Raises:
     |     ^^^^^^
 228 |     My attention.
-    |
 help: Add newline after "Raises"
     |
 226 |     Many many wonderful things.
@@ -45,7 +43,6 @@ D406 [*] Section name should end with a newline ("Parameters")
     |     ^^^^^^^^^^
 602 |     ----------
 603 |     parameters:
-    |
 help: Add newline after "Parameters"
     |
 600 |

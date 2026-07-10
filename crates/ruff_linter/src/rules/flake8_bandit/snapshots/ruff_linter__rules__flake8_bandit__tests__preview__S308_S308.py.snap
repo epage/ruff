@@ -17,7 +17,6 @@ S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
    | ^^^^^^^^^^
 17 | def some_func():
 18 |     return '<script>alert("evil!")</script>'
-   |
 
 
 S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
@@ -27,7 +26,6 @@ S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
    | ^^^^^^^^^^
 37 | def some_func():
 38 |     return '<script>alert("evil!")</script>'
-   |
 
 
 
@@ -39,7 +37,6 @@ S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
    |  ^^^^^^^^^
 17 | def some_func():
 18 |     return '<script>alert("evil!")</script>'
-   |
 
 
 S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
@@ -49,17 +46,14 @@ S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
    |  ^^^^^^^^^
 37 | def some_func():
 38 |     return '<script>alert("evil!")</script>'
-   |
 
 
 S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
   --> S308.py:42:5
-   |
 41 | # https://github.com/astral-sh/ruff/issues/15522
 42 | map(mark_safe, [])
    |     ^^^^^^^^^
 43 | foo = mark_safe
-   |
 
 
 S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
@@ -69,4 +63,3 @@ S308 Use of `mark_safe` may expose cross-site scripting vulnerabilities
 42 | map(mark_safe, [])
 43 | foo = mark_safe
    |       ^^^^^^^^^
-   |

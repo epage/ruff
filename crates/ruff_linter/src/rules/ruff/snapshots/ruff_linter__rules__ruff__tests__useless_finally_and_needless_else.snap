@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/ruff/mod.rs
 ---
 RUF047 [*] Empty `else` clause
   --> RUF072_RUF047.py:7:1
-   |
  5 |   except Exception:
  6 |       bar()
  7 | / else:
@@ -11,7 +10,6 @@ RUF047 [*] Empty `else` clause
    | |________^
  9 |   finally:
 10 |       pass
-   |
 help: Remove the `else` clause
   |
 6 |     bar()
@@ -30,7 +28,6 @@ RUF072 [*] Empty `finally` clause
    | |________^
 11 |
 12 |   # All non-body clauses are no-ops
-   |
 help: Remove the `finally` clause
   |
 8 |     pass
@@ -49,7 +46,6 @@ RUF047 [*] Empty `else` clause
    | |________^
 19 |   finally:
 20 |       pass
-   |
 help: Remove the `else` clause
    |
 16 |     pass
@@ -60,7 +56,6 @@ help: Remove the `else` clause
 
 RUF072 [*] Empty `finally` clause
   --> RUF072_RUF047.py:19:1
-   |
 17 |   else:
 18 |       pass
 19 | / finally:
@@ -68,7 +63,6 @@ RUF072 [*] Empty `finally` clause
    | |________^
 21 |
 22 |   # Only the `finally` is empty; `else` has real code
-   |
 help: Remove the `finally` clause
    |
 18 |     pass
@@ -85,7 +79,6 @@ RUF072 [*] Empty `finally` clause
 29 | / finally:
 30 | |     pass
    | |________^
-   |
 help: Remove the `finally` clause
    |
 28 |     baz()

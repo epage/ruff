@@ -9,7 +9,6 @@ PT028 [*] Test function parameter `a` has default argument
 3 | def test_this_is_a_test(a=1): ...
   |                           ^
 4 | def testThisIsAlsoATest(a=1): ...
-  |
 help: Remove default argument
   |
 2 |
@@ -27,7 +26,6 @@ PT028 [*] Test function parameter `a` has default argument
   |                           ^
 5 |
 6 | class TestClass:
-  |
 help: Remove default argument
   |
 3 | def test_this_is_a_test(a=1): ...
@@ -44,14 +42,11 @@ PT028 [*] Test function parameter `a` has default argument
 7 |     def test_this_too_is_a_test(self, a=1): ...
   |                                         ^
 8 |     def testAndOfCourseThis(self, a=1): ...
-  |
 help: Remove default argument
-  |
 6 | class TestClass:
   -     def test_this_too_is_a_test(self, a=1): ...
 7 +     def test_this_too_is_a_test(self, a): ...
 8 |     def testAndOfCourseThis(self, a=1): ...
-  |
 note: This is a display-only fix and is likely to be incorrect
 
 PT028 [*] Test function parameter `a` has default argument
@@ -61,7 +56,6 @@ PT028 [*] Test function parameter `a` has default argument
 7 |     def test_this_too_is_a_test(self, a=1): ...
 8 |     def testAndOfCourseThis(self, a=1): ...
   |                                     ^
-  |
 help: Remove default argument
   |
 7 |     def test_this_too_is_a_test(self, a=1): ...

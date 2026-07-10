@@ -453,7 +453,6 @@ mod tests {
           | ^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -508,7 +507,6 @@ mod tests {
            | |    |
            | |    Cursor offset
            | source
-           |
         ");
     }
 
@@ -561,7 +559,6 @@ mod tests {
           |     |    |
           |     |    Cursor offset
           |     source
-          |
         ");
     }
 
@@ -611,7 +608,6 @@ mod tests {
            | |   |
            | |   Cursor offset
            | source
-           |
         "#);
     }
 
@@ -673,7 +669,6 @@ mod tests {
            | |    |
            | |    Cursor offset
            | source
-           |
         ");
     }
 
@@ -733,7 +728,6 @@ mod tests {
           |       |    |
           |       |    Cursor offset
           |       source
-          |
         ");
     }
 
@@ -787,7 +781,6 @@ mod tests {
            |     |    |
            |     |    Cursor offset
            |     source
-           |
         ");
     }
 
@@ -841,7 +834,6 @@ mod tests {
           |           |    |
           |           |    Cursor offset
           |           source
-          |
         ");
     }
 
@@ -902,7 +894,6 @@ mod tests {
            |     |    |
            |     |    Cursor offset
            |     source
-           |
         ");
     }
 
@@ -940,7 +931,6 @@ mod tests {
           |     |    |
           |     |    Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -988,7 +978,6 @@ mod tests {
            |     |    |
            |     |    Cursor offset
            |     source
-           |
         "#);
     }
 
@@ -1018,7 +1007,6 @@ mod tests {
           |     |    |
           |     |    Cursor offset
           |     source
-          |
         ");
     }
 
@@ -1056,7 +1044,6 @@ mod tests {
           |     |    |
           |     |    Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -1104,7 +1091,6 @@ mod tests {
            |     |  |
            |     |  Cursor offset
            |     source
-           |
         ");
     }
 
@@ -1150,7 +1136,6 @@ mod tests {
            |     |  |
            |     |  Cursor offset
            |     source
-           |
         "#);
     }
 
@@ -1200,7 +1185,6 @@ mod tests {
            |     |
            |     source
            |     Cursor offset
-           |
         ");
     }
 
@@ -1242,7 +1226,6 @@ mod tests {
            |     |
            |     source
            |     Cursor offset
-           |
         ");
     }
 
@@ -1275,7 +1258,6 @@ mod tests {
           |     |   |
           |     |   Cursor offset
           |     source
-          |
         ");
     }
 
@@ -1308,7 +1290,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -1349,7 +1330,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -1395,7 +1375,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -1440,7 +1419,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -1481,7 +1459,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -1522,7 +1499,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -1591,7 +1567,6 @@ mod tests {
            |   |    |
            |   |    Cursor offset
            |   source
-           |
         ");
     }
 
@@ -1635,7 +1610,6 @@ mod tests {
            |          ||
            |          |Cursor offset
            |          source
-           |
         ");
     }
 
@@ -1676,7 +1650,6 @@ mod tests {
           |            |        |
           |            |        Cursor offset
           |            source
-          |
         "#);
 
         let literal_string = hover_test(
@@ -1716,7 +1689,6 @@ mod tests {
           |            |        |
           |            |        Cursor offset
           |            source
-          |
         "#);
     }
 
@@ -1762,7 +1734,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -1802,7 +1773,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -1851,7 +1821,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -1908,7 +1877,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -1961,7 +1929,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -2013,7 +1980,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -2066,7 +2032,6 @@ mod tests {
            | ||
            | |Cursor offset
            | source
-           |
         ");
     }
 
@@ -2105,7 +2070,6 @@ mod tests {
            |     |
            |     source
            |     Cursor offset
-           |
         ");
     }
 
@@ -2139,7 +2103,6 @@ mod tests {
           | ^^^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -2167,7 +2130,6 @@ mod tests {
           |     |       |
           |     |       Cursor offset
           |     source
-          |
         ");
     }
 
@@ -2207,7 +2169,6 @@ mod tests {
            |      ||
            |      |Cursor offset
            |      source
-           |
         ");
     }
 
@@ -2249,7 +2210,6 @@ mod tests {
            |      ^^^^^- Cursor offset
            |      |
            |      source
-           |
         ");
     }
 
@@ -2279,7 +2239,6 @@ mod tests {
           |      ||
           |      |Cursor offset
           |      source
-          |
         ");
     }
 
@@ -2319,7 +2278,6 @@ mod tests {
            |      ||
            |      |Cursor offset
            |      source
-           |
         ");
     }
 
@@ -2359,7 +2317,6 @@ mod tests {
            |      | |
            |      | Cursor offset
            |      source
-           |
         ");
     }
 
@@ -2409,7 +2366,6 @@ mod tests {
            |        |   |
            |        |   Cursor offset
            |        source
-           |
         ");
     }
 
@@ -2456,7 +2412,6 @@ mod tests {
            |        |   |
            |        |   Cursor offset
            |        source
-           |
         ");
     }
 
@@ -2493,7 +2448,6 @@ mod tests {
            |         | |
            |         | Cursor offset
            |         source
-           |
         ");
     }
 
@@ -2526,7 +2480,6 @@ mod tests {
           |          ||
           |          |Cursor offset
           |          source
-          |
         ");
     }
 
@@ -2566,7 +2519,6 @@ mod tests {
            | ^- Cursor offset
            | |
            | source
-           |
         ");
     }
 
@@ -2601,7 +2553,6 @@ mod tests {
           |     |    |
           |     |    Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -2636,7 +2587,6 @@ mod tests {
           |            |   |
           |            |   Cursor offset
           |            source
-          |
         "#);
     }
 
@@ -2684,7 +2634,6 @@ mod tests {
           |            ^^^^^^^- Cursor offset
           |            |
           |            source
-          |
         "#);
     }
 
@@ -2747,7 +2696,6 @@ mod tests {
           |     |   |
           |     |   Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -2777,7 +2725,6 @@ mod tests {
           |               ||
           |               |Cursor offset
           |               source
-          |
         "#);
     }
 
@@ -2804,7 +2751,6 @@ mod tests {
           |      ||
           |      |Cursor offset
           |      source
-          |
         "#);
     }
 
@@ -2831,7 +2777,6 @@ mod tests {
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -2866,7 +2811,6 @@ mod tests {
           |           | |
           |           | Cursor offset
           |           source
-          |
         "#);
     }
 
@@ -2901,7 +2845,6 @@ mod tests {
           |                 | |
           |                 | Cursor offset
           |                 source
-          |
         "#);
     }
 
@@ -2936,7 +2879,6 @@ mod tests {
           |                          | |
           |                          | Cursor offset
           |                          source
-          |
         "#);
     }
 
@@ -2971,7 +2913,6 @@ mod tests {
           |                   | |
           |                   | Cursor offset
           |                   source
-          |
         "#);
     }
 
@@ -3006,7 +2947,6 @@ mod tests {
           |           | |
           |           | Cursor offset
           |           source
-          |
         "#);
     }
 
@@ -3036,7 +2976,6 @@ mod tests {
           |             |  |
           |             |  Cursor offset
           |             source
-          |
         "#);
     }
 
@@ -3071,7 +3010,6 @@ mod tests {
           |                               | |
           |                               | Cursor offset
           |                               source
-          |
         "#);
     }
 
@@ -3129,7 +3067,6 @@ def ab(a: str): ...
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -3175,7 +3112,6 @@ def bar() -> None:
           | | |
           | | Cursor offset
           | source
-          |
         ");
     }
 
@@ -3233,7 +3169,6 @@ def ab(a: str):
           | ||
           | |Cursor offset
           | source
-          |
         "#);
     }
 
@@ -3297,7 +3232,6 @@ def ab(a: int):
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -3355,7 +3289,6 @@ def ab(a: int):
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -3425,7 +3358,6 @@ def ab(a: int, *, c: int):
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -3495,7 +3427,6 @@ def ab(a: int, *, c: int):
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -3557,7 +3488,6 @@ def ab(a: int, *, c: int):
            | ^^^- Cursor offset
            | |
            | source
-           |
         ");
     }
 
@@ -3607,7 +3537,6 @@ def ab(a: int, *, c: int):
            | ^^^- Cursor offset
            | |
            | source
-           |
         ");
     }
 
@@ -3658,7 +3587,6 @@ def ab(a: int, *, c: int):
           | | |
           | | Cursor offset
           | source
-          |
         ");
     }
 
@@ -3693,7 +3621,6 @@ def outer():
           |                ^- Cursor offset
           |                |
           |                source
-          |
         "#);
     }
 
@@ -3746,7 +3673,6 @@ def function():
           |            |      |
           |            |      Cursor offset
           |            source
-          |
         "#);
     }
 
@@ -3807,7 +3733,6 @@ def function():
           |                 ||
           |                 |Cursor offset
           |                 source
-          |
         ");
     }
 
@@ -3851,7 +3776,6 @@ def function():
           |                 ||
           |                 |Cursor offset
           |                 source
-          |
         ");
     }
 
@@ -3895,7 +3819,6 @@ def function():
           |                 ||
           |                 |Cursor offset
           |                 source
-          |
         ");
     }
 
@@ -3951,7 +3874,6 @@ def function():
            |                 ||
            |                 |Cursor offset
            |                 source
-           |
         ");
     }
 
@@ -3987,7 +3909,6 @@ def function():
            |              | |
            |              | Cursor offset
            |              source
-           |
         ");
     }
 
@@ -4034,7 +3955,6 @@ def function():
           |             ||
           |             |Cursor offset
           |             source
-          |
         ");
     }
 
@@ -4061,7 +3981,6 @@ def function():
           |                                     ||
           |                                     |Cursor offset
           |                                     source
-          |
         ");
     }
 
@@ -4103,7 +4022,6 @@ def function():
           |                                           ||
           |                                           |Cursor offset
           |                                           source
-          |
         ");
     }
 
@@ -4141,7 +4059,6 @@ def function():
           |                                      ||
           |                                      |Cursor offset
           |                                      source
-          |
         ");
     }
 
@@ -4192,7 +4109,6 @@ def function():
           |        | |
           |        | Cursor offset
           |        source
-          |
         ");
     }
 
@@ -4249,7 +4165,6 @@ def function():
           |                                  ^- Cursor offset
           |                                  |
           |                                  source
-          |
         ");
     }
 
@@ -4276,7 +4191,6 @@ def function():
           |                                         ^- Cursor offset
           |                                         |
           |                                         source
-          |
         ");
     }
 
@@ -4302,7 +4216,6 @@ def function():
           |                               ^^- Cursor offset
           |                               |
           |                               source
-          |
         ");
     }
 
@@ -4341,7 +4254,6 @@ def function():
           | ^^^^^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -4389,7 +4301,6 @@ def function():
           | ^^^^^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -4435,7 +4346,6 @@ def function():
           |   ^^^^- Cursor offset
           |   |
           |   source
-          |
         ");
     }
 
@@ -4483,7 +4393,6 @@ def function():
           |   ^^^^- Cursor offset
           |   |
           |   source
-          |
         ");
     }
 
@@ -4523,7 +4432,6 @@ def function():
           |     ^- Cursor offset
           |     |
           |     source
-          |
         ");
     }
 
@@ -4563,7 +4471,6 @@ def function():
           |     ^- Cursor offset
           |     |
           |     source
-          |
         ");
     }
 
@@ -4606,7 +4513,6 @@ def function():
            |   ^- Cursor offset
            |   |
            |   source
-           |
         ");
     }
 
@@ -4647,7 +4553,6 @@ def function():
           |              ^- Cursor offset
           |              |
           |              source
-          |
         ");
     }
 
@@ -4691,7 +4596,6 @@ def function():
            |   ^- Cursor offset
            |   |
            |   source
-           |
         ");
     }
 
@@ -4721,7 +4625,6 @@ def function():
           |              ^- Cursor offset
           |              |
           |              source
-          |
         ");
     }
 
@@ -4749,7 +4652,6 @@ def function():
           | ^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -4778,7 +4680,6 @@ def function():
           |       ^- Cursor offset
           |       |
           |       source
-          |
         ");
     }
 
@@ -4810,7 +4711,6 @@ def function():
           |     ^- Cursor offset
           |     |
           |     source
-          |
         ");
     }
 
@@ -4842,7 +4742,6 @@ def function():
           |           ^- Cursor offset
           |           |
           |           source
-          |
         ");
     }
 
@@ -4876,7 +4775,6 @@ def function():
            |               ^- Cursor offset
            |               |
            |               source
-           |
         ");
     }
 
@@ -4943,7 +4841,6 @@ def function():
           |       |       |
           |       |       Cursor offset
           |       source
-          |
         ");
     }
 
@@ -5112,7 +5009,6 @@ def function():
            |        |  |
            |        |  Cursor offset
            |        source
-           |
         "#);
     }
 
@@ -5150,7 +5046,6 @@ def function():
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -5180,7 +5075,6 @@ def function():
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -5210,7 +5104,6 @@ def function():
           | ||
           | |Cursor offset
           | source
-          |
         ");
     }
 
@@ -5256,7 +5149,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5294,7 +5186,6 @@ def function():
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         "#);
     }
 
@@ -5323,7 +5214,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5358,7 +5248,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5393,7 +5282,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5429,7 +5317,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5466,7 +5353,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5504,7 +5390,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5533,7 +5418,6 @@ def function():
           |     ||
           |     |Cursor offset
           |     source
-          |
         ");
     }
 
@@ -5561,7 +5445,6 @@ def function():
           |                 ^- Cursor offset
           |                 |
           |                 source
-          |
         ");
 
         let test = hover_test(
@@ -5586,7 +5469,6 @@ def function():
           |                      ^- Cursor offset
           |                      |
           |                      source
-          |
         ");
 
         let test = hover_test(
@@ -5611,7 +5493,6 @@ def function():
           |                     ^- Cursor offset
           |                     |
           |                     source
-          |
         ");
 
         let test = hover_test(
@@ -5636,7 +5517,6 @@ def function():
           |                      ^- Cursor offset
           |                      |
           |                      source
-          |
         ");
     }
 
@@ -5663,7 +5543,6 @@ def function():
           |               ^- Cursor offset
           |               |
           |               source
-          |
         ");
 
         let test = hover_test(
@@ -5687,7 +5566,6 @@ def function():
           |                       ^- Cursor offset
           |                       |
           |                       source
-          |
         ");
 
         let test = hover_test(
@@ -5711,7 +5589,6 @@ def function():
           |                   ^- Cursor offset
           |                   |
           |                   source
-          |
         ");
 
         let test = hover_test(
@@ -5735,7 +5612,6 @@ def function():
           |                         ^- Cursor offset
           |                         |
           |                         source
-          |
         ");
     }
 
@@ -5761,7 +5637,6 @@ def function():
           |           ^- Cursor offset
           |           |
           |           source
-          |
         ");
 
         let test = hover_test(
@@ -5784,7 +5659,6 @@ def function():
           |                     ^- Cursor offset
           |                     |
           |                     source
-          |
         ");
 
         let test = hover_test(
@@ -5807,7 +5681,6 @@ def function():
           |            ^- Cursor offset
           |            |
           |            source
-          |
         ");
 
         let test = hover_test(
@@ -5830,7 +5703,6 @@ def function():
           |                       ^- Cursor offset
           |                       |
           |                       source
-          |
         ");
     }
 
@@ -5856,7 +5728,6 @@ def function():
           |      ^^^- Cursor offset
           |      |
           |      source
-          |
         ");
     }
 
@@ -5893,7 +5764,6 @@ def function():
           |      ^^^^^^^- Cursor offset
           |      |
           |      source
-          |
         ");
 
         let test = hover_test(
@@ -5918,7 +5788,6 @@ def function():
           |    |  |
           |    |  Cursor offset
           |    source
-          |
         ");
     }
 
@@ -5949,7 +5818,6 @@ def function():
           | ^- Cursor offset
           | |
           | source
-          |
         ");
 
         let test = hover_test(
@@ -5977,7 +5845,6 @@ def function():
           |                    ^- Cursor offset
           |                    |
           |                    source
-          |
         ");
 
         let test = hover_test(
@@ -6005,7 +5872,6 @@ def function():
           | ^- Cursor offset
           | |
           | source
-          |
         ");
 
         let test = hover_test(
@@ -6033,7 +5899,6 @@ def function():
           |                      ^- Cursor offset
           |                      |
           |                      source
-          |
         ");
     }
 
@@ -6065,7 +5930,6 @@ def function():
           |            |
           |            source
           |            Cursor offset
-          |
         ");
     }
 
@@ -6109,7 +5973,6 @@ def function():
            |        |
            |        source
            |        Cursor offset
-           |
         ");
     }
 
@@ -6146,7 +6009,6 @@ def function():
            |       ^- Cursor offset
            |       |
            |       source
-           |
         ");
     }
 
@@ -6177,7 +6039,6 @@ def function():
           |    ^^^^^- Cursor offset
           |    |
           |    source
-          |
         ");
     }
 
@@ -6241,7 +6102,6 @@ def function():
           |    ^^^^^- Cursor offset
           |    |
           |    source
-          |
         ");
 
         let test = hover_test(
@@ -6266,7 +6126,6 @@ def function():
           | ^- Cursor offset
           | |
           | source
-          |
         ");
     }
 
@@ -6292,7 +6151,6 @@ def function():
           |      ^^^- Cursor offset
           |      |
           |      source
-          |
         ");
 
         let test = hover_test(
@@ -6315,7 +6173,6 @@ def function():
           |                             ^^^- Cursor offset
           |                             |
           |                             source
-          |
         ");
     }
 
@@ -6345,7 +6202,6 @@ def function():
           |                  ^- Cursor offset
           |                  |
           |                  source
-          |
         ");
 
         let test = hover_test(
@@ -6369,7 +6225,6 @@ def function():
           |             ^- Cursor offset
           |             |
           |             source
-          |
         ");
 
         let test = hover_test(
@@ -6396,7 +6251,6 @@ def function():
           |             ^- Cursor offset
           |             |
           |             source
-          |
         ");
 
         let test = hover_test(
@@ -6420,7 +6274,6 @@ def function():
           |             ^- Cursor offset
           |             |
           |             source
-          |
         ");
     }
 
@@ -6460,7 +6313,6 @@ def function():
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -6500,7 +6352,6 @@ def function():
           |       |  |
           |       |  Cursor offset
           |       source
-          |
         ");
     }
 
@@ -6540,7 +6391,6 @@ def function():
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -6580,7 +6430,6 @@ def function():
           |              |  |
           |              |  Cursor offset
           |              source
-          |
         ");
     }
 
@@ -6619,7 +6468,6 @@ def function():
           |       |  |
           |       |  Cursor offset
           |       source
-          |
         ");
     }
 
@@ -6658,7 +6506,6 @@ def function():
           |                     |  |
           |                     |  Cursor offset
           |                     source
-          |
         ");
     }
 
@@ -6697,7 +6544,6 @@ def function():
           |     |  |
           |     |  Cursor offset
           |     source
-          |
         ");
     }
 
@@ -6741,7 +6587,6 @@ def function():
           |    ^- Cursor offset
           |    |
           |    source
-          |
         ");
     }
 
@@ -6769,7 +6614,6 @@ def function():
           | |    |
           | |    Cursor offset
           | source
-          |
         ");
     }
 
@@ -6823,7 +6667,6 @@ class CoolType(str):
           |        ^- Cursor offset
           |        |
           |        source
-          |
         ");
     }
 
@@ -6859,7 +6702,6 @@ type U<CURSOR> = MyType
           |      ^- Cursor offset
           |      |
           |      source
-          |
         ");
     }
 
@@ -6909,7 +6751,6 @@ type U<CURSOR> = MyType
           |    |  |
           |    |  Cursor offset
           |    source
-          |
         ");
     }
 
@@ -6958,7 +6799,6 @@ type U<CURSOR> = MyType
           |                     ^^^^^- Cursor offset
           |                     |
           |                     source
-          |
         ");
     }
 
@@ -7005,7 +6845,6 @@ type U<CURSOR> = MyType
            |    ^^^^- Cursor offset
            |    |
            |    source
-           |
         ");
     }
 

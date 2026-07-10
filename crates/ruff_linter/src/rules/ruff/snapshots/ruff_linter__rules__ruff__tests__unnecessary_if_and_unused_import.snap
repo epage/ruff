@@ -10,7 +10,6 @@ F401 [*] `exceptiongroup.ExceptionGroup` imported but unused
    |                                ^^^^^^^^^^^^^^
 13 |
 14 | # Already-empty block handled in a single pass by RUF050
-   |
 help: Remove unused import: `exceptiongroup.ExceptionGroup`
    |
 11 | if sys.version_info < (3, 11):
@@ -28,7 +27,6 @@ RUF050 [*] Empty `if` statement
    | |________^
 17 |
 18 |   print(os.getcwd())
-   |
 help: Remove the `if` statement
    |
 14 | # Already-empty block handled in a single pass by RUF050

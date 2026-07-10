@@ -8,7 +8,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | ^^^^^^^^^^^^^^^^^
 15 | def parentheses_no_params():
 16 |     return 42
-   |
 help: Remove parentheses
    |
 13 |
@@ -26,7 +25,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | |_^
 27 |   def parentheses_no_params_multiline():
 28 |       return 42
-   |
 help: Remove parentheses
    |
 23 |
@@ -44,7 +42,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | ^^^^^^^^^^
 40 | def imported_from_parentheses_no_params():
 41 |     return 42
-   |
 help: Remove parentheses
    |
 38 |
@@ -62,7 +59,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | |_^
 52 |   def imported_from_parentheses_no_params_multiline():
 53 |       return 42
-   |
 help: Remove parentheses
    |
 48 |
@@ -80,7 +76,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | ^^^^^^^^^^
 65 | def aliased_parentheses_no_params():
 66 |     return 42
-   |
 help: Remove parentheses
    |
 63 |
@@ -98,7 +93,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | |_^
 77 |   def aliased_parentheses_no_params_multiline():
 78 |       return 42
-   |
 help: Remove parentheses
    |
 73 |
@@ -119,7 +113,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
 84 | | )
    | |_^
 85 |   def my_fixture(): ...
-   |
 help: Remove parentheses
    |
 80 | # https://github.com/astral-sh/ruff/issues/18770
@@ -139,7 +132,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | ^^^^^^^^^^^^^^^^^^^
 89 | def outer_paren_fixture_no_params():
 90 |     return 42
-   |
 help: Remove parentheses
    |
 87 |
@@ -155,7 +147,6 @@ PT001 [*] Use `@pytest.fixture` over `@pytest.fixture()`
    | ^^^^^^^^^^^^
 94 | def outer_paren_imported_fixture_no_params():
 95 |     return 42
-   |
 help: Remove parentheses
    |
 92 |

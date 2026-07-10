@@ -10,7 +10,6 @@ F811 [*] Redefinition of unused `List` from line 4
 5 |     List,
   |     ^^^^ `List` redefined here
 6 | )
-  |
 help: Remove definition: `List`
   |
 4 |     List,

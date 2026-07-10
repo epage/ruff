@@ -292,14 +292,12 @@ Module(
   |
 
 
-  |
 5 | [1,,2]
 6 |
 7 | [1,,]
   |    ^ Syntax Error: Expected an expression or a ']'
 8 |
 9 | # Missing comma
-  |
 
 
    |
@@ -344,4 +342,3 @@ Module(
 19 |
 20 | [*]
    |   ^ Syntax Error: Expected an expression
-   |

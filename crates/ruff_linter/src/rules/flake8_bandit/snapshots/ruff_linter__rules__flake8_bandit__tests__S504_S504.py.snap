@@ -10,7 +10,6 @@ S504 `ssl.wrap_socket` called without an `ssl_version``
   | ^^^^^^^^^^^^^^^^^
 5 | wrap_socket()  # S504
 6 | ssl.wrap_socket(ssl_version=ssl.PROTOCOL_TLSv1_2)  # OK
-  |
 
 S504 `ssl.wrap_socket` called without an `ssl_version``
  --> S504.py:5:1
@@ -19,4 +18,3 @@ S504 `ssl.wrap_socket` called without an `ssl_version``
 5 | wrap_socket()  # S504
   | ^^^^^^^^^^^^^
 6 | ssl.wrap_socket(ssl_version=ssl.PROTOCOL_TLSv1_2)  # OK
-  |

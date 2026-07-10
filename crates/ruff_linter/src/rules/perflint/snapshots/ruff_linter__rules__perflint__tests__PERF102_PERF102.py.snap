@@ -8,7 +8,6 @@ PERF102 [*] When using only the values of a dict use the `values()` method
 5 |     for _, value in some_dict.items():  # PERF102
   |                     ^^^^^^^^^^^^^^^
 6 |         print(value)
-  |
 help: Replace `.items()` with `.values()`
   |
 4 | def f():
@@ -25,7 +24,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 10 |     for key, _ in some_dict.items():  # PERF102
    |                   ^^^^^^^^^^^^^^^
 11 |         print(key)
-   |
 help: Replace `.items()` with `.keys()`
    |
 9  | def f():
@@ -42,7 +40,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 15 |     for weird_arg_name, _ in some_dict.items():  # PERF102
    |                              ^^^^^^^^^^^^^^^
 16 |         print(weird_arg_name)
-   |
 help: Replace `.items()` with `.keys()`
    |
 14 | def f():
@@ -59,7 +56,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 20 |     for name, (_, _) in some_dict.items():  # PERF102
    |                         ^^^^^^^^^^^^^^^
 21 |         print(name)
-   |
 help: Replace `.items()` with `.keys()`
    |
 19 | def f():
@@ -76,7 +72,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 30 |     for (key1, _), (_, _) in some_dict.items():  # PERF102
    |                              ^^^^^^^^^^^^^^^
 31 |         print(key1)
-   |
 help: Replace `.items()` with `.keys()`
    |
 29 | def f():
@@ -93,7 +88,6 @@ PERF102 [*] When using only the values of a dict use the `values()` method
 35 |     for (_, (_, _)), (value, _) in some_dict.items():  # PERF102
    |                                    ^^^^^^^^^^^^^^^
 36 |         print(value)
-   |
 help: Replace `.items()` with `.values()`
    |
 34 | def f():
@@ -110,7 +104,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 50 |     for ((_, key2), (_, _)) in some_dict.items():  # PERF102
    |                                ^^^^^^^^^^^^^^^
 51 |         print(key2)
-   |
 help: Replace `.items()` with `.keys()`
    |
 49 | def f():
@@ -127,7 +120,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 85 |     for name, (_, _) in (some_function()).items():  # PERF102
    |                         ^^^^^^^^^^^^^^^^^^^^^^^
 86 |         print(name)
-   |
 help: Replace `.items()` with `.keys()`
    |
 84 | def f():
@@ -144,7 +136,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 90 |     for name, (_, _) in (some_function().some_attribute).items():  # PERF102
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 91 |         print(name)
-   |
 help: Replace `.items()` with `.keys()`
    |
 89 | def f():
@@ -161,7 +152,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 95 |     for name, unused_value in some_dict.items():  # PERF102
    |                               ^^^^^^^^^^^^^^^
 96 |         print(name)
-   |
 help: Replace `.items()` with `.keys()`
    |
 94 | def f():
@@ -178,7 +168,6 @@ PERF102 [*] When using only the values of a dict use the `values()` method
 100 |     for unused_name, value in some_dict.items():  # PERF102
     |                               ^^^^^^^^^^^^^^^
 101 |         print(value)
-    |
 help: Replace `.items()` with `.values()`
     |
 99  | def f():
@@ -196,7 +185,6 @@ PERF102 [*] When using only the keys of a dict use the `keys()` method
 106 |     for(B,D)in A.items():
     |                ^^^^^^^
 107 |         if(C:=name_to_value.get(B.name)):A.run(B.set,C)
-    |
 help: Replace `.items()` with `.keys()`
     |
 105 | def _create_context(name_to_value):

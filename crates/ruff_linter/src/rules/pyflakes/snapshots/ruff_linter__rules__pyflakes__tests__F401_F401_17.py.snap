@@ -9,7 +9,6 @@ F401 [*] `threading.Thread` imported but unused
    |                           ^^^^^^
 13 |
 14 |     # The `Thread` on the left-hand side should resolve to the `Thread` imported at the
-   |
 help: Remove unused import: `threading.Thread`
    |
 11 | def fn(thread: Thread):
@@ -25,7 +24,6 @@ F401 [*] `threading.Thread` imported but unused
    |                           ^^^^^^
 21 |
 22 |     # The `Thread` on the left-hand side should resolve to the `Thread` imported at the
-   |
 help: Remove unused import: `threading.Thread`
    |
 19 | def fn(thread: Thread):

@@ -9,7 +9,6 @@ PLE1519 [*] `@singledispatch` decorator should not be used on methods
    |     ^^^^^^^^^^^^^^^
 11 |     @classmethod
 12 |     def convert_position(cls, position):
-   |
 help: Replace with `@singledispatchmethod`
    |
 9  | class Board:
@@ -28,7 +27,6 @@ PLE1519 [*] `@singledispatch` decorator should not be used on methods
    |     ^^^^^^^^^^^^^^^
 16 |     def move(self, position):
 17 |         pass
-   |
 help: Replace with `@singledispatchmethod`
    |
 14 |
@@ -47,7 +45,6 @@ PLE1519 [*] `@singledispatch` decorator should not be used on methods
    |     ^^^^^^^^^^^^^^^
 24 |     @staticmethod
 25 |     def do(position):
-   |
 help: Replace with `@singledispatchmethod`
    |
 22 |

@@ -8,7 +8,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
   |   ^^^^^^^^^^^^^
 2 | gettext("%s" % "line")
 3 | ngettext("%s" % "line", "%s" % "lines", 2)
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
  --> INT003.py:2:9
@@ -17,7 +16,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 2 | gettext("%s" % "line")
   |         ^^^^^^^^^^^^^
 3 | ngettext("%s" % "line", "%s" % "lines", 2)
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
  --> INT003.py:3:10
@@ -28,7 +26,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
   |          ^^^^^^^^^^^^^
 4 |
 5 | _gettext("%s" % "line")  # no lint
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:27:14
@@ -39,7 +36,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |              ^^^^^^^^^^^^^^^
 28 |            _("%s" %"albatross"),
 29 |            _("%s" %"rat"),
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:28:14
@@ -49,18 +45,15 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |              ^^^^^^^^^^^^^^^^^
 29 |            _("%s" %"rat"),
 30 |            _("%s" %"penguin"),
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:29:14
-   |
 27 | animals = [_("%s" %"mollusk"),
 28 |            _("%s" %"albatross"),
 29 |            _("%s" %"rat"),
    |              ^^^^^^^^^^^
 30 |            _("%s" %"penguin"),
 31 |            _("%s" %"python"),]
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:30:14
@@ -70,7 +63,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 30 |            _("%s" %"penguin"),
    |              ^^^^^^^^^^^^^^^
 31 |            _("%s" %"python"),]
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:31:14
@@ -81,7 +73,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |              ^^^^^^^^^^^^^^
 32 |
 33 | del _
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:37:13
@@ -90,4 +81,3 @@ INT003 printf-style format is resolved before function call; consider `_("string
 36 |     print(_(a))
 37 |     print(_("%s" % a))
    |             ^^^^^^^^
-   |

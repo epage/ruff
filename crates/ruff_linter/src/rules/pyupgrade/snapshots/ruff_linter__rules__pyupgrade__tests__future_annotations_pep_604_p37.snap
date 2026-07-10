@@ -8,7 +8,6 @@ UP045 [*] Use `X | None` for type annotations
    |    ^^^^^^^^^^^^^
 41 |
 42 | MyList: TypeAlias = Union[List[int], List[str]]
-   |
 help: Convert to `X | None`
    |
 39 |

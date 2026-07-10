@@ -9,7 +9,6 @@ N807 Function name should not start and end with `__`
 4 | def __stillBad__():
   |     ^^^^^^^^^^^^
 5 |     pass
-  |
 
 N807 Function name should not start and end with `__`
   --> N807.py:12:9
@@ -19,4 +18,3 @@ N807 Function name should not start and end with `__`
 12 |     def __stillBad__():
    |         ^^^^^^^^^^^^
 13 |         pass
-   |

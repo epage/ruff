@@ -9,12 +9,9 @@ YTT303 `sys.version[:1]` referenced (python10), use `sys.version_info`
 4 | print(sys.version[:1])
   |       ^^^^^^^^^^^
 5 | print(version[:1])
-  |
 
 YTT303 `sys.version[:1]` referenced (python10), use `sys.version_info`
  --> YTT303.py:5:7
-  |
 4 | print(sys.version[:1])
 5 | print(version[:1])
   |       ^^^^^^^
-  |

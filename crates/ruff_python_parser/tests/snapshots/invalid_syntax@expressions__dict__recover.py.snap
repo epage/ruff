@@ -491,14 +491,12 @@ Module(
   |
 
 
-  |
 5 | {1: 2,,3: 4}
 6 |
 7 | {1: 2,,}
   |       ^ Syntax Error: Expected an expression or a '}'
 8 |
 9 | # Missing comma
-  |
 
 
    |
@@ -558,7 +556,6 @@ Module(
 23 | {*x: y, z: a, *b: c}
 24 | {x: *y, z: *a}
    |     ^^ Syntax Error: Starred expression cannot be used here
-   |
 
 
    |
@@ -566,4 +563,3 @@ Module(
 23 | {*x: y, z: a, *b: c}
 24 | {x: *y, z: *a}
    |            ^^ Syntax Error: Starred expression cannot be used here
-   |

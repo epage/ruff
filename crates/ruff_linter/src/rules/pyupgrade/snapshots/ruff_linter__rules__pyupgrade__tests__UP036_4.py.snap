@@ -8,7 +8,6 @@ UP036 [*] Version block is outdated for minimum Python version
 4 |     if sys.version_info < (3, 3):
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |         cmd = [sys.executable, "-m", "test.regrtest"]
-  |
 help: Remove outdated version block
   |
 3 | if True:
@@ -27,7 +26,6 @@ UP036 [*] Version block is outdated for minimum Python version
 11 |     elif sys.version_info < (3, 3):
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |         cmd = [sys.executable, "-m", "test.regrtest"]
-   |
 help: Remove outdated version block
    |
 10 |         print()
@@ -47,7 +45,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^
 18 |         cmd = [sys.executable, "-m", "test.regrtest"]
 19 |     elif foo:
-   |
 help: Remove outdated version block
    |
 16 |         print()
@@ -65,7 +62,6 @@ UP036 [*] Version block is outdated for minimum Python version
 24 |     elif sys.version_info < (3, 3):
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^
 25 |         cmd = [sys.executable, "-m", "test.regrtest"]
-   |
 help: Remove outdated version block
    |
 23 |         print()
@@ -84,7 +80,6 @@ UP036 [*] Version block is outdated for minimum Python version
 27 |     if sys.version_info < (3, 3):
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 28 |         cmd = [sys.executable, "-m", "test.regrtest"]
-   |
 help: Remove outdated version block
    |
 26 |
@@ -103,7 +98,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^
 33 |         cmd = [sys.executable, "-m", "test.regrtest"]
 34 |     else:
-   |
 help: Remove outdated version block
    |
 31 |         print()
@@ -122,7 +116,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 38 |         cmd = [sys.executable, "-m", "test.regrtest"]
 39 |     else:
-   |
 help: Remove outdated version block
    |
 36 |
@@ -144,7 +137,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 43 |         cmd = [sys.executable, "-m", "test.regrtest"]
 44 |     elif foo:
-   |
 help: Remove outdated version block
    |
 41 |

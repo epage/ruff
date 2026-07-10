@@ -8,7 +8,6 @@ DJ008 Model does not define `__str__` method
 6 | class TestModel1(models.Model):
   |       ^^^^^^^^^^
 7 |     new_field = models.CharField(max_length=10)
-  |
 
 DJ008 Model does not define `__str__` method
   --> DJ008.py:21:7
@@ -16,7 +15,6 @@ DJ008 Model does not define `__str__` method
 21 | class TestModel2(Model):
    |       ^^^^^^^^^^
 22 |     new_field = models.CharField(max_length=10)
-   |
 
 DJ008 Model does not define `__str__` method
   --> DJ008.py:36:7
@@ -24,7 +22,6 @@ DJ008 Model does not define `__str__` method
 36 | class TestModel3(Model):
    |       ^^^^^^^^^^
 37 |     new_field = models.CharField(max_length=10)
-   |
 
 DJ008 Model does not define `__str__` method
    --> DJ008.py:182:7
@@ -33,7 +30,6 @@ DJ008 Model does not define `__str__` method
 182 | class SubclassTestModel3(TestModel1):
     |       ^^^^^^^^^^^^^^^^^^
 183 |     pass
-    |
 
 DJ008 Model does not define `__str__` method
    --> DJ008.py:215:7
@@ -42,4 +38,3 @@ DJ008 Model does not define `__str__` method
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 216 |     """Model with type-annotated abstract = False - should trigger DJ008"""
 217 |     new_field = models.CharField(max_length=10)
-    |

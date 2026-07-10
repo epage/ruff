@@ -119,7 +119,6 @@ result = calculate_sum(value=42)
         7 | # Call with keyword argument
         8 | result = calculate_sum(value=42)
           |                        -----
-          |
         ");
     }
 
@@ -180,7 +179,6 @@ def outer_function():
         18 |     decrement()
         19 |     final = counter
            |             -------
-           |
         ");
     }
 
@@ -238,7 +236,6 @@ final_value = global_counter
         17 | decrement_global()
         18 | final_value = global_counter
            |               --------------
-           |
         ");
     }
 
@@ -262,7 +259,6 @@ except ValueError as err:
         assert_snapshot!(test.references(), @"
         info[references]: Found 5 references
           --> main.py:4:29
-           |
          4 | except ZeroDivisionError as err:
            |                             ---
          5 |     print(f'Error: {err}')
@@ -276,7 +272,6 @@ except ValueError as err:
            |                      ---
         11 |     print(f'Different error: {err}')
            |                               ---
-           |
         ");
     }
 
@@ -296,14 +291,12 @@ match x:
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:3:20
-          |
         3 |     case [a, b] as pattern:
           |                    -------
         4 |         print(f'Matched: {pattern}')
           |                           -------
         5 |         return pattern
           |                -------
-          |
         ");
     }
 
@@ -322,7 +315,6 @@ match data:
         assert_snapshot!(test.references(), @"
         info[references]: Found 4 references
          --> main.py:3:29
-          |
         3 |     case {'a': a, 'b': b, **rest}:
           |                             ----
         4 |         print(f'Rest data: {rest}')
@@ -331,7 +323,6 @@ match data:
           |                 ----
         6 |         return rest
           |                ----
-          |
         ");
     }
 
@@ -363,7 +354,6 @@ value = my_function
            |     -----------
            |
           ::: main.py:6:11
-           |
          6 | result1 = my_function()
            |           -----------
          7 | result2 = my_function()
@@ -378,7 +368,6 @@ value = my_function
            |       -----------
         14 | value = my_function
            |         -----------
-           |
         ");
     }
 
@@ -426,7 +415,6 @@ test("test")
         10 |
         11 | def test(a: Any) -> Any:
            |     ----
-           |
           ::: main.py:2:17
            |
          2 | from lib import test
@@ -434,7 +422,6 @@ test("test")
          3 |
          4 | test("test")
            | ----
-           |
         "#);
     }
 
@@ -467,7 +454,6 @@ cls = MyClass
            |       -------
            |
           ::: main.py:7:8
-           |
          7 | obj1 = MyClass()
            |        -------
          8 | obj2 = MyClass()
@@ -481,7 +467,6 @@ cls = MyClass
            |
         15 | cls = MyClass
            |       -------
-           |
         ");
     }
 
@@ -499,13 +484,11 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:5
-          |
         2 | a: "MyClass" = 1
           |     -------
         3 |
         4 | class MyClass:
           |       -------
-          |
         "#);
     }
 
@@ -526,7 +509,6 @@ cls = MyClass
           |
         2 | a: "MyClass" = 1
           |     -------
-          |
         "#);
     }
 
@@ -544,13 +526,11 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:12
-          |
         2 | a: "None | MyClass" = 1
           |            -------
         3 |
         4 | class MyClass:
           |       -------
-          |
         "#);
     }
 
@@ -582,13 +562,11 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:12
-          |
         2 | a: "None | MyClass" = 1
           |            -------
         3 |
         4 | class MyClass:
           |       -------
-          |
         "#);
     }
 
@@ -634,13 +612,11 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:5
-          |
         2 | a: "MyClass | No" = 1
           |     -------
         3 |
         4 | class MyClass:
           |       -------
-          |
         "#);
     }
 
@@ -669,10 +645,8 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:1
-          |
         2 | ab: "ab"
           | --   --
-          |
         "#);
     }
 
@@ -701,12 +675,10 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:4:22
-          |
         4 |         case ["get", ab]:
           |                      --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -729,7 +701,6 @@ cls = MyClass
           |                      --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -752,7 +723,6 @@ cls = MyClass
           |                       --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -775,7 +745,6 @@ cls = MyClass
           |                       --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -798,7 +767,6 @@ cls = MyClass
           |                                     --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -821,7 +789,6 @@ cls = MyClass
           |                                     --
         5 |             x = ab
           |                 --
-          |
         "#);
     }
 
@@ -845,12 +812,10 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 2 references
           --> main.py:10:30
-           |
         10 |         case Click(x, button=ab):
            |                              --
         11 |             x = ab
            |                 --
-           |
         ");
     }
 
@@ -874,12 +839,10 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 2 references
           --> main.py:10:30
-           |
         10 |         case Click(x, button=ab):
            |                              --
         11 |             x = ab
            |                 --
-           |
         ");
     }
 
@@ -903,7 +866,6 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
           --> main.py:2:7
-           |
          2 | class Click:
            |       -----
            |
@@ -914,7 +876,6 @@ cls = MyClass
          9 |     match event:
         10 |         case Click(x, button=ab):
            |              -----
-           |
         ");
     }
 
@@ -949,10 +910,8 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:2:13
-          |
         2 | type Alias1[AB: int = bool] = tuple[AB, list[AB]]
           |             --                      --       --
-          |
         ");
     }
 
@@ -970,7 +929,6 @@ cls = MyClass
           |
         2 | type Alias1[AB: int = bool] = tuple[AB, list[AB]]
           |             --                      --       --
-          |
         ");
     }
 
@@ -989,7 +947,6 @@ cls = MyClass
           |
         3 | type Alias2[**AB = [int, str]] = Callable[AB, tuple[AB]]
           |               --                          --        --
-          |
         ");
     }
 
@@ -1008,7 +965,6 @@ cls = MyClass
           |
         3 | type Alias2[**AB = [int, str]] = Callable[AB, tuple[AB]]
           |               --                          --        --
-          |
         ");
     }
 
@@ -1026,7 +982,6 @@ cls = MyClass
           |
         2 | type Alias3[*AB = ()] = tuple[tuple[*AB], tuple[*AB]]
           |              --                      --          --
-          |
         ");
     }
 
@@ -1044,7 +999,6 @@ cls = MyClass
           |
         2 | type Alias3[*AB = ()] = tuple[tuple[*AB], tuple[*AB]]
           |              --                      --          --
-          |
         ");
     }
 
@@ -1097,7 +1051,6 @@ class DataProcessor:
         8 |     def process(self, value):
         9 |         return func(value)
           |                ----
-          |
          ::: module.py:2:19
           |
         2 | from utils import func
@@ -1111,7 +1064,6 @@ class DataProcessor:
           |
         2 | def func(x):
           |     ----
-          |
         ");
     }
 
@@ -1145,7 +1097,6 @@ def process_model():
         assert_snapshot!(test.references(), @"
         info[references]: Found 5 references
          --> main.py:6:19
-          |
         6 |     value = model.attr
           |                   ----
         7 |     model.attr = 100
@@ -1161,7 +1112,6 @@ def process_model():
         5 |     def get_attribute(self):
         6 |         return MyModel.attr
           |                        ----
-          |
         ");
     }
 
@@ -1189,7 +1139,6 @@ instance = ExampleClass(old_name="test")
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> example_rename.py:4:25
-          |
         4 | instance = ExampleClass(old_name="test")
           |                         --------
           |
@@ -1199,7 +1148,6 @@ instance = ExampleClass(old_name="test")
           |                        --------
         4 |         self.old_name = old_name
           |                         --------
-          |
         "#);
     }
 
@@ -1227,7 +1175,6 @@ TD(f=1)
         7 |
         8 | TD(f=1)
           |    -
-          |
         ");
     }
 
@@ -1255,7 +1202,6 @@ TD(f<CURSOR>=1)
         7 |
         8 | TD(f=1)
           |    -
-          |
         ");
     }
 
@@ -1283,7 +1229,6 @@ NT(f=1)
         7 |
         8 | NT(f=1)
           |    -
-          |
         ");
     }
 
@@ -1312,7 +1257,6 @@ DC(f=1)
         8 |
         9 | DC(f=1)
           |    -
-          |
         ");
     }
 
@@ -1349,7 +1293,6 @@ result = func(value=42)
           |          -----
         3 |     return value * 2
           |            -----
-          |
         ");
     }
 
@@ -1378,7 +1321,6 @@ result = func(value=1)
         assert_snapshot!(test.references(), @"
         info[references]: Found 4 references
          --> caller.py:4:15
-          |
         4 | result = func(value=1)
           |               -----
           |
@@ -1391,7 +1333,6 @@ result = func(value=1)
         4 |
         5 | result = func(value=42)
           |               -----
-          |
         ");
     }
 
@@ -1419,7 +1360,6 @@ async def main():
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:5:23
-          |
         5 |     return await func(value=42)
           |                       -----
           |
@@ -1429,7 +1369,6 @@ async def main():
           |                -----
         3 |     return value * 2
           |            -----
-          |
         ");
     }
 
@@ -1460,7 +1399,6 @@ instance = ExampleClass(old_name="test")
           |
         4 |         self.old_name = old_name
           |              --------
-          |
         ");
     }
 
@@ -1498,7 +1436,6 @@ result = func(value=10)
           |               -----
         4 |         return value * 2
           |                -----
-          |
         ");
     }
 
@@ -1530,7 +1467,6 @@ result = instance.method(old_name="world")
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> example_rename.py:4:25
-          |
         4 | instance = ExampleClass(old_name="test")
           |                         --------
           |
@@ -1540,7 +1476,6 @@ result = instance.method(old_name="world")
           |                        --------
         4 |         self.old_name = old_name
           |                         --------
-          |
         "#);
     }
 
@@ -1577,7 +1512,6 @@ func<CURSOR>_alias()
         3 |
         4 | func_alias()
           | ----------
-          |
         ");
     }
 
@@ -1612,7 +1546,6 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 4 references
          --> importer.py:2:18
-          |
         2 | from path import Path
           |                  ----
         3 |
@@ -1623,7 +1556,6 @@ func<CURSOR>_alias()
           |
         2 | class Path:
           |       ----
-          |
         "#);
     }
 
@@ -1651,7 +1583,6 @@ func<CURSOR>_alias()
         4 |
         5 | x = abc
           |     ---
-          |
         ");
     }
 
@@ -1679,7 +1610,6 @@ func<CURSOR>_alias()
         4 |
         5 | x = abc
           |     ---
-          |
         ");
     }
 
@@ -1708,7 +1638,6 @@ func<CURSOR>_alias()
         4 |
         5 | y = xyz
           |     ---
-          |
         ");
     }
 
@@ -1737,7 +1666,6 @@ func<CURSOR>_alias()
         4 |
         5 | y = xyz
           |     ---
-          |
         ");
     }
 
@@ -1768,7 +1696,6 @@ func<CURSOR>_alias()
           |
         4 | x = subpkg
           |     ------
-          |
         ");
     }
 
@@ -1890,7 +1817,6 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> mypackage/__init__.py:2:21
-          |
         2 | from .subpkg import subpkg
           |                     ------
         3 |
@@ -1901,7 +1827,6 @@ func<CURSOR>_alias()
           |
         2 | subpkg: int = 10
           | ------
-          |
         ");
     }
 
@@ -1938,7 +1863,6 @@ func<CURSOR>_alias()
           |
         2 | subpkg: int = 10
           | ------
-          |
         ");
     }
 
@@ -1961,7 +1885,6 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> main.py:2:1
-          |
         2 | a: str = "test"
           | -
         3 |
@@ -1970,7 +1893,6 @@ func<CURSOR>_alias()
         5 |
         6 | print(a)
           |       -
-          |
         "#);
     }
 
@@ -1986,10 +1908,8 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:3:7
-          |
         3 | print(x)
           |       -
-          |
         ");
     }
 
@@ -2006,12 +1926,10 @@ print(x<CURSOR>)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:3:1
-          |
         3 | x = 2
           | -
         4 | print(x)
           |       -
-          |
         ");
     }
 
@@ -2028,12 +1946,10 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:3:1
-          |
         3 | x = 1
           | -
         4 | print(x)
           |       -
-          |
         ");
     }
 
@@ -2050,10 +1966,8 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:4:7
-          |
         4 | print(x)
           |       -
-          |
         ");
     }
 
@@ -2069,10 +1983,8 @@ value: Box
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:3:8
-          |
         3 | value: Box
           |        ---
-          |
         ");
     }
 
@@ -2093,10 +2005,8 @@ def test(flag: bool):
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:8:11
-          |
         8 |     print(x)
           |           -
-          |
         ");
     }
 
@@ -2115,12 +2025,10 @@ def f(flag: bool):
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:5:5
-          |
         5 |     x = 1
           |     -
         6 |     print(x)
           |           -
-          |
         ");
     }
 
@@ -2139,10 +2047,8 @@ print(x<CURSOR>)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:6:7
-          |
         6 | print(x)
           |       -
-          |
         ");
     }
 
@@ -2165,7 +2071,6 @@ class C:
           |
         7 |         print(self.x)
           |                    -
-          |
         ");
     }
 
@@ -2190,7 +2095,6 @@ class C:
           |
         9 |         print(self.x)
           |                    -
-          |
         ");
     }
 }

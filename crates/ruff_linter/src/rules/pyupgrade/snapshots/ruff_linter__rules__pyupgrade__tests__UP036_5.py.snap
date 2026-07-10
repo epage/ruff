@@ -10,7 +10,6 @@ UP036 [*] Version block is outdated for minimum Python version
   |    ^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |
 5 |     def a():
-  |
 help: Remove outdated version block
   |
 2 |
@@ -38,7 +37,6 @@ UP036 [*] Version block is outdated for minimum Python version
 18 | if sys.version_info < (3, 8):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |     pass
-   |
 help: Remove outdated version block
    |
 17 |
@@ -74,7 +72,6 @@ UP036 [*] Version block is outdated for minimum Python version
 36 | if sys.version_info < (3, 12, 0):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 37 |     print()
-   |
 help: Remove outdated version block
    |
 35 | ## Errors
@@ -92,7 +89,6 @@ UP036 [*] Version block is outdated for minimum Python version
 39 | if sys.version_info <= (3, 12, 0):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 40 |     print()
-   |
 help: Remove outdated version block
    |
 38 |
@@ -110,7 +106,6 @@ UP036 [*] Version block is outdated for minimum Python version
 42 | if sys.version_info < (3, 12, 11):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 43 |     print()
-   |
 help: Remove outdated version block
    |
 41 |
@@ -128,7 +123,6 @@ UP036 [*] Version block is outdated for minimum Python version
 45 | if sys.version_info < (3, 13, 0):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 46 |     print()
-   |
 help: Remove outdated version block
    |
 44 |
@@ -146,7 +140,6 @@ UP036 Version specifier is invalid
 48 | if sys.version_info <= (3, 13, 100000):
    |                        ^^^^^^^^^^^^^^^
 49 |     print()
-   |
 
 UP036 [*] Version block is outdated for minimum Python version
   --> UP036_5.py:60:4
@@ -156,7 +149,6 @@ UP036 [*] Version block is outdated for minimum Python version
 60 | if sys.version_info <= (3, 13, 0):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 |     print()
-   |
 help: Remove outdated version block
    |
 59 |
@@ -174,7 +166,6 @@ UP036 [*] Version block is outdated for minimum Python version
 63 | if sys.version_info < (3, 13, 37):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 64 |     print()
-   |
 help: Remove outdated version block
    |
 62 |
@@ -192,7 +183,6 @@ UP036 [*] Version block is outdated for minimum Python version
 66 | if sys.version_info <= (3, 13, 37):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |     print()
-   |
 help: Remove outdated version block
    |
 65 |
@@ -211,7 +201,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 78 |     print("3")
 79 | else:
-   |
 help: Remove outdated version block
    |
 76 |
@@ -233,7 +222,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 83 |     print("3")
 84 | else:
-   |
 help: Remove outdated version block
    |
 81 |
@@ -255,7 +243,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 88 |     print("3")
 89 | else:
-   |
 help: Remove outdated version block
    |
 86 |
@@ -277,7 +264,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 93 |     print("3")
 94 | else:
-   |
 help: Remove outdated version block
    |
 91 |
@@ -299,7 +285,6 @@ UP036 [*] Version block is outdated for minimum Python version
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 98 |     print("3")
 99 | else:
-   |
 help: Remove outdated version block
    |
 96 |
@@ -321,7 +306,6 @@ UP036 [*] Version block is outdated for minimum Python version
     |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 110 |     print(3)
 111 | else:
-    |
 help: Remove outdated version block
     |
 108 |

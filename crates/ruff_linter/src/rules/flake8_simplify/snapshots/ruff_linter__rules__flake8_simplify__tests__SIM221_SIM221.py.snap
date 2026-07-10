@@ -7,7 +7,6 @@ SIM221 [*] Use `True` instead of `a or not a`
 1 | if a or not a:
   |    ^^^^^^^^^^
 2 |     pass
-  |
 help: Replace with `True`
   |
   - if a or not a:
@@ -24,7 +23,6 @@ SIM221 [*] Use `True` instead of `a or not a`
 4 | if (a or not a) or b:
   |     ^^^^^^^^^^
 5 |     pass
-  |
 help: Replace with `True`
   |
 3 |
@@ -42,7 +40,6 @@ SIM221 [*] Use `True` instead of `a or not a`
 7 | if (a or not a) and b:
   |     ^^^^^^^^^^
 8 |     pass
-  |
 help: Replace with `True`
   |
 6 |

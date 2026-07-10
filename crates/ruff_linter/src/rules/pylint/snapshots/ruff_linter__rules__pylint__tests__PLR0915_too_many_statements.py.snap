@@ -8,4 +8,3 @@ PLR0915 Too many statements (51 > 50)
   |           ^
 6 |     print()
 7 |     print()
-  |

@@ -9,17 +9,14 @@ RUF034 Useless `if`-`else` condition
   |     ^^^^^^^^^^^^^^^^
 6 |
 7 | # Invalid
-  |
 
 RUF034 Useless `if`-`else` condition
   --> RUF034.py:8:5
-   |
  7 | # Invalid
  8 | x = "a" if True else "a"
    |     ^^^^^^^^^^^^^^^^^^^^
  9 |
 10 | # Invalid
-   |
 
 RUF034 Useless `if`-`else` condition
   --> RUF034.py:11:5
@@ -27,4 +24,3 @@ RUF034 Useless `if`-`else` condition
 10 | # Invalid
 11 | x = 0.1 if False else 0.1
    |     ^^^^^^^^^^^^^^^^^^^^^
-   |

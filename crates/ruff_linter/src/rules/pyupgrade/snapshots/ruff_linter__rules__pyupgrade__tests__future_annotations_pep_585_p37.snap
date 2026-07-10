@@ -8,7 +8,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
    |                  ^^^^
 35 |     y = List[int]()
 36 |     y.append(x)
-   |
 help: Replace with `list`
    |
 33 |

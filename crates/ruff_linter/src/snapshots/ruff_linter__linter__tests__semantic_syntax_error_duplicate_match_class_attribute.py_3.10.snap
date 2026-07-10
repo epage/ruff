@@ -8,4 +8,3 @@ invalid-syntax: attribute name `x` repeated in class pattern
 2 |     case Point(x=1, x=2):
   |                     ^
 3 |         pass
-  |

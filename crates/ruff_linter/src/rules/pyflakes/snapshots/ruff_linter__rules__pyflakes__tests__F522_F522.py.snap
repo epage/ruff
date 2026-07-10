@@ -8,7 +8,6 @@ F522 [*] `.format` call has unused named argument(s): bar
   | ^^^^^^^^^^^^^^^^^^^^^
 2 | "{bar}{}".format(1, bar=2, spam=3)  # F522
 3 | "{bar:{spam}}".format(bar=2, spam=3)  # No issues
-  |
 help: Remove extra named arguments: bar
   |
   - "{}".format(1, bar=2)  # F522
@@ -24,7 +23,6 @@ F522 [*] `.format` call has unused named argument(s): spam
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | "{bar:{spam}}".format(bar=2, spam=3)  # No issues
 4 | "{bar:{spam}}".format(bar=2, spam=3, eggs=4, ham=5)  # F522
-  |
 help: Remove extra named arguments: spam
   |
 1 | "{}".format(1, bar=2)  # F522
@@ -42,7 +40,6 @@ F522 [*] `.format` call has unused named argument(s): eggs, ham
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | (''
 6 |  .format(x=2))  # F522
-  |
 help: Remove extra named arguments: eggs, ham
   |
 3 | "{bar:{spam}}".format(bar=2, spam=3)  # No issues
@@ -62,7 +59,6 @@ F522 [*] `.format` call has unused named argument(s): x
   | |_____________^
 7 |
 8 |   # https://github.com/astral-sh/ruff/issues/18806
-  |
 help: Remove extra named arguments: x
   |
 5 | (''
@@ -73,14 +69,12 @@ help: Remove extra named arguments: x
 
 F522 [*] `.format` call has unused named argument(s): greeting
   --> F522.py:10:1
-   |
  8 | # https://github.com/astral-sh/ruff/issues/18806
  9 | # The fix here is unsafe because the unused argument has side effect
 10 | "Hello, {name}".format(greeting=print(1), name="World")
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | # The fix here is safe because the unused argument has no side effect,
-   |
 help: Remove extra named arguments: greeting
    |
 9  | # The fix here is unsafe because the unused argument has side effect
@@ -97,7 +91,6 @@ F522 [*] `.format` call has unused named argument(s): greeting
 13 | # even though the used argument has a side effect
 14 | "Hello, {name}".format(greeting="Pikachu", name=print(1))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Remove extra named arguments: greeting
    |
 13 | # even though the used argument has a side effect

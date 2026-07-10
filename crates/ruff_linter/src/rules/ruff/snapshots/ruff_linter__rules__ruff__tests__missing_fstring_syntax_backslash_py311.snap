@@ -20,7 +20,6 @@ RUF027 [*] Possible f-string without an `f` prefix
 42 | |     c}  d
 43 | |     """
    | |_______^
-   |
 help: Add `f` prefix
    |
 40 |     # RUF027
@@ -33,7 +32,6 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF027 [*] Possible f-string without an `f` prefix
   --> RUF027_0.py:49:9
-   |
 47 |       a = 4
 48 |       # RUF027
 49 |       b = " {\
@@ -41,7 +39,6 @@ RUF027 [*] Possible f-string without an `f` prefix
 50 | |     a} \
 51 | |     "
    | |_____^
-   |
 help: Add `f` prefix
    |
 48 |     # RUF027
@@ -61,7 +58,6 @@ RUF027 [*] Possible f-string without an `f` prefix
    |           ^^^^^^^^^^^^^^^^^^
 93 |
 94 | # Test case for comment handling in f-string interpolations
-   |
 help: Add `f` prefix
    |
 91 |     x = "test"
@@ -74,7 +70,6 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF027 [*] Possible f-string without an `f` prefix
    --> RUF027_0.py:98:11
-    |
  96 |   def comment_test():
  97 |       x = "!"
  98 |       print("""{x  # }
@@ -83,7 +78,6 @@ RUF027 [*] Possible f-string without an `f` prefix
     | |____^
 100 |
 101 |   # Test case for `#` inside a nested string literal in interpolation
-    |
 help: Add `f` prefix
    |
 97 |     x = "!"

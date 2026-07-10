@@ -8,7 +8,6 @@ F401 [*] `re.RegexFlag` imported but unused
 4 | from re import RegexFlag
   |                ^^^^^^^^^
 5 | from typing import Annotated
-  |
 help: Remove unused import: `re.RegexFlag`
   |
 3 | from pathlib import Path

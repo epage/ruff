@@ -8,7 +8,6 @@ ICN003 Members of `logging.config` should not be imported explicitly
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 2 | from typing import Any, Dict  # banned
 3 | from typing import *  # banned
-  |
 
 ICN003 Members of `typing` should not be imported explicitly
  --> custom_banned_from.py:2:1
@@ -17,7 +16,6 @@ ICN003 Members of `typing` should not be imported explicitly
 2 | from typing import Any, Dict  # banned
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | from typing import *  # banned
-  |
 
 ICN003 Members of `typing` should not be imported explicitly
  --> custom_banned_from.py:3:1
@@ -28,7 +26,6 @@ ICN003 Members of `typing` should not be imported explicitly
   | ^^^^^^^^^^^^^^^^^^^^
 4 |
 5 | from pandas import DataFrame  # banned
-  |
 
 ICN003 Members of `pandas` should not be imported explicitly
  --> custom_banned_from.py:5:1
@@ -38,7 +35,6 @@ ICN003 Members of `pandas` should not be imported explicitly
 5 | from pandas import DataFrame  # banned
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | from pandas import *  # banned
-  |
 
 ICN003 Members of `pandas` should not be imported explicitly
  --> custom_banned_from.py:6:1
@@ -48,4 +44,3 @@ ICN003 Members of `pandas` should not be imported explicitly
   | ^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | import logging.config  # ok
-  |

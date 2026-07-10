@@ -8,7 +8,6 @@ UP015 [*] Unnecessary mode argument
   |             ^^^
 2 | open("foo", "Ur")
 3 | open("foo", "Ub")
-  |
 help: Remove mode argument
   |
   - open("foo", "U")
@@ -24,7 +23,6 @@ UP015 [*] Unnecessary mode argument
   |             ^^^^
 3 | open("foo", "Ub")
 4 | open("foo", "rUb")
-  |
 help: Remove mode argument
   |
 1 | open("foo", "U")
@@ -42,7 +40,6 @@ UP015 [*] Unnecessary modes, use `rb`
   |             ^^^^
 4 | open("foo", "rUb")
 5 | open("foo", "r")
-  |
 help: Replace with `rb`
   |
 2 | open("foo", "Ur")
@@ -60,7 +57,6 @@ UP015 [*] Unnecessary modes, use `rb`
   |             ^^^^^
 5 | open("foo", "r")
 6 | open("foo", "rt")
-  |
 help: Replace with `rb`
   |
 3 | open("foo", "Ub")
@@ -78,7 +74,6 @@ UP015 [*] Unnecessary mode argument
   |             ^^^
 6 | open("foo", "rt")
 7 | open("f", "r", encoding="UTF-8")
-  |
 help: Remove mode argument
   |
 4 | open("foo", "rUb")
@@ -96,7 +91,6 @@ UP015 [*] Unnecessary mode argument
   |             ^^^^
 7 | open("f", "r", encoding="UTF-8")
 8 | open("f", "wt")
-  |
 help: Remove mode argument
   |
 5 | open("foo", "r")
@@ -114,7 +108,6 @@ UP015 [*] Unnecessary mode argument
   |           ^^^
 8 | open("f", "wt")
 9 | open("f", "tw")
-  |
 help: Remove mode argument
   |
 6 | open("foo", "rt")
@@ -131,7 +124,6 @@ UP015 [*] Unnecessary modes, use `w`
 8 | open("f", "wt")
   |           ^^^^
 9 | open("f", "tw")
-  |
 help: Replace with `w`
   |
 7 | open("f", "r", encoding="UTF-8")
@@ -142,14 +134,12 @@ help: Replace with `w`
 
 UP015 [*] Unnecessary modes, use `w`
   --> UP015.py:9:11
-   |
  7 | open("f", "r", encoding="UTF-8")
  8 | open("f", "wt")
  9 | open("f", "tw")
    |           ^^^^
 10 |
 11 | with open("foo", "U") as f:
-   |
 help: Replace with `w`
    |
 8  | open("f", "wt")
@@ -167,7 +157,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^
 12 |     pass
 13 | with open("foo", "Ur") as f:
-   |
 help: Remove mode argument
    |
 10 |
@@ -185,7 +174,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^^
 14 |     pass
 15 | with open("foo", "Ub") as f:
-   |
 help: Remove mode argument
    |
 12 |     pass
@@ -203,7 +191,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                  ^^^^
 16 |     pass
 17 | with open("foo", "rUb") as f:
-   |
 help: Replace with `rb`
    |
 14 |     pass
@@ -221,7 +208,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                  ^^^^^
 18 |     pass
 19 | with open("foo", "r") as f:
-   |
 help: Replace with `rb`
    |
 16 |     pass
@@ -239,7 +225,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^
 20 |     pass
 21 | with open("foo", "rt") as f:
-   |
 help: Remove mode argument
    |
 18 |     pass
@@ -257,7 +242,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^^
 22 |     pass
 23 | with open("foo", "r", encoding="UTF-8") as f:
-   |
 help: Remove mode argument
    |
 20 |     pass
@@ -275,7 +259,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^
 24 |     pass
 25 | with open("foo", "wt") as f:
-   |
 help: Remove mode argument
    |
 22 |     pass
@@ -292,7 +275,6 @@ UP015 [*] Unnecessary modes, use `w`
 25 | with open("foo", "wt") as f:
    |                  ^^^^
 26 |     pass
-   |
 help: Replace with `w`
    |
 24 |     pass
@@ -309,7 +291,6 @@ UP015 [*] Unnecessary mode argument
 28 | open(f("a", "b", "c"), "U")
    |                        ^^^
 29 | open(f("a", "b", "c"), "Ub")
-   |
 help: Remove mode argument
    |
 27 |
@@ -326,7 +307,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                        ^^^^
 30 |
 31 | with open(f("a", "b", "c"), "U") as f:
-   |
 help: Replace with `rb`
    |
 28 | open(f("a", "b", "c"), "U")
@@ -344,7 +324,6 @@ UP015 [*] Unnecessary mode argument
    |                             ^^^
 32 |     pass
 33 | with open(f("a", "b", "c"), "Ub") as f:
-   |
 help: Remove mode argument
    |
 30 |
@@ -361,7 +340,6 @@ UP015 [*] Unnecessary modes, use `rb`
 33 | with open(f("a", "b", "c"), "Ub") as f:
    |                             ^^^^
 34 |     pass
-   |
 help: Replace with `rb`
    |
 32 |     pass
@@ -379,7 +357,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^
 37 |     pass
 38 | with open("foo", "Ub") as fa, open("bar", "Ub") as fb:
-   |
 help: Remove mode argument
    |
 35 |
@@ -397,7 +374,6 @@ UP015 [*] Unnecessary mode argument
    |                                          ^^^
 37 |     pass
 38 | with open("foo", "Ub") as fa, open("bar", "Ub") as fb:
-   |
 help: Remove mode argument
    |
 35 |
@@ -414,7 +390,6 @@ UP015 [*] Unnecessary modes, use `rb`
 38 | with open("foo", "Ub") as fa, open("bar", "Ub") as fb:
    |                  ^^^^
 39 |     pass
-   |
 help: Replace with `rb`
    |
 37 |     pass
@@ -431,7 +406,6 @@ UP015 [*] Unnecessary modes, use `rb`
 38 | with open("foo", "Ub") as fa, open("bar", "Ub") as fb:
    |                                           ^^^^
 39 |     pass
-   |
 help: Replace with `rb`
    |
 37 |     pass
@@ -449,7 +423,6 @@ UP015 [*] Unnecessary mode argument
    |                  ^^^
 42 | open(name="foo", mode="U")
 43 | open(mode="U", name="foo")
-   |
 help: Remove mode argument
    |
 40 |
@@ -465,7 +438,6 @@ UP015 [*] Unnecessary mode argument
 42 | open(name="foo", mode="U")
    |                       ^^^
 43 | open(mode="U", name="foo")
-   |
 help: Remove mode argument
    |
 41 | open("foo", mode="U")
@@ -483,7 +455,6 @@ UP015 [*] Unnecessary mode argument
    |           ^^^
 44 |
 45 | with open("foo", mode="U") as f:
-   |
 help: Remove mode argument
    |
 42 | open(name="foo", mode="U")
@@ -501,7 +472,6 @@ UP015 [*] Unnecessary mode argument
    |                       ^^^
 46 |     pass
 47 | with open(name="foo", mode="U") as f:
-   |
 help: Remove mode argument
    |
 44 |
@@ -519,7 +489,6 @@ UP015 [*] Unnecessary mode argument
    |                            ^^^
 48 |     pass
 49 | with open(mode="U", name="foo") as f:
-   |
 help: Remove mode argument
    |
 46 |     pass
@@ -536,7 +505,6 @@ UP015 [*] Unnecessary mode argument
 49 | with open(mode="U", name="foo") as f:
    |                ^^^
 50 |     pass
-   |
 help: Remove mode argument
    |
 48 |     pass
@@ -554,7 +522,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                  ^^^^
 53 | open(name="foo", mode="Ub")
 54 | open(mode="Ub", name="foo")
-   |
 help: Replace with `rb`
    |
 51 |
@@ -570,7 +537,6 @@ UP015 [*] Unnecessary modes, use `rb`
 53 | open(name="foo", mode="Ub")
    |                       ^^^^
 54 | open(mode="Ub", name="foo")
-   |
 help: Replace with `rb`
    |
 52 | open("foo", mode="Ub")
@@ -588,7 +554,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |           ^^^^
 55 |
 56 | with open("foo", mode="Ub") as f:
-   |
 help: Replace with `rb`
    |
 53 | open(name="foo", mode="Ub")
@@ -606,7 +571,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                       ^^^^
 57 |     pass
 58 | with open(name="foo", mode="Ub") as f:
-   |
 help: Replace with `rb`
    |
 55 |
@@ -624,7 +588,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                            ^^^^
 59 |     pass
 60 | with open(mode="Ub", name="foo") as f:
-   |
 help: Replace with `rb`
    |
 57 |     pass
@@ -641,7 +604,6 @@ UP015 [*] Unnecessary modes, use `rb`
 60 | with open(mode="Ub", name="foo") as f:
    |                ^^^^
 61 |     pass
-   |
 help: Replace with `rb`
    |
 59 |     pass
@@ -659,7 +621,6 @@ UP015 [*] Unnecessary mode argument
    |                       ^^^
 64 | open(file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None, mode='U')
 65 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='U', newline=None, closefd=True, opener=None)
-   |
 help: Remove mode argument
    |
 62 |
@@ -676,7 +637,6 @@ UP015 [*] Unnecessary mode argument
    |                                                                                                          ^^^
 65 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='U', newline=None, closefd=True, opener=None)
 66 | open(mode='U', file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-   |
 help: Remove mode argument
    |
 63 | open(file="foo", mode='U', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
@@ -693,7 +653,6 @@ UP015 [*] Unnecessary mode argument
 65 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='U', newline=None, closefd=True, opener=None)
    |                                                                 ^^^
 66 | open(mode='U', file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-   |
 help: Remove mode argument
    |
 64 | open(file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None, mode='U')
@@ -711,7 +670,6 @@ UP015 [*] Unnecessary mode argument
    |           ^^^
 67 |
 68 | open(file="foo", mode='Ub', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-   |
 help: Remove mode argument
    |
 65 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='U', newline=None, closefd=True, opener=None)
@@ -729,7 +687,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                       ^^^^
 69 | open(file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None, mode='Ub')
 70 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='Ub', newline=None, closefd=True, opener=None)
-   |
 help: Replace with `rb`
    |
 67 |
@@ -746,7 +703,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |                                                                                                          ^^^^
 70 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='Ub', newline=None, closefd=True, opener=None)
 71 | open(mode='Ub', file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-   |
 help: Replace with `rb`
    |
 68 | open(file="foo", mode='Ub', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
@@ -763,7 +719,6 @@ UP015 [*] Unnecessary modes, use `rb`
 70 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='Ub', newline=None, closefd=True, opener=None)
    |                                                                 ^^^^
 71 | open(mode='Ub', file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-   |
 help: Replace with `rb`
    |
 69 | open(file="foo", buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None, mode='Ub')
@@ -781,7 +736,6 @@ UP015 [*] Unnecessary modes, use `rb`
    |           ^^^^
 72 |
 73 | import aiofiles
-   |
 help: Replace with `rb`
    |
 70 | open(file="foo", buffering=-1, encoding=None, errors=None, mode='Ub', newline=None, closefd=True, opener=None)
@@ -799,7 +753,6 @@ UP015 [*] Unnecessary mode argument
    |                      ^^^
 76 | aiofiles.open("foo", "r")
 77 | aiofiles.open("foo", mode="r")
-   |
 help: Remove mode argument
    |
 74 |
@@ -815,7 +768,6 @@ UP015 [*] Unnecessary mode argument
 76 | aiofiles.open("foo", "r")
    |                      ^^^
 77 | aiofiles.open("foo", mode="r")
-   |
 help: Remove mode argument
    |
 75 | aiofiles.open("foo", "U")
@@ -833,7 +785,6 @@ UP015 [*] Unnecessary mode argument
    |                           ^^^
 78 |
 79 | open("foo", "r+")
-   |
 help: Remove mode argument
    |
 76 | aiofiles.open("foo", "r")

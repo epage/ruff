@@ -8,7 +8,6 @@ PLE1520 [*] `@singledispatchmethod` decorator should not be used on non-method f
   | ^^^^^^^^^^^^^^^^^^^^^
 5 | def convert_position(position):
 6 |     pass
-  |
 help: Replace with `@singledispatch`
   |
   - from functools import singledispatchmethod

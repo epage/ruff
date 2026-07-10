@@ -8,7 +8,6 @@ UP009 [*] UTF-8 encoding declaration is unnecessary
   | ^^^^^^^^^^^^^^^^^^^^^^
 2 | print("the following is not a coding comment")
 3 | # -*- coding: ascii -*-
-  |
 help: Remove unnecessary coding comment
   |
   - # -*- coding: utf8 -*-

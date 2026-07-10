@@ -55,13 +55,11 @@ pub(super) mod test {
           |
         1 | from . import module_a
           |               ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mypackage/module_a.py:1:1
           |
         1 | class Test: ...
           | -
-          |
         ");
     }
 
@@ -81,13 +79,11 @@ pub(super) mod test {
           |
         2 | x = module_a
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mypackage/module_a.py:1:1
           |
         1 | class Test: ...
           | -
-          |
         ");
     }
 
@@ -108,13 +104,11 @@ pub(super) mod test {
           |
         2 | x = module_a
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mypackage/module_a.py:1:1
           |
         1 | class Test: ...
           | -
-          |
         ");
     }
 
@@ -152,13 +146,11 @@ def my_function(): ...
           |
         2 | from mymodule import my_function
           |      ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:1:1
           |
         1 |
           | -
-          |
         ");
     }
 
@@ -194,13 +186,11 @@ def my_function(): ...
           |
         3 | x = mymodule
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:1:1
           |
         1 |
           | -
-          |
         ");
     }
 
@@ -241,13 +231,11 @@ def other_function(): ...
           |
         3 | print(my_function())
           |       ^^^^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
           |
         2 | def my_function():
           |     -----------
-          |
         ");
     }
 
@@ -278,13 +266,11 @@ def bar() -> None:
           |
         3 | bar()
           | ^^^ Clicking here
-          |
         info: Found 1 definition
          --> a/impl.py:2:5
           |
         2 | def bar() -> None:
           |     ---
-          |
         ");
     }
 
@@ -318,13 +304,11 @@ def other_function(): ...
           |
         2 | def my_function(): ...
           |     ^^^^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
           |
         2 | def my_function():
           |     -----------
-          |
         ");
     }
 
@@ -375,7 +359,6 @@ def other_function(): ...
           |
         3 | print(my_function())
           |       ^^^^^^^^^^^ Clicking here
-          |
         info: Found 3 definitions
          --> mymodule.py:2:5
           |
@@ -389,7 +372,6 @@ def other_function(): ...
         7 |
         8 | def my_function():
           |     -----------
-          |
         "#);
     }
 
@@ -431,16 +413,12 @@ class MyOtherClass:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:3:5
-          |
         3 | x = MyClass
           |     ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:7
-          |
         2 | class MyClass:
           |       -------
-          |
         ");
     }
 
@@ -475,16 +453,12 @@ class MyOtherClass:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> mymodule.pyi:2:7
-          |
         2 | class MyClass:
           |       ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:7
-          |
         2 | class MyClass:
           |       -------
-          |
         ");
     }
 
@@ -526,16 +500,12 @@ class MyOtherClass:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:3:5
-          |
         3 | x = MyClass(0)
           |     ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:7
-          |
         2 | class MyClass:
           |       -------
-          |
         ");
     }
 
@@ -581,16 +551,12 @@ class MyOtherClass:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:3
-          |
         4 | x.action()
           |   ^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:5:9
-          |
         5 |     def action(self):
           |         ------
-          |
         ");
     }
 
@@ -635,16 +601,12 @@ class MyOtherClass:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:3:13
-          |
         3 | x = MyClass.action()
           |             ^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:5:9
-          |
         5 |     def action():
           |         ------
-          |
         ");
     }
 
@@ -675,16 +637,12 @@ class MyClass: ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:2:22
-          |
         2 | from mymodule import MyClass
           |                      ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:7
-          |
         2 | class MyClass: ...
           |       -------
-          |
         ");
     }
 
@@ -709,16 +667,12 @@ my_func(my_other_func(ab=5, y=2), 0)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:23
-          |
         5 | my_other_func(my_func(ab=5, y=2), 0)
           |                       ^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:2:13
-          |
         2 | def my_func(ab, y, z = None): ...
           |             --
-          |
         ");
     }
 
@@ -743,16 +697,12 @@ my_func(my_other_func(a<CURSOR>b=5, y=2), 0)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:6:23
-          |
         6 | my_func(my_other_func(ab=5, y=2), 0)
           |                       ^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:19
-          |
         3 | def my_other_func(ab, y): ...
           |                   --
-          |
         ");
     }
 
@@ -777,16 +727,12 @@ my_func(my_other_func(ab=5, y=2), 0)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:23
-          |
         5 | my_other_func(my_func(ab=5, y=2), 0)
           |                       ^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:2:13
-          |
         2 | def my_func(ab, y): ...
           |             --
-          |
         ");
     }
 
@@ -811,16 +757,12 @@ my_func(my_other_func(a<CURSOR>b=5, y=2), 0)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:6:23
-          |
         6 | my_func(my_other_func(ab=5, y=2), 0)
           |                       ^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:19
-          |
         3 | def my_other_func(ab, y): ...
           |                   --
-          |
         ");
     }
 
@@ -859,16 +801,12 @@ def ab(a: str): ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab(1)
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a):
           |     --
-          |
         ");
     }
 
@@ -907,16 +845,12 @@ def ab(a: str): ...
         assert_snapshot!(test.goto_definition(), @r#"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab("hello")
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a):
           |     --
-          |
         "#);
     }
 
@@ -955,16 +889,12 @@ def ab(a: int): ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab(1, 2)
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a, b = None):
           |     --
-          |
         ");
     }
 
@@ -1003,16 +933,12 @@ def ab(a: int): ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab(1)
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a, b = None):
           |     --
-          |
         ");
     }
 
@@ -1054,16 +980,12 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab(1, b=2)
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a, *, b = None, c = None):
           |     --
-          |
         ");
     }
 
@@ -1105,16 +1027,12 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:4:1
-          |
         4 | ab(1, c=2)
           | ^^ Clicking here
-          |
         info: Found 1 definition
          --> mymodule.py:2:5
-          |
         2 | def ab(a, *, b = None, c = None):
           |     --
-          |
         ");
     }
 
@@ -1140,16 +1058,12 @@ a <CURSOR>+ b
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:10:3
-           |
         10 | a + b
            |   ^ Clicking here
-           |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __add__(self, other):
           |         -------
-          |
         ");
     }
 
@@ -1173,16 +1087,12 @@ B() <CURSOR>+ A()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:5
-          |
         8 | B() + A()
           |     ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __radd__(self, other) -> A:
           |         --------
-          |
         ");
     }
 
@@ -1208,16 +1118,12 @@ a<CURSOR>+b
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:10:2
-           |
         10 | a+b
            |  ^ Clicking here
-           |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __add__(self, other):
           |         -------
-          |
         ");
     }
 
@@ -1243,16 +1149,12 @@ a+<CURSOR>b
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:10:3
-           |
         10 | a+b
            |   ^ Clicking here
-           |
         info: Found 1 definition
          --> main.py:8:1
-          |
         8 | b = Test()
           | -
-          |
         ");
     }
 
@@ -1297,16 +1199,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | ~a
           | ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __invert__(self) -> 'Test': ...
           |         ----------
-          |
         ");
     }
 
@@ -1330,16 +1228,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | ~a
           | ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __invert__(self, extra_arg) -> 'Test': ...
           |         ----------
-          |
         ");
     }
 
@@ -1362,16 +1256,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | ~ a
           | ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __invert__(self) -> 'Test': ...
           |         ----------
-          |
         ");
     }
 
@@ -1394,16 +1284,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:2
-          |
         7 | -a
           |  ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:5:1
-          |
         5 | a = Test()
           | -
-          |
         ");
     }
 
@@ -1426,16 +1312,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | not a
           | ^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __bool__(self) -> bool: ...
           |         --------
-          |
         ");
     }
 
@@ -1458,16 +1340,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | not a
           | ^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __len__(self) -> 42: ...
           |         -------
-          |
         ");
     }
 
@@ -1494,16 +1372,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:1
-          |
         8 | not a
           | ^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __bool__(self, extra_arg) -> bool: ...
           |         --------
-          |
         ");
     }
 
@@ -1530,16 +1404,12 @@ a = Test()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:1
-          |
         7 | not a
           | ^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __len__(self, extra_arg) -> 42: ...
           |         -------
-          |
         ");
     }
 
@@ -1557,10 +1427,8 @@ a: float<CURSOR> = 3.14
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:LL:4
-           |
         LL | a: float = 3.14
            |    ^^^^^ Clicking here
-           |
         info: Found 2 definitions
           --> stdlib/builtins.pyi:LL:7
            |
@@ -1568,10 +1436,8 @@ a: float<CURSOR> = 3.14
            |       ---
            |
           ::: stdlib/builtins.pyi:LL:7
-           |
         LL | class float:
            |       -----
-           |
         ");
     }
 
@@ -1589,10 +1455,8 @@ a: complex<CURSOR> = 3.14
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:LL:4
-           |
         LL | a: complex = 3.14
            |    ^^^^^^^ Clicking here
-           |
         info: Found 3 definitions
           --> stdlib/builtins.pyi:LL:7
            |
@@ -1605,10 +1469,8 @@ a: complex<CURSOR> = 3.14
            |       -----
            |
           ::: stdlib/builtins.pyi:LL:7
-           |
         LL | class complex:
            |       -------
-           |
         ");
     }
 
@@ -1647,16 +1509,12 @@ x = MyClass<CURSOR>()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:5
-          |
         5 | x = MyClass()
           |     ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __init__(self, val):
           |         --------
-          |
         ");
     }
 
@@ -1678,16 +1536,12 @@ x = MyClass(<CURSOR>)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:5
-          |
         5 | x = MyClass()
           |     ^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
-          |
         3 |     def __init__(self, val):
           |         --------
-          |
         ");
     }
 
@@ -1735,16 +1589,12 @@ x = MyClass(foo<CURSOR>)
             @"
         info[goto-definition]: Go to definition
          --> main.py:7:13
-          |
         7 | x = MyClass(foo)
           |             ^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:2:1
-          |
         2 | foo = 1
           | ---
-          |
         ",
         );
     }
@@ -1769,19 +1619,15 @@ x = MyClass<CURSOR>()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:7:5
-          |
         7 | x = MyClass()
           |     ^^^^^^^ Clicking here
-          |
         info: Found 2 definitions
          --> main.py:3:9
-          |
         3 |     def __init__(self, val):
           |         --------
         4 |         self.val = val
         5 |     def __new__(self, val):
           |         -------
-          |
         ");
     }
 
@@ -1802,16 +1648,12 @@ x = DynCla<CURSOR>ss()
         assert_snapshot!(test.goto_definition(), @r#"
         info[goto-definition]: Go to definition
          --> main.py:4:5
-          |
         4 | x = DynClass()
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:2:1
-          |
         2 | DynClass = type("DynClass", (), {})
           | --------
-          |
         "#);
     }
 
@@ -1836,16 +1678,12 @@ x = DynClass<CURSOR>()
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:LL:5
-           |
         LL | x = DynClass()
            |     ^^^^^^^^ Clicking here
-           |
         info: Found 1 definition
           --> stdlib/builtins.pyi:LL:9
-           |
         LL |     def __new__(cls) -> Self: ...
            |         -------
-           |
         ");
     }
 
@@ -1884,16 +1722,12 @@ p = Poi<CURSOR>nt(1, 2)
         assert_snapshot!(test.goto_definition(), @r#"
         info[goto-definition]: Go to definition
          --> main.py:6:5
-          |
         6 | p = Point(1, 2)
           |     ^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:4:1
-          |
         4 | Point = namedtuple("Point", ["x", "y"])
           | -----
-          |
         "#);
     }
 
@@ -1922,16 +1756,12 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @r#"
         info[goto-definition]: Go to definition
          --> main.py:6:5
-          |
         6 | p = Point(1, 2)
           |     ^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:4:1
-          |
         4 | Point = namedtuple("Point", ["x", "y"])
           | -----
-          |
         "#);
     }
 
@@ -1956,13 +1786,10 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @r#"
         info[goto-definition]: Go to definition
          --> main.py:6:7
-          |
         6 | print(a)
           |       ^ Clicking here
-          |
         info: Found 3 definitions
          --> main.py:2:1
-          |
         2 | a: str = "test"
           | -
         3 |
@@ -1973,7 +1800,6 @@ p = Point<CURSOR>(1, 2)
         7 |
         8 | a: bool = True
           | -
-          |
         "#);
     }
 
@@ -1997,18 +1823,14 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:6
-          |
         8 | test.a
           |      ^ Clicking here
-          |
         info: Found 2 definitions
          --> main.py:3:5
-          |
         3 |     a: str
           |     -
         4 |     a: str
           |     -
-          |
         ");
     }
 
@@ -2037,21 +1859,17 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:13:6
-           |
         13 | test.a
            |      ^ Clicking here
-           |
         info: Found 2 definitions
          --> main.py:4:9
           |
         4 |     def a(self) -> str:
           |         -
-          |
          ::: main.py:8:9
           |
         8 |     def a(self, value: str) -> None:
           |         -
-          |
         ");
     }
 
@@ -2072,16 +1890,13 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:LL:5
-           |
         LL | Foo.__dictoffset__
            |     ^^^^^^^^^^^^^^ Clicking here
-           |
         info: Found 1 definition
           --> stdlib/builtins.pyi:LL:9
            |
         LL |     def __dictoffset__(self) -> int: ...
            |         --------------
-           |
         ");
     }
 
@@ -2104,16 +1919,13 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:6:5
-          |
         6 | Bar.a
           |     ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:5
           |
         3 |     a: int
           |     -
-          |
         ");
     }
 
@@ -2160,16 +1972,13 @@ p = Point<CURSOR>(1, 2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:LL:6
-           |
         LL | type.__dictoffset__
            |      ^^^^^^^^^^^^^^ Clicking here
-           |
         info: Found 1 definition
           --> stdlib/builtins.pyi:LL:9
            |
         LL |     def __dictoffset__(self) -> int: ...
            |         --------------
-           |
         ");
     }
 
@@ -2191,16 +2000,13 @@ while True:
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:5
-          |
         5 |     variable
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:5
           |
         3 |     variable = 1
           |     --------
-          |
         ");
     }
 
@@ -2224,16 +2030,13 @@ TD(f<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:4
-          |
         8 | TD(f=1)
           |    ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:5:5
           |
         5 |     f: int
           |     -
-          |
         ");
     }
 
@@ -2258,16 +2061,13 @@ td.update(f<CURSOR>=2)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:9:11
-          |
         9 | td.update(f=2)
           |           ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:5:5
           |
         5 |     f: int
           |     -
-          |
         ");
     }
 
@@ -2293,16 +2093,12 @@ func(f<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:10:6
-           |
         10 | func(f=1)
            |      ^ Clicking here
-           |
         info: Found 1 definition
          --> main.py:5:5
-          |
         5 |     f: int
           |     -
-          |
         ");
     }
 
@@ -2326,16 +2122,13 @@ NT(f<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:4
-          |
         8 | NT(f=1)
           |    ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:5:5
           |
         5 |     f: int
           |     -
-          |
         ");
     }
 
@@ -2360,16 +2153,13 @@ DC(f<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:9:4
-          |
         9 | DC(f=1)
           |    ^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:6:5
           |
         6 |     f: int
           |     -
-          |
         ");
     }
 
@@ -2396,16 +2186,12 @@ DC(f<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:11:4
-           |
         11 | DC(f=1)
            |    ^ Clicking here
-           |
         info: Found 1 definition
          --> main.py:9:24
-          |
         9 |     def __init__(self, f: int) -> None: ...
           |                        -
-          |
         ");
     }
 
@@ -2433,16 +2219,13 @@ DC(g<CURSOR>=1)
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
           --> main.py:12:4
-           |
         12 | DC(g=1)
            |    ^ Clicking here
-           |
         info: Found 1 definition
           --> main.py:10:5
            |
         10 |     f: int = Field(alias='g')
            |     -
-           |
         ");
     }
 
@@ -2464,16 +2247,13 @@ for x in range(10):
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:5:5
-          |
         5 |     variable
           |     ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:5
           |
         3 |     variable = 1
           |     --------
-          |
         ");
     }
 
@@ -2498,16 +2278,13 @@ class Bar(Foo):
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:17
-          |
         8 |         super().__init__(x)
           |                 ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
           |
         3 |     def __init__(self, x: int) -> None:
           |         --------
-          |
         ");
     }
 
@@ -2533,16 +2310,13 @@ class GenericFoo[T](Base):
         assert_snapshot!(test.goto_definition(), @"
         info[goto-definition]: Go to definition
          --> main.py:8:17
-          |
         8 |         super().__init__(x)
           |                 ^^^^^^^^ Clicking here
-          |
         info: Found 1 definition
          --> main.py:3:9
           |
         3 |     def __init__(self, x: int) -> None:
           |         --------
-          |
         ");
     }
 

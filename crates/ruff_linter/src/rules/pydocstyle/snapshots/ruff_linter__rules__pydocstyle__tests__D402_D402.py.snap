@@ -9,12 +9,9 @@ D402 First line should not be the function's signature
   |     ^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | def foo():
-  |
 
 D402 First line should not be the function's signature
  --> D402.py:8:5
-  |
 7 | def foo():
 8 |     """"Use this function; foo()."""
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |

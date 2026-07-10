@@ -9,7 +9,6 @@ LOG009 [*] Use of undocumented `logging.WARN` constant
 4 |     logging.WARN  # LOG009
   |     ^^^^^^^^^^^^
 5 |     logging.WARNING  # OK
-  |
 help: Replace `logging.WARN` with `logging.WARNING`
   |
 3 |
@@ -26,7 +25,6 @@ LOG009 [*] Use of undocumented `logging.WARN` constant
 11 |     WARN  # LOG009
    |     ^^^^
 12 |     WARNING  # OK
-   |
 help: Replace `logging.WARN` with `logging.WARNING`
    |
 10 |

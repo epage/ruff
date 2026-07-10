@@ -12,7 +12,6 @@ SIM401 [*] Use `var = a_dict.get(key, "default1")` instead of an `if` block
    | |____________________^
 12 |
 13 |   # SIM401 (pattern-2)
-   |
 help: Replace with `var = a_dict.get(key, "default1")`
   |
 7 | # SIM401 (pattern-1)
@@ -36,7 +35,6 @@ SIM401 [*] Use `var = a_dict.get(key, "default2")` instead of an `if` block
    | |_____________________^
 18 |
 19 |   # OK (default contains effect)
-   |
 help: Replace with `var = a_dict.get(key, "default2")`
    |
 13 | # SIM401 (pattern-2)
@@ -60,7 +58,6 @@ SIM401 [*] Use `var = a_dict.get(keys[idx], "default")` instead of an `if` block
    | |___________________^
 30 |
 31 |   dicts = {"key": a_dict}
-   |
 help: Replace with `var = a_dict.get(keys[idx], "default")`
    |
 25 | # SIM401 (complex expression in key)
@@ -84,7 +81,6 @@ SIM401 [*] Use `vars[idx] = a_dict.get(key, "defaultß9💣2ℝ6789ß9💣2ℝ67
    | |___________________________________________________________________________^
 44 |
 45 |   # SIM401
-   |
 help: Replace with `vars[idx] = a_dict.get(key, "defaultß9💣2ℝ6789ß9💣2ℝ6789ß9💣2ℝ6789ß9💣2ℝ6789ß9💣2ℝ6789")`
    |
 39 | # SIM401 (complex expression in var)
@@ -109,7 +105,6 @@ SIM401 [*] Use `vars[idx] = a_dict.get(key, "default")` instead of an `if` block
    | |_____________________________^
 53 |
 54 |   ###
-   |
 help: Replace with `vars[idx] = a_dict.get(key, "default")`
    |
 48 | else:
@@ -130,7 +125,6 @@ SIM401 [*] Use `a_dict.get(key, "default3")` instead of an `if` block
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 150 |
 151 | # SIM401
-    |
 help: Replace with `a_dict.get(key, "default3")`
     |
 148 | # SIM401
@@ -148,7 +142,6 @@ SIM401 [*] Use `a_dict.get(key, "default-1")` instead of an `if` block
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 153 |
 154 | # OK (default contains effect)
-    |
 help: Replace with `a_dict.get(key, "default-1")`
     |
 151 | # SIM401

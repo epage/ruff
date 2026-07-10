@@ -10,7 +10,6 @@ B014 [*] Exception handler with duplicate exception: `OSError`
    |        ^^^^^^^^^^^^^^^^^^
 18 |     # Duplicate exception types are useless
 19 |     pass
-   |
 help: De-duplicate exceptions
    |
 16 |     pass
@@ -28,7 +27,6 @@ B014 [*] Exception handler with duplicate exception: `MyError`
    |        ^^^^^^^^^^^^^^^^^^
 29 |     # Detect duplicate non-builtin errors
 30 |     pass
-   |
 help: De-duplicate exceptions
    |
 27 |     pass
@@ -46,7 +44,6 @@ B014 [*] Exception handler with duplicate exception: `re.error`
    |        ^^^^^^^^^^^^^^^^^^^^
 50 |     # Duplicate exception types as attributes
 51 |     pass
-   |
 help: De-duplicate exceptions
    |
 48 |     pass
@@ -63,7 +60,6 @@ B014 [*] Exception handler with duplicate exception: `ValueError`
 82 | except (ValueError, ValueError, TypeError):
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 83 |     pass
-   |
 help: De-duplicate exceptions
    |
 81 |     pass
@@ -80,7 +76,6 @@ B014 [*] Exception handler with duplicate exception: `re.error`
 89 | except(re.error, re.error):
    |       ^^^^^^^^^^^^^^^^^^^^
 90 |     p
-   |
 help: De-duplicate exceptions
    |
 88 |     pas
@@ -103,7 +98,6 @@ B014 [*] Exception handler with duplicate exception: `ValueError`
 100 | | ):
     | |_^
 101 |       pass
-    |
 help: De-duplicate exceptions
    |
 94 |     pass

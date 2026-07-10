@@ -9,7 +9,6 @@ AIR001 Task variable name should match the `task_id`: "my_task"
    | ^^^^^^^^^^^^^^
 12 |
 13 | my_task = AirbyteTriggerSyncOperator(task_id="my_task", callable=my_callable)
-   |
 
 AIR001 Task variable name should match the `task_id`: "my_task"
   --> AIR001.py:14:1
@@ -19,7 +18,6 @@ AIR001 Task variable name should match the `task_id`: "my_task"
    | ^^^^^^^^^^^^^^
 15 |
 16 | my_task = AppflowFlowRunOperator(task_id="my_task", callable=my_callable)
-   |
 
 AIR001 Task variable name should match the `task_id`: "my_task"
   --> AIR001.py:17:1
@@ -29,4 +27,3 @@ AIR001 Task variable name should match the `task_id`: "my_task"
    | ^^^^^^^^^^^^^^
 18 |
 19 | # Consider only from the `airflow.operators` (or providers operators) module
-   |

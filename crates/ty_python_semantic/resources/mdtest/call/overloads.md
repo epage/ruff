@@ -995,7 +995,6 @@ def _(a: int | None):
 ```snapshot
 error[no-matching-overload]: No overload of function `f` matches arguments
   --> src/mdtest_snippet.py:8:9
-   |
  8 | /         f(
  9 | |             A(),
 10 | |             a1=a,
@@ -1030,15 +1029,12 @@ error[no-matching-overload]: No overload of function `f` matches arguments
 39 | |             a30=a,
 40 | |         )
    | |_________^
-   |
 info: Limit of argument type expansion reached at argument 9
 info: First overload defined here
  --> src/overloaded.pyi:7:1
-  |
 7 | / @overload
 8 | | def f() -> None: ...
   | |____________________^ First overload defined here
-  |
 info: Possible overloads for function `f`:
 info:   () -> None
 info:   (**kwargs: int) -> C

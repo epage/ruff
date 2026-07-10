@@ -8,4 +8,3 @@ D105 Missing docstring in magic method
 64 |     def __str__(self=None):
    |         ^^^^^^^
 65 |         pass
-   |

@@ -9,7 +9,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
   |   ^^^^^
 3 | d[(
 4 |     1,
-  |
 help: Remove parentheses
   |
 1 | d = {(1,2):"a",(3,4):"b",(5,6,7):"c",(8,):"d"}
@@ -31,7 +30,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
   | |_^
 7 |   d[
 8 |       1,
-  |
 help: Remove parentheses
   |
 2 | d[(1,2)]
@@ -53,7 +51,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
    |   ^^^^^
 12 | d[(5,6,7)]
 13 | d[(8,)]
-   |
 help: Remove parentheses
    |
 10 | ]
@@ -71,7 +68,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
    |   ^^^^^^^
 13 | d[(8,)]
 14 | d[tuple(1,2)]
-   |
 help: Remove parentheses
    |
 11 | d[(2,4)]
@@ -89,7 +85,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
    |   ^^^^
 14 | d[tuple(1,2)]
 15 | d[tuple(8)]
-   |
 help: Remove parentheses
    |
 12 | d[(5,6,7)]
@@ -106,7 +101,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
 20 | e[((1,2),(3,4))]
    |   ^^^^^^^^^^^^^
 21 | e[(1,2),(3,4)]
-   |
 help: Remove parentheses
    |
 19 | e = {((1,2),(3,4)):"a"}
@@ -123,7 +117,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
 24 |     (window_position, feature_name)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | ] = self._extract_raw_features_from_token
-   |
 help: Remove parentheses
    |
 23 | token_features[
@@ -140,7 +133,6 @@ RUF031 [*] Avoid parentheses for tuples in subscripts
    |   ^^^^
 29 | d[()] # empty tuples should be ignored
 30 | d[:,] # slices in the subscript lead to syntax error if parens are added
-   |
 help: Remove parentheses
    |
 27 | d[1,]

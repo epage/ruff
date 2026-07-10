@@ -9,7 +9,6 @@ PLW3301 [*] Nested `min` calls can be flattened
   | ^^^^^^^^^^^^^^^^^
 3 | min(1, min(2, min(3, 4)))
 4 | min(1, foo("a", "b"), min(3, 4))
-  |
 help: Flatten nested `min` calls
   |
 1 | min(1, 2, 3)
@@ -28,7 +27,6 @@ PLW3301 [*] Nested `min` calls can be flattened
   | ^^^^^^^^^^^^^^^^^^^^^^^^^
 4 | min(1, foo("a", "b"), min(3, 4))
 5 | min(1, max(2, 3))
-  |
 help: Flatten nested `min` calls
   |
 2 | min(1, min(2, 3))
@@ -47,7 +45,6 @@ PLW3301 [*] Nested `min` calls can be flattened
   |        ^^^^^^^^^^^^^^^^^
 4 | min(1, foo("a", "b"), min(3, 4))
 5 | min(1, max(2, 3))
-  |
 help: Flatten nested `min` calls
   |
 2 | min(1, min(2, 3))
@@ -66,7 +63,6 @@ PLW3301 [*] Nested `min` calls can be flattened
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | min(1, max(2, 3))
 6 | max(1, 2, 3)
-  |
 help: Flatten nested `min` calls
   |
 3 | min(1, min(2, min(3, 4)))
@@ -85,7 +81,6 @@ PLW3301 [*] Nested `max` calls can be flattened
   | ^^^^^^^^^^^^^^^^^
 8 | max(1, max(2, max(3, 4)))
 9 | max(1, foo("a", "b"), max(3, 4))
-  |
 help: Flatten nested `max` calls
   |
 6 | max(1, 2, 3)
@@ -103,7 +98,6 @@ PLW3301 [*] Nested `max` calls can be flattened
 8 | max(1, max(2, max(3, 4)))
   | ^^^^^^^^^^^^^^^^^^^^^^^^^
 9 | max(1, foo("a", "b"), max(3, 4))
-  |
 help: Flatten nested `max` calls
   |
 7 | max(1, max(2, 3))
@@ -121,7 +115,6 @@ PLW3301 [*] Nested `max` calls can be flattened
 8 | max(1, max(2, max(3, 4)))
   |        ^^^^^^^^^^^^^^^^^
 9 | max(1, foo("a", "b"), max(3, 4))
-  |
 help: Flatten nested `max` calls
   |
 7 | max(1, max(2, 3))
@@ -133,14 +126,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLW3301 [*] Nested `max` calls can be flattened
   --> nested_min_max.py:9:1
-   |
  7 | max(1, max(2, 3))
  8 | max(1, max(2, max(3, 4)))
  9 | max(1, foo("a", "b"), max(3, 4))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 |
 11 | # These should not trigger; we do not flag cases with keyword args.
-   |
 help: Flatten nested `max` calls
    |
 8  | max(1, max(2, max(3, 4)))
@@ -159,7 +150,6 @@ PLW3301 [*] Nested `min` calls can be flattened
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |
 17 | # The fix is already unsafe, so deleting comments is okay.
-   |
 help: Flatten nested `min` calls
    |
 14 | # This will still trigger, to merge the calls without keyword args.
@@ -180,7 +170,6 @@ PLW3301 [*] Nested `min` calls can be flattened
    | |_^
 22 |
 23 |   # Handle iterable expressions.
-   |
 help: Flatten nested `min` calls
    |
 17 | # The fix is already unsafe, so deleting comments is okay.
@@ -201,7 +190,6 @@ PLW3301 [*] Nested `min` calls can be flattened
    | ^^^^^^^^^^^^^^
 25 | min(1, min(i for i in range(10)))
 26 | max(1, max(a))
-   |
 help: Flatten nested `min` calls
    |
 23 | # Handle iterable expressions.
@@ -220,9 +208,7 @@ PLW3301 [*] Nested `min` calls can be flattened
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 | max(1, max(a))
 27 | max(1, max(i for i in range(10)))
-   |
 help: Flatten nested `min` calls
-   |
 24 | min(1, min(a))
    - min(1, min(i for i in range(10)))
 25 + min(1, *(i for i in range(10)))
@@ -238,7 +224,6 @@ PLW3301 [*] Nested `max` calls can be flattened
 26 | max(1, max(a))
    | ^^^^^^^^^^^^^^
 27 | max(1, max(i for i in range(10)))
-   |
 help: Flatten nested `max` calls
    |
 25 | min(1, min(i for i in range(10)))
@@ -257,7 +242,6 @@ PLW3301 [*] Nested `max` calls can be flattened
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 |
 29 | tuples_list = [
-   |
 help: Flatten nested `max` calls
    |
 26 | max(1, max(a))
@@ -275,7 +259,6 @@ PLW3301 [*] Nested `max` calls can be flattened
    | ^^^^^^^^^^^^^^^
 42 |
 43 | import builtins
-   |
 help: Flatten nested `max` calls
    |
 40 | # Starred argument should be copied as it is.
@@ -291,7 +274,6 @@ PLW3301 [*] Nested `min` calls can be flattened
 43 | import builtins
 44 | builtins.min(1, min(2, 3))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Flatten nested `min` calls
    |
 43 | import builtins
@@ -313,7 +295,6 @@ PLW3301 [*] Nested `max` calls can be flattened
    | |_^
 52 |
 53 |   # OK
-   |
 help: Flatten nested `max` calls
    |
 47 | # PLW3301

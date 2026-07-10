@@ -9,16 +9,13 @@ AIR301 `conf` is removed in Airflow 3.0
 22 |     print("access invalid key", context["conf"])
    |                                         ^^^^^^
 23 |     print("access invalid key", context.get("conf"))
-   |
 
 AIR301 `conf` is removed in Airflow 3.0
   --> AIR301_context.py:23:45
-   |
 21 | def access_invalid_key_task_out_of_dag(**context):
 22 |     print("access invalid key", context["conf"])
 23 |     print("access invalid key", context.get("conf"))
    |                                             ^^^^^^
-   |
 
 AIR301 `execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:28:5
@@ -29,18 +26,15 @@ AIR301 `execution_date` is removed in Airflow 3.0
    |     ^^^^^^^^^^^^^^
 29 | ):
 30 |     print("execution date", execution_date)
-   |
 
 AIR301 `tomorrow_ds` is removed in Airflow 3.0
   --> AIR301_context.py:28:21
-   |
 26 | @task
 27 | def access_invalid_argument_task_out_of_dag(
 28 |     execution_date, tomorrow_ds, logical_date, **context
    |                     ^^^^^^^^^^^
 29 | ):
 30 |     print("execution date", execution_date)
-   |
 
 AIR301 `conf` is removed in Airflow 3.0
   --> AIR301_context.py:31:45
@@ -49,7 +43,6 @@ AIR301 `conf` is removed in Airflow 3.0
 30 |     print("execution date", execution_date)
 31 |     print("access invalid key", context.get("conf"))
    |                                             ^^^^^^
-   |
 
 AIR301 `execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:40:30
@@ -59,7 +52,6 @@ AIR301 `execution_date` is removed in Airflow 3.0
    |                              ^^^^^^^^^^^^^^^^
 41 |     next_ds = context["next_ds"]
 42 |     next_ds_nodash = context["next_ds_nodash"]
-   |
 
 AIR301 `next_ds` is removed in Airflow 3.0
   --> AIR301_context.py:41:23
@@ -70,7 +62,6 @@ AIR301 `next_ds` is removed in Airflow 3.0
    |                       ^^^^^^^^^
 42 |     next_ds_nodash = context["next_ds_nodash"]
 43 |     next_execution_date = context["next_execution_date"]
-   |
 
 AIR301 `next_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:42:30
@@ -81,7 +72,6 @@ AIR301 `next_ds_nodash` is removed in Airflow 3.0
    |                              ^^^^^^^^^^^^^^^^
 43 |     next_execution_date = context["next_execution_date"]
 44 |     prev_ds = context["prev_ds"]
-   |
 
 AIR301 `next_execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:43:35
@@ -92,7 +82,6 @@ AIR301 `next_execution_date` is removed in Airflow 3.0
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 44 |     prev_ds = context["prev_ds"]
 45 |     prev_ds_nodash = context["prev_ds_nodash"]
-   |
 
 AIR301 `prev_ds` is removed in Airflow 3.0
   --> AIR301_context.py:44:23
@@ -103,18 +92,15 @@ AIR301 `prev_ds` is removed in Airflow 3.0
    |                       ^^^^^^^^^
 45 |     prev_ds_nodash = context["prev_ds_nodash"]
 46 |     prev_execution_date = context["prev_execution_date"]
-   |
 
 AIR301 `prev_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:45:30
-   |
 43 |     next_execution_date = context["next_execution_date"]
 44 |     prev_ds = context["prev_ds"]
 45 |     prev_ds_nodash = context["prev_ds_nodash"]
    |                              ^^^^^^^^^^^^^^^^
 46 |     prev_execution_date = context["prev_execution_date"]
 47 |     prev_execution_date_success = context["prev_execution_date_success"]
-   |
 
 AIR301 `prev_execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:46:35
@@ -125,7 +111,6 @@ AIR301 `prev_execution_date` is removed in Airflow 3.0
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 47 |     prev_execution_date_success = context["prev_execution_date_success"]
 48 |     tomorrow_ds = context["tomorrow_ds"]
-   |
 
 AIR301 `prev_execution_date_success` is removed in Airflow 3.0
   --> AIR301_context.py:47:43
@@ -136,7 +121,6 @@ AIR301 `prev_execution_date_success` is removed in Airflow 3.0
    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 48 |     tomorrow_ds = context["tomorrow_ds"]
 49 |     yesterday_ds = context["yesterday_ds"]
-   |
 
 AIR301 `tomorrow_ds` is removed in Airflow 3.0
   --> AIR301_context.py:48:27
@@ -147,7 +131,6 @@ AIR301 `tomorrow_ds` is removed in Airflow 3.0
    |                           ^^^^^^^^^^^^^
 49 |     yesterday_ds = context["yesterday_ds"]
 50 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
-   |
 
 AIR301 `yesterday_ds` is removed in Airflow 3.0
   --> AIR301_context.py:49:28
@@ -158,7 +141,6 @@ AIR301 `yesterday_ds` is removed in Airflow 3.0
    |                            ^^^^^^^^^^^^^^
 50 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
 51 |     events = context["triggering_dataset_events"]
-   |
 
 AIR301 `yesterday_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:50:35
@@ -168,7 +150,6 @@ AIR301 `yesterday_ds_nodash` is removed in Airflow 3.0
 50 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 51 |     events = context["triggering_dataset_events"]
-   |
 
 AIR301 [*] `triggering_dataset_events` is removed in Airflow 3.0
   --> AIR301_context.py:51:22
@@ -177,25 +158,21 @@ AIR301 [*] `triggering_dataset_events` is removed in Airflow 3.0
 50 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
 51 |     events = context["triggering_dataset_events"]
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use `triggering_asset_events` instead
    |
 50 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
    -     events = context["triggering_dataset_events"]
 51 +     events = context["triggering_asset_events"]
 52 |
-   |
 
 AIR301 `execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:57:30
-   |
 55 | def print_config_with_get_current_context():
 56 |     context = get_current_context()
 57 |     execution_date = context["execution_date"]
    |                              ^^^^^^^^^^^^^^^^
 58 |     next_ds = context["next_ds"]
 59 |     next_ds_nodash = context["next_ds_nodash"]
-   |
 
 AIR301 `next_ds` is removed in Airflow 3.0
   --> AIR301_context.py:58:23
@@ -206,18 +183,15 @@ AIR301 `next_ds` is removed in Airflow 3.0
    |                       ^^^^^^^^^
 59 |     next_ds_nodash = context["next_ds_nodash"]
 60 |     next_execution_date = context["next_execution_date"]
-   |
 
 AIR301 `next_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:59:30
-   |
 57 |     execution_date = context["execution_date"]
 58 |     next_ds = context["next_ds"]
 59 |     next_ds_nodash = context["next_ds_nodash"]
    |                              ^^^^^^^^^^^^^^^^
 60 |     next_execution_date = context["next_execution_date"]
 61 |     prev_ds = context["prev_ds"]
-   |
 
 AIR301 `next_execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:60:35
@@ -228,7 +202,6 @@ AIR301 `next_execution_date` is removed in Airflow 3.0
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 61 |     prev_ds = context["prev_ds"]
 62 |     prev_ds_nodash = context["prev_ds_nodash"]
-   |
 
 AIR301 `prev_ds` is removed in Airflow 3.0
   --> AIR301_context.py:61:23
@@ -239,7 +212,6 @@ AIR301 `prev_ds` is removed in Airflow 3.0
    |                       ^^^^^^^^^
 62 |     prev_ds_nodash = context["prev_ds_nodash"]
 63 |     prev_execution_date = context["prev_execution_date"]
-   |
 
 AIR301 `prev_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:62:30
@@ -250,7 +222,6 @@ AIR301 `prev_ds_nodash` is removed in Airflow 3.0
    |                              ^^^^^^^^^^^^^^^^
 63 |     prev_execution_date = context["prev_execution_date"]
 64 |     prev_execution_date_success = context["prev_execution_date_success"]
-   |
 
 AIR301 `prev_execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:63:35
@@ -261,7 +232,6 @@ AIR301 `prev_execution_date` is removed in Airflow 3.0
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 64 |     prev_execution_date_success = context["prev_execution_date_success"]
 65 |     tomorrow_ds = context["tomorrow_ds"]
-   |
 
 AIR301 `prev_execution_date_success` is removed in Airflow 3.0
   --> AIR301_context.py:64:43
@@ -272,7 +242,6 @@ AIR301 `prev_execution_date_success` is removed in Airflow 3.0
    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 65 |     tomorrow_ds = context["tomorrow_ds"]
 66 |     yesterday_ds = context["yesterday_ds"]
-   |
 
 AIR301 `tomorrow_ds` is removed in Airflow 3.0
   --> AIR301_context.py:65:27
@@ -283,7 +252,6 @@ AIR301 `tomorrow_ds` is removed in Airflow 3.0
    |                           ^^^^^^^^^^^^^
 66 |     yesterday_ds = context["yesterday_ds"]
 67 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
-   |
 
 AIR301 `yesterday_ds` is removed in Airflow 3.0
   --> AIR301_context.py:66:28
@@ -294,7 +262,6 @@ AIR301 `yesterday_ds` is removed in Airflow 3.0
    |                            ^^^^^^^^^^^^^^
 67 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
 68 |     events = context["triggering_dataset_events"]
-   |
 
 AIR301 `yesterday_ds_nodash` is removed in Airflow 3.0
   --> AIR301_context.py:67:35
@@ -304,7 +271,6 @@ AIR301 `yesterday_ds_nodash` is removed in Airflow 3.0
 67 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
    |                                   ^^^^^^^^^^^^^^^^^^^^^
 68 |     events = context["triggering_dataset_events"]
-   |
 
 AIR301 [*] `triggering_dataset_events` is removed in Airflow 3.0
   --> AIR301_context.py:68:22
@@ -313,7 +279,6 @@ AIR301 [*] `triggering_dataset_events` is removed in Airflow 3.0
 67 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
 68 |     events = context["triggering_dataset_events"]
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use `triggering_asset_events` instead
    |
 67 |     yesterday_ds_nodash = context["yesterday_ds_nodash"]
@@ -331,7 +296,6 @@ AIR301 `tomorrow_ds` is removed in Airflow 3.0
    |                      ^^^^^^^^^^^^^
 76 |     c = get_current_context()
 77 |     c.get("execution_date")
-   |
 
 AIR301 `execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:77:11
@@ -340,7 +304,6 @@ AIR301 `execution_date` is removed in Airflow 3.0
 76 |     c = get_current_context()
 77 |     c.get("execution_date")
    |           ^^^^^^^^^^^^^^^^
-   |
 
 AIR301 `conf` is removed in Airflow 3.0
   --> AIR301_context.py:89:49
@@ -351,7 +314,6 @@ AIR301 `conf` is removed in Airflow 3.0
    |                                                 ^^^^^^
 90 |
 91 |     @task()
-   |
 
 AIR301 `execution_date` is removed in Airflow 3.0
   --> AIR301_context.py:92:42
@@ -360,35 +322,28 @@ AIR301 `execution_date` is removed in Airflow 3.0
 92 |     def access_invalid_key_explicit_task(execution_date):
    |                                          ^^^^^^^^^^^^^^
 93 |         print(execution_date)
-   |
 
 AIR301 [*] `schedule_interval` is removed in Airflow 3.0
    --> AIR301_context.py:113:5
-    |
 111 | with DAG(
 112 |     dag_id="example_dag",
 113 |     schedule_interval="@daily",
     |     ^^^^^^^^^^^^^^^^^
 114 |     start_date=datetime(2023, 1, 1),
 115 |     template_searchpath=["/templates"],
-    |
 help: Use `schedule` instead
-    |
 112 |     dag_id="example_dag",
     -     schedule_interval="@daily",
 113 +     schedule="@daily",
 114 |     start_date=datetime(2023, 1, 1),
-    |
 
 AIR301 `next_ds` is removed in Airflow 3.0
    --> AIR301_context.py:137:23
-    |
 136 | class CustomOperator(BaseOperator):
 137 |     def execute(self, next_ds, context):
     |                       ^^^^^^^
 138 |         execution_date = context["execution_date"]
 139 |         next_ds = context["next_ds"]
-    |
 
 AIR301 `external_trigger` is removed in Airflow 3.0
    --> AIR301_context.py:162:19
@@ -399,7 +354,6 @@ AIR301 `external_trigger` is removed in Airflow 3.0
     |                   ^^^^^^^^^^^^^^^^
 163 |     print(dag_run.run_type)
 164 |     print(dag_run.dag_id)
-    |
 help: `external_trigger` is removed; it cannot be accessed from `context["dag_run"]`
 
 AIR301 `external_trigger` is removed in Airflow 3.0
@@ -411,7 +365,6 @@ AIR301 `external_trigger` is removed in Airflow 3.0
     |                   ^^^^^^^^^^^^^^^^
 170 |
 171 | @task
-    |
 help: `external_trigger` is removed; it cannot be accessed from `context["dag_run"]`
 
 AIR301 `external_trigger` is removed in Airflow 3.0
@@ -423,7 +376,6 @@ AIR301 `external_trigger` is removed in Airflow 3.0
     |                              ^^^^^^^^^^^^^^^^
 174 |
 175 | @task
-    |
 help: `external_trigger` is removed; it cannot be accessed from `context["dag_run"]`
 
 AIR301 `external_trigger` is removed in Airflow 3.0
@@ -435,7 +387,6 @@ AIR301 `external_trigger` is removed in Airflow 3.0
     |                                  ^^^^^^^^^^^^^^^^
 178 |
 179 | @task
-    |
 help: `external_trigger` is removed; it cannot be accessed from `context["dag_run"]`
 
 AIR301 `external_trigger` is removed in Airflow 3.0
@@ -447,7 +398,6 @@ AIR301 `external_trigger` is removed in Airflow 3.0
     |                   ^^^^^^^^^^^^^^^^
 184 |
 185 | # inlet_events should be accessed through Asset/Dataset object
-    |
 help: `external_trigger` is removed; it cannot be accessed from `context["dag_run"]`
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -459,7 +409,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
     |                                   ^^^^^^^^^^^^^^^
 189 |     print(context.get("inlet_events")["this://is-url"])
 190 |     print(context["inlet_events"].get("this://is-url"))
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -471,7 +420,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
     |                                       ^^^^^^^^^^^^^^^
 190 |     print(context["inlet_events"].get("this://is-url"))
 191 |     print(context.get("inlet_events").get("this://is-url"))
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -482,7 +430,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
 190 |     print(context["inlet_events"].get("this://is-url"))
     |                                       ^^^^^^^^^^^^^^^
 191 |     print(context.get("inlet_events").get("this://is-url"))
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -492,7 +439,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
 190 |     print(context["inlet_events"].get("this://is-url"))
 191 |     print(context.get("inlet_events").get("this://is-url"))
     |                                           ^^^^^^^^^^^^^^^
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -503,7 +449,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
 197 |     print(inlet_events["this://is-url"])
     |                        ^^^^^^^^^^^^^^^
 198 |     print(inlet_events.get("this://is-url"))
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
@@ -513,7 +458,6 @@ AIR301 `inlet_events["<uri>"]` is removed in Airflow 3.0
 197 |     print(inlet_events["this://is-url"])
 198 |     print(inlet_events.get("this://is-url"))
     |                            ^^^^^^^^^^^^^^^
-    |
 help: Accessing `inlet_events` via a string key is deprecated; use `context["inlet_events"][Asset(uri="this://is-url")]` instead of `context["inlet_events"]["this://is-url"]`.
 
 AIR301 `execution_date` is removed in Airflow 3.0
@@ -524,7 +468,6 @@ AIR301 `execution_date` is removed in Airflow 3.0
 216 |     execution_date = context["execution_date"]
     |                              ^^^^^^^^^^^^^^^^
 217 |     next_ds = context["next_ds"]
-    |
 
 AIR301 `next_ds` is removed in Airflow 3.0
    --> AIR301_context.py:217:23
@@ -533,7 +476,6 @@ AIR301 `next_ds` is removed in Airflow 3.0
 216 |     execution_date = context["execution_date"]
 217 |     next_ds = context["next_ds"]
     |                       ^^^^^^^^^
-    |
 
 AIR301 `execution_date` is removed in Airflow 3.0
    --> AIR301_context.py:228:30
@@ -543,7 +485,6 @@ AIR301 `execution_date` is removed in Airflow 3.0
 228 |     execution_date = context["execution_date"]
     |                              ^^^^^^^^^^^^^^^^
 229 |     return "some_task"
-    |
 
 AIR301 `next_ds` is removed in Airflow 3.0
    --> AIR301_context.py:234:23
@@ -553,7 +494,6 @@ AIR301 `next_ds` is removed in Airflow 3.0
 234 |     next_ds = context["next_ds"]
     |                       ^^^^^^^^^
 235 |     return True
-    |
 
 AIR301 `tomorrow_ds` is removed in Airflow 3.0
    --> AIR301_context.py:240:27
@@ -563,4 +503,3 @@ AIR301 `tomorrow_ds` is removed in Airflow 3.0
 240 |     tomorrow_ds = context["tomorrow_ds"]
     |                           ^^^^^^^^^^^^^
 241 |     return "some_task"
-    |

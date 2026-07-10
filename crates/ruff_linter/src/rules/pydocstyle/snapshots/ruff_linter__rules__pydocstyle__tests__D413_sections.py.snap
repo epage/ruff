@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/pydocstyle/mod.rs
 ---
 D413 [*] Missing blank line after last section ("Returns")
   --> sections.py:67:5
-   |
 65 |     """Toggle the gizmo.
 66 |
 67 |     Returns"""
    |     ^^^^^^^
-   |
 help: Add blank line after "Returns"
    |
 66 |
@@ -28,7 +26,6 @@ D413 [*] Missing blank line after last section ("Returns")
     |     ^^^^^^^
 123 |     -------
 124 |     A value of some sort.
-    |
 help: Add blank line after "Returns"
     |
 124 |     A value of some sort.
@@ -45,7 +42,6 @@ D413 [*] Missing blank line after last section ("Returns")
     |     ^^^^^^^
 173 |         -------
 174 |     """
-    |
 help: Add blank line after "Returns"
     |
 173 |         -------
@@ -62,7 +58,6 @@ D413 [*] Missing blank line after last section ("Parameters")
     |     ^^^^^^^^^^
 522 |     ==========
 523 |     """
-    |
 help: Add blank line after "Parameters"
     |
 522 |     ==========
@@ -79,7 +74,6 @@ D413 [*] Missing blank line after last section ("Parameters")
     |     ^^^^^^^^^^
 530 |     ===========
 531 |     """
-    |
 help: Add blank line after "Parameters"
     |
 530 |     ===========
@@ -95,7 +89,6 @@ D413 [*] Missing blank line after last section ("Args")
 550 |     Args:
     |     ^^^^
 551 |         Here's a note.
-    |
 help: Add blank line after "Args"
     |
 553 |         returns:
@@ -111,7 +104,6 @@ D413 [*] Missing blank line after last section ("Returns")
 563 |         Returns:
     |         ^^^^^^^
 564 |     """
-    |
 help: Add blank line after "Returns"
     |
 563 |         Returns:
@@ -128,7 +120,6 @@ D413 [*] Missing blank line after last section ("returns")
     |     ^^^^^^^
 574 |         Here's another note.
 575 |     """
-    |
 help: Add blank line after "returns"
     |
 574 |         Here's another note.
@@ -145,7 +136,6 @@ D413 [*] Missing blank line after last section ("Parameters")
     |     ^^^^^^^^^^
 602 |     ----------
 603 |     parameters:
-    |
 help: Add blank line after "Parameters"
     |
 606 |         Some value

@@ -9,7 +9,6 @@ PLW0711 Exception to catch is the result of a binary `or` operation
 3 | except ZeroDivisionError or ValueError as e:  # [binary-op-exception]
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |     pass
-  |
 
 PLW0711 Exception to catch is the result of a binary `and` operation
  --> binary_op_exception.py:8:8
@@ -19,4 +18,3 @@ PLW0711 Exception to catch is the result of a binary `and` operation
 8 | except ZeroDivisionError and ValueError as e:  # [binary-op-exception]
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 9 |     print(e)
-  |

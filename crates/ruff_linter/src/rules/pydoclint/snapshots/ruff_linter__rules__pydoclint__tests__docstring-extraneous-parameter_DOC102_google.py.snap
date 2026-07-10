@@ -8,7 +8,6 @@ DOC102 Documented parameter `a` is not in the function's signature
 7 |         a (int): The first number to add.
   |         ^
 8 |         b (int): The second number to add.
-  |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `multiplier` is not in the function's signature
@@ -20,7 +19,6 @@ DOC102 Documented parameter `multiplier` is not in the function's signature
    |         ^^^^^^^^^^
 24 |
 25 |     Returns:
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `numbers` is not in the function's signature
@@ -31,7 +29,6 @@ DOC102 Documented parameter `numbers` is not in the function's signature
    |         ^^^^^^^
 38 |
 39 |     Returns:
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `name` is not in the function's signature
@@ -42,7 +39,6 @@ DOC102 Documented parameter `name` is not in the function's signature
    |         ^^^^
 52 |         age (int): The age of the user.
 53 |         email (str): The user's email address.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `age` is not in the function's signature
@@ -54,7 +50,6 @@ DOC102 Documented parameter `age` is not in the function's signature
    |         ^^^
 53 |         email (str): The user's email address.
 54 |         location (str): The location of the user.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `email` is not in the function's signature
@@ -65,7 +60,6 @@ DOC102 Documented parameter `email` is not in the function's signature
 53 |         email (str): The user's email address.
    |         ^^^^^
 54 |         location (str): The location of the user.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `tax_rate` is not in the function's signature
@@ -76,7 +70,6 @@ DOC102 Documented parameter `tax_rate` is not in the function's signature
 74 |         tax_rate (float): The tax rate to apply.
    |         ^^^^^^^^
 75 |         discount (float): The discount to subtract from the total.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `to_address` is not in the function's signature
@@ -88,7 +81,6 @@ DOC102 Documented parameter `to_address` is not in the function's signature
    |         ^^^^^^^^^^
 95 |         cc_address (str, optional): The email address for CC. Defaults to None.
 96 |         bcc_address (str, optional): The email address for BCC. Defaults to None.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `cc_address` is not in the function's signature
@@ -99,7 +91,6 @@ DOC102 Documented parameter `cc_address` is not in the function's signature
 95 |         cc_address (str, optional): The email address for CC. Defaults to None.
    |         ^^^^^^^^^^
 96 |         bcc_address (str, optional): The email address for BCC. Defaults to None.
-   |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `items` is not in the function's signature
@@ -110,7 +101,6 @@ DOC102 Documented parameter `items` is not in the function's signature
 126 |         *items (str): Variable length argument list of items in the order.
     |         ^^^^^^
 127 |         **details (dict): Additional details such as shipping method and address.
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `details` is not in the function's signature
@@ -122,7 +112,6 @@ DOC102 Documented parameter `details` is not in the function's signature
     |         ^^^^^^^^^
 128 |
 129 |     Returns:
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `value` is not in the function's signature
@@ -133,7 +122,6 @@ DOC102 Documented parameter `value` is not in the function's signature
     |             ^^^^^
 151 |         """
 152 |         self.value = value
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `number` is not in the function's signature
@@ -144,7 +132,6 @@ DOC102 Documented parameter `number` is not in the function's signature
     |             ^^^^^^
 161 |
 162 |         Returns:
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `value_str` is not in the function's signature
@@ -155,7 +142,6 @@ DOC102 Documented parameter `value_str` is not in the function's signature
     |             ^^^^^^^^^
 176 |
 177 |         Returns:
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `number` is not in the function's signature
@@ -166,7 +152,6 @@ DOC102 Documented parameter `number` is not in the function's signature
     |             ^^^^^^
 191 |
 192 |         Returns:
-    |
 help: Remove the extraneous parameter from the docstring
 
 DOC102 Documented parameter `a` is not in the function's signature
@@ -176,5 +161,4 @@ DOC102 Documented parameter `a` is not in the function's signature
 258 |         a: The first number to add.
     |         ^
 259 |         b: The second number to add.
-    |
 help: Remove the extraneous parameter from the docstring

@@ -18,7 +18,6 @@ FAST003 [*] Parameter `thing_id` appears in route path, but not in `single` sign
     |                   ^^^^^^^^^^
 159 | async def single(other: Annotated[str, Depends(something_else)]): ...
 160 | @app.get("/things/{thing_id}")
-    |
 help: Add `thing_id` to function signature
     |
 158 | @app.get("/things/{thing_id}")
@@ -37,7 +36,6 @@ FAST003 [*] Parameter `id` appears in route path, but not in `get_id_pydantic_fu
     |            ^^^^
 198 | async def get_id_pydantic_full(
 199 |     params: Annotated[PydanticParams, Depends(PydanticParams)],
-    |
 help: Add `id` to function signature
     |
 198 | async def get_id_pydantic_full(
@@ -57,7 +55,6 @@ FAST003 [*] Parameter `id` appears in route path, but not in `get_id_pydantic_sh
     |            ^^^^
 202 | async def get_id_pydantic_short(params: Annotated[PydanticParams, Depends()]): ...
 203 | @app.get("/{id}")
-    |
 help: Add `id` to function signature
     |
 201 | @app.get("/{id}")
@@ -74,7 +71,6 @@ FAST003 [*] Parameter `thing_id` appears in route path, but not in `read_thing_c
 314 | @app.get("/things/{thing_id}")
     |                   ^^^^^^^^^^
 315 | async def read_thing_callable_dep(query: Annotated[str, Depends(CallableQuery)]): ...
-    |
 help: Add `thing_id` to function signature
     |
 314 | @app.get("/things/{thing_id}")
@@ -91,7 +87,6 @@ FAST003 [*] Parameter `thing_id` appears in route path, but not in `read_thing_c
 345 | @app.get("/things/{thing_id}")
     |                   ^^^^^^^^^^
 346 | async def read_thing_callable_dep_missing(query: Annotated[str, Depends(CallableQueryOther)]): ...
-    |
 help: Add `thing_id` to function signature
     |
 345 | @app.get("/things/{thing_id}")
@@ -110,7 +105,6 @@ FAST003 [*] Parameter `thing_id` appears in route path, but not in `read_thing_i
 351 | @app.get("/things/{thing_id}")
     |                   ^^^^^^^^^^
 352 | async def read_thing_init_and_call_instance(query: Annotated[str, Depends(InitAndCallQuery())]): ...
-    |
 help: Add `thing_id` to function signature
     |
 351 | @app.get("/things/{thing_id}")
@@ -127,7 +121,6 @@ FAST003 [*] Parameter `thing_id` appears in route path, but not in `read_thing_e
 361 | @app.get("/things/{thing_id}")
     |                   ^^^^^^^^^^
 362 | async def read_thing_empty_class_dep(query: Annotated[str, Depends(EmptyClass)]): ...
-    |
 help: Add `thing_id` to function signature
     |
 361 | @app.get("/things/{thing_id}")

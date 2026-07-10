@@ -12,5 +12,4 @@ F811 Redefinition of unused `datetime` from line 3
   |                      ^^^^^^^^ `datetime` redefined here
 5 |
 6 | datetime(1, 2, 3)
-  |
 help: Remove definition: `datetime`

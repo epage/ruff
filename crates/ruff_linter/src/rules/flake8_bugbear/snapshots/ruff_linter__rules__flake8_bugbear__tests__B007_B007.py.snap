@@ -9,7 +9,6 @@ B007 Loop control variable `i` not used within loop body
 6 | for i in range(10):  # name not used within the loop; B007
   |     ^
 7 |     print(10)
-  |
 help: Rename unused `i` to `_i`
 
 B007 [*] Loop control variable `k` not used within loop body
@@ -20,7 +19,6 @@ B007 [*] Loop control variable `k` not used within loop body
 18 |         for k in range(10):  # k not used, i and j used transitively
    |             ^
 19 |             print(i + j)
-   |
 help: Rename unused `k` to `_k`
    |
 17 |     for j in range(10):
@@ -36,7 +34,6 @@ B007 Loop control variable `i` not used within loop body
 30 | for i, (j, (k, l)) in strange_generator():  # i, k not used
    |     ^
 31 |     print(j, l)
-   |
 help: Rename unused `i` to `_i`
 
 B007 [*] Loop control variable `k` not used within loop body
@@ -45,7 +42,6 @@ B007 [*] Loop control variable `k` not used within loop body
 30 | for i, (j, (k, l)) in strange_generator():  # i, k not used
    |             ^
 31 |     print(j, l)
-   |
 help: Rename unused `k` to `_k`
    |
 29 |
@@ -63,7 +59,6 @@ B007 Loop control variable `bar` may not be used within loop body
    |          ^^^
 35 |     if foo:
 36 |         print(FMT.format(**locals()))
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 Loop control variable `bar` may not be used within loop body
@@ -75,7 +70,6 @@ B007 Loop control variable `bar` may not be used within loop body
    |          ^^^
 39 |     if foo:
 40 |         print(FMT.format(**globals()))
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 Loop control variable `bar` may not be used within loop body
@@ -87,7 +81,6 @@ B007 Loop control variable `bar` may not be used within loop body
    |          ^^^
 43 |     if foo:
 44 |         print(FMT.format(**vars()))
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 Loop control variable `bar` may not be used within loop body
@@ -98,7 +91,6 @@ B007 Loop control variable `bar` may not be used within loop body
 46 | for foo, bar in [(1, 2)]:
    |          ^^^
 47 |     print(FMT.format(foo=foo, bar=eval("bar")))
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 [*] Loop control variable `bar` not used within loop body
@@ -110,7 +102,6 @@ B007 [*] Loop control variable `bar` not used within loop body
    |              ^^^
 53 |         if foo or baz:
 54 |             break
-   |
 help: Rename unused `bar` to `_bar`
    |
 51 |     # Fixable.
@@ -129,7 +120,6 @@ B007 Loop control variable `bar` not used within loop body
    |              ^^^
 60 |         if foo or baz:
 61 |             break
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 [*] Loop control variable `bar` not used within loop body
@@ -141,7 +131,6 @@ B007 [*] Loop control variable `bar` not used within loop body
    |              ^^^
 69 |         if foo or baz:
 70 |             break
-   |
 help: Rename unused `bar` to `_bar`
    |
 67 |     # Fixable.
@@ -160,7 +149,6 @@ B007 Loop control variable `bar` not used within loop body
    |              ^^^
 78 |         if foo or baz:
 79 |             break
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 Loop control variable `bar` not used within loop body
@@ -172,7 +160,6 @@ B007 Loop control variable `bar` not used within loop body
    |              ^^^
 89 |         if foo or baz:
 90 |             break
-   |
 help: Rename unused `bar` to `_bar`
 
 B007 Loop control variable `line_` not used within loop body
@@ -183,4 +170,3 @@ B007 Loop control variable `line_` not used within loop body
 98 | for line_ in range(self.header_lines):
    |     ^^^^^
 99 |     fp.readline()
-   |

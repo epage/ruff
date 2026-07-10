@@ -897,7 +897,6 @@ mod tests {
         1 | import sys
         2 | a = 5 + 10  # ty: ignore[unresolved-reference]
           |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-          |
         help: Remove the unused suppression comment
         ");
     }
@@ -924,19 +923,15 @@ mod tests {
 
         error[unresolved-reference]: Name `x` used when not defined
          --> test.py:2:5
-          |
         1 | import sys
         2 | a = x +
           |     ^
-          |
 
         error[invalid-syntax]: Expected an expression
          --> test.py:2:8
-          |
         1 | import sys
         2 | a = x +
           |        ^
-          |
         ");
     }
 
@@ -1099,7 +1094,6 @@ class B(A):
           |                            ^^^^^^^^^^^^^^^^^^^^
         8 |         self,
         9 |         b: str
-          |
         help: Remove the unused suppression code
         "#);
     }

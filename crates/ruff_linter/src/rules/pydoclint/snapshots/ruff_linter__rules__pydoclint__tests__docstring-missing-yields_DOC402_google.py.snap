@@ -14,7 +14,6 @@ DOC402 `yield` is not documented in docstring
 8 | |     """
   | |_______^
 9 |       yield 'test'
-  |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -30,7 +29,6 @@ DOC402 `yield` is not documented in docstring
 49 | |         """
    | |___________^
 50 |           yield 'test'
-   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -41,7 +39,6 @@ DOC402 `yield` is not documented in docstring
 58 |         """Do something nested."""
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
 59 |         yield 5
-   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -52,12 +49,10 @@ DOC402 `yield` is not documented in docstring
 66 |     """Do something."""
    |     ^^^^^^^^^^^^^^^^^^^
 67 |     yield from range(10)
-   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
    --> DOC402_google.py:97:5
-    |
  95 |   # DOC402
  96 |   def foo() -> collections.abc.Generator[int | None, None, None]:
  97 | /     """
@@ -65,7 +60,6 @@ DOC402 `yield` is not documented in docstring
  99 | |     """
     | |_______^
 100 |       yield
-    |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -78,5 +72,4 @@ DOC402 `yield` is not documented in docstring
 107 | |     """
     | |_______^
 108 |       yield
-    |
 help: Add a "Yields" section to the docstring

@@ -9,7 +9,6 @@ E266 [*] Too many leading `#` before block comment
 19 |     ### This is a variable ###
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 |     a = 42
-   |
 help: Remove leading `#`
    |
 18 |
@@ -27,7 +26,6 @@ E266 [*] Too many leading `#` before block comment
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 |     return
 24 | #: E265:1:1 E266:2:1
-   |
 help: Remove leading `#`
    |
 21 |
@@ -45,7 +43,6 @@ E266 [*] Too many leading `#` before block comment
    | ^^^^^^^^^^^^^^^^^^^^^
 27 | #: W291:1:42
 28 | #########################################
-   |
 help: Remove leading `#`
    |
 25 | ##if DEBUG:
@@ -62,7 +59,6 @@ E266 [*] Too many leading `#` before block comment
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 70 | # E   Means test is giving error (E)
 71 | # F   Means test is failing (F)
-   |
 help: Remove leading `#`
    |
 68 | #: E265:5:1
@@ -80,7 +76,6 @@ E266 [*] Too many leading `#` before block comment
    | ^^^^^^^
 83 |
 84 | a = 1  ## Foo
-   |
 help: Remove leading `#`
    |
 81 | #: E266:1:3

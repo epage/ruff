@@ -10,7 +10,6 @@ N806 Variable `Camel` in function should be lowercase
    |     ^^^^^
 13 |     CONSTANT = 0
 14 |     _ = 0
-   |
 
 N806 Variable `CONSTANT` in function should be lowercase
   --> N806.py:13:5
@@ -20,7 +19,6 @@ N806 Variable `CONSTANT` in function should be lowercase
 13 |     CONSTANT = 0
    |     ^^^^^^^^
 14 |     _ = 0
-   |
 
 N806 Variable `Bad` in function should be lowercase
   --> N806.py:46:5
@@ -30,7 +28,6 @@ N806 Variable `Bad` in function should be lowercase
    |     ^^^
 47 |     Attachment = apps.get_model("zerver", "Attachment")  # OK
 48 |     Recipient = apps.get_model("zerver", model_name="Recipient")  # OK
-   |
 
 N806 Variable `Bad` in function should be lowercase
   --> N806.py:53:5
@@ -40,17 +37,14 @@ N806 Variable `Bad` in function should be lowercase
 53 |     Bad = import_string("django.core.exceptions.ValidationError")  # N806
    |     ^^^
 54 |     ValidationError = import_string("django.core.exceptions.ValidationError")  # OK
-   |
 
 N806 Variable `Bad` in function should be lowercase
   --> N806.py:56:5
-   |
 54 |     ValidationError = import_string("django.core.exceptions.ValidationError")  # OK
 55 |
 56 |     Bad = apps.get_model()  # N806
    |     ^^^
 57 |     Bad = apps.get_model(model_name="Stream")  # N806
-   |
 
 N806 Variable `Bad` in function should be lowercase
   --> N806.py:57:5
@@ -60,7 +54,6 @@ N806 Variable `Bad` in function should be lowercase
    |     ^^^
 58 |
 59 |     Address: Type = apps.get_model("zerver", variable)  # OK
-   |
 
 N806 Variable `ValidationError` in function should be lowercase
   --> N806.py:60:5
@@ -68,7 +61,6 @@ N806 Variable `ValidationError` in function should be lowercase
 59 |     Address: Type = apps.get_model("zerver", variable)  # OK
 60 |     ValidationError = import_string(variable)  # N806
    |     ^^^^^^^^^^^^^^^
-   |
 
 N806 Variable `BadName` in function should be lowercase
   --> N806.py:65:14
@@ -79,7 +71,6 @@ N806 Variable `BadName` in function should be lowercase
    |              ^^^^^^^
 66 |             ...
 67 |         case int(GoodName):  # N806 (capture in class pattern)
-   |
 
 N806 Variable `GoodName` in function should be lowercase
   --> N806.py:67:18
@@ -90,7 +81,6 @@ N806 Variable `GoodName` in function should be lowercase
    |                  ^^^^^^^^
 68 |             ...
 69 |         case [*Rest]:  # N806 (star pattern)
-   |
 
 N806 Variable `Rest` in function should be lowercase
   --> N806.py:69:16
@@ -101,7 +91,6 @@ N806 Variable `Rest` in function should be lowercase
    |                ^^^^
 70 |             ...
 71 |         case {"key": Val} as Alias:  # N806 (mapping value + as pattern)
-   |
 
 N806 Variable `Val` in function should be lowercase
   --> N806.py:71:22
@@ -112,7 +101,6 @@ N806 Variable `Val` in function should be lowercase
    |                      ^^^
 72 |             ...
 73 |         case ok_name:  # OK
-   |
 
 N806 Variable `Alias` in function should be lowercase
   --> N806.py:71:30
@@ -123,4 +111,3 @@ N806 Variable `Alias` in function should be lowercase
    |                              ^^^^^
 72 |             ...
 73 |         case ok_name:  # OK
-   |

@@ -10,7 +10,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
   |         ^^^
 7 | def also_bad(__x: int, __y: str) -> None: ...  # PYI063
 8 | def still_bad(__x_: int) -> None: ...  # PYI063
-  |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -20,19 +19,16 @@ PYI063 Use PEP 570 syntax for positional-only parameters
 7 | def also_bad(__x: int, __y: str) -> None: ...  # PYI063
   |              ^^^
 8 | def still_bad(__x_: int) -> None: ...  # PYI063
-  |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
   --> PYI063.py:8:15
-   |
  6 | def bad(__x: int) -> None: ...  # PYI063
  7 | def also_bad(__x: int, __y: str) -> None: ...  # PYI063
  8 | def still_bad(__x_: int) -> None: ...  # PYI063
    |               ^^^^
  9 |
 10 | def no_args() -> None: ...
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -44,7 +40,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |              ^^^^^^
 25 |     def bad3(__self, __x: int) -> None: ...  # PYI063
 26 |     def still_bad(self, __x_: int) -> None: ...  # PYI063
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -56,7 +51,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                      ^^^
 26 |     def still_bad(self, __x_: int) -> None: ...  # PYI063
 27 |     @staticmethod
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -68,7 +62,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                         ^^^^
 27 |     @staticmethod
 28 |     def this_is_bad_too(__x: int) -> None: ...  # PYI063
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -80,7 +73,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                         ^^^
 29 |     @classmethod
 30 |     def not_good(cls, __foo: int) -> None: ...  # PYI063
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -92,7 +84,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                       ^^^^^
 31 |
 32 |     # The first non-self argument isn't positional-only, so logically the second can't be either:
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -104,7 +95,6 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                       ^^^^^^
 53 |
 54 | class Metaclass2(type):
-   |
 help: Add `/` to function signature
 
 PYI063 Use PEP 570 syntax for positional-only parameters
@@ -116,5 +106,4 @@ PYI063 Use PEP 570 syntax for positional-only parameters
    |                          ^^^^^^
 57 |
 58 | class GoodMetaclass(type):
-   |
 help: Add `/` to function signature

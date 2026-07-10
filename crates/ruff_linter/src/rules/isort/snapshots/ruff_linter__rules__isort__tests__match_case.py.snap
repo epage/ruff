@@ -11,7 +11,6 @@ I001 [*] Import block is un-sorted or un-formatted
   | |_________________^
 5 |       case 2:
 6 |           import collections
-  |
 help: Organize imports
   |
 2 |     case 1:
@@ -19,17 +18,14 @@ help: Organize imports
 4 |         import sys
   -         import os
 5 |     case 2:
-  |
 
 I001 [*] Import block is un-sorted or un-formatted
  --> match_case.py:6:9
-  |
 4 |           import os
 5 |       case 2:
 6 | /         import collections
 7 | |         import abc
   | |__________________^
-  |
 help: Organize imports
   |
 5 |     case 2:

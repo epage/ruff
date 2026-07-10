@@ -8,7 +8,6 @@ PLR2044 [*] Line with empty comment
   | ^
 2 | x = 0 \
 3 | #
-  |
 help: Delete the empty comment
   |
   - #
@@ -24,7 +23,6 @@ PLR2044 [*] Line with empty comment
   | ^
 4 | +1
 5 | print(x)
-  |
 help: Delete the empty comment
   |
 2 | x = 0 \

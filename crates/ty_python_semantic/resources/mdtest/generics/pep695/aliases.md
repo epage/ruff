@@ -340,7 +340,6 @@ error[not-subscriptable]: Cannot specialize non-generic type alias `AliasA`
   |          ------^^^^^
   |          |
   |          Alias to `A`, which is not generic
-  |
 ```
 
 ```py
@@ -356,7 +355,6 @@ error[not-subscriptable]: Cannot specialize non-generic type alias `AliasB`
    |          ------^^^^^
    |          |
    |          Alias to `B[int]`, which is already specialized
-   |
 ```
 
 ## Aliases are not callable
@@ -680,7 +678,6 @@ error[invalid-type-variable-default]: Type parameters with defaults cannot follo
   |             ---  ^^^^^^^ `T` has a default
   |             |
   |             `Ts` is a TypeVarTuple
-  |
 info: See https://typing.python.org/en/latest/spec/generics.html#defaults-following-typevartuple
 ```
 
@@ -697,7 +694,6 @@ error[invalid-type-variable-default]: Type parameters with defaults cannot follo
   |                 ---  ^^^^^^^^ `T2` has a default
   |                 |
   |                 `Ts` is a TypeVarTuple
-  |
 info: See https://typing.python.org/en/latest/spec/generics.html#defaults-following-typevartuple
 ```
 
@@ -715,7 +711,6 @@ error[invalid-type-variable-default]: Type parameters with defaults cannot follo
   |             |    |
   |             |    `T1` has a default
   |             `Ts` is a TypeVarTuple
-  |
 info: See https://typing.python.org/en/latest/spec/generics.html#defaults-following-typevartuple
 ```
 
@@ -732,7 +727,6 @@ error[invalid-type-variable-default]: Type parameters with defaults cannot follo
   |             ---  ^^^^^^^^^^^^^^^^^^^^^^ `Ts` has a default
   |             |
   |             `Us` is a TypeVarTuple
-  |
 info: See https://typing.python.org/en/latest/spec/generics.html#defaults-following-typevartuple
 ```
 

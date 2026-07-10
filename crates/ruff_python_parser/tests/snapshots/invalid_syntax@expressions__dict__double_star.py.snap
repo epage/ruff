@@ -579,14 +579,12 @@ Module(
   |
 
 
-  |
 5 | {a: 1, **x if True else y}
 6 | {**lambda x: x, b: 2}
 7 | {a: 1, **x or y}
   |          ^^^^^^ Syntax Error: Boolean expression cannot be used here
 8 | {**x and y, b: 2}
 9 | {a: 1, **not x, b: 2}
-  |
 
 
    |
@@ -633,4 +631,3 @@ Module(
 11 | {**x not in y}
 12 | {**x < y}
    |    ^^^^^ Syntax Error: Comparison expression cannot be used here
-   |

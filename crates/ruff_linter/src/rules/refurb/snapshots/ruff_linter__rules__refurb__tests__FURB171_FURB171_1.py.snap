@@ -9,7 +9,6 @@ FURB171 [*] Membership test against single-item container
 3 | if 1 in set([1]):
   |    ^^^^^^^^^^^^^
 4 |     print("Single-element set")
-  |
 help: Convert to equality test
   |
 2 |
@@ -27,7 +26,6 @@ FURB171 [*] Membership test against single-item container
 6 | if 1 in set((1,)):
   |    ^^^^^^^^^^^^^^
 7 |     print("Single-element set")
-  |
 help: Convert to equality test
   |
 5 |
@@ -39,13 +37,11 @@ note: This is an unsafe fix and may change runtime behavior
 
 FURB171 [*] Membership test against single-item container
   --> FURB171_1.py:9:4
-   |
  7 |     print("Single-element set")
  8 |
  9 | if 1 in set({1}):
    |    ^^^^^^^^^^^^^
 10 |     print("Single-element set")
-   |
 help: Convert to equality test
    |
 8  |
@@ -63,7 +59,6 @@ FURB171 [*] Membership test against single-item container
 12 | if 1 in frozenset([1]):
    |    ^^^^^^^^^^^^^^^^^^^
 13 |     print("Single-element set")
-   |
 help: Convert to equality test
    |
 11 |
@@ -81,7 +76,6 @@ FURB171 [*] Membership test against single-item container
 15 | if 1 in frozenset((1,)):
    |    ^^^^^^^^^^^^^^^^^^^^
 16 |     print("Single-element set")
-   |
 help: Convert to equality test
    |
 14 |
@@ -99,7 +93,6 @@ FURB171 [*] Membership test against single-item container
 18 | if 1 in frozenset({1}):
    |    ^^^^^^^^^^^^^^^^^^^
 19 |     print("Single-element set")
-   |
 help: Convert to equality test
    |
 17 |
@@ -117,7 +110,6 @@ FURB171 [*] Membership test against single-item container
 21 | if 1 in set(set([1])):
    |    ^^^^^^^^^^^^^^^^^^
 22 |     print('Recursive solution')
-   |
 help: Convert to equality test
    |
 20 |
@@ -134,7 +126,6 @@ FURB171 [*] Membership test against single-item container
 59 | if math.nan in set([math.nan]):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 60 |     print("This should be marked unsafe")
-   |
 help: Convert to equality test
    |
 58 | # set() and frozenset() with NaN
@@ -152,7 +143,6 @@ FURB171 [*] Membership test against single-item container
 62 | if math.nan in frozenset([math.nan]):
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 63 |     print("This should be marked unsafe")
-   |
 help: Convert to equality test
    |
 61 |

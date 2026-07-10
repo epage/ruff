@@ -9,7 +9,6 @@ invalid-syntax: name `a` cannot refer to a parameter and a global variable
   |            ^
 3 |
 4 | def g(a):
-  |
 
 invalid-syntax: name `a` cannot refer to a parameter and a global variable
  --> resources/test/fixtures/semantic_errors/global_parameter.py:6:16
@@ -20,7 +19,6 @@ invalid-syntax: name `a` cannot refer to a parameter and a global variable
   |                ^
 7 |
 8 | def h(a):
-  |
 
 invalid-syntax: name `a` cannot refer to a parameter and a global variable
   --> resources/test/fixtures/semantic_errors/global_parameter.py:14:16
@@ -31,7 +29,6 @@ invalid-syntax: name `a` cannot refer to a parameter and a global variable
    |                ^
 15 |     except Exception:
 16 |         pass
-   |
 
 invalid-syntax: name `a` cannot refer to a parameter and a global variable
   --> resources/test/fixtures/semantic_errors/global_parameter.py:20:12
@@ -42,7 +39,6 @@ invalid-syntax: name `a` cannot refer to a parameter and a global variable
    |            ^
 21 |
 22 | def f(a):
-   |
 
 invalid-syntax: name `a` cannot refer to a parameter and a global variable
   --> resources/test/fixtures/semantic_errors/global_parameter.py:25:12
@@ -53,4 +49,3 @@ invalid-syntax: name `a` cannot refer to a parameter and a global variable
    |            ^
 26 |
 27 | def f(a):
-   |

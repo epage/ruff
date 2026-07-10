@@ -10,7 +10,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | # Concatenated string literals
-  |
 help: Remove `print`
   |
 5 | # - single StringLiteral
@@ -29,7 +28,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |
 13 | # Positional arguments, string literals
-   |
 help: Remove `print`
    |
 10 | # - single StringLiteral
@@ -48,7 +46,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | # Concatenated string literals combined with Positional arguments
-   |
 help: Remove `print`
    |
 15 | # - single StringLiteral concatenated with " "
@@ -67,7 +64,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 |
 23 | # Positional arguments, string literals with a variable
-   |
 help: Remove `print`
    |
 20 | # - single stringliteral concatenated with " " only between `print` and `is`
@@ -86,7 +82,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 |
 28 | # Mixed brackets string literals
-   |
 help: Remove `print`
    |
 25 | # - single FString concatenated with " "
@@ -105,7 +100,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 32 |
 33 | # Mixed brackets with other brackets inside
-   |
 help: Remove `print`
    |
 30 | # - single StringLiteral concatenated with " "
@@ -124,7 +118,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 37 |
 38 | # Positional arguments, string literals with a separator
-   |
 help: Remove `print`
    |
 35 | # - single StringLiteral concatenated with " " and escaped brackets
@@ -143,7 +136,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 42 |
 43 | # Positional arguments, string literals with None as separator
-   |
 help: Remove `print`
    |
 40 | # - single StringLiteral concatenated with "|"
@@ -162,7 +154,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 47 |
 48 | # Positional arguments, string literals with variable as separator, needs f-string
-   |
 help: Remove `print`
    |
 45 | # - single StringLiteral concatenated with " "
@@ -181,7 +172,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 |
 53 | # Unnecessary f-string
-   |
 help: Remove `print`
    |
 50 | # - single FString concatenated with "{U00A0}"
@@ -200,7 +190,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 57 |
 58 | # Positional arguments, string literals and f-strings
-   |
 help: Remove `print`
    |
 55 | # - single StringLiteral
@@ -219,7 +208,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 62 |
 63 | # Positional arguments, string literals and f-strings with a separator
-   |
 help: Remove `print`
    |
 60 | # - single FString concatenated with " "
@@ -238,7 +226,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |
 68 | # A single f-string
-   |
 help: Remove `print`
    |
 65 | # - single FString concatenated with "|"
@@ -257,7 +244,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 72 |
 73 | # A single f-string with a redundant separator
-   |
 help: Remove `print`
    |
 70 | # - single FString
@@ -276,7 +262,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 77 |
 78 | # Complex f-string with variable as separator
-   |
 help: Remove `print`
    |
 75 | # - single FString
@@ -295,7 +280,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 84 |
 85 | # Empty print
-   |
 help: Remove `print`
    |
 82 | maintainer = "John Doe"
@@ -314,7 +298,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^
 89 |
 90 | # Empty print with separator
-   |
 help: Remove `print`
    |
 87 | # - `msg` entirely removed from assertion
@@ -333,7 +316,6 @@ RUF030 [*] `print()` call in `assert` statement is likely unintentional
    |              ^^^^^^^^^^^^^^
 94 |
 95 | # Custom print function that actually returns a string
-   |
 help: Remove `print`
    |
 92 | # - `msg` entirely removed from assertion
@@ -345,12 +327,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF030 [*] `print()` call in `assert` statement is likely unintentional
    --> RUF030.py:108:14
-    |
 106 | # Expects:
 107 | # - single StringLiteral
 108 | assert True, builtins.print("This print should be removed.")
     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    |
 help: Remove `print`
     |
 107 | # - single StringLiteral

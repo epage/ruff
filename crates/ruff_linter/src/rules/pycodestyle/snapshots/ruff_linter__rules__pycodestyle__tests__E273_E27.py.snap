@@ -10,7 +10,6 @@ E273 [*] Tab after keyword
    |         ^^^^^^^^
 12 | #: E273 E274
 13 | True        and    False
-   |
 help: Replace with single space
    |
 10 | #: E273
@@ -28,7 +27,6 @@ E273 [*] Tab after keyword
    |     ^^^^^^^^
 14 | #: E271
 15 | a and  b
-   |
 help: Replace with single space
    |
 12 | #: E273 E274
@@ -46,7 +44,6 @@ E273 [*] Tab after keyword
    |                ^^^^
 14 | #: E271
 15 | a and  b
-   |
 help: Replace with single space
    |
 12 | #: E273 E274
@@ -64,7 +61,6 @@ E273 [*] Tab after keyword
    |      ^^^^
 28 | #: E274
 29 | a        and b
-   |
 help: Replace with single space
    |
 26 | #: E273
@@ -82,7 +78,6 @@ E273 [*] Tab after keyword
    |                ^^^^
 32 | #: Okay
 33 | from u import (a, b)
-   |
 help: Replace with single space
    |
 30 | #: E273 E274
@@ -99,7 +94,6 @@ E273 [*] Tab after keyword
    |     ^^^^
 75 |
 76 | #: E275
-   |
 help: Replace with single space
    |
 73 | #: E273

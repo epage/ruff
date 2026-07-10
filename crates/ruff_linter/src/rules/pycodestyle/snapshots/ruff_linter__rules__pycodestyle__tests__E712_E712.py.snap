@@ -9,7 +9,6 @@ E712 [*] Avoid equality comparisons to `True`; use `res:` for truth checks
   |    ^^^^^^^^^^^
 3 |     pass
 4 | #: E712
-  |
 help: Replace with `res`
   |
 1 | #: E712
@@ -28,7 +27,6 @@ E712 [*] Avoid inequality comparisons to `False`; use `res:` for truth checks
   |    ^^^^^^^^^^^^
 6 |     pass
 7 | #: E712
-  |
 help: Replace with `res`
   |
 4 | #: E712
@@ -40,14 +38,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 E712 [*] Avoid inequality comparisons to `True`; use `not res:` for false checks
   --> E712.py:8:4
-   |
  6 |     pass
  7 | #: E712
  8 | if True != res:
    |    ^^^^^^^^^^^
  9 |     pass
 10 | #: E712
-   |
 help: Replace with `not res`
   |
 7 | #: E712
@@ -66,7 +62,6 @@ E712 [*] Avoid equality comparisons to `False`; use `not res:` for false checks
    |    ^^^^^^^^^^^^
 12 |     pass
 13 | #: E712
-   |
 help: Replace with `not res`
    |
 10 | #: E712
@@ -85,7 +80,6 @@ E712 [*] Avoid equality comparisons to `True`; use `res[1]:` for truth checks
    |    ^^^^^^^^^^^^^^
 15 |     pass
 16 | #: E712
-   |
 help: Replace with `res[1]`
    |
 13 | #: E712
@@ -104,7 +98,6 @@ E712 [*] Avoid inequality comparisons to `False`; use `res[1]:` for truth checks
    |    ^^^^^^^^^^^^^^^
 18 |     pass
 19 | #: E712
-   |
 help: Replace with `res[1]`
    |
 16 | #: E712
@@ -123,7 +116,6 @@ E712 [*] Avoid equality comparisons to `True`; use `cond:` for truth checks
    |            ^^^^^^^^^^^^
 21 | #: E712
 22 | if (True) == TrueElement or x == TrueElement:
-   |
 help: Replace with `cond`
    |
 19 | #: E712
@@ -142,7 +134,6 @@ E712 [*] Avoid equality comparisons to `False`; use `not cond:` for false checks
    |                                    ^^^^^^^^^^^^^
 21 | #: E712
 22 | if (True) == TrueElement or x == TrueElement:
-   |
 help: Replace with `not cond`
    |
 19 | #: E712
@@ -160,7 +151,6 @@ E712 [*] Avoid equality comparisons to `True`; use `TrueElement:` for truth chec
 22 | if (True) == TrueElement or x == TrueElement:
    |    ^^^^^^^^^^^^^^^^^^^^^
 23 |     pass
-   |
 help: Replace with `TrueElement`
    |
 21 | #: E712
@@ -178,7 +168,6 @@ E712 [*] Avoid equality comparisons to `True` or `False`
 25 | if res == True != False:
    |    ^^^^^^^^^^^^^^^^^^^^
 26 |     pass
-   |
 help: Replace comparison
    |
 24 |
@@ -196,7 +185,6 @@ E712 [*] Avoid equality comparisons to `True` or `False`
 25 | if res == True != False:
    |    ^^^^^^^^^^^^^^^^^^^^
 26 |     pass
-   |
 help: Replace comparison
    |
 24 |
@@ -214,7 +202,6 @@ E712 [*] Avoid equality comparisons to `True`; use `TrueElement:` for truth chec
 28 | if(True) == TrueElement or x == TrueElement:
    |   ^^^^^^^^^^^^^^^^^^^^^
 29 |     pass
-   |
 help: Replace with `TrueElement`
    |
 27 |
@@ -232,7 +219,6 @@ E712 [*] Avoid equality comparisons to `True`; use `yield i:` for truth checks
 31 | if (yield i) == True:
    |    ^^^^^^^^^^^^^^^^^
 32 |       print("even")
-   |
 help: Replace with `yield i`
    |
 30 |
@@ -249,7 +235,6 @@ E712 [*] Avoid equality comparisons to `True`; use `True:` for truth checks
 58 | if True == True: # No duplicated diagnostic
    |    ^^^^^^^^^^^^
 59 |     pass
-   |
 help: Replace with `True`
    |
 57 | # https://github.com/astral-sh/ruff/issues/17582

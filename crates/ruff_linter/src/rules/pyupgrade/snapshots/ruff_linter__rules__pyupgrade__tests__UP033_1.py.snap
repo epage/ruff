@@ -8,7 +8,6 @@ UP033 [*] Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`
   |           ^^^^^^^^^^^^^^
 5 | def fixme():
 6 |     pass
-  |
 help: Rewrite with `@functools.cache
   |
   - from functools import lru_cache
@@ -28,7 +27,6 @@ UP033 [*] Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`
    |           ^^^^^^^^^^^^^^
 11 | def fixme():
 12 |     pass
-   |
 help: Rewrite with `@functools.cache
    |
    - from functools import lru_cache
@@ -48,7 +46,6 @@ UP033 [*] Use `@functools.cache` instead of `@functools.lru_cache(maxsize=None)`
    |           ^^^^^^^^^^^^^^
 16 | @other_decorator
 17 | def fixme():
-   |
 help: Rewrite with `@functools.cache
    |
    - from functools import lru_cache

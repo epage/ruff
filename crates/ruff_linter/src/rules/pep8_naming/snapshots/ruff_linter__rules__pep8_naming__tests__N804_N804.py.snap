@@ -9,7 +9,6 @@ N804 [*] First argument of a class method should be named `cls`
 30 |     def __init_subclass__(self, default_name, **kwargs):
    |                           ^^^^
 31 |         ...
-   |
 help: Rename `self` to `cls`
    |
 29 |
@@ -26,7 +25,6 @@ N804 [*] First argument of a class method should be named `cls`
 38 |     def bad_class_method_with_positional_only_argument(self, x, /, other):
    |                                                        ^^^^
 39 |         ...
-   |
 help: Rename `self` to `cls`
    |
 37 |     @classmethod
@@ -43,7 +41,6 @@ N804 [*] First argument of a class method should be named `cls`
 43 |     def bad_method(self):
    |                    ^^^^
 44 |         pass
-   |
 help: Rename `self` to `cls`
    |
 42 | class MetaClass(ABCMeta):
@@ -60,7 +57,6 @@ N804 First argument of a class method should be named `cls`
 54 |     def cls_as_argument(this, cls):
    |                         ^^^^
 55 |         pass
-   |
 help: Rename `this` to `cls`
 
 N804 First argument of a class method should be named `cls`
@@ -71,7 +67,6 @@ N804 First argument of a class method should be named `cls`
 57 |     def cls_as_pos_only_argument(this, cls, /):
    |                                  ^^^^
 58 |         pass
-   |
 help: Rename `this` to `cls`
 
 N804 First argument of a class method should be named `cls`
@@ -82,7 +77,6 @@ N804 First argument of a class method should be named `cls`
 60 |     def cls_as_kw_only_argument(this, *, cls):
    |                                 ^^^^
 61 |         pass
-   |
 help: Rename `this` to `cls`
 
 N804 First argument of a class method should be named `cls`
@@ -93,7 +87,6 @@ N804 First argument of a class method should be named `cls`
 63 |     def cls_as_varargs(this, *cls):
    |                        ^^^^
 64 |         pass
-   |
 help: Rename `this` to `cls`
 
 N804 First argument of a class method should be named `cls`
@@ -104,7 +97,6 @@ N804 First argument of a class method should be named `cls`
 66 |     def cls_as_kwargs(this, **cls):
    |                       ^^^^
 67 |         pass
-   |
 help: Rename `this` to `cls`
 
 N804 [*] First argument of a class method should be named `cls`
@@ -115,7 +107,6 @@ N804 [*] First argument of a class method should be named `cls`
    |                    ^^^^
 71 |         this = this
 72 |         this
-   |
 help: Rename `this` to `cls`
    |
 69 | class RenamingInMethodBodyClass(ABCMeta):
@@ -137,7 +128,6 @@ N804 [*] First argument of a class method should be named `cls`
 74 |     def bad_method(this):
    |                    ^^^^
 75 |         self = this
-   |
 help: Rename `this` to `cls`
    |
 73 |
@@ -157,5 +147,4 @@ N804 First argument of a class method should be named `cls`
 88 |     def function(this):
    |                  ^^^^
 89 |         cls = 1234
-   |
 help: Rename `this` to `cls`

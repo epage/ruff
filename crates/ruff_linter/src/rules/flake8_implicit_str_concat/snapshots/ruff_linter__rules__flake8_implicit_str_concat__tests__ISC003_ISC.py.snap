@@ -9,7 +9,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 10 | |   "def"
    | |_______^
 11 |   )
-   |
 help: Remove redundant '+' operator to implicitly concatenate
    |
 8  | _ = (
@@ -26,7 +25,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 15 | |   "def"
    | |_______^
 16 |   )
-   |
 help: Remove redundant '+' operator to implicitly concatenate
    |
 13 | _ = (
@@ -43,7 +41,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 20 | |   b"def"
    | |________^
 21 |   )
-   |
 help: Remove redundant '+' operator to implicitly concatenate
    |
 18 | _ = (
@@ -62,7 +59,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
    | |_______________^
 80 |   _ = f"a {f"first {f"middle"}"
 81 |       + f"second"} d"
-   |
 help: Remove redundant '+' operator to implicitly concatenate
    |
 78 | _ = f"a {f"first"
@@ -82,7 +78,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
    | |_______________^
 82 |
 83 |   # See https://github.com/astral-sh/ruff/issues/12936
-   |
 help: Remove redundant '+' operator to implicitly concatenate
    |
 80 | _ = f"a {f"first {f"middle"}"
@@ -99,7 +94,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 111 | |     r"raw_normal"
     | |_________________^
 112 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 109 | _ = (
@@ -117,7 +111,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 118 | |     r"raw"
     | |__________^
 119 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 116 | _ = (
@@ -134,7 +127,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 123 | |     b"normal_bytes"
     | |___________________^
 124 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 121 | _ = (
@@ -151,7 +143,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 128 | |     b"with_bytes"
     | |_________________^
 129 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 126 | _ = (
@@ -171,7 +162,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
     | |_______^
 135 |       "c" +
 136 |       "d" + "e"
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 132 |
@@ -191,7 +181,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
     | |_________^
 141 |       + "c"
 142 |       + "d"
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 139 | _ = ("a"
@@ -208,7 +197,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 161 | |     +    "second"  # extra spaces around +
     | |_________________^
 162 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 160 |     "first"
@@ -225,7 +213,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 166 | |     "second"
     | |____________^
 167 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 164 | _ = (
@@ -242,7 +229,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 171 | |     "nesting"
     | |_____________^
 172 |   ))
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 169 | _ = ((
@@ -259,7 +245,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 176 | |     "another string"
     | |____________________^
 177 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 174 | _ = (
@@ -277,9 +262,7 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 182 | |     + "end"
     | |___________^
 183 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
-    |
 181 | 		# leading comment
     -     + "end"
 182 +      "end"
@@ -295,7 +278,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 188 | |     "end"
     | |_________^
 189 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 185 | _ = (
@@ -313,7 +295,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
 202 | |     + t"dog"
     | |____________^
 203 |   )
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 201 |     t"The quick brown fox jumps over the lazy "
@@ -335,7 +316,6 @@ ISC003 Explicitly concatenated string should be implicitly concatenated
     | |_^
 220 |
 221 |   _ = (
-    |
 help: Remove redundant '+' operator to implicitly concatenate
 
 ISC003 Explicitly concatenated string should be implicitly concatenated
@@ -349,7 +329,6 @@ ISC003 Explicitly concatenated string should be implicitly concatenated
 223 | |     "def"
 224 | | ) + "ghi"
     | |_________^
-    |
 help: Remove redundant '+' operator to implicitly concatenate
 
 ISC003 [*] Explicitly concatenated string should be implicitly concatenated
@@ -362,7 +341,6 @@ ISC003 [*] Explicitly concatenated string should be implicitly concatenated
     | |_______________^
 231 |       + " line"
 232 |       + " string."
-    |
 help: Remove redundant '+' operator to implicitly concatenate
     |
 229 |     "A"  # Complains about this: +

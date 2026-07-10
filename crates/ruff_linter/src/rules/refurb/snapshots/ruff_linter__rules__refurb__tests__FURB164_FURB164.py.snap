@@ -9,7 +9,6 @@ FURB164 [*] Verbose method `from_float` in `Fraction` construction
   |     ^^^^^^^^^^^^^^^^^^^^^^^^
 8 | _ = Fraction.from_float(-0.5)
 9 | _ = Fraction.from_float(5.0)
-  |
 help: Replace with `Fraction` constructor
   |
 6 | # Errors
@@ -20,14 +19,12 @@ help: Replace with `Fraction` constructor
 
 FURB164 [*] Verbose method `from_float` in `Fraction` construction
   --> FURB164.py:8:5
-   |
  6 | # Errors
  7 | _ = Fraction.from_float(0.1)
  8 | _ = Fraction.from_float(-0.5)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | _ = Fraction.from_float(5.0)
 10 | _ = fractions.Fraction.from_float(4.2)
-   |
 help: Replace with `Fraction` constructor
   |
 7 | _ = Fraction.from_float(0.1)
@@ -38,14 +35,12 @@ help: Replace with `Fraction` constructor
 
 FURB164 [*] Verbose method `from_float` in `Fraction` construction
   --> FURB164.py:9:5
-   |
  7 | _ = Fraction.from_float(0.1)
  8 | _ = Fraction.from_float(-0.5)
  9 | _ = Fraction.from_float(5.0)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^
 10 | _ = fractions.Fraction.from_float(4.2)
 11 | _ = Fraction.from_decimal(Decimal("4.2"))
-   |
 help: Replace with `Fraction` constructor
    |
 8  | _ = Fraction.from_float(-0.5)
@@ -63,7 +58,6 @@ FURB164 [*] Verbose method `from_float` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | _ = Fraction.from_decimal(Decimal("4.2"))
 12 | _ = Fraction.from_decimal(Decimal("-4.2"))
-   |
 help: Replace with `Fraction` constructor
    |
 9  | _ = Fraction.from_float(5.0)
@@ -81,7 +75,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | _ = Fraction.from_decimal(Decimal("-4.2"))
 13 | _ = Fraction.from_decimal(Decimal.from_float(4.2))
-   |
 help: Replace with `Fraction` constructor
    |
 10 | _ = fractions.Fraction.from_float(4.2)
@@ -99,7 +92,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 | _ = Fraction.from_decimal(Decimal.from_float(4.2))
 14 | _ = Decimal.from_float(0.1)
-   |
 help: Replace with `Fraction` constructor
    |
 11 | _ = Fraction.from_decimal(Decimal("4.2"))
@@ -117,7 +109,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 | _ = Decimal.from_float(0.1)
 15 | _ = Decimal.from_float(-0.5)
-   |
 help: Replace with `Fraction` constructor
    |
 12 | _ = Fraction.from_decimal(Decimal("-4.2"))
@@ -136,7 +127,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |                           ^^^^^^^^^^^^^^^^^^^^^^^
 14 | _ = Decimal.from_float(0.1)
 15 | _ = Decimal.from_float(-0.5)
-   |
 help: Replace with `Decimal` constructor
    |
 12 | _ = Fraction.from_decimal(Decimal("-4.2"))
@@ -155,7 +145,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^
 15 | _ = Decimal.from_float(-0.5)
 16 | _ = Decimal.from_float(5.0)
-   |
 help: Replace with `Decimal` constructor
    |
 13 | _ = Fraction.from_decimal(Decimal.from_float(4.2))
@@ -174,7 +163,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^
 16 | _ = Decimal.from_float(5.0)
 17 | _ = decimal.Decimal.from_float(4.2)
-   |
 help: Replace with `Decimal` constructor
    |
 14 | _ = Decimal.from_float(0.1)
@@ -193,7 +181,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^
 17 | _ = decimal.Decimal.from_float(4.2)
 18 | _ = Decimal.from_float(float("inf"))
-   |
 help: Replace with `Decimal` constructor
    |
 15 | _ = Decimal.from_float(-0.5)
@@ -212,7 +199,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 18 | _ = Decimal.from_float(float("inf"))
 19 | _ = Decimal.from_float(float("-inf"))
-   |
 help: Replace with `Decimal` constructor
    |
 16 | _ = Decimal.from_float(5.0)
@@ -231,7 +217,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 | _ = Decimal.from_float(float("-inf"))
 20 | _ = Decimal.from_float(float("Infinity"))
-   |
 help: Replace with `Decimal` constructor
    |
 17 | _ = decimal.Decimal.from_float(4.2)
@@ -249,7 +234,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 | _ = Decimal.from_float(float("Infinity"))
 21 | _ = Decimal.from_float(float("-Infinity"))
-   |
 help: Replace with `Decimal` constructor
    |
 18 | _ = Decimal.from_float(float("inf"))
@@ -267,7 +251,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 | _ = Decimal.from_float(float("-Infinity"))
 22 | _ = Decimal.from_float(float("nan"))
-   |
 help: Replace with `Decimal` constructor
    |
 19 | _ = Decimal.from_float(float("-inf"))
@@ -285,7 +268,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 | _ = Decimal.from_float(float("nan"))
 23 | _ = Decimal.from_float(float("-NaN "))
-   |
 help: Replace with `Decimal` constructor
    |
 20 | _ = Decimal.from_float(float("Infinity"))
@@ -303,7 +285,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | _ = Decimal.from_float(float("-NaN "))
 24 | _ = Decimal.from_float(float(" \n+nan   \t"))
-   |
 help: Replace with `Decimal` constructor
    |
 21 | _ = Decimal.from_float(float("-Infinity"))
@@ -321,7 +302,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 | _ = Decimal.from_float(float(" \n+nan   \t"))
 25 | _ = Decimal.from_float(float("  iNf \n\t "))
-   |
 help: Replace with `Decimal` constructor
    |
 22 | _ = Decimal.from_float(float("nan"))
@@ -339,7 +319,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | _ = Decimal.from_float(float("  iNf \n\t "))
 26 | _ = Decimal.from_float(float("   -inF\n \t"))
-   |
 help: Replace with `Decimal` constructor
    |
 23 | _ = Decimal.from_float(float("-NaN "))
@@ -357,7 +336,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 | _ = Decimal.from_float(float("   -inF\n \t"))
 27 | _ = Decimal.from_float(float("  InfinIty \n\t "))
-   |
 help: Replace with `Decimal` constructor
    |
 24 | _ = Decimal.from_float(float(" \n+nan   \t"))
@@ -375,7 +353,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 | _ = Decimal.from_float(float("  InfinIty \n\t "))
 28 | _ = Decimal.from_float(float("   -InfinIty\n \t"))
-   |
 help: Replace with `Decimal` constructor
    |
 25 | _ = Decimal.from_float(float("  iNf \n\t "))
@@ -392,7 +369,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
 27 | _ = Decimal.from_float(float("  InfinIty \n\t "))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | _ = Decimal.from_float(float("   -InfinIty\n \t"))
-   |
 help: Replace with `Decimal` constructor
    |
 26 | _ = Decimal.from_float(float("   -inF\n \t"))
@@ -410,7 +386,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 |
 30 | # Cases with keyword arguments - should produce unsafe fixes
-   |
 help: Replace with `Decimal` constructor
    |
 27 | _ = Decimal.from_float(float("  InfinIty \n\t "))
@@ -426,7 +401,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
 31 | _ = Fraction.from_decimal(dec=Decimal("4.2"))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 32 | _ = Decimal.from_float(f=4.2)
-   |
 help: Replace with `Fraction` constructor
    |
 30 | # Cases with keyword arguments - should produce unsafe fixes
@@ -444,7 +418,6 @@ FURB164 Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
 33 |
 34 | # Cases with invalid argument counts - should not get fixes
-   |
 help: Replace with `Decimal` constructor
 
 FURB164 Verbose method `from_decimal` in `Fraction` construction
@@ -454,7 +427,6 @@ FURB164 Verbose method `from_decimal` in `Fraction` construction
 35 | _ = Fraction.from_decimal(Decimal("4.2"), 1)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 36 | _ = Decimal.from_float(4.2, None)
-   |
 help: Replace with `Fraction` constructor
 
 FURB164 Verbose method `from_float` in `Decimal` construction
@@ -466,7 +438,6 @@ FURB164 Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 37 |
 38 | # Cases with wrong keyword arguments - should not get fixes  
-   |
 help: Replace with `Decimal` constructor
 
 FURB164 Verbose method `from_decimal` in `Fraction` construction
@@ -476,7 +447,6 @@ FURB164 Verbose method `from_decimal` in `Fraction` construction
 39 | _ = Fraction.from_decimal(numerator=Decimal("4.2"))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 40 | _ = Decimal.from_float(value=4.2)
-   |
 help: Replace with `Fraction` constructor
 
 FURB164 Verbose method `from_float` in `Decimal` construction
@@ -488,7 +458,6 @@ FURB164 Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 41 |
 42 | # Cases with type validation issues - should produce unsafe fixes
-   |
 help: Replace with `Decimal` constructor
 
 FURB164 [*] Verbose method `from_float` in `Decimal` construction
@@ -499,7 +468,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
 44 | _ = Fraction.from_decimal(4.2)  # Invalid type for from_decimal
 45 | _ = Fraction.from_float("4.2")  # Invalid type for from_float
-   |
 help: Replace with `Decimal` constructor
    |
 42 | # Cases with type validation issues - should produce unsafe fixes
@@ -517,7 +485,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
 44 | _ = Fraction.from_decimal(4.2)  # Invalid type for from_decimal
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 | _ = Fraction.from_float("4.2")  # Invalid type for from_float
-   |
 help: Replace with `Fraction` constructor
    |
 43 | _ = Decimal.from_float("4.2")  # Invalid type for from_float
@@ -536,7 +503,6 @@ FURB164 [*] Verbose method `from_float` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 46 |
 47 | # OK - should not trigger the rule
-   |
 help: Replace with `Fraction` constructor
    |
 44 | _ = Fraction.from_decimal(4.2)  # Invalid type for from_decimal
@@ -553,7 +519,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
 60 | _ = Decimal.from_float(1)
    |     ^^^^^^^^^^^^^^^^^^^^^
 61 | _ = Decimal.from_float(True)
-   |
 help: Replace with `Decimal` constructor
    |
 59 | # Cases with int and bool - should produce safe fixes
@@ -571,7 +536,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^
 62 |
 63 | # Cases with non-finite floats - should produce safe fixes
-   |
 help: Replace with `Decimal` constructor
    |
 60 | _ = Decimal.from_float(1)
@@ -588,7 +552,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 65 | _ = Decimal.from_float(float("\x2dnan"))
 66 | _ = Decimal.from_float(float("\N{HYPHEN-MINUS}nan"))
-   |
 help: Replace with `Decimal` constructor
    |
 63 | # Cases with non-finite floats - should produce safe fixes
@@ -605,7 +568,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
 65 | _ = Decimal.from_float(float("\x2dnan"))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 | _ = Decimal.from_float(float("\N{HYPHEN-MINUS}nan"))
-   |
 help: Replace with `Decimal` constructor
    |
 64 | _ = Decimal.from_float(float("-nan"))
@@ -623,7 +585,6 @@ FURB164 [*] Verbose method `from_float` in `Decimal` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |
 68 | # See: https://github.com/astral-sh/ruff/issues/21257
-   |
 help: Replace with `Decimal` constructor
    |
 65 | _ = Decimal.from_float(float("\x2dnan"))
@@ -640,7 +601,6 @@ FURB164 [*] Verbose method `from_float` in `Fraction` construction
 70 | _ = Fraction.from_float(f=4.2)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 71 | _ = Fraction.from_decimal(dec=4)
-   |
 help: Replace with `Fraction` constructor
    |
 69 | # fixes must be safe
@@ -658,7 +618,6 @@ FURB164 [*] Verbose method `from_decimal` in `Fraction` construction
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 72 |
 73 | _ = (
-   |
 help: Replace with `Fraction` constructor
    |
 70 | _ = Fraction.from_float(f=4.2)
@@ -676,7 +635,6 @@ FURB164 [*] Verbose method `from_float` in `Fraction` construction
 76 | |     .from_float(4.2)
    | |____________________^
 77 |   )
-   |
 help: Replace with `Fraction` constructor
    |
 73 | _ = (

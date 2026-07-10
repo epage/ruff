@@ -3,14 +3,12 @@ source: crates/ruff_linter/src/rules/flake8_pyi/mod.rs
 ---
 PYI059 [*] `Generic[]` should always be the last base class
   --> PYI059.py:8:17
-   |
  6 | V = TypeVar('V')
  7 |
  8 | class LinkedList(Generic[T], Sized):  # PYI059
    |                 ^^^^^^^^^^^^^^^^^^^
  9 |     def __init__(self) -> None:
 10 |         self._items: List[T] = []
-   |
 help: Move `Generic[]` to the end
   |
 7 |
@@ -33,7 +31,6 @@ PYI059 [*] `Generic[]` should always be the last base class
 19 | | ):
    | |_^
 20 |       ...
-   |
 help: Move `Generic[]` to the end
    |
 15 | class MyMapping(  # PYI059
@@ -53,7 +50,6 @@ PYI059 [*] `Generic[]` should always be the last base class
 26 | class Foo(Generic, LinkedList):  # PYI059
    |          ^^^^^^^^^^^^^^^^^^^^^
 27 |     pass
-   |
 help: Move `Generic[]` to the end
    |
 25 | # the Generic's position issue persists.
@@ -80,9 +76,7 @@ PYI059 [*] `Generic[]` should always be the last base class
 40 | | ):  # and another one for good measure
    | |_^
 41 |       ...
-   |
 help: Move `Generic[]` to the end
-   |
 32 |     # Part 2 of multiline comment 1
    -     Generic[T]  # comment about Generic[T]  # PYI059
    -     # another comment?
@@ -102,7 +96,6 @@ PYI059 `Generic[]` should always be the last base class
 44 | # in case of multiple Generic[] inheritance, don't fix it.
 45 | class C(Generic[T], Generic[K, V]): ...  # PYI059
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Move `Generic[]` to the end
 
 PYI059 [*] `Generic[]` should always be the last base class
@@ -113,7 +106,6 @@ PYI059 [*] `Generic[]` should always be the last base class
 59 | class C1(Generic[T], str, **{"metaclass": type}):  # PYI059
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 60 |     ...
-   |
 help: Move `Generic[]` to the end
    |
 58 | # https://github.com/astral-sh/ruff/issues/18602
@@ -131,7 +123,6 @@ PYI059 [*] `Generic[]` should always be the last base class
 62 | class C2(Generic[T], str, metaclass=type):  # PYI059
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 63 |     ...
-   |
 help: Move `Generic[]` to the end
    |
 61 |
@@ -149,5 +140,4 @@ PYI059 `Generic[]` should always be the last base class
 65 | class C3(Generic[T], metaclass=type, *[str]):  # PYI059 but no fix
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 |     ...
-   |
 help: Move `Generic[]` to the end

@@ -8,7 +8,6 @@ PGH003 Use specific rule codes when ignoring type issues
   |        ^^^^^^^^^^^^^^
 2 | x = 1  # type:ignore
 3 | x = 1  # type: ignore[attr-defined]  # type: ignore
-  |
 
 PGH003 Use specific rule codes when ignoring type issues
  --> PGH003_0.py:2:8
@@ -18,7 +17,6 @@ PGH003 Use specific rule codes when ignoring type issues
   |        ^^^^^^^^^^^^^
 3 | x = 1  # type: ignore[attr-defined]  # type: ignore
 4 | x = 1  # type: ignoreme # type: ignore
-  |
 
 PGH003 Use specific rule codes when ignoring type issues
  --> PGH003_0.py:3:38
@@ -28,7 +26,6 @@ PGH003 Use specific rule codes when ignoring type issues
 3 | x = 1  # type: ignore[attr-defined]  # type: ignore
   |                                      ^^^^^^^^^^^^^^
 4 | x = 1  # type: ignoreme # type: ignore
-  |
 
 PGH003 Use specific rule codes when ignoring type issues
  --> PGH003_0.py:4:25
@@ -39,4 +36,3 @@ PGH003 Use specific rule codes when ignoring type issues
   |                         ^^^^^^^^^^^^^^
 5 |
 6 | x = 1
-  |

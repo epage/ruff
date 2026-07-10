@@ -7,7 +7,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 1 | def func():
   |     ^^^^
 2 |     return 1
-  |
 help: Add return type annotation: `int`
   |
   - def func():
@@ -22,7 +21,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 5 | def func():
   |     ^^^^
 6 |     return 1.5
-  |
 help: Add return type annotation: `float`
   |
 4 |
@@ -34,12 +32,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 ANN201 [*] Missing return type annotation for public function `func`
   --> auto_return_type.py:9:5
-   |
  9 | def func(x: int):
    |     ^^^^
 10 |     if x > 0:
 11 |         return 1
-   |
 help: Add return type annotation: `float`
    |
 8  |
@@ -55,7 +51,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 16 | def func():
    |     ^^^^
 17 |     return True
-   |
 help: Add return type annotation: `bool`
    |
 15 |
@@ -72,7 +67,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 21 |     if x > 0:
 22 |         return None
-   |
 help: Add return type annotation: `None`
    |
 19 |
@@ -88,7 +82,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 27 | def func(x: int):
    |     ^^^^
 28 |     return 1 or 2.5 if x > 0 else 1.5 or "str"
-   |
 help: Add return type annotation: `str | float`
    |
 26 |
@@ -104,7 +97,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 31 | def func(x: int):
    |     ^^^^
 32 |     return 1 + 2.5 if x > 0 else 1.5 or "str"
-   |
 help: Add return type annotation: `str | float`
    |
 30 |
@@ -121,7 +113,6 @@ ANN201 Missing return type annotation for public function `func`
    |     ^^^^
 36 |     if not x:
 37 |         return None
-   |
 help: Add return type annotation
 
 ANN201 Missing return type annotation for public function `func`
@@ -130,7 +121,6 @@ ANN201 Missing return type annotation for public function `func`
 41 | def func(x: int):
    |     ^^^^
 42 |     return {"foo": 1}
-   |
 help: Add return type annotation
 
 ANN201 [*] Missing return type annotation for public function `func`
@@ -140,7 +130,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 46 |     if not x:
 47 |         return 1
-   |
 help: Add return type annotation: `int`
    |
 44 |
@@ -157,7 +146,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 53 |     if not x:
 54 |         return 1
-   |
 help: Add return type annotation: `int | None`
    |
 51 |
@@ -174,7 +162,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 60 |     if not x:
 61 |         return 1
-   |
 help: Add return type annotation: `str | int | None`
    |
 58 |
@@ -191,7 +178,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 69 |     if x:
 70 |         return 1
-   |
 help: Add return type annotation: `int | None`
    |
 67 |
@@ -207,7 +193,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 73 | def func():
    |     ^^^^
 74 |     x = 1
-   |
 help: Add return type annotation: `None`
    |
 72 |
@@ -224,7 +209,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 78 |     if x > 0:
 79 |         return 1
-   |
 help: Add return type annotation: `int | None`
    |
 76 |
@@ -241,7 +225,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 83 |     match x:
 84 |         case [1, 2, 3]:
-   |
 help: Add return type annotation: `str | int | None`
    |
 81 |
@@ -258,7 +241,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 91 |     for i in range(5):
 92 |         if i > 0:
-   |
 help: Add return type annotation: `int | None`
    |
 89 |
@@ -275,7 +257,6 @@ ANN201 [*] Missing return type annotation for public function `func`
    |     ^^^^
 97 |     for i in range(5):
 98 |         if i > 0:
-   |
 help: Add return type annotation: `int`
    |
 95 |
@@ -292,7 +273,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 105 |     for i in range(5):
 106 |         if i > 0:
-    |
 help: Add return type annotation: `int | None`
     |
 103 |
@@ -309,7 +289,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 113 |     try:
 114 |         pass
-    |
 help: Add return type annotation: `int | None`
     |
 111 |
@@ -326,7 +305,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 120 |     try:
 121 |         pass
-    |
 help: Add return type annotation: `int`
     |
 118 |
@@ -343,7 +321,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 129 |     try:
 130 |         pass
-    |
 help: Add return type annotation: `int`
     |
 127 |
@@ -360,7 +337,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 138 |     try:
 139 |         return 1
-    |
 help: Add return type annotation: `int | None`
     |
 136 |
@@ -377,7 +353,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 147 |     while x > 0:
 148 |         break
-    |
 help: Add return type annotation: `int | None`
     |
 145 |
@@ -395,7 +370,6 @@ ANN201 Missing return type annotation for public function `method`
 158 |     def method(self):
     |         ^^^^^^
 159 |         pass
-    |
 help: Add return type annotation
 
 ANN201 Missing return type annotation for public function `method`
@@ -405,7 +379,6 @@ ANN201 Missing return type annotation for public function `method`
 162 |     def method(self):
     |         ^^^^^^
 163 |         """Docstring."""
-    |
 help: Add return type annotation
 
 ANN201 Missing return type annotation for public function `method`
@@ -415,7 +388,6 @@ ANN201 Missing return type annotation for public function `method`
 166 |     def method(self):
     |         ^^^^^^
 167 |         ...
-    |
 help: Add return type annotation
 
 ANN205 Missing return type annotation for staticmethod `method`
@@ -426,7 +398,6 @@ ANN205 Missing return type annotation for staticmethod `method`
 171 |     def method():
     |         ^^^^^^
 172 |         pass
-    |
 help: Add return type annotation
 
 ANN206 Missing return type annotation for classmethod `method`
@@ -437,7 +408,6 @@ ANN206 Missing return type annotation for classmethod `method`
 176 |     def method(cls):
     |         ^^^^^^
 177 |         pass
-    |
 help: Add return type annotation
 
 ANN201 [*] Missing return type annotation for public function `method`
@@ -448,7 +418,6 @@ ANN201 [*] Missing return type annotation for public function `method`
     |         ^^^^^^
 181 |         if self.x > 0:
 182 |             return 1
-    |
 help: Add return type annotation: `float`
     |
 179 |     @abstractmethod
@@ -465,7 +434,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 188 |     try:
 189 |         pass
-    |
 help: Add return type annotation: `int | None`
     |
 186 |
@@ -482,7 +450,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 195 |     try:
 196 |         pass
-    |
 help: Add return type annotation: `int`
     |
 193 |
@@ -499,7 +466,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 204 |     if not x:
 205 |         raise ValueError
-    |
 help: Add return type annotation: `Never`
     |
 153 | from abc import abstractmethod
@@ -520,7 +486,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 211 |     if not x:
 212 |         raise ValueError
-    |
 help: Add return type annotation: `int`
     |
 209 |
@@ -537,7 +502,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 235 |     if not x:
 236 |         return 1
-    |
 help: Add return type annotation: `int`
     |
 233 |
@@ -554,7 +518,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 241 |     if not x:
 242 |         return 1
-    |
 help: Add return type annotation: `int`
     |
 239 |
@@ -571,7 +534,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 249 |     try:
 250 |         raise ValueError
-    |
 help: Add return type annotation: `int | None`
     |
 247 |
@@ -588,7 +550,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 256 |     try:
 257 |         return 1
-    |
 help: Add return type annotation: `int | None`
     |
 254 |
@@ -605,7 +566,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 263 |     for _ in range(3):
 264 |         if x > 0:
-    |
 help: Add return type annotation: `int`
     |
 261 |
@@ -622,7 +582,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 270 |     if x > 5:
 271 |         raise ValueError
-    |
 help: Add return type annotation: `None`
     |
 268 |
@@ -639,7 +598,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 277 |     if x > 5:
 278 |         raise ValueError
-    |
 help: Add return type annotation: `None`
     |
 275 |
@@ -656,7 +614,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 284 |     if x > 5:
 285 |         raise ValueError
-    |
 help: Add return type annotation: `int | None`
     |
 282 |
@@ -673,7 +630,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 291 |     try:
 292 |         return 5
-    |
 help: Add return type annotation: `int`
     |
 289 |
@@ -690,7 +646,6 @@ ANN201 [*] Missing return type annotation for public function `func`
     |     ^^^^
 300 |     match x:
 301 |         case [1, 2, 3]:
-    |
 help: Add return type annotation: `str | int`
     |
 298 |
@@ -707,7 +662,6 @@ ANN201 Missing return type annotation for public function `func`
 308 | def func():
     |     ^^^^
 309 |     raise NotImplementedError
-    |
 help: Add return type annotation
 
 ANN205 Missing return type annotation for staticmethod `func`
@@ -718,7 +672,6 @@ ANN205 Missing return type annotation for staticmethod `func`
 314 |     def func():
     |         ^^^^
 315 |         raise NotImplementedError
-    |
 help: Add return type annotation
 
 ANN206 Missing return type annotation for classmethod `method`
@@ -728,7 +681,6 @@ ANN206 Missing return type annotation for classmethod `method`
 318 |     def method(cls):
     |         ^^^^^^
 319 |         raise NotImplementedError
-    |
 help: Add return type annotation
 
 ANN201 Missing return type annotation for public function `instance_method`
@@ -739,7 +691,6 @@ ANN201 Missing return type annotation for public function `instance_method`
 321 |     def instance_method(self):
     |         ^^^^^^^^^^^^^^^
 322 |         raise NotImplementedError
-    |
 help: Add return type annotation
 
 ANN201 [*] Missing return type annotation for public function `func`
@@ -749,7 +700,6 @@ ANN201 [*] Missing return type annotation for public function `func`
 326 | def func():
     |     ^^^^
 327 |     raise ValueError
-    |
 help: Add return type annotation: `Never`
     |
 216 |

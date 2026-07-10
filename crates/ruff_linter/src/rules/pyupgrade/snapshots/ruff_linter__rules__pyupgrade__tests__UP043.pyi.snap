@@ -7,7 +7,6 @@ UP043 [*] Unnecessary default type arguments
 4 | def func() -> Generator[int, None, None]:
   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |     yield 42
-  |
 help: Remove default type arguments
   |
 3 |
@@ -22,7 +21,6 @@ UP043 [*] Unnecessary default type arguments
 8 | def func() -> Generator[int, None]:
   |               ^^^^^^^^^^^^^^^^^^^^
 9 |     yield 42
-  |
 help: Remove default type arguments
   |
 7 |
@@ -38,7 +36,6 @@ UP043 [*] Unnecessary default type arguments
    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
 22 |     _ = yield 42
 23 |     return None
-   |
 help: Remove default type arguments
    |
 20 |
@@ -53,7 +50,6 @@ UP043 [*] Unnecessary default type arguments
 31 | async def func() -> AsyncGenerator[int, None]:
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
 32 |     yield 42
-   |
 help: Remove default type arguments
    |
 30 |
@@ -68,7 +64,6 @@ UP043 [*] Unnecessary default type arguments
 47 | def func() -> Generator[str, None, None]:
    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
 48 |     yield "hello"
-   |
 help: Remove default type arguments
    |
 46 |
@@ -83,7 +78,6 @@ UP043 [*] Unnecessary default type arguments
 51 | async def func() -> AsyncGenerator[str, None]:
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
 52 |     yield "hello"
-   |
 help: Remove default type arguments
    |
 50 |
@@ -102,7 +96,6 @@ UP043 [*] Unnecessary default type arguments
 58 | | ]:
    | |_^
 59 |       yield "hello"
-   |
 help: Remove default type arguments
    |
 54 |

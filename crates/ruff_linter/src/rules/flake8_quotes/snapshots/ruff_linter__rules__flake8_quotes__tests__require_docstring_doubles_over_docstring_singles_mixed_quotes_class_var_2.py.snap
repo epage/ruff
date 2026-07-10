@@ -8,7 +8,6 @@ Q002 [*] Single quote docstring found but double quotes preferred
 2 |     'Do not'" start with empty string" ' and lint docstring safely'
   |     ^^^^^^^^
 3 |     ''' Not a docstring '''
-  |
 help: Replace single quotes docstring with double quotes
   |
 1 | class SingleLineDocstrings():
@@ -24,7 +23,6 @@ Q002 [*] Single quote docstring found but double quotes preferred
 2 |     'Do not'" start with empty string" ' and lint docstring safely'
   |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |     ''' Not a docstring '''
-  |
 help: Replace single quotes docstring with double quotes
   |
 1 | class SingleLineDocstrings():
@@ -40,7 +38,6 @@ Q002 [*] Single quote docstring found but double quotes preferred
 6 |         'Do not'" start with empty string" ' and lint docstring safely'
   |         ^^^^^^^^
 7 |         pass
-  |
 help: Replace single quotes docstring with double quotes
   |
 5 |     def foo(self, bar='''not a docstring'''):
@@ -56,9 +53,7 @@ Q002 [*] Single quote docstring found but double quotes preferred
 6 |         'Do not'" start with empty string" ' and lint docstring safely'
   |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |         pass
-  |
 help: Replace single quotes docstring with double quotes
-  |
 5 |     def foo(self, bar='''not a docstring'''):
   -         'Do not'" start with empty string" ' and lint docstring safely'
 6 +         'Do not'" start with empty string" " and lint docstring safely"
@@ -72,9 +67,7 @@ Q002 [*] Single quote docstring found but double quotes preferred
 8 |
 9 |     class Nested(foo()[:]): 'Do not'" start with empty string" ' and lint docstring safely'; pass
   |                             ^^^^^^^^
-  |
 help: Replace single quotes docstring with double quotes
-  |
 8 |
   -     class Nested(foo()[:]): 'Do not'" start with empty string" ' and lint docstring safely'; pass
 9 +     class Nested(foo()[:]): "Do not"" start with empty string" ' and lint docstring safely'; pass
@@ -87,7 +80,6 @@ Q002 [*] Single quote docstring found but double quotes preferred
 8 |
 9 |     class Nested(foo()[:]): 'Do not'" start with empty string" ' and lint docstring safely'; pass
   |                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Replace single quotes docstring with double quotes
   |
 8 |

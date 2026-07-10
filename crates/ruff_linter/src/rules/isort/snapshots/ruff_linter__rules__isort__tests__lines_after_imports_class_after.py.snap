@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> lines_after_imports_class_after.py:1:1
-   |
  1 | / from __future__ import annotations
  2 | |
  3 | | from typing import Any
@@ -16,7 +15,6 @@ I001 [*] Import block is un-sorted or un-formatted
    | |____________________________________^
 10 |   class Thing(object):
 11 |     name: str
-   |
 help: Organize imports
    |
 4  |

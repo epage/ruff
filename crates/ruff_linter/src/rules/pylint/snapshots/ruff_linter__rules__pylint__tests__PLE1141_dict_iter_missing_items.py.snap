@@ -8,7 +8,6 @@ PLE1141 [*] Unpacking a dictionary in iteration without calling `.items()`
 13 | for k, v in d:
    |             ^
 14 |     pass
-   |
 help: Add a call to `.items()`
    |
 12 | # Errors
@@ -26,7 +25,6 @@ PLE1141 [*] Unpacking a dictionary in iteration without calling `.items()`
 16 | for k, v in d_tuple_incorrect_tuple:
    |             ^^^^^^^^^^^^^^^^^^^^^^^
 17 |     pass
-   |
 help: Add a call to `.items()`
    |
 15 |
@@ -44,7 +42,6 @@ PLE1141 [*] Unpacking a dictionary in iteration without calling `.items()`
 37 | for k, v in empty_dict:
    |             ^^^^^^^^^^
 38 |     pass
-   |
 help: Add a call to `.items()`
    |
 36 | empty_dict["x"] = 1
@@ -62,7 +59,6 @@ PLE1141 [*] Unpacking a dictionary in iteration without calling `.items()`
 46 | for k, v in empty_dict_unannotated:
    |             ^^^^^^^^^^^^^^^^^^^^^^
 47 |     pass
-   |
 help: Add a call to `.items()`
    |
 45 | empty_dict_unannotated[("x", "y")] = True
@@ -80,7 +76,6 @@ PLE1141 [*] Unpacking a dictionary in iteration without calling `.items()`
 51 | for k, v in empty_dict_annotated_str_keys:
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 |     pass
-   |
 help: Add a call to `.items()`
    |
 50 | empty_dict_annotated_str_keys["x"] = 1

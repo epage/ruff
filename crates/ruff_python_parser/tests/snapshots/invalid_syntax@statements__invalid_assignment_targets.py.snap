@@ -1585,14 +1585,12 @@ Module(
   |
 
 
-  |
 5 | 5 = 3
 6 |
 7 | 5 += 3
   | ^ Syntax Error: Invalid augmented assignment target
 8 |
 9 | (5): int = 3
-  |
 
 
    |
@@ -1884,7 +1882,6 @@ Module(
 41 | [[a, b], [[42]], d] = [[1, 2], [[3]], 4]
 42 | (x, foo(), y) = (42, 42, 42)
    |     ^^^^^ Syntax Error: Invalid assignment target
-   |
 
 
 ## Semantic Syntax Errors

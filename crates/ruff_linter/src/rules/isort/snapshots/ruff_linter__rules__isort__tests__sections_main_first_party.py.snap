@@ -13,7 +13,6 @@ I001 [*] Import block is un-sorted or un-formatted
   | |__________________^
 7 |
 8 |   os.a
-  |
 help: Organize imports
   |
 2 |

@@ -8,7 +8,6 @@ Q002 [*] Double quote docstring found but single quotes preferred
   | ^^^^^^^^
 2 |
 3 | def foo():
-  |
 help: Replace double quotes docstring with single quotes
   |
   - "Do not"' start with empty string' ' and lint docstring safely'

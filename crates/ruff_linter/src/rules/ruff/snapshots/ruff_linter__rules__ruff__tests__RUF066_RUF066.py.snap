@@ -9,7 +9,6 @@ RUF066 `name` is a property without a `return` statement
 7 |     def name(self):  # ERROR: No return
   |         ^^^^
 8 |         f"{self.first_name} {self.last_name}"
-  |
 
 RUF066 `nested` is a property without a `return` statement
   --> RUF066.py:18:9
@@ -19,7 +18,6 @@ RUF066 `nested` is a property without a `return` statement
    |         ^^^^^^
 19 |         def inner():
 20 |             return 0
-   |
 
 RUF066 `prop2` is a property without a `return` statement
   --> RUF066.py:43:9
@@ -28,4 +26,3 @@ RUF066 `prop2` is a property without a `return` statement
 43 |     def prop2(self):  # ERROR: Not returning something (even when we are inside an ABC)
    |         ^^^^^
 44 |         50
-   |

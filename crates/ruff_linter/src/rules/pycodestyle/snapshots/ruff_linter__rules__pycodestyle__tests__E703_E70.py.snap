@@ -10,7 +10,6 @@ E703 [*] Statement ends with an unnecessary semicolon
    |             ^
 11 | #: E702:1:9 E703:1:23
 12 | del a[:]; a.append(42);
-   |
 help: Remove unnecessary semicolon
    |
 9  | #: E703:1:13
@@ -28,7 +27,6 @@ E703 [*] Statement ends with an unnecessary semicolon
    |                       ^
 13 | #: E704:1:1
 14 | def f(x): return 2
-   |
 help: Remove unnecessary semicolon
    |
 11 | #: E702:1:9 E703:1:23
@@ -46,7 +44,6 @@ E703 [*] Statement ends with an unnecessary semicolon
    |              ^
 26 | #: E701:1:8
 27 | if True: lambda a: b
-   |
 help: Remove unnecessary semicolon
    |
 24 | #: E704:1:8 E702:1:11 E703:1:14
@@ -64,7 +61,6 @@ E703 [*] Statement ends with an unnecessary semicolon
    | ^
 69 | #: E701:2:3
 70 | a = \
-   |
 help: Remove unnecessary semicolon
    |
 66 | #: E703:2:1
@@ -83,7 +79,6 @@ E703 [*] Statement ends with an unnecessary semicolon
    |    ^
 72 | #:
 73 | with x(y) as z: ...
-   |
 help: Remove unnecessary semicolon
    |
 70 | a = \

@@ -9,7 +9,6 @@ RUF059 [*] Unpacked variable `c` is never used
    |      ^
 25 |
 26 |     (x, y) = baz = bar
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 23 |     bar = (1, 2)
@@ -27,14 +26,12 @@ RUF059 [*] Unpacked variable `d` is never used
    |         ^
 25 |
 26 |     (x, y) = baz = bar
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 23 |     bar = (1, 2)
    -     (c, d) = bar
 24 +     (c, _d) = bar
 25 |
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 RUF059 [*] Unpacked variable `x` is never used
@@ -44,9 +41,7 @@ RUF059 [*] Unpacked variable `x` is never used
 25 |
 26 |     (x, y) = baz = bar
    |      ^
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
-   |
 25 |
    -     (x, y) = baz = bar
 26 +     (_x, y) = baz = bar
@@ -61,7 +56,6 @@ RUF059 [*] Unpacked variable `y` is never used
 25 |
 26 |     (x, y) = baz = bar
    |         ^
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 25 |
@@ -79,7 +73,6 @@ RUF059 [*] Unpacked variable `connection` is never used
 66 |     with connect() as (connection, cursor):
    |                        ^^^^^^^^^^
 67 |         cursor.execute("SELECT * FROM users")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 65 |
@@ -97,7 +90,6 @@ RUF059 [*] Unpacked variable `connection` is never used
 74 |     with connect() as (connection, cursor):
    |                        ^^^^^^^^^^
 75 |         cursor.execute("SELECT * FROM users")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 73 |
@@ -114,7 +106,6 @@ RUF059 [*] Unpacked variable `this` is never used
 79 |     with open("file") as my_file, open("") as ((this, that)):
    |                                                 ^^^^
 80 |         print("hello")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 78 | def f():
@@ -131,7 +122,6 @@ RUF059 [*] Unpacked variable `that` is never used
 79 |     with open("file") as my_file, open("") as ((this, that)):
    |                                                       ^^^^
 80 |         print("hello")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 78 | def f():
@@ -150,7 +140,6 @@ RUF059 [*] Unpacked variable `this` is never used
    |                       ^^^^
 87 |     ):
 88 |         print("hello")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 85 |         open("file") as my_file,
@@ -169,7 +158,6 @@ RUF059 [*] Unpacked variable `that` is never used
    |                             ^^^^
 87 |     ):
 88 |         print("hello")
-   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 85 |         open("file") as my_file,
@@ -187,5 +175,4 @@ RUF059 Unpacked variable `x` is never used
 101 |     x, = "1"
     |     ^
 102 |     print(_x)
-    |
 help: Prefix it with an underscore or any other dummy variable pattern

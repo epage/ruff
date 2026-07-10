@@ -8,7 +8,6 @@ TD003 Missing issue link for this TODO
 15 | # TODO: this comment has no
    |   ^^^^
 16 | # link after it
-   |
 
 TD003 Missing issue link for this TODO
   --> TD003.py:18:3
@@ -19,7 +18,6 @@ TD003 Missing issue link for this TODO
    |   ^^^^
 19 | def foo(x):
 20 |     return x
-   |
 
 TD003 Missing issue link for this TODO
   --> TD003.py:31:3
@@ -30,18 +28,15 @@ TD003 Missing issue link for this TODO
    |   ^^^^
 32 | # TODO: followed by a new TODO with an issue link
 33 | # TDO-3870
-   |
 
 TD003 Missing issue link for this TODO
   --> TD003.py:35:9
-   |
 33 | # TDO-3870
 34 |
 35 | # foo # TODO: no link!
    |         ^^^^
 36 |
 37 | # TODO: https://github.com/astral-sh/ruff/pull/9627 A todo with a link on the same line
-   |
 
 TD003 Missing issue link for this TODO
   --> TD003.py:41:3
@@ -52,7 +47,6 @@ TD003 Missing issue link for this TODO
    |   ^^^^
 42 |
 43 | # TODO: here's a TODO on the last line with no link
-   |
 
 TD003 Missing issue link for this TODO
   --> TD003.py:43:3
@@ -61,4 +55,3 @@ TD003 Missing issue link for this TODO
 42 |
 43 | # TODO: here's a TODO on the last line with no link
    |   ^^^^
-   |

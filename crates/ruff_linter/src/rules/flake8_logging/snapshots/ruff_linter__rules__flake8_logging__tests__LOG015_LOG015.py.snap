@@ -10,7 +10,6 @@ LOG015 `debug()` call on root logger
   | ^^^^^^^^^^^^^^^^^^^^^^
 5 | logging.info("ipsum")
 6 | logging.warn("dolor")
-  |
 help: Use own logger instead
 
 LOG015 `info()` call on root logger
@@ -21,7 +20,6 @@ LOG015 `info()` call on root logger
   | ^^^^^^^^^^^^^^^^^^^^^
 6 | logging.warn("dolor")
 7 | logging.warning("sit")
-  |
 help: Use own logger instead
 
 LOG015 `warn()` call on root logger
@@ -33,7 +31,6 @@ LOG015 `warn()` call on root logger
   | ^^^^^^^^^^^^^^^^^^^^^
 7 | logging.warning("sit")
 8 | logging.error("amet")
-  |
 help: Use own logger instead
 
 LOG015 `warning()` call on root logger
@@ -45,31 +42,26 @@ LOG015 `warning()` call on root logger
   | ^^^^^^^^^^^^^^^^^^^^^^
 8 | logging.error("amet")
 9 | logging.critical("consectetur")
-  |
 help: Use own logger instead
 
 LOG015 `error()` call on root logger
   --> LOG015.py:8:1
-   |
  6 | logging.warn("dolor")
  7 | logging.warning("sit")
  8 | logging.error("amet")
    | ^^^^^^^^^^^^^^^^^^^^^
  9 | logging.critical("consectetur")
 10 | logging.log("adipiscing")
-   |
 help: Use own logger instead
 
 LOG015 `critical()` call on root logger
   --> LOG015.py:9:1
-   |
  7 | logging.warning("sit")
  8 | logging.error("amet")
  9 | logging.critical("consectetur")
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | logging.log("adipiscing")
 11 | logging.exception("elit.")
-   |
 help: Use own logger instead
 
 LOG015 `log()` call on root logger
@@ -80,7 +72,6 @@ LOG015 `log()` call on root logger
 10 | logging.log("adipiscing")
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | logging.exception("elit.")
-   |
 help: Use own logger instead
 
 LOG015 `exception()` call on root logger
@@ -90,7 +81,6 @@ LOG015 `exception()` call on root logger
 10 | logging.log("adipiscing")
 11 | logging.exception("elit.")
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Use own logger instead
 
 LOG015 `debug()` call on root logger
@@ -102,7 +92,6 @@ LOG015 `debug()` call on root logger
    | ^^^^^^^^^^^^^^
 27 | info("ipsum")
 28 | warn("dolor")
-   |
 help: Use own logger instead
 
 LOG015 `info()` call on root logger
@@ -113,19 +102,16 @@ LOG015 `info()` call on root logger
    | ^^^^^^^^^^^^^
 28 | warn("dolor")
 29 | warning("sit")
-   |
 help: Use own logger instead
 
 LOG015 `warn()` call on root logger
   --> LOG015.py:28:1
-   |
 26 | debug("Lorem")
 27 | info("ipsum")
 28 | warn("dolor")
    | ^^^^^^^^^^^^^
 29 | warning("sit")
 30 | error("amet")
-   |
 help: Use own logger instead
 
 LOG015 `warning()` call on root logger
@@ -137,7 +123,6 @@ LOG015 `warning()` call on root logger
    | ^^^^^^^^^^^^^^
 30 | error("amet")
 31 | critical("consectetur")
-   |
 help: Use own logger instead
 
 LOG015 `error()` call on root logger
@@ -149,7 +134,6 @@ LOG015 `error()` call on root logger
    | ^^^^^^^^^^^^^
 31 | critical("consectetur")
 32 | log("adipiscing")
-   |
 help: Use own logger instead
 
 LOG015 `critical()` call on root logger
@@ -161,7 +145,6 @@ LOG015 `critical()` call on root logger
    | ^^^^^^^^^^^^^^^^^^^^^^^
 32 | log("adipiscing")
 33 | exception("elit.")
-   |
 help: Use own logger instead
 
 LOG015 `log()` call on root logger
@@ -172,7 +155,6 @@ LOG015 `log()` call on root logger
 32 | log("adipiscing")
    | ^^^^^^^^^^^^^^^^^
 33 | exception("elit.")
-   |
 help: Use own logger instead
 
 LOG015 `exception()` call on root logger
@@ -182,5 +164,4 @@ LOG015 `exception()` call on root logger
 32 | log("adipiscing")
 33 | exception("elit.")
    | ^^^^^^^^^^^^^^^^^^
-   |
 help: Use own logger instead

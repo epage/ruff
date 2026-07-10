@@ -7,7 +7,6 @@ PYI047 Private TypeAlias `_UnusedPrivateTypeAlias` is never used
 6 | _UnusedPrivateTypeAlias: TypeAlias = int | None
   | ^^^^^^^^^^^^^^^^^^^^^^^
 7 | _T: typing.TypeAlias = str
-  |
 
 PYI047 Private TypeAlias `_T` is never used
  --> PYI047.pyi:7:1
@@ -17,7 +16,6 @@ PYI047 Private TypeAlias `_T` is never used
   | ^^
 8 |
 9 | # OK
-  |
 
 PYI047 Private TypeAlias `_UnusedPEP695` is never used
   --> PYI047.pyi:24:6
@@ -27,7 +25,6 @@ PYI047 Private TypeAlias `_UnusedPEP695` is never used
 24 | type _UnusedPEP695 = int
    |      ^^^^^^^^^^^^^
 25 | type _UnusedGeneric695[T] = list[T]
-   |
 
 PYI047 Private TypeAlias `_UnusedGeneric695` is never used
   --> PYI047.pyi:25:6
@@ -37,4 +34,3 @@ PYI047 Private TypeAlias `_UnusedGeneric695` is never used
    |      ^^^^^^^^^^^^^^^^^
 26 |
 27 | type _UsedPEP695 = str
-   |

@@ -9,7 +9,6 @@ F401 [*] `a.b` imported but unused
 4 |     import a.b
   |            ^^^
 5 |     a.foo()
-  |
 help: Remove unused import: `a.b`
   |
 3 |     import a

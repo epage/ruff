@@ -11,7 +11,6 @@ I001 [*] Import block is un-sorted or un-formatted
   | |________________________________________^
 5 |
 6 |   h = 2 * π * ℏ
-  |
 help: Organize imports
   |
 1 + import numpy as CƐgHHHhIILlNZΩZKÅBCeEFio

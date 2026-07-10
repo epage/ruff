@@ -10,7 +10,6 @@ E741 Ambiguous variable name: `l`
   | ^
 4 | I = 0
 5 | O = 0
-  |
 
 E741 Ambiguous variable name: `I`
  --> E741.py:4:1
@@ -20,7 +19,6 @@ E741 Ambiguous variable name: `I`
   | ^
 5 | O = 0
 6 | l: int = 0
-  |
 
 E741 Ambiguous variable name: `O`
  --> E741.py:5:1
@@ -30,7 +28,6 @@ E741 Ambiguous variable name: `O`
 5 | O = 0
   | ^
 6 | l: int = 0
-  |
 
 E741 Ambiguous variable name: `l`
  --> E741.py:6:1
@@ -45,24 +42,20 @@ E741 Ambiguous variable name: `l`
 
 E741 Ambiguous variable name: `l`
   --> E741.py:8:4
-   |
  6 | l: int = 0
  7 |
  8 | a, l = 0, 1
    |    ^
  9 | [a, l] = 0, 1
 10 | a, *l = 0, 1, 2
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:9:5
-   |
  8 | a, l = 0, 1
  9 | [a, l] = 0, 1
    |     ^
 10 | a, *l = 0, 1, 2
 11 | a = l = 0
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:10:5
@@ -72,18 +65,15 @@ E741 Ambiguous variable name: `l`
 10 | a, *l = 0, 1, 2
    |     ^
 11 | a = l = 0
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:11:5
-   |
  9 | [a, l] = 0, 1
 10 | a, *l = 0, 1, 2
 11 | a = l = 0
    |     ^
 12 |
 13 | o = 0
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:16:5
@@ -93,7 +83,6 @@ E741 Ambiguous variable name: `l`
 16 | for l in range(3):
    |     ^
 17 |     pass
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:20:8
@@ -101,7 +90,6 @@ E741 Ambiguous variable name: `l`
 20 | for a, l in zip(range(3), range(3)):
    |        ^
 21 |     pass
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:25:12
@@ -110,7 +98,6 @@ E741 Ambiguous variable name: `l`
 25 |     global l
    |            ^
 26 |     l = 0
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:26:5
@@ -119,7 +106,6 @@ E741 Ambiguous variable name: `l`
 25 |     global l
 26 |     l = 0
    |     ^
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:30:5
@@ -129,7 +115,6 @@ E741 Ambiguous variable name: `l`
    |     ^
 31 |
 32 |     def f3():
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:33:18
@@ -138,7 +123,6 @@ E741 Ambiguous variable name: `l`
 33 |         nonlocal l
    |                  ^
 34 |         l = 1
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:34:9
@@ -149,7 +133,6 @@ E741 Ambiguous variable name: `l`
    |         ^
 35 |
 36 |     f3()
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:40:8
@@ -157,7 +140,6 @@ E741 Ambiguous variable name: `l`
 40 | def f4(l, /, I):
    |        ^
 41 |     return l, I, O
-   |
 
 E741 Ambiguous variable name: `I`
   --> E741.py:40:14
@@ -165,7 +147,6 @@ E741 Ambiguous variable name: `I`
 40 | def f4(l, /, I):
    |              ^
 41 |     return l, I, O
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:44:8
@@ -173,7 +154,6 @@ E741 Ambiguous variable name: `l`
 44 | def f5(l=0, *, I=1):
    |        ^
 45 |     return l, I
-   |
 
 E741 Ambiguous variable name: `I`
   --> E741.py:44:16
@@ -181,7 +161,6 @@ E741 Ambiguous variable name: `I`
 44 | def f5(l=0, *, I=1):
    |                ^
 45 |     return l, I
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:48:9
@@ -189,7 +168,6 @@ E741 Ambiguous variable name: `l`
 48 | def f6(*l, **I):
    |         ^
 49 |     return l, I
-   |
 
 E741 Ambiguous variable name: `I`
   --> E741.py:48:14
@@ -197,7 +175,6 @@ E741 Ambiguous variable name: `I`
 48 | def f6(*l, **I):
    |              ^
 49 |     return l, I
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:57:16
@@ -205,7 +182,6 @@ E741 Ambiguous variable name: `l`
 57 | with ctx1() as l:
    |                ^
 58 |     pass
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:66:20
@@ -213,7 +189,6 @@ E741 Ambiguous variable name: `l`
 66 | with ctx2() as (a, l):
    |                    ^
 67 |     pass
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:71:22
@@ -223,7 +198,6 @@ E741 Ambiguous variable name: `l`
 71 | except ValueError as l:
    |                      ^
 72 |     pass
-   |
 
 E741 Ambiguous variable name: `l`
   --> E741.py:74:5
@@ -233,4 +207,3 @@ E741 Ambiguous variable name: `l`
 74 | if (l := 5) > 0:
    |     ^
 75 |     pass
-   |

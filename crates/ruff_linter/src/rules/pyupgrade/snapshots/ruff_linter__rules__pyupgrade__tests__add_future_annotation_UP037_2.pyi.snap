@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/pyupgrade/mod.rs
 ---
 UP037 [*] Remove quotes from type annotation
  --> UP037_2.pyi:3:14
-  |
 1 | # https://github.com/astral-sh/ruff/issues/7102
 2 |
 3 | def f(a: Foo['SingleLine  # Comment']): ...
   |              ^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove quotes
   |
 2 |
@@ -26,7 +24,6 @@ UP037 [*] Remove quotes from type annotation
 7 | |     Multi |
 8 | |     Line]''']): ...
   | |____________^
-  |
 help: Remove quotes
   |
 5 |
@@ -47,7 +44,6 @@ UP037 [*] Remove quotes from type annotation
 13 | |     Line  # Comment
 14 | | ]''']): ...
    | |____^
-   |
 help: Remove quotes
    |
 10 |
@@ -68,7 +64,6 @@ UP037 [*] Remove quotes from type annotation
 18 | |     Multi |
 19 | |     Line]  # Comment''']): ...
    | |_______________________^
-   |
 help: Remove quotes
    |
 16 |
@@ -90,7 +85,6 @@ UP037 [*] Remove quotes from type annotation
 24 | |     Multi |
 25 | |     Line]  # Comment''']): ...
    | |_______________________^
-   |
 help: Remove quotes
    |
 21 |
@@ -106,12 +100,10 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:28:10
-   |
 28 |   def f(a: '''list[int]
    |  __________^
 29 | |     ''' = []): ...
    | |_______^
-   |
 help: Remove quotes
    |
 27 |
@@ -124,12 +116,10 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:32:4
-   |
 32 |   a: '''\\
    |  ____^
 33 | | list[int]''' = [42]
    | |____________^
-   |
 help: Remove quotes
    |
 31 |
@@ -148,7 +138,6 @@ UP037 [*] Remove quotes from type annotation
 37 | |     list[int]
 38 | |     ''' = []): ...
    | |_______^
-   |
 help: Remove quotes
    |
 35 |
@@ -171,7 +160,6 @@ UP037 [*] Remove quotes from type annotation
 45 | |     Line
 46 | |     ]  # Comment''']): ...
    | |___________________^
-   |
 help: Remove quotes
    |
 40 |
@@ -189,14 +177,11 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:49:4
-   |
 49 |   a: '''list
    |  ____^
 50 | | [int]''' = [42]
    | |________^
-   |
 help: Remove quotes
-   |
 48 |
    - a: '''list
    - [int]''' = [42]

@@ -9,7 +9,6 @@ N801 Class name `stillBad` should use CapWords convention
 4 | class stillBad:
   |       ^^^^^^^^
 5 |     pass
-  |
 
 N801 Class name `STILL_BAD` should use CapWords convention
   --> N801.py:10:7
@@ -19,4 +18,3 @@ N801 Class name `STILL_BAD` should use CapWords convention
 10 | class STILL_BAD:
    |       ^^^^^^^^^
 11 |     pass
-   |

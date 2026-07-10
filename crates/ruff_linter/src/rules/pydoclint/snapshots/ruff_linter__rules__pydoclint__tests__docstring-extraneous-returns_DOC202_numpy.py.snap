@@ -21,7 +21,6 @@ DOC202 Docstring should not have a returns section because the function doesn't 
 28 | |     """
    | |_______^
 29 |       print('test')
-   |
 help: Remove the "Returns" section
 
 DOC202 Docstring should not have a returns section because the function doesn't return anything
@@ -44,5 +43,4 @@ DOC202 Docstring should not have a returns section because the function doesn't 
 48 | |         """
    | |___________^
 49 |           print('test')
-   |
 help: Remove the "Returns" section

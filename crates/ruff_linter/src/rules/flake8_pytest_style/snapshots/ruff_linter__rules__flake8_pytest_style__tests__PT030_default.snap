@@ -8,7 +8,6 @@ PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use
 16 |     with pytest.warns(UserWarning):
    |                       ^^^^^^^^^^^
 17 |         pass
-   |
 
 PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use a more specific warning
   --> PT030.py:19:40
@@ -18,7 +17,6 @@ PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use
 19 |     with pytest.warns(expected_warning=UserWarning):
    |                                        ^^^^^^^^^^^
 20 |         pass
-   |
 
 PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use a more specific warning
   --> PT030.py:27:23
@@ -27,7 +25,6 @@ PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use
 27 |     with pytest.warns(UserWarning, match=None):
    |                       ^^^^^^^^^^^
 28 |         pass
-   |
 
 PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use a more specific warning
   --> PT030.py:30:23
@@ -37,7 +34,6 @@ PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use
 30 |     with pytest.warns(UserWarning, match=""):
    |                       ^^^^^^^^^^^
 31 |         pass
-   |
 
 PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use a more specific warning
   --> PT030.py:33:23
@@ -47,4 +43,3 @@ PT030 `pytest.warns(UserWarning)` is too broad, set the `match` parameter or use
 33 |     with pytest.warns(UserWarning, match=f""):
    |                       ^^^^^^^^^^^
 34 |         pass
-   |

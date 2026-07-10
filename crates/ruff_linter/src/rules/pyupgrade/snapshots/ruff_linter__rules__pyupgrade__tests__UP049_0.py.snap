@@ -8,7 +8,6 @@ UP049 [*] Generic class uses private type parameters
 2 | class Generic[_T]:
   |               ^^
 3 |     buf: list[_T]
-  |
 help: Rename type parameter to remove leading underscores
   |
 1 | # simple case, replace _T in signature and body
@@ -30,7 +29,6 @@ UP049 [*] Generic function uses private type parameters
    |            ^^
 11 |     y: _T = var[1]
 12 |     return y
-   |
 help: Rename type parameter to remove leading underscores
    |
 9  | # simple case, replace _T in signature and body
@@ -50,7 +48,6 @@ UP049 [*] Generic function uses private type parameters
    |     ^^
 18 |     _U,  # second generic
 19 | ](args):
-   |
 help: Rename type parameter to remove leading underscores
    |
 16 | def many_generics[
@@ -68,7 +65,6 @@ UP049 [*] Generic function uses private type parameters
    |     ^^
 19 | ](args):
 20 |     return args
-   |
 help: Rename type parameter to remove leading underscores
    |
 17 |     _T,  # first generic
@@ -84,7 +80,6 @@ UP049 [*] Generic function uses private type parameters
    |       ^^
 28 |     cast("_T", v)
 29 |     cast("Literal['_T']")
-   |
 help: Rename type parameter to remove leading underscores
    |
 26 |

@@ -10,7 +10,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
   |                  ^^^^^^^^^^^^^
 8 |         pass
 9 |     a = [line.lower() for line in f.readlines()]
-  |
 help: Remove `readlines()`
   |
 6 | with open("FURB129.py") as f:
@@ -21,14 +20,12 @@ help: Remove `readlines()`
 
 FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
   --> FURB129.py:9:35
-   |
  7 |     for _line in f.readlines():
  8 |         pass
  9 |     a = [line.lower() for line in f.readlines()]
    |                                   ^^^^^^^^^^^^^
 10 |     b = {line.upper() for line in f.readlines()}
 11 |     c = {line.lower(): line.upper() for line in f.readlines()}
-   |
 help: Remove `readlines()`
    |
 8  |         pass
@@ -45,7 +42,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 10 |     b = {line.upper() for line in f.readlines()}
    |                                   ^^^^^^^^^^^^^
 11 |     c = {line.lower(): line.upper() for line in f.readlines()}
-   |
 help: Remove `readlines()`
    |
 9  |     a = [line.lower() for line in f.readlines()]
@@ -63,7 +59,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
    |                                                 ^^^^^^^^^^^^^
 12 |
 13 | with Path("FURB129.py").open() as f:
-   |
 help: Remove `readlines()`
    |
 10 |     b = {line.upper() for line in f.readlines()}
@@ -79,7 +74,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 14 |     for _line in f.readlines():
    |                  ^^^^^^^^^^^^^
 15 |         pass
-   |
 help: Remove `readlines()`
    |
 13 | with Path("FURB129.py").open() as f:
@@ -96,7 +90,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 17 | for _line in open("FURB129.py").readlines():
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 18 |     pass
-   |
 help: Remove `readlines()`
    |
 16 |
@@ -113,7 +106,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 20 | for _line in Path("FURB129.py").open().readlines():
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |     pass
-   |
 help: Remove `readlines()`
    |
 19 |
@@ -131,7 +123,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
    |                  ^^^^^^^^^^^^^
 27 |         pass
 28 |     f.close()
-   |
 help: Remove `readlines()`
    |
 25 |     f = Path("FURB129.py").open()
@@ -147,7 +138,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 32 |     for _line in f.readlines():
    |                  ^^^^^^^^^^^^^
 33 |         pass
-   |
 help: Remove `readlines()`
    |
 31 | def func(f: io.BytesIO):
@@ -165,23 +155,19 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
    |                      ^^^^^^^^^^^^^
 39 |             pass
 40 |         for _line in bar.readlines():
-   |
 help: Remove `readlines()`
    |
 37 |     with (open("FURB129.py") as f, foo as bar):
    -         for _line in f.readlines():
 38 +         for _line in f:
 39 |             pass
-   |
 
 FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
   --> FURB129.py:47:17
-   |
 46 | with builtins.open("FURB129.py") as f:
 47 |     for line in f.readlines():
    |                 ^^^^^^^^^^^^^
 48 |         pass
-   |
 help: Remove `readlines()`
    |
 46 | with builtins.open("FURB129.py") as f:
@@ -197,7 +183,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 54 |     for line in f.readlines():
    |                 ^^^^^^^^^^^^^
 55 |         pass
-   |
 help: Remove `readlines()`
    |
 53 | with o("FURB129.py") as f:
@@ -214,7 +199,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 93 |     for line in (f).readlines():
    |                 ^^^^^^^^^^^^^^^
 94 |         pass
-   |
 help: Remove `readlines()`
    |
 92 | with open("furb129.py") as f:
@@ -229,7 +213,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 96 | with open("furb129.py") as f:
 97 |     [line for line in (f).readlines()]
    |                       ^^^^^^^^^^^^^^^
-   |
 help: Remove `readlines()`
    |
 96 | with open("furb129.py") as f:
@@ -246,7 +229,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
     |                 ^^^^^^^^^^^^^^^^^^^
 102 |         pass
 103 |     for line in(f).readlines():
-    |
 help: Remove `readlines()`
     |
 100 | with open("furb129.py") as f:
@@ -263,7 +245,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
 103 |     for line in(f).readlines():
     |                ^^^^^^^^^^^^^^^
 104 |         pass
-    |
 help: Remove `readlines()`
     |
 102 |         pass
@@ -280,7 +261,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
     |                             ^^^^^^^^^^^^^
 108 |
 109 | # https://github.com/astral-sh/ruff/issues/18843
-    |
 help: Remove `readlines()`
     |
 106 |     # Test case for issue #17683 (missing space before keyword)
@@ -300,7 +280,6 @@ FURB129 [*] Instead of calling `readlines()`, iterate over file object directly
     | |_________^
 115 |       ):
 116 |           ...
-    |
 help: Remove `readlines()`
     |
 111 |     for line in (  # 1

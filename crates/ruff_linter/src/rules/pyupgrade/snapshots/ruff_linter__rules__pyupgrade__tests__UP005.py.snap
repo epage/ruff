@@ -10,7 +10,6 @@ UP005 [*] `assertEquals` is deprecated, use `assertEqual`
   |         ^^^^^^^^^^^^^^^^^
 7 |         self.assertEquals(1, 2)
 8 |         self.assertEqual(3, 4)
-  |
 help: Replace `assertEqual` with `assertEquals`
   |
 5 |     def test(self) -> None:
@@ -28,7 +27,6 @@ UP005 [*] `assertEquals` is deprecated, use `assertEqual`
   |         ^^^^^^^^^^^^^^^^^
 8 |         self.assertEqual(3, 4)
 9 |         self.failUnlessAlmostEqual(1, 1.1)
-  |
 help: Replace `assertEqual` with `assertEquals`
   |
 6 |         self.assertEquals (1, 2)
@@ -39,15 +37,12 @@ help: Replace `assertEqual` with `assertEquals`
 
 UP005 [*] `failUnlessAlmostEqual` is deprecated, use `assertAlmostEqual`
   --> UP005.py:9:9
-   |
  7 |         self.assertEquals(1, 2)
  8 |         self.assertEqual(3, 4)
  9 |         self.failUnlessAlmostEqual(1, 1.1)
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 |         self.assertNotRegexpMatches("a", "b")
-   |
 help: Replace `assertAlmostEqual` with `failUnlessAlmostEqual`
-   |
 8  |         self.assertEqual(3, 4)
    -         self.failUnlessAlmostEqual(1, 1.1)
 9  +         self.assertAlmostEqual(1, 1.1)
@@ -61,7 +56,6 @@ UP005 [*] `assertNotRegexpMatches` is deprecated, use `assertNotRegex`
  9 |         self.failUnlessAlmostEqual(1, 1.1)
 10 |         self.assertNotRegexpMatches("a", "b")
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace `assertNotRegex` with `assertNotRegexpMatches`
    |
 9  |         self.failUnlessAlmostEqual(1, 1.1)

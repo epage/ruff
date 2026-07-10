@@ -8,4 +8,3 @@ PT011 `pytest.raises(ZeroDivisionError)` is too broad, set the `match` parameter
 13 |     with pytest.raises(ZeroDivisionError):
    |                        ^^^^^^^^^^^^^^^^^
 14 |         raise ZeroDivisionError("Can't divide by 0")
-   |

@@ -10,4 +10,3 @@ PLR0911 Too many return statements (11 > 6)
   |     ^^^^^^^^^^^^^^^
 5 |     if arg == 1:
 6 |         return 1
-  |

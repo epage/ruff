@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> natural_order.py:1:1
-   |
  1 | / import numpy1
  2 | | import numpy10
  3 | | import numpy2
@@ -21,7 +20,6 @@ I001 [*] Import block is un-sorted or un-formatted
 15 | |     uint64,
 16 | | )
    | |_^
-   |
 help: Organize imports
    |
 1  | import numpy1

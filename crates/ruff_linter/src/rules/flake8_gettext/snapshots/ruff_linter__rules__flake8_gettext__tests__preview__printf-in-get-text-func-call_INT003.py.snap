@@ -8,7 +8,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
   |   ^^^^^^^^^^^^^
 2 | gettext("%s" % "line")
 3 | ngettext("%s" % "line", "%s" % "lines", 2)
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
  --> INT003.py:2:9
@@ -17,7 +16,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 2 | gettext("%s" % "line")
   |         ^^^^^^^^^^^^^
 3 | ngettext("%s" % "line", "%s" % "lines", 2)
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
  --> INT003.py:3:10
@@ -28,7 +26,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
   |          ^^^^^^^^^^^^^
 4 |
 5 | _gettext("%s" % "line")  # no lint
-  |
 
 INT003 printf-style format in plural argument is resolved before function call
  --> INT003.py:3:25
@@ -39,7 +36,6 @@ INT003 printf-style format in plural argument is resolved before function call
   |                         ^^^^^^^^^^^^^^
 4 |
 5 | _gettext("%s" % "line")  # no lint
-  |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:18:21
@@ -50,17 +46,14 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |                     ^^^^^^^^^^^^^^^^^^^
 19 | gettext_mod.ngettext("Hello, %s!" % name, "Hello, %ss!" % name, 2)
 20 | gettext_fn("Hello, %s!" % name)
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:19:22
-   |
 18 | gettext_mod.gettext("Hello, %s!" % name)
 19 | gettext_mod.ngettext("Hello, %s!" % name, "Hello, %ss!" % name, 2)
    |                      ^^^^^^^^^^^^^^^^^^^
 20 | gettext_fn("Hello, %s!" % name)
 21 | ngettext_fn("Hello, %s!" % name, "Hello, %ss!" % name, 2)
-   |
 
 INT003 printf-style format in plural argument is resolved before function call
   --> INT003.py:19:43
@@ -70,7 +63,6 @@ INT003 printf-style format in plural argument is resolved before function call
    |                                           ^^^^^^^^^^^^^^^^^^^^
 20 | gettext_fn("Hello, %s!" % name)
 21 | ngettext_fn("Hello, %s!" % name, "Hello, %ss!" % name, 2)
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:20:12
@@ -80,7 +72,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 20 | gettext_fn("Hello, %s!" % name)
    |            ^^^^^^^^^^^^^^^^^^^
 21 | ngettext_fn("Hello, %s!" % name, "Hello, %ss!" % name, 2)
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:21:13
@@ -89,7 +80,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 20 | gettext_fn("Hello, %s!" % name)
 21 | ngettext_fn("Hello, %s!" % name, "Hello, %ss!" % name, 2)
    |             ^^^^^^^^^^^^^^^^^^^
-   |
 
 INT003 printf-style format in plural argument is resolved before function call
   --> INT003.py:21:34
@@ -98,39 +88,32 @@ INT003 printf-style format in plural argument is resolved before function call
 20 | gettext_fn("Hello, %s!" % name)
 21 | ngettext_fn("Hello, %s!" % name, "Hello, %ss!" % name, 2)
    |                                  ^^^^^^^^^^^^^^^^^^^^
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:27:14
-   |
 25 | def _(message): return message
 26 |
 27 | animals = [_("%s" %"mollusk"),
    |              ^^^^^^^^^^^^^^^
 28 |            _("%s" %"albatross"),
 29 |            _("%s" %"rat"),
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:28:14
-   |
 27 | animals = [_("%s" %"mollusk"),
 28 |            _("%s" %"albatross"),
    |              ^^^^^^^^^^^^^^^^^
 29 |            _("%s" %"rat"),
 30 |            _("%s" %"penguin"),
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:29:14
-   |
 27 | animals = [_("%s" %"mollusk"),
 28 |            _("%s" %"albatross"),
 29 |            _("%s" %"rat"),
    |              ^^^^^^^^^^^
 30 |            _("%s" %"penguin"),
 31 |            _("%s" %"python"),]
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:30:14
@@ -140,7 +123,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 30 |            _("%s" %"penguin"),
    |              ^^^^^^^^^^^^^^^
 31 |            _("%s" %"python"),]
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:31:14
@@ -151,7 +133,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |              ^^^^^^^^^^^^^^
 32 |
 33 | del _
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:37:13
@@ -160,7 +141,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 36 |     print(_(a))
 37 |     print(_("%s" % a))
    |             ^^^^^^^^
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:47:12
@@ -171,7 +151,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
    |            ^^^^^^^^^^^^^
 48 | builtins.gettext("%s" % "line")
 49 | builtins.ngettext("%s" % "line", "%s" % "lines", 2)
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:48:18
@@ -180,7 +159,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 48 | builtins.gettext("%s" % "line")
    |                  ^^^^^^^^^^^^^
 49 | builtins.ngettext("%s" % "line", "%s" % "lines", 2)
-   |
 
 INT003 printf-style format is resolved before function call; consider `_("string %s") % arg`
   --> INT003.py:49:19
@@ -189,7 +167,6 @@ INT003 printf-style format is resolved before function call; consider `_("string
 48 | builtins.gettext("%s" % "line")
 49 | builtins.ngettext("%s" % "line", "%s" % "lines", 2)
    |                   ^^^^^^^^^^^^^
-   |
 
 INT003 printf-style format in plural argument is resolved before function call
   --> INT003.py:49:34
@@ -198,4 +175,3 @@ INT003 printf-style format in plural argument is resolved before function call
 48 | builtins.gettext("%s" % "line")
 49 | builtins.ngettext("%s" % "line", "%s" % "lines", 2)
    |                                  ^^^^^^^^^^^^^^
-   |

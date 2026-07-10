@@ -8,7 +8,6 @@ UP045 [*] Use `X | None` for type annotations
    |    ^^^^^^^^^^^^^
 11 | x: "Optional[str]"           # UP045
 12 | cast("Optional[str]", None)  # UP045
-   |
 help: Convert to `X | None`
    |
 9  |
@@ -26,7 +25,6 @@ UP045 [*] Use `X | None` for type annotations
    |     ^^^^^^^^^^^^^
 12 | cast("Optional[str]", None)  # UP045
 13 | cast(Optional[str], None)    # okay, str | None is a runtime error
-   |
 help: Convert to `X | None`
    |
 10 | x: Optional[str]             # UP045
@@ -45,7 +43,6 @@ UP045 [*] Use `X | None` for type annotations
    |       ^^^^^^^^^^^^^
 13 | cast(Optional[str], None)    # okay, str | None is a runtime error
 14 | x: TypeAlias = "Optional[str]"  # UP045
-   |
 help: Convert to `X | None`
    |
 11 | x: "Optional[str]"           # UP045
@@ -63,7 +60,6 @@ UP045 [*] Use `X | None` for type annotations
 14 | x: TypeAlias = "Optional[str]"  # UP045
    |                 ^^^^^^^^^^^^^
 15 | x: TypeAlias = Optional[str]  # okay
-   |
 help: Convert to `X | None`
    |
 13 | cast(Optional[str], None)    # okay, str | None is a runtime error

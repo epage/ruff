@@ -9,7 +9,6 @@ PT011 `pytest.raises(pickle.PicklingError)` is too broad, set the `match` parame
 34 |     with pytest.raises(PicklingError):
    |                        ^^^^^^^^^^^^^
 35 |         raise PicklingError("Can't pickle")
-   |
 
 PT011 `pytest.raises(pickle.UnpicklingError)` is too broad, set the `match` parameter or use a more specific exception
   --> PT011.py:37:24
@@ -19,4 +18,3 @@ PT011 `pytest.raises(pickle.UnpicklingError)` is too broad, set the `match` para
 37 |     with pytest.raises(UnpicklingError):
    |                        ^^^^^^^^^^^^^^^
 38 |         raise UnpicklingError("Can't unpickle")
-   |

@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/flake8_pyi/mod.rs
 ---
 PYI013 [*] Non-empty class body must not contain `...`
  --> PYI013.py:3:5
-  |
 1 | class OneAttributeClass:
 2 |     value: int
 3 |     ...
   |     ^^^
-  |
 help: Remove unnecessary `...`
   |
 2 |     value: int
@@ -23,7 +21,6 @@ PYI013 [*] Non-empty class body must not contain `...`
 7 |     ...
   |     ^^^
 8 |     value: int
-  |
 help: Remove unnecessary `...`
   |
 6 | class OneAttributeClass2:
@@ -38,13 +35,10 @@ PYI013 [*] Non-empty class body must not contain `...`
 12 |     ...
    |     ^^^
 13 |     ...
-   |
 help: Remove unnecessary `...`
-   |
 12 |     ...
    -     ...
 13 |
-   |
 
 PYI013 [*] Non-empty class body must not contain `...`
   --> PYI013.py:13:5
@@ -53,9 +47,7 @@ PYI013 [*] Non-empty class body must not contain `...`
 12 |     ...
 13 |     ...
    |     ^^^
-   |
 help: Remove unnecessary `...`
-   |
 12 |     ...
    -     ...
 13 |
@@ -68,9 +60,7 @@ PYI013 [*] Non-empty class body must not contain `...`
 20 |
 21 |     ...
    |     ^^^
-   |
 help: Remove unnecessary `...`
-   |
 20 |
    -     ...
 21 |
@@ -83,7 +73,6 @@ PYI013 [*] Non-empty class body must not contain `...`
 25 |     value: int
 26 |     ...
    |     ^^^
-   |
 help: Remove unnecessary `...`
    |
 25 |     value: int
@@ -98,24 +87,20 @@ PYI013 [*] Non-empty class body must not contain `...`
 30 |     ...
    |     ^^^
 31 |     value: int
-   |
 help: Remove unnecessary `...`
    |
 29 | class NonEmptyChild2(Exception):
    -     ...
 30 |     value: int
-   |
 
 PYI013 [*] Non-empty class body must not contain `...`
   --> PYI013.py:36:5
-   |
 34 | class NonEmptyWithInit:
 35 |     value: int
 36 |     ...
    |     ^^^
 37 |
 38 |     def __init__():
-   |
 help: Remove unnecessary `...`
    |
 35 |     value: int
@@ -130,7 +115,6 @@ PYI013 [*] Non-empty class body must not contain `...`
 43 |     value: int
 44 |     ... # preserve me
    |     ^^^
-   |
 help: Remove unnecessary `...`
    |
 43 |     value: int

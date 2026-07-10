@@ -12,4 +12,3 @@ RUF200 Failed to parse pyproject.toml: URL requirement must be preceded by a pac
    |                ^^^^^^^^^^^^^^^^^^^^^^
 11 | zip-safe = false
 12 | version = "..."
-   |

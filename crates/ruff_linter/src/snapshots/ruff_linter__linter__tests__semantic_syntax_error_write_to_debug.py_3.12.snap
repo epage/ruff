@@ -8,7 +8,6 @@ invalid-syntax: cannot assign to `__debug__`
   | ^^^^^^^^^
 2 |
 3 | def process(__debug__):
-  |
 
 invalid-syntax: cannot assign to `__debug__`
  --> resources/test/fixtures/semantic_errors/write_to_debug.py:3:13
@@ -18,7 +17,6 @@ invalid-syntax: cannot assign to `__debug__`
 3 | def process(__debug__):
   |             ^^^^^^^^^
 4 |     pass
-  |
 
 invalid-syntax: cannot assign to `__debug__`
  --> resources/test/fixtures/semantic_errors/write_to_debug.py:6:15
@@ -28,4 +26,3 @@ invalid-syntax: cannot assign to `__debug__`
 6 | class Generic[__debug__]:
   |               ^^^^^^^^^
 7 |     pass
-  |

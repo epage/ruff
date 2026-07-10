@@ -10,7 +10,6 @@ PLE0118 Name `x` is used prior to global declaration on line 7
   |           ^
 6 |
 7 |     global x
-  |
 
 PLE0118 Name `x` is used prior to global declaration on line 17
   --> load_before_global_declaration.py:15:11
@@ -21,7 +20,6 @@ PLE0118 Name `x` is used prior to global declaration on line 17
    |           ^
 16 |
 17 |     global x
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 25
   --> load_before_global_declaration.py:23:11
@@ -31,7 +29,6 @@ PLE0118 Name `x` is used prior to global declaration on line 25
    |           ^
 24 |
 25 |     global x, y
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 35
   --> load_before_global_declaration.py:33:11
@@ -42,7 +39,6 @@ PLE0118 Name `x` is used prior to global declaration on line 35
    |           ^
 34 |
 35 |     global x, y
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 43
   --> load_before_global_declaration.py:41:5
@@ -52,7 +48,6 @@ PLE0118 Name `x` is used prior to global declaration on line 43
    |     ^
 42 |
 43 |     global x
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 53
   --> load_before_global_declaration.py:51:5
@@ -63,7 +58,6 @@ PLE0118 Name `x` is used prior to global declaration on line 53
    |     ^
 52 |
 53 |     global x
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 61
   --> load_before_global_declaration.py:59:9
@@ -73,7 +67,6 @@ PLE0118 Name `x` is used prior to global declaration on line 61
    |         ^
 60 |
 61 |     global x, y
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 71
   --> load_before_global_declaration.py:69:9
@@ -84,7 +77,6 @@ PLE0118 Name `x` is used prior to global declaration on line 71
    |         ^
 70 |
 71 |     global x, y
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 79
   --> load_before_global_declaration.py:77:9
@@ -94,7 +86,6 @@ PLE0118 Name `x` is used prior to global declaration on line 79
    |         ^
 78 |
 79 |     global x
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 89
   --> load_before_global_declaration.py:87:9
@@ -105,7 +96,6 @@ PLE0118 Name `x` is used prior to global declaration on line 89
    |         ^
 88 |
 89 |     global x
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 97
   --> load_before_global_declaration.py:95:9
@@ -115,7 +105,6 @@ PLE0118 Name `x` is used prior to global declaration on line 97
    |         ^
 96 |
 97 |     global x, y
-   |
 
 PLE0118 Name `x` is used prior to global declaration on line 107
    --> load_before_global_declaration.py:105:9
@@ -126,7 +115,6 @@ PLE0118 Name `x` is used prior to global declaration on line 107
     |         ^
 106 |
 107 |     global x, y
-    |
 
 PLE0118 Name `x` is used prior to global declaration on line 114
    --> load_before_global_declaration.py:113:14
@@ -135,7 +123,6 @@ PLE0118 Name `x` is used prior to global declaration on line 114
 113 |     print(f"{x=}")
     |              ^
 114 |     global x
-    |
 
 PLE0118 Name `x` is used prior to global declaration on line 163
    --> load_before_global_declaration.py:162:1
@@ -144,4 +131,3 @@ PLE0118 Name `x` is used prior to global declaration on line 163
 162 | x = None
     | ^
 163 | global x
-    |

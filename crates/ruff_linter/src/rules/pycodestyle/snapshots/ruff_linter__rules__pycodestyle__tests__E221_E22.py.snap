@@ -10,7 +10,6 @@ E221 [*] Multiple spaces before operator
   |      ^^
 4 | #: E221 E221
 5 | x             = 1
-  |
 help: Replace with single space
   |
 2 | a = 12 + 3
@@ -28,7 +27,6 @@ E221 [*] Multiple spaces before operator
   |  ^^^^^^^^^^^^^
 6 | y             = 2
 7 | long_variable = 3
-  |
 help: Replace with single space
   |
 4 | #: E221 E221
@@ -46,7 +44,6 @@ E221 [*] Multiple spaces before operator
   |  ^^^^^^^^^^^^^
 7 | long_variable = 3
 8 | #: E221 E221
-  |
 help: Replace with single space
   |
 5 | x             = 1
@@ -57,14 +54,12 @@ help: Replace with single space
 
 E221 [*] Multiple spaces before operator
   --> E22.py:9:5
-   |
  7 | long_variable = 3
  8 | #: E221 E221
  9 | x[0]          = 1
    |     ^^^^^^^^^^
 10 | x[1]          = 2
 11 | long_variable = 3
-   |
 help: Replace with single space
    |
 8  | #: E221 E221
@@ -82,7 +77,6 @@ E221 [*] Multiple spaces before operator
    |     ^^^^^^^^^^
 11 | long_variable = 3
 12 | #: E221 E221
-   |
 help: Replace with single space
    |
 9  | x[0]          = 1
@@ -100,7 +94,6 @@ E221 [*] Multiple spaces before operator
    |         ^^^^^^^^^^
 14 | y = long_variable + 2
 15 | z = x[0]          + 3
-   |
 help: Replace with single space
    |
 12 | #: E221 E221
@@ -118,7 +111,6 @@ E221 [*] Multiple spaces before operator
    |         ^^^^^^^^^^
 16 | #: E221:3:14
 17 | text = """
-   |
 help: Replace with single space
    |
 14 | y = long_variable + 2
@@ -136,7 +128,6 @@ E221 [*] Multiple spaces before operator
    |              ^^
 20 | #: Okay
 21 | x = 1
-   |
 help: Replace with single space
    |
 18 |     bar
@@ -153,7 +144,6 @@ E221 [*] Multiple spaces before operator
 184 | if a  ==  1:
     |     ^^
 185 |     print(a)
-    |
 help: Replace with single space
     |
 183 |

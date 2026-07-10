@@ -17,7 +17,6 @@ F811 [*] Redefinition of unused `Sequence` from line 26
 26 |     Sequence,  # noqa
    |     -------- previous definition of `Sequence` here
 27 | )
-   |
 help: Remove definition: `Sequence`
    |
 29 | # This should ignore the first error.

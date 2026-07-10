@@ -3,14 +3,12 @@ source: crates/ruff_linter/src/rules/flake8_logging_format/mod.rs
 ---
 G202 Logging statement has redundant `exc_info`
   --> G202.py:8:38
-   |
  6 |     pass
  7 | except:
  8 |     logging.exception("Hello World", exc_info=True)
    |                                      ^^^^^^^^^^^^^
  9 |
 10 | try:
-   |
 
 G202 Logging statement has redundant `exc_info`
   --> G202.py:13:38
@@ -21,7 +19,6 @@ G202 Logging statement has redundant `exc_info`
    |                                      ^^^^^^^^^^^^^^^^^^^^^^^
 14 |
 15 | # OK
-   |
 
 G202 Logging statement has redundant `exc_info`
   --> G202.py:28:30
@@ -32,7 +29,6 @@ G202 Logging statement has redundant `exc_info`
    |                              ^^^^^^^^^^^^^
 29 |
 30 | try:
-   |
 
 G202 Logging statement has redundant `exc_info`
   --> G202.py:33:30
@@ -43,4 +39,3 @@ G202 Logging statement has redundant `exc_info`
    |                              ^^^^^^^^^^^^^^^^^^^^^^^
 34 |
 35 | # OK
-   |

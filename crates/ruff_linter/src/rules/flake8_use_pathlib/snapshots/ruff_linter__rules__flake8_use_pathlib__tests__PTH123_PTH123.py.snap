@@ -3,14 +3,12 @@ source: crates/ruff_linter/src/rules/flake8_use_pathlib/mod.rs
 ---
 PTH123 `open()` should be replaced by `Path.open()`
   --> PTH123.py:8:1
-   |
  6 | r_plus = "r+"
  7 |
  8 | builtins.open(file=_file)
    | ^^^^^^^^^^^^^
  9 |
 10 | open(_file, "r+ ", -  1)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -22,7 +20,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 11 | open(mode="wb", file=_file)
 12 | open(mode="r+", buffering=-1, file=_file, encoding="utf-8")
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -33,7 +30,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 12 | open(mode="r+", buffering=-1, file=_file, encoding="utf-8")
 13 | open(_file, "r+", - 1, None, None, None, True, None)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -45,7 +41,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 13 | open(_file, "r+", - 1, None, None, None, True, None)
 14 | open(_file, "r+", -1, None, None, None, closefd=True, opener=None)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -57,7 +52,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 14 | open(_file, "r+", -1, None, None, None, closefd=True, opener=None)
 15 | open(_file, mode="r+", buffering=-1, encoding=None, errors=None, newline=None)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -69,7 +63,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 15 | open(_file, mode="r+", buffering=-1, encoding=None, errors=None, newline=None)
 16 | open(_file, f"  {r_plus}      ", -  1)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -81,7 +74,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 16 | open(_file, f"  {r_plus}      ", -  1)
 17 | open(buffering=-      1, file=_file, encoding=         "utf-8")
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -92,7 +84,6 @@ PTH123 `open()` should be replaced by `Path.open()`
 16 | open(_file, f"  {r_plus}      ", -  1)
    | ^^^^
 17 | open(buffering=-      1, file=_file, encoding=         "utf-8")
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -104,7 +95,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 18 |
 19 | # Only diagnostic
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -115,7 +105,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 21 | open(_file, *_x)
 22 | open(_file, "r+", unknown=True)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -127,7 +116,6 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 22 | open(_file, "r+", unknown=True)
 23 | open(_file, "r+", closefd=False)
-   |
 help: Replace with `Path.open()`
 
 PTH123 `open()` should be replaced by `Path.open()`
@@ -139,5 +127,4 @@ PTH123 `open()` should be replaced by `Path.open()`
    | ^^^^
 23 | open(_file, "r+", closefd=False)
 24 | open(_file, "r+", None, None, None, None, None, None, None)
-   |
 help: Replace with `Path.open()`

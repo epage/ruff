@@ -10,7 +10,6 @@ AIR302 [*] `airflow.hooks.http_hook.HttpHook` is moved into `http` provider in A
   | ^^^^^^^^
 8 | SimpleHttpOperator()
 9 | HttpSensor()
-  |
 help: Install `apache-airflow-providers-http>=1.0.0` and use `HttpHook` from `airflow.providers.http.hooks.http` instead.
   |
 2 |
@@ -29,7 +28,6 @@ AIR302 [*] `airflow.operators.http_operator.SimpleHttpOperator` is moved into `h
 8 | SimpleHttpOperator()
   | ^^^^^^^^^^^^^^^^^^
 9 | HttpSensor()
-  |
 help: Install `apache-airflow-providers-http>=5.0.0` and use `HttpOperator` from `airflow.providers.http.operators.http` instead.
    |
 5  | from airflow.sensors.http_sensor import HttpSensor
@@ -43,12 +41,10 @@ help: Install `apache-airflow-providers-http>=5.0.0` and use `HttpOperator` from
 
 AIR302 [*] `airflow.sensors.http_sensor.HttpSensor` is moved into `http` provider in Airflow 3.0;
  --> AIR302_http.py:9:1
-  |
 7 | HttpHook()
 8 | SimpleHttpOperator()
 9 | HttpSensor()
   | ^^^^^^^^^^
-  |
 help: Install `apache-airflow-providers-http>=1.0.0` and use `HttpSensor` from `airflow.providers.http.sensors.http` instead.
   |
 4 | from airflow.operators.http_operator import SimpleHttpOperator

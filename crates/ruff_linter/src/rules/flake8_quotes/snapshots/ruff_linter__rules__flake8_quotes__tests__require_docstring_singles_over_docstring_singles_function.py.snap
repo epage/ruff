@@ -9,7 +9,6 @@ Q001 [*] Single quote multiline found but double quotes preferred
 3 |     ''' not a docstring'''
   |     ^^^^^^^^^^^^^^^^^^^^^^
 4 |     return
-  |
 help: Replace single multiline quotes with double quotes
   |
 2 |     '''function without params, single line docstring'''
@@ -26,7 +25,6 @@ Q001 [*] Single quote multiline found but double quotes preferred
 11 |     ''' not a docstring'''
    |     ^^^^^^^^^^^^^^^^^^^^^^
 12 |     return
-   |
 help: Replace single multiline quotes with double quotes
    |
 10 |     '''
@@ -44,7 +42,6 @@ Q001 [*] Single quote multiline found but double quotes preferred
 17 | | ''' '''docstring'''):
    | |___^
 18 |       pass
-   |
 help: Replace single multiline quotes with double quotes
    |
 14 |
@@ -64,7 +61,6 @@ Q001 [*] Single quote multiline found but double quotes preferred
 17 | ''' '''docstring'''):
    |     ^^^^^^^^^^^^^^^
 18 |     pass
-   |
 help: Replace single multiline quotes with double quotes
    |
 16 |     not a
@@ -80,7 +76,6 @@ Q001 [*] Single quote multiline found but double quotes preferred
 22 |     ''' not a docstring '''):
    |     ^^^^^^^^^^^^^^^^^^^^^^^
 23 |     pass
-   |
 help: Replace single multiline quotes with double quotes
    |
 21 | def fun_with_params_no_docstring2(a, b=c[foo():], c=\

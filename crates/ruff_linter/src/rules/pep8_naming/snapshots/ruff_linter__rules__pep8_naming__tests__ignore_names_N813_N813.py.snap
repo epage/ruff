@@ -9,17 +9,14 @@ N813 Camelcase `stillBad` imported as lowercase `stillbad`
   |        ^^^^^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | from mod import BadAllowed as badallowed
-  |
 
 N813 Camelcase `StillBad` imported as lowercase `stillbad`
  --> N813.py:5:17
-  |
 4 | from mod import BadAllowed as badallowed
 5 | from mod import StillBad as stillbad
   |                 ^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | from mod import BadAllowed as bad_allowed
-  |
 
 N813 Camelcase `StillBad` imported as lowercase `still_bad`
  --> N813.py:8:17
@@ -27,4 +24,3 @@ N813 Camelcase `StillBad` imported as lowercase `still_bad`
 7 | from mod import BadAllowed as bad_allowed
 8 | from mod import StillBad as still_bad
   |                 ^^^^^^^^^^^^^^^^^^^^^
-  |

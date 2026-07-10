@@ -10,4 +10,3 @@ PLW0717 Try clause contains too many statements (6 > 5)
    | ^^^
 64 |     print()
 65 |     print()
-   |

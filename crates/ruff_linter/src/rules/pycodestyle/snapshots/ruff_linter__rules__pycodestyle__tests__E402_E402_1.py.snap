@@ -10,13 +10,10 @@ E402 Module level import not at top of file
   | ^^^^^^^^
 6 |
 7 | """Some other docstring."""
-  |
 
 E402 Module level import not at top of file
  --> E402_1.py:9:1
-  |
 7 | """Some other docstring."""
 8 |
 9 | import c
   | ^^^^^^^^
-  |

@@ -170,7 +170,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive
   |
 9 |   + 2)  # ty:ignore[division-by-zero] # fmt: skip
   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression comment
    |
 8  |   # snapshot
@@ -192,7 +191,6 @@ warning[unused-ignore-comment]: Unused `ty: ignore` directive
    |
 12 |   + 2)  # fmt: skip # ty:ignore[division-by-zero]
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Remove the unused suppression comment
    |
 11 |   # snapshot
@@ -306,7 +304,6 @@ warning[unused-type-ignore-comment]: Unused `type: ignore` directive: 'division-
   |
 2 | a = 10 / 2  # type: ignore[mypy-code, ty:division-by-zero]
   |                                       ^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression code
   |
 1 | # snapshot
@@ -328,7 +325,6 @@ warning[unused-type-ignore-comment]: Unused `type: ignore` directive
   |
 2 | a = 10 / 2  # type: ignore[ty:division-by-zero]
   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Remove the unused suppression comment
   |
 1 | # snapshot
@@ -350,5 +346,4 @@ warning[ignore-comment-unknown-rule]: Unknown rule `division-by`. Did you mean `
   |
 2 | a = 10 / 2  # type: ignore[ty:division-by]
   |                            ^^^^^^^^^^^^^^
-  |
 ```

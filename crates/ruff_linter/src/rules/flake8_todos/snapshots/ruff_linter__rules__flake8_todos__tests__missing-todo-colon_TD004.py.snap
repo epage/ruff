@@ -10,7 +10,6 @@ TD004 Missing colon in TODO
   |   ^^^^
 5 | # TODO(evanrittenhouse 😀) this has no colon
 6 | # FIXME add a colon
-  |
 
 TD004 Missing colon in TODO
  --> TD004.py:5:3
@@ -21,18 +20,15 @@ TD004 Missing colon in TODO
   |   ^^^^
 6 | # FIXME add a colon
 7 | # foo # TODO add a colon
-  |
 
 TD004 Missing colon in TODO
  --> TD004.py:6:3
-  |
 4 | # TODO this has no colon
 5 | # TODO(evanrittenhouse 😀) this has no colon
 6 | # FIXME add a colon
   |   ^^^^^
 7 | # foo # TODO add a colon
 8 | # TODO this has a colon but it doesn't terminate the tag, so this should throw. https://www.google.com
-  |
 
 TD004 Missing colon in TODO
  --> TD004.py:7:9
@@ -42,7 +38,6 @@ TD004 Missing colon in TODO
 7 | # foo # TODO add a colon
   |         ^^^^
 8 | # TODO this has a colon but it doesn't terminate the tag, so this should throw. https://www.google.com
-  |
 
 TD004 Missing colon in TODO
  --> TD004.py:8:3
@@ -51,4 +46,3 @@ TD004 Missing colon in TODO
 7 | # foo # TODO add a colon
 8 | # TODO this has a colon but it doesn't terminate the tag, so this should throw. https://www.google.com
   |   ^^^^
-  |

@@ -10,23 +10,19 @@ D208 [*] Docstring is over-indented
     | ^
 253 |
 254 |     """
-    |
 help: Remove over-indentation
     |
 251 |
     -        Description.
 252 +     Description.
 253 |
-    |
 
 D208 [*] Docstring is over-indented
    --> D.py:264:1
-    |
 262 |     Description.
 263 |
 264 |         """
     | ^
-    |
 help: Remove over-indentation
     |
 263 |
@@ -44,7 +40,6 @@ D208 [*] Docstring is over-indented
     | ^
 273 |
 274 |     """
-    |
 help: Remove over-indentation
     |
 271 |
@@ -62,7 +57,6 @@ D208 [*] Docstring is over-indented
     | ^
 674 |             And so is this, but it we should preserve the extra space on this line relative
 675 |             to the one before
-    |
 help: Remove over-indentation
     |
 672 |
@@ -79,7 +73,6 @@ D208 [*] Docstring is over-indented
     | ^
 675 |             to the one before
 676 |     """
-    |
 help: Remove over-indentation
     |
 673 |         This is overindented
@@ -96,7 +89,6 @@ D208 [*] Docstring is over-indented
 675 |             to the one before
     | ^
 676 |     """
-    |
 help: Remove over-indentation
     |
 674 |             And so is this, but it we should preserve the extra space on this line relative
@@ -114,7 +106,6 @@ D208 [*] Docstring is over-indented
     | ^
 683 |             And so is this, but it we should preserve the extra space on this line relative
 684 |             to the one before
-    |
 help: Remove over-indentation
     |
 681 |
@@ -131,7 +122,6 @@ D208 [*] Docstring is over-indented
     | ^
 684 |             to the one before
 685 |         This is also overindented
-    |
 help: Remove over-indentation
     |
 682 |         This is overindented
@@ -149,7 +139,6 @@ D208 [*] Docstring is over-indented
     | ^
 685 |         This is also overindented
 686 |             And so is this, but it we should preserve the extra space on this line relative
-    |
 help: Remove over-indentation
     |
 683 |             And so is this, but it we should preserve the extra space on this line relative
@@ -167,7 +156,6 @@ D208 [*] Docstring is over-indented
     | ^
 686 |             And so is this, but it we should preserve the extra space on this line relative
 687 |             to the one before
-    |
 help: Remove over-indentation
     |
 684 |             to the one before
@@ -185,7 +173,6 @@ D208 [*] Docstring is over-indented
     | ^
 687 |             to the one before
 688 |     """
-    |
 help: Remove over-indentation
     |
 685 |         This is also overindented
@@ -202,7 +189,6 @@ D208 [*] Docstring is over-indented
 687 |             to the one before
     | ^
 688 |     """
-    |
 help: Remove over-indentation
     |
 686 |             And so is this, but it we should preserve the extra space on this line relative
@@ -220,7 +206,6 @@ D208 [*] Docstring is over-indented
     | ^
 696 |             And so is this, but it we should preserve the extra space on this line relative
 697 |             to the one before
-    |
 help: Remove over-indentation
     |
 694 |
@@ -237,7 +222,6 @@ D208 [*] Docstring is over-indented
     | ^
 697 |             to the one before
 698 |                 And the relative indent here should be preserved too
-    |
 help: Remove over-indentation
     |
 695 |         This is overindented
@@ -255,7 +239,6 @@ D208 [*] Docstring is over-indented
     | ^
 698 |                 And the relative indent here should be preserved too
 699 |     """
-    |
 help: Remove over-indentation
     |
 696 |             And so is this, but it we should preserve the extra space on this line relative
@@ -272,7 +255,6 @@ D208 [*] Docstring is over-indented
 698 |                 And the relative indent here should be preserved too
     | ^
 699 |     """
-    |
 help: Remove over-indentation
     |
 697 |             to the one before
@@ -290,7 +272,6 @@ D208 [*] Docstring is over-indented
     | ^
 705 |             And so is this, but it we should preserve the extra space on this line relative
 706 |         This is overindented
-    |
 help: Remove over-indentation
     |
 703 |
@@ -307,7 +288,6 @@ D208 [*] Docstring is over-indented
     | ^
 706 |         This is overindented
 707 |         This is overindented
-    |
 help: Remove over-indentation
     |
 704 |         This is overindented
@@ -325,7 +305,6 @@ D208 [*] Docstring is over-indented
     | ^
 707 |         This is overindented
 708 |     """
-    |
 help: Remove over-indentation
     |
 705 |             And so is this, but it we should preserve the extra space on this line relative
@@ -342,7 +321,6 @@ D208 [*] Docstring is over-indented
 707 |         This is overindented
     | ^
 708 |     """
-    |
 help: Remove over-indentation
     |
 706 |         This is overindented
@@ -359,7 +337,6 @@ D208 [*] Docstring is over-indented
 723 |        Returns:
     | ^
 724 |     """
-    |
 help: Remove over-indentation
     |
 722 |

@@ -9,7 +9,6 @@ RUF071 [*] `os.path.commonprefix()` compares strings character-by-character
   | ^^^^^^^^^^^^^^^^^^^^
 8 | commonprefix(["/usr/lib", "/usr/local/lib"])
 9 | path.commonprefix(["/usr/lib", "/usr/local/lib"])
-  |
 help: Use `os.path.commonpath()` to compare path components
   |
 6 | # Errors
@@ -27,7 +26,6 @@ RUF071 [*] `os.path.commonprefix()` compares strings character-by-character
 8 | commonprefix(["/usr/lib", "/usr/local/lib"])
   | ^^^^^^^^^^^^
 9 | path.commonprefix(["/usr/lib", "/usr/local/lib"])
-  |
 help: Use `os.path.commonpath()` to compare path components
   |
 7 | os.path.commonprefix(["/usr/lib", "/usr/local/lib"])
@@ -39,14 +37,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF071 [*] `os.path.commonprefix()` compares strings character-by-character
   --> RUF071.py:9:1
-   |
  7 | os.path.commonprefix(["/usr/lib", "/usr/local/lib"])
  8 | commonprefix(["/usr/lib", "/usr/local/lib"])
  9 | path.commonprefix(["/usr/lib", "/usr/local/lib"])
    | ^^^^^^^^^^^^^^^^^
 10 |
 11 | # OK
-   |
 help: Use `os.path.commonpath()` to compare path components
    |
 8  | commonprefix(["/usr/lib", "/usr/local/lib"])

@@ -10,7 +10,6 @@ F707 An `except` block as not the last exception handler
   | ^^^^^^
 4 |     pass
 5 | except ValueError:
-  |
 
 F707 An `except` block as not the last exception handler
   --> F707.py:10:1
@@ -21,7 +20,6 @@ F707 An `except` block as not the last exception handler
    | ^^^^^^
 11 |     pass
 12 | except ValueError:
-   |
 
 F707 An `except` block as not the last exception handler
   --> F707.py:19:1
@@ -32,4 +30,3 @@ F707 An `except` block as not the last exception handler
    | ^^^^^^
 20 |     pass
 21 | except ValueError:
-   |

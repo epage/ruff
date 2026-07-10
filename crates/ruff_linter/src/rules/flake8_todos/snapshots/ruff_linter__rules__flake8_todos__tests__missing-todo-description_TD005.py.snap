@@ -10,7 +10,6 @@ TD005 Missing issue description after `TODO`
   |   ^^^^
 5 | # TODO(evanrittenhouse)
 6 | # FIXME
-  |
 
 TD005 Missing issue description after `TODO`
  --> TD005.py:5:3
@@ -21,17 +20,14 @@ TD005 Missing issue description after `TODO`
   |   ^^^^
 6 | # FIXME
 7 | # foo # TODO
-  |
 
 TD005 Missing issue description after `TODO`
  --> TD005.py:6:3
-  |
 4 | # TODO(evanrittenhouse):
 5 | # TODO(evanrittenhouse)
 6 | # FIXME
   |   ^^^^^
 7 | # foo # TODO
-  |
 
 TD005 Missing issue description after `TODO`
  --> TD005.py:7:9
@@ -40,4 +36,3 @@ TD005 Missing issue description after `TODO`
 6 | # FIXME
 7 | # foo # TODO
   |         ^^^^
-  |

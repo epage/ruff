@@ -48,7 +48,6 @@ error[invalid-named-tuple]: NamedTuple field without default value cannot follow
 5 |     # error: [invalid-named-tuple] "NamedTuple field without default value cannot follow field(s) with default value(s): Field `latitud…
 6 |     latitude: float
   |     ^^^^^^^^^^^^^^^ Field `latitude` defined here without a default value
-  |
 
 ```
 
@@ -63,19 +62,16 @@ error[invalid-named-tuple]: NamedTuple field without default value cannot follow
 7 |     # error: [invalid-named-tuple] "NamedTuple field without default value cannot follow field(s) with default value(s): Field `longitu…
 8 |     longitude: float
   |     ^^^^^^^^^^^^^^^^ Field `longitude` defined here without a default value
-  |
 
 ```
 
 ```
 error[invalid-named-tuple]: NamedTuple field without default value cannot follow field(s) with default value(s)
   --> src/mdtest_snippet.py:14:5
-   |
 14 |     altitude: float = 0.0
    |     --------------------- Earlier field `altitude` defined here with a default value
 15 |     latitude: float  # error: [invalid-named-tuple]
    |     ^^^^^^^^^^^^^^^ Field `latitude` defined here without a default value
-   |
 
 ```
 
@@ -88,17 +84,14 @@ error[invalid-named-tuple]: NamedTuple field without default value cannot follow
 15 |     latitude: float  # error: [invalid-named-tuple]
 16 |     longitude: float  # error: [invalid-named-tuple]
    |     ^^^^^^^^^^^^^^^^ Field `longitude` defined here without a default value
-   |
 
 ```
 
 ```
 error[invalid-named-tuple]: NamedTuple field without default value cannot follow field(s) with default value(s)
   --> src/mdtest_snippet.py:20:5
-   |
 20 |     latitude: float  # error: [invalid-named-tuple]
    |     ^^^^^^^^^^^^^^^ Field `latitude` defined here without a default value
-   |
 info: Earlier field `altitude` was defined with a default value
 
 ```
@@ -106,10 +99,8 @@ info: Earlier field `altitude` was defined with a default value
 ```
 error[invalid-named-tuple]: NamedTuple field without default value cannot follow field(s) with default value(s)
   --> src/mdtest_snippet.py:21:5
-   |
 21 |     longitude: float  # error: [invalid-named-tuple]
    |     ^^^^^^^^^^^^^^^^ Field `longitude` defined here without a default value
-   |
 info: Earlier field `altitude` was defined with a default value
 
 ```

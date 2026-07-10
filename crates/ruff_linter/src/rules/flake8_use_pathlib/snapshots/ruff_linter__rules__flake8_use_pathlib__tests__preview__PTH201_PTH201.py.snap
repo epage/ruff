@@ -9,7 +9,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
   |          ^^^
 7 | _ = pth(".")
 8 | _ = PurePath(".")
-  |
 help: Remove the current directory argument
   |
 5 | # match
@@ -27,7 +26,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
   |         ^^^
 8 | _ = PurePath(".")
 9 | _ = Path("")
-  |
 help: Remove the current directory argument
   |
 6 | _ = Path(".")
@@ -44,7 +42,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 8 | _ = PurePath(".")
   |              ^^^
 9 | _ = Path("")
-  |
 help: Remove the current directory argument
   |
 7 | _ = pth(".")
@@ -55,14 +52,12 @@ help: Remove the current directory argument
 
 PTH201 [*] Do not pass the current directory explicitly to `Path`
   --> PTH201.py:9:10
-   |
  7 | _ = pth(".")
  8 | _ = PurePath(".")
  9 | _ = Path("")
    |          ^^
 10 |
 11 | Path('', )
-   |
 help: Remove the current directory argument
    |
 8  | _ = PurePath(".")
@@ -80,7 +75,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    |      ^^
 12 |
 13 | Path(
-   |
 help: Remove the current directory argument
    |
 10 |
@@ -96,7 +90,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 14 |     '',
    |     ^^
 15 | )
-   |
 help: Remove the current directory argument
    |
 12 |
@@ -114,7 +107,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 18 |     '',
    |     ^^
 19 | )
-   |
 help: Remove the current directory argument
    |
 16 |
@@ -133,7 +125,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 22 |     '',  # EOL comment
    |     ^^
 23 | )
-   |
 help: Remove the current directory argument
    |
 20 |
@@ -153,7 +144,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 27 | |     ".",
    | |_______^
 28 |   )
-   |
 help: Remove the current directory argument
    |
 24 |
@@ -174,7 +164,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    |     ^^
 32 |     ,
 33 | )
-   |
 help: Remove the current directory argument
    |
 29 |
@@ -194,7 +183,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 36 |     '',
    |     ^^
 37 | ) / "bare"
-   |
 help: Remove the current directory argument
    |
 35 | Path(
@@ -212,7 +200,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 40 |     '',
    |     ^^
 41 | ) / ("parenthesized")
-   |
 help: Remove the current directory argument
    |
 39 | Path(  # Comment before argument
@@ -231,7 +218,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 44 |     '',  # EOL comment
    |     ^^
 45 | ) / ( ("double parenthesized"  )   )
-   |
 help: Remove the current directory argument
    |
 43 | Path(
@@ -252,7 +238,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    | |_______^
 50 |   ) )/ (("parenthesized path call")
 51 |         # Comment between closing parentheses
-   |
 help: Remove the current directory argument
    |
 46 |
@@ -276,7 +261,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    |     ^^
 56 |     ,
 57 | ) / "multiple" / (
-   |
 help: Remove the current directory argument
    |
 54 | Path(
@@ -286,19 +270,16 @@ help: Remove the current directory argument
    - ) / "multiple" / (
 57 + ) / (
 58 |     "frag"  # Comment
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 PTH201 [*] Do not pass the current directory explicitly to `Path`
   --> PTH201.py:74:15
-   |
 72 | from importlib.metadata import PackagePath
 73 |
 74 | _ = PosixPath(".")
    |               ^^^
 75 | _ = PurePosixPath(".")
 76 | _ = WindowsPath(".")
-   |
 help: Remove the current directory argument
    |
 73 |
@@ -315,7 +296,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    |                   ^^^
 76 | _ = WindowsPath(".")
 77 | _ = PureWindowsPath(".")
-   |
 help: Remove the current directory argument
    |
 74 | _ = PosixPath(".")
@@ -333,7 +313,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
    |                 ^^^
 77 | _ = PureWindowsPath(".")
 78 | _ = PackagePath(".")
-   |
 help: Remove the current directory argument
    |
 75 | _ = PurePosixPath(".")
@@ -350,7 +329,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 77 | _ = PureWindowsPath(".")
    |                     ^^^
 78 | _ = PackagePath(".")
-   |
 help: Remove the current directory argument
    |
 76 | _ = WindowsPath(".")
@@ -366,7 +344,6 @@ PTH201 [*] Do not pass the current directory explicitly to `Path`
 77 | _ = PureWindowsPath(".")
 78 | _ = PackagePath(".")
    |                 ^^^
-   |
 help: Remove the current directory argument
    |
 77 | _ = PureWindowsPath(".")

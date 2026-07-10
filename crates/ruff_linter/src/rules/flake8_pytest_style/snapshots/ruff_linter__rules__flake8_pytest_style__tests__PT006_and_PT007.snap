@@ -10,7 +10,6 @@ PT006 [*] Wrong type passed to first argument of `pytest.mark.parametrize`; expe
   |                          ^^^^^^^^^^
 4 | def test_PT006_and_PT007_do_not_conflict(param):
 5 |     ...
-  |
 help: Use a string for the first argument
   |
 2 |
@@ -28,7 +27,6 @@ PT007 [*] Wrong values type in `pytest.mark.parametrize` expected `list` of `tup
   |                                       ^^^
 4 | def test_PT006_and_PT007_do_not_conflict(param):
 5 |     ...
-  |
 help: Use `list` of `tuple` for parameter values
   |
 2 |
@@ -47,7 +45,6 @@ PT007 [*] Wrong values type in `pytest.mark.parametrize` expected `list` of `tup
   |                                            ^^^
 4 | def test_PT006_and_PT007_do_not_conflict(param):
 5 |     ...
-  |
 help: Use `list` of `tuple` for parameter values
   |
 2 |

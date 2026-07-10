@@ -8,7 +8,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
   |              ^^^^^^^^^^^^^^^^^^^^^
 7 |     z: tuple[str, str | None, str] = tuple(y)
 8 |     del z
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -23,7 +22,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 604 union
   |                   ^^^^^^^^^^
 7 |     z: tuple[str, str | None, str] = tuple(y)
 8 |     del z
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations

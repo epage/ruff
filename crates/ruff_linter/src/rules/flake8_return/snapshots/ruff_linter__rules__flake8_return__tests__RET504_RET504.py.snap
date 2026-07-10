@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/flake8_return/mod.rs
 ---
 RET504 [*] Unnecessary assignment to `a` before `return` statement
  --> RET504.py:6:12
-  |
 4 | def x():
 5 |     a = 1
 6 |     return a  # RET504
   |            ^
-  |
 help: Remove unnecessary assignment
   |
 4 | def x():
@@ -21,12 +19,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `formatted` before `return` statement
   --> RET504.py:23:12
-   |
 21 |     # clean up after any blank components
 22 |     formatted = formatted.replace("()", "").replace("  ", " ").strip()
 23 |     return formatted
    |            ^^^^^^^^^
-   |
 help: Remove unnecessary assignment
    |
 21 |     # clean up after any blank components
@@ -39,12 +35,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `queryset` before `return` statement
    --> RET504.py:246:12
-    |
 244 |     queryset = Model.filter(a=1)
 245 |     queryset = queryset.filter(c=3)
 246 |     return queryset
     |            ^^^^^^^^
-    |
 help: Remove unnecessary assignment
     |
 244 |     queryset = Model.filter(a=1)
@@ -52,17 +46,14 @@ help: Remove unnecessary assignment
     -     return queryset
 245 +     return queryset.filter(c=3)
 246 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `queryset` before `return` statement
    --> RET504.py:251:12
-    |
 249 | def get_queryset():
 250 |     queryset = Model.filter(a=1)
 251 |     return queryset  # RET504
     |            ^^^^^^^^
-    |
 help: Remove unnecessary assignment
     |
 249 | def get_queryset():
@@ -70,17 +61,14 @@ help: Remove unnecessary assignment
     -     return queryset  # RET504
 250 +     return Model.filter(a=1)
 251 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `val` before `return` statement
    --> RET504.py:269:12
-    |
 267 |         return val
 268 |     val = 1
 269 |     return val  # RET504
     |            ^^^
-    |
 help: Remove unnecessary assignment
     |
 267 |         return val
@@ -88,25 +76,20 @@ help: Remove unnecessary assignment
     -     return val  # RET504
 268 +     return 1
 269 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `x` before `return` statement
    --> RET504.py:321:12
-    |
 319 |     with open("foo.txt", "r") as f:
 320 |         x = f.read()
 321 |     return x  # RET504
     |            ^
-    |
 help: Remove unnecessary assignment
-    |
 319 |     with open("foo.txt", "r") as f:
     -         x = f.read()
     -     return x  # RET504
 320 +         return f.read()
 321 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `b` before `return` statement
@@ -116,9 +99,7 @@ RET504 [*] Unnecessary assignment to `b` before `return` statement
 341 |     b=a
 342 |     return b  # RET504
     |            ^
-    |
 help: Remove unnecessary assignment
-    |
 340 |     a = 1
     -     b=a
     -     return b  # RET504
@@ -134,7 +115,6 @@ RET504 [*] Unnecessary assignment to `b` before `return` statement
 347 |     b =a
 348 |     return b  # RET504
     |            ^
-    |
 help: Remove unnecessary assignment
     |
 346 |     a = 1
@@ -142,17 +122,14 @@ help: Remove unnecessary assignment
     -     return b  # RET504
 347 +     return a
 348 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `b` before `return` statement
    --> RET504.py:354:12
-    |
 352 |     a = 1
 353 |     b= a
 354 |     return b  # RET504
     |            ^
-    |
 help: Remove unnecessary assignment
     |
 352 |     a = 1
@@ -160,17 +137,14 @@ help: Remove unnecessary assignment
     -     return b  # RET504
 353 +     return a
 354 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `a` before `return` statement
    --> RET504.py:359:12
-    |
 357 | def foo():
 358 |     a = 1  # Comment
 359 |     return a
     |            ^
-    |
 help: Remove unnecessary assignment
     |
 357 | def foo():
@@ -178,25 +152,20 @@ help: Remove unnecessary assignment
     -     return a
 358 +     return 1  # Comment
 359 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `D` before `return` statement
    --> RET504.py:365:12
-    |
 363 | def mavko_debari(P_kbar):
 364 |     D=0.4853881 + 3.6006116*P - 0.0117368*(P-1.3822)**2
 365 |     return D
     |            ^
-    |
 help: Remove unnecessary assignment
-    |
 363 | def mavko_debari(P_kbar):
     -     D=0.4853881 + 3.6006116*P - 0.0117368*(P-1.3822)**2
     -     return D
 364 +     return 0.4853881 + 3.6006116*P - 0.0117368*(P-1.3822)**2
 365 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `y` before `return` statement
@@ -206,9 +175,7 @@ RET504 [*] Unnecessary assignment to `y` before `return` statement
 399 |     y = y + 2
 400 |     return y  # RET504
     |            ^
-    |
 help: Remove unnecessary assignment
-    |
 398 |         x = 1
     -     y = y + 2
     -     return y  # RET504
@@ -224,7 +191,6 @@ RET504 [*] Unnecessary assignment to `services` before `return` statement
 422 |         services = a["services"]
 423 |         return services
     |                ^^^^^^^^
-    |
 help: Remove unnecessary assignment
     |
 421 |     if "services" in a:
@@ -232,7 +198,6 @@ help: Remove unnecessary assignment
     -         return services
 422 +         return a["services"]
 423 |
-    |
 note: This is an unsafe fix and may change runtime behavior
 
 RET504 [*] Unnecessary assignment to `x` before `return` statement
@@ -244,7 +209,6 @@ RET504 [*] Unnecessary assignment to `x` before `return` statement
     |            ^
 459 |
 460 | def f():
-    |
 help: Remove unnecessary assignment
     |
 455 | def f():
@@ -263,7 +227,6 @@ RET504 [*] Unnecessary assignment to `x` before `return` statement
 462 |               )
 463 |     return x
     |            ^
-    |
 help: Remove unnecessary assignment
     |
 460 | def f():

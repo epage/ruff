@@ -9,7 +9,6 @@ D204 [*] 1 blank line required after class docstring
 181 |     """TrailingSpace."""
     |     ^^^^^^^^^^^^^^^^^^^^
 182 |     pass
-    |
 help: Insert 1 blank line after class docstring
     |
 181 |     """TrailingSpace."""
@@ -24,7 +23,6 @@ D204 [*] 1 blank line required after class docstring
 192 |     """Leading and trailing space missing."""
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 193 |     pass
-    |
 help: Insert 1 blank line after class docstring
     |
 192 |     """Leading and trailing space missing."""
@@ -40,16 +38,13 @@ D204 [*] 1 blank line required after class docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 650 |     def sort_services(self):
 651 |         pass
-    |
 help: Insert 1 blank line after class docstring
-    |
 648 | class StatementOnSameLineAsDocstring:
     -     "After this docstring there's another statement on the same line separated by a semicolon." ; priorities=1
 649 +     "After this docstring there's another statement on the same line separated by a semicolon."
 650 +
 651 +     priorities=1
 652 |     def sort_services(self):
-    |
 
 D204 [*] 1 blank line required after class docstring
    --> D.py:654:5
@@ -57,7 +52,6 @@ D204 [*] 1 blank line required after class docstring
 653 | class StatementOnSameLineAsDocstring:
 654 |     "After this docstring there's another statement on the same line separated by a semicolon."; priorities=1
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    |
 help: Insert 1 blank line after class docstring
     |
 653 | class StatementOnSameLineAsDocstring:
@@ -76,7 +70,6 @@ D204 [*] 1 blank line required after class docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 659 |     def sort_services(self):
 660 |         pass
-    |
 help: Insert 1 blank line after class docstring
     |
 658 |     "After this docstring there's a comment."  # priorities=1

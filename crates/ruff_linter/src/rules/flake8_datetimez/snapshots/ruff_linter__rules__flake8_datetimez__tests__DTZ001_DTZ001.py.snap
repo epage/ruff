@@ -9,7 +9,6 @@ DTZ001 `datetime.datetime()` called without a `tzinfo` argument
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | # none args
-  |
 help: Pass a `datetime.timezone` object to the `tzinfo` parameter
 
 DTZ001 `tzinfo=None` passed to `datetime.datetime()`
@@ -20,7 +19,6 @@ DTZ001 `tzinfo=None` passed to `datetime.datetime()`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |
 9 | # not none arg
-  |
 help: Pass a `datetime.timezone` object to the `tzinfo` parameter
 
 DTZ001 `datetime.datetime()` called without a `tzinfo` argument
@@ -31,7 +29,6 @@ DTZ001 `datetime.datetime()` called without a `tzinfo` argument
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 |
 15 | # none kwargs
-   |
 help: Pass a `datetime.timezone` object to the `tzinfo` parameter
 
 DTZ001 `tzinfo=None` passed to `datetime.datetime()`
@@ -42,7 +39,6 @@ DTZ001 `tzinfo=None` passed to `datetime.datetime()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | from datetime import datetime
-   |
 help: Pass a `datetime.timezone` object to the `tzinfo` parameter
 
 DTZ001 `datetime.datetime()` called without a `tzinfo` argument
@@ -53,5 +49,4 @@ DTZ001 `datetime.datetime()` called without a `tzinfo` argument
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 |
 23 | # uses `astimezone` method
-   |
 help: Pass a `datetime.timezone` object to the `tzinfo` parameter

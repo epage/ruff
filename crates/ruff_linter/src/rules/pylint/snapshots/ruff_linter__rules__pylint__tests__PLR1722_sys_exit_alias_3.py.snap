@@ -7,7 +7,6 @@ PLR1722 [*] Use `sys.exit()` instead of `quit`
 3 | exit(0)
 4 | quit(0)
   | ^^^^
-  |
 help: Replace `quit` with `sys.exit()`
   |
 3 | exit(0)
@@ -19,12 +18,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLR1722 [*] Use `sys.exit()` instead of `quit`
  --> sys_exit_alias_3.py:9:5
-  |
 7 | def main():
 8 |     exit(1)
 9 |     quit(1)
   |     ^^^^
-  |
 help: Replace `quit` with `sys.exit()`
    |
 8  |     exit(1)
@@ -36,9 +33,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLR1722 Use `sys.exit()` instead of `quit`
   --> sys_exit_alias_3.py:16:5
-   |
 15 |     exit(1)
 16 |     quit(1)
    |     ^^^^
-   |
 help: Replace `quit` with `sys.exit()`

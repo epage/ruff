@@ -8,7 +8,6 @@ PYI044 [*] `from __future__ import annotations` has no effect in stub files, sin
 2 | from __future__ import annotations # PYI044.
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | from __future__ import annotations, with_statement # PYI044.
-  |
 help: Remove `from __future__ import annotations`
   |
 1 | # Bad import.
@@ -25,7 +24,6 @@ PYI044 [*] `from __future__ import annotations` has no effect in stub files, sin
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |
 5 | # Good imports.
-  |
 help: Remove `from __future__ import annotations`
   |
 2 | from __future__ import annotations # PYI044.

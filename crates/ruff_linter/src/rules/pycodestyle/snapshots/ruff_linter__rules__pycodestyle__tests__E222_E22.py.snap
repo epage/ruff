@@ -9,7 +9,6 @@ E222 [*] Multiple spaces after operator
    |        ^^
 29 | b = b + 10
 30 | #: E222 E222
-   |
 help: Replace with single space
    |
 27 | #: E222
@@ -27,7 +26,6 @@ E222 [*] Multiple spaces after operator
    |    ^^^^^^^^^^^^
 32 | y =            -2
 33 | long_variable = 3
-   |
 help: Replace with single space
    |
 30 | #: E222 E222
@@ -45,7 +43,6 @@ E222 [*] Multiple spaces after operator
    |    ^^^^^^^^^^^^
 33 | long_variable = 3
 34 | #: E222 E222
-   |
 help: Replace with single space
    |
 31 | x =            -1
@@ -63,7 +60,6 @@ E222 [*] Multiple spaces after operator
    |       ^^^^^^^^^^
 36 | x[1] =          2
 37 | long_variable = 3
-   |
 help: Replace with single space
    |
 34 | #: E222 E222
@@ -81,7 +77,6 @@ E222 [*] Multiple spaces after operator
    |       ^^^^^^^^^^
 37 | long_variable = 3
 38 | #:
-   |
 help: Replace with single space
    |
 35 | x[0] =          1
@@ -98,7 +93,6 @@ E222 [*] Multiple spaces after operator
 184 | if a  ==  1:
     |         ^^
 185 |     print(a)
-    |
 help: Replace with single space
     |
 183 |

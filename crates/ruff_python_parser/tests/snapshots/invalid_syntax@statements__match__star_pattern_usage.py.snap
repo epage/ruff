@@ -593,14 +593,12 @@ Module(
   |
 
 
-  |
 5 |     case *_ as x:
 6 |         pass
 7 |     case *foo:
   |          ^^^^ Syntax Error: Star pattern cannot be used here
 8 |         pass
 9 |     case *foo | 1:
-  |
 
 
    |

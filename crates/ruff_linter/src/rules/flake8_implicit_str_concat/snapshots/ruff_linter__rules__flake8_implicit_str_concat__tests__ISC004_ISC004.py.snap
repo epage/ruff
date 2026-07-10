@@ -10,7 +10,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 5 | |     "In 1971, astronaut Alan Shepard played golf on the moon.",
   | |______________________________________________________________^
 6 |   )
-  |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
   |
@@ -32,7 +31,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 12 | |     "In 1971, astronaut Alan Shepard played golf on the moon.",
    | |______________________________________________________________^
 13 |   ]
-   |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
    |
@@ -54,7 +52,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 19 | |     "In 1971, astronaut Alan Shepard played golf on the moon.",
    | |______________________________________________________________^
 20 |   }
-   |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
    |
@@ -76,7 +73,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 32 | |     "Honey never spoils.",
    | |_________________________^
 33 |   )
-   |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
    |
@@ -99,7 +95,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 38 | |     "Honey never spoils.",
    | |_________________________^
 39 |   ]
-   |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
    |
@@ -122,7 +117,6 @@ ISC004 [*] Unparenthesized implicit string concatenation in collection
 44 | |     "Honey never spoils.",
    | |_________________________^
 45 |   }
-   |
 help: Did you forget a comma?
 help: Wrap implicitly concatenated strings in parentheses
    |

@@ -10,7 +10,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `NewAny: Type
   | ^^^^^^
 4 | OptionalStr = typing.Optional[str]
 5 | Foo = Literal["foo"]
-  |
 help: Add `TypeAlias` annotation
   |
 1 | from typing import Literal, Any
@@ -29,7 +28,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `OptionalStr:
   | ^^^^^^^^^^^
 5 | Foo = Literal["foo"]
 6 | IntOrStr = int | str
-  |
 help: Add `TypeAlias` annotation
   |
 1 | from typing import Literal, Any
@@ -50,7 +48,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `Foo: TypeAli
   | ^^^
 6 | IntOrStr = int | str
 7 | AliasNone = None
-  |
 help: Add `TypeAlias` annotation
   |
 1 | from typing import Literal, Any
@@ -71,7 +68,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `IntOrStr: Ty
 6 | IntOrStr = int | str
   | ^^^^^^^^
 7 | AliasNone = None
-  |
 help: Add `TypeAlias` annotation
   |
 1 | from typing import Literal, Any
@@ -94,7 +90,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `AliasNone: T
   | ^^^^^^^^^
 8 |
 9 | NewAny: typing.TypeAlias = Any
-  |
 help: Add `TypeAlias` annotation
   |
 1 | from typing import Literal, Any
@@ -115,7 +110,6 @@ PYI026 [*] Use `typing_extensions.TypeAlias` for type alias, e.g., `FLAG_THIS: T
    |     ^^^^^^^^^
 18 |
 19 | # these are ok
-   |
 help: Add `TypeAlias` annotation
    |
 1  | from typing import Literal, Any

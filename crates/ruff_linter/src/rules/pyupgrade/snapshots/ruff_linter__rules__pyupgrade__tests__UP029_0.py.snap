@@ -8,7 +8,6 @@ UP029 [*] Unnecessary builtin import: `*`
   | ^^^^^^^^^^^^^^^^^^^^^^
 2 | from builtins import ascii, bytes, compile
 3 | from builtins import str as _str
-  |
 help: Remove unnecessary builtin import
   |
   - from builtins import *
@@ -24,7 +23,6 @@ UP029 [*] Unnecessary builtin imports: `ascii`, `bytes`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | from builtins import str as _str
 4 | from six.moves import filter, zip, zip_longest
-  |
 help: Remove unnecessary builtin import
   |
 1 | from builtins import *
@@ -43,7 +41,6 @@ UP029 [*] Unnecessary builtin imports: `filter`, `zip`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | from io import open
 6 | import io
-  |
 help: Remove unnecessary builtin import
   |
 3 | from builtins import str as _str
@@ -62,7 +59,6 @@ UP029 [*] Unnecessary builtin import: `open`
   | ^^^^^^^^^^^^^^^^^^^
 6 | import io
 7 | import six
-  |
 help: Remove unnecessary builtin import
   |
 4 | from six.moves import filter, zip, zip_longest

@@ -9,7 +9,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 3 | if "k" in d and d["k"]:
   |    ^^^^^^^^^^^^^^^^^^^
 4 |     pass
-  |
 help: Replace with `dict.get`
   |
 2 | # RUF019
@@ -25,7 +24,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 7 | if k in d and d[k]:
   |    ^^^^^^^^^^^^^^^
 8 |     pass
-  |
 help: Replace with `dict.get`
   |
 6 | k = "k"
@@ -42,7 +40,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 10 | if (k) in d and d[k]:
    |    ^^^^^^^^^^^^^^^^^
 11 |     pass
-   |
 help: Replace with `dict.get`
    |
 9  |
@@ -59,7 +56,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 13 | if k in d and d[(k)]:
    |    ^^^^^^^^^^^^^^^^^
 14 |     pass
-   |
 help: Replace with `dict.get`
    |
 12 |
@@ -77,7 +73,6 @@ RUF019 [*] Unnecessary key check before dictionary access
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | bool("key" in dct and dct["key"])
-   |
 help: Replace with `dict.get`
    |
 15 |
@@ -95,7 +90,6 @@ RUF019 [*] Unnecessary key check before dictionary access
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |
 20 | # OK
-   |
 help: Replace with `dict.get`
    |
 17 |
@@ -114,7 +108,6 @@ RUF019 [*] Unnecessary key check before dictionary access
    | |_________________^
 31 |   ):
 32 |       ...
-   |
 help: Replace with `dict.get`
    |
 27 | if (
@@ -133,7 +126,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 42 | if f"{c}" in d and d[f"{c}"]:
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^
 43 |     pass
-   |
 help: Replace with `dict.get`
    |
 41 | c = Formatter()
@@ -150,7 +142,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 46 | if f"{1}" in d and d[f"{1}"]:
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^
 47 |     pass
-   |
 help: Replace with `dict.get`
    |
 45 | # F-string with only literal interpolation — safe fix
@@ -166,7 +157,6 @@ RUF019 [*] Unnecessary key check before dictionary access
 50 | if f"key" in d and d[f"key"]:
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^
 51 |     pass
-   |
 help: Replace with `dict.get`
    |
 49 | # Plain f-string without interpolation — safe fix

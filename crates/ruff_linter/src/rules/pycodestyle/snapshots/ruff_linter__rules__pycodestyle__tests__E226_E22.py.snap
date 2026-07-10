@@ -10,7 +10,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |       ^
 61 | #: E225
 62 | c = alpha -4
-   |
 help: Add missing whitespace
    |
 59 | #: E225
@@ -28,7 +27,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |           ^
 63 | #: E225
 64 | c = alpha- 4
-   |
 help: Add missing whitespace
    |
 61 | #: E225
@@ -46,7 +44,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |          ^
 65 | #: E225
 66 | z = x **y
-   |
 help: Add missing whitespace
    |
 63 | #: E225
@@ -64,7 +61,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |       ^^
 67 | #: E225
 68 | z = (x + 1) **y
-   |
 help: Add missing whitespace
    |
 65 | #: E225
@@ -82,7 +78,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |             ^^
 69 | #: E225
 70 | z = (x + 1)** y
-   |
 help: Add missing whitespace
    |
 67 | #: E225
@@ -100,7 +95,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |            ^^
 71 | #: E225
 72 | _1kB = _1MB >>10
-   |
 help: Add missing whitespace
    |
 69 | #: E225
@@ -118,7 +112,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |    ^
 77 | #: E225 E225
 78 | i=i +1
-   |
 help: Add missing whitespace
    |
 75 | #: E225 E225
@@ -136,7 +129,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |     ^
 79 | #: E225
 80 | i = 1and 1
-   |
 help: Add missing whitespace
    |
 77 | #: E225 E225
@@ -154,7 +146,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |       ^
 89 | #: E225
 90 | i = 1@ 2
-   |
 help: Add missing whitespace
    |
 87 | #: E225
@@ -172,7 +163,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |      ^
 91 | #: E225 E226
 92 | i=i+1
-   |
 help: Add missing whitespace
    |
 89 | #: E225
@@ -190,7 +180,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |    ^
 93 | #: E225 E226
 94 | i =i+1
-   |
 help: Add missing whitespace
    |
 91 | #: E225 E226
@@ -208,7 +197,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |     ^
 95 | #: E225 E226
 96 | i= i+1
-   |
 help: Add missing whitespace
    |
 93 | #: E225 E226
@@ -226,7 +214,6 @@ E226 [*] Missing whitespace around arithmetic operator
    |     ^
 97 | #: E225 E226
 98 | c = (a +b)*(a - b)
-   |
 help: Add missing whitespace
    |
 95 | #: E225 E226
@@ -237,14 +224,12 @@ help: Add missing whitespace
 
 E226 [*] Missing whitespace around arithmetic operator
    --> E22.py:98:8
-    |
  96 | i= i+1
  97 | #: E225 E226
  98 | c = (a +b)*(a - b)
     |        ^
  99 | #: E225 E226
 100 | c = (a+ b)*(a - b)
-    |
 help: Add missing whitespace
    |
 97 | #: E225 E226
@@ -255,14 +240,12 @@ help: Add missing whitespace
 
 E226 [*] Missing whitespace around arithmetic operator
    --> E22.py:98:11
-    |
  96 | i= i+1
  97 | #: E225 E226
  98 | c = (a +b)*(a - b)
     |           ^
  99 | #: E225 E226
 100 | c = (a+ b)*(a - b)
-    |
 help: Add missing whitespace
    |
 97 | #: E225 E226
@@ -279,7 +262,6 @@ E226 [*] Missing whitespace around arithmetic operator
 100 | c = (a+ b)*(a - b)
     |       ^
 101 | #:
-    |
 help: Add missing whitespace
     |
 99  | #: E225 E226
@@ -296,7 +278,6 @@ E226 [*] Missing whitespace around arithmetic operator
 100 | c = (a+ b)*(a - b)
     |           ^
 101 | #:
-    |
 help: Add missing whitespace
     |
 99  | #: E225 E226
@@ -313,7 +294,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |      ^^
 105 | #: E226 E226
 106 | c = (a+b) * (a-b)
-    |
 help: Add missing whitespace
     |
 103 | #: E226
@@ -331,7 +311,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |       ^
 107 | #: E226
 108 | norman = True+False
-    |
 help: Add missing whitespace
     |
 105 | #: E226 E226
@@ -349,7 +328,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |               ^
 107 | #: E226
 108 | norman = True+False
-    |
 help: Add missing whitespace
     |
 105 | #: E226 E226
@@ -367,7 +345,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |      ^
 111 | #: E226
 112 | x = x/2 - 1
-    |
 help: Add missing whitespace
     |
 109 | #: E226
@@ -385,7 +362,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |      ^
 113 | #: E226 E226
 114 | hypot2 = x*x + y*y
-    |
 help: Add missing whitespace
     |
 111 | #: E226
@@ -403,7 +379,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |           ^
 115 | #: E226
 116 | c = (a + b)*(a - b)
-    |
 help: Add missing whitespace
     |
 113 | #: E226 E226
@@ -421,7 +396,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |                 ^
 115 | #: E226
 116 | c = (a + b)*(a - b)
-    |
 help: Add missing whitespace
     |
 113 | #: E226 E226
@@ -439,7 +413,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |            ^
 117 | #: E226
 118 | def halves(n):
-    |
 help: Add missing whitespace
     |
 115 | #: E226
@@ -457,7 +430,6 @@ E226 [*] Missing whitespace around arithmetic operator
     |              ^^
 120 | #: E227
 121 | _1kB = _1MB>>10
-    |
 help: Add missing whitespace
     |
 118 | def halves(n):

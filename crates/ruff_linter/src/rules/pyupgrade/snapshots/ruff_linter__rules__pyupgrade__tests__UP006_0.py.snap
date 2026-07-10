@@ -7,7 +7,6 @@ UP006 [*] Use `list` instead of `typing.List` for type annotation
 4 | def f(x: typing.List[str]) -> None:
   |          ^^^^^^^^^^^
 5 |     ...
-  |
 help: Replace with `list`
   |
 3 |
@@ -22,7 +21,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 11 | def f(x: List[str]) -> None:
    |          ^^^^
 12 |     ...
-   |
 help: Replace with `list`
    |
 10 |
@@ -37,7 +35,6 @@ UP006 [*] Use `list` instead of `t.List` for type annotation
 18 | def f(x: t.List[str]) -> None:
    |          ^^^^^^
 19 |     ...
-   |
 help: Replace with `list`
    |
 17 |
@@ -52,7 +49,6 @@ UP006 [*] Use `list` instead of `IList` for type annotation
 25 | def f(x: IList[str]) -> None:
    |          ^^^^^
 26 |     ...
-   |
 help: Replace with `list`
    |
 24 |
@@ -67,7 +63,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 29 | def f(x: "List[str]") -> None:
    |           ^^^^
 30 |     ...
-   |
 help: Replace with `list`
    |
 28 |
@@ -82,7 +77,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 33 | def f(x: r"List[str]") -> None:
    |            ^^^^
 34 |     ...
-   |
 help: Replace with `list`
    |
 32 |
@@ -97,7 +91,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 37 | def f(x: "List[str]") -> None:
    |           ^^^^
 38 |     ...
-   |
 help: Replace with `list`
    |
 36 |
@@ -112,7 +105,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 41 | def f(x: """List[str]""") -> None:
    |             ^^^^
 42 |     ...
-   |
 help: Replace with `list`
    |
 40 |
@@ -127,7 +119,6 @@ UP006 Use `list` instead of `List` for type annotation
 45 | def f(x: "Li" "st[str]") -> None:
    |          ^^^^^^^^^^^^^^
 46 |     ...
-   |
 help: Replace with `list`
 
 UP006 [*] Use `list` instead of `List` for type annotation
@@ -136,7 +127,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 49 | def f(x: "List['List[str]']") -> None:
    |           ^^^^
 50 |     ...
-   |
 help: Replace with `list`
    |
 48 |
@@ -151,7 +141,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 49 | def f(x: "List['List[str]']") -> None:
    |                 ^^^^
 50 |     ...
-   |
 help: Replace with `list`
    |
 48 |
@@ -166,7 +155,6 @@ UP006 [*] Use `list` instead of `List` for type annotation
 53 | def f(x: "List['Li' 'st[str]']") -> None:
    |           ^^^^
 54 |     ...
-   |
 help: Replace with `list`
    |
 52 |
@@ -181,7 +169,6 @@ UP006 Use `list` instead of `List` for type annotation
 53 | def f(x: "List['Li' 'st[str]']") -> None:
    |                ^^^^^^^^^^^^^^
 54 |     ...
-   |
 help: Replace with `list`
 
 UP006 Use `list` instead of `List` for type annotation
@@ -190,7 +177,6 @@ UP006 Use `list` instead of `List` for type annotation
 57 | def f(x: "Li" "st['List[str]']") -> None:
    |          ^^^^^^^^^^^^^^^^^^^^^^
 58 |     ...
-   |
 help: Replace with `list`
 
 UP006 Use `list` instead of `List` for type annotation
@@ -199,7 +185,6 @@ UP006 Use `list` instead of `List` for type annotation
 57 | def f(x: "Li" "st['List[str]']") -> None:
    |          ^^^^^^^^^^^^^^^^^^^^^^
 58 |     ...
-   |
 help: Replace with `list`
 
 UP006 [*] Use `collections.deque` instead of `typing.Deque` for type annotation
@@ -208,7 +193,6 @@ UP006 [*] Use `collections.deque` instead of `typing.Deque` for type annotation
 61 | def f(x: typing.Deque[str]) -> None:
    |          ^^^^^^^^^^^^
 62 |     ...
-   |
 help: Replace with `collections.deque`
    |
 22 | from typing import List as IList
@@ -227,7 +211,6 @@ UP006 [*] Use `collections.defaultdict` instead of `typing.DefaultDict` for type
 65 | def f(x: typing.DefaultDict[str, str]) -> None:
    |          ^^^^^^^^^^^^^^^^^^
 66 |     ...
-   |
 help: Replace with `collections.defaultdict`
    |
 22 | from typing import List as IList

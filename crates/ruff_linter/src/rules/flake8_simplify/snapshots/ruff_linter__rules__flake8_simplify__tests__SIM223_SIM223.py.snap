@@ -7,7 +7,6 @@ SIM223 [*] Use `False` instead of `... and False`
 1 | if a and False:  # SIM223
   |    ^^^^^^^^^^^
 2 |     pass
-  |
 help: Replace with `False`
   |
   - if a and False:  # SIM223
@@ -24,7 +23,6 @@ SIM223 [*] Use `False` instead of `... and False`
 4 | if (a or b) and False:  # SIM223
   |    ^^^^^^^^^^^^^^^^^^
 5 |     pass
-  |
 help: Replace with `False`
   |
 3 |
@@ -42,7 +40,6 @@ SIM223 [*] Use `False` instead of `... and False`
 7 | if a or (b and False):  # SIM223
   |          ^^^^^^^^^^^
 8 |     pass
-  |
 help: Replace with `False`
   |
 6 |
@@ -60,7 +57,6 @@ SIM223 [*] Use `False` instead of `False and ...`
 19 | if a and f() and False and g() and b:  # SIM223
    |                  ^^^^^^^^^^^^^^^^^^^
 20 |     pass
-   |
 help: Replace with `False`
    |
 18 |
@@ -78,7 +74,6 @@ SIM223 [*] Use `False` instead of `False and ...`
 22 | if False and f() and a and g() and b:  # SIM223
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 |     pass
-   |
 help: Replace with `False`
    |
 21 |
@@ -96,7 +91,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 25 | if a and False and f() and b and g():  # SIM223
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 |     pass
-   |
 help: Replace with `False`
    |
 24 |
@@ -113,7 +107,6 @@ SIM223 [*] Use `""` instead of `"" and ...`
    |       ^^^^^^^^^^^^
 43 |
 44 | a and "foo" and False and "bar"  # SIM223
-   |
 help: Replace with `""`
    |
 41 |
@@ -132,7 +125,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | a and 0 and False  # SIM223
-   |
 help: Replace with `False`
    |
 43 |
@@ -151,7 +143,6 @@ SIM223 [*] Use `0` instead of `0 and ...`
    |       ^^^^^^^^^^^
 47 |
 48 | a and 1 and False and 2  # SIM223
-   |
 help: Replace with `0`
    |
 45 |
@@ -170,7 +161,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^
 49 |
 50 | a and 0.0 and False  # SIM223
-   |
 help: Replace with `False`
    |
 47 |
@@ -189,7 +179,6 @@ SIM223 [*] Use `0.0` instead of `0.0 and ...`
    |       ^^^^^^^^^^^^^
 51 |
 52 | a and 0.1 and False and 0.2  # SIM223
-   |
 help: Replace with `0.0`
    |
 49 |
@@ -208,7 +197,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^
 53 |
 54 | a and [] and False  # SIM223
-   |
 help: Replace with `False`
    |
 51 |
@@ -227,7 +215,6 @@ SIM223 [*] Use `[]` instead of `[] and ...`
    |       ^^^^^^^^^^^^
 55 |
 56 | a and list([]) and False  # SIM223
-   |
 help: Replace with `[]`
    |
 53 |
@@ -246,7 +233,6 @@ SIM223 [*] Use `list([])` instead of `list([]) and ...`
    |       ^^^^^^^^^^^^^^^^^^
 57 |
 58 | a and [1] and False and [2]  # SIM223
-   |
 help: Replace with `list([])`
    |
 55 |
@@ -265,7 +251,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^
 59 |
 60 | a and list([1]) and False and list([2])  # SIM223
-   |
 help: Replace with `False`
    |
 57 |
@@ -284,7 +269,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 |
 62 | a and {} and False  # SIM223
-   |
 help: Replace with `False`
    |
 59 |
@@ -303,7 +287,6 @@ SIM223 [*] Use `{}` instead of `{} and ...`
    |       ^^^^^^^^^^^^
 63 |
 64 | a and dict() and False  # SIM223
-   |
 help: Replace with `{}`
    |
 61 |
@@ -322,7 +305,6 @@ SIM223 [*] Use `dict()` instead of `dict() and ...`
    |       ^^^^^^^^^^^^^^^^
 65 |
 66 | a and {1: 1} and False and {2: 2}  # SIM223
-   |
 help: Replace with `dict()`
    |
 63 |
@@ -341,7 +323,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |
 68 | a and dict({1: 1}) and False and dict({2: 2})  # SIM223
-   |
 help: Replace with `False`
    |
 65 |
@@ -360,7 +341,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 69 |
 70 | a and set() and False  # SIM223
-   |
 help: Replace with `False`
    |
 67 |
@@ -379,7 +359,6 @@ SIM223 [*] Use `set()` instead of `set() and ...`
    |       ^^^^^^^^^^^^^^^
 71 |
 72 | a and set(set()) and False  # SIM223
-   |
 help: Replace with `set()`
    |
 69 |
@@ -398,7 +377,6 @@ SIM223 [*] Use `set(set())` instead of `set(set()) and ...`
    |       ^^^^^^^^^^^^^^^^^^^^
 73 |
 74 | a and {1} and False and {2}  # SIM223
-   |
 help: Replace with `set(set())`
    |
 71 |
@@ -417,7 +395,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^
 75 |
 76 | a and set({1}) and False and set({2})  # SIM223
-   |
 help: Replace with `False`
    |
 73 |
@@ -436,9 +413,7 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 77 |
 78 | a and () and False  # SIM222
-   |
 help: Replace with `False`
-   |
 75 |
    - a and set({1}) and False and set({2})  # SIM223
 76 + a and False  # SIM223
@@ -455,7 +430,6 @@ SIM223 [*] Use `()` instead of `() and ...`
    |       ^^^^^^^^^^^^
 79 |
 80 | a and tuple(()) and False  # SIM222
-   |
 help: Replace with `()`
    |
 77 |
@@ -474,7 +448,6 @@ SIM223 [*] Use `tuple(())` instead of `tuple(()) and ...`
    |       ^^^^^^^^^^^^^^^^^^^
 81 |
 82 | a and (1,) and False and (2,)  # SIM222
-   |
 help: Replace with `tuple(())`
    |
 79 |
@@ -493,7 +466,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^
 83 |
 84 | a and tuple((1,)) and False and tuple((2,))  # SIM222
-   |
 help: Replace with `False`
    |
 81 |
@@ -512,7 +484,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 85 |
 86 | a and frozenset() and False  # SIM222
-   |
 help: Replace with `False`
    |
 83 |
@@ -531,7 +502,6 @@ SIM223 [*] Use `frozenset()` instead of `frozenset() and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^
 87 |
 88 | a and frozenset(frozenset()) and False  # SIM222
-   |
 help: Replace with `frozenset()`
    |
 85 |
@@ -550,7 +520,6 @@ SIM223 [*] Use `frozenset(frozenset())` instead of `frozenset(frozenset()) and .
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 89 |
 90 | a and frozenset({1}) and False and frozenset({2})  # SIM222
-   |
 help: Replace with `frozenset(frozenset())`
    |
 87 |
@@ -569,7 +538,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 91 |
 92 | a and frozenset(frozenset({1})) and False and frozenset(frozenset({2}))  # SIM222
-   |
 help: Replace with `False`
    |
 89 |
@@ -586,7 +554,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 91 |
 92 | a and frozenset(frozenset({1})) and False and frozenset(frozenset({2}))  # SIM222
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace with `False`
    |
 91 |
@@ -605,7 +572,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^
 98 |
 99 | assert a and [] and False and []  # SIM223
-   |
 help: Replace with `False`
    |
 96 |
@@ -617,14 +583,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM223 [*] Use `False` instead of `... and False and ...`
    --> SIM223.py:99:8
-    |
  97 | bool(a and [] and False and [])  # SIM223
  98 |
  99 | assert a and [] and False and []  # SIM223
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 100 |
 101 | if (a and [] and False and []) or (a and [] and False and []):  # SIM223
-    |
 help: Replace with `False`
     |
 98  |
@@ -642,7 +606,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 101 | if (a and [] and False and []) or (a and [] and False and []):  # SIM223
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^
 102 |     pass
-    |
 help: Replace with `False`
     |
 100 |
@@ -660,7 +623,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 101 | if (a and [] and False and []) or (a and [] and False and []):  # SIM223
     |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
 102 |     pass
-    |
 help: Replace with `False`
     |
 100 |
@@ -679,7 +641,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
     |      ^^^^^^^^^^^^^^^^^^^^^^^^^
 105 |
 106 | while a and [] and False and []:  # SIM223
-    |
 help: Replace with `False`
     |
 103 |
@@ -697,7 +658,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 106 | while a and [] and False and []:  # SIM223
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^
 107 |     pass
-    |
 help: Replace with `False`
     |
 105 |
@@ -716,7 +676,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 114 |     if b and [] and False and []  # SIM223
 115 | ]
-    |
 help: Replace with `False`
     |
 112 |     for b in range(10)
@@ -734,7 +693,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 114 |     if b and [] and False and []  # SIM223
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 115 | ]
-    |
 help: Replace with `False`
     |
 113 |     if a and [] and False and []  # SIM223
@@ -753,7 +711,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 122 |     if b and [] and False and []  # SIM223
 123 | }
-    |
 help: Replace with `False`
     |
 120 |     for b in range(10)
@@ -771,7 +728,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 122 |     if b and [] and False and []  # SIM223
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 123 | }
-    |
 help: Replace with `False`
     |
 121 |     if a and [] and False and []  # SIM223
@@ -790,7 +746,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 130 |     if b and [] and False and []  # SIM223
 131 | }
-    |
 help: Replace with `False`
     |
 128 |     for b in range(10)
@@ -808,7 +763,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 130 |     if b and [] and False and []  # SIM223
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 131 | }
-    |
 help: Replace with `False`
     |
 129 |     if a and [] and False and []  # SIM223
@@ -827,7 +781,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 138 |     if b and [] and False and []  # SIM223
 139 | )
-    |
 help: Replace with `False`
     |
 136 |     for b in range(10)
@@ -845,7 +798,6 @@ SIM223 [*] Use `False` instead of `... and False and ...`
 138 |     if b and [] and False and []  # SIM223
     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 139 | )
-    |
 help: Replace with `False`
     |
 137 |     if a and [] and False and []  # SIM223
@@ -864,7 +816,6 @@ SIM223 [*] Use `[]` instead of `[] and ...`
     |       ^^^^^^^^^^^^^^^^^^^
 144 |
 145 | if (a and [] and False and []) == (a and []):  # SIM223
-    |
 help: Replace with `[]`
     |
 142 |
@@ -882,7 +833,6 @@ SIM223 [*] Use `[]` instead of `[] and ...`
 145 | if (a and [] and False and []) == (a and []):  # SIM223
     |           ^^^^^^^^^^^^^^^^^^^
 146 |     pass
-    |
 help: Replace with `[]`
     |
 144 |
@@ -900,7 +850,6 @@ SIM223 [*] Use `[]` instead of `[] and ...`
 148 | if f(a and [] and False and []):  # SIM223
     |            ^^^^^^^^^^^^^^^^^^^
 149 |     pass
-    |
 help: Replace with `[]`
     |
 147 |
@@ -918,7 +867,6 @@ SIM223 [*] Use `f"{''}{''}"` instead of `f"{''}{''}" and ...`
 154 | print(f"{''}{''}" and "bar")
     |       ^^^^^^^^^^^^^^^^^^^^^
 155 | print(f"{1}{''}" and "bar")
-    |
 help: Replace with `f"{''}{''}"`
     |
 153 | print(f"{a}{''}" and "bar")
@@ -936,7 +884,6 @@ SIM223 [*] Use `tuple("")` instead of `tuple("") and ...`
     | ^^^^^^^^^^^^^^^^^^^
 164 | tuple(t"") and False  # OK
 165 | tuple(0) and False  # OK
-    |
 help: Replace with `tuple("")`
     |
 162 | # https://github.com/astral-sh/ruff/issues/21473

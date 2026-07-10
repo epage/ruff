@@ -11,12 +11,10 @@ F811 Redefinition of unused `bar` from line 4
   | ^^^ `bar` redefined here
 6 |
 7 | x: str = "hello"
-  |
 help: Remove definition: `bar`
 
 F811 Redefinition of unused `x` from line 7
   --> F811_34.py:7:1
-   |
  5 | bar: int = 2  # F811
  6 |
  7 | x: str = "hello"
@@ -25,5 +23,4 @@ F811 Redefinition of unused `x` from line 7
    | ^ `x` redefined here
  9 |
 10 | # OK: plain reassignment (no annotation)
-   |
 help: Remove definition: `x`

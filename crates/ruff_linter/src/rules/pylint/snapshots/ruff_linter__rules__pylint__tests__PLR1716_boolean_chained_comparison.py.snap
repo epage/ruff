@@ -9,7 +9,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 8 | if a < b and b < c:  # [boolean-chained-comparison]
   |    ^^^^^^^^^^^^^^^
 9 |     pass
-  |
 help: Use a single compare expression
   |
 7 | c = int(input())
@@ -26,7 +25,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 14 | if a < b and b <= c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^
 15 |     pass
-   |
 help: Use a single compare expression
    |
 13 | c = int(input())
@@ -43,7 +41,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 20 | if a <= b and b < c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^
 21 |     pass
-   |
 help: Use a single compare expression
    |
 19 | c = int(input())
@@ -60,7 +57,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 26 | if a <= b and b <= c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^^
 27 |     pass
-   |
 help: Use a single compare expression
    |
 25 | c = int(input())
@@ -77,7 +73,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 36 | if a > b and b > c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^
 37 |     pass
-   |
 help: Use a single compare expression
    |
 35 | c = int(input())
@@ -94,7 +89,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 42 | if a >= b and b > c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^
 43 |     pass
-   |
 help: Use a single compare expression
    |
 41 | c = int(input())
@@ -111,7 +105,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 48 | if a > b and b >= c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^
 49 |     pass
-   |
 help: Use a single compare expression
    |
 47 | c = int(input())
@@ -128,7 +121,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 54 | if a >= b and b >= c:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^^^
 55 |     pass
-   |
 help: Use a single compare expression
    |
 53 | c = int(input())
@@ -145,7 +137,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 65 | if a < b and b < c and c < d:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^
 66 |     pass
-   |
 help: Use a single compare expression
    |
 64 | d = int(input())
@@ -162,7 +153,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 65 | if a < b and b < c and c < d:  # [boolean-chained-comparison]
    |              ^^^^^^^^^^^^^^^
 66 |     pass
-   |
 help: Use a single compare expression
    |
 64 | d = int(input())
@@ -179,7 +169,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 73 | if a < b and b < c and c < d and d < e:  # [boolean-chained-comparison]
    |    ^^^^^^^^^^^^^^^
 74 |     pass
-   |
 help: Use a single compare expression
    |
 72 | e = int(input())
@@ -196,7 +185,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 73 | if a < b and b < c and c < d and d < e:  # [boolean-chained-comparison]
    |              ^^^^^^^^^^^^^^^
 74 |     pass
-   |
 help: Use a single compare expression
    |
 72 | e = int(input())
@@ -213,7 +201,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 73 | if a < b and b < c and c < d and d < e:  # [boolean-chained-comparison]
    |                        ^^^^^^^^^^^^^^^
 74 |     pass
-   |
 help: Use a single compare expression
    |
 72 | e = int(input())
@@ -230,7 +217,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     |  ^^^^^^^^^^^^^^^^
 124 | a < b and (b < c)
 125 | ((a < b) and b < c)
-    |
 help: Use a single compare expression
     |
 122 | # fixes will balance parentheses
@@ -248,7 +234,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     | ^^^^^^^^^^^^^^^^
 125 | ((a < b) and b < c)
 126 | (a < b) and (b < c)
-    |
 help: Use a single compare expression
     |
 123 | (a < b) and b < c
@@ -266,7 +251,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     |   ^^^^^^^^^^^^^^^^
 126 | (a < b) and (b < c)
 127 | (((a < b))) and (b < c)
-    |
 help: Use a single compare expression
     |
 124 | a < b and (b < c)
@@ -283,7 +267,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 126 | (a < b) and (b < c)
     |  ^^^^^^^^^^^^^^^^^
 127 | (((a < b))) and (b < c)
-    |
 help: Use a single compare expression
     |
 125 | ((a < b) and b < c)
@@ -301,7 +284,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     |    ^^^^^^^^^^^^^^^^^^^
 128 |
 129 | (a<b) and b<c and ((c<d))
-    |
 help: Use a single compare expression
     |
 126 | (a < b) and (b < c)
@@ -319,9 +301,7 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     |  ^^^^^^^^^^^^
 130 |
 131 | # should error and fix
-    |
 help: Use a single compare expression
-    |
 128 |
     - (a<b) and b<c and ((c<d))
 129 + (a<b<c) and ((c<d))
@@ -337,7 +317,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     |           ^^^^^^^^^^^^^
 130 |
 131 | # should error and fix
-    |
 help: Use a single compare expression
     |
 128 |
@@ -354,7 +333,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     | ^^^^^^^^^^^^^
 133 |
 134 | # more involved examples (all should error and fix)
-    |
 help: Use a single compare expression
     |
 131 | # should error and fix
@@ -374,7 +352,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
     | |___________^
 139 |
 140 |   (
-    |
 help: Use a single compare expression
     |
 137 |   # more comments 
@@ -394,7 +371,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 145 | |     and ((c<d))
     | |_____________^
 146 |   )
-    |
 help: Use a single compare expression
     |
 140 | (
@@ -415,7 +391,6 @@ PLR1716 [*] Contains chained boolean comparison that can be simplified
 147 |
 148 | a < (b) and (((b)) < c)
     | ^^^^^^^^^^^^^^^^^^^^^^
-    |
 help: Use a single compare expression
     |
 147 |

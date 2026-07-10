@@ -9,15 +9,12 @@ FIX001 Line contains FIXME, consider resolving the issue
 7 | # FIXME: fixme
   |   ^^^^^
 8 | # fixme: fixme
-  |
 
 FIX001 Line contains FIXME, consider resolving the issue
   --> T00.py:8:3
-   |
  6 | # hack: hack
  7 | # FIXME: fixme
  8 | # fixme: fixme
    |   ^^^^^
  9 |
 10 | # test # TODO: todo
-   |

@@ -9,7 +9,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |             ^^^^^^^^^^^^^^^^^^^
 41 |     task: asyncio.Task[str],
 42 |     deque_object: collections.deque[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -26,7 +25,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |           ^^^^^^^^^^^^^^^^^
 42 |     deque_object: collections.deque[int],
 43 |     defaultdict_object: collections.defaultdict[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -43,7 +41,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^^
 43 |     defaultdict_object: collections.defaultdict[str, int],
 44 |     ordered_dict: collections.OrderedDict[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -60,7 +57,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 44 |     ordered_dict: collections.OrderedDict[str, int],
 45 |     counter_obj: collections.Counter[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -77,7 +73,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |     counter_obj: collections.Counter[str],
 46 |     chain_map: collections.ChainMap[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -94,7 +89,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^
 46 |     chain_map: collections.ChainMap[str, int],
 47 |     context_manager: contextlib.AbstractContextManager[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -111,7 +105,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 47 |     context_manager: contextlib.AbstractContextManager[str],
 48 |     async_context_manager: contextlib.AbstractAsyncContextManager[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -128,7 +121,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 48 |     async_context_manager: contextlib.AbstractAsyncContextManager[int],
 49 |     dataclass_field: dataclasses.Field[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -145,7 +137,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 49 |     dataclass_field: dataclasses.Field[int],
 50 |     cached_prop: functools.cached_property[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -162,7 +153,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                      ^^^^^^^^^^^^^^^^^^^^^^
 50 |     cached_prop: functools.cached_property[int],
 51 |     partial_method: functools.partialmethod[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -179,7 +169,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 51 |     partial_method: functools.partialmethod[int],
 52 |     path_like: os.PathLike[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -196,7 +185,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 |     path_like: os.PathLike[str],
 53 |     lifo_queue: queue.LifoQueue[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -213,7 +201,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^^^
 53 |     lifo_queue: queue.LifoQueue[int],
 54 |     regular_queue: queue.Queue[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -230,7 +217,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                 ^^^^^^^^^^^^^^^^^^^^
 54 |     regular_queue: queue.Queue[int],
 55 |     priority_queue: queue.PriorityQueue[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -247,7 +233,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                    ^^^^^^^^^^^^^^^^
 55 |     priority_queue: queue.PriorityQueue[int],
 56 |     simple_queue: queue.SimpleQueue[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -264,7 +249,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^
 56 |     simple_queue: queue.SimpleQueue[int],
 57 |     regex_pattern: re.Pattern[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -281,7 +265,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^^
 57 |     regex_pattern: re.Pattern[str],
 58 |     regex_match: re.Match[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -298,7 +281,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                    ^^^^^^^^^^^^^^^
 58 |     regex_match: re.Match[str],
 59 |     bsd_db_shelf: shelve.BsdDbShelf[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -315,7 +297,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^
 59 |     bsd_db_shelf: shelve.BsdDbShelf[str, int],
 60 |     db_filename_shelf: shelve.DbfilenameShelf[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -332,7 +313,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 60 |     db_filename_shelf: shelve.DbfilenameShelf[str, int],
 61 |     shelf_obj: shelve.Shelf[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -349,7 +329,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 |     shelf_obj: shelve.Shelf[str, int],
 62 |     mapping_proxy: types.MappingProxyType[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -366,7 +345,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^^^^^^^^^
 62 |     mapping_proxy: types.MappingProxyType[str, int],
 63 |     weak_key_dict: weakref.WeakKeyDictionary[object, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -383,7 +361,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 63 |     weak_key_dict: weakref.WeakKeyDictionary[object, int],
 64 |     weak_method: weakref.WeakMethod[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -400,7 +377,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 64 |     weak_method: weakref.WeakMethod[int],
 65 |     weak_set: weakref.WeakSet[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -417,7 +393,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^^^^^^^^^
 65 |     weak_set: weakref.WeakSet[int],
 66 |     weak_value_dict: weakref.WeakValueDictionary[object, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -434,7 +409,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |               ^^^^^^^^^^^^^^^^^^^^
 66 |     weak_value_dict: weakref.WeakValueDictionary[object, int],
 67 |     awaitable: Awaitable[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -451,7 +425,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |     awaitable: Awaitable[int],
 68 |     coroutine: Coroutine[int, None, str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -468,7 +441,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^
 68 |     coroutine: Coroutine[int, None, str],
 69 |     async_iterable: AsyncIterable[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -485,7 +457,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
 69 |     async_iterable: AsyncIterable[int],
 70 |     async_iterator: AsyncIterator[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -502,7 +473,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                     ^^^^^^^^^^^^^^^^^^
 70 |     async_iterator: AsyncIterator[int],
 71 |     async_generator: AsyncGenerator[int, None],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -519,7 +489,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                     ^^^^^^^^^^^^^^^^^^
 71 |     async_generator: AsyncGenerator[int, None],
 72 |     iterable: Iterable[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -536,7 +505,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^
 72 |     iterable: Iterable[int],
 73 |     iterator: Iterator[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -553,7 +521,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |               ^^^^^^^^^^^^^
 73 |     iterator: Iterator[int],
 74 |     generator: Generator[int, None, None],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -570,7 +537,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |               ^^^^^^^^^^^^^
 74 |     generator: Generator[int, None, None],
 75 |     reversible: Reversible[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -587,7 +553,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^
 75 |     reversible: Reversible[int],
 76 |     container: Container[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -604,7 +569,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                 ^^^^^^^^^^^^^^^
 76 |     container: Container[int],
 77 |     collection: Collection[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -621,7 +585,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^^
 77 |     collection: Collection[int],
 78 |     callable_obj: Callable[[int], str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -638,7 +601,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                 ^^^^^^^^^^^^^^^
 78 |     callable_obj: Callable[[int], str],
 79 |     set_obj: Set[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -655,7 +617,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^
 79 |     set_obj: Set[int],
 80 |     mutable_set: MutableSet[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -672,7 +633,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |              ^^^^^^^^
 80 |     mutable_set: MutableSet[int],
 81 |     mapping: Mapping[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -689,7 +649,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^
 81 |     mapping: Mapping[str, int],
 82 |     mutable_mapping: MutableMapping[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -706,7 +665,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |              ^^^^^^^^^^^^^^^^^
 82 |     mutable_mapping: MutableMapping[str, int],
 83 |     sequence: Sequence[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -723,7 +681,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^
 83 |     sequence: Sequence[int],
 84 |     mutable_sequence: MutableSequence[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -740,7 +697,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |               ^^^^^^^^^^^^^
 84 |     mutable_sequence: MutableSequence[int],
 85 |     byte_string: ByteString[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -757,7 +713,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                       ^^^^^^^^^^^^^^^^^^^^
 85 |     byte_string: ByteString[int],
 86 |     mapping_view: MappingView[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -774,7 +729,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^
 86 |     mapping_view: MappingView[str, int],
 87 |     keys_view: KeysView[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -791,7 +745,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^
 87 |     keys_view: KeysView[str],
 88 |     items_view: ItemsView[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -808,7 +761,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                ^^^^^^^^^^^^^
 88 |     items_view: ItemsView[str, int],
 89 |     values_view: ValuesView[int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -825,7 +777,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                 ^^^^^^^^^^^^^^^^^^^
 89 |     values_view: ValuesView[int],
 90 | ) -> None:
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -842,7 +793,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                  ^^^^^^^^^^^^^^^
 90 | ) -> None:
 91 |     ...
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations

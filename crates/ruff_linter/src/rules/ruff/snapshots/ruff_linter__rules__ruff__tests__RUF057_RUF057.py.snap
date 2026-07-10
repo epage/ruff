@@ -8,7 +8,6 @@ RUF057 [*] Value being rounded is already an integer
   | ^^^^^^^^^
 7 | round(42, None)                                   # Error (safe)
 8 | round(42, 2)                                      # Error (safe)
-  |
 help: Remove unnecessary `round` call
   |
 5 |
@@ -25,7 +24,6 @@ RUF057 [*] Value being rounded is already an integer
   | ^^^^^^^^^^^^^^^
 8 | round(42, 2)                                      # Error (safe)
 9 | round(42, -2)                                     # No error
-  |
 help: Remove unnecessary `round` call
   |
 6 | round(42)                                         # Error (safe)
@@ -36,14 +34,12 @@ help: Remove unnecessary `round` call
 
 RUF057 [*] Value being rounded is already an integer
   --> RUF057.py:8:1
-   |
  6 | round(42)                                         # Error (safe)
  7 | round(42, None)                                   # Error (safe)
  8 | round(42, 2)                                      # Error (safe)
    | ^^^^^^^^^^^^
  9 | round(42, -2)                                     # No error
 10 | round(42, inferred_int)                           # No error
-   |
 help: Remove unnecessary `round` call
   |
 7 | round(42, None)                                   # Error (safe)
@@ -59,7 +55,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^
 25 | round(4 + 2, None)                                # Error (safe)
 26 | round(4 + 2, 2)                                   # Error (safe)
-   |
 help: Remove unnecessary `round` call
    |
 23 |
@@ -76,7 +71,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^^^^^^^
 26 | round(4 + 2, 2)                                   # Error (safe)
 27 | round(4 + 2, -2)                                  # No error
-   |
 help: Remove unnecessary `round` call
    |
 24 | round(4 + 2)                                      # Error (safe)
@@ -94,7 +88,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^^^^
 27 | round(4 + 2, -2)                                  # No error
 28 | round(4 + 2, inferred_int)                        # No error
-   |
 help: Remove unnecessary `round` call
    |
 25 | round(4 + 2, None)                                # Error (safe)
@@ -110,7 +103,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^^^^^^^^
 43 | round(inferred_int, None)                         # Error (unsafe)
 44 | round(inferred_int, 2)                            # Error (unsafe)
-   |
 help: Remove unnecessary `round` call
    |
 41 |
@@ -128,7 +120,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 44 | round(inferred_int, 2)                            # Error (unsafe)
 45 | round(inferred_int, -2)                           # No error
-   |
 help: Remove unnecessary `round` call
    |
 42 | round(inferred_int)                               # Error (unsafe)
@@ -147,7 +138,6 @@ RUF057 [*] Value being rounded is already an integer
    | ^^^^^^^^^^^^^^^^^^^^^^
 45 | round(inferred_int, -2)                           # No error
 46 | round(inferred_int, inferred_int)                 # No error
-   |
 help: Remove unnecessary `round` call
    |
 43 | round(inferred_int, None)                         # Error (unsafe)
@@ -167,7 +157,6 @@ RUF057 [*] Value being rounded is already an integer
    | |__^
 73 |   round(1
 74 |   *1
-   |
 help: Remove unnecessary `round` call
    |
 70 | # See https://github.com/astral-sh/ruff/issues/15598
@@ -187,7 +176,6 @@ RUF057 [*] Value being rounded is already an integer
    | |_^
 76 |
 77 |   # fix should be unsafe if comment is in call range
-   |
 help: Remove unnecessary `round` call
    |
 72 | 1)
@@ -209,7 +197,6 @@ RUF057 [*] Value being rounded is already an integer
    | |_^
 81 |   round(
 82 |       17 # a comment
-   |
 help: Remove unnecessary `round` call
    |
 77 | # fix should be unsafe if comment is in call range
@@ -231,7 +218,6 @@ RUF057 [*] Value being rounded is already an integer
    | |_^
 84 |
 85 |   # See: https://github.com/astral-sh/ruff/issues/21209
-   |
 help: Remove unnecessary `round` call
    |
 80 | )

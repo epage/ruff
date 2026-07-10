@@ -10,7 +10,6 @@ FIX004 Line contains HACK, consider resolving the issue
   |   ^^^^
 6 | # hack: hack
 7 | # FIXME: fixme
-  |
 
 FIX004 Line contains HACK, consider resolving the issue
  --> T00.py:6:3
@@ -21,4 +20,3 @@ FIX004 Line contains HACK, consider resolving the issue
   |   ^^^^
 7 | # FIXME: fixme
 8 | # fixme: fixme
-  |

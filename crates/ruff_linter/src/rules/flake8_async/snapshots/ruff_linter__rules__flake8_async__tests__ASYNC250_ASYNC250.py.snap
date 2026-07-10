@@ -8,16 +8,13 @@ ASYNC250 Blocking call to `input()` in async context
 7 |     k = input()  # ASYNC250
   |         ^^^^^
 8 |     input("hello world")  # ASYNC250
-  |
 
 ASYNC250 Blocking call to `input()` in async context
  --> ASYNC250.py:8:5
-  |
 6 | async def foo():
 7 |     k = input()  # ASYNC250
 8 |     input("hello world")  # ASYNC250
   |     ^^^^^
-  |
 
 ASYNC250 Blocking call to `input()` in async context
   --> ASYNC250.py:21:5
@@ -26,7 +23,6 @@ ASYNC250 Blocking call to `input()` in async context
 21 |     builtins.input("testing")  # ASYNC250
    |     ^^^^^^^^^^^^^^
 22 |     fake.input("whatever")  # Ok
-   |
 
 ASYNC250 Blocking call to `input()` in async context
   --> ASYNC250.py:28:5
@@ -35,4 +31,3 @@ ASYNC250 Blocking call to `input()` in async context
 28 |     input("sync") # should emit here
    |     ^^^^^
 29 |     await asyncio.to_thread(lambda: input("async")) # but not here
-   |

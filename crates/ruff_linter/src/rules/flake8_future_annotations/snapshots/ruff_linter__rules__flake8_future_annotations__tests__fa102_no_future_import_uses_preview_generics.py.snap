@@ -10,7 +10,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                   ^^^^^^^^^^^^^^^^^^^^^^
 43 |     defaultdict_object: collections.defaultdict[str, int],
 44 |     ordered_dict: collections.OrderedDict[str, int],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -27,7 +26,6 @@ FA102 [*] Missing `from __future__ import annotations`, but uses PEP 585 collect
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 44 |     ordered_dict: collections.OrderedDict[str, int],
 45 |     counter_obj: collections.Counter[str],
-   |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations

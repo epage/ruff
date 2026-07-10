@@ -9,7 +9,6 @@ SIM112 [*] Use capitalized environment variable `FOO` instead of `foo`
   |            ^^^^^
 5 |
 6 | os.environ.get('foo')
-  |
 help: Replace `foo` with `FOO`
   |
 3 | # Bad
@@ -28,19 +27,16 @@ SIM112 Use capitalized environment variable `FOO` instead of `foo`
   |                ^^^^^
 7 |
 8 | os.environ.get('foo', 'bar')
-  |
 help: Replace `foo` with `FOO`
 
 SIM112 Use capitalized environment variable `FOO` instead of `foo`
   --> SIM112.py:8:16
-   |
  6 | os.environ.get('foo')
  7 |
  8 | os.environ.get('foo', 'bar')
    |                ^^^^^
  9 |
 10 | os.getenv('foo')
-   |
 help: Replace `foo` with `FOO`
 
 SIM112 Use capitalized environment variable `FOO` instead of `foo`
@@ -52,7 +48,6 @@ SIM112 Use capitalized environment variable `FOO` instead of `foo`
    |           ^^^^^
 11 |
 12 | env = os.environ.get('foo')
-   |
 help: Replace `foo` with `FOO`
 
 SIM112 Use capitalized environment variable `FOO` instead of `foo`
@@ -64,7 +59,6 @@ SIM112 Use capitalized environment variable `FOO` instead of `foo`
    |                      ^^^^^
 13 |
 14 | env = os.environ['foo']
-   |
 help: Replace `foo` with `FOO`
 
 SIM112 [*] Use capitalized environment variable `FOO` instead of `foo`
@@ -76,7 +70,6 @@ SIM112 [*] Use capitalized environment variable `FOO` instead of `foo`
    |                  ^^^^^
 15 |
 16 | if env := os.environ.get('foo'):
-   |
 help: Replace `foo` with `FOO`
    |
 13 |
@@ -94,7 +87,6 @@ SIM112 Use capitalized environment variable `FOO` instead of `foo`
 16 | if env := os.environ.get('foo'):
    |                          ^^^^^
 17 |     pass
-   |
 help: Replace `foo` with `FOO`
 
 SIM112 [*] Use capitalized environment variable `FOO` instead of `foo`
@@ -105,7 +97,6 @@ SIM112 [*] Use capitalized environment variable `FOO` instead of `foo`
 19 | if env := os.environ['foo']:
    |                      ^^^^^
 20 |     pass
-   |
 help: Replace `foo` with `FOO`
    |
 18 |

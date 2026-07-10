@@ -9,7 +9,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
 3 | |     if b:
   | |_________^
 4 |           c
-  |
 help: Combine `if` statements using `and`
   |
 1 | # SIM102
@@ -24,14 +23,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM102 [*] Use a single `if` statement instead of nested `if` statements
   --> SIM102.py:7:1
-   |
  6 |   # SIM102
  7 | / if a:
  8 | |     if b:
  9 | |         if c:
    | |_____________^
 10 |               d
-   |
 help: Combine `if` statements using `and`
    |
 6  | # SIM102
@@ -48,14 +45,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM102 [*] Use a single `if` statement instead of nested `if` statements
   --> SIM102.py:8:5
-   |
  6 |   # SIM102
  7 |   if a:
  8 | /     if b:
  9 | |         if c:
    | |_____________^
 10 |               d
-   |
 help: Combine `if` statements using `and`
    |
 7  | if a:
@@ -77,7 +72,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
 16 | |     if c:
    | |_________^
 17 |           d
-   |
 help: Combine `if` statements using `and`
    |
 14 |     pass
@@ -99,7 +93,6 @@ SIM102 Use a single `if` statement instead of nested `if` statements
 22 | |     if b:
    | |_________^
 23 |           c
-   |
 help: Combine `if` statements using `and`
 
 SIM102 [*] Use a single `if` statement instead of nested `if` statements
@@ -111,7 +104,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
    | |_________^
 28 |           # Fixable due to placement of this comment.
 29 |           c
-   |
 help: Combine `if` statements using `and`
    |
 25 | # SIM102
@@ -136,7 +128,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
    | |_________________^
 53 |               """this
 54 |   is valid"""
-   |
 help: Combine `if` statements using `and`
    |
 50 |     # SIM102
@@ -170,7 +161,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
    | |_____________^
 69 |           """this
 70 |   is valid"""
-   |
 help: Combine `if` statements using `and`
    |
 66 | # SIM102
@@ -206,7 +196,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
 86 | |         ):
    | |__________^
 87 |               print("Bad module!")
-   |
 help: Combine `if` statements using `and`
    |
 82 |     # SIM102
@@ -233,7 +222,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
 93 | |     ):
    | |______^
 94 |           print("Bad module!")
-   |
 help: Combine `if` statements using `and`
    |
 89 | # SIM102 (auto-fixable)
@@ -260,7 +248,6 @@ SIM102 Use a single `if` statement instead of nested `if` statements
 100 | |     ):
     | |______^
 101 |           print("Bad module!")
-    |
 help: Combine `if` statements using `and`
 
 SIM102 [*] Use a single `if` statement instead of nested `if` statements
@@ -273,7 +260,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
     | |_____________^
 108 |               print("if")
 109 |   elif d:
-    |
 help: Combine `if` statements using `and`
     |
 105 | if a:
@@ -296,7 +282,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
     | |_____________^
 134 |               print("foo")
 135 |   else:
-    |
 help: Combine `if` statements using `and`
     |
 131 |     # SIM 102
@@ -318,7 +303,6 @@ SIM102 [*] Use a single `if` statement instead of nested `if` statements
 166 | |         if c:
     | |_____________^
 167 |               d
-    |
 help: Combine `if` statements using `and`
     |
 164 |         pass

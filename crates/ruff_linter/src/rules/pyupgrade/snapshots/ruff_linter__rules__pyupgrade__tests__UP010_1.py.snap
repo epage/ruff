@@ -7,7 +7,6 @@ UP010 [*] Unnecessary `__future__` imports `generators`, `nested_scopes` for tar
 1 | from __future__ import nested_scopes, generators
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 2 | from __future__ import with_statement, unicode_literals
-  |
 help: Remove unnecessary `__future__` import
   |
   - from __future__ import nested_scopes, generators
@@ -22,7 +21,6 @@ UP010 [*] Unnecessary `__future__` import `unicode_literals` for target Python v
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | from __future__ import absolute_import, division
-  |
 help: Remove unnecessary `__future__` import
   |
 1 | from __future__ import nested_scopes, generators
@@ -40,7 +38,6 @@ UP010 [*] Unnecessary `__future__` import `absolute_import` for target Python ve
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | from __future__ import generator_stop
 6 | from __future__ import print_function, nested_scopes, generator_stop
-  |
 help: Remove unnecessary `__future__` import
   |
 3 |
@@ -56,7 +53,6 @@ UP010 [*] Unnecessary `__future__` import `generator_stop` for target Python ver
 5 | from __future__ import generator_stop
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | from __future__ import print_function, nested_scopes, generator_stop
-  |
 help: Remove unnecessary `__future__` import
   |
 4 | from __future__ import absolute_import, division
@@ -73,7 +69,6 @@ UP010 [*] Unnecessary `__future__` import `nested_scopes` for target Python vers
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | print(with_statement)
-  |
 help: Remove unnecessary `__future__` import
   |
 5 | from __future__ import generator_stop

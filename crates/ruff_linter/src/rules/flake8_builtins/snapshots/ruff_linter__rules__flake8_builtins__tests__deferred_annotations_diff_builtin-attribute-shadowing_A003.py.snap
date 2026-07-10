@@ -18,7 +18,6 @@ A003 Python builtin is shadowed by method `str` from line 14
 17 |     def method_usage(self) -> str:
    |                               ^^^
 18 |         pass
-   |
 
 
 A003 Python builtin is shadowed by class attribute `id` from line 3
@@ -29,4 +28,3 @@ A003 Python builtin is shadowed by class attribute `id` from line 3
 20 |     def attribute_usage(self) -> id:
    |                                  ^^
 21 |         pass
-   |

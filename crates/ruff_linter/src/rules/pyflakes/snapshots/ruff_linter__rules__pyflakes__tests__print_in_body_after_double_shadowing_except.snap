@@ -10,7 +10,6 @@ F841 [*] Local variable `x` is assigned to but never used
   |                          ^
 8 |         pass
 9 |     except ImportError as x:
-  |
 help: Remove assignment to unused variable `x`
   |
 6 |         1 / 0
@@ -21,13 +20,11 @@ help: Remove assignment to unused variable `x`
 
 F841 [*] Local variable `x` is assigned to but never used
   --> <filename>:9:27
-   |
  7 |     except ValueError as x:
  8 |         pass
  9 |     except ImportError as x:
    |                           ^
 10 |         pass
-   |
 help: Remove assignment to unused variable `x`
    |
 8  |         pass

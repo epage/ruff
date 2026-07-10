@@ -8,4 +8,3 @@ invalid-syntax: cannot use an asynchronous comprehension inside of a synchronous
   |                           ^^^^^^^^^^^^^^^^^^^^^
 2 |
 3 | async def test(): return [[x async for x in elements(n)] async for n in range(3)]
-  |

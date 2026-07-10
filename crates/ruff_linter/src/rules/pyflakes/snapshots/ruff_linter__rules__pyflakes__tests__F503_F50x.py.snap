@@ -9,4 +9,3 @@ F503 `%`-format string expected sequence but got mapping
 10 | '%s %s' % {'k': 'v'}  # F503
    | ^^^^^^^^^^^^^^^^^^^^
 11 | '%(bar)*s' % {'bar': 'baz'}  # F506, F508
-   |

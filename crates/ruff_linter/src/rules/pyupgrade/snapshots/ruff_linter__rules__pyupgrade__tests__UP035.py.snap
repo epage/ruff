@@ -9,7 +9,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | from collections import Mapping as MAP
-  |
 help: Import from `collections.abc`
   |
 1 | # UP035
@@ -27,7 +26,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | from collections import Mapping, Sequence
-  |
 help: Import from `collections.abc`
   |
 3 |
@@ -45,7 +43,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`, `Sequence`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | from collections import Counter, Mapping
-  |
 help: Import from `collections.abc`
   |
 5 |
@@ -56,14 +53,12 @@ help: Import from `collections.abc`
 
 UP035 [*] Import from `collections.abc` instead: `Mapping`
   --> UP035.py:8:1
-   |
  6 | from collections import Mapping, Sequence
  7 |
  8 | from collections import Counter, Mapping
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 |
 10 | from collections import (Counter, Mapping)
-   |
 help: Import from `collections.abc`
    |
 7  |
@@ -82,7 +77,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | from collections import (Counter,
-   |
 help: Import from `collections.abc`
    |
 9  |
@@ -102,7 +96,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    | |_________________________________^
 14 |
 15 |   from collections import Counter, \
-   |
 help: Import from `collections.abc`
    |
 11 |
@@ -123,7 +116,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    | |________________________________^
 17 |
 18 |   from collections import Counter, Mapping, Sequence
-   |
 help: Import from `collections.abc`
    |
 14 |
@@ -143,7 +135,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`, `Sequence`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |
 20 | from collections import Mapping as mapping, Counter
-   |
 help: Import from `collections.abc`
    |
 17 |
@@ -162,7 +153,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |
 22 | if True:
-   |
 help: Import from `collections.abc`
    |
 19 |
@@ -180,7 +170,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 |
 25 | if True:
-   |
 help: Import from `collections.abc`
    |
 22 | if True:
@@ -199,7 +188,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 |
 30 | if True: from collections import Mapping
-   |
 help: Import from `collections.abc`
    |
 27 |         pass
@@ -218,7 +206,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 31 |
 32 | import os
-   |
 help: Import from `collections.abc`
    |
 29 |
@@ -234,7 +221,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
 33 | from collections import Counter, Mapping
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 34 | import sys
-   |
 help: Import from `collections.abc`
    |
 32 | import os
@@ -257,7 +243,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`, `Callable`
    | |_____^
 43 |
 44 |   from typing import Callable, Match, Pattern, List, OrderedDict, AbstractSet, ContextManager
-   |
 help: Import from `collections.abc`
    |
 37 |     from collections import (
@@ -279,7 +264,6 @@ UP035 [*] Import from `collections.abc` instead: `Callable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 help: Import from `collections.abc`
    |
 43 |
@@ -298,7 +282,6 @@ UP035 [*] Import from `collections` instead: `OrderedDict`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 help: Import from `collections`
    |
 43 |
@@ -317,7 +300,6 @@ UP035 [*] Import from `re` instead: `Match`, `Pattern`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 help: Import from `re`
    |
 43 |
@@ -336,7 +318,6 @@ UP035 `typing.List` is deprecated, use `list` instead
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 
 UP035 `typing.AbstractSet` is deprecated, use `collections.abc.Set` instead
   --> UP035.py:44:1
@@ -347,7 +328,6 @@ UP035 `typing.AbstractSet` is deprecated, use `collections.abc.Set` instead
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 
 UP035 `typing.ContextManager` is deprecated, use `contextlib.AbstractContextManager` instead
   --> UP035.py:44:1
@@ -358,7 +338,6 @@ UP035 `typing.ContextManager` is deprecated, use `contextlib.AbstractContextMana
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 |
 46 | if True: from collections import (
-   |
 
 UP035 Import from `collections.abc` instead: `Mapping`
   --> UP035.py:46:10
@@ -371,7 +350,6 @@ UP035 Import from `collections.abc` instead: `Mapping`
    | |_____________________^
 48 |
 49 |   # Bad imports from PYI027 that are now handled by PYI022 (UP035)
-   |
 help: Import from `collections.abc`
 
 UP035 `typing.ContextManager` is deprecated, use `contextlib.AbstractContextManager` instead
@@ -382,7 +360,6 @@ UP035 `typing.ContextManager` is deprecated, use `contextlib.AbstractContextMana
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 51 | from typing import OrderedDict
 52 | from typing_extensions import OrderedDict
-   |
 
 UP035 [*] Import from `collections` instead: `OrderedDict`
   --> UP035.py:51:1
@@ -393,7 +370,6 @@ UP035 [*] Import from `collections` instead: `OrderedDict`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 | from typing_extensions import OrderedDict
 53 | from typing import Callable
-   |
 help: Import from `collections`
    |
 50 | from typing import ContextManager
@@ -411,7 +387,6 @@ UP035 [*] Import from `typing` instead: `OrderedDict`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 53 | from typing import Callable
 54 | from typing import ByteString
-   |
 help: Import from `typing`
    |
 51 | from typing import OrderedDict
@@ -429,7 +404,6 @@ UP035 [*] Import from `collections.abc` instead: `Callable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 54 | from typing import ByteString
 55 | from typing import Container
-   |
 help: Import from `collections.abc`
    |
 52 | from typing_extensions import OrderedDict
@@ -447,7 +421,6 @@ UP035 [*] Import from `collections.abc` instead: `ByteString`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | from typing import Container
 56 | from typing import Hashable
-   |
 help: Import from `collections.abc`
    |
 53 | from typing import Callable
@@ -465,7 +438,6 @@ UP035 [*] Import from `collections.abc` instead: `Container`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 56 | from typing import Hashable
 57 | from typing import ItemsView
-   |
 help: Import from `collections.abc`
    |
 54 | from typing import ByteString
@@ -483,7 +455,6 @@ UP035 [*] Import from `collections.abc` instead: `Hashable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 57 | from typing import ItemsView
 58 | from typing import Iterable
-   |
 help: Import from `collections.abc`
    |
 55 | from typing import Container
@@ -501,7 +472,6 @@ UP035 [*] Import from `collections.abc` instead: `ItemsView`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 58 | from typing import Iterable
 59 | from typing import Iterator
-   |
 help: Import from `collections.abc`
    |
 56 | from typing import Hashable
@@ -519,7 +489,6 @@ UP035 [*] Import from `collections.abc` instead: `Iterable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 59 | from typing import Iterator
 60 | from typing import KeysView
-   |
 help: Import from `collections.abc`
    |
 57 | from typing import ItemsView
@@ -537,7 +506,6 @@ UP035 [*] Import from `collections.abc` instead: `Iterator`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 60 | from typing import KeysView
 61 | from typing import Mapping
-   |
 help: Import from `collections.abc`
    |
 58 | from typing import Iterable
@@ -555,7 +523,6 @@ UP035 [*] Import from `collections.abc` instead: `KeysView`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 | from typing import Mapping
 62 | from typing import MappingView
-   |
 help: Import from `collections.abc`
    |
 59 | from typing import Iterator
@@ -573,7 +540,6 @@ UP035 [*] Import from `collections.abc` instead: `Mapping`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 62 | from typing import MappingView
 63 | from typing import MutableMapping
-   |
 help: Import from `collections.abc`
    |
 60 | from typing import KeysView
@@ -591,7 +557,6 @@ UP035 [*] Import from `collections.abc` instead: `MappingView`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 63 | from typing import MutableMapping
 64 | from typing import MutableSequence
-   |
 help: Import from `collections.abc`
    |
 61 | from typing import Mapping
@@ -609,7 +574,6 @@ UP035 [*] Import from `collections.abc` instead: `MutableMapping`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 64 | from typing import MutableSequence
 65 | from typing import MutableSet
-   |
 help: Import from `collections.abc`
    |
 62 | from typing import MappingView
@@ -627,7 +591,6 @@ UP035 [*] Import from `collections.abc` instead: `MutableSequence`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 65 | from typing import MutableSet
 66 | from typing import Sequence
-   |
 help: Import from `collections.abc`
    |
 63 | from typing import MutableMapping
@@ -645,7 +608,6 @@ UP035 [*] Import from `collections.abc` instead: `MutableSet`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 | from typing import Sequence
 67 | from typing import Sized
-   |
 help: Import from `collections.abc`
    |
 64 | from typing import MutableSequence
@@ -663,7 +625,6 @@ UP035 [*] Import from `collections.abc` instead: `Sequence`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 | from typing import Sized
 68 | from typing import ValuesView
-   |
 help: Import from `collections.abc`
    |
 65 | from typing import MutableSet
@@ -681,7 +642,6 @@ UP035 [*] Import from `collections.abc` instead: `Sized`
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 68 | from typing import ValuesView
 69 | from typing import Awaitable
-   |
 help: Import from `collections.abc`
    |
 66 | from typing import Sequence
@@ -699,7 +659,6 @@ UP035 [*] Import from `collections.abc` instead: `ValuesView`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 69 | from typing import Awaitable
 70 | from typing import AsyncIterator
-   |
 help: Import from `collections.abc`
    |
 67 | from typing import Sized
@@ -717,7 +676,6 @@ UP035 [*] Import from `collections.abc` instead: `Awaitable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 70 | from typing import AsyncIterator
 71 | from typing import AsyncIterable
-   |
 help: Import from `collections.abc`
    |
 68 | from typing import ValuesView
@@ -735,7 +693,6 @@ UP035 [*] Import from `collections.abc` instead: `AsyncIterator`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 71 | from typing import AsyncIterable
 72 | from typing import Coroutine
-   |
 help: Import from `collections.abc`
    |
 69 | from typing import Awaitable
@@ -753,7 +710,6 @@ UP035 [*] Import from `collections.abc` instead: `AsyncIterable`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 72 | from typing import Coroutine
 73 | from typing import Collection
-   |
 help: Import from `collections.abc`
    |
 70 | from typing import AsyncIterator
@@ -771,7 +727,6 @@ UP035 [*] Import from `collections.abc` instead: `Coroutine`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 73 | from typing import Collection
 74 | from typing import AsyncGenerator
-   |
 help: Import from `collections.abc`
    |
 71 | from typing import AsyncIterable
@@ -789,7 +744,6 @@ UP035 [*] Import from `collections.abc` instead: `Collection`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 74 | from typing import AsyncGenerator
 75 | from typing import Reversible
-   |
 help: Import from `collections.abc`
    |
 72 | from typing import Coroutine
@@ -807,7 +761,6 @@ UP035 [*] Import from `collections.abc` instead: `AsyncGenerator`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 75 | from typing import Reversible
 76 | from typing import Generator
-   |
 help: Import from `collections.abc`
    |
 73 | from typing import Collection
@@ -825,7 +778,6 @@ UP035 [*] Import from `collections.abc` instead: `Reversible`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 76 | from typing import Generator
 77 | from typing import Callable
-   |
 help: Import from `collections.abc`
    |
 74 | from typing import AsyncGenerator
@@ -843,7 +795,6 @@ UP035 [*] Import from `collections.abc` instead: `Generator`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 77 | from typing import Callable
 78 | from typing import cast
-   |
 help: Import from `collections.abc`
    |
 75 | from typing import Reversible
@@ -860,7 +811,6 @@ UP035 [*] Import from `collections.abc` instead: `Callable`
 77 | from typing import Callable
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 78 | from typing import cast
-   |
 help: Import from `collections.abc`
    |
 76 | from typing import Generator
@@ -877,7 +827,6 @@ UP035 [*] Import from `typing` instead: `SupportsIndex`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 85 |
 86 | # UP035 on py312+ only
-   |
 help: Import from `typing`
    |
 83 | # UP035 on py312+ only
@@ -894,7 +843,6 @@ UP035 [*] Import from `typing` instead: `NamedTuple`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 88 |
 89 | # UP035 on py312+ only: `typing_extensions` supports `frozen_default` (backported from 3.12).
-   |
 help: Import from `typing`
    |
 86 | # UP035 on py312+ only
@@ -911,7 +859,6 @@ UP035 [*] Import from `typing` instead: `dataclass_transform`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 91 |
 92 | # UP035
-   |
 help: Import from `typing`
    |
 89 | # UP035 on py312+ only: `typing_extensions` supports `frozen_default` (backported from 3.12).
@@ -928,7 +875,6 @@ UP035 [*] Import from `enum` instead: `StrEnum`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 94 |
 95 | # UP035
-   |
 help: Import from `enum`
    |
 92 | # UP035
@@ -945,7 +891,6 @@ UP035 [*] Import from `typing` instead: `override`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 97 |
 98 | # UP035
-   |
 help: Import from `typing`
    |
 95 | # UP035
@@ -956,13 +901,11 @@ help: Import from `typing`
 
 UP035 [*] Import from `collections.abc` instead: `Buffer`
    --> UP035.py:99:1
-    |
  98 | # UP035
  99 | from typing_extensions import Buffer
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 100 |
 101 | # UP035
-    |
 help: Import from `collections.abc`
     |
 98  | # UP035
@@ -979,7 +922,6 @@ UP035 [*] Import from `types` instead: `get_original_bases`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 103 |
 104 | # UP035 on py313+ only
-    |
 help: Import from `types`
     |
 101 | # UP035
@@ -996,7 +938,6 @@ UP035 [*] Import from `typing` instead: `TypeVar`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 106 |
 107 | # UP035 on py313+ only
-    |
 help: Import from `typing`
     |
 104 | # UP035 on py313+ only
@@ -1013,7 +954,6 @@ UP035 [*] Import from `types` instead: `CapsuleType`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 109 |
 110 | # UP035 on py313+ only
-    |
 help: Import from `types`
     |
 107 | # UP035 on py313+ only
@@ -1030,7 +970,6 @@ UP035 [*] Import from `warnings` instead: `deprecated`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 112 |
 113 | # UP035 on py313+ only
-    |
 help: Import from `warnings`
     |
 110 | # UP035 on py313+ only
@@ -1047,7 +986,6 @@ UP035 [*] Import from `typing` instead: `get_type_hints`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 115 |
 116 | # https://github.com/astral-sh/ruff/issues/15780
-    |
 help: Import from `typing`
     |
 113 | # UP035 on py313+ only
@@ -1064,7 +1002,6 @@ UP035 [*] Import from `typing` instead: `BinaryIO`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 123 |
 124 | # UP035 on py37+ only
-    |
 help: Import from `typing`
     |
 121 | # UP035 on py37+ only
@@ -1081,7 +1018,6 @@ UP035 [*] Import from `typing` instead: `IO`
     | ^^^^^^^^^^^^^^^^^^^^^^^^
 126 |
 127 | # UP035 on py37+ only
-    |
 help: Import from `typing`
     |
 124 | # UP035 on py37+ only
@@ -1098,7 +1034,6 @@ UP035 [*] Import from `typing` instead: `TextIO`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 129 |
 130 | # UP035 on py37+ only
-    |
 help: Import from `typing`
     |
 127 | # UP035 on py37+ only
@@ -1115,7 +1050,6 @@ UP035 [*] Import from `re` instead: `Match`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 132 |
 133 | # UP035 on py37+ only
-    |
 help: Import from `re`
     |
 130 | # UP035 on py37+ only
@@ -1130,7 +1064,6 @@ UP035 [*] Import from `re` instead: `Pattern`
 133 | # UP035 on py37+ only
 134 | from typing.re import Pattern
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    |
 help: Import from `re`
     |
 133 | # UP035 on py37+ only

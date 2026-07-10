@@ -8,7 +8,6 @@ TID254 [*] `typing` should be imported lazily
 4 | import typing as t
   |        ^^^^^^^^^^^
 5 | lazy import pathlib
-  |
 help: Convert to a lazy import
   |
 3 | import os
@@ -27,7 +26,6 @@ TID254 [*] `foo` should be imported lazily
   | ^^^^^^^^^^^^^^^^^^^
 8 | lazy from foo import baz
 9 | from starry import *
-  |
 help: Convert to a lazy import
   |
 6 |
@@ -45,7 +43,6 @@ TID254 [*] `email` should be imported lazily
    |            ^^^^^
 13 |
 14 | if True:
-   |
 help: Convert to a lazy import
    |
 11 | with manager():
@@ -63,9 +60,7 @@ TID254 [*] `bar` should be imported lazily
    |     ^^^^^^^^^^^^^^^^^^^
 16 |
 17 | try:
-   |
 help: Convert to a lazy import
-   |
 14 | if True:
    -     from bar import qux
 15 +     lazy from bar import qux
@@ -80,7 +75,6 @@ TID254 [*] `pkg` should be imported lazily
 27 |
 28 | x = 1; import pkg.submodule
    |               ^^^^^^^^^^^^^
-   |
 help: Convert to a lazy import
    |
 27 |

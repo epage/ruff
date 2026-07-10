@@ -8,7 +8,6 @@ D415 First line should end with a period, question mark, or exclamation point
 11 |     """Here's a line ending in a colon:"""
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |     ...
-   |
 help: Add closing punctuation
 
 D415 First line should end with a period, question mark, or exclamation point
@@ -18,7 +17,6 @@ D415 First line should end with a period, question mark, or exclamation point
 15 |     """Here's a line ending in a semi colon;"""
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |     ...
-   |
 help: Add closing punctuation
 
 D415 [*] First line should end with a period, question mark, or exclamation point
@@ -28,7 +26,6 @@ D415 [*] First line should end with a period, question mark, or exclamation poin
 19 |     """Here's a line ending with a whitespace  """
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 |     ...
-   |
 help: Add closing punctuation
    |
 18 | def f():

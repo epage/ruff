@@ -10,7 +10,6 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 20 |     pytest.fail("")
 21 |     pytest.fail(f"")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:20:5
@@ -21,7 +20,6 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 21 |     pytest.fail(f"")
 22 |     pytest.fail(msg="")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:21:5
@@ -32,7 +30,6 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 22 |     pytest.fail(msg="")
 23 |     pytest.fail(msg=f"")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:22:5
@@ -43,7 +40,6 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 23 |     pytest.fail(msg=f"")
 24 |     pytest.fail(reason="")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:23:5
@@ -54,7 +50,6 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 24 |     pytest.fail(reason="")
 25 |     pytest.fail(reason=f"")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:24:5
@@ -64,7 +59,6 @@ PT016 No message passed to `pytest.fail()`
 24 |     pytest.fail(reason="")
    |     ^^^^^^^^^^^
 25 |     pytest.fail(reason=f"")
-   |
 
 PT016 No message passed to `pytest.fail()`
   --> PT016.py:25:5
@@ -75,4 +69,3 @@ PT016 No message passed to `pytest.fail()`
    |     ^^^^^^^^^^^
 26 |
 27 | # Skip for t-strings
-   |

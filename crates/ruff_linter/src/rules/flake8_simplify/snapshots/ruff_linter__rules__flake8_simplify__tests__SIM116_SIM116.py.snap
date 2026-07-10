@@ -16,7 +16,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |_________________^
 14 |
 15 |       # SIM116
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:16:5
@@ -33,7 +32,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |___________________________^
 24 |
 25 |       # SIM116
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:26:5
@@ -48,7 +46,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |________________________^
 32 |
 33 |       # SIM116
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:34:5
@@ -65,7 +62,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |___________________________^
 42 |
 43 |       # SIM116
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:44:5
@@ -80,7 +76,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |________________^
 50 |
 51 |       # SIM116
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:52:5
@@ -97,7 +92,6 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |___________________________^
 60 |
 61 |       # OK
-   |
 
 SIM116 Use a dictionary instead of consecutive `if` statements
   --> SIM116.py:80:5
@@ -114,4 +108,3 @@ SIM116 Use a dictionary instead of consecutive `if` statements
    | |___________________^
 88 |
 89 |       # OK
-   |

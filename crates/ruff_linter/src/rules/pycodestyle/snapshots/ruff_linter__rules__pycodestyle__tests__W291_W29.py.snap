@@ -10,7 +10,6 @@ W291 [*] Trailing whitespace
   |      ^
 5 | #: W293:2:1
 6 | class Foo(object):
-  |
 help: Remove trailing whitespace
   |
 3 | #: W291:1:6
@@ -28,7 +27,6 @@ W291 [*] Trailing whitespace
    |                                   ^^^
 12 | #: W291 W292 noeol
 13 | x = 1   
-   |
 help: Remove trailing whitespace
    |
 10 | '''multiline
@@ -46,7 +44,6 @@ W291 [*] Trailing whitespace
    |      ^^^
 14 | #: W191 W292 noeol
 15 | if False:
-   |
 help: Remove trailing whitespace
    |
 12 | #: W291 W292 noeol

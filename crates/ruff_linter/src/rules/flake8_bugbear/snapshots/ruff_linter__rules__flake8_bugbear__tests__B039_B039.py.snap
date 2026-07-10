@@ -9,7 +9,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^
 22 | ContextVar("cv", default={})
 23 | ContextVar("cv", default=list())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -21,7 +20,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^
 23 | ContextVar("cv", default=list())
 24 | ContextVar("cv", default=set())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -33,7 +31,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^
 24 | ContextVar("cv", default=set())
 25 | ContextVar("cv", default=dict())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -45,7 +42,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^
 25 | ContextVar("cv", default=dict())
 26 | ContextVar("cv", default=[char for char in "foo"])
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -57,7 +53,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^
 26 | ContextVar("cv", default=[char for char in "foo"])
 27 | ContextVar("cv", default={char for char in "foo"})
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -69,7 +64,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^^^^^^^^^^^^^^^^^^^
 27 | ContextVar("cv", default={char for char in "foo"})
 28 | ContextVar("cv", default={char: idx for idx, char in enumerate("foo")})
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -81,7 +75,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^^^^^^^^^^^^^^^^^^^
 28 | ContextVar("cv", default={char: idx for idx, char in enumerate("foo")})
 29 | ContextVar("cv", default=collections.deque())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -93,19 +86,16 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 | ContextVar("cv", default=collections.deque())
 30 | ContextVar("cv", default=set[str]())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
   --> B039.py:29:26
-   |
 27 | ContextVar("cv", default={char for char in "foo"})
 28 | ContextVar("cv", default={char: idx for idx, char in enumerate("foo")})
 29 | ContextVar("cv", default=collections.deque())
    |                          ^^^^^^^^^^^^^^^^^^^
 30 | ContextVar("cv", default=set[str]())
 31 | ContextVar[set[str]]("cv", default=set[str]())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -116,7 +106,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
 30 | ContextVar("cv", default=set[str]())
    |                          ^^^^^^^^^^
 31 | ContextVar[set[str]]("cv", default=set[str]())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -128,7 +117,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                                    ^^^^^^^^^^
 32 |
 33 | def bar() -> list[int]:
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -139,7 +127,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
 36 | ContextVar("cv", default=bar())
    |                          ^^^^^
 37 | ContextVar("cv", default=time.time())
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -150,7 +137,6 @@ B039 Do not use mutable data structures for `ContextVar` defaults
    |                          ^^^^^^^^^^^
 38 |
 39 | def baz(): ...
-   |
 help: Replace with `None`; initialize with `.set()``
 
 B039 Do not use mutable data structures for `ContextVar` defaults
@@ -159,5 +145,4 @@ B039 Do not use mutable data structures for `ContextVar` defaults
 39 | def baz(): ...
 40 | ContextVar("cv", default=baz())
    |                          ^^^^^
-   |
 help: Replace with `None`; initialize with `.set()``

@@ -10,7 +10,6 @@ B006 [*] Do not use mutable data structures for argument defaults
   |                      ^^
 4 |     """
 5 |     """
-  |
 help: Replace with `None`; initialize within function
   |
 2 |

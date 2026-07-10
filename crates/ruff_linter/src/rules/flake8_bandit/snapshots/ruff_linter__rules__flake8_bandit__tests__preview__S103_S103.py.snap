@@ -12,14 +12,12 @@ Added: 4
 --- Added ---
 S103 `os.chmod` setting a permissive mask `0o664` on file or directory
   --> S103.py:8:25
-   |
  6 | os.chmod("/etc/passwd", 0o227)  # Error
  7 | os.chmod("/etc/passwd", 0o7)  # Error
  8 | os.chmod("/etc/passwd", 0o664)  # OK (stable); Error (preview, S_IWGRP)
    |                         ^^^^^
  9 | os.chmod("/etc/passwd", 0o777)  # Error
 10 | os.chmod("/etc/passwd", 0o770)  # Error
-   |
 
 
 S103 `os.chmod` setting a permissive mask `0o760` on file or directory
@@ -31,7 +29,6 @@ S103 `os.chmod` setting a permissive mask `0o760` on file or directory
    |                         ^^^^^
 13 | os.chmod("~/.bashrc", 511)  # Error
 14 | os.chmod("/etc/hosts", 0o777)  # Error
-   |
 
 
 S103 `os.chmod` setting a permissive mask `0o1` on file or directory
@@ -43,7 +40,6 @@ S103 `os.chmod` setting a permissive mask `0o1` on file or directory
    |                           ^^^^^^^^^^^^
 22 | os.chmod("/etc/passwd", stat.S_IWOTH)  # Error
 23 | os.chmod("/etc/passwd", 0o100000000)  # Error
-   |
 
 
 S103 `os.chmod` setting a permissive mask `0o21` on file or directory
@@ -53,4 +49,3 @@ S103 `os.chmod` setting a permissive mask `0o21` on file or directory
 26 | os.chmod("/etc/secrets.txt", 0o21)  # OK (stable); Error (preview, S_IWGRP)
    |                              ^^^^
 27 | os.chmod("/etc/secrets.txt", 0o11)  # Error (S_IXGRP)
-   |

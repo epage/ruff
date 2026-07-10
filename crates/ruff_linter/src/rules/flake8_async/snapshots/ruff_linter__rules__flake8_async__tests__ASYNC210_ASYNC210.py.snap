@@ -7,39 +7,30 @@ ASYNC210 Async functions should not call blocking HTTP methods
 7 | async def foo():
 8 |     urllib.request.urlopen("http://example.com/foo/bar").read()  # ASYNC210
   |     ^^^^^^^^^^^^^^^^^^^^^^
-  |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:12:5
-   |
 11 | async def foo():
 12 |     requests.get()  # ASYNC210
    |     ^^^^^^^^^^^^
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:16:5
-   |
 15 | async def foo():
 16 |     httpx.get()  # ASYNC210
    |     ^^^^^^^^^
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:20:5
-   |
 19 | async def foo():
 20 |     requests.post()  # ASYNC210
    |     ^^^^^^^^^^^^^
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:24:5
-   |
 23 | async def foo():
 24 |     httpx.post()  # ASYNC210
    |     ^^^^^^^^^^
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:28:5
@@ -49,7 +40,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^
 29 |     requests.get(...)  # ASYNC210
 30 |     requests.get  # Ok
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:29:5
@@ -60,7 +50,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^
 30 |     requests.get  # Ok
 31 |     print(requests.get())  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:31:11
@@ -70,7 +59,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
 31 |     print(requests.get())  # ASYNC210
    |           ^^^^^^^^^^^^
 32 |     print(requests.get(requests.get()))  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:32:11
@@ -81,7 +69,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |           ^^^^^^^^^^^^
 33 |
 34 |     requests.options()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:32:24
@@ -92,7 +79,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |                        ^^^^^^^^^^^^
 33 |
 34 |     requests.options()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:34:5
@@ -103,7 +89,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^^^^
 35 |     requests.head()  # ASYNC210
 36 |     requests.post()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:35:5
@@ -113,7 +98,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^
 36 |     requests.post()  # ASYNC210
 37 |     requests.put()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:36:5
@@ -124,7 +108,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^
 37 |     requests.put()  # ASYNC210
 38 |     requests.patch()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:37:5
@@ -135,7 +118,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^
 38 |     requests.patch()  # ASYNC210
 39 |     requests.delete()  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:38:5
@@ -146,7 +128,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^^
 39 |     requests.delete()  # ASYNC210
 40 |     requests.foo()
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:39:5
@@ -156,7 +137,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
 39 |     requests.delete()  # ASYNC210
    |     ^^^^^^^^^^^^^^^
 40 |     requests.foo()
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:42:5
@@ -167,7 +147,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^
 43 |     httpx.head("")  # ASYNC210
 44 |     httpx.post("")  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:43:5
@@ -177,7 +156,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^
 44 |     httpx.post("")  # ASYNC210
 45 |     httpx.put("")  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:44:5
@@ -188,7 +166,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^
 45 |     httpx.put("")  # ASYNC210
 46 |     httpx.patch("")  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:45:5
@@ -199,7 +176,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^
 46 |     httpx.patch("")  # ASYNC210
 47 |     httpx.delete("")  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:46:5
@@ -210,7 +186,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^
 47 |     httpx.delete("")  # ASYNC210
 48 |     httpx.foo()  # Ok
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:47:5
@@ -220,7 +195,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
 47 |     httpx.delete("")  # ASYNC210
    |     ^^^^^^^^^^^^
 48 |     httpx.foo()  # Ok
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:50:5
@@ -230,7 +204,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
 50 |     urllib3.request()  # ASYNC210
    |     ^^^^^^^^^^^^^^^
 51 |     urllib3.request(...)  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:51:5
@@ -240,7 +213,6 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^^^
 52 |
 53 |     urllib.request.urlopen("")  # ASYNC210
-   |
 
 ASYNC210 Async functions should not call blocking HTTP methods
   --> ASYNC210.py:53:5
@@ -251,4 +223,3 @@ ASYNC210 Async functions should not call blocking HTTP methods
    |     ^^^^^^^^^^^^^^^^^^^^^^
 54 |
 55 |     r = {}
-   |

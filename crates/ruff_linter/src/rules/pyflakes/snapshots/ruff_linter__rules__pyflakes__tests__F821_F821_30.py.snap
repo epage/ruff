@@ -9,7 +9,6 @@ F821 Undefined name `qux`
 13 |     "baz": list["qux"],
    |                  ^^^
 14 | }]
-   |
 
 F821 Undefined name `dolor`
   --> F821_30.py:19:19
@@ -20,7 +19,6 @@ F821 Undefined name `dolor`
    |                   ^^^^^
 20 |     }],
 21 |     "sit": Literal["amet"]
-   |
 
 F821 Undefined name `adipiscing`
   --> F821_30.py:26:31
@@ -31,7 +29,6 @@ F821 Undefined name `adipiscing`
    |                               ^^^^^^^^^^
 27 |     **{"sed do": str, int: "eiusmod", **tempor}
 28 | }]
-   |
 
 F821 Undefined name `eiusmod`
   --> F821_30.py:27:29
@@ -41,7 +38,6 @@ F821 Undefined name `eiusmod`
 27 |     **{"sed do": str, int: "eiusmod", **tempor}
    |                             ^^^^^^^
 28 | }]
-   |
 
 F821 Undefined name `tempor`
   --> F821_30.py:27:41
@@ -51,4 +47,3 @@ F821 Undefined name `tempor`
 27 |     **{"sed do": str, int: "eiusmod", **tempor}
    |                                         ^^^^^^
 28 | }]
-   |

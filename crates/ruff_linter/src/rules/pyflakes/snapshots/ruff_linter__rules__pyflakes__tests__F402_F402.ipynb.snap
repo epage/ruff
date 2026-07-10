@@ -10,7 +10,6 @@ F402 Import `os` from cell 1, line 1 shadowed by loop variable
   |     ^^
 4 |     pass
 5 | for path in range(3):
-  |
 
 F402 Import `path` from cell 1, line 2 shadowed by loop variable
  --> F402.ipynb:5:5
@@ -20,4 +19,3 @@ F402 Import `path` from cell 1, line 2 shadowed by loop variable
 5 | for path in range(3):
   |     ^^^^
 6 |     pass
-  |

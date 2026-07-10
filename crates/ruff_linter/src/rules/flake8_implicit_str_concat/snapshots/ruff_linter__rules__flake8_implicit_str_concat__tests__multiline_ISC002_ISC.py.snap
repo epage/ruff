@@ -12,7 +12,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
   | |_________^
 7 |
 8 |   _ = (
-  |
 
 ISC002 Implicitly concatenated string literals over multiple lines
   --> ISC.py:24:3
@@ -22,7 +21,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
 25 | |   "def"
    | |_______^
 26 |   )
-   |
 
 ISC002 Implicitly concatenated string literals over multiple lines
   --> ISC.py:29:3
@@ -32,7 +30,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
 30 | |   "def"
    | |_______^
 31 |   )
-   |
 
 ISC002 Implicitly concatenated string literals over multiple lines
   --> ISC.py:34:3
@@ -42,7 +39,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
 35 | |   b"def"
    | |________^
 36 |   )
-   |
 
 ISC002 Implicitly concatenated string literals over multiple lines
   --> ISC.py:67:5
@@ -53,7 +49,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
 68 | |     "ghi"
    | |_________^
 69 |   } jkl"""
-   |
 
 ISC002 Implicitly concatenated string literals over multiple lines
   --> ISC.py:74:10
@@ -66,18 +61,15 @@ ISC002 Implicitly concatenated string literals over multiple lines
    | |__________^
 76 |
 77 |   # Explicitly concatenated nested f-strings
-   |
 
 ISC002 Implicitly concatenated string literals over multiple lines
    --> ISC.py:196:1
-    |
 195 |   # ISC002
 196 | / t"The quick brown fox jumps over the lazy "\
 197 | | t"dog."
     | |_______^
 198 |
 199 |   # ISC003
-    |
 
 ISC002 Implicitly concatenated string literals over multiple lines
    --> ISC.py:208:10
@@ -88,7 +80,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
     |  __________^
 209 | |     t"def"} g"
     | |__________^
-    |
 
 ISC002 Implicitly concatenated string literals over multiple lines
    --> ISC.py:217:5
@@ -99,7 +90,6 @@ ISC002 Implicitly concatenated string literals over multiple lines
 218 | |     "ghi"
     | |_________^
 219 |   )
-    |
 
 ISC002 Implicitly concatenated string literals over multiple lines
    --> ISC.py:222:5
@@ -109,4 +99,3 @@ ISC002 Implicitly concatenated string literals over multiple lines
 223 | |     "def"
     | |_________^
 224 |   ) + "ghi"
-    |

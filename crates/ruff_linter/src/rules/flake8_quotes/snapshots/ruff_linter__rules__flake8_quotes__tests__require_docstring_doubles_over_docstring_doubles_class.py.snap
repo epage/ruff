@@ -10,7 +10,6 @@ Q001 [*] Double quote multiline found but single quotes preferred
   |     ^^^^^^^^^^^^^^^^^^^^^^^
 4 |
 5 |     def foo(self, bar="""not a docstring"""):
-  |
 help: Replace double multiline quotes with single quotes
   |
 2 |     """ Double quotes single line class docstring """
@@ -28,7 +27,6 @@ Q001 [*] Double quote multiline found but single quotes preferred
   |                       ^^^^^^^^^^^^^^^^^^^^^
 6 |         """ Double quotes single line method docstring"""
 7 |         pass
-  |
 help: Replace double multiline quotes with single quotes
   |
 4 |

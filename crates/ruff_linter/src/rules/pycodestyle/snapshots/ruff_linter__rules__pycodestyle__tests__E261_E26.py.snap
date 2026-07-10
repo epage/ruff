@@ -9,7 +9,6 @@ E261 [*] Insert at least two spaces before an inline comment
   |     ^
 3 | #: E262:1:12
 4 | x = x + 1  #Increment x
-  |
 help: Insert spaces
   |
 1 | #: E261:1:5

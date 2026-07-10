@@ -9,16 +9,13 @@ DTZ002 `datetime.datetime.today()` used
   | ^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | from datetime import datetime
-  |
 help: Use `datetime.datetime.now(tz=...)` instead
 
 DTZ002 `datetime.datetime.today()` used
   --> DTZ002.py:9:1
-   |
  8 | # unqualified
  9 | datetime.today()
    | ^^^^^^^^^^^^^^^^
 10 |
 11 | # uses `astimezone` method
-   |
 help: Use `datetime.datetime.now(tz=...)` instead

@@ -9,7 +9,6 @@ FA100 [*] Add `from __future__ import annotations` to simplify `typing.List`
   |             ^^^^
 6 |     a_list.append("hello")
 7 |     a_dict = cast(Dict[int | None, Union[int, Set[bool]]], {})
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations
@@ -25,7 +24,6 @@ FA100 [*] Add `from __future__ import annotations` to simplify `typing.Optional`
   |                  ^^^^^^^^
 6 |     a_list.append("hello")
 7 |     a_dict = cast(Dict[int | None, Union[int, Set[bool]]], {})
-  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations

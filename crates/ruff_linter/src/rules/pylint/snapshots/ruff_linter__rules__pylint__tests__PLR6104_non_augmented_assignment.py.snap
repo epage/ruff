@@ -10,7 +10,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 | index = index - 1
 18 | a_list = a_list + ["to concat"]
-   |
 help: Replace with augmented assignment
    |
 15 |
@@ -28,7 +27,6 @@ PLR6104 [*] Use `-=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^
 18 | a_list = a_list + ["to concat"]
 19 | some_set = some_set | {"to concat"}
-   |
 help: Replace with augmented assignment
    |
 16 | some_string = some_string + "a very long end of string"
@@ -47,7 +45,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 | some_set = some_set | {"to concat"}
 20 | to_multiply = to_multiply * 5
-   |
 help: Replace with augmented assignment
    |
 17 | index = index - 1
@@ -66,7 +63,6 @@ PLR6104 [*] Use `|=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 | to_multiply = to_multiply * 5
 21 | to_multiply = 5 * to_multiply
-   |
 help: Replace with augmented assignment
    |
 18 | a_list = a_list + ["to concat"]
@@ -85,7 +81,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 | to_multiply = 5 * to_multiply
 22 | to_multiply = to_multiply * to_multiply
-   |
 help: Replace with augmented assignment
    |
 19 | some_set = some_set | {"to concat"}
@@ -104,7 +99,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 | to_multiply = to_multiply * to_multiply
 23 | to_divide = to_divide / 5
-   |
 help: Replace with augmented assignment
    |
 20 | to_multiply = to_multiply * 5
@@ -123,7 +117,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | to_divide = to_divide / 5
 24 | to_divide = to_divide // 5
-   |
 help: Replace with augmented assignment
    |
 21 | to_multiply = 5 * to_multiply
@@ -142,7 +135,6 @@ PLR6104 [*] Use `/=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 24 | to_divide = to_divide // 5
 25 | to_cube = to_cube**3
-   |
 help: Replace with augmented assignment
    |
 22 | to_multiply = to_multiply * to_multiply
@@ -161,7 +153,6 @@ PLR6104 [*] Use `//=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | to_cube = to_cube**3
 26 | to_cube = 3**to_cube
-   |
 help: Replace with augmented assignment
    |
 23 | to_divide = to_divide / 5
@@ -180,7 +171,6 @@ PLR6104 [*] Use `**=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^
 26 | to_cube = 3**to_cube
 27 | to_cube = to_cube**to_cube
-   |
 help: Replace with augmented assignment
    |
 24 | to_divide = to_divide // 5
@@ -199,7 +189,6 @@ PLR6104 [*] Use `**=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | timeDiffSeconds = timeDiffSeconds % 60
 29 | flags = flags & 0x1
-   |
 help: Replace with augmented assignment
    |
 26 | to_cube = 3**to_cube
@@ -218,7 +207,6 @@ PLR6104 [*] Use `%=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 | flags = flags & 0x1
 30 | flags = flags | 0x1
-   |
 help: Replace with augmented assignment
    |
 27 | to_cube = to_cube**to_cube
@@ -237,7 +225,6 @@ PLR6104 [*] Use `&=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^
 30 | flags = flags | 0x1
 31 | flags = flags ^ 0x1
-   |
 help: Replace with augmented assignment
    |
 28 | timeDiffSeconds = timeDiffSeconds % 60
@@ -256,7 +243,6 @@ PLR6104 [*] Use `|=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^
 31 | flags = flags ^ 0x1
 32 | flags = flags << 1
-   |
 help: Replace with augmented assignment
    |
 29 | flags = flags & 0x1
@@ -275,7 +261,6 @@ PLR6104 [*] Use `^=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^
 32 | flags = flags << 1
 33 | flags = flags >> 1
-   |
 help: Replace with augmented assignment
    |
 30 | flags = flags | 0x1
@@ -294,7 +279,6 @@ PLR6104 [*] Use `<<=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^
 33 | flags = flags >> 1
 34 | mat1 = mat1 @ mat2
-   |
 help: Replace with augmented assignment
    |
 31 | flags = flags ^ 0x1
@@ -313,7 +297,6 @@ PLR6104 [*] Use `>>=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^
 34 | mat1 = mat1 @ mat2
 35 | a_list[1] = a_list[1] + 1
-   |
 help: Replace with augmented assignment
    |
 32 | flags = flags << 1
@@ -325,51 +308,43 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLR6104 [*] Use `@=` to perform an augmented assignment directly
   --> non_augmented_assignment.py:34:1
-   |
 32 | flags = flags << 1
 33 | flags = flags >> 1
 34 | mat1 = mat1 @ mat2
    | ^^^^^^^^^^^^^^^^^^
 35 | a_list[1] = a_list[1] + 1
-   |
 help: Replace with augmented assignment
    |
 33 | flags = flags >> 1
    - mat1 = mat1 @ mat2
 34 + mat1 @= mat2
 35 | a_list[1] = a_list[1] + 1
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 PLR6104 [*] Use `+=` to perform an augmented assignment directly
   --> non_augmented_assignment.py:35:1
-   |
 33 | flags = flags >> 1
 34 | mat1 = mat1 @ mat2
 35 | a_list[1] = a_list[1] + 1
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 36 |
 37 | a_list[0:2] = a_list[0:2] * 3
-   |
 help: Replace with augmented assignment
    |
 34 | mat1 = mat1 @ mat2
    - a_list[1] = a_list[1] + 1
 35 + a_list[1] += 1
 36 |
-   |
 note: This is an unsafe fix and may change runtime behavior
 
 PLR6104 [*] Use `*=` to perform an augmented assignment directly
   --> non_augmented_assignment.py:37:1
-   |
 35 | a_list[1] = a_list[1] + 1
 36 |
 37 | a_list[0:2] = a_list[0:2] * 3
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 38 | a_list[:2] = a_list[:2] * 3
 39 | a_list[1:] = a_list[1:] * 3
-   |
 help: Replace with augmented assignment
    |
 36 |
@@ -387,7 +362,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 39 | a_list[1:] = a_list[1:] * 3
 40 | a_list[:] = a_list[:] * 3
-   |
 help: Replace with augmented assignment
    |
 37 | a_list[0:2] = a_list[0:2] * 3
@@ -405,7 +379,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
 39 | a_list[1:] = a_list[1:] * 3
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 40 | a_list[:] = a_list[:] * 3
-   |
 help: Replace with augmented assignment
    |
 38 | a_list[:2] = a_list[:2] * 3
@@ -424,7 +397,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 41 |
 42 | index = index * (index + 10)
-   |
 help: Replace with augmented assignment
    |
 39 | a_list[1:] = a_list[1:] * 3
@@ -441,7 +413,6 @@ PLR6104 [*] Use `*=` to perform an augmented assignment directly
 41 |
 42 | index = index * (index + 10)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace with augmented assignment
    |
 41 |
@@ -458,7 +429,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
 46 |     def t(self):
 47 |         self.a = self.a + 1
    |         ^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace with augmented assignment
    |
 46 |     def t(self):
@@ -474,7 +444,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
 50 | obj = T()
 51 | obj.a = obj.a + 1
    | ^^^^^^^^^^^^^^^^^
-   |
 help: Replace with augmented assignment
    |
 50 | obj = T()
@@ -491,7 +460,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | ^^^^^^^^
 55 |
 56 | # Regression tests for https://github.com/astral-sh/ruff/issues/11672
-   |
 help: Replace with augmented assignment
    |
 53 |
@@ -503,14 +471,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLR6104 [*] Use `+=` to perform an augmented assignment directly
   --> non_augmented_assignment.py:58:1
-   |
 56 | # Regression tests for https://github.com/astral-sh/ruff/issues/11672
 57 | test = 0x5
 58 | test = test + 0xBA
    | ^^^^^^^^^^^^^^^^^^
 59 |
 60 | test2 = b""
-   |
 help: Replace with augmented assignment
    |
 57 | test = 0x5
@@ -528,7 +494,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | ^^^^^^^^^^^^^^^^^^^^^^^
 62 |
 63 | test3 = ""
-   |
 help: Replace with augmented assignment
    |
 60 | test2 = b""
@@ -547,7 +512,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | |__________________________________^
 66 |
 67 |   test4 = []
-   |
 help: Replace with augmented assignment
    |
 63 | test3 = ""
@@ -568,7 +532,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | |___________________^
 72 |
 73 |   test5 = test5 + (
-   |
 help: Replace with augmented assignment
    |
 67 | test4 = []
@@ -591,7 +554,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | |_^
 78 |
 79 |   test6 = test6 + \
-   |
 help: Replace with augmented assignment
    |
 72 |
@@ -615,7 +577,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | |_________^
 85 |
 86 |   test7 = \
-   |
 help: Replace with augmented assignment
    |
 78 |
@@ -637,7 +598,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
    | |___________^
 89 |
 90 |   test8 = \
-   |
 help: Replace with augmented assignment
    |
 85 |
@@ -660,7 +620,6 @@ PLR6104 [*] Use `+=` to perform an augmented assignment directly
 93 | |  \
 94 | |     test8
    | |_________^
-   |
 help: Replace with augmented assignment
    |
 89 |

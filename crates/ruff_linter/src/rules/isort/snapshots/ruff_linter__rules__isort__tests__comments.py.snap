@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> comments.py:3:1
-   |
  1 |   # Comment 1
  2 |   # Comment 2
  3 | / import D
@@ -38,7 +37,6 @@ I001 [*] Import block is un-sorted or un-formatted
 32 | | from F import a  # Comment 1
 33 | | from F import b
    | |_______________^
-   |
 help: Organize imports
    |
 2  | # Comment 2

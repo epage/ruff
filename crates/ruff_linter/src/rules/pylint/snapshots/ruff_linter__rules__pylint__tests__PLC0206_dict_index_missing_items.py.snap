@@ -11,7 +11,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |                            ---------------------
 11 |
 12 | for instrument in ORCHESTRA:
-   |
 help: Use `for instrument, value in ORCHESTRA.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -25,7 +24,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |     ---------------------
 14 |
 15 | for instrument in ORCHESTRA.keys():
-   |
 help: Use `for instrument, value in ORCHESTRA.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -39,7 +37,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |                            ---------------------
 17 |
 18 | for instrument in ORCHESTRA.keys():
-   |
 help: Use `for instrument, value in ORCHESTRA.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -53,7 +50,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |     ---------------------
 20 |
 21 | for instrument in (temp_orchestra := {"violin": "strings", "oboe": "woodwind"}):
-   |
 help: Use `for instrument, value in ORCHESTRA.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -67,7 +63,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |                            --------------------------
 23 |
 24 | for instrument in (temp_orchestra := {"violin": "strings", "oboe": "woodwind"}):
-   |
 help: Use `for instrument, value in temp_orchestra.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -81,7 +76,6 @@ PLC0206 Extracting value from dictionary without calling `.items()`
    |     --------------------------
 26 |
 27 | # # OK
-   |
 help: Use `for instrument, value in temp_orchestra.items()` instead
 
 PLC0206 Extracting value from dictionary without calling `.items()`
@@ -104,5 +98,4 @@ PLC0206 Extracting value from dictionary without calling `.items()`
 69 |     with open(f"{instrument}/{ORCHESTRA[instrument]}.txt", "w") as f:
    |                               ---------------------
 70 |         f.write(data)
-   |
 help: Use `for instrument, value in ORCHESTRA.items()` instead

@@ -8,7 +8,6 @@ E501 Line too long (149 > 88)
   |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 2 | …onfigured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 3 | …task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (158 > 88)
  --> E501_1.py:2:89
@@ -18,7 +17,6 @@ E501 Line too long (158 > 88)
   |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 | …-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 4 | …ed task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (148 > 88)
  --> E501_1.py:3:89
@@ -29,7 +27,6 @@ E501 Line too long (148 > 88)
   |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 | …figured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 5 | …ed task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (155 > 88)
  --> E501_1.py:4:89
@@ -40,18 +37,15 @@ E501 Line too long (155 > 88)
   |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | …ask-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 6 | …sk-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (150 > 88)
  --> E501_1.py:5:89
-  |
 3 | …task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 4 | …igured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 5 | …d task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
   |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | … task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 7 | …figured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (149 > 88)
  --> E501_1.py:6:89
@@ -62,7 +56,6 @@ E501 Line too long (149 > 88)
   |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | …figured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 8 | …configured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (156 > 88)
  --> E501_1.py:7:89
@@ -72,7 +65,6 @@ E501 Line too long (156 > 88)
 7 | …ured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
   |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 | …figured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
-  |
 
 E501 Line too long (159 > 88)
  --> E501_1.py:8:89
@@ -81,4 +73,3 @@ E501 Line too long (159 > 88)
 7 | …ed task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
 8 | …gured task-tags sometimes are longer than line-length so that you can easily find them with `git grep`
   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |

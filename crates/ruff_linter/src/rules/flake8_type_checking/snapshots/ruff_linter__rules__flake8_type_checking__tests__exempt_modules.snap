@@ -9,7 +9,6 @@ TC002 [*] Move third-party import `flask` into a type-checking block
    |            ^^^^^
 15 |
 16 |     x: flask
-   |
 help: Move into type-checking block
    |
 1  + from typing import TYPE_CHECKING

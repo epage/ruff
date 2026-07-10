@@ -11,7 +11,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 14 |
 15 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:18:5
@@ -24,7 +23,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |________________________________________^
 21 |
 22 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:25:5
@@ -37,7 +35,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 28 |
 29 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:32:5
@@ -49,7 +46,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 34 |
 35 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:38:5
@@ -61,7 +57,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 40 |
 41 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:44:5
@@ -73,7 +68,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_______________^
 46 |
 47 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:50:5
@@ -85,7 +79,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 52 |       except Exception:
 53 |           raise
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:52:5
@@ -97,7 +90,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_____________^
 54 |
 55 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:58:5
@@ -109,7 +101,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_______________^
 60 |       except Exception as e:
 61 |           raise e
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:60:5
@@ -121,7 +112,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_______________^
 62 |
 63 |   def bad():
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:66:5
@@ -133,7 +123,6 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |________________^
 68 |       except Exception as e:
 69 |           raise e
-   |
 
 TRY203 Remove exception handler; error is immediately re-raised
   --> TRY203.py:68:5
@@ -145,4 +134,3 @@ TRY203 Remove exception handler; error is immediately re-raised
    | |_______________^
 70 |
 71 |   def fine():
-   |

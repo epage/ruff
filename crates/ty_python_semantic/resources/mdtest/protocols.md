@@ -1066,13 +1066,11 @@ warning[ambiguous-protocol-member]: Cannot assign to an undeclared attribute in 
     |
 326 |         self.augmented += 1  # snapshot: ambiguous-protocol-member
     |         ^^^^^^^^^^^^^^ `augmented` is not declared as a protocol member
-    |
 info: Assigning to an undeclared attribute in a protocol method leads to an ambiguous interface
    --> src/mdtest_snippet.py:318:7
     |
 318 | class AssignmentForms(Protocol):
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^ `AssignmentForms` declared as a protocol here
-    |
 info: No declarations found for `augmented` in the body of `AssignmentForms` or any of its superclasses
 ```
 

@@ -8,7 +8,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 2 | s = set(
 3 |     [x for x in range(3)]
-  |
 help: Rewrite as a set comprehension
   |
   - s = set([x for x in range(3)])
@@ -28,7 +27,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
   | |_^
 5 |
 6 |   s = f"{set([x for x in 'ab'])}"
-  |
 help: Rewrite as a set comprehension
   |
 1 | s = set([x for x in range(3)])
@@ -50,7 +48,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 6 | s = f"{set([x for x in 'ab'])}"
   |        ^^^^^^^^^^^^^^^^^^^^^^
 7 | s = f'{set([x for x in "ab"])}'
-  |
 help: Rewrite as a set comprehension
   |
 5 |
@@ -68,7 +65,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
   |        ^^^^^^^^^^^^^^^^^^^^^^
 8 |
 9 | def f(x):
-  |
 help: Rewrite as a set comprehension
   |
 6 | s = f"{set([x for x in 'ab'])}"
@@ -87,7 +83,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 13 |
 14 | s = f"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
-   |
 help: Rewrite as a set comprehension
    |
 11 |
@@ -105,7 +100,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 14 | s = f"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
    |         ^^^^^^^^^^^^^^^^^^^^^^
 15 | s = f"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
-   |
 help: Rewrite as a set comprehension
    |
 13 |
@@ -123,7 +117,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 14 | s = f"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
    |                                  ^^^^^^^^^^^^^^^^^^^^^^
 15 | s = f"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
-   |
 help: Rewrite as a set comprehension
    |
 13 |
@@ -141,7 +134,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |        ^^^^^^^^^^^^^^^^^^^^^^
 16 |
 17 | s = set(  # comment
-   |
 help: Rewrite as a set comprehension
    |
 14 | s = f"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
@@ -159,7 +151,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |                                 ^^^^^^^^^^^^^^^^^^^^^^
 16 |
 17 | s = set(  # comment
-   |
 help: Rewrite as a set comprehension
    |
 14 | s = f"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
@@ -181,7 +172,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    | |_^
 20 |
 21 |   s = set([  # comment
-   |
 help: Rewrite as a set comprehension
    |
 16 |
@@ -207,7 +197,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    | |__^
 24 |
 25 |   s = set(([x for x in range(3)]))
-   |
 help: Rewrite as a set comprehension
    |
 20 |
@@ -229,7 +218,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 |
 27 | s = set(((([x for x in range(3)]))))
-   |
 help: Rewrite as a set comprehension
    |
 24 |
@@ -248,7 +236,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 |
 29 | s = set( # outer set comment
-   |
 help: Rewrite as a set comprehension
    |
 26 |
@@ -273,7 +260,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    | |_____^
 35 |
 36 |   # Test trailing comma case
-   |
 help: Rewrite as a set comprehension
    |
 28 |
@@ -298,7 +284,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 38 |
 39 | s = t"{set([x for x in 'ab'])}"
-   |
 help: Rewrite as a set comprehension
    |
 36 | # Test trailing comma case
@@ -316,9 +301,7 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 39 | s = t"{set([x for x in 'ab'])}"
    |        ^^^^^^^^^^^^^^^^^^^^^^
 40 | s = t'{set([x for x in "ab"])}'
-   |
 help: Rewrite as a set comprehension
-   |
 38 |
    - s = t"{set([x for x in 'ab'])}"
 39 + s = t"{ {x for x in 'ab'} }"
@@ -334,9 +317,7 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |        ^^^^^^^^^^^^^^^^^^^^^^
 41 |
 42 | def f(x):
-   |
 help: Rewrite as a set comprehension
-   |
 39 | s = t"{set([x for x in 'ab'])}"
    - s = t'{set([x for x in "ab"])}'
 40 + s = t'{ {x for x in "ab"} }'
@@ -353,7 +334,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 46 |
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
-   |
 help: Rewrite as a set comprehension
    |
 44 |
@@ -371,7 +351,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
    |         ^^^^^^^^^^^^^^^^^^^^^^
 48 | s = t"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
-   |
 help: Rewrite as a set comprehension
    |
 46 |
@@ -389,7 +368,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
    |                                  ^^^^^^^^^^^^^^^^^^^^^^
 48 | s = t"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
-   |
 help: Rewrite as a set comprehension
    |
 46 |
@@ -405,7 +383,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
 48 | s = t"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
    |        ^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Rewrite as a set comprehension
    |
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
@@ -421,7 +398,6 @@ C403 [*] Unnecessary list comprehension (rewrite as a set comprehension)
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"
 48 | s = t"{set([x for x in 'ab']) | set([x for x in 'ab'])}"
    |                                 ^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Rewrite as a set comprehension
    |
 47 | s = t"{ set([x for x in 'ab']) | set([x for x in 'ab']) }"

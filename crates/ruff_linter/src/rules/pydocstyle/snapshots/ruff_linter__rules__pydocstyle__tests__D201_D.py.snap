@@ -3,12 +3,10 @@ source: crates/ruff_linter/src/rules/pydocstyle/mod.rs
 ---
 D201 [*] No blank lines allowed before function docstring (found 1)
    --> D.py:137:5
-    |
 135 | def leading_space():
 136 |
 137 |     """Leading space."""
     |     ^^^^^^^^^^^^^^^^^^^^
-    |
 help: Remove blank line(s) before function docstring
     |
 135 | def leading_space():
@@ -25,17 +23,14 @@ D201 [*] No blank lines allowed before function docstring (found 1)
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 152 |
 153 |     pass
-    |
 help: Remove blank line(s) before function docstring
     |
 149 | def trailing_and_leading_space():
     -
 150 |     """Trailing and leading space."""
-    |
 
 D201 [*] No blank lines allowed before function docstring (found 1)
    --> D.py:546:5
-    |
 544 |   def multiline_leading_space():
 545 |
 546 | /     """Leading space.
@@ -43,7 +38,6 @@ D201 [*] No blank lines allowed before function docstring (found 1)
 548 | |     More content.
 549 | |     """
     | |_______^
-    |
 help: Remove blank line(s) before function docstring
     |
 544 | def multiline_leading_space():
@@ -63,7 +57,6 @@ D201 [*] No blank lines allowed before function docstring (found 1)
     | |_______^
 572 |
 573 |       pass
-    |
 help: Remove blank line(s) before function docstring
     |
 566 | def multiline_trailing_and_leading_space():
@@ -80,5 +73,4 @@ D201 No blank lines allowed before function docstring (found 1)
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 730 |
 731 |     ...
-    |
 help: Remove blank line(s) before function docstring

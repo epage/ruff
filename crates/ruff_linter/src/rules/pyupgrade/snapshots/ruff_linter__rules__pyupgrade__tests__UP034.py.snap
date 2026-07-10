@@ -9,7 +9,6 @@ UP034 [*] Avoid extraneous parentheses
   |       ^^^^^^^
 3 |
 4 | # UP034
-  |
 help: Remove extraneous parentheses
   |
 1 | # UP034
@@ -26,7 +25,6 @@ UP034 [*] Avoid extraneous parentheses
   |       ^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | # UP034
-  |
 help: Remove extraneous parentheses
   |
 4 | # UP034
@@ -37,13 +35,11 @@ help: Remove extraneous parentheses
 
 UP034 [*] Avoid extraneous parentheses
   --> UP034.py:8:7
-   |
  7 | # UP034
  8 | print((("foo")))
    |       ^^^^^^^^^
  9 |
 10 | # UP034
-   |
 help: Remove extraneous parentheses
   |
 7 | # UP034
@@ -60,7 +56,6 @@ UP034 [*] Avoid extraneous parentheses
    |       ^^^^^^^
 12 |
 13 | # UP034
-   |
 help: Remove extraneous parentheses
    |
 10 | # UP034
@@ -77,7 +72,6 @@ UP034 [*] Avoid extraneous parentheses
    |       ^^^^^^^^^^^^^^^^^^^
 15 |
 16 | # UP034
-   |
 help: Remove extraneous parentheses
    |
 13 | # UP034
@@ -94,7 +88,6 @@ UP034 [*] Avoid extraneous parentheses
 18 |     ("foo{}".format(1))
    |     ^^^^^^^^^^^^^^^^^^^
 19 | )
-   |
 help: Remove extraneous parentheses
    |
 17 | print(
@@ -113,7 +106,6 @@ UP034 [*] Avoid extraneous parentheses
 25 | |     )
    | |_____^
 26 |   )
-   |
 help: Remove extraneous parentheses
    |
 22 | print(
@@ -134,7 +126,6 @@ UP034 [*] Avoid extraneous parentheses
    |             ^^^^^^^^^^^
 31 |
 32 | # UP034
-   |
 help: Remove extraneous parentheses
    |
 29 | def f():
@@ -151,7 +142,6 @@ UP034 [*] Avoid extraneous parentheses
 35 |         ("foo{}".format(1))
    |         ^^^^^^^^^^^^^^^^^^^
 36 |     )
-   |
 help: Remove extraneous parentheses
    |
 34 |     print(
@@ -168,7 +158,6 @@ UP034 [*] Avoid extraneous parentheses
    |       ^^^^^^^^^^^^^^^^^^^^^
 40 |
 41 | # OK
-   |
 help: Remove extraneous parentheses
    |
 38 | # UP034

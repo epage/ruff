@@ -9,7 +9,6 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
   |                        ^^^^^^^^^
 8 |
 9 |     df: DataFrame
-  |
 help: Move into type-checking block
    |
 3  | from typing_extensions import Self

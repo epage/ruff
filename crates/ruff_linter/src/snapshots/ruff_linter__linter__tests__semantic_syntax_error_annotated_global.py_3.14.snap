@@ -10,7 +10,6 @@ invalid-syntax: annotated name `a` can't be global
   |     ^
 5 |
 6 | b: int = 1
-  |
 
 invalid-syntax: annotated name `b` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:10:9
@@ -21,7 +20,6 @@ invalid-syntax: annotated name `b` can't be global
    |         ^
 11 |
 12 | c: int = 1
-   |
 
 invalid-syntax: annotated name `c` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:15:5
@@ -32,7 +30,6 @@ invalid-syntax: annotated name `c` can't be global
    |     ^
 16 |
 17 | d: int = 1
-   |
 
 invalid-syntax: annotated name `d` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:20:5
@@ -43,7 +40,6 @@ invalid-syntax: annotated name `d` can't be global
    |     ^
 21 |
 22 | e: int = 1
-   |
 
 invalid-syntax: annotated name `g` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:29:1
@@ -53,7 +49,6 @@ invalid-syntax: annotated name `g` can't be global
 29 | g: int = 1
    | ^
 30 | global g  # error
-   |
 
 invalid-syntax: annotated name `x` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:33:5
@@ -62,7 +57,6 @@ invalid-syntax: annotated name `x` can't be global
 33 |     x: str
    |     ^
 34 |     global x  # error
-   |
 
 invalid-syntax: annotated name `x` can't be global
   --> resources/test/fixtures/semantic_errors/annotated_global.py:38:5
@@ -71,4 +65,3 @@ invalid-syntax: annotated name `x` can't be global
 37 |     global x  # error
 38 |     x: str
    |     ^
-   |

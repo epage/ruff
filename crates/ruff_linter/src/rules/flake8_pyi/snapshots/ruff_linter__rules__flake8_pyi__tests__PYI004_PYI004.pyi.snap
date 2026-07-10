@@ -10,7 +10,6 @@ PYI004 Version comparison must use only major and minor version
   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | if sys.version_info < (3, 4, 3): ...  # PYI004 
 6 | if sys.version_info == (3, 4, 3): ...  # PYI004 
-  |
 
 PYI004 Version comparison must use only major and minor version
  --> PYI004.pyi:5:4
@@ -20,7 +19,6 @@ PYI004 Version comparison must use only major and minor version
   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | if sys.version_info == (3, 4, 3): ...  # PYI004 
 7 | if sys.version_info != (3, 4, 3): ...  # PYI004 
-  |
 
 PYI004 Version comparison must use only major and minor version
  --> PYI004.pyi:6:4
@@ -30,7 +28,6 @@ PYI004 Version comparison must use only major and minor version
 6 | if sys.version_info == (3, 4, 3): ...  # PYI004 
   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | if sys.version_info != (3, 4, 3): ...  # PYI004 
-  |
 
 PYI004 Version comparison must use only major and minor version
  --> PYI004.pyi:7:4
@@ -41,4 +38,3 @@ PYI004 Version comparison must use only major and minor version
   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |
 9 | if sys.version_info[0] == 2: ...
-  |

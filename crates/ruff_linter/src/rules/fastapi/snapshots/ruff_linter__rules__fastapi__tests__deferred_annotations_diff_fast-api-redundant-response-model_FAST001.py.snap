@@ -17,7 +17,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^^
 18 | async def create_item(item: Item) -> Item:
 19 |     return item
-   |
 help: Remove argument
    |
 16 |
@@ -35,7 +34,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | async def create_item(item: Item) -> list[Item]:
 24 |     return item
-   |
 help: Remove argument
    |
 21 |
@@ -53,7 +51,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | async def create_item(item: Item) -> List[Item]:
 29 |     return item
-   |
 help: Remove argument
    |
 26 |
@@ -71,7 +68,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 33 | async def create_item(item: Item) -> Dict[str, Item]:
 34 |     return item
-   |
 help: Remove argument
    |
 31 |
@@ -89,7 +85,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^
 38 | async def create_item(item: Item) -> str:
 39 |     return item
-   |
 help: Remove argument
    |
 36 |
@@ -107,7 +102,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                     ^^^^^^^^^^^^^^^^^^^
 43 | async def create_item(item: Item) -> Item:
 44 |     return item
-   |
 help: Remove argument
    |
 41 |
@@ -125,7 +119,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                     ^^^^^^^^^^^^^^^^^^^
 48 | @app.post("/items/", response_model=Item)
 49 | async def create_item(item: Item) -> Item:
-   |
 help: Remove argument
    |
 46 |
@@ -144,7 +137,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                      ^^^^^^^^^^^^^^^^^^^
 49 | async def create_item(item: Item) -> Item:
 50 |     return item
-   |
 help: Remove argument
    |
 47 | @app.get("/items/", response_model=Item)
@@ -162,7 +154,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
    |                        ^^^^^^^^^^^^^^^^^^^
 54 | async def create_item(item: Item) -> Item:
 55 |     return item
-   |
 help: Remove argument
    |
 52 |
@@ -182,7 +173,6 @@ FAST001 [*] FastAPI route with redundant `response_model` argument
     |                       ^^^^^^^^^^^^^^^^^^
 124 |     async def get_root() -> str:
 125 |         return "Hello World!"
-    |
 help: Remove argument
     |
 122 |     # Error

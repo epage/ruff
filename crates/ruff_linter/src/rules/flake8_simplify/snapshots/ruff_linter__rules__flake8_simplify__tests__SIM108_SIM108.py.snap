@@ -12,7 +12,6 @@ SIM108 [*] Use ternary operator `b = c if a else d` instead of `if`-`else`-block
   | |_________^
 6 |
 7 |   # OK
-  |
 help: Replace `if`-`else`-block with `b = c if a else d`
   |
 1 | # SIM108
@@ -27,7 +26,6 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM108 [*] Use ternary operator `b = 1 if a else 2` instead of `if`-`else`-block
   --> SIM108.py:30:5
-   |
 28 |       pass
 29 |   else:
 30 | /     if a:
@@ -35,7 +33,6 @@ SIM108 [*] Use ternary operator `b = 1 if a else 2` instead of `if`-`else`-block
 32 | |     else:
 33 | |         b = 2
    | |_____________^
-   |
 help: Replace `if`-`else`-block with `b = 1 if a else 2`
    |
 29 | else:
@@ -50,7 +47,6 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM108 Use ternary operator `abc = x if x > 0 else -x` instead of `if`-`else`-block
   --> SIM108.py:58:1
-   |
 57 |   # SIM108 (without fix due to comments)
 58 | / if x > 0:
 59 | |     # test test
@@ -59,19 +55,16 @@ SIM108 Use ternary operator `abc = x if x > 0 else -x` instead of `if`-`else`-bl
 62 | |     # test test test
 63 | |     abc = -x
    | |____________^
-   |
 help: Replace `if`-`else`-block with `abc = x if x > 0 else -x`
 
 SIM108 [*] Use ternary operator `b = "cccccccccccccccccccccccccccccccccß" if a else "ddddddddddddddddddddddddddddddddd💣"` instead of `if`-`else`-block
   --> SIM108.py:82:1
-   |
 81 |   # SIM108
 82 | / if a:
 83 | |     b = "cccccccccccccccccccccccccccccccccß"
 84 | | else:
 85 | |     b = "ddddddddddddddddddddddddddddddddd💣"
    | |_____________________________________________^
-   |
 help: Replace `if`-`else`-block with `b = "cccccccccccccccccccccccccccccccccß" if a else "ddddddddddddddddddddddddddddddddd💣"`
    |
 81 | # SIM108
@@ -86,14 +79,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM108 Use ternary operator `exitcode = 0 if True else 1` instead of `if`-`else`-block
    --> SIM108.py:105:1
-    |
 104 |   # SIM108 (without fix due to trailing comment)
 105 | / if True:
 106 | |     exitcode = 0
 107 | | else:
 108 | |     exitcode = 1  # Trailing comment
     | |________________^
-    |
 help: Replace `if`-`else`-block with `exitcode = 0 if True else 1`
 
 SIM108 Use ternary operator `x = 3 if True else 5` instead of `if`-`else`-block
@@ -103,19 +94,16 @@ SIM108 Use ternary operator `x = 3 if True else 5` instead of `if`-`else`-block
 112 | / if True: x = 3  # Foo
 113 | | else: x = 5
     | |___________^
-    |
 help: Replace `if`-`else`-block with `x = 3 if True else 5`
 
 SIM108 Use ternary operator `x = 3 if True else 5` instead of `if`-`else`-block
    --> SIM108.py:117:1
-    |
 116 |   # SIM108
 117 | / if True:  # Foo
 118 | |     x = 3
 119 | | else:
 120 | |     x = 5
     | |_________^
-    |
 help: Replace `if`-`else`-block with `x = 3 if True else 5`
 
 SIM108 [*] Use binary operator `z = cond or other_cond` instead of `if`-`else`-block
@@ -130,7 +118,6 @@ SIM108 [*] Use binary operator `z = cond or other_cond` instead of `if`-`else`-b
     | |__________________^
 145 |
 146 |   # SIM108 - should suggest
-    |
 help: Replace `if`-`else`-block with `z = cond or other_cond`
     |
 140 | # z = cond or other_cond
@@ -155,7 +142,6 @@ SIM108 [*] Use binary operator `z = cond and other_cond` instead of `if`-`else`-
     | |__________________^
 152 |
 153 |   # SIM108 - should suggest
-    |
 help: Replace `if`-`else`-block with `z = cond and other_cond`
     |
 147 | # z = cond and other_cond
@@ -180,7 +166,6 @@ SIM108 [*] Use binary operator `z = not cond and other_cond` instead of `if`-`el
     | |__________________^
 159 |
 160 |   # SIM108 does not suggest
-    |
 help: Replace `if`-`else`-block with `z = not cond and other_cond`
     |
 154 | # z = not cond and other_cond
@@ -205,7 +190,6 @@ SIM108 [*] Use ternary operator `z = 1 if True else other` instead of `if`-`else
     | |_____________^
 171 |
 172 |   if False:
-    |
 help: Replace `if`-`else`-block with `z = 1 if True else other`
     |
 166 | # should be simplified for other reasons...)
@@ -230,7 +214,6 @@ SIM108 [*] Use ternary operator `z = 1 if False else other` instead of `if`-`els
     | |_____________^
 176 |
 177 |   if 1:
-    |
 help: Replace `if`-`else`-block with `z = 1 if False else other`
     |
 171 |
@@ -255,9 +238,7 @@ SIM108 [*] Use ternary operator `z = True if 1 else other` instead of `if`-`else
     | |_____________^
 181 |
 182 |   # SIM108 does not suggest a binary option in this
-    |
 help: Replace `if`-`else`-block with `z = True if 1 else other`
-    |
 176 |
     - if 1:
     -     z = True
@@ -280,7 +261,6 @@ SIM108 [*] Use ternary operator `z = foo() if foo() else other` instead of `if`-
     | |_____________^
 189 |
 190 |   # SIM108 does not suggest a binary option in this
-    |
 help: Replace `if`-`else`-block with `z = foo() if foo() else other`
     |
 184 | # from Two to one.
@@ -295,7 +275,6 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM108 [*] Use ternary operator `z = not foo() if foo() else other` instead of `if`-`else`-block
    --> SIM108.py:193:1
-    |
 191 |   # case, since we'd be reducing the number of calls
 192 |   # from Two to one.
 193 | / if foo():
@@ -303,7 +282,6 @@ SIM108 [*] Use ternary operator `z = not foo() if foo() else other` instead of `
 195 | | else:
 196 | |     z = other
     | |_____________^
-    |
 help: Replace `if`-`else`-block with `z = not foo() if foo() else other`
     |
 192 | # from Two to one.
@@ -328,7 +306,6 @@ SIM108 [*] Use ternary operator `var = "str" if cond else f"{first}-{second}"` i
     | |_____________________________^
 206 |
 207 |   if cond:
-    |
 help: Replace `if`-`else`-block with `var = "str" if cond else f"{first}-{second}"`
     |
 201 | # single quotes
@@ -351,7 +328,6 @@ SIM108 [*] Use ternary operator `var = "str" if cond else f'{first}-{second}'` i
 209 | | else:
 210 | |     var = f'{first}-{second}'
     | |_____________________________^
-    |
 help: Replace `if`-`else`-block with `var = "str" if cond else f'{first}-{second}'`
     |
 206 |

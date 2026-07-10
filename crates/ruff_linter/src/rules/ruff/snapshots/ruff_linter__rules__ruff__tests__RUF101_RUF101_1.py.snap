@@ -10,7 +10,6 @@ RUF101 [*] `TCH002` is a redirect to `TC002`
   |               ^^^^^^
 6 |
 7 | from __future__ import annotations
-  |
 help: Replace with `TC002`
   |
 4 | """

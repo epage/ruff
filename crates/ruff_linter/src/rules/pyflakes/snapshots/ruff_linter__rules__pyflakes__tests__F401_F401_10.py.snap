@@ -10,7 +10,6 @@ F401 `orjson` imported but unused; consider using `importlib.util.find_spec` to 
   |                ^^^^^^
 7 |
 8 |         return True
-  |
 help: Remove unused import: `orjson`
 
 F401 `orjson` imported but unused; consider using `importlib.util.find_spec` to test for availability
@@ -22,5 +21,4 @@ F401 `orjson` imported but unused; consider using `importlib.util.find_spec` to 
    |                ^^^^^^
 16 |
 17 |         return True
-   |
 help: Remove unused import: `orjson`

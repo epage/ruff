@@ -10,7 +10,6 @@ E304 [*] Blank lines found after function decorator (1)
     | ^^^
 766 |     pass
 767 | # end
-    |
 help: Remove extraneous blank line(s)
     |
 763 | @decorator
@@ -26,7 +25,6 @@ E304 [*] Blank lines found after function decorator (1)
     | ^^^
 775 |     pass
 776 | # end
-    |
 help: Remove extraneous blank line(s)
     |
 771 | @decorator
@@ -42,7 +40,6 @@ E304 [*] Blank lines found after function decorator (2)
     | ^^^
 787 |     pass
 788 | # end
-    |
 help: Remove extraneous blank line(s)
     |
 780 | @decorator

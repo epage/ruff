@@ -3,11 +3,9 @@ source: crates/ruff_linter/src/rules/flake8_pytest_style/mod.rs
 ---
 PT019 Fixture `_fixture` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
   --> PT019.py:9:14
-   |
  9 | def test_xxx(_fixture):  # Error arg
    |              ^^^^^^^^
 10 |     pass
-   |
 
 PT019 Fixture `_fixture` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
   --> PT019.py:13:17
@@ -15,7 +13,6 @@ PT019 Fixture `_fixture` without value is injected as parameter, use `@pytest.ma
 13 | def test_xxx(*, _fixture):  # Error kwonly
    |                 ^^^^^^^^
 14 |     pass
-   |
 
 PT019 Fixture `_bar` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
   --> PT019.py:31:24
@@ -24,7 +21,6 @@ PT019 Fixture `_bar` without value is injected as parameter, use `@pytest.mark.u
 31 | def test_thingy2(_foo, _bar):  # Error _bar is not defined in parametrize
    |                        ^^^^
 32 |     pass
-   |
 
 PT019 Fixture `_bar` without value is injected as parameter, use `@pytest.mark.usefixtures` instead
   --> PT019.py:39:24
@@ -33,4 +29,3 @@ PT019 Fixture `_bar` without value is injected as parameter, use `@pytest.mark.u
 39 | def test_thingy4(_foo, _bar):  # Error _bar is not defined in parametrize
    |                        ^^^^
 40 |     pass
-   |

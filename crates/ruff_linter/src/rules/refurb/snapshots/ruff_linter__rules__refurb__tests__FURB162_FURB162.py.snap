@@ -9,7 +9,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 8 | datetime.fromisoformat(date.replace("Z", "+00:00"))
   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 9 | datetime.fromisoformat(date.replace("Z", "-00:" "00"))
-  |
 help: Remove `.replace()` call
   |
 7 |
@@ -21,13 +20,11 @@ note: This is an unsafe fix and may change runtime behavior
 
 FURB162 [*] Unnecessary timezone replacement with zero offset
   --> FURB162.py:9:24
-   |
  8 | datetime.fromisoformat(date.replace("Z", "+00:00"))
  9 | datetime.fromisoformat(date.replace("Z", "-00:" "00"))
    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 |
 11 | datetime.fromisoformat(date[:-1] + "-00")
-   |
 help: Remove `.replace()` call
    |
 8  | datetime.fromisoformat(date.replace("Z", "+00:00"))
@@ -45,7 +42,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 11 | datetime.fromisoformat(date[:-1] + "-00")
    |                        ^^^^^^^^^^^^^^^^^
 12 | datetime.fromisoformat(date[:-1:] + "-0000")
-   |
 help: Remove `.replace()` call
    |
 10 |
@@ -63,7 +59,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
    |                        ^^^^^^^^^^^^^^^^^^^^
 13 |
 14 | datetime.fromisoformat(date.strip("Z") + """+0"""
-   |
 help: Remove `.replace()` call
    |
 11 | datetime.fromisoformat(date[:-1] + "-00")
@@ -83,7 +78,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 15 | |                                          """0""")
    | |________________________________________________^
 16 |   datetime.fromisoformat(date.rstrip("Z") + "+\x30\60" '\u0030\N{DIGIT ZERO}')
-   |
 help: Remove `.replace()` call
    |
 13 |
@@ -103,7 +97,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | datetime.fromisoformat(
-   |
 help: Remove `.replace()` call
    |
 15 |                                          """0""")
@@ -123,7 +116,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 22 | |     ).replace("Z", "+00")
    | |_________________________^
 23 |   )
-   |
 help: Remove `.replace()` call
    |
 21 |         date
@@ -146,7 +138,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 32 | |                ) + "-00" # Preserved
    | |________________________^
 33 |   )
-   |
 help: Remove `.replace()` call
    |
 27 |      # Preserved
@@ -169,7 +160,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 38 | |     ).strip("Z") + "+0000"
    | |__________________________^
 39 |   )
-   |
 help: Remove `.replace()` call
    |
 37 |         date
@@ -191,7 +181,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 47 | |     ] + "-00"
    | |_____________^
 48 |   )
-   |
 help: Remove `.replace()` call
    |
 44 |     )
@@ -208,7 +197,6 @@ FURB162 [*] Unnecessary timezone replacement with zero offset
 51 | # Edge case
 52 | datetime.fromisoformat("Z2025-01-01T00:00:00Z".strip("Z") + "+00:00")
    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Remove `.replace()` call
    |
 51 | # Edge case

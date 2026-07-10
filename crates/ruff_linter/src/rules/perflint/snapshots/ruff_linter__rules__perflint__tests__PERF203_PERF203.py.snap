@@ -11,4 +11,3 @@ PERF203 `try`-`except` within a loop incurs performance overhead
   | |______________________^
 7 |
 8 |   # OK
-  |

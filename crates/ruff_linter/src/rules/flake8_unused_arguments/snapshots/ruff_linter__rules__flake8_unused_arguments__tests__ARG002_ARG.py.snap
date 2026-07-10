@@ -9,7 +9,6 @@ ARG002 Unused method argument: `x`
 37 |     def f(self, x):
    |                 ^
 38 |         print("Hello, world!")
-   |
 
 ARG002 Unused method argument: `x`
   --> ARG.py:40:20
@@ -19,7 +18,6 @@ ARG002 Unused method argument: `x`
 40 |     def f(self, /, x):
    |                    ^
 41 |         print("Hello, world!")
-   |
 
 ARG002 Unused method argument: `x`
   --> ARG.py:43:16
@@ -29,7 +27,6 @@ ARG002 Unused method argument: `x`
 43 |     def f(cls, x):
    |                ^
 44 |         print("Hello, world!")
-   |
 
 ARG002 Unused method argument: `x`
   --> ARG.py:58:17
@@ -40,7 +37,6 @@ ARG002 Unused method argument: `x`
    |                 ^
 59 |         msg[0] = "..."
 60 |         raise NotImplementedError(msg)
-   |
 
 ARG002 Unused method argument: `x`
   --> ARG.py:62:17
@@ -51,7 +47,6 @@ ARG002 Unused method argument: `x`
    |                 ^
 63 |         msg = "..."
 64 |         raise NotImplementedError(foo)
-   |
 
 ARG002 Unused method argument: `x`
   --> ARG.py:66:17
@@ -62,7 +57,6 @@ ARG002 Unused method argument: `x`
    |                 ^
 67 |         msg = "..."
 68 |         raise NotImplementedError("must use msg")
-   |
 
 ARG002 Unused method argument: `x`
    --> ARG.py:216:24
@@ -72,7 +66,6 @@ ARG002 Unused method argument: `x`
 216 |     def __init__(self, x) -> None:
     |                        ^
 217 |         print("Hello, world!")
-    |
 
 ARG002 Unused method argument: `y`
    --> ARG.py:255:20
@@ -83,4 +76,3 @@ ARG002 Unused method argument: `y`
     |                    ^
 256 |         """Docstring."""
 257 |         msg = t"{x}..."
-    |

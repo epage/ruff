@@ -9,7 +9,6 @@ RUF052 [*] Local dummy variable `_var` is accessed
 92 |         _var = "method variable" # [RUF052]
    |         ^^^^
 93 |         return _var
-   |
 help: Remove leading underscores
    |
 91 |     def fun(self):
@@ -23,12 +22,10 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF052 [*] Local dummy variable `_list` is accessed
    --> RUF052_0.py:99:5
-    |
  98 | def fun():
  99 |     _list = "built-in" # [RUF052]
     |     ^^^^^
 100 |     return _list
-    |
 help: Prefer using trailing underscores to avoid shadowing a built-in
     |
 98  | def fun():
@@ -48,7 +45,6 @@ RUF052 [*] Local dummy variable `_x` is accessed
 106 |     _x = "shadows global" # [RUF052]
     |     ^^
 107 |     return _x
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
     |
 105 |     global x
@@ -69,7 +65,6 @@ RUF052 [*] Local dummy variable `_x` is accessed
     |     ^^
 114 |     return _x
 115 |   bar()
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
     |
 112 |     nonlocal x
@@ -89,7 +84,6 @@ RUF052 [*] Local dummy variable `_x` is accessed
 120 |     _x = "shadows local" # [RUF052]
     |     ^^
 121 |     return _x
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
     |
 119 |     x = "local"
@@ -109,7 +103,6 @@ RUF052 Local dummy variable `_GLOBAL_1` is accessed
     |     ^^^^^^^^^
 129 |     # unfixable because the rename would shadow a global variable
 130 |     print(_GLOBAL_1)  # [RUF052]
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
 
 RUF052 Local dummy variable `_local` is accessed
@@ -119,7 +112,6 @@ RUF052 Local dummy variable `_local` is accessed
 136 |     _local = "local3"  # [RUF052]
     |     ^^^^^^
 137 |     print(_local)
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
 
 RUF052 Local dummy variable `_GLOBAL_1` is accessed
@@ -130,7 +122,6 @@ RUF052 Local dummy variable `_GLOBAL_1` is accessed
     |         ^^^^^^^^^
 141 |         # unfixable because the rename would shadow a global variable
 142 |         print(_GLOBAL_1)  # [RUF052]
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
 
 RUF052 Local dummy variable `_local` is accessed
@@ -140,7 +131,6 @@ RUF052 Local dummy variable `_local` is accessed
 145 |         _local = "local4"
     |         ^^^^^^
 146 |         print(_local)
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
 
 RUF052 [*] Local dummy variable `_P` is accessed
@@ -152,7 +142,6 @@ RUF052 [*] Local dummy variable `_P` is accessed
     |     ^^
 154 |     _T = TypeVar(name="_T", covariant=True, bound=int|str)
 155 |     _NT = NamedTuple("_NT", [("foo", int)])
-    |
 help: Remove leading underscores
     |
 152 |
@@ -175,7 +164,6 @@ RUF052 [*] Local dummy variable `_T` is accessed
     |     ^^
 155 |     _NT = NamedTuple("_NT", [("foo", int)])
 156 |     _E = Enum("_E", ["a", "b", "c"])
-    |
 help: Remove leading underscores
     |
 153 |     _P = ParamSpec("_P")
@@ -199,7 +187,6 @@ RUF052 [*] Local dummy variable `_NT` is accessed
     |     ^^^
 156 |     _E = Enum("_E", ["a", "b", "c"])
 157 |     _NT2 = namedtuple("_NT2", ['x', 'y', 'z'])
-    |
 help: Remove leading underscores
     |
 154 |     _T = TypeVar(name="_T", covariant=True, bound=int|str)
@@ -223,7 +210,6 @@ RUF052 [*] Local dummy variable `_E` is accessed
     |     ^^
 157 |     _NT2 = namedtuple("_NT2", ['x', 'y', 'z'])
 158 |     _NT3 = namedtuple(typename="_NT3", field_names=['x', 'y', 'z'])
-    |
 help: Remove leading underscores
     |
 155 |     _NT = NamedTuple("_NT", [("foo", int)])
@@ -247,7 +233,6 @@ RUF052 [*] Local dummy variable `_NT2` is accessed
     |     ^^^^
 158 |     _NT3 = namedtuple(typename="_NT3", field_names=['x', 'y', 'z'])
 159 |     _DynamicClass = type("_DynamicClass", (), {})
-    |
 help: Remove leading underscores
     |
 156 |     _E = Enum("_E", ["a", "b", "c"])
@@ -272,7 +257,6 @@ RUF052 [*] Local dummy variable `_NT3` is accessed
     |     ^^^^
 159 |     _DynamicClass = type("_DynamicClass", (), {})
 160 |     _NotADynamicClass = type("_NotADynamicClass")
-    |
 help: Remove leading underscores
     |
 157 |     _NT2 = namedtuple("_NT2", ['x', 'y', 'z'])
@@ -295,7 +279,6 @@ RUF052 [*] Local dummy variable `_DynamicClass` is accessed
 159 |     _DynamicClass = type("_DynamicClass", (), {})
     |     ^^^^^^^^^^^^^
 160 |     _NotADynamicClass = type("_NotADynamicClass")
-    |
 help: Remove leading underscores
     |
 158 |     _NT3 = namedtuple(typename="_NT3", field_names=['x', 'y', 'z'])
@@ -318,7 +301,6 @@ RUF052 [*] Local dummy variable `_NotADynamicClass` is accessed
     |     ^^^^^^^^^^^^^^^^^
 161 |
 162 |     print(_T, _P, _NT, _E, _NT2, _NT3, _DynamicClass, _NotADynamicClass)
-    |
 help: Remove leading underscores
     |
 159 |     _DynamicClass = type("_DynamicClass", (), {})
@@ -339,7 +321,6 @@ RUF052 [*] Local dummy variable `_dummy_var` is accessed
     |     ^^^^^^^^^^
 183 |
 184 |     def bar():
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable
     |
 181 | def foo():
@@ -363,5 +344,4 @@ RUF052 Local dummy variable `_dummy_var` is accessed
     |     ^^^^^^^^^^
 193 |
 194 |     def bar():
-    |
 help: Prefer using trailing underscores to avoid shadowing a variable

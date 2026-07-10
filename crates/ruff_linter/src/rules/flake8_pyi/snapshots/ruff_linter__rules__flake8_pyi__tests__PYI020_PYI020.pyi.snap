@@ -10,7 +10,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
   |          ^^^^^
 8 | def g(x: list["int"]): ...  # Y020 Quoted annotations should never be used in stubs
 9 | _T = TypeVar("_T", bound="int")  # Y020 Quoted annotations should never be used in stubs
-  |
 help: Remove quotes
   |
 6 |
@@ -26,7 +25,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
 8 | def g(x: list["int"]): ...  # Y020 Quoted annotations should never be used in stubs
   |               ^^^^^
 9 | _T = TypeVar("_T", bound="int")  # Y020 Quoted annotations should never be used in stubs
-  |
 help: Remove quotes
   |
 7 | def f(x: "int"): ...  # Y020 Quoted annotations should never be used in stubs
@@ -37,14 +35,12 @@ help: Remove quotes
 
 PYI020 [*] Quoted annotations should not be included in stubs
   --> PYI020.pyi:9:26
-   |
  7 | def f(x: "int"): ...  # Y020 Quoted annotations should never be used in stubs
  8 | def g(x: list["int"]): ...  # Y020 Quoted annotations should never be used in stubs
  9 | _T = TypeVar("_T", bound="int")  # Y020 Quoted annotations should never be used in stubs
    |                          ^^^^^
 10 |
 11 | def h(w: Literal["a", "b"], x: typing.Literal["c"], y: typing_extensions.Literal["d"], z: _T) -> _T: ...
-   |
 help: Remove quotes
    |
 8  | def g(x: list["int"]): ...  # Y020 Quoted annotations should never be used in stubs
@@ -61,7 +57,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
 13 | def j() -> "int": ...  # Y020 Quoted annotations should never be used in stubs
    |            ^^^^^
 14 | Alias: TypeAlias = list["int"]  # Y020 Quoted annotations should never be used in stubs
-   |
 help: Remove quotes
    |
 12 |
@@ -78,7 +73,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
    |                         ^^^^^
 15 |
 16 | class Child(list["int"]):  # Y020 Quoted annotations should never be used in stubs
-   |
 help: Remove quotes
    |
 13 | def j() -> "int": ...  # Y020 Quoted annotations should never be used in stubs
@@ -95,7 +89,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
 16 | class Child(list["int"]):  # Y020 Quoted annotations should never be used in stubs
    |                  ^^^^^
 17 |     """Documented and guaranteed useful."""  # Y021 Docstrings should not be included in stubs
-   |
 help: Remove quotes
    |
 15 |
@@ -112,7 +105,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
    |        ^^^^^
 21 | elif sys.platform == "win32":
 22 |     f: "str"  # Y020 Quoted annotations should never be used in stubs
-   |
 help: Remove quotes
    |
 19 | if sys.platform == "linux":
@@ -130,7 +122,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
    |        ^^^^^
 23 | else:
 24 |     f: "bytes"  # Y020 Quoted annotations should never be used in stubs
-   |
 help: Remove quotes
    |
 21 | elif sys.platform == "win32":
@@ -148,7 +139,6 @@ PYI020 [*] Quoted annotations should not be included in stubs
    |        ^^^^^^^
 25 |
 26 | # These two shouldn't trigger Y020 -- empty strings can't be "quoted annotations"
-   |
 help: Remove quotes
    |
 23 | else:

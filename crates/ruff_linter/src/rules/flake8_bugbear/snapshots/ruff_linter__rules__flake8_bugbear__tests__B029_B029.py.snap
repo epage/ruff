@@ -3,7 +3,6 @@ source: crates/ruff_linter/src/rules/flake8_bugbear/mod.rs
 ---
 B029 Using `except ():` with an empty tuple does not catch anything; add exceptions to handle
   --> B029.py:8:1
-   |
  6 |   try:
  7 |       pass
  8 | / except ():
@@ -11,7 +10,6 @@ B029 Using `except ():` with an empty tuple does not catch anything; add excepti
    | |________^
 10 |
 11 |   try:
-   |
 
 B029 Using `except ():` with an empty tuple does not catch anything; add exceptions to handle
   --> B029.py:13:1
@@ -23,11 +21,9 @@ B029 Using `except ():` with an empty tuple does not catch anything; add excepti
    | |________^
 15 |
 16 |   try:
-   |
 
 B029 Using `except* ():` with an empty tuple does not catch anything; add exceptions to handle
   --> B029.py:18:1
-   |
 16 |   try:
 17 |       pass
 18 | / except* ():
@@ -35,7 +31,6 @@ B029 Using `except* ():` with an empty tuple does not catch anything; add except
    | |________^
 20 |
 21 |   try:
-   |
 
 B029 Using `except* ():` with an empty tuple does not catch anything; add exceptions to handle
   --> B029.py:23:1
@@ -45,4 +40,3 @@ B029 Using `except* ():` with an empty tuple does not catch anything; add except
 23 | / except* () as e:
 24 | |     pass
    | |________^
-   |

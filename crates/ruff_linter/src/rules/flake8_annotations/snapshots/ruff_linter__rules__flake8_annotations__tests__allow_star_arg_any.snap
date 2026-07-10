@@ -8,7 +8,6 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
 10 | def foo(a: Any, *args: str, **kwargs: str) -> int:
    |            ^^^
 11 |     pass
-   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
   --> allow_star_arg_any.py:15:47
@@ -17,7 +16,6 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
 15 | def foo(a: int, *args: str, **kwargs: str) -> Any:
    |                                               ^^^
 16 |     pass
-   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
   --> allow_star_arg_any.py:40:29
@@ -26,7 +24,6 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
 40 |     def foo_method(self, a: Any, *params: str, **options: str) -> int:
    |                             ^^^
 41 |         pass
-   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo_method`
   --> allow_star_arg_any.py:44:67
@@ -35,4 +32,3 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo_method`
 44 |     def foo_method(self, a: int, *params: str, **options: str) -> Any:
    |                                                                   ^^^
 45 |         pass
-   |

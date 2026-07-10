@@ -10,7 +10,6 @@ PYI062 [*] Duplicate literal member `True`
   |                         ^^^^
 6 |
 7 | y: Literal[1, print("hello"), 3, Literal[4, 1]]  # PYI062 on the last 1
-  |
 help: Remove duplicates
   |
 4 |
@@ -28,7 +27,6 @@ PYI062 [*] Duplicate literal member `False`
   |                               ^^^^^
 6 |
 7 | y: Literal[1, print("hello"), 3, Literal[4, 1]]  # PYI062 on the last 1
-  |
 help: Remove duplicates
   |
 4 |
@@ -46,7 +44,6 @@ PYI062 [*] Duplicate literal member `1`
   |                                             ^
 8 |
 9 | z: Literal[{1, 3, 5}, "foobar", {1,3,5}]  # PYI062 on the set literal
-  |
 help: Remove duplicates
   |
 6 |
@@ -57,14 +54,12 @@ help: Remove duplicates
 
 PYI062 [*] Duplicate literal member `{1, 3, 5}`
   --> PYI062.pyi:9:33
-   |
  7 | y: Literal[1, print("hello"), 3, Literal[4, 1]]  # PYI062 on the last 1
  8 |
  9 | z: Literal[{1, 3, 5}, "foobar", {1,3,5}]  # PYI062 on the set literal
    |                                 ^^^^^^^
 10 |
 11 | Literal[1, Literal[1]]  # once
-   |
 help: Remove duplicates
    |
 8  |
@@ -82,7 +77,6 @@ PYI062 [*] Duplicate literal member `1`
    |                    ^
 12 | Literal[1, 2, Literal[1, 2]]  # twice
 13 | Literal[1, Literal[1], Literal[1]]  # twice
-   |
 help: Remove duplicates
    |
 10 |
@@ -99,7 +93,6 @@ PYI062 [*] Duplicate literal member `1`
    |                       ^
 13 | Literal[1, Literal[1], Literal[1]]  # twice
 14 | Literal[1, Literal[2], Literal[2]]  # once
-   |
 help: Remove duplicates
    |
 11 | Literal[1, Literal[1]]  # once
@@ -116,7 +109,6 @@ PYI062 [*] Duplicate literal member `2`
    |                          ^
 13 | Literal[1, Literal[1], Literal[1]]  # twice
 14 | Literal[1, Literal[2], Literal[2]]  # once
-   |
 help: Remove duplicates
    |
 11 | Literal[1, Literal[1]]  # once
@@ -134,7 +126,6 @@ PYI062 [*] Duplicate literal member `1`
    |                    ^
 14 | Literal[1, Literal[2], Literal[2]]  # once
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
-   |
 help: Remove duplicates
    |
 12 | Literal[1, 2, Literal[1, 2]]  # twice
@@ -152,7 +143,6 @@ PYI062 [*] Duplicate literal member `1`
    |                                ^
 14 | Literal[1, Literal[2], Literal[2]]  # once
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
-   |
 help: Remove duplicates
    |
 12 | Literal[1, 2, Literal[1, 2]]  # twice
@@ -170,7 +160,6 @@ PYI062 [*] Duplicate literal member `2`
    |                                ^
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
 16 | typing_extensions.Literal[1, 1, 1]  # twice
-   |
 help: Remove duplicates
    |
 13 | Literal[1, Literal[1], Literal[1]]  # twice
@@ -188,7 +177,6 @@ PYI062 [*] Duplicate literal member `1`
    |                                     ^
 16 | typing_extensions.Literal[1, 1, 1]  # twice
 17 | Literal[
-   |
 help: Remove duplicates
    |
 14 | Literal[1, Literal[2], Literal[2]]  # once
@@ -206,7 +194,6 @@ PYI062 [*] Duplicate literal member `1`
    |                              ^
 17 | Literal[
 18 |     1, # comment
-   |
 help: Remove duplicates
    |
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
@@ -217,14 +204,12 @@ help: Remove duplicates
 
 PYI062 [*] Duplicate literal member `1`
   --> PYI062.pyi:16:33
-   |
 14 | Literal[1, Literal[2], Literal[2]]  # once
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
 16 | typing_extensions.Literal[1, 1, 1]  # twice
    |                                 ^
 17 | Literal[
 18 |     1, # comment
-   |
 help: Remove duplicates
    |
 15 | t.Literal[1, t.Literal[2, t.Literal[1]]]  # once
@@ -242,7 +227,6 @@ PYI062 [*] Duplicate literal member `1`
    |         ^
 21 |     ]
 22 | ]  # once
-   |
 help: Remove duplicates
    |
 16 | typing_extensions.Literal[1, 1, 1]  # twice
@@ -265,7 +249,6 @@ PYI062 [*] Duplicate literal member `True`
    |                                              ^^^^
 26 |
 27 | n: Literal["No", "duplicates", "here", 1, "1"]
-   |
 help: Remove duplicates
    |
 24 | # Ensure issue is only raised once, even on nested literals
@@ -282,7 +265,6 @@ PYI062 [*] Duplicate literal member `1`
 32 | Literal[Literal[Literal[1], Literal[1]]]  # once
    |                                     ^
 33 | Literal[Literal[1], Literal[Literal[Literal[1]]]]  # once
-   |
 help: Remove duplicates
    |
 31 | Literal[Literal[1]]  # no duplicate
@@ -298,7 +280,6 @@ PYI062 [*] Duplicate literal member `1`
 32 | Literal[Literal[Literal[1], Literal[1]]]  # once
 33 | Literal[Literal[1], Literal[Literal[Literal[1]]]]  # once
    |                                             ^
-   |
 help: Remove duplicates
    |
 32 | Literal[Literal[Literal[1], Literal[1]]]  # once

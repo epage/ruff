@@ -8,7 +8,6 @@ DTZ901 Use of `datetime.datetime.max` without timezone information
 5 | datetime.datetime.max
   | ^^^^^^^^^^^^^^^^^^^^^
 6 | datetime.datetime.min
-  |
 help: Replace with `datetime.datetime.max.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.min` without timezone information
@@ -20,18 +19,15 @@ DTZ901 Use of `datetime.datetime.min` without timezone information
   | ^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | datetime.datetime.max.replace(year=...)
-  |
 help: Replace with `datetime.datetime.min.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.max` without timezone information
  --> DTZ901.py:8:1
-  |
 6 | datetime.datetime.min
 7 |
 8 | datetime.datetime.max.replace(year=...)
   | ^^^^^^^^^^^^^^^^^^^^^
 9 | datetime.datetime.min.replace(hour=...)
-  |
 help: Replace with `datetime.datetime.max.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.min` without timezone information
@@ -40,7 +36,6 @@ DTZ901 Use of `datetime.datetime.min` without timezone information
 8 | datetime.datetime.max.replace(year=...)
 9 | datetime.datetime.min.replace(hour=...)
   | ^^^^^^^^^^^^^^^^^^^^^
-  |
 help: Replace with `datetime.datetime.min.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.max` without timezone information
@@ -50,19 +45,16 @@ DTZ901 Use of `datetime.datetime.max` without timezone information
 27 | datetime.max
    | ^^^^^^^^^^^^
 28 | datetime.min
-   |
 help: Replace with `datetime.datetime.max.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.min` without timezone information
   --> DTZ901.py:28:1
-   |
 26 | # Error
 27 | datetime.max
 28 | datetime.min
    | ^^^^^^^^^^^^
 29 |
 30 | datetime.max.replace(year=...)
-   |
 help: Replace with `datetime.datetime.min.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.max` without timezone information
@@ -73,7 +65,6 @@ DTZ901 Use of `datetime.datetime.max` without timezone information
 30 | datetime.max.replace(year=...)
    | ^^^^^^^^^^^^
 31 | datetime.min.replace(hour=...)
-   |
 help: Replace with `datetime.datetime.max.replace(tzinfo=...)`
 
 DTZ901 Use of `datetime.datetime.min` without timezone information
@@ -82,5 +73,4 @@ DTZ901 Use of `datetime.datetime.min` without timezone information
 30 | datetime.max.replace(year=...)
 31 | datetime.min.replace(hour=...)
    | ^^^^^^^^^^^^
-   |
 help: Replace with `datetime.datetime.min.replace(tzinfo=...)`

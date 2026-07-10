@@ -3,13 +3,11 @@ source: crates/ruff_linter/src/rules/ruff/mod.rs
 ---
 RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
   --> RUF024.py:9:1
-   |
  8 | # Errors.
  9 | dict.fromkeys(pierogi_fillings, [])
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | dict.fromkeys(pierogi_fillings, list())
 11 | dict.fromkeys(pierogi_fillings, {})
-   |
 help: Replace with comprehension
    |
 8  | # Errors.
@@ -28,7 +26,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | dict.fromkeys(pierogi_fillings, {})
 12 | dict.fromkeys(pierogi_fillings, set())
-   |
 help: Replace with comprehension
    |
 9  | dict.fromkeys(pierogi_fillings, [])
@@ -47,7 +44,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | dict.fromkeys(pierogi_fillings, set())
 13 | dict.fromkeys(pierogi_fillings, {"pre": "populated!"})
-   |
 help: Replace with comprehension
    |
 10 | dict.fromkeys(pierogi_fillings, list())
@@ -66,7 +62,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 | dict.fromkeys(pierogi_fillings, {"pre": "populated!"})
 14 | dict.fromkeys(pierogi_fillings, dict())
-   |
 help: Replace with comprehension
    |
 11 | dict.fromkeys(pierogi_fillings, {})
@@ -85,7 +80,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 | dict.fromkeys(pierogi_fillings, dict())
 15 | import builtins
-   |
 help: Replace with comprehension
    |
 12 | dict.fromkeys(pierogi_fillings, set())
@@ -104,7 +98,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 | import builtins
 16 | builtins.dict.fromkeys(pierogi_fillings, dict())
-   |
 help: Replace with comprehension
    |
 13 | dict.fromkeys(pierogi_fillings, {"pre": "populated!"})
@@ -123,7 +116,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | # Okay.
-   |
 help: Replace with comprehension
    |
 15 | import builtins
@@ -140,7 +132,6 @@ RUF024 [*] Do not pass mutable objects as values to `dict.fromkeys`
 38 | key_0 = "z"
 39 | dict.fromkeys("ABC", list(key))
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
 help: Replace with comprehension
    |
 38 | key_0 = "z"
