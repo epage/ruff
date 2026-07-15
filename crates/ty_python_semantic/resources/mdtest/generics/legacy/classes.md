@@ -111,7 +111,7 @@ class ParamSpecOuterClass(Generic[P]):
 
 ```snapshot
 error[shadowed-type-variable]: Generic class `InnerClass` uses ParamSpec `P` already bound by an enclosing scope
-  --> src/mdtest_snippet.py:64:7
+  --> src/mdtest_snippet.py:66:11
    |
 64 | class ParamSpecOuterClass(Generic[P]):
    |       ------------------------------- ParamSpec `P` is bound in this enclosing scope
