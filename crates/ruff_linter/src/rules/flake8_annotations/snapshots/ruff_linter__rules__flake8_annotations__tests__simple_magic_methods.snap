@@ -8,6 +8,7 @@ ANN204 [*] Missing return type annotation for special method `__str__`
 2 |     def __str__(self):
   |         ^^^^^^^
 3 |         ...
+  |
 help: Add return type annotation: `str`
   |
 1 | class Foo:
@@ -25,6 +26,7 @@ ANN204 [*] Missing return type annotation for special method `__repr__`
 5 |     def __repr__(self):
   |         ^^^^^^^^
 6 |         ...
+  |
 help: Add return type annotation: `str`
   |
 4 |
@@ -42,6 +44,7 @@ ANN204 [*] Missing return type annotation for special method `__len__`
 8 |     def __len__(self):
   |         ^^^^^^^
 9 |         ...
+  |
 help: Add return type annotation: `int`
   |
 7 |
@@ -59,6 +62,7 @@ ANN204 [*] Missing return type annotation for special method `__length_hint__`
 11 |     def __length_hint__(self):
    |         ^^^^^^^^^^^^^^^
 12 |         ...
+   |
 help: Add return type annotation: `int`
    |
 10 |
@@ -76,6 +80,7 @@ ANN204 [*] Missing return type annotation for special method `__init__`
 14 |     def __init__(self):
    |         ^^^^^^^^
 15 |         ...
+   |
 help: Add return type annotation: `None`
    |
 13 |
@@ -93,6 +98,7 @@ ANN204 [*] Missing return type annotation for special method `__del__`
 17 |     def __del__(self):
    |         ^^^^^^^
 18 |         ...
+   |
 help: Add return type annotation: `None`
    |
 16 |
@@ -110,6 +116,7 @@ ANN204 [*] Missing return type annotation for special method `__bool__`
 20 |     def __bool__(self):
    |         ^^^^^^^^
 21 |         ...
+   |
 help: Add return type annotation: `bool`
    |
 19 |
@@ -127,6 +134,7 @@ ANN204 [*] Missing return type annotation for special method `__bytes__`
 23 |     def __bytes__(self):
    |         ^^^^^^^^^
 24 |         ...
+   |
 help: Add return type annotation: `bytes`
    |
 22 |
@@ -144,6 +152,7 @@ ANN204 [*] Missing return type annotation for special method `__format__`
 26 |     def __format__(self, format_spec):
    |         ^^^^^^^^^^
 27 |         ...
+   |
 help: Add return type annotation: `str`
    |
 25 |
@@ -161,6 +170,7 @@ ANN204 [*] Missing return type annotation for special method `__contains__`
 29 |     def __contains__(self, item):
    |         ^^^^^^^^^^^^
 30 |         ...
+   |
 help: Add return type annotation: `bool`
    |
 28 |
@@ -178,6 +188,7 @@ ANN204 [*] Missing return type annotation for special method `__complex__`
 32 |     def __complex__(self):
    |         ^^^^^^^^^^^
 33 |         ...
+   |
 help: Add return type annotation: `complex`
    |
 31 |
@@ -195,6 +206,7 @@ ANN204 [*] Missing return type annotation for special method `__int__`
 35 |     def __int__(self):
    |         ^^^^^^^
 36 |         ...
+   |
 help: Add return type annotation: `int`
    |
 34 |
@@ -212,6 +224,7 @@ ANN204 [*] Missing return type annotation for special method `__float__`
 38 |     def __float__(self):
    |         ^^^^^^^^^
 39 |         ...
+   |
 help: Add return type annotation: `float`
    |
 37 |
@@ -229,6 +242,7 @@ ANN204 [*] Missing return type annotation for special method `__index__`
 41 |     def __index__(self):
    |         ^^^^^^^^^
 42 |         ...
+   |
 help: Add return type annotation: `int`
    |
 40 |

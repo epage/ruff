@@ -10,4 +10,5 @@ TC002 Move third-party import `pandas` into a type-checking block
   |                  ^^
 5 |
 6 | def f(x: pd.DataFrame):
+  |
 help: Move into type-checking block

@@ -8,6 +8,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
   |     ^^^^^^^^^^^^^
 2 |
 3 | z = x \
+  |
 help: Replace with `or` operator
   |
   - z = x if x else y  # FURB110
@@ -26,6 +27,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
   | |_______________^
 5 |
 6 |   z = x if x \
+  |
 help: Replace with `or` operator
   |
 2 |
@@ -37,6 +39,7 @@ help: Replace with `or` operator
 
 FURB110 [*] Replace ternary `if` expression with `or` operator
   --> FURB110.py:6:5
+   |
  4 |       if x else y  # FURB110
  5 |
  6 |   z = x if x \
@@ -46,6 +49,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
    | |_________^
  9 |
 10 |   z = x() if x() else y()  # FURB110
+   |
 help: Replace with `or` operator
   |
 5 |
@@ -65,6 +69,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
    |     ^^^^^^^^^^^^^^^^^^^
 11 |
 12 | # FURB110
+   |
 help: Replace with `or` operator
    |
 9  |
@@ -89,6 +94,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
    | |_^
 20 |
 21 |   # FURB110
+   |
 help: Replace with `or` operator
    |
 12 | # FURB110
@@ -116,6 +122,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
 29 | |     )
    | |_____^
 30 |   )
+   |
 help: Replace with `or` operator
    |
 22 | z = (
@@ -142,6 +149,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
 39 | |     y
    | |_____^
 40 |   )
+   |
 help: Replace with `or` operator
    |
 33 | z = (
@@ -168,6 +176,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
 48 | |     else None
    | |_____________^
 49 |   )
+   |
 help: Replace with `or` operator
    |
 43 | z = (
@@ -191,6 +200,7 @@ FURB110 [*] Replace ternary `if` expression with `or` operator
 56 | |     else y
    | |__________^
 57 |   )
+   |
 help: Replace with `or` operator
    |
 52 | z = (

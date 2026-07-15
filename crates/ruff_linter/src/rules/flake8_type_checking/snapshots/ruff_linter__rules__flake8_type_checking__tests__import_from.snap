@@ -9,6 +9,7 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
   |     ^^^^^^^^^
 6 |     Series,  # Series
 7 | )
+  |
 help: Move into type-checking block
    |
 4  | from pandas import (

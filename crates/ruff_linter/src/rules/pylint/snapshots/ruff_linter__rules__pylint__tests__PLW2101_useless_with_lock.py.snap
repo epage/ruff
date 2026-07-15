@@ -7,6 +7,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 5 | with threading.Lock():  # [useless-with-lock]
   |      ^^^^^^^^^^^^^^^^
 6 |     ...
+  |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
  --> useless_with_lock.py:8:6
@@ -16,6 +17,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 8 | with Lock():  # [useless-with-lock]
   |      ^^^^^^
 9 |     ...
+  |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:11:6
@@ -25,6 +27,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 11 | with threading.Lock() as this_shouldnt_matter:  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^
 12 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:14:6
@@ -34,6 +37,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 14 | with threading.RLock():  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^^
 15 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:17:6
@@ -43,6 +47,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 17 | with RLock():  # [useless-with-lock]
    |      ^^^^^^^
 18 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:20:6
@@ -52,6 +57,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 20 | with threading.Condition():  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^^^^^^
 21 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:23:6
@@ -61,6 +67,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 23 | with Condition():  # [useless-with-lock]
    |      ^^^^^^^^^^^
 24 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:26:6
@@ -70,6 +77,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 26 | with threading.Semaphore():  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^^^^^^
 27 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:29:6
@@ -79,6 +87,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 29 | with Semaphore():  # [useless-with-lock]
    |      ^^^^^^^^^^^
 30 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:32:6
@@ -88,6 +97,7 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 32 | with threading.BoundedSemaphore():  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 33 |     ...
+   |
 
 PLW2101 Threading lock directly created in `with` statement has no effect
   --> useless_with_lock.py:35:6
@@ -97,3 +107,4 @@ PLW2101 Threading lock directly created in `with` statement has no effect
 35 | with BoundedSemaphore():  # [useless-with-lock]
    |      ^^^^^^^^^^^^^^^^^^
 36 |     ...
+   |

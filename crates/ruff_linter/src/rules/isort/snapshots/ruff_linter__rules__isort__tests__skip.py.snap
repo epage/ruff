@@ -20,6 +20,7 @@ help: Organize imports
 
 I001 [*] Import block is un-sorted or un-formatted
   --> skip.py:27:5
+   |
 25 |       import sys
 26 |       import os  # isort:skip
 27 | /     import collections
@@ -32,9 +33,11 @@ help: Organize imports
 28 |     import collections
    -     import abc
 29 |
+   |
 
 I001 [*] Import block is un-sorted or un-formatted
   --> skip.py:34:5
+   |
 32 |     import sys; import os  # isort:skip
 33 |     import sys; import os  # isort:skip  # isort:skip
 34 |     import sys; import os

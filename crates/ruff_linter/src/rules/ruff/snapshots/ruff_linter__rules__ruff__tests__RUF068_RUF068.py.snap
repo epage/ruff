@@ -12,6 +12,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |               previous occurrence of `B` here
 16 | __all__ += ["A", "B"]
 17 | __all__.extend(["A", "B"])
+   |
 help: Remove duplicate entries from `__all__`
    |
 14 | __all__ = ["A", "B"]
@@ -30,6 +31,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |                       previous occurrence of `A` here
 21 | __all__: typing.Any = ("A", "B", "B")
 22 | __all__ = ["A", "B", "A"]
+   |
 help: Remove duplicate entries from `__all__`
    |
 19 | # Bad
@@ -49,6 +51,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |                             previous occurrence of `B` here
 22 | __all__ = ["A", "B", "A"]
 23 | __all__ = ["A", "A", "B", "B"]
+   |
 help: Remove duplicate entries from `__all__`
    |
 20 | __all__: list[str] = ["A", "B", "A"]
@@ -68,6 +71,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |            previous occurrence of `A` here
 23 | __all__ = ["A", "A", "B", "B"]
 24 | __all__ = [
+   |
 help: Remove duplicate entries from `__all__`
    |
 21 | __all__: typing.Any = ("A", "B", "B")
@@ -87,6 +91,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |            previous occurrence of `A` here
 24 | __all__ = [
 25 |     "A",
+   |
 help: Remove duplicate entries from `__all__`
    |
 22 | __all__ = ["A", "B", "A"]
@@ -106,6 +111,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |                      previous occurrence of `B` here
 24 | __all__ = [
 25 |     "A",
+   |
 help: Remove duplicate entries from `__all__`
    |
 22 | __all__ = ["A", "B", "A"]
@@ -125,6 +131,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |     ^^^ `A` duplicated here
 27 |     "B",
 28 |     "B"
+   |
 help: Remove duplicate entries from `__all__`
    |
 25 |     "A",
@@ -143,6 +150,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |     ^^^ `B` duplicated here
 29 | ]
 30 | __all__ += ["B", "B"]
+   |
 help: Remove duplicate entries from `__all__`
    |
 26 |     "A",
@@ -160,6 +168,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |             |
    |             previous occurrence of `B` here
 31 | __all__.extend(["B", "B"])
+   |
 help: Remove duplicate entries from `__all__`
    |
 29 | ]
@@ -179,6 +188,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |                 previous occurrence of `B` here
 32 |
 33 | # Bad, unsafe
+   |
 help: Remove duplicate entries from `__all__`
    |
 30 | __all__ += ["B", "B"]
@@ -198,6 +208,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |     ^^^ `A` duplicated here
 37 |     "B",
 38 |     # Comment
+   |
 help: Remove duplicate entries from `__all__`
    |
 35 |     "A",
@@ -217,6 +228,7 @@ RUF068 [*] `__all__` contains duplicate entries
    |     ^^^ `B` duplicated here
 40 |     # 3
 41 | ]
+   |
 help: Remove duplicate entries from `__all__`
    |
 36 |     "A",

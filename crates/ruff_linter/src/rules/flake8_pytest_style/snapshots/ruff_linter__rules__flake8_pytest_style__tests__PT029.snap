@@ -8,3 +8,4 @@ PT029 Set the expected warning in `pytest.warns()`
 5 |     with pytest.warns():
   |          ^^^^^^^^^^^^
 6 |         pass
+  |

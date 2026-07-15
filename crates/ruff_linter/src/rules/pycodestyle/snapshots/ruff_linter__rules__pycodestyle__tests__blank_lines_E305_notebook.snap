@@ -9,6 +9,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
    | ^^
 56 | # end
 57 | # E306:3:5
+   |
 help: Add missing blank line(s)
    |
 54 |     # another comment

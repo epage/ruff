@@ -9,6 +9,7 @@ D421 Property docstring should not start with a verb ("Returns")
 11 |         """Returns the bar."""
    |            ^^^^^^^
 12 |         return self._bar
+   |
 
 D421 Property docstring should not start with a verb ("Return")
   --> D421.py:16:12
@@ -18,6 +19,7 @@ D421 Property docstring should not start with a verb ("Return")
 16 |         """Return the baz."""
    |            ^^^^^^
 17 |         return self._baz
+   |
 
 D421 Property docstring should not start with a verb ("Gets")
   --> D421.py:21:12
@@ -27,6 +29,7 @@ D421 Property docstring should not start with a verb ("Gets")
 21 |         """Gets the qux."""
    |            ^^^^
 22 |         return self._qux
+   |
 
 D421 Property docstring should not start with a verb ("Get")
   --> D421.py:26:12
@@ -36,6 +39,7 @@ D421 Property docstring should not start with a verb ("Get")
 26 |         """Get the quux."""
    |            ^^^
 27 |         return self._quux
+   |
 
 D421 Property docstring should not start with a verb ("Yields")
   --> D421.py:31:12
@@ -45,6 +49,7 @@ D421 Property docstring should not start with a verb ("Yields")
 31 |         """Yields the corge."""
    |            ^^^^^^
 32 |         return self._corge
+   |
 
 D421 Property docstring should not start with a verb ("Yield")
   --> D421.py:36:12
@@ -54,6 +59,7 @@ D421 Property docstring should not start with a verb ("Yield")
 36 |         """Yield the grault."""
    |            ^^^^^
 37 |         return self._grault
+   |
 
 D421 Property docstring should not start with a verb ("Fetches")
   --> D421.py:41:12
@@ -63,6 +69,7 @@ D421 Property docstring should not start with a verb ("Fetches")
 41 |         """Fetches the garply."""
    |            ^^^^^^^
 42 |         return self._garply
+   |
 
 D421 Property docstring should not start with a verb ("Fetch")
   --> D421.py:46:12
@@ -72,6 +79,7 @@ D421 Property docstring should not start with a verb ("Fetch")
 46 |         """Fetch the waldo."""
    |            ^^^^^
 47 |         return self._waldo
+   |
 
 D421 Property docstring should not start with a verb ("Retrieves")
   --> D421.py:51:12
@@ -81,6 +89,7 @@ D421 Property docstring should not start with a verb ("Retrieves")
 51 |         """Retrieves the fred."""
    |            ^^^^^^^^^
 52 |         return self._fred
+   |
 
 D421 Property docstring should not start with a verb ("Retrieve")
   --> D421.py:56:12
@@ -90,6 +99,7 @@ D421 Property docstring should not start with a verb ("Retrieve")
 56 |         """Retrieve the plugh."""
    |            ^^^^^^^^
 57 |         return self._plugh
+   |
 
 D421 Property docstring should not start with a verb ("Returns")
   --> D421.py:63:12
@@ -100,3 +110,4 @@ D421 Property docstring should not start with a verb ("Returns")
    |            ^^^^^^^
 64 |
 65 |         More detail here.
+   |

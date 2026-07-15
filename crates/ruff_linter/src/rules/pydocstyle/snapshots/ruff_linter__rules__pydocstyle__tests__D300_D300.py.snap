@@ -11,6 +11,7 @@ help: Convert to triple double quotes
 
 D300 [*] Use triple double quotes `"""`
   --> D300.py:10:5
+   |
  9 | def contains_quote():
 10 |     'Sum"\\mary.'
    |     ^^^^^^^^^^^^^

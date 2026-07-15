@@ -10,6 +10,7 @@ E272 [*] Multiple spaces before keyword
    |  ^^
 22 | #: E271 E272
 23 | a  and  2
+   |
 help: Replace with single space
    |
 20 | #: E271 E272
@@ -27,6 +28,7 @@ E272 [*] Multiple spaces before keyword
    |  ^^
 24 | #: E272
 25 | this  and False
+   |
 help: Replace with single space
    |
 22 | #: E271 E272
@@ -44,6 +46,7 @@ E272 [*] Multiple spaces before keyword
    |     ^^
 26 | #: E273
 27 | a and    b
+   |
 help: Replace with single space
    |
 24 | #: E272

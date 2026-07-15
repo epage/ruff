@@ -10,6 +10,7 @@ T203 [*] `pprint` found
   | ^^^^^^
 6 | pprint("Hello, world!", stream=None)  # T203
 7 | pprint("Hello, world!", stream=sys.stdout)  # T203
+  |
 help: Remove `pprint`
   |
 4 |
@@ -26,6 +27,7 @@ T203 [*] `pprint` found
   | ^^^^^^
 7 | pprint("Hello, world!", stream=sys.stdout)  # T203
 8 | pprint("Hello, world!", stream=sys.stderr)  # T203
+  |
 help: Remove `pprint`
   |
 5 | pprint("Hello, world!")  # T203
@@ -42,6 +44,7 @@ T203 [*] `pprint` found
 7 | pprint("Hello, world!", stream=sys.stdout)  # T203
   | ^^^^^^
 8 | pprint("Hello, world!", stream=sys.stderr)  # T203
+  |
 help: Remove `pprint`
   |
 6 | pprint("Hello, world!", stream=None)  # T203
@@ -52,12 +55,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 T203 [*] `pprint` found
   --> T203.py:8:1
+   |
  6 | pprint("Hello, world!", stream=None)  # T203
  7 | pprint("Hello, world!", stream=sys.stdout)  # T203
  8 | pprint("Hello, world!", stream=sys.stderr)  # T203
    | ^^^^^^
  9 |
 10 | with tempfile.NamedTemporaryFile() as fp:
+   |
 help: Remove `pprint`
   |
 7 | pprint("Hello, world!", stream=sys.stdout)  # T203
@@ -75,6 +80,7 @@ T203 [*] `pprint` found
    | ^^^^^^^^^^^^^
 16 | pprint.pprint("Hello, world!", stream=None)  # T203
 17 | pprint.pprint("Hello, world!", stream=sys.stdout)  # T203
+   |
 help: Remove `pprint`
    |
 14 |
@@ -91,6 +97,7 @@ T203 [*] `pprint` found
    | ^^^^^^^^^^^^^
 17 | pprint.pprint("Hello, world!", stream=sys.stdout)  # T203
 18 | pprint.pprint("Hello, world!", stream=sys.stderr)  # T203
+   |
 help: Remove `pprint`
    |
 15 | pprint.pprint("Hello, world!")  # T203
@@ -107,6 +114,7 @@ T203 [*] `pprint` found
 17 | pprint.pprint("Hello, world!", stream=sys.stdout)  # T203
    | ^^^^^^^^^^^^^
 18 | pprint.pprint("Hello, world!", stream=sys.stderr)  # T203
+   |
 help: Remove `pprint`
    |
 16 | pprint.pprint("Hello, world!", stream=None)  # T203
@@ -124,6 +132,7 @@ T203 [*] `pprint` found
    | ^^^^^^^^^^^^^
 19 |
 20 | with tempfile.NamedTemporaryFile() as fp:
+   |
 help: Remove `pprint`
    |
 17 | pprint.pprint("Hello, world!", stream=sys.stdout)  # T203

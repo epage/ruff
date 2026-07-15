@@ -9,6 +9,7 @@ D412 [*] No blank lines allowed between a section header and its content ("Short
 218 |     Short summary
     |     ^^^^^^^^^^^^^
 219 |     -------------
+    |
 help: Remove blank line(s)
     |
 219 |     -------------

@@ -9,6 +9,7 @@ E302 [*] Expected 2 blank lines, found 1
 3 | def fn():
   | ^^^
 4 |     pass
+  |
 help: Add missing blank line(s)
   |
 2 |

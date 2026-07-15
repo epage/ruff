@@ -9,6 +9,7 @@ TC001 [*] Move application import `.TYP001` into a type-checking block
    |                   ^^^^^^
 21 |
 22 |     x: TYP001
+   |
 help: Move into type-checking block
    |
 4  | """

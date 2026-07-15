@@ -9,6 +9,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 12 | except 1:  # Error
    |        ^
 13 |     pass
+   |
 
 B030 `except` handlers should only be exception classes or tuples of exception classes
   --> B030.py:17:9
@@ -18,6 +19,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 17 | except (1, ValueError):  # Error
    |         ^
 18 |     pass
+   |
 
 B030 `except` handlers should only be exception classes or tuples of exception classes
   --> B030.py:22:21
@@ -27,6 +29,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 22 | except (ValueError, (RuntimeError, (KeyError, TypeError))):  # Error
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 |     pass
+   |
 
 B030 `except` handlers should only be exception classes or tuples of exception classes
   --> B030.py:27:37
@@ -36,6 +39,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 27 | except (ValueError, *(RuntimeError, (KeyError, TypeError))):  # Error
    |                                     ^^^^^^^^^^^^^^^^^^^^^
 28 |     pass
+   |
 
 B030 `except` handlers should only be exception classes or tuples of exception classes
   --> B030.py:33:29
@@ -45,6 +49,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 33 | except (*a, *(RuntimeError, (KeyError, TypeError))):  # Error
    |                             ^^^^^^^^^^^^^^^^^^^^^
 34 |     pass
+   |
 
 B030 `except*` handlers should only be exception classes or tuples of exception classes
   --> B030.py:39:28
@@ -54,6 +59,7 @@ B030 `except*` handlers should only be exception classes or tuples of exception 
 39 | except* a + (RuntimeError, (KeyError, TypeError)):  # Error
    |                            ^^^^^^^^^^^^^^^^^^^^^
 40 |     pass
+   |
 
 B030 `except` handlers should only be exception classes or tuples of exception classes
    --> B030.py:131:8
@@ -63,6 +69,7 @@ B030 `except` handlers should only be exception classes or tuples of exception c
 131 | except (a, b) * (c, d):  # B030
     |        ^^^^^^^^^^^^^^^
 132 |     pass
+    |
 
 B030 `except*` handlers should only be exception classes or tuples of exception classes
    --> B030.py:136:9
@@ -72,6 +79,7 @@ B030 `except*` handlers should only be exception classes or tuples of exception 
 136 | except* 1:  # Error
     |         ^
 137 |     pass
+    |
 
 B030 `except*` handlers should only be exception classes or tuples of exception classes
    --> B030.py:141:10
@@ -81,6 +89,7 @@ B030 `except*` handlers should only be exception classes or tuples of exception 
 141 | except* (1, ValueError):  # Error
     |          ^
 142 |     pass
+    |
 
 B030 `except*` handlers should only be exception classes or tuples of exception classes
    --> B030.py:146:22
@@ -90,6 +99,7 @@ B030 `except*` handlers should only be exception classes or tuples of exception 
 146 | except* (ValueError, (RuntimeError, (KeyError, TypeError))):  # Error
     |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 147 |     pass
+    |
 
 B030 `except*` handlers should only be exception classes or tuples of exception classes
    --> B030.py:151:9
@@ -99,3 +109,4 @@ B030 `except*` handlers should only be exception classes or tuples of exception 
 151 | except* (a, b) * (c, d):  # B030
     |         ^^^^^^^^^^^^^^^
 152 |     pass
+    |

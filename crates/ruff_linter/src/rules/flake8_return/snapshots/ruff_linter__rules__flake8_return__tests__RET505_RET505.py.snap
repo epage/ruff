@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/flake8_return/mod.rs
 ---
 RET505 [*] Unnecessary `elif` after `return` statement
   --> RET505.py:8:5
+   |
  6 |         a = 1
  7 |         return y
  8 |     elif z:
    |     ^^^^
  9 |         b = 2
 10 |         return w
+   |
 help: Remove unnecessary `elif`
   |
 7 |         return y
@@ -26,6 +28,7 @@ RET505 [*] Unnecessary `elif` after `return` statement
    |     ^^^^
 24 |         c = 2
 25 |     else:
+   |
 help: Remove unnecessary `elif`
    |
 22 |         return
@@ -43,6 +46,7 @@ RET505 [*] Unnecessary `elif` after `return` statement
    |     ^^^^
 42 |         b = 2
 43 |         return w
+   |
 help: Remove unnecessary `elif`
    |
 40 |         return y
@@ -60,6 +64,7 @@ RET505 [*] Unnecessary `else` after `return` statement
    |     ^^^^
 54 |         b = 2
 55 |         return z
+   |
 help: Remove unnecessary `else`
    |
 52 |         return y
@@ -80,6 +85,7 @@ RET505 [*] Unnecessary `else` after `return` statement
    |         ^^^^
 65 |             c = 3
 66 |             return x
+   |
 help: Remove unnecessary `else`
    |
 63 |             return y
@@ -100,6 +106,7 @@ RET505 [*] Unnecessary `else` after `return` statement
    |     ^^^^
 80 |         c = 3
 81 |     return
+   |
 help: Remove unnecessary `else`
    |
 78 |         return
@@ -118,6 +125,7 @@ RET505 [*] Unnecessary `else` after `return` statement
    |         ^^^^
 90 |             b = 2
 91 |     else:
+   |
 help: Remove unnecessary `else`
    |
 88 |             return
@@ -129,12 +137,14 @@ help: Remove unnecessary `else`
 
 RET505 [*] Unnecessary `else` after `return` statement
    --> RET505.py:99:5
+    |
  97 |     if x:  # [no-else-return]
  98 |         return True
  99 |     else:
     |     ^^^^
 100 |         try:
 101 |             return False
+    |
 help: Remove unnecessary `else`
     |
 98  |         return True
@@ -159,6 +169,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 110 |         last = 1;
 111 |         last2 = 0;
+    |
 help: Remove unnecessary `else`
     |
 108 |         return n;
@@ -179,6 +190,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 146 |         # comment
 147 |         pass
+    |
 help: Remove unnecessary `else`
     |
 144 |         return
@@ -188,14 +200,17 @@ help: Remove unnecessary `else`
 145 +     # comment
 146 +     pass
 147 |
+    |
 
 RET505 [*] Unnecessary `else` after `return` statement
    --> RET505.py:153:5
+    |
 151 |     if True:
 152 |         return
 153 |     else:  # comment
     |     ^^^^
 154 |         pass
+    |
 help: Remove unnecessary `else`
     |
 152 |         return
@@ -215,7 +230,9 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 161 |         :\
 162 |         # comment
+    |
 help: Remove unnecessary `else`
+    |
 159 |         return
     -     else\
     -         :\
@@ -235,6 +252,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 170 |         :  # comment
 171 |         pass
+    |
 help: Remove unnecessary `else`
     |
 168 |         return
@@ -269,6 +287,7 @@ RET505 [*] Unnecessary `else` after `return` statement
 183 |     else:\
     |     ^^^^
 184 |         pass
+    |
 help: Remove unnecessary `else`
     |
 182 |         return
@@ -302,6 +321,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 208 |
 209 |         c = 3
+    |
 help: Remove unnecessary `else`
     |
 206 |         return y
@@ -323,6 +343,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 218 |         # comment
 219 |         c = 3
+    |
 help: Remove unnecessary `else`
     |
 216 |         return y
@@ -345,6 +366,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 228 |           # comment
 229 |         c = 3
+    |
 help: Remove unnecessary `else`
     |
 226 |         return y
@@ -367,6 +389,7 @@ RET505 [*] Unnecessary `else` after `return` statement
     |     ^^^^
 238 |   # comment
 239 |         c = 3
+    |
 help: Remove unnecessary `else`
     |
 236 |         return y
@@ -387,6 +410,7 @@ RET505 [*] Unnecessary `else` after `return` statement
 245 |     else:
     |     ^^^^
 246 |      return False
+    |
 help: Remove unnecessary `else`
     |
 244 | 	 return True
@@ -405,4 +429,5 @@ RET505 Unnecessary `else` after `return` statement
     |     ^^^^
 253 | \
 254 |         return False
+    |
 help: Remove unnecessary `else`

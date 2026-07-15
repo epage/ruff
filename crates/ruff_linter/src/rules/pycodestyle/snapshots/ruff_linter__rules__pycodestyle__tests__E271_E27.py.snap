@@ -10,6 +10,7 @@ E271 [*] Multiple spaces after keyword
   |         ^^
 5 | #: E272
 6 | True  and False
+  |
 help: Replace with single space
   |
 3 | #: E271
@@ -27,6 +28,7 @@ E271 [*] Multiple spaces after keyword
   |     ^^
 7 | #: E271
 8 | if   1:
+  |
 help: Replace with single space
   |
 5 | #: E272
@@ -37,12 +39,14 @@ help: Replace with single space
 
 E271 [*] Multiple spaces after keyword
   --> E27.py:8:3
+   |
  6 | True  and False
  7 | #: E271
  8 | if   1:
    |   ^^^
  9 |     pass
 10 | #: E273
+   |
 help: Replace with single space
   |
 7 | #: E271
@@ -60,6 +64,7 @@ E271 [*] Multiple spaces after keyword
    |      ^^
 16 | #: E271
 17 | 1 and  b
+   |
 help: Replace with single space
    |
 14 | #: E271
@@ -77,6 +82,7 @@ E271 [*] Multiple spaces after keyword
    |      ^^
 18 | #: E271
 19 | a and  2
+   |
 help: Replace with single space
    |
 16 | #: E271
@@ -94,6 +100,7 @@ E271 [*] Multiple spaces after keyword
    |      ^^
 20 | #: E271 E272
 21 | 1  and  b
+   |
 help: Replace with single space
    |
 18 | #: E271
@@ -111,6 +118,7 @@ E271 [*] Multiple spaces after keyword
    |       ^^
 22 | #: E271 E272
 23 | a  and  2
+   |
 help: Replace with single space
    |
 20 | #: E271 E272
@@ -128,6 +136,7 @@ E271 [*] Multiple spaces after keyword
    |       ^^
 24 | #: E272
 25 | this  and False
+   |
 help: Replace with single space
    |
 22 | #: E271 E272
@@ -145,6 +154,7 @@ E271 [*] Multiple spaces after keyword
    |              ^^
 37 | #: E275
 38 | from w import(e, f)
+   |
 help: Replace with single space
    |
 35 | #: E271
@@ -161,6 +171,7 @@ E271 [*] Multiple spaces after keyword
    |     ^^
 72 |
 73 | #: E273
+   |
 help: Replace with single space
    |
 70 | #: E271

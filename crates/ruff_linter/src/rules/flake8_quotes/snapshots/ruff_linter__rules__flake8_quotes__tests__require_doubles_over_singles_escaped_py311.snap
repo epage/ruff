@@ -8,6 +8,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
   |                          ^^^^^^^^^^^^^^^^^^^^^^
 2 | this_is_fine = "'This' is a \"string\""
 3 | this_is_fine = 'This is a "string"'
+  |
 help: Change outer quotes to avoid escaping inner quotes
   |
   - this_should_raise_Q003 = "This is a \"string\""
@@ -17,11 +18,13 @@ help: Change outer quotes to avoid escaping inner quotes
 
 Q003 [*] Change outer quotes to avoid escaping inner quotes
   --> singles_escaped.py:9:5
+   |
  7 | this_should_raise = (
  8 |     "This is a"
  9 |     "\"string\""
    |     ^^^^^^^^^^^^
 10 | )
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 8  |     "This is a"
@@ -38,6 +41,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    | ^^^^^^^^^^^^^^^^^^^^^^^
 14 | f"'This' is a \"string\""
 15 | f'This is a "string"'
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 12 | # Same as above, but with f-strings
@@ -54,6 +58,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
 21 |     f"\"string\""
    |     ^^^^^^^^^^^^^
 22 | )
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 20 |     f"This is a"
@@ -70,6 +75,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    | ^^^^^^^^^^^^^^^^^^^^^^^
 44 | t"'This' is a \"string\""
 45 | f'This is a "string"'
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 42 | # Same as above, but with t-strings
@@ -87,6 +93,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    |     ^^^^^^^^^^^^^
 52 | )
 53 | t"\"foo\" {"foo"}"  # Q003
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 50 |     t"This is a"
@@ -104,6 +111,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    | ^^^^^^^^^^^^^^^^^^
 54 | t"\"foo\" {t"foo"}"  # Q003
 55 | t"\"foo\" {t"\"foo\""} \"\""  # Q003
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 52 | )
@@ -120,6 +128,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
 54 | t"\"foo\" {t"foo"}"  # Q003
    | ^^^^^^^^^^^^^^^^^^^
 55 | t"\"foo\" {t"\"foo\""} \"\""  # Q003
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 53 | t"\"foo\" {"foo"}"  # Q003
@@ -137,6 +146,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 56 |
 57 | t"normal {t"nested"} normal"
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 54 | t"\"foo\" {t"foo"}"  # Q003
@@ -147,12 +157,14 @@ help: Change outer quotes to avoid escaping inner quotes
 
 Q003 [*] Change outer quotes to avoid escaping inner quotes
   --> singles_escaped.py:55:12
+   |
 53 | t"\"foo\" {"foo"}"  # Q003
 54 | t"\"foo\" {t"foo"}"  # Q003
 55 | t"\"foo\" {t"\"foo\""} \"\""  # Q003
    |            ^^^^^^^^^^
 56 |
 57 | t"normal {t"nested"} normal"
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 54 | t"\"foo\" {t"foo"}"  # Q003
@@ -169,6 +181,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 59 | t"\"normal\" {t"nested"} 'single quotes'"
 60 | t"\"normal\" {t"\"nested\" {"other"} normal"} 'single quotes'"  # Q003
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 57 | t"normal {t"nested"} normal"
@@ -185,6 +198,7 @@ Q003 [*] Change outer quotes to avoid escaping inner quotes
 60 | t"\"normal\" {t"\"nested\" {"other"} normal"} 'single quotes'"  # Q003
    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 | t"\"normal\" {t"\"nested\" {"other"} 'single quotes'"} normal"  # Q003
+   |
 help: Change outer quotes to avoid escaping inner quotes
    |
 59 | t"\"normal\" {t"nested"} 'single quotes'"

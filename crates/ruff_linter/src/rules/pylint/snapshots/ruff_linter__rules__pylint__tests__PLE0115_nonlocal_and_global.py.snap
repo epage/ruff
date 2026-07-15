@@ -9,14 +9,17 @@ PLE0115 Name `counter` is both `nonlocal` and `global`
   |            ^^^^^^^
 8 |     nonlocal counter
 9 |     counter += 1
+  |
 
 PLE0115 Name `counter` is both `nonlocal` and `global`
   --> nonlocal_and_global.py:20:20
+   |
 18 |             counter += 1
 19 |         else:
 20 |             global counter
    |                    ^^^^^^^
 21 |             counter += 1
+   |
 
 PLE0115 Name `counter` is both `nonlocal` and `global`
   --> nonlocal_and_global.py:31:16
@@ -34,3 +37,4 @@ PLE0115 Name `counter` is both `nonlocal` and `global`
 36 |     global counter
    |            ^^^^^^^
 37 |     counter += 1
+   |

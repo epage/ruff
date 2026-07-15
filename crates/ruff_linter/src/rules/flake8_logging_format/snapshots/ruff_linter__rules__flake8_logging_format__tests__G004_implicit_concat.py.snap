@@ -9,6 +9,7 @@ G004 Logging statement uses f-string
   |          ^^^^^^^^^^^^^^^^^^^^^^^^
 7 | log.info("a " f"b {variablename}")
 8 | log.info("prefix " f"middle {variablename}" f" suffix")
+  |
 help: Convert to lazy `%` formatting
 
 G004 Logging statement uses f-string
@@ -19,10 +20,12 @@ G004 Logging statement uses f-string
 7 | log.info("a " f"b {variablename}")
   |          ^^^^^^^^^^^^^^^^^^^^^^^^
 8 | log.info("prefix " f"middle {variablename}" f" suffix")
+  |
 help: Convert to lazy `%` formatting
 
 G004 Logging statement uses f-string
  --> G004_implicit_concat.py:8:10
+  |
 6 | log.info(f"a" f"b {variablename}")
 7 | log.info("a " f"b {variablename}")
 8 | log.info("prefix " f"middle {variablename}" f" suffix")

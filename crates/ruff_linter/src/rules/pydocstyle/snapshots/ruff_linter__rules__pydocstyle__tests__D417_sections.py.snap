@@ -9,6 +9,7 @@ D417 Missing argument description in the docstring for `bar`: `y`
 292 |     def bar(y=2):  # noqa: D207, D213, D406, D407
     |         ^^^
 293 |         """Nested function test for docstrings.
+    |
 
 D417 Missing argument description in the docstring for `test_missing_google_args`: `y`
    --> sections.py:309:5
@@ -18,6 +19,7 @@ D417 Missing argument description in the docstring for `test_missing_google_args
 309 | def test_missing_google_args(x=1, y=2, _private=3):  # noqa: D406, D407
     |     ^^^^^^^^^^^^^^^^^^^^^^^^
 310 |     """Toggle the gizmo.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args`: `test`, `y`, `z`
    --> sections.py:333:9
@@ -27,6 +29,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args`: `te
 333 |     def test_missing_args(self, test, x, y, z=3, _private_arg=3):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^
 334 |         """Test a valid args section.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args_class_method`: `test`, `y`, `z`
    --> sections.py:345:9
@@ -36,6 +39,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args_class
 345 |     def test_missing_args_class_method(cls, test, x, y, _, z=3):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 346 |         """Test a valid args section.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args_static_method`: `a`, `y`, `z`
    --> sections.py:358:9
@@ -45,6 +49,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args_stati
 358 |     def test_missing_args_static_method(a, x, y, _test, z=3):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 359 |         """Test a valid args section.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_docstring`: `a`, `b`
    --> sections.py:370:9
@@ -54,6 +59,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_docstring`
 370 |     def test_missing_docstring(a, b):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^^
 371 |         """Test a valid args section.
+    |
 
 D417 Missing argument description in the docstring for `test_missing_numpy_args`: `y`
    --> sections.py:398:5
@@ -63,6 +69,7 @@ D417 Missing argument description in the docstring for `test_missing_numpy_args`
 398 | def test_missing_numpy_args(_private_arg=0, x=1, y=2):  # noqa: D406, D407
     |     ^^^^^^^^^^^^^^^^^^^^^^^
 399 |     """Toggle the gizmo.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args`: `test`, `y`, `z`
    --> sections.py:434:9
@@ -72,6 +79,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args`: `te
 434 |     def test_missing_args(self, test, x, y, z=3, t=1, _private=0):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^
 435 |         """Test a valid args section.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args_class_method`: `test`, `y`, `z`
    --> sections.py:449:9
@@ -81,6 +89,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args_class
 449 |     def test_missing_args_class_method(cls, test, x, y, z=3):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 450 |         """Test a valid args section.
+    |
 
 D417 Missing argument descriptions in the docstring for `test_missing_args_static_method`: `a`, `z`
    --> sections.py:468:9
@@ -90,6 +99,7 @@ D417 Missing argument descriptions in the docstring for `test_missing_args_stati
 468 |     def test_missing_args_static_method(a, x, y, z=3, t=1):  # noqa: D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 469 |         """Test a valid args section.
+    |
 
 D417 Missing argument description in the docstring for `test_incorrect_indent`: `y`
    --> sections.py:498:9
@@ -99,3 +109,4 @@ D417 Missing argument description in the docstring for `test_incorrect_indent`: 
 498 |     def test_incorrect_indent(self, x=1, y=2):  # noqa: D207, D213, D407
     |         ^^^^^^^^^^^^^^^^^^^^^
 499 |         """Reproducing issue #437.
+    |

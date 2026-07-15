@@ -9,9 +9,11 @@ B017 Do not assert blind exception: `Exception`
 20 |         self.assertRaises(Exception, something_else)
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |         self.assertRaises(BaseException, something_else)
+   |
 
 B017 Do not assert blind exception: `BaseException`
   --> B017_1.py:21:9
+   |
 19 |     def call_form_raises(self) -> None:
 20 |         self.assertRaises(Exception, something_else)
 21 |         self.assertRaises(BaseException, something_else)
@@ -24,6 +26,7 @@ B017 Do not assert blind exception: `Exception`
 25 |     pytest.raises(Exception, something_else)
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 |     pytest.raises(BaseException, something_else)
+   |
 
 B017 Do not assert blind exception: `BaseException`
   --> B017_1.py:26:5
@@ -34,3 +37,4 @@ B017 Do not assert blind exception: `BaseException`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 |
 28 |     pytest.raises(Exception, something_else, match="hello")
+   |

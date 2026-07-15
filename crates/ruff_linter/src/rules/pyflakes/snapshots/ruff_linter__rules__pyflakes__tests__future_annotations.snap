@@ -9,6 +9,7 @@ F401 [*] `models.Nut` imported but unused
 8 |     Nut,
   |     ^^^
 9 | )
+  |
 help: Remove unused import: `models.Nut`
   |
 7 |     Fruit,
@@ -23,3 +24,4 @@ F821 Undefined name `Bar`
 26 |     def c(cls) -> Bar:
    |                   ^^^
 27 |         return cls(x=0, y=0)
+   |

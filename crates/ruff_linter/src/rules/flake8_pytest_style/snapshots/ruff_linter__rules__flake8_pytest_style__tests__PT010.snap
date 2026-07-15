@@ -8,3 +8,4 @@ PT010 Set the expected exception in `pytest.raises()`
 5 |     with pytest.raises():
   |          ^^^^^^^^^^^^^
 6 |         pass
+  |

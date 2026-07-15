@@ -16,6 +16,7 @@ DOC201 `return` is not documented in docstring
 10 | |     """
    | |_______^
 11 |       return 'test'
+   |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -33,6 +34,7 @@ DOC201 `return` is not documented in docstring
 61 | |         """
    | |___________^
 62 |           return 'test'
+   |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -43,6 +45,7 @@ DOC201 `return` is not documented in docstring
 86 |         """Lorem ipsum."""
    |         ^^^^^^^^^^^^^^^^^^
 87 |         return True
+   |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -60,6 +63,7 @@ DOC201 `return` is not documented in docstring
     | |_______^
 159 |       if x < 0:
 160 |           return None
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -77,6 +81,7 @@ DOC201 `return` is not documented in docstring
     | |_______^
 174 |       if x < 0:
 175 |           return None
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -93,6 +98,7 @@ DOC201 `return` is not documented in docstring
 188 | |     """
     | |_______^
 189 |       return None
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -103,6 +109,7 @@ DOC201 `return` is not documented in docstring
 194 |     """Bar-y method"""
     |     ^^^^^^^^^^^^^^^^^^
 195 |     return
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -114,6 +121,7 @@ DOC201 `return` is not documented in docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 221 |     yield from "abc"
 222 |     return
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -125,6 +133,7 @@ DOC201 `return` is not documented in docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 229 |     yield from "abc"
 230 |     return 42
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -135,4 +144,5 @@ DOC201 `return` is not documented in docstring
 235 |     """"No returns documented here, oh no"""
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 236 |     return (x for x in range(42))
+    |
 help: Add a "Returns" section to the docstring

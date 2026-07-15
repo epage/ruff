@@ -12,6 +12,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
   | |___^
 7 |   def foo():
 8 |       pass
+  |
 help: Replace single multiline quotes with double quotes
   |
 3 | '''
@@ -25,6 +26,7 @@ help: Replace single multiline quotes with double quotes
 
 Q001 [*] Single quote multiline found but double quotes preferred
   --> docstring_singles_module_multiline.py:9:1
+   |
  7 |   def foo():
  8 |       pass
  9 | / '''

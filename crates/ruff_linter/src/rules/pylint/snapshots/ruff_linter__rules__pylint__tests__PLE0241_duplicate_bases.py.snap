@@ -8,6 +8,7 @@ PLE0241 [*] Duplicate base `A` for class `F1`
 13 | class F1(A, A):
    |             ^
 14 |     ...
+   |
 help: Remove duplicate base
    |
 12 | # Duplicate base class is last.
@@ -22,6 +23,7 @@ PLE0241 [*] Duplicate base `A` for class `F2`
 17 | class F2(A, A,):
    |             ^
 18 |     ...
+   |
 help: Remove duplicate base
    |
 16 |
@@ -39,6 +41,7 @@ PLE0241 [*] Duplicate base `A` for class `F3`
    |     ^
 24 | ):
 25 |     ...
+   |
 help: Remove duplicate base
    |
 21 | class F3(
@@ -55,6 +58,7 @@ PLE0241 [*] Duplicate base `A` for class `F4`
    |     ^
 31 | ):
 32 |     ...
+   |
 help: Remove duplicate base
    |
 29 |     A,
@@ -69,6 +73,7 @@ PLE0241 [*] Duplicate base `A` for class `G1`
 36 | class G1(A, A, B):
    |             ^
 37 |     ...
+   |
 help: Remove duplicate base
    |
 35 | # Duplicate base class is not last.
@@ -83,6 +88,7 @@ PLE0241 [*] Duplicate base `A` for class `G2`
 40 | class G2(A, A, B,):
    |             ^
 41 |     ...
+   |
 help: Remove duplicate base
    |
 39 |
@@ -100,6 +106,7 @@ PLE0241 [*] Duplicate base `A` for class `G3`
    |     ^
 47 |     B
 48 | ):
+   |
 help: Remove duplicate base
    |
 45 |     A,
@@ -116,6 +123,7 @@ PLE0241 [*] Duplicate base `A` for class `G4`
    |     ^
 55 |     B,
 56 | ):
+   |
 help: Remove duplicate base
    |
 53 |     A,
@@ -132,6 +140,7 @@ PLE0241 [*] Duplicate base `Foo` for class `Bar`
    |     ^^^
 77 | ):
 78 |     pass
+   |
 help: Remove duplicate base
    |
 74 | # https://github.com/astral-sh/ruff/issues/18814

@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/pylint/mod.rs
 ---
 PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else` and dedent its contents
   --> useless_else_on_loop.py:9:5
+   |
  7 |         if i % 2:
  8 |             return i
  9 |     else:  # [useless-else-on-loop]
    |     ^^^^
 10 |         print("math is broken")
 11 |     return None
+   |
 help: Remove `else`
    |
 8  |             return i
@@ -27,6 +29,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
    |     ^^^^
 19 |         print("math is broken")
 20 |     return None
+   |
 help: Remove `else`
    |
 17 |         return 1
@@ -44,6 +47,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
 30 | else:  # [useless-else-on-loop]
    | ^^^^
 31 |     print("or else!")
+   |
 help: Remove `else`
    |
 29 |
@@ -61,6 +65,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
 37 | else:  # [useless-else-on-loop]
    | ^^^^
 38 |     print("or else!")
+   |
 help: Remove `else`
    |
 36 |         break
@@ -79,6 +84,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
    | ^^^^
 43 |     print("fat chance")
 44 |     for j in range(10):
+   |
 help: Remove `else`
    |
 41 |     pass
@@ -101,6 +107,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
    |     ^^^^
 89 |         return True
 90 |     return False
+   |
 help: Remove `else`
    |
 87 |                 print("all right")
@@ -112,12 +119,14 @@ help: Remove `else`
 
 PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else` and dedent its contents
    --> useless_else_on_loop.py:98:9
+    |
  96 |         for _ in range(3):
  97 |             pass
  98 |         else:
     |         ^^^^
  99 |             if 1 < 2:  # pylint: disable=comparison-of-constants
 100 |                 break
+    |
 help: Remove `else`
     |
 97  |             pass
@@ -138,6 +147,7 @@ PLW0120 [*] `else` clause on loop without a `break` statement; remove the `else`
     |     ^^^^
 145 |         # [useless-else-on-loop]
 146 |         print("fat chance")
+    |
 help: Remove `else`
     |
 143 |         pass

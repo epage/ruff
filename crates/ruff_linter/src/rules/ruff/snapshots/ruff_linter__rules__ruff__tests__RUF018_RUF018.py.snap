@@ -9,6 +9,7 @@ RUF018 Avoid assignment expressions in `assert` statements
   |         ^^^^^^
 3 | assert x, (y := "error")
 4 | print(x, y)
+  |
 
 RUF018 Avoid assignment expressions in `assert` statements
  --> RUF018.py:3:12
@@ -18,3 +19,4 @@ RUF018 Avoid assignment expressions in `assert` statements
 3 | assert x, (y := "error")
   |            ^^^^^^^^^^^^
 4 | print(x, y)
+  |

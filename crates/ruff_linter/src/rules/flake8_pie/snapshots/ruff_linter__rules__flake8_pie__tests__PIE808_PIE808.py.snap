@@ -9,6 +9,7 @@ PIE808 [*] Unnecessary `start` argument in `range`
   |       ^
 3 |
 4 | import builtins
+  |
 help: Remove `start` argument
   |
 1 | # PIE808
@@ -25,6 +26,7 @@ PIE808 [*] Unnecessary `start` argument in `range`
   |                ^
 6 |
 7 | # OK
+  |
 help: Remove `start` argument
   |
 4 | import builtins
@@ -35,6 +37,7 @@ help: Remove `start` argument
 
 PIE808 [*] Unnecessary `start` argument in `range`
   --> PIE808.py:19:8
+   |
 18 | # regression test for https://github.com/astral-sh/ruff/pull/18805
 19 | range((0), 42)
    |        ^

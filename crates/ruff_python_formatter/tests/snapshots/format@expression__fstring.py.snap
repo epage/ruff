@@ -2410,4 +2410,5 @@ error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python
 178 | f"foo {"'bar'"}"
     |        ^
 179 | f"foo {'"bar"'}"
+    |
 warning: Only accept new syntax errors if they are also present in the input. The formatter should not introduce syntax errors.

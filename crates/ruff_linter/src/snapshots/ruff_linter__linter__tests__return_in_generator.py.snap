@@ -10,6 +10,7 @@ B901 Using `yield` and `return {value}` in a generator function can lead to conf
   |     ^^^^^^^^^
 4 |
 5 | def gen(): # B901 but not a syntax error - not an async generator
+  |
 
 B901 Using `yield` and `return {value}` in a generator function can lead to confusing behavior
  --> resources/test/fixtures/syntax_errors/return_in_generator.py:7:5
@@ -20,6 +21,7 @@ B901 Using `yield` and `return {value}` in a generator function can lead to conf
   |     ^^^^^^^^^
 8 |
 9 | async def gen(): # ok - no value in return
+  |
 
 B901 Using `yield` and `return {value}` in a generator function can lead to confusing behavior
   --> resources/test/fixtures/syntax_errors/return_in_generator.py:15:5
@@ -30,6 +32,7 @@ B901 Using `yield` and `return {value}` in a generator function can lead to conf
    |     ^^^^^^^^^^^^
 16 |
 17 | async def gen():
+   |
 
 B901 Using `yield` and `return {value}` in a generator function can lead to confusing behavior
   --> resources/test/fixtures/syntax_errors/return_in_generator.py:19:5
@@ -40,6 +43,7 @@ B901 Using `yield` and `return {value}` in a generator function can lead to conf
    |     ^^^^^^^^^^^^^^^^
 20 |
 21 | async def gen():
+   |
 
 B901 Using `yield` and `return {value}` in a generator function can lead to confusing behavior
   --> resources/test/fixtures/syntax_errors/return_in_generator.py:24:5

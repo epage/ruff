@@ -9,6 +9,7 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 51 | setattr(foo, "_123abc", None)
 52 | setattr(foo, "__123abc__", None)
+   |
 help: Replace `setattr` with assignment
    |
 49 | # Invalid usage
@@ -26,6 +27,7 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 | setattr(foo, "__123abc__", None)
 53 | setattr(foo, "abc123", None)
+   |
 help: Replace `setattr` with assignment
    |
 50 | setattr(foo, "bar", None)
@@ -43,6 +45,7 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 53 | setattr(foo, "abc123", None)
 54 | setattr(foo, r"abc123", None)
+   |
 help: Replace `setattr` with assignment
    |
 51 | setattr(foo, "_123abc", None)
@@ -60,6 +63,7 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 54 | setattr(foo, r"abc123", None)
 55 | setattr(foo.bar, r"baz", None)
+   |
 help: Replace `setattr` with assignment
    |
 52 | setattr(foo, "__123abc__", None)
@@ -76,11 +80,14 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
 54 | setattr(foo, r"abc123", None)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | setattr(foo.bar, r"baz", None)
+   |
 help: Replace `setattr` with assignment
+   |
 53 | setattr(foo, "abc123", None)
    - setattr(foo, r"abc123", None)
 54 + foo.abc123 = None
 55 | setattr(foo.bar, r"baz", None)
+   |
 
 B010 [*] Do not call `setattr` with a constant attribute value. It is not any safer than normal property access.
   --> B009_B010.py:55:1
@@ -91,6 +98,7 @@ B010 [*] Do not call `setattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 56 |
 57 | # Regression test for: https://github.com/astral-sh/ruff/issues/7455#issuecomment-1722458885
+   |
 help: Replace `setattr` with assignment
    |
 54 | setattr(foo, r"abc123", None)

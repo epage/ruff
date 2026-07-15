@@ -11,9 +11,11 @@ S110 `try`-`except`-`pass` detected, consider logging the exception
   | |________^
 5 |
 6 |   try:
+  |
 
 S110 `try`-`except`-`pass` detected, consider logging the exception
   --> S110.py:8:1
+   |
  6 |   try:
  7 |       pass
  8 | / except:
@@ -21,6 +23,7 @@ S110 `try`-`except`-`pass` detected, consider logging the exception
    | |________^
 10 |
 11 |   try:
+   |
 
 S110 `try`-`except`-`pass` detected, consider logging the exception
   --> S110.py:13:1

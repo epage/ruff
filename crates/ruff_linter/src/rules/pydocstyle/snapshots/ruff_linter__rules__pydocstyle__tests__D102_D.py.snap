@@ -8,6 +8,7 @@ D102 Missing docstring in public method
 23 |     def method(self=None):
    |         ^^^^^^
 24 |         pass
+   |
 
 D102 Missing docstring in public method
   --> D.py:56:9
@@ -16,6 +17,7 @@ D102 Missing docstring in public method
 56 |     def __new__(self=None):
    |         ^^^^^^^
 57 |         pass
+   |
 
 D102 Missing docstring in public method
   --> D.py:68:9
@@ -24,6 +26,7 @@ D102 Missing docstring in public method
 68 |     def __call__(self=None, x=None, y=None, z=None):
    |         ^^^^^^^^
 69 |         pass
+   |
 
 D102 Missing docstring in public method
    --> D.py:650:9
@@ -33,6 +36,7 @@ D102 Missing docstring in public method
 650 |     def sort_services(self):
     |         ^^^^^^^^^^^^^
 651 |         pass
+    |
 
 D102 Missing docstring in public method
    --> D.py:659:9
@@ -42,3 +46,4 @@ D102 Missing docstring in public method
 659 |     def sort_services(self):
     |         ^^^^^^^^^^^^^
 660 |         pass
+    |

@@ -10,6 +10,7 @@ E262 [*] Inline comment should start with `# `
   |            ^^^^^^^^^^^^
 5 | #: E262:1:12
 6 | x = x + 1  #  Increment x
+  |
 help: Format space
   |
 3 | #: E262:1:12
@@ -27,6 +28,7 @@ E262 [*] Inline comment should start with `# `
   |            ^^^^^^^^^^^^^^
 7 | #: E262:1:12
 8 | x = y + 1  #:  Increment x
+  |
 help: Format space
   |
 5 | #: E262:1:12
@@ -37,12 +39,14 @@ help: Format space
 
 E262 [*] Inline comment should start with `# `
   --> E26.py:8:12
+   |
  6 | x = x + 1  #  Increment x
  7 | #: E262:1:12
  8 | x = y + 1  #:  Increment x
    |            ^^^^^^^^^^^^^^^
  9 | #: E265:1:1
 10 | #Block comment
+   |
 help: Format space
   |
 7 | #: E262:1:12
@@ -60,6 +64,7 @@ E262 [*] Inline comment should start with `# `
    |         ^^^^^^^^^^^^^^^^^^^^^^^
 64 | #: E262:2:9
 65 | #  (Two spaces) Ok for block comment
+   |
 help: Format space
    |
 62 | #  (One space one NBSP) Ok for block comment
@@ -77,7 +82,9 @@ E262 [*] Inline comment should start with `# `
    |         ^^^^^^^^^^^^^^^
 67 |
 68 | #: E265:5:1
+   |
 help: Format space
+   |
 65 | #  (Two spaces) Ok for block comment
    - a = 42  #  (Two spaces)
 66 + a = 42  # (Two spaces)
@@ -93,6 +100,7 @@ E262 [*] Inline comment should start with `# `
    |        ^^^^^^
 85 |
 86 | a = 1  #:Foo
+   |
 help: Format space
    |
 83 |

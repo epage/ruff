@@ -60,6 +60,7 @@ PYI041 [*] Use `float` instead of `int | float`
    |                        ^^^^^^^^^^^^^^^^^
 34 |
 35 | def f5(
+   |
 help: Remove redundant type
    |
 32 |
@@ -78,6 +79,7 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
 38 | |         complex, int]
    | |_____________________^
 39 |       ) -> None: ...  # PYI041
+   |
 help: Remove redundant type
    |
 35 | def f5(
@@ -100,7 +102,9 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
    | |_______________^
 46 |       )    
 47 |       ) -> None: ... # PYI041
+   |
 help: Remove redundant type
+   |
 42 |     arg: (
    -         int | # comment
    -         float |  # another
@@ -142,6 +146,7 @@ PYI041 [*] Use `float` instead of `int | float`
 55 | def f7(arg1: int, *args: Union[Union[Union[int, int, float]]]) -> None: ...  # PYI041
    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove redundant type
+   |
 54 |
    - def f7(arg1: int, *args: Union[Union[Union[int, int, float]]]) -> None: ...  # PYI041
 55 + def f7(arg1: int, *args: float) -> None: ...  # PYI041
@@ -170,6 +175,7 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
    |                        ^^^^^^^^^^^^^^^^^^^^^
 65 |
 66 |     def bad2(self, arg: int | Union[float, complex]) -> None: ...  # PYI041
+   |
 help: Remove redundant type
    |
 63 |
@@ -187,6 +193,7 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |
 68 |     def bad3(self, arg: Union[Union[float, complex], int]) -> None: ...  # PYI041
+   |
 help: Remove redundant type
    |
 65 |
@@ -204,7 +211,9 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 69 |
 70 |     def bad4(self, arg: Union[float | complex, int]) -> None: ...  # PYI041
+   |
 help: Remove redundant type
+   |
 67 |
    -     def bad3(self, arg: Union[Union[float, complex], int]) -> None: ...  # PYI041
 68 +     def bad3(self, arg: complex) -> None: ...  # PYI041
@@ -220,15 +229,18 @@ PYI041 [*] Use `complex` instead of `int | float | complex`
    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 71 |
 72 |     def bad5(self, arg: int | (float | complex)) -> None: ...  # PYI041
+   |
 help: Remove redundant type
    |
 69 |
    -     def bad4(self, arg: Union[float | complex, int]) -> None: ...  # PYI041
 70 +     def bad4(self, arg: complex) -> None: ...  # PYI041
 71 |
+   |
 
 PYI041 [*] Use `complex` instead of `int | float | complex`
   --> PYI041_1.pyi:72:25
+   |
 70 |     def bad4(self, arg: Union[float | complex, int]) -> None: ...  # PYI041
 71 |
 72 |     def bad5(self, arg: int | (float | complex)) -> None: ...  # PYI041
@@ -250,6 +262,7 @@ PYI041 [*] Use `float` instead of `int | float`
    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^
 79 |
 80 |     def f3(self, arg: None | float | None | int | None = None) -> None: ...  # PYI041 - with fix
+   |
 help: Remove redundant type
    |
 77 | class Issue18298:

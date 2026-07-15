@@ -9,6 +9,7 @@ RUF017 [*] Avoid quadratic list summation
   | ^^^^^^^^^^^^^^^^^^^^^
 6 | sum([x, y], [])
 7 | sum([[1, 2, 3], [4, 5, 6]], start=[])
+  |
 help: Replace with `functools.reduce`
   |
 1 + import functools
@@ -32,6 +33,7 @@ RUF017 [*] Avoid quadratic list summation
   | ^^^^^^^^^^^^^^^
 7 | sum([[1, 2, 3], [4, 5, 6]], start=[])
 8 | sum([[1, 2, 3], [4, 5, 6]], [])
+  |
 help: Replace with `functools.reduce`
   |
 1 + import functools
@@ -54,6 +56,7 @@ RUF017 [*] Avoid quadratic list summation
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 | sum([[1, 2, 3], [4, 5, 6]], [])
 9 | sum([[1, 2, 3], [4, 5, 6]],
+  |
 help: Replace with `functools.reduce`
    |
 1  + import functools
@@ -69,12 +72,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF017 [*] Avoid quadratic list summation
   --> RUF017_0.py:8:1
+   |
  6 | sum([x, y], [])
  7 | sum([[1, 2, 3], [4, 5, 6]], start=[])
  8 | sum([[1, 2, 3], [4, 5, 6]], [])
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | sum([[1, 2, 3], [4, 5, 6]],
 10 |     [])
+   |
 help: Replace with `functools.reduce`
    |
 1  + import functools
@@ -90,6 +95,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF017 [*] Avoid quadratic list summation
   --> RUF017_0.py:9:1
+   |
  7 |   sum([[1, 2, 3], [4, 5, 6]], start=[])
  8 |   sum([[1, 2, 3], [4, 5, 6]], [])
  9 | / sum([[1, 2, 3], [4, 5, 6]],
@@ -97,6 +103,7 @@ RUF017 [*] Avoid quadratic list summation
    | |_______^
 11 |
 12 |   # OK
+   |
 help: Replace with `functools.reduce`
    |
 1  + import functools
@@ -108,6 +115,7 @@ help: Replace with `functools.reduce`
    -     [])
 11 + functools.reduce(operator.iadd, [[1, 2, 3], [4, 5, 6]], [])
 12 |
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 RUF017 [*] Avoid quadratic list summation

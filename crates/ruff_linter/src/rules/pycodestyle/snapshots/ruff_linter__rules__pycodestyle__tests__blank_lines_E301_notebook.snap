@@ -10,6 +10,7 @@ E301 [*] Expected 1 blank line, found 0
    |     ^
 14 |     def cls_method(cls) -> None:
 15 |         pass
+   |
 help: Add missing blank line
    |
 12 |         pass

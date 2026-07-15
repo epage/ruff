@@ -11,6 +11,7 @@ Q001 [*] Double quote multiline found but single quotes preferred
   | |____________^
 4 |
 5 |   s = ''' This "should"
+  |
 help: Replace double multiline quotes with single quotes
   |
   - s = """ This "should"

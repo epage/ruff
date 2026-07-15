@@ -9,6 +9,7 @@ FURB101 [*] `open` and `read` should be replaced by `Path("file.txt").read_text(
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |     _ = f.read()
 4 | f = object()
+  |
 help: Replace with `Path("file.txt").read_text(encoding="utf-8")`
   |
 1 | # FURB101
@@ -26,6 +27,7 @@ FURB101 [*] `open` and `read` should be replaced by `Path("config.yaml").read_te
 13 | with open("config.yaml", encoding="utf-8") as config_file:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 |     config_raw = config_file.read()
+   |
 help: Replace with `Path("config.yaml").read_text(encoding="utf-8")`
    |
 1  | # FURB101

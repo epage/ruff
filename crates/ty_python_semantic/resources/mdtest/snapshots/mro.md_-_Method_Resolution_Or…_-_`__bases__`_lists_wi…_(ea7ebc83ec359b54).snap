@@ -133,6 +133,7 @@ info: Definition of class `Ham` will raise `TypeError` at runtime
 ```
 error[duplicate-base]: Duplicate base class `Mushrooms`
   --> src/mdtest_snippet.py:30:7
+   |
 30 | class Omelette(Spam, Eggs, Mushrooms, Mushrooms): ...  # error: [duplicate-base]
    |       ^^^^^^^^             ---------  ^^^^^^^^^ Class `Mushrooms` later repeated here
    |                            |
@@ -167,6 +168,7 @@ info: Definition of class `VeryEggyOmelette` will raise `TypeError` at runtime
 ```
 error[duplicate-base]: Duplicate base class `A`
   --> src/mdtest_snippet.py:59:7
+   |
 59 | class C(  # error: [duplicate-base]
    |       ^
 60 |     A,
@@ -180,6 +182,7 @@ info: Definition of class `C` will raise `TypeError` at runtime
 ```
 warning[unused-type-ignore-comment]: Unused `type: ignore` directive
   --> src/mdtest_snippet.py:63:5
+   |
 63 | ):  # type: ignore[ty:duplicate-base]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove the unused suppression comment

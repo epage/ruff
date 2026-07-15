@@ -7,6 +7,7 @@ ASYNC109 Async function definition with a `timeout` parameter
 10 | async def func(timeout):
    |                ^^^^^^^
 11 |     ...
+   |
 help: Use `trio.fail_after` instead
 
 ASYNC109 Async function definition with a `timeout` parameter
@@ -15,10 +16,12 @@ ASYNC109 Async function definition with a `timeout` parameter
 14 | async def func(timeout=10):
    |                ^^^^^^^^^^
 15 |     ...
+   |
 help: Use `trio.fail_after` instead
 
 ASYNC109 Async function definition with a `timeout` parameter
   --> ASYNC109_0.py:20:25
+   |
 18 | class Foo(ABC):
 19 |     @abstractmethod
 20 |     async def foo(self, timeout: float): ...

@@ -334,6 +334,7 @@ Module(
 ```
 ## Errors
 
+  |
 7 | lambda a, *a: 1
 8 |
 9 | lambda a, *, **a: 1
@@ -370,14 +371,17 @@ Module(
   |
 
 
+  |
 5 | lambda a, a=20: 1
 6 |
 7 | lambda a, *a: 1
   |            ^ Syntax Error: Duplicate parameter "a"
 8 |
 9 | lambda a, *, **a: 1
+  |
 
 
+  |
 7 | lambda a, *a: 1
 8 |
 9 | lambda a, *, **a: 1

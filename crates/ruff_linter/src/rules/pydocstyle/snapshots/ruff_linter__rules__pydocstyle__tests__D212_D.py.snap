@@ -21,6 +21,7 @@ help: Remove whitespace after opening quotes
 
 D212 [*] Multi-line docstring summary should start at the first line
    --> D.py:597:5
+    |
 595 |   @expect('D212: Multi-line docstring summary should start at the first line')
 596 |   def one_liner():
 597 | /     """
@@ -39,6 +40,7 @@ help: Remove whitespace after opening quotes
 
 D212 [*] Multi-line docstring summary should start at the first line
    --> D.py:624:5
+    |
 622 |   @expect('D212: Multi-line docstring summary should start at the first line')
 623 |   def one_liner():
 624 | /     """

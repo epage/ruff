@@ -2256,6 +2256,7 @@ def ab(a: str): ...
         assert_snapshot!(test.goto_declaration(), @r#"
         info[goto-declaration]: Go to declaration
          --> main.py:4:1
+          |
         4 | ab("hello")
           | ^^ Clicking here
         info: Found 2 declarations
@@ -2305,10 +2306,12 @@ def ab(a: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> main.py:4:1
+          |
         4 | ab(1, 2)
           | ^^ Clicking here
         info: Found 2 declarations
          --> mymodule.pyi:5:5
+          |
         5 | def ab(a: int, b: int): ...
           |     --
         6 |
@@ -2353,10 +2356,12 @@ def ab(a: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> main.py:4:1
+          |
         4 | ab(1)
           | ^^ Clicking here
         info: Found 2 declarations
          --> mymodule.pyi:5:5
+          |
         5 | def ab(a: int, b: int): ...
           |     --
         6 |
@@ -2404,10 +2409,12 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> main.py:4:1
+          |
         4 | ab(1, b=2)
           | ^^ Clicking here
         info: Found 3 declarations
           --> mymodule.pyi:5:5
+           |
          5 | def ab(a: int): ...
            |     --
          6 |
@@ -2459,10 +2466,12 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> main.py:4:1
+          |
         4 | ab(1, c=2)
           | ^^ Clicking here
         info: Found 3 declarations
           --> mymodule.pyi:5:5
+           |
          5 | def ab(a: int): ...
            |     --
          6 |
@@ -2499,6 +2508,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:4:5
+          |
         4 | x = subpkg
           |     ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2536,6 +2546,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:2:7
+          |
         2 | from .subpkg.submod import val
           |       ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2591,6 +2602,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:2:14
+          |
         2 | from .subpkg.submod import val
           |              ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2624,6 +2636,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:2:7
+          |
         2 | from .subpkg import subpkg
           |       ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2657,6 +2670,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:2:21
+          |
         2 | from .subpkg import subpkg
           |                     ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2691,6 +2705,7 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @"
         info[goto-declaration]: Go to declaration
          --> mypackage/__init__.py:4:5
+          |
         4 | x = subpkg
           |     ^^^^^^ Clicking here
         info: Found 1 declaration
@@ -2722,10 +2737,12 @@ def ab(a: int, *, c: int): ...
         assert_snapshot!(test.goto_declaration(), @r#"
         info[goto-declaration]: Go to declaration
          --> main.py:6:7
+          |
         6 | print(a)
           |       ^ Clicking here
         info: Found 3 declarations
          --> main.py:2:1
+          |
         2 | a: str = "test"
           | -
         3 |

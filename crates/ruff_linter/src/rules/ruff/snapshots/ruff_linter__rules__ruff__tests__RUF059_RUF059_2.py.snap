@@ -9,6 +9,7 @@ RUF059 [*] Unpacked variable `x2` is never used
 8 |     with foo() as (x2, y2):
   |                    ^^
 9 |         pass
+  |
 help: Prefix it with an underscore or any other dummy variable pattern
   |
 7 |
@@ -26,6 +27,7 @@ RUF059 [*] Unpacked variable `y2` is never used
 8 |     with foo() as (x2, y2):
   |                        ^^
 9 |         pass
+  |
 help: Prefix it with an underscore or any other dummy variable pattern
   |
 7 |
@@ -43,6 +45,7 @@ RUF059 [*] Unpacked variable `x2` is never used
 17 |     (x2, y2) = coords2 = (1, 2)
    |      ^^
 18 |     coords3 = (x3, y3) = (1, 2)
+   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 16 |     (x1, y1) = (1, 2)
@@ -60,6 +63,7 @@ RUF059 [*] Unpacked variable `y2` is never used
 17 |     (x2, y2) = coords2 = (1, 2)
    |          ^^
 18 |     coords3 = (x3, y3) = (1, 2)
+   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 16 |     (x1, y1) = (1, 2)
@@ -71,6 +75,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF059 [*] Unpacked variable `x3` is never used
   --> RUF059_2.py:18:16
+   |
 16 |     (x1, y1) = (1, 2)
 17 |     (x2, y2) = coords2 = (1, 2)
 18 |     coords3 = (x3, y3) = (1, 2)
@@ -107,12 +112,14 @@ RUF059 [*] Unpacked variable `x` is never used
 22 |     with Nested(m) as (x, y):
    |                        ^
 23 |         pass
+   |
 help: Prefix it with an underscore or any other dummy variable pattern
    |
 21 | def f():
    -     with Nested(m) as (x, y):
 22 +     with Nested(m) as (_x, y):
 23 |         pass
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 RUF059 [*] Unpacked variable `y` is never used
@@ -122,7 +129,9 @@ RUF059 [*] Unpacked variable `y` is never used
 22 |     with Nested(m) as (x, y):
    |                           ^
 23 |         pass
+   |
 help: Prefix it with an underscore or any other dummy variable pattern
+   |
 21 | def f():
    -     with Nested(m) as (x, y):
 22 +     with Nested(m) as (x, _y):
@@ -137,6 +146,7 @@ RUF059 [*] Unpacked variable `a` is never used
 27 |     toplevel = (a, b) = lexer.get_token()
    |                 ^
 help: Prefix it with an underscore or any other dummy variable pattern
+   |
 26 | def f():
    -     toplevel = (a, b) = lexer.get_token()
 27 +     toplevel = (_a, b) = lexer.get_token()

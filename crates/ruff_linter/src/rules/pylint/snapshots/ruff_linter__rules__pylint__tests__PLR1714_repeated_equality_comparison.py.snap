@@ -9,6 +9,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b"}`.
   | ^^^^^^^^^^^^^^^^^^^^^^^^
 3 |
 4 | foo != "a" and foo != "b"
+  |
 help: Merge multiple comparisons
   |
 1 | # Errors.
@@ -27,6 +28,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo not in {"a", "b"}`.
   | ^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | foo == "a" or foo == "b" or foo == "c"
+  |
 help: Merge multiple comparisons
   |
 3 |
@@ -45,6 +47,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b", "c"}`.
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | foo != "a" and foo != "b" and foo != "c"
+  |
 help: Merge multiple comparisons
   |
 5 |
@@ -56,12 +59,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 PLR1714 [*] Consider merging multiple comparisons: `foo not in {"a", "b", "c"}`.
   --> repeated_equality_comparison.py:8:1
+   |
  6 | foo == "a" or foo == "b" or foo == "c"
  7 |
  8 | foo != "a" and foo != "b" and foo != "c"
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 |
 10 | foo == a or foo == "b" or foo == 3  # Mixed types.
+   |
 help: Merge multiple comparisons
   |
 7 |
@@ -80,6 +85,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in (a, "b", 3)`. Use a `
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | "a" == foo or "b" == foo or "c" == foo
+   |
 help: Merge multiple comparisons
    |
 9  |
@@ -98,6 +104,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b", "c"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 |
 14 | "a" != foo and "b" != foo and "c" != foo
+   |
 help: Merge multiple comparisons
    |
 11 |
@@ -116,6 +123,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo not in {"a", "b", "c"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |
 16 | "a" == foo or foo == "b" or "c" == foo
+   |
 help: Merge multiple comparisons
    |
 13 |
@@ -134,6 +142,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b", "c"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |
 18 | foo == bar or baz == foo or qux == foo
+   |
 help: Merge multiple comparisons
    |
 15 |
@@ -152,6 +161,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in (bar, baz, qux)`. Use
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |
 20 | foo == "a" or "b" == foo or foo == "c"
+   |
 help: Merge multiple comparisons
    |
 17 |
@@ -170,6 +180,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b", "c"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |
 22 | foo != "a" and "b" != foo and foo != "c"
+   |
 help: Merge multiple comparisons
    |
 19 |
@@ -188,6 +199,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo not in {"a", "b", "c"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 |
 24 | foo == "a" or foo == "b" or "c" == bar or "d" == bar  # Multiple targets
+   |
 help: Merge multiple comparisons
    |
 21 |
@@ -206,6 +218,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 |
 26 | foo.bar == "a" or foo.bar == "b"  # Attributes.
+   |
 help: Merge multiple comparisons
    |
 23 |
@@ -224,6 +237,7 @@ PLR1714 [*] Consider merging multiple comparisons: `bar in {"c", "d"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 |
 26 | foo.bar == "a" or foo.bar == "b"  # Attributes.
+   |
 help: Merge multiple comparisons
    |
 23 |
@@ -242,6 +256,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo.bar in {"a", "b"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 |
 28 | # OK
+   |
 help: Merge multiple comparisons
    |
 25 |
@@ -260,6 +275,7 @@ PLR1714 [*] Consider merging multiple comparisons: `bar in {"c", "d"}`.
    |                ^^^^^^^^^^^^^^^^^^^^^^^^
 62 |
 63 | foo == "a" or foo == "b" or "c" != bar and "d" != bar  # Multiple targets
+   |
 help: Merge multiple comparisons
    |
 60 |
@@ -278,6 +294,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {"a", "b"}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 64 |
 65 | foo == "a" or ("c" != bar and "d" != bar) or foo == "b"  # Multiple targets
+   |
 help: Merge multiple comparisons
    |
 62 |
@@ -296,7 +313,9 @@ PLR1714 [*] Consider merging multiple comparisons: `bar not in {"c", "d"}`.
    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^
 64 |
 65 | foo == "a" or ("c" != bar and "d" != bar) or foo == "b"  # Multiple targets
+   |
 help: Merge multiple comparisons
+   |
 62 |
    - foo == "a" or foo == "b" or "c" != bar and "d" != bar  # Multiple targets
 63 + foo == "a" or foo == "b" or bar not in {"c", "d"}  # Multiple targets
@@ -313,6 +332,7 @@ PLR1714 [*] Consider merging multiple comparisons: `bar not in {"c", "d"}`.
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^
 66 |
 67 | foo == "a" and "c" != bar or foo == "b" and "d" != bar  # Multiple targets
+   |
 help: Merge multiple comparisons
    |
 64 |
@@ -331,6 +351,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {1, True}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^
 70 |
 71 | foo == 1 or foo == 1.0 # Different types, same hashed value
+   |
 help: Merge multiple comparisons
    |
 68 |
@@ -349,6 +370,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {1, 1.0}`.
    | ^^^^^^^^^^^^^^^^^^^^^^
 72 |
 73 | foo == False or foo == 0 # Different types, same hashed value
+   |
 help: Merge multiple comparisons
    |
 70 |
@@ -367,6 +389,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {False, 0}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 74 |
 75 | foo == 0.0 or foo == 0j # Different types, same hashed value
+   |
 help: Merge multiple comparisons
    |
 72 |
@@ -385,6 +408,7 @@ PLR1714 [*] Consider merging multiple comparisons: `foo in {0.0, 0j}`.
    | ^^^^^^^^^^^^^^^^^^^^^^^
 76 |
 77 | foo == "bar" or foo == "bar" # All members identical
+   |
 help: Merge multiple comparisons
    |
 74 |

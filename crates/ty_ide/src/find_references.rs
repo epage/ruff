@@ -259,6 +259,7 @@ except ValueError as err:
         assert_snapshot!(test.references(), @"
         info[references]: Found 5 references
           --> main.py:4:29
+           |
          4 | except ZeroDivisionError as err:
            |                             ---
          5 |     print(f'Error: {err}')
@@ -291,6 +292,7 @@ match x:
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:3:20
+          |
         3 |     case [a, b] as pattern:
           |                    -------
         4 |         print(f'Matched: {pattern}')
@@ -315,6 +317,7 @@ match data:
         assert_snapshot!(test.references(), @"
         info[references]: Found 4 references
          --> main.py:3:29
+          |
         3 |     case {'a': a, 'b': b, **rest}:
           |                             ----
         4 |         print(f'Rest data: {rest}')
@@ -354,6 +357,7 @@ value = my_function
            |     -----------
            |
           ::: main.py:6:11
+           |
          6 | result1 = my_function()
            |           -----------
          7 | result2 = my_function()
@@ -415,6 +419,7 @@ test("test")
         10 |
         11 | def test(a: Any) -> Any:
            |     ----
+           |
           ::: main.py:2:17
            |
          2 | from lib import test
@@ -454,6 +459,7 @@ cls = MyClass
            |       -------
            |
           ::: main.py:7:8
+           |
          7 | obj1 = MyClass()
            |        -------
          8 | obj2 = MyClass()
@@ -484,6 +490,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:5
+          |
         2 | a: "MyClass" = 1
           |     -------
         3 |
@@ -526,6 +533,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:12
+          |
         2 | a: "None | MyClass" = 1
           |            -------
         3 |
@@ -562,6 +570,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:12
+          |
         2 | a: "None | MyClass" = 1
           |            -------
         3 |
@@ -612,6 +621,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:5
+          |
         2 | a: "MyClass | No" = 1
           |     -------
         3 |
@@ -645,6 +655,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:2:1
+          |
         2 | ab: "ab"
           | --   --
         "#);
@@ -675,6 +686,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 2 references
          --> main.py:4:22
+          |
         4 |         case ["get", ab]:
           |                      --
         5 |             x = ab
@@ -812,6 +824,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 2 references
           --> main.py:10:30
+           |
         10 |         case Click(x, button=ab):
            |                              --
         11 |             x = ab
@@ -839,6 +852,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 2 references
           --> main.py:10:30
+           |
         10 |         case Click(x, button=ab):
            |                              --
         11 |             x = ab
@@ -866,6 +880,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
           --> main.py:2:7
+           |
          2 | class Click:
            |       -----
            |
@@ -910,6 +925,7 @@ cls = MyClass
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:2:13
+          |
         2 | type Alias1[AB: int = bool] = tuple[AB, list[AB]]
           |             --                      --       --
         ");
@@ -1051,6 +1067,7 @@ class DataProcessor:
         8 |     def process(self, value):
         9 |         return func(value)
           |                ----
+          |
          ::: module.py:2:19
           |
         2 | from utils import func
@@ -1097,6 +1114,7 @@ def process_model():
         assert_snapshot!(test.references(), @"
         info[references]: Found 5 references
          --> main.py:6:19
+          |
         6 |     value = model.attr
           |                   ----
         7 |     model.attr = 100
@@ -1139,6 +1157,7 @@ instance = ExampleClass(old_name="test")
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> example_rename.py:4:25
+          |
         4 | instance = ExampleClass(old_name="test")
           |                         --------
           |
@@ -1321,6 +1340,7 @@ result = func(value=1)
         assert_snapshot!(test.references(), @"
         info[references]: Found 4 references
          --> caller.py:4:15
+          |
         4 | result = func(value=1)
           |               -----
           |
@@ -1360,6 +1380,7 @@ async def main():
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> main.py:5:23
+          |
         5 |     return await func(value=42)
           |                       -----
           |
@@ -1467,6 +1488,7 @@ result = instance.method(old_name="world")
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> example_rename.py:4:25
+          |
         4 | instance = ExampleClass(old_name="test")
           |                         --------
           |
@@ -1546,6 +1568,7 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 4 references
          --> importer.py:2:18
+          |
         2 | from path import Path
           |                  ----
         3 |
@@ -1817,6 +1840,7 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @"
         info[references]: Found 3 references
          --> mypackage/__init__.py:2:21
+          |
         2 | from .subpkg import subpkg
           |                     ------
         3 |
@@ -1885,6 +1909,7 @@ func<CURSOR>_alias()
         assert_snapshot!(test.references(), @r#"
         info[references]: Found 3 references
          --> main.py:2:1
+          |
         2 | a: str = "test"
           | -
         3 |
@@ -1908,6 +1933,7 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:3:7
+          |
         3 | print(x)
           |       -
         ");
@@ -1926,6 +1952,7 @@ print(x<CURSOR>)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:3:1
+          |
         3 | x = 2
           | -
         4 | print(x)
@@ -1946,6 +1973,7 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:3:1
+          |
         3 | x = 1
           | -
         4 | print(x)
@@ -1966,6 +1994,7 @@ print(x)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:4:7
+          |
         4 | print(x)
           |       -
         ");
@@ -1983,6 +2012,7 @@ value: Box
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:3:8
+          |
         3 | value: Box
           |        ---
         ");
@@ -2005,6 +2035,7 @@ def test(flag: bool):
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:8:11
+          |
         8 |     print(x)
           |           -
         ");
@@ -2025,6 +2056,7 @@ def f(flag: bool):
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 2 references
          --> main.py:5:5
+          |
         5 |     x = 1
           |     -
         6 |     print(x)
@@ -2047,6 +2079,7 @@ print(x<CURSOR>)
         assert_snapshot!(test.references_without_declaration(), @"
         info[references]: Found 1 references
          --> main.py:6:7
+          |
         6 | print(x)
           |       -
         ");

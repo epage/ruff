@@ -7,6 +7,7 @@ UP006 [*] Use `list` instead of `typing.List` for type annotation
 5 | def f(x: typing.List[str]) -> None:
   |          ^^^^^^^^^^^
 6 |     ...
+  |
 help: Replace with `list`
   |
 4 |
@@ -17,9 +18,11 @@ help: Replace with `list`
 
 UP006 [*] Use `list` instead of `List` for type annotation
   --> UP006_4.py:9:10
+   |
  9 | def g(x: List[str]) -> None:
    |          ^^^^
 10 |     ...
+   |
 help: Replace with `list`
    |
 8  |

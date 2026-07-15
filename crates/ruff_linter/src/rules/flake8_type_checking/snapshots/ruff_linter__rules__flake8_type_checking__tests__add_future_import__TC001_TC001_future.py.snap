@@ -9,6 +9,7 @@ TC001 [*] Move application import `.first_party` into a type-checking block
   |                   ^^^^^^^^^^^
 3 |
 4 |     def f(x: first_party.foo): ...
+  |
 help: Move into type-checking block
   |
   - def f():
@@ -29,6 +30,7 @@ TC001 [*] Move application import `.foo` into a type-checking block
    |                   ^^^
 58 |
 59 |     def f(x: Union[foo.Ty, int]): ...
+   |
 help: Move into type-checking block
    |
 52 | # unions

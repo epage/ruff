@@ -10,6 +10,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
   |                       ^^^^^^^^^^^^
 6 |
 7 | x.y.drop(["a"], axis=1, inplace=True)
+  |
 help: Assign to variable; remove `inplace` arg
   |
 4 |
@@ -28,6 +29,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
   |                         ^^^^^^^^^^^^
 8 |
 9 | x["y"].drop(["a"], axis=1, inplace=True)
+  |
 help: Assign to variable; remove `inplace` arg
   |
 6 |
@@ -39,12 +41,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
   --> PD002.py:9:28
+   |
  7 | x.y.drop(["a"], axis=1, inplace=True)
  8 |
  9 | x["y"].drop(["a"], axis=1, inplace=True)
    |                            ^^^^^^^^^^^^
 10 |
 11 | x.drop(
+   |
 help: Assign to variable; remove `inplace` arg
    |
 8  |
@@ -62,6 +66,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
    |     ^^^^^^^^^^^^
 13 |     columns=["a"],
 14 |     axis=1,
+   |
 help: Assign to variable; remove `inplace` arg
    |
 10 |
@@ -81,6 +86,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
    |         ^^^^^^^^^^^^
 20 |         columns=["a"],
 21 |         axis=1,
+   |
 help: Assign to variable; remove `inplace` arg
    |
 17 | if True:
@@ -100,6 +106,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
    |                                 ^^^^^^^^^^^^
 25 | x.drop(["a"], axis=1, inplace=True, **kwargs)
 26 | f(x.drop(["a"], axis=1, inplace=True))
+   |
 help: Assign to variable; remove `inplace` arg
    |
 23 |
@@ -116,6 +123,7 @@ PD002 `inplace=True` should be avoided; it has inconsistent behavior
 25 | x.drop(["a"], axis=1, inplace=True, **kwargs)
    |                       ^^^^^^^^^^^^
 26 | f(x.drop(["a"], axis=1, inplace=True))
+   |
 help: Assign to variable; remove `inplace` arg
 
 PD002 `inplace=True` should be avoided; it has inconsistent behavior
@@ -127,6 +135,7 @@ PD002 `inplace=True` should be avoided; it has inconsistent behavior
    |                         ^^^^^^^^^^^^
 27 |
 28 | x.apply(lambda x: x.sort_values("a", inplace=True))
+   |
 help: Assign to variable; remove `inplace` arg
 
 PD002 `inplace=True` should be avoided; it has inconsistent behavior
@@ -137,6 +146,7 @@ PD002 `inplace=True` should be avoided; it has inconsistent behavior
 28 | x.apply(lambda x: x.sort_values("a", inplace=True))
    |                                      ^^^^^^^^^^^^
 29 | import torch
+   |
 help: Assign to variable; remove `inplace` arg
 
 PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
@@ -148,6 +158,7 @@ PD002 [*] `inplace=True` should be avoided; it has inconsistent behavior
    |                        ^^^^^^^^^^^^
 34 |
 35 | # This method doesn't take exist in Pandas, so ignore it.
+   |
 help: Assign to variable; remove `inplace` arg
    |
 32 |

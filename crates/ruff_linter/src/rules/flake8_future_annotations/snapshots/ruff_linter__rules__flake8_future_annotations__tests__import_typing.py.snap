@@ -8,6 +8,7 @@ FA100 [*] Add `from __future__ import annotations` to simplify `typing.List`
 5 |     a_list: typing.List[str] = []
   |             ^^^^^^^^^^^
 6 |     a_list.append("hello")
+  |
 help: Add `from __future__ import annotations`
   |
 1 + from __future__ import annotations

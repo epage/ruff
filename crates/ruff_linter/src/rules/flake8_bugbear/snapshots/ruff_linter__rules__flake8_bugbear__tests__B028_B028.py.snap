@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/flake8_bugbear/mod.rs
 ---
 B028 [*] No explicit `stacklevel` keyword argument found
   --> B028.py:8:1
+   |
  6 | """
  7 |
  8 | warnings.warn("test", DeprecationWarning)
    | ^^^^^^^^^^^^^
  9 | warnings.warn("test", DeprecationWarning, source=None)
 10 | warnings.warn("test", DeprecationWarning, source=None, stacklevel=2)
+   |
 help: Set `stacklevel=2`
   |
 7 |
@@ -20,11 +22,13 @@ note: This is an unsafe fix and may change runtime behavior
 
 B028 [*] No explicit `stacklevel` keyword argument found
   --> B028.py:9:1
+   |
  8 | warnings.warn("test", DeprecationWarning)
  9 | warnings.warn("test", DeprecationWarning, source=None)
    | ^^^^^^^^^^^^^
 10 | warnings.warn("test", DeprecationWarning, source=None, stacklevel=2)
 11 | warnings.warn("test", DeprecationWarning, stacklevel=1)
+   |
 help: Set `stacklevel=2`
    |
 8  | warnings.warn("test", DeprecationWarning)
@@ -43,6 +47,7 @@ B028 [*] No explicit `stacklevel` keyword argument found
    | ^^^^^^^^^^^^^
 23 |         "test",
 24 |         DeprecationWarning,
+   |
 help: Set `stacklevel=2`
    |
 25 |         # some comments here
@@ -61,6 +66,7 @@ B028 [*] No explicit `stacklevel` keyword argument found
    | ^^^^^^^^^^^^^
 33 |
 34 | _my_prefixes = ("this","that")
+   |
 help: Set `stacklevel=2`
    |
 31 | # trigger diagnostic if `skip_file_prefixes` is present and set to the default value

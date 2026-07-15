@@ -10,15 +10,18 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
    |                                     ^^^^^^^^^^^^^
 28 |     # We're outside the nested loop and used the group again.
 29 |     collect_shop_items(shopper, section_items)  # B031
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:29:33
+   |
 27 |         collect_shop_items(shopper, section_items)  # B031
 28 |     # We're outside the nested loop and used the group again.
 29 |     collect_shop_items(shopper, section_items)  # B031
    |                                 ^^^^^^^^^^^^^
 30 |
 31 | for _section, section_items in groupby(items, key=lambda p: p[1]):
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:33:31
@@ -36,6 +39,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
 40 |         collect_shop_items(shopper, section_items)  # B031
    |                                     ^^^^^^^^^^^^^
 41 |         countdown -= 1
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:46:29
@@ -46,6 +50,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
    |                             ^^^^^^^^^^^^^
 47 |
 48 | unique_items = set()
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:56:17
@@ -54,6 +59,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
 56 |     for item in section_items:  # B031
    |                 ^^^^^^^^^^^^^
 57 |         another_set.add(item)
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:79:37
@@ -64,6 +70,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
    |                                     ^^^^^^^^^^^^^
 80 |
 81 | for _section, section_items in itertools.groupby(items, key=lambda p: p[1]):
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:82:38
@@ -73,6 +80,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
    |                                      ^^^^^^^^^^^^^
 83 |
 84 | for _section, section_items in itertools.groupby(items, key=lambda p: p[1]):
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
   --> B031.py:94:65
@@ -83,6 +91,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
    |                                                                 ^^^^^^^^^^^^^
 95 |
 96 | for _section, section_items in itertools.groupby(items, key=lambda p: p[1]):
+   |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:101:37
@@ -93,6 +102,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                     ^^^^^^^^^^^^^
 102 |
 103 | for _section, section_items in itertools.groupby(items, key=lambda p: p[1]):
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:108:41
@@ -103,6 +113,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                         ^^^^^^^^^^^^^
 109 |         elif _section == "frozen items":
 110 |             collect_shop_items(shopper, section_items)  # B031
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:110:41
@@ -113,6 +124,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                         ^^^^^^^^^^^^^
 111 |         else:
 112 |             collect_shop_items(shopper, section_items)  # B031
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:112:41
@@ -123,6 +135,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                         ^^^^^^^^^^^^^
 113 |         collect_shop_items(shopper, section_items)  # B031
 114 |     elif _section == "frozen items":
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:113:37
@@ -133,6 +146,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                     ^^^^^^^^^^^^^
 114 |     elif _section == "frozen items":
 115 |         # Mix `match` and `if` statements
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:120:49
@@ -143,6 +157,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                                 ^^^^^^^^^^^^^
 121 |             case _:
 122 |                 collect_shop_items(shopper, section_items)
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:126:33
@@ -153,6 +168,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                 ^^^^^^^^^^^^^
 127 |
 128 | for _section, section_items in itertools.groupby(items, key=lambda p: p[1]):
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:135:49
@@ -163,6 +179,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                                 ^^^^^^^^^^^^^
 136 |                 case _:
 137 |                     collect_shop_items(shopper, section_items)  # B031
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:137:49
@@ -173,6 +190,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                                 ^^^^^^^^^^^^^
 138 |         case "frozen items":
 139 |             collect_shop_items(shopper, section_items)
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:140:41
@@ -183,6 +201,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                         ^^^^^^^^^^^^^
 141 |         case _:
 142 |             collect_shop_items(shopper, section_items)
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:144:33
@@ -193,6 +212,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                 ^^^^^^^^^^^^^
 145 |
 146 | for group in groupby(items, key=lambda p: p[1]):
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:203:41
@@ -202,6 +222,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
 203 |             collect_shop_items(shopper, section_items)
     |                                         ^^^^^^^^^^^^^
 204 |             return
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:215:41
@@ -212,6 +233,7 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                         ^^^^^^^^^^^^^
 216 |
 217 | # Should trigger, since only one branch has a return statement.
+    |
 
 B031 Using the generator returned from `itertools.groupby()` more than once will do nothing on the second usage
    --> B031.py:226:37
@@ -222,3 +244,4 @@ B031 Using the generator returned from `itertools.groupby()` more than once will
     |                                     ^^^^^^^^^^^^^
 227 |
 228 | # Let's redefine the `groupby` function to make sure we pick up the correct one.
+    |

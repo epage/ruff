@@ -9,3 +9,4 @@ invalid-syntax: multiple assignments to name `a` in pattern
   |              ^
 3 |         pass
 4 |     case _:
+  |

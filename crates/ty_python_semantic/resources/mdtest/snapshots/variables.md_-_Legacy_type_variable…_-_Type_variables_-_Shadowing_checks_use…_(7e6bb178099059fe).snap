@@ -57,6 +57,7 @@ error[shadowed-type-variable]: Generic class `Bad` uses type variable `Q` alread
 ```
 error[shadowed-type-variable]: Generic class `Bad` uses type variable `Q` already bound by an enclosing scope
   --> src/mdtest_snippet.py:10:7
+   |
 10 | class Outer(Generic[Q]):
    |       ----------------- Type variable `Q` is bound in this enclosing scope
 11 |     class Ok(Generic[S]): ...

@@ -9,6 +9,7 @@ E714 [*] Test for object identity should be `is not`
   |        ^^^^^^
 3 |     pass
 4 | #: E714
+  |
 help: Convert to `is not`
   |
 1 | #: E714
@@ -25,6 +26,7 @@ E714 [*] Test for object identity should be `is not`
 5 | if not X.B is Y:
   |        ^^^^^^^^
 6 |     pass
+  |
 help: Convert to `is not`
   |
 4 | #: E714
@@ -35,6 +37,7 @@ help: Convert to `is not`
 
 E714 [*] Test for object identity should be `is not`
   --> E714.py:39:13
+   |
 37 | assert {"x": not foo} in bar
 38 | assert [42, not foo] in bar
 39 | assert not (re.search(r"^.:\\Users\\[^\\]*\\Downloads\\.*") is None)

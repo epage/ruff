@@ -9,6 +9,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
   |             ^^^^^^^^
 6 |
 7 | def scope():
+  |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
   |
 1 + from collections.abc import Iterator
@@ -29,6 +30,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
    |             ^^^^^^^^
 12 |
 13 | def scope():
+   |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
    |
 10 |     class IteratorReturningSimpleGenerator2:
@@ -45,6 +47,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
    |             ^^^^^^^^
 18 |
 19 | def scope():
+   |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
    |
 16 |     class IteratorReturningSimpleGenerator3:
@@ -61,6 +64,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
    |             ^^^^^^^^
 25 |
 26 | def scope():
+   |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
    |
 23 |     class IteratorReturningSimpleGenerator4:
@@ -77,6 +81,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
    |             ^^^^^^^^
 32 |
 33 | def scope():
+   |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
    |
 30 |     class IteratorReturningSimpleGenerator5:
@@ -93,6 +98,7 @@ PYI058 [*] Use `Iterator` as the return value for simple `__iter__` methods
    |             ^^^^^^^^
 38 |
 39 | def scope():
+   |
 help: Convert the return annotation of your `__iter__` method to `Iterator`
    |
 1  + from collections.abc import Iterator
@@ -112,6 +118,7 @@ PYI058 [*] Use `AsyncIterator` as the return value for simple `__aiter__` method
    |             ^^^^^^^^^
 44 |
 45 | def scope():
+   |
 help: Convert the return annotation of your `__aiter__` method to `AsyncIterator`
    |
 42 |     class AsyncIteratorReturningSimpleAsyncGenerator1:
@@ -127,6 +134,7 @@ PYI058 [*] Use `AsyncIterator` as the return value for simple `__aiter__` method
 49 |         def __aiter__(self, /) -> collections.abc.AsyncGenerator[str, None]:
    |             ^^^^^^^^^
 50 |             ...  # PYI058 (Use `AsyncIterator`)
+   |
 help: Convert the return annotation of your `__aiter__` method to `AsyncIterator`
    |
 48 |     class AsyncIteratorReturningSimpleAsyncGenerator3:
@@ -143,6 +151,7 @@ PYI058 [*] Use `AsyncIterator` as the return value for simple `__aiter__` method
    |             ^^^^^^^^^
 57 |
 58 | def scope():
+   |
 help: Convert the return annotation of your `__aiter__` method to `AsyncIterator`
    |
 55 |     class AsyncIteratorReturningSimpleAsyncGenerator3:

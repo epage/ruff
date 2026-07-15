@@ -8,6 +8,7 @@ AIR003 `Variable.get()` outside of a task
 12 | foo = Variable.get("foo")  # AIR003
    |       ^^^^^^^^^^^^^^^^^^^
 13 | bar = SdkVariable.get("bar")  # AIR003
+   |
 help: Use Jinja templates instead
 
 AIR003 `Variable.get()` outside of a task
@@ -19,6 +20,7 @@ AIR003 `Variable.get()` outside of a task
    |       ^^^^^^^^^^^^^^^^^^^^^^
 14 |
 15 | # Variable.get() in operator constructor arguments
+   |
 help: Use Jinja templates instead
 
 AIR003 `Variable.get()` outside of a task
@@ -29,15 +31,18 @@ AIR003 `Variable.get()` outside of a task
 18 |     bash_command=f"echo {Variable.get('foo')}",  # AIR003
    |                          ^^^^^^^^^^^^^^^^^^^
 19 | )
+   |
 help: Use Jinja templates instead
 
 AIR003 `Variable.get()` outside of a task
   --> AIR003.py:24:17
+   |
 22 |     task_id="bad_env",
 23 |     bash_command="echo $FOO",
 24 |     env={"FOO": Variable.get("foo")},  # AIR003
    |                 ^^^^^^^^^^^^^^^^^^^
 25 | )
+   |
 help: Use Jinja templates instead
 
 AIR003 `Variable.get()` outside of a task

@@ -150,8 +150,10 @@ Module(
   |
 
 
+  |
 6 | try:
 7 |     pass
 8 | except* x, y:
   |         ^^^^ Syntax Error: Multiple exception types must be parenthesized on Python 3.13 (syntax was added in Python 3.14)
 9 |     pass
+  |

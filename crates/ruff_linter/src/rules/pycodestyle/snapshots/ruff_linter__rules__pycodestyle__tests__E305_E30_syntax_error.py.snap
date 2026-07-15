@@ -9,17 +9,21 @@ invalid-syntax: Expected `]`, found `(`
 4 | def foo[T1, T2():
   |               ^
 5 |     pass
+  |
 
 invalid-syntax: Expected `)`, found newline
   --> E30_syntax_error.py:13:18
+   |
 12 | class Foo:
 13 |     def __init__(
    |                  ^
 14 |         pass
 15 |     def method():
+   |
 
 E305 Expected 2 blank lines after class or function definition, found (1)
   --> E30_syntax_error.py:18:1
+   |
 16 |         pass
 17 |
 18 | foo = Foo(
@@ -41,3 +45,4 @@ invalid-syntax: Expected `)`, found newline
    |         ^
 22 |     def nested1():
 23 |         pass
+   |

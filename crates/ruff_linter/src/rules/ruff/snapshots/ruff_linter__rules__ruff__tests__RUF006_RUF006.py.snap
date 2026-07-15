@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/ruff/mod.rs
 ---
 RUF006 Store a reference to the return value of `asyncio.create_task`
  --> RUF006.py:6:5
+  |
 4 | # Error
 5 | def f():
 6 |     asyncio.create_task(coordinator.ws_connect())  # Error
@@ -10,6 +11,7 @@ RUF006 Store a reference to the return value of `asyncio.create_task`
 
 RUF006 Store a reference to the return value of `asyncio.ensure_future`
   --> RUF006.py:11:5
+   |
  9 | # Error
 10 | def f():
 11 |     asyncio.ensure_future(coordinator.ws_connect())  # Error
@@ -17,6 +19,7 @@ RUF006 Store a reference to the return value of `asyncio.ensure_future`
 
 RUF006 Store a reference to the return value of `asyncio.create_task`
   --> RUF006.py:68:12
+   |
 66 | # Error
 67 | def f():
 68 |     task = asyncio.create_task(coordinator.ws_connect())
@@ -47,6 +50,7 @@ RUF006 Store a reference to the return value of `asyncio.create_task`
     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 153 |     else:
 154 |         t = None
+    |
 
 RUF006 Store a reference to the return value of `loop.create_task`
    --> RUF006.py:170:5
@@ -57,6 +61,7 @@ RUF006 Store a reference to the return value of `loop.create_task`
     |     ^^^^^^^^^^^^^^^^^^^^^^^^
 171 |
 172 | # Error
+    |
 
 RUF006 Store a reference to the return value of `loop.create_task`
    --> RUF006.py:175:5
@@ -67,3 +72,4 @@ RUF006 Store a reference to the return value of `loop.create_task`
     |     ^^^^^^^^^^^^^^^^^^^^^^^^
 176 |
 177 | # OK
+    |

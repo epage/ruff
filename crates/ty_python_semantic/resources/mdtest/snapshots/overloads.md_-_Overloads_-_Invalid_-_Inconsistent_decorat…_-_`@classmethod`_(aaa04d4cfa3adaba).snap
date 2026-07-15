@@ -138,6 +138,7 @@ error[invalid-overload]: Overloaded function `try_from3` does not use the `@clas
 ```
 error[call-non-callable]: Object of type `CheckClassMethod` is not callable
   --> src/mdtest_snippet.py:43:20
+   |
 43 |             return cls(x)
    |                    ^^^^^^
 

@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/pycodestyle/mod.rs
 ---
 invalid-syntax: Expected an indented block after `if` statement
   --> E11.py:9:1
+   |
  7 | #: E112
  8 | if False:
  9 | print()
    | ^^^^^
 10 | #: E113
 11 | print()
+   |
 
 invalid-syntax: Unexpected indentation
   --> E11.py:12:1
@@ -19,6 +21,7 @@ invalid-syntax: Unexpected indentation
    | ^^^^
 13 | #: E114 E116
 14 | mimetype = 'application/x-directory'
+   |
 
 invalid-syntax: Expected a statement
   --> E11.py:14:1
@@ -29,6 +32,7 @@ invalid-syntax: Expected a statement
    | ^
 15 |      # 'httpd/unix-directory'
 16 | create_date = False
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:30:1
@@ -39,6 +43,7 @@ E115 Expected an indented block (comment)
    | ^
 31 | #           self.master.start()
 32 | #       except MasterExit:
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:31:1
@@ -49,6 +54,7 @@ E115 Expected an indented block (comment)
    | ^
 32 | #       except MasterExit:
 33 | #           self.shutdown()
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:32:1
@@ -59,6 +65,7 @@ E115 Expected an indented block (comment)
    | ^
 33 | #           self.shutdown()
 34 | #       finally:
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:33:1
@@ -69,6 +76,7 @@ E115 Expected an indented block (comment)
    | ^
 34 | #       finally:
 35 | #           sys.exit()
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:34:1
@@ -79,6 +87,7 @@ E115 Expected an indented block (comment)
    | ^
 35 | #           sys.exit()
 36 |         self.master.start()
+   |
 
 E115 Expected an indented block (comment)
   --> E11.py:35:1
@@ -89,6 +98,7 @@ E115 Expected an indented block (comment)
    | ^
 36 |         self.master.start()
 37 | #: E117
+   |
 
 invalid-syntax: Expected an indented block after `if` statement
   --> E11.py:45:1
@@ -99,3 +109,4 @@ invalid-syntax: Expected an indented block after `if` statement
    | ^^^^^
 46 | #:
 47 | if False:
+   |

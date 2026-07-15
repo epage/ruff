@@ -7,6 +7,7 @@ UP007 [*] Use `X | Y` for type annotations
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 |     ...
+  |
 help: Convert to `X | Y`
   |
 4 |
@@ -21,6 +22,7 @@ UP007 [*] Use `X | Y` for type annotations
 5 | def f(x: Union[str, int, Union[float, bytes]]) -> None:
   |                          ^^^^^^^^^^^^^^^^^^^
 6 |     ...
+  |
 help: Convert to `X | Y`
   |
 4 |
@@ -31,9 +33,11 @@ help: Convert to `X | Y`
 
 UP007 [*] Use `X | Y` for type annotations
   --> UP007_2.py:9:10
+   |
  9 | def f(x: typing.Union[str, int]) -> None:
    |          ^^^^^^^^^^^^^^^^^^^^^^
 10 |     ...
+   |
 help: Convert to `X | Y`
    |
 8  |

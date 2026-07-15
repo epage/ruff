@@ -7,6 +7,7 @@ RUF029 Function `fail_1a` is declared `async`, but doesn't `await` or use `async
 38 | async def fail_1a():  # RUF029
    |           ^^^^^^^
 39 |     time.sleep(1)
+   |
 
 RUF029 Function `fail_1b` is declared `async`, but doesn't `await` or use `async` features.
   --> RUF029.py:42:11
@@ -14,6 +15,7 @@ RUF029 Function `fail_1b` is declared `async`, but doesn't `await` or use `async
 42 | async def fail_1b():  # RUF029: yield does not require async
    |           ^^^^^^^
 43 |     yield "hello"
+   |
 
 RUF029 Function `fail_2` is declared `async`, but doesn't `await` or use `async` features.
   --> RUF029.py:46:11
@@ -22,6 +24,7 @@ RUF029 Function `fail_2` is declared `async`, but doesn't `await` or use `async`
    |           ^^^^^^
 47 |     with None as i:
 48 |         pass
+   |
 
 RUF029 Function `fail_3` is declared `async`, but doesn't `await` or use `async` features.
   --> RUF029.py:51:11
@@ -30,6 +33,7 @@ RUF029 Function `fail_3` is declared `async`, but doesn't `await` or use `async`
    |           ^^^^^^
 52 |     for i in []:
 53 |         pass
+   |
 
 RUF029 Function `fail_4a` is declared `async`, but doesn't `await` or use `async` features.
   --> RUF029.py:58:11
@@ -38,6 +42,7 @@ RUF029 Function `fail_4a` is declared `async`, but doesn't `await` or use `async
    |           ^^^^^^^
 59 |     async def foo():
 60 |         await bla
+   |
 
 RUF029 Function `fail_4b` is declared `async`, but doesn't `await` or use `async` features.
   --> RUF029.py:63:11
@@ -46,3 +51,4 @@ RUF029 Function `fail_4b` is declared `async`, but doesn't `await` or use `async
    |           ^^^^^^^
 64 |     class Foo:
 65 |         async def foo(self):
+   |

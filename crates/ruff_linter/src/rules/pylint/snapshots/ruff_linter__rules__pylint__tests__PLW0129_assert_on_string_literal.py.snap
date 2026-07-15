@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/pylint/mod.rs
 ---
 PLW0129 Asserting on a non-empty string literal will always pass
  --> assert_on_string_literal.py:3:12
+  |
 1 | def test_division():
 2 |     a = 9 / 3
 3 |     assert "No ZeroDivisionError were raised"  # [assert-on-string-literal]
@@ -16,6 +17,7 @@ PLW0129 Asserting on a non-empty string literal will always pass
    |            ^^^^^
 13 | except:
 14 |     assert "bad again"  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on a non-empty string literal will always pass
   --> assert_on_string_literal.py:14:12
@@ -26,6 +28,7 @@ PLW0129 Asserting on a non-empty string literal will always pass
    |            ^^^^^^^^^^^
 15 |
 16 | a = 12
+   |
 
 PLW0129 Asserting on a non-empty string literal will always pass
   --> assert_on_string_literal.py:17:8
@@ -35,6 +38,7 @@ PLW0129 Asserting on a non-empty string literal will always pass
    |        ^^^^^^^^^^^^
 18 | assert f"{a}"  # [assert-on-string-literal]
 19 | assert f""  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on a string literal may have unintended results
   --> assert_on_string_literal.py:18:8
@@ -45,6 +49,7 @@ PLW0129 Asserting on a string literal may have unintended results
    |        ^^^^^^
 19 | assert f""  # [assert-on-string-literal]
 20 | assert ""  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on an empty string literal will never pass
   --> assert_on_string_literal.py:19:8
@@ -55,6 +60,7 @@ PLW0129 Asserting on an empty string literal will never pass
    |        ^^^
 20 | assert ""  # [assert-on-string-literal]
 21 | assert b"hello"  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on an empty string literal will never pass
   --> assert_on_string_literal.py:20:8
@@ -65,6 +71,7 @@ PLW0129 Asserting on an empty string literal will never pass
    |        ^^
 21 | assert b"hello"  # [assert-on-string-literal]
 22 | assert "", b"hi"  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on a non-empty string literal will always pass
   --> assert_on_string_literal.py:21:8
@@ -75,6 +82,7 @@ PLW0129 Asserting on a non-empty string literal will always pass
    |        ^^^^^^^^
 22 | assert "", b"hi"  # [assert-on-string-literal]
 23 | assert "WhyNotHere?", "HereIsOk"  # [assert-on-string-literal]
+   |
 
 PLW0129 Asserting on an empty string literal will never pass
   --> assert_on_string_literal.py:22:8
@@ -85,6 +93,7 @@ PLW0129 Asserting on an empty string literal will never pass
    |        ^^
 23 | assert "WhyNotHere?", "HereIsOk"  # [assert-on-string-literal]
 24 | assert 12, "ok here"
+   |
 
 PLW0129 Asserting on a non-empty string literal will always pass
   --> assert_on_string_literal.py:23:8
@@ -94,3 +103,4 @@ PLW0129 Asserting on a non-empty string literal will always pass
 23 | assert "WhyNotHere?", "HereIsOk"  # [assert-on-string-literal]
    |        ^^^^^^^^^^^^^
 24 | assert 12, "ok here"
+   |

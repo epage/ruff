@@ -10,6 +10,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                            ^^^^^^^^^^^^^^
 16 | DAG(dag_id="b", start_date=datetime.now() - timedelta(days=1))
 17 | DAG(dag_id="c", default_args={"start_date": datetime.now()})
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:16:28
@@ -19,6 +20,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                            ^^^^^^^^^^^^^^
 17 | DAG(dag_id="c", default_args={"start_date": datetime.now()})
 18 | DAG(dag_id="d", start_date=datetime.utcnow())
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:17:45
@@ -29,6 +31,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                                             ^^^^^^^^^^^^^^
 18 | DAG(dag_id="d", start_date=datetime.utcnow())
 19 | DAG(dag_id="e", start_date=datetime.today())
+   |
 
 AIR304 `datetime.utcnow()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:18:28
@@ -39,6 +42,7 @@ AIR304 `datetime.utcnow()` produces a value that changes at runtime; using it in
    |                            ^^^^^^^^^^^^^^^^^
 19 | DAG(dag_id="e", start_date=datetime.today())
 20 | DAG(dag_id="f", start_date=date.today())
+   |
 
 AIR304 `datetime.today()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:19:28
@@ -49,6 +53,7 @@ AIR304 `datetime.today()` produces a value that changes at runtime; using it in 
    |                            ^^^^^^^^^^^^^^^^
 20 | DAG(dag_id="f", start_date=date.today())
 21 | DAG(dag_id="g", tags=[f"v{random.randint(1, 9)}"])
+   |
 
 AIR304 `date.today()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:20:28
@@ -59,6 +64,7 @@ AIR304 `date.today()` produces a value that changes at runtime; using it in a Da
    |                            ^^^^^^^^^^^^
 21 | DAG(dag_id="g", tags=[f"v{random.randint(1, 9)}"])
 22 | DAG(dag_id="h", start_date=pendulum.now())
+   |
 
 AIR304 `random.randint()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:21:27
@@ -69,6 +75,7 @@ AIR304 `random.randint()` produces a value that changes at runtime; using it in 
    |                           ^^^^^^^^^^^^^^^^^^^^
 22 | DAG(dag_id="h", start_date=pendulum.now())
 23 | DAG(dag_id="i", start_date=pendulum.yesterday())
+   |
 
 AIR304 `pendulum.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:22:28
@@ -79,6 +86,7 @@ AIR304 `pendulum.now()` produces a value that changes at runtime; using it in a 
    |                            ^^^^^^^^^^^^^^
 23 | DAG(dag_id="i", start_date=pendulum.yesterday())
 24 | DAG(dag_id="j", start_date=pendulum.tomorrow())
+   |
 
 AIR304 `pendulum.yesterday()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:23:28
@@ -89,6 +97,7 @@ AIR304 `pendulum.yesterday()` produces a value that changes at runtime; using it
    |                            ^^^^^^^^^^^^^^^^^^^^
 24 | DAG(dag_id="j", start_date=pendulum.tomorrow())
 25 | DAG(dag_id="k", start_date=pendulum.today())
+   |
 
 AIR304 `pendulum.tomorrow()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:24:28
@@ -99,15 +108,18 @@ AIR304 `pendulum.tomorrow()` produces a value that changes at runtime; using it 
    |                            ^^^^^^^^^^^^^^^^^^^
 25 | DAG(dag_id="k", start_date=pendulum.today())
 26 | DAG(dag_id="l", owner=f"team-{uuid.uuid4()}")
+   |
 
 AIR304 `pendulum.today()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:25:28
+   |
 23 | DAG(dag_id="i", start_date=pendulum.yesterday())
 24 | DAG(dag_id="j", start_date=pendulum.tomorrow())
 25 | DAG(dag_id="k", start_date=pendulum.today())
    |                            ^^^^^^^^^^^^^^^^
 26 | DAG(dag_id="l", owner=f"team-{uuid.uuid4()}")
 27 | DAG(dag_id="m", description=f"built at {time.time()}")
+   |
 
 AIR304 `uuid.uuid4()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:26:31
@@ -117,15 +129,18 @@ AIR304 `uuid.uuid4()` produces a value that changes at runtime; using it in a Da
 26 | DAG(dag_id="l", owner=f"team-{uuid.uuid4()}")
    |                               ^^^^^^^^^^^^
 27 | DAG(dag_id="m", description=f"built at {time.time()}")
+   |
 
 AIR304 `time.time()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:27:41
+   |
 25 | DAG(dag_id="k", start_date=pendulum.today())
 26 | DAG(dag_id="l", owner=f"team-{uuid.uuid4()}")
 27 | DAG(dag_id="m", description=f"built at {time.time()}")
    |                                         ^^^^^^^^^^^
 28 |
 29 | # Wrapped calls
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:30:32
@@ -134,6 +149,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
 30 | DAG(dag_id="n", start_date=str(datetime.now()))
    |                                ^^^^^^^^^^^^^^
 31 | DAG(dag_id="o", start_date=int(time.time()))
+   |
 
 AIR304 `time.time()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:31:32
@@ -144,6 +160,7 @@ AIR304 `time.time()` produces a value that changes at runtime; using it in a Dag
    |                                ^^^^^^^^^^^
 32 |
 33 | # Method chain
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:34:28
@@ -153,6 +170,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                            ^^^^^^^^^^^^^^
 35 |
 36 | # Ternary
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:37:28
@@ -162,6 +180,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                            ^^^^^^^^^^^^^^
 38 |
 39 | # BoolOp
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:40:36
@@ -171,6 +190,7 @@ AIR304 `datetime.now()` produces a value that changes at runtime; using it in a 
    |                                    ^^^^^^^^^^^^^^
 41 |
 42 | # Walrus operator
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:43:34
@@ -186,6 +206,7 @@ AIR304 `pendulum.now()` produces a value that changes at runtime; using it in a 
    |                 ^^^^^^^^^^^^^^
 47 | def my_dag():
 48 |     pass
+   |
 
 AIR304 `datetime.today()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:51:62
@@ -194,6 +215,7 @@ AIR304 `datetime.today()` produces a value that changes at runtime; using it in 
    |                                                              ^^^^^^^^^^^^^^^^
 52 |
 53 | PythonSensor(task_id="s", start_date=datetime.now())
+   |
 
 AIR304 `datetime.now()` produces a value that changes at runtime; using it in a Dag or task argument causes infinite Dag version creation
   --> AIR304.py:53:38
@@ -210,3 +232,4 @@ AIR304 `datetime.utcnow()` produces a value that changes at runtime; using it in
    |                  ^^^^^^^^^^^^^^^^^
 57 | def my_task():
 58 |     pass
+   |

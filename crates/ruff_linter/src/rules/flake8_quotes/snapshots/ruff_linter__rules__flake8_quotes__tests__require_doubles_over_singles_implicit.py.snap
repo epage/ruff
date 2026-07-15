@@ -9,6 +9,7 @@ Q000 [*] Single quotes found but double quotes preferred
   |     ^^^^^^
 3 |     'is'
 4 |     'not'
+  |
 help: Replace single quotes with double quotes
   |
 1 | x = (
@@ -26,6 +27,7 @@ Q000 [*] Single quotes found but double quotes preferred
   |     ^^^^
 4 |     'not'
 5 | )
+  |
 help: Replace single quotes with double quotes
   |
 2 |     'This'
@@ -42,6 +44,7 @@ Q000 [*] Single quotes found but double quotes preferred
 4 |     'not'
   |     ^^^^^
 5 | )
+  |
 help: Replace single quotes with double quotes
   |
 3 |     'is'
@@ -52,11 +55,13 @@ help: Replace single quotes with double quotes
 
 Q000 [*] Single quotes found but double quotes preferred
   --> singles_implicit.py:8:5
+   |
  7 | x = (
  8 |     'This' \
    |     ^^^^^^
  9 |     'is' \
 10 |     'not'
+   |
 help: Replace single quotes with double quotes
   |
 7 | x = (
@@ -67,17 +72,21 @@ help: Replace single quotes with double quotes
 
 Q000 [*] Single quotes found but double quotes preferred
   --> singles_implicit.py:9:5
+   |
  7 | x = (
  8 |     'This' \
  9 |     'is' \
    |     ^^^^
 10 |     'not'
 11 | )
+   |
 help: Replace single quotes with double quotes
+   |
 8  |     'This' \
    -     'is' \
 9  +     "is" \
 10 |     'not'
+   |
 
 Q000 [*] Single quotes found but double quotes preferred
   --> singles_implicit.py:10:5
@@ -87,6 +96,7 @@ Q000 [*] Single quotes found but double quotes preferred
 10 |     'not'
    |     ^^^^^
 11 | )
+   |
 help: Replace single quotes with double quotes
    |
 9  |     'is' \

@@ -10,6 +10,7 @@ E722 Do not use bare `except`
   | ^^^^^^
 5 |     pass
 6 | #: E722
+  |
 
 E722 Do not use bare `except`
   --> E722.py:11:1
@@ -20,6 +21,7 @@ E722 Do not use bare `except`
    | ^^^^^^
 12 |     pass
 13 | #: E722
+   |
 
 E722 Do not use bare `except`
   --> E722.py:16:1
@@ -30,3 +32,4 @@ E722 Do not use bare `except`
    | ^^^^^^
 17 |     pass
 18 | #: Okay
+   |

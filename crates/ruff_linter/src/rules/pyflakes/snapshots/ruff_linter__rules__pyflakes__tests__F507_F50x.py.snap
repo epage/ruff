@@ -10,6 +10,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   | ^^^^^^^^^^^^^^
 6 | '%s %s' % (1, 2, 3)  # F507
 7 | '%(bar)s' % {}  # F505
+  |
 
 F507 `%`-format string has 2 placeholder(s) but 3 substitution(s)
  --> F50x.py:6:1
@@ -20,6 +21,7 @@ F507 `%`-format string has 2 placeholder(s) but 3 substitution(s)
   | ^^^^^^^^^^^^^^^^^^^
 7 | '%(bar)s' % {}  # F505
 8 | '%(bar)s' % {'bar': 1, 'baz': 2}  # F504
+  |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:10:1
@@ -29,6 +31,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
 10 | '%s %s' % {'k': 'v'}  # F503
    | ^^^^^^^^^^^^^^^^^^^^
 11 | '%(bar)*s' % {'bar': 'baz'}  # F506, F508
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:22:1
@@ -39,6 +42,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^
 23 | '%s %s' % (*a,)
 24 | k = {}
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:29:1
@@ -49,6 +53,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^
 30 | '%s %s' % 3.14  # F507
 31 | '%s %s' % "hello"  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:30:1
@@ -59,6 +64,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^
 31 | '%s %s' % "hello"  # F507
 32 | '%s %s' % b"hello"  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:31:1
@@ -69,6 +75,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^
 32 | '%s %s' % b"hello"  # F507
 33 | '%s %s' % True  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:32:1
@@ -79,6 +86,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^
 33 | '%s %s' % True  # F507
 34 | '%s %s' % None  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:33:1
@@ -89,6 +97,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^
 34 | '%s %s' % None  # F507
 35 | '%s %s' % ...  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:34:1
@@ -99,6 +108,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^
 35 | '%s %s' % ...  # F507
 36 | '%s %s' % f"hello {name}"  # F507
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:35:1
@@ -109,6 +119,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^
 36 | '%s %s' % f"hello {name}"  # F507
 37 | # F507: ResolvedPythonType catches compound expressions with known types
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:36:1
@@ -119,6 +130,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 37 | # F507: ResolvedPythonType catches compound expressions with known types
 38 | '%s %s' % -1  # F507 (unary op on int → int)
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:38:1
@@ -129,6 +141,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^
 39 | '%s %s' % (1 + 2)  # F507 (int + int → int)
 40 | '%s %s' % (not x)  # F507 (not → bool)
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:39:1
@@ -139,6 +152,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^
 40 | '%s %s' % (not x)  # F507 (not → bool)
 41 | '%s %s' % ("a" + "b")  # F507 (str + str → str)
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:40:1
@@ -149,6 +163,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^
 41 | '%s %s' % ("a" + "b")  # F507 (str + str → str)
 42 | '%s %s' % (1 if True else 2)  # F507 (int if ... else int → int)
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:41:1
@@ -159,6 +174,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^^^^
 42 | '%s %s' % (1 if True else 2)  # F507 (int if ... else int → int)
 43 | # ok: single placeholder with literal RHS
+   |
 
 F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
   --> F50x.py:42:1
@@ -169,6 +185,7 @@ F507 `%`-format string has 2 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 43 | # ok: single placeholder with literal RHS
 44 | '%s' % 42
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:57:1
@@ -178,6 +195,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^
 58 | '' % 42  # F507
 59 | 'hello' % (1,)  # F507
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:58:1
@@ -188,6 +206,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^
 59 | 'hello' % (1,)  # F507
 60 | # F507: zero placeholders with variable RHS (intentional use is very unlikely)
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:59:1
@@ -198,6 +217,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^
 60 | # F507: zero placeholders with variable RHS (intentional use is very unlikely)
 61 | banana = 42
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:62:1
@@ -208,6 +228,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^
 63 | '' % banana  # F507
 64 | 'hello' % unknown_var  # F507
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:63:1
@@ -218,6 +239,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^
 64 | 'hello' % unknown_var  # F507
 65 | 'hello' % get_value()  # F507
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:64:1
@@ -228,6 +250,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^^^^
 65 | 'hello' % get_value()  # F507
 66 | 'hello' % obj.attr  # F507
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:65:1
@@ -238,6 +261,7 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^^^^
 66 | 'hello' % obj.attr  # F507
 67 | # ok: zero placeholders with empty tuple
+   |
 
 F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
   --> F50x.py:66:1
@@ -248,3 +272,4 @@ F507 `%`-format string has 0 placeholder(s) but 1 substitution(s)
    | ^^^^^^^^^^^^^^^^^^
 67 | # ok: zero placeholders with empty tuple
 68 | 'hello' % ()
+   |

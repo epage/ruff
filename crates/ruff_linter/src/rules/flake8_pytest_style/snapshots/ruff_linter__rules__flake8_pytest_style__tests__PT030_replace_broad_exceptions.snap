@@ -8,3 +8,4 @@ PT030 `pytest.warns(EncodingWarning)` is too broad, set the `match` parameter or
 11 |     with pytest.warns(EncodingWarning):
    |                       ^^^^^^^^^^^^^^^
 12 |         pass
+   |

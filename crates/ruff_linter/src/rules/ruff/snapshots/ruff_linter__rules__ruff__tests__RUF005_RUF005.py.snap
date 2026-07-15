@@ -11,6 +11,7 @@ RUF005 Consider `[*foo]` instead of concatenation
   | |_^
 6 |   [*foo] + [  # This will be preserved.
 7 |   ]
+  |
 help: Replace with `[*foo]`
 
 RUF005 Consider `[*foo]` instead of concatenation
@@ -23,10 +24,12 @@ RUF005 Consider `[*foo]` instead of concatenation
   | |_^
 8 |   first = [
 9 |       # The order
+  |
 help: Replace with `[*foo]`
 
 RUF005 Consider `[*first, 4, 5, 6]` instead of concatenation
   --> RUF005.py:16:10
+   |
 14 |       # to preserve
 15 |   ]
 16 |   second = first + [
@@ -49,6 +52,7 @@ RUF005 [*] Consider `[1, 2, 3, *foo]` instead of concatenation
    |       ^^^^^^^^^^^^^^^
 40 | zoob = tuple(bar)
 41 | quux = (7, 8, 9) + zoob
+   |
 help: Replace with `[1, 2, 3, *foo]`
    |
 38 | foo = [4, 5, 6]
@@ -67,6 +71,7 @@ RUF005 [*] Consider `(7, 8, 9, *zoob)` instead of concatenation
    |        ^^^^^^^^^^^^^^^^
 42 | spam = quux + (10, 11, 12)
 43 | spom = list(spam)
+   |
 help: Replace with `(7, 8, 9, *zoob)`
    |
 40 | zoob = tuple(bar)
@@ -85,6 +90,7 @@ RUF005 [*] Consider `(*quux, 10, 11, 12)` instead of concatenation
    |        ^^^^^^^^^^^^^^^^^^^
 43 | spom = list(spam)
 44 | eggs = spom + [13, 14, 15]
+   |
 help: Replace with `(*quux, 10, 11, 12)`
    |
 41 | quux = (7, 8, 9) + zoob
@@ -103,6 +109,7 @@ RUF005 [*] Consider `[*spom, 13, 14, 15]` instead of concatenation
    |        ^^^^^^^^^^^^^^^^^^^
 45 | elatement = ("we all say",) + yay()
 46 | excitement = ("we all think",) + Fun().yay()
+   |
 help: Replace with `[*spom, 13, 14, 15]`
    |
 43 | spom = list(spam)
@@ -121,6 +128,7 @@ RUF005 [*] Consider `("we all say", *yay())` instead of concatenation
    |             ^^^^^^^^^^^^^^^^^^^^^^^
 46 | excitement = ("we all think",) + Fun().yay()
 47 | astonishment = ("we all feel",) + Fun.words
+   |
 help: Replace with `("we all say", *yay())`
    |
 44 | eggs = spom + [13, 14, 15]
@@ -138,6 +146,7 @@ RUF005 [*] Consider `("we all think", *Fun().yay())` instead of concatenation
 46 | excitement = ("we all think",) + Fun().yay()
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 47 | astonishment = ("we all feel",) + Fun.words
+   |
 help: Replace with `("we all think", *Fun().yay())`
    |
 45 | elatement = ("we all say",) + yay()
@@ -156,6 +165,7 @@ RUF005 [*] Consider `("we all feel", *Fun.words)` instead of concatenation
    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 48 |
 49 | chain = ["a", "b", "c"] + eggs + list(("yes", "no", "pants") + zoob)
+   |
 help: Replace with `("we all feel", *Fun.words)`
    |
 46 | excitement = ("we all think",) + Fun().yay()
@@ -174,6 +184,7 @@ RUF005 [*] Consider iterable unpacking instead of concatenation
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 50 |
 51 | baz = () + zoob
+   |
 help: Replace with iterable unpacking
    |
 48 |
@@ -192,6 +203,7 @@ RUF005 [*] Consider `("yes", "no", "pants", *zoob)` instead of concatenation
    |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 50 |
 51 | baz = () + zoob
+   |
 help: Replace with `("yes", "no", "pants", *zoob)`
    |
 48 |
@@ -210,6 +222,7 @@ RUF005 [*] Consider `(*zoob,)` instead of concatenation
    |       ^^^^^^^^^
 52 |
 53 | [] + foo + [
+   |
 help: Replace with `(*zoob,)`
    |
 50 |
@@ -229,6 +242,7 @@ RUF005 [*] Consider `[*foo]` instead of concatenation
    | |_^
 55 |
 56 |   pylint_call = [sys.executable, "-m", "pylint"] + args + [path]
+   |
 help: Replace with `[*foo]`
    |
 52 |
@@ -248,6 +262,7 @@ RUF005 [*] Consider `[sys.executable, "-m", "pylint", *args, path]` instead of c
    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 57 | pylint_call_tuple = (sys.executable, "-m", "pylint") + args + (path, path2)
 58 | b = a + [2, 3] + [4]
+   |
 help: Replace with `[sys.executable, "-m", "pylint", *args, path]`
    |
 55 |
@@ -264,6 +279,7 @@ RUF005 [*] Consider iterable unpacking instead of concatenation
 57 | pylint_call_tuple = (sys.executable, "-m", "pylint") + args + (path, path2)
    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 58 | b = a + [2, 3] + [4]
+   |
 help: Replace with iterable unpacking
    |
 56 | pylint_call = [sys.executable, "-m", "pylint"] + args + [path]
@@ -282,6 +298,7 @@ RUF005 [*] Consider `[*a, 2, 3, 4]` instead of concatenation
    |     ^^^^^^^^^^^^^^^^
 59 |
 60 | # Uses the non-preferred quote style, which should be retained.
+   |
 help: Replace with `[*a, 2, 3, 4]`
    |
 57 | pylint_call_tuple = (sys.executable, "-m", "pylint") + args + (path, path2)
@@ -299,6 +316,7 @@ RUF005 [*] Consider `[*a(), 'b']` instead of concatenation
    |    ^^^^^^^^^^^
 62 |
 63 | ###
+   |
 help: Replace with `[*a(), 'b']`
    |
 60 | # Uses the non-preferred quote style, which should be retained.

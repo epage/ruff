@@ -257,12 +257,14 @@ Module(
   |
 
 
+  |
 5 | finally:
 6 |     pass
   |         ^ Syntax Error: Expected a statement
 7 | a = 1
 8 | try:
 9 |     pass
+  |
 
 
    |

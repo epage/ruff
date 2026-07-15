@@ -10,6 +10,7 @@ PYI024 Use `typing.NamedTuple` instead of `collections.namedtuple`
   |         ^^^^^^^^^^^^^^^^^^^^^^
 4 |
 5 | from collections import namedtuple
+  |
 help: Replace with `typing.NamedTuple`
 
 PYI024 Use `typing.NamedTuple` instead of `collections.namedtuple`
@@ -21,14 +22,17 @@ PYI024 Use `typing.NamedTuple` instead of `collections.namedtuple`
   |         ^^^^^^^^^^
 8 |
 9 | person = namedtuple(
+  |
 help: Replace with `typing.NamedTuple`
 
 PYI024 Use `typing.NamedTuple` instead of `collections.namedtuple`
   --> PYI024.pyi:9:10
+   |
  7 | person: namedtuple  # Y024 Use "typing.NamedTuple" instead of "collections.namedtuple"
  8 |
  9 | person = namedtuple(
    |          ^^^^^^^^^^
 10 |     "Person", ["name", "age"]
 11 | )  # Y024 Use "typing.NamedTuple" instead of "collections.namedtuple"
+   |
 help: Replace with `typing.NamedTuple`

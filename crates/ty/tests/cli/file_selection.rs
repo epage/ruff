@@ -884,6 +884,7 @@ fn invalid_include_pattern() -> anyhow::Result<()> {
     4 |     "src/**test/"
       |     ^^^^^^^^^^^^^ Too many stars at position 5
     5 | ]
+      |
     "#);
 
     Ok(())
@@ -959,6 +960,7 @@ fn invalid_exclude_pattern() -> anyhow::Result<()> {
     4 |     "../src"
       |     ^^^^^^^^ The parent directory operator (`..`) at position 1 is not allowed
     5 | ]
+      |
     "#);
 
     Ok(())
@@ -1017,6 +1019,7 @@ print(other_undefined)  # error: unresolved-reference
     ----- stdout -----
     error[unresolved-reference]: Name `missing_value` used when not defined
      --> library.py:3:12
+      |
     3 |     return missing_value  # error: unresolved-reference
       |            ^^^^^^^^^^^^^
 
@@ -1038,6 +1041,7 @@ print(other_undefined)  # error: unresolved-reference
     ----- stdout -----
     error[unresolved-reference]: Name `undefined_var` used when not defined
      --> main.py:5:7
+      |
     5 | print(undefined_var)  # error: unresolved-reference
       |       ^^^^^^^^^^^^^
 
@@ -1089,11 +1093,13 @@ print(regular_undefined)  # error: unresolved-reference
     ----- stdout -----
     error[unresolved-reference]: Name `regular_undefined` used when not defined
      --> regular.py:2:7
+      |
     2 | print(regular_undefined)  # error: unresolved-reference
       |       ^^^^^^^^^^^^^^^^^
 
     error[unresolved-reference]: Name `undefined_var` used when not defined
      --> src/module.py:3:12
+      |
     3 |     return undefined_var  # error: unresolved-reference
       |            ^^^^^^^^^^^^^
 
@@ -1115,11 +1121,13 @@ print(regular_undefined)  # error: unresolved-reference
     ----- stdout -----
     error[unresolved-reference]: Name `undefined_var` used when not defined
      --> generated_module.py:3:12
+      |
     3 |     return undefined_var  # error: unresolved-reference
       |            ^^^^^^^^^^^^^
 
     error[unresolved-reference]: Name `missing_value` used when not defined
      --> generated_utils.py:3:12
+      |
     3 |     return missing_value  # error: unresolved-reference
       |            ^^^^^^^^^^^^^
 
@@ -1141,6 +1149,7 @@ print(regular_undefined)  # error: unresolved-reference
     ----- stdout -----
     error[unresolved-reference]: Name `undefined_var` used when not defined
      --> generated_module.py:3:12
+      |
     3 |     return undefined_var  # error: unresolved-reference
       |            ^^^^^^^^^^^^^
 

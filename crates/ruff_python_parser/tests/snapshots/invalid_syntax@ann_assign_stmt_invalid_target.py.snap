@@ -539,12 +539,14 @@ Module(
   |
 
 
+  |
 5 | x,: int = 1
 6 | x, y: int = 1, 2
 7 | (x, y): int = 1, 2
   | ^^^^^^ Syntax Error: Only single target (not tuple) can be annotated
 8 | # List assignment
 9 | [x]: int = 1
+  |
 
 
    |

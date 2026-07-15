@@ -10,6 +10,7 @@ F602 Dictionary key `a` repeated
   |     ^
 6 |     b: 3,
 7 | }
+  |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -21,6 +22,7 @@ F602 Dictionary key `a` repeated
    |     ^
 12 |     a: 3,
 13 |     a: 3,
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -32,6 +34,7 @@ F602 Dictionary key `a` repeated
    |     ^
 13 |     a: 3,
 14 | }
+   |
 help: Remove repeated key `a`
 
 F602 [*] Dictionary key `a` repeated
@@ -42,6 +45,7 @@ F602 [*] Dictionary key `a` repeated
 13 |     a: 3,
    |     ^
 14 | }
+   |
 help: Remove repeated key `a`
    |
 12 |     a: 3,
@@ -59,6 +63,7 @@ F602 Dictionary key `a` repeated
    |     ^
 19 |     a: 3,
 20 |     a: 3,
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -70,6 +75,7 @@ F602 Dictionary key `a` repeated
    |     ^
 20 |     a: 3,
 21 |     a: 4,
+   |
 help: Remove repeated key `a`
 
 F602 [*] Dictionary key `a` repeated
@@ -81,6 +87,7 @@ F602 [*] Dictionary key `a` repeated
    |     ^
 21 |     a: 4,
 22 | }
+   |
 help: Remove repeated key `a`
    |
 19 |     a: 3,
@@ -97,6 +104,7 @@ F602 Dictionary key `a` repeated
 21 |     a: 4,
    |     ^
 22 | }
+   |
 help: Remove repeated key `a`
 
 F602 [*] Dictionary key `a` repeated
@@ -108,6 +116,7 @@ F602 [*] Dictionary key `a` repeated
    |     ^
 27 |     a: 2,
 28 |     a: 3,
+   |
 help: Remove repeated key `a`
    |
 25 |     a: 1,
@@ -125,6 +134,7 @@ F602 Dictionary key `a` repeated
    |     ^
 28 |     a: 3,
 29 |     a: 4,
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -136,15 +146,18 @@ F602 Dictionary key `a` repeated
    |     ^
 29 |     a: 4,
 30 | }
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
   --> F602.py:29:5
+   |
 27 |     a: 2,
 28 |     a: 3,
 29 |     a: 4,
    |     ^
 30 | }
+   |
 help: Remove repeated key `a`
 
 F602 [*] Dictionary key `a` repeated
@@ -156,6 +169,7 @@ F602 [*] Dictionary key `a` repeated
    |     ^
 36 |     "a": 2,
 37 |     a: 2,
+   |
 help: Remove repeated key `a`
    |
 34 |     "a": 1,
@@ -173,6 +187,7 @@ F602 Dictionary key `a` repeated
    |     ^
 38 |     "a": 3,
 39 |     a: 3,
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -184,6 +199,7 @@ F602 Dictionary key `a` repeated
    |     ^
 40 |     "a": 3,
 41 |     a: 4,
+   |
 help: Remove repeated key `a`
 
 F602 Dictionary key `a` repeated
@@ -194,6 +210,7 @@ F602 Dictionary key `a` repeated
 41 |     a: 4,
    |     ^
 42 | }
+   |
 help: Remove repeated key `a`
 
 F602 [*] Dictionary key `a` repeated
@@ -204,6 +221,7 @@ F602 [*] Dictionary key `a` repeated
 44 | x = {a: 1, a: 1}
    |            ^
 45 | x = {a: 1, b: 2, a: 1}
+   |
 help: Remove repeated key `a`
    |
 43 |

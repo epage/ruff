@@ -69,6 +69,7 @@ AIR004 `@task.branch` can be replaced with `@task.short_circuit`
 
 AIR004 `BranchPythonOperator` can be replaced with `ShortCircuitOperator`
    --> AIR004.py:107:1
+    |
 107 | BranchPythonOperator(task_id="task", python_callable=operator_short_circuit_candidate)  # AIR004
     | ^^^^^^^^^^^^^^^^^^^^
 
@@ -79,3 +80,4 @@ AIR004 `BranchPythonOperator` can be replaced with `ShortCircuitOperator`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 117 |     task_id="task", python_callable=provider_short_circuit_candidate
 118 | )
+    |

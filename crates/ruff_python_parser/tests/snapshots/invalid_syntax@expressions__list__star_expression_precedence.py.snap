@@ -488,12 +488,14 @@ Module(
   |
 
 
+  |
 5 | [*not x, z]
 6 | [*x and y, z]
 7 | [*x or y, z]
   |   ^^^^^^ Syntax Error: Boolean expression cannot be used here
 8 | [*x if True else y, z]
 9 | [*lambda x: x, z]
+  |
 
 
    |

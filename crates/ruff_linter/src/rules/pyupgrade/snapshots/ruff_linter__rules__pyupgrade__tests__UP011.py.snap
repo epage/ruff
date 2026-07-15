@@ -8,6 +8,7 @@ UP011 [*] Unnecessary parentheses to `functools.lru_cache`
   |                     ^^
 6 | def fixme():
 7 |     pass
+  |
 help: Remove unnecessary parentheses
   |
 4 |
@@ -23,6 +24,7 @@ UP011 [*] Unnecessary parentheses to `functools.lru_cache`
    |           ^^
 11 | def fixme():
 12 |     pass
+   |
 help: Remove unnecessary parentheses
    |
 9  |
@@ -39,6 +41,7 @@ UP011 [*] Unnecessary parentheses to `functools.lru_cache`
    |                     ^^
 17 | def fixme():
 18 |     pass
+   |
 help: Remove unnecessary parentheses
    |
 15 | @other_decorator
@@ -54,6 +57,7 @@ UP011 [*] Unnecessary parentheses to `functools.lru_cache`
    |                     ^^
 22 | @other_decorator
 23 | def fixme():
+   |
 help: Remove unnecessary parentheses
    |
 20 |

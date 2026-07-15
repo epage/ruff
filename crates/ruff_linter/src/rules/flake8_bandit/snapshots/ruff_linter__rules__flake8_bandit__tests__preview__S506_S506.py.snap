@@ -18,6 +18,7 @@ S506 Probable use of unsafe loader `BaseLoader` with `yaml.load`. Allows instant
    |                        ^^^^^^^^^^^^^^^
 42 | yaml.load("{}", Loader=yaml.CBaseLoader)
 43 | yaml.load("{}", yaml.BaseLoader)
+   |
 
 
 S506 Probable use of unsafe loader `CBaseLoader` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.
@@ -29,6 +30,7 @@ S506 Probable use of unsafe loader `CBaseLoader` with `yaml.load`. Allows instan
    |                        ^^^^^^^^^^^^^^^^
 43 | yaml.load("{}", yaml.BaseLoader)
 44 | yaml.load("{}", yaml.CBaseLoader)
+   |
 
 
 S506 Probable use of unsafe loader `BaseLoader` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.
@@ -40,6 +42,7 @@ S506 Probable use of unsafe loader `BaseLoader` with `yaml.load`. Allows instant
    |                 ^^^^^^^^^^^^^^^
 44 | yaml.load("{}", yaml.CBaseLoader)
 45 | from yaml import BaseLoader
+   |
 
 
 S506 Probable use of unsafe loader `CBaseLoader` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.
@@ -51,16 +54,19 @@ S506 Probable use of unsafe loader `CBaseLoader` with `yaml.load`. Allows instan
    |                 ^^^^^^^^^^^^^^^^
 45 | from yaml import BaseLoader
 46 | yaml.load("{}", Loader=BaseLoader)
+   |
 
 
 S506 Probable use of unsafe loader `BaseLoader` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.
   --> S506.py:46:24
+   |
 44 | yaml.load("{}", yaml.CBaseLoader)
 45 | from yaml import BaseLoader
 46 | yaml.load("{}", Loader=BaseLoader)
    |                        ^^^^^^^^^^
 47 | from yaml.loader import BaseLoader as BL
 48 | yaml.load("{}", Loader=BL)
+   |
 
 
 S506 Probable use of unsafe loader `BL` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.
@@ -72,6 +78,7 @@ S506 Probable use of unsafe loader `BL` with `yaml.load`. Allows instantiation o
    |                        ^^
 49 | from yaml.cyaml import CBaseLoader
 50 | yaml.load("{}", Loader=CBaseLoader)
+   |
 
 
 S506 Probable use of unsafe loader `CBaseLoader` with `yaml.load`. Allows instantiation of arbitrary objects. Consider `yaml.safe_load`.

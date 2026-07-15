@@ -294,10 +294,12 @@ Module(
   |
 
 
+  |
 7 | # Starred expressions
 8 | await *x
   |       ^^ Syntax Error: Starred expression cannot be used here
 9 | await (*x)
+  |
 
 
    |

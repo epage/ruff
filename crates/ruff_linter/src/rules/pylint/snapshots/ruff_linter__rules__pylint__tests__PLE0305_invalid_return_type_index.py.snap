@@ -10,6 +10,7 @@ PLE0305 `__index__` does not return an integer
 
 PLE0305 `__index__` does not return an integer
   --> invalid_return_type_index.py:13:16
+   |
 11 | class Float:
 12 |     def __index__(self):
 13 |         return 3.05  # [invalid-index-return]
@@ -17,6 +18,7 @@ PLE0305 `__index__` does not return an integer
 
 PLE0305 `__index__` does not return an integer
   --> invalid_return_type_index.py:18:16
+   |
 16 | class Dict:
 17 |     def __index__(self):
 18 |         return {"1": "1"}  # [invalid-index-return]
@@ -24,6 +26,7 @@ PLE0305 `__index__` does not return an integer
 
 PLE0305 `__index__` does not return an integer
   --> invalid_return_type_index.py:23:16
+   |
 21 | class Str:
 22 |     def __index__(self):
 23 |         return "ruff"  # [invalid-index-return]
@@ -36,3 +39,4 @@ PLE0305 `__index__` does not return an integer
 27 |     def __index__(self):
    |         ^^^^^^^^^
 28 |         print("ruff")  # [invalid-index-return]
+   |

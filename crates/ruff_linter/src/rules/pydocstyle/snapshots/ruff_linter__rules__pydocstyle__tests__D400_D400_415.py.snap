@@ -8,6 +8,7 @@ D400 First line should end with a period
 2 |     "Here's a line ending in a question mark?"
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |     ...
+  |
 help: Add period
 
 D400 First line should end with a period
@@ -17,6 +18,7 @@ D400 First line should end with a period
 7 |     """Here's a line ending in an exclamation mark!"""
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |     ...
+  |
 help: Add period
 
 D400 First line should end with a period
@@ -26,6 +28,7 @@ D400 First line should end with a period
 11 |     """Here's a line ending in a colon:"""
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |     ...
+   |
 help: Add period
 
 D400 First line should end with a period
@@ -35,6 +38,7 @@ D400 First line should end with a period
 15 |     """Here's a line ending in a semi colon;"""
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |     ...
+   |
 help: Add period
 
 D400 [*] First line should end with a period
@@ -44,6 +48,7 @@ D400 [*] First line should end with a period
 19 |     """Here's a line ending with a whitespace  """
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 |     ...
+   |
 help: Add period
    |
 18 | def f():

@@ -9,6 +9,7 @@ PYI016 [*] Duplicate union member `str`
   |               ^^^
 8 |
 9 | # Should emit for union types in arguments.
+  |
 help: Remove duplicate union member `str`
   |
 6 | # Should emit for duplicate field types.
@@ -24,6 +25,7 @@ PYI016 [*] Duplicate union member `int`
 10 | def func1(arg1: int | int):  # PYI016: Duplicate union member `int`
    |                       ^^^
 11 |     print(arg1)
+   |
 help: Remove duplicate union member `int`
    |
 9  | # Should emit for union types in arguments.
@@ -39,6 +41,7 @@ PYI016 [*] Duplicate union member `str`
 14 | def func2() -> str | str:  # PYI016: Duplicate union member `str`
    |                      ^^^
 15 |     return "my string"
+   |
 help: Remove duplicate union member `str`
    |
 13 | # Should emit for unions in return types.
@@ -55,6 +58,7 @@ PYI016 [*] Duplicate union member `str`
    |               ^^^
 19 | field4: int | int | str  # PYI016: Duplicate union member `int`
 20 | field5: str | int | str  # PYI016: Duplicate union member `str`
+   |
 help: Remove duplicate union member `str`
    |
 17 | # Should emit in longer unions, even if not directly adjacent.
@@ -72,6 +76,7 @@ PYI016 [*] Duplicate union member `int`
    |               ^^^
 20 | field5: str | int | str  # PYI016: Duplicate union member `str`
 21 | field6: int | bool | str | int  # PYI016: Duplicate union member `int`
+   |
 help: Remove duplicate union member `int`
    |
 18 | field3: str | str | int  # PYI016: Duplicate union member `str`
@@ -88,6 +93,7 @@ PYI016 [*] Duplicate union member `str`
 20 | field5: str | int | str  # PYI016: Duplicate union member `str`
    |                     ^^^
 21 | field6: int | bool | str | int  # PYI016: Duplicate union member `int`
+   |
 help: Remove duplicate union member `str`
    |
 19 | field4: int | int | str  # PYI016: Duplicate union member `int`
@@ -105,6 +111,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 22 |
 23 | # Shouldn't emit for non-type unions.
+   |
 help: Remove duplicate union member `int`
    |
 20 | field5: str | int | str  # PYI016: Duplicate union member `str`
@@ -121,6 +128,7 @@ PYI016 [*] Duplicate union member `int`
    |                      ^^^
 28 |
 29 | # Should handle user brackets when fixing.
+   |
 help: Remove duplicate union member `int`
    |
 26 | # Should emit for strangely-bracketed unions.
@@ -136,6 +144,7 @@ PYI016 [*] Duplicate union member `int`
 30 | field9: int | (int | str)  # PYI016: Duplicate union member `int`
    |                ^^^
 31 | field10: (str | int) | str  # PYI016: Duplicate union member `str`
+   |
 help: Remove duplicate union member `int`
    |
 29 | # Should handle user brackets when fixing.
@@ -153,6 +162,7 @@ PYI016 [*] Duplicate union member `str`
    |                        ^^^
 32 |
 33 | # Should emit for nested unions.
+   |
 help: Remove duplicate union member `str`
    |
 30 | field9: int | (int | str)  # PYI016: Duplicate union member `int`
@@ -169,6 +179,7 @@ PYI016 [*] Duplicate union member `int`
    |                     ^^^
 35 |
 36 | # Should emit for unions with more than two cases
+   |
 help: Remove duplicate union member `int`
    |
 33 | # Should emit for nested unions.
@@ -184,6 +195,7 @@ PYI016 [*] Duplicate union member `int`
 37 | field12: int | int | int  # Error
    |                ^^^
 38 | field13: int | int | int | int  # Error
+   |
 help: Remove duplicate union member `int`
    |
 36 | # Should emit for unions with more than two cases
@@ -199,6 +211,7 @@ PYI016 [*] Duplicate union member `int`
 37 | field12: int | int | int  # Error
    |                      ^^^
 38 | field13: int | int | int | int  # Error
+   |
 help: Remove duplicate union member `int`
    |
 36 | # Should emit for unions with more than two cases
@@ -216,6 +229,7 @@ PYI016 [*] Duplicate union member `int`
    |                ^^^
 39 |
 40 | # Should emit for unions with more than two cases, even if not directly adjacent
+   |
 help: Remove duplicate union member `int`
    |
 37 | field12: int | int | int  # Error
@@ -233,6 +247,7 @@ PYI016 [*] Duplicate union member `int`
    |                      ^^^
 39 |
 40 | # Should emit for unions with more than two cases, even if not directly adjacent
+   |
 help: Remove duplicate union member `int`
    |
 37 | field12: int | int | int  # Error
@@ -250,6 +265,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 39 |
 40 | # Should emit for unions with more than two cases, even if not directly adjacent
+   |
 help: Remove duplicate union member `int`
    |
 37 | field12: int | int | int  # Error
@@ -266,6 +282,7 @@ PYI016 [*] Duplicate union member `int`
    |                ^^^
 42 |
 43 | # Should emit for duplicate literal types; also covered by PYI030
+   |
 help: Remove duplicate union member `int`
    |
 40 | # Should emit for unions with more than two cases, even if not directly adjacent
@@ -282,6 +299,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 42 |
 43 | # Should emit for duplicate literal types; also covered by PYI030
+   |
 help: Remove duplicate union member `int`
    |
 40 | # Should emit for unions with more than two cases, even if not directly adjacent
@@ -298,6 +316,7 @@ PYI016 [*] Duplicate union member `typing.Literal[1]`
    |                              ^^^^^^^^^^^^^^^^^
 45 |
 46 | # Shouldn't emit if in new parent type
+   |
 help: Remove duplicate union member `typing.Literal[1]`
    |
 43 | # Should emit for duplicate literal types; also covered by PYI030
@@ -316,6 +335,7 @@ PYI016 [*] Duplicate union member `set[int]`
 59 | |     ],
    | |_____^
 60 |   ]  # Error, newline and comment will not be emitted in message
+   |
 help: Remove duplicate union member `set[int]`
    |
 52 | # Should emit in cases with newlines
@@ -340,6 +360,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 64 |
 65 | # Should emit in cases with nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 62 | # Should emit in cases with `typing.Union` instead of `|`
@@ -356,6 +377,7 @@ PYI016 [*] Duplicate union member `int`
    |                                         ^^^
 67 |
 68 | # Should emit in cases with mixed `typing.Union` and `|`
+   |
 help: Remove duplicate union member `int`
    |
 65 | # Should emit in cases with nested `typing.Union`
@@ -372,6 +394,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 70 |
 71 | # Should emit only once in cases with multiple nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 68 | # Should emit in cases with mixed `typing.Union` and `|`
@@ -388,6 +411,7 @@ PYI016 [*] Duplicate union member `int`
    |                                         ^^^
 73 |
 74 | # Should emit in cases with newlines
+   |
 help: Remove duplicate union member `int`
    |
 71 | # Should emit only once in cases with multiple nested `typing.Union`
@@ -404,6 +428,7 @@ PYI016 [*] Duplicate union member `int`
    |                                                           ^^^
 73 |
 74 | # Should emit in cases with newlines
+   |
 help: Remove duplicate union member `int`
    |
 71 | # Should emit only once in cases with multiple nested `typing.Union`
@@ -420,6 +445,7 @@ PYI016 [*] Duplicate union member `int`
    |                                                                ^^^
 73 |
 74 | # Should emit in cases with newlines
+   |
 help: Remove duplicate union member `int`
    |
 71 | # Should emit only once in cases with multiple nested `typing.Union`
@@ -437,6 +463,7 @@ PYI016 [*] Duplicate union member `set[int]`
    |            ^^^^^^^^
 77 |
 78 | # Should emit twice (once for each `int` in the nested union, both of which are
+   |
 help: Remove duplicate union member `set[int]`
    |
 74 | # Should emit in cases with newlines
@@ -456,6 +483,7 @@ PYI016 [*] Duplicate union member `int`
    |                                         ^^^
 82 |
 83 | # Should emit twice (once for each `int` in the nested union, both of which are
+   |
 help: Remove duplicate union member `int`
    |
 80 | # we incorrectly re-checked the nested union).
@@ -473,6 +501,7 @@ PYI016 [*] Duplicate union member `int`
    |                                              ^^^
 82 |
 83 | # Should emit twice (once for each `int` in the nested union, both of which are
+   |
 help: Remove duplicate union member `int`
    |
 80 | # we incorrectly re-checked the nested union).
@@ -490,6 +519,7 @@ PYI016 [*] Duplicate union member `int`
    |                            ^^^
 87 |
 88 | # Should emit in cases with nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 85 | # we incorrectly re-checked the nested union).
@@ -507,6 +537,7 @@ PYI016 [*] Duplicate union member `int`
    |                                  ^^^
 87 |
 88 | # Should emit in cases with nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 85 | # we incorrectly re-checked the nested union).
@@ -523,6 +554,7 @@ PYI016 [*] Duplicate union member `int`
    |                                         ^^^
 90 |
 91 | # Should emit in cases with nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 88 | # Should emit in cases with nested `typing.Union`
@@ -539,6 +571,7 @@ PYI016 [*] Duplicate union member `int`
    |                                                      ^^^
 93 |
 94 | # Should emit in cases with mixed `typing.Union` and `|`
+   |
 help: Remove duplicate union member `int`
    |
 91 | # Should emit in cases with nested `typing.Union`
@@ -555,6 +588,7 @@ PYI016 [*] Duplicate union member `int`
    |                             ^^^
 96 |
 97 | # Should emit twice in cases with multiple nested `typing.Union`
+   |
 help: Remove duplicate union member `int`
    |
 94 | # Should emit in cases with mixed `typing.Union` and `|`
@@ -565,11 +599,13 @@ help: Remove duplicate union member `int`
 
 PYI016 [*] Duplicate union member `int`
    --> PYI016.pyi:98:54
+    |
  97 | # Should emit twice in cases with multiple nested `typing.Union`
  98 | field29: typing.Union[int, typing.Union[typing.Union[int, int]]]  # Error
     |                                                      ^^^
  99 |
 100 | # Should emit once in cases with multiple nested `typing.Union`
+    |
 help: Remove duplicate union member `int`
    |
 97 | # Should emit twice in cases with multiple nested `typing.Union`
@@ -580,11 +616,13 @@ help: Remove duplicate union member `int`
 
 PYI016 [*] Duplicate union member `int`
    --> PYI016.pyi:98:59
+    |
  97 | # Should emit twice in cases with multiple nested `typing.Union`
  98 | field29: typing.Union[int, typing.Union[typing.Union[int, int]]]  # Error
     |                                                           ^^^
  99 |
 100 | # Should emit once in cases with multiple nested `typing.Union`
+    |
 help: Remove duplicate union member `int`
    |
 97 | # Should emit twice in cases with multiple nested `typing.Union`
@@ -601,6 +639,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                      ^^^
 102 |
 103 | # Should emit once, and fix to `typing.Union[float, int]`
+    |
 help: Remove duplicate union member `int`
     |
 100 | # Should emit once in cases with multiple nested `typing.Union`
@@ -617,6 +656,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                 ^^^
 105 |
 106 | # Should emit once, and fix to `typing.Union[float, int]`
+    |
 help: Remove duplicate union member `int`
     |
 103 | # Should emit once, and fix to `typing.Union[float, int]`
@@ -633,6 +673,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                 ^^^
 108 |
 109 | # Test case for mixed union type fix
+    |
 help: Remove duplicate union member `int`
     |
 106 | # Should emit once, and fix to `typing.Union[float, int]`
@@ -649,6 +690,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                       ^^^
 108 |
 109 | # Test case for mixed union type fix
+    |
 help: Remove duplicate union member `int`
     |
 106 | # Should emit once, and fix to `typing.Union[float, int]`
@@ -665,6 +707,7 @@ PYI016 [*] Duplicate union member `int`
     |                                          ^^^
 111 |
 112 | # Test case for mixed union type
+    |
 help: Remove duplicate union member `int`
     |
 109 | # Test case for mixed union type fix
@@ -681,6 +724,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                              ^^^
 111 |
 112 | # Test case for mixed union type
+    |
 help: Remove duplicate union member `int`
     |
 109 | # Test case for mixed union type fix
@@ -697,6 +741,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                                    ^^^
 111 |
 112 | # Test case for mixed union type
+    |
 help: Remove duplicate union member `int`
     |
 109 | # Test case for mixed union type fix
@@ -713,6 +758,7 @@ PYI016 [*] Duplicate union member `list[int]`
     |                                                             ^^^^^^^^^
 114 |
 115 | # https://github.com/astral-sh/ruff/issues/18546
+    |
 help: Remove duplicate union member `list[int]`
     |
 112 | # Test case for mixed union type
@@ -723,12 +769,14 @@ help: Remove duplicate union member `list[int]`
 
 PYI016 [*] Duplicate union member `None`
    --> PYI016.pyi:121:26
+    |
 119 | field38: typing.Union[int, None]
 120 | # equivalent to None
 121 | field39: typing.Optional[None]
     |                          ^^^^
 122 | # equivalent to int | None
 123 | field40: typing.Union[typing.Optional[int], None]
+    |
 help: Remove duplicate union member `None`
     |
 120 | # equivalent to None
@@ -746,6 +794,7 @@ PYI016 [*] Duplicate union member `None`
     |                                             ^^^^
 124 | field41: typing.Optional[typing.Union[int, None]]
 125 | field42: typing.Union[typing.Optional[int], typing.Optional[int]]
+    |
 help: Remove duplicate union member `None`
     |
 122 | # equivalent to int | None
@@ -763,6 +812,7 @@ PYI016 [*] Duplicate union member `None`
     |                                            ^^^^
 125 | field42: typing.Union[typing.Optional[int], typing.Optional[int]]
 126 | field43: typing.Optional[int] | None
+    |
 help: Remove duplicate union member `None`
     |
 123 | field40: typing.Union[typing.Optional[int], None]
@@ -780,6 +830,7 @@ PYI016 [*] Duplicate union member `None`
     |                                             ^^^^^^^^^^^^^^^
 126 | field43: typing.Optional[int] | None
 127 | field44: typing.Optional[int | None]
+    |
 help: Remove duplicate union member `None`
     |
 124 | field41: typing.Optional[typing.Union[int, None]]
@@ -797,6 +848,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                             ^^^
 126 | field43: typing.Optional[int] | None
 127 | field44: typing.Optional[int | None]
+    |
 help: Remove duplicate union member `int`
     |
 124 | field41: typing.Optional[typing.Union[int, None]]
@@ -814,6 +866,7 @@ PYI016 [*] Duplicate union member `None`
     |                                 ^^^^
 127 | field44: typing.Optional[int | None]
 128 | field45: typing.Optional[int] | typing.Optional[int]
+    |
 help: Remove duplicate union member `None`
     |
 125 | field42: typing.Union[typing.Optional[int], typing.Optional[int]]
@@ -831,6 +884,7 @@ PYI016 [*] Duplicate union member `None`
     |                                ^^^^
 128 | field45: typing.Optional[int] | typing.Optional[int]
 129 | # equivalent to int | dict | None
+    |
 help: Remove duplicate union member `None`
     |
 126 | field43: typing.Optional[int] | None
@@ -848,6 +902,7 @@ PYI016 [*] Duplicate union member `None`
     |                                 ^^^^^^^^^^^^^^^
 129 | # equivalent to int | dict | None
 130 | field46: typing.Union[typing.Optional[int], typing.Optional[dict]]
+    |
 help: Remove duplicate union member `None`
     |
 127 | field44: typing.Optional[int | None]
@@ -865,6 +920,7 @@ PYI016 [*] Duplicate union member `int`
     |                                                 ^^^
 129 | # equivalent to int | dict | None
 130 | field46: typing.Union[typing.Optional[int], typing.Optional[dict]]
+    |
 help: Remove duplicate union member `int`
     |
 127 | field44: typing.Optional[int | None]
@@ -881,6 +937,7 @@ PYI016 [*] Duplicate union member `None`
 130 | field46: typing.Union[typing.Optional[int], typing.Optional[dict]]
     |                                             ^^^^^^^^^^^^^^^
 131 | field47: typing.Optional[int] | typing.Optional[dict]
+    |
 help: Remove duplicate union member `None`
     |
 129 | # equivalent to int | dict | None
@@ -898,6 +955,7 @@ PYI016 [*] Duplicate union member `None`
     |                                 ^^^^^^^^^^^^^^^
 132 |
 133 | # avoid reporting twice
+    |
 help: Remove duplicate union member `None`
     |
 130 | field46: typing.Union[typing.Optional[int], typing.Optional[dict]]
@@ -913,6 +971,7 @@ PYI016 [*] Duplicate union member `complex`
 134 | field48: typing.Union[typing.Optional[typing.Union[complex, complex]], complex]
     |                                                             ^^^^^^^
 135 | field49: typing.Optional[complex | complex] | complex
+    |
 help: Remove duplicate union member `complex`
     |
 133 | # avoid reporting twice
@@ -928,6 +987,7 @@ PYI016 [*] Duplicate union member `complex`
 134 | field48: typing.Union[typing.Optional[typing.Union[complex, complex]], complex]
     |                                                                        ^^^^^^^
 135 | field49: typing.Optional[complex | complex] | complex
+    |
 help: Remove duplicate union member `complex`
     |
 133 | # avoid reporting twice

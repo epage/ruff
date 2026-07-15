@@ -10,6 +10,7 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 18 |     print(CONSTANT)
 19 |     CONSTANT = value
+   |
 
 PLW0603 Using the global statement to update `sys` is discouraged
   --> global_statement.py:24:12
@@ -19,6 +20,7 @@ PLW0603 Using the global statement to update `sys` is discouraged
 24 |     global sys  # [global-statement]
    |            ^^^
 25 |     import sys
+   |
 
 PLW0603 Using the global statement to update `namedtuple` is discouraged
   --> global_statement.py:30:12
@@ -28,6 +30,7 @@ PLW0603 Using the global statement to update `namedtuple` is discouraged
 30 |     global namedtuple  # [global-statement]
    |            ^^^^^^^^^^
 31 |     from collections import namedtuple
+   |
 
 PLW0603 Using the global statement to update `CONSTANT` is discouraged
   --> global_statement.py:36:12
@@ -38,6 +41,7 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 37 |     print(CONSTANT)
 38 |     del CONSTANT
+   |
 
 PLW0603 Using the global statement to update `CONSTANT` is discouraged
   --> global_statement.py:43:12
@@ -48,6 +52,7 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 44 |     print(CONSTANT)
 45 |     CONSTANT += 1
+   |
 
 PLW0603 Using the global statement to update `CONSTANT` is discouraged
   --> global_statement.py:50:12
@@ -58,6 +63,7 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 51 |
 52 |     def CONSTANT():
+   |
 
 PLW0603 Using the global statement to update `FUNC` is discouraged
   --> global_statement.py:60:12
@@ -68,6 +74,7 @@ PLW0603 Using the global statement to update `FUNC` is discouraged
    |            ^^^^
 61 |
 62 |     def FUNC():
+   |
 
 PLW0603 Using the global statement to update `CLASS` is discouraged
   --> global_statement.py:70:12
@@ -78,6 +85,7 @@ PLW0603 Using the global statement to update `CLASS` is discouraged
    |            ^^^^^
 71 |
 72 |     class CLASS:
+   |
 
 PLW0603 Using the global statement to update `CONSTANT` is discouraged
   --> global_statement.py:80:12
@@ -88,6 +96,7 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 81 |     CONSTANT = 1
 82 |     CONSTANT = 2
+   |
 
 PLW0603 Using the global statement to update `CONSTANT` is discouraged
   --> global_statement.py:80:12
@@ -98,3 +107,4 @@ PLW0603 Using the global statement to update `CONSTANT` is discouraged
    |            ^^^^^^^^
 81 |     CONSTANT = 1
 82 |     CONSTANT = 2
+   |

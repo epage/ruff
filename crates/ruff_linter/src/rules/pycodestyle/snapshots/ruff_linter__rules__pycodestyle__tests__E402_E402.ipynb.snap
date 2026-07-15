@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/pycodestyle/mod.rs
 ---
 E402 Module level import not at top of cell
   --> E402.ipynb:9:1
+   |
  7 | os.path
  8 |
  9 | import pathlib
    | ^^^^^^^^^^^^^^
 10 |
 11 | import a
+   |
 
 E402 Module level import not at top of cell
   --> E402.ipynb:22:1
@@ -18,6 +20,7 @@ E402 Module level import not at top of cell
 22 | import c
    | ^^^^^^^^
 23 | import ok
+   |
 
 E402 Module level import not at top of cell
   --> E402.ipynb:30:1
@@ -26,3 +29,4 @@ E402 Module level import not at top of cell
    | ^^^^^^^^^^^^
 31 |
 32 | %%time
+   |

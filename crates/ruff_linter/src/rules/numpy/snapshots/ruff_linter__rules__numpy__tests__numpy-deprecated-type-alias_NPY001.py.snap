@@ -8,6 +8,7 @@ NPY001 [*] Type alias `np.float` is deprecated, replace with builtin type
 6 | npy.float
   | ^^^^^^^^^
 7 | npy.int
+  |
 help: Replace `np.float` with builtin type
   |
 5 | # Error
@@ -25,6 +26,7 @@ NPY001 [*] Type alias `np.int` is deprecated, replace with builtin type
   | ^^^^^^^
 8 |
 9 | if dtype == np.object:
+  |
 help: Replace `np.int` with builtin type
   |
 6 | npy.float
@@ -35,11 +37,13 @@ help: Replace `np.int` with builtin type
 
 NPY001 [*] Type alias `np.object` is deprecated, replace with builtin type
   --> NPY001.py:9:13
+   |
  7 | npy.int
  8 |
  9 | if dtype == np.object:
    |             ^^^^^^^^^
 10 |     ...
+   |
 help: Replace `np.object` with builtin type
    |
 8  |
@@ -57,6 +61,7 @@ NPY001 [*] Type alias `np.int` is deprecated, replace with builtin type
    |                                                                        ^^^^^^
 13 |
 14 | pdf = pd.DataFrame(
+   |
 help: Replace `np.int` with builtin type
    |
 11 |
@@ -74,6 +79,7 @@ NPY001 [*] Type alias `np.complex` is deprecated, replace with builtin type
    |                                                                                ^^^^^^^^^^
 13 |
 14 | pdf = pd.DataFrame(
+   |
 help: Replace `np.complex` with builtin type
    |
 11 |
@@ -90,7 +96,9 @@ NPY001 [*] Type alias `np.object` is deprecated, replace with builtin type
 17 |     dtype=numpy.object,
    |           ^^^^^^^^^^^^
 18 | )
+   |
 help: Replace `np.object` with builtin type
+   |
 16 |     columns=["a", "b", "c"],
    -     dtype=numpy.object,
 17 +     dtype=object,
@@ -106,6 +114,7 @@ NPY001 [*] Type alias `np.int` is deprecated, replace with builtin type
    |                ^^^^^^
 21 |
 22 | # Regression test for: https://github.com/astral-sh/ruff/issues/6952
+   |
 help: Replace `np.int` with builtin type
    |
 19 |

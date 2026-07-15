@@ -7,6 +7,7 @@ SLOT001 Subclasses of `tuple` should define `__slots__`
 1 | class Bad(tuple):  # SLOT001
   |       ^^^
 2 |     pass
+  |
 
 SLOT001 Subclasses of `tuple` should define `__slots__`
   --> SLOT001.py:12:7
@@ -14,6 +15,7 @@ SLOT001 Subclasses of `tuple` should define `__slots__`
 12 | class Bad(Tuple):  # SLOT001
    |       ^^^
 13 |     pass
+   |
 
 SLOT001 Subclasses of `tuple` should define `__slots__`
   --> SLOT001.py:16:7
@@ -21,6 +23,7 @@ SLOT001 Subclasses of `tuple` should define `__slots__`
 16 | class Bad(Tuple[str, int, float]):  # SLOT001
    |       ^^^
 17 |     pass
+   |
 
 SLOT001 Subclasses of `tuple` should define `__slots__`
   --> SLOT001.py:26:7
@@ -30,3 +33,4 @@ SLOT001 Subclasses of `tuple` should define `__slots__`
 26 | class AlsoBad(builtins.tuple[int, int]):  # SLOT001
    |       ^^^^^^^
 27 |     pass
+   |

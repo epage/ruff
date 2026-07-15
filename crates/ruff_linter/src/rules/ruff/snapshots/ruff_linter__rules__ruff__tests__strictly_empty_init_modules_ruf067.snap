@@ -18,10 +18,12 @@ RUF067 `__init__` module should only contain docstrings and re-exports
 12 | MY_CONSTANT = 5
    | ^^^^^^^^^^^^^^^
 13 | """This is an important constant."""
+   |
 
 
 RUF067 `__init__` module should only contain docstrings and re-exports
   --> __init__.py:15:1
+   |
 13 | """This is an important constant."""
 14 |
 15 | os.environ["FOO"] = 1
@@ -36,6 +38,7 @@ RUF067 `__init__` module should only contain docstrings and re-exports
    | |_________________________^
 20 |
 21 |   def __getattr__(name):  # ok
+   |
 
 
 RUF067 `__init__` module should only contain docstrings and re-exports
@@ -48,6 +51,7 @@ RUF067 `__init__` module should only contain docstrings and re-exports
    | |___________________^
 28 |
 29 |   if TYPE_CHECKING:  # ok
+   |
 
 
 RUF067 `__init__` module should only contain docstrings and re-exports
@@ -58,6 +62,7 @@ RUF067 `__init__` module should only contain docstrings and re-exports
 54 | foo = __submodules__ = []  # RUF067: not every target is a dunder
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | __all__[0] = __version__ = "1"  # RUF067: subscript target is not a simple name
+   |
 
 
 RUF067 `__init__` module should only contain docstrings and re-exports
@@ -68,6 +73,7 @@ RUF067 `__init__` module should only contain docstrings and re-exports
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 56 |
 57 | # also allow `__author__`
+   |
 
 
 
@@ -79,6 +85,7 @@ RUF067 `__init__` module should not contain any code
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 2 |
 3 | # convenience imports:
+  |
 
 
 RUF067 `__init__` module should not contain any code
@@ -88,6 +95,7 @@ RUF067 `__init__` module should not contain any code
 4 | import os
   | ^^^^^^^^^
 5 | from pathlib import Path
+  |
 
 
 RUF067 `__init__` module should not contain any code
@@ -99,6 +107,7 @@ RUF067 `__init__` module should not contain any code
   | ^^^^^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | __all__ = ["MY_CONSTANT"]
+  |
 
 
 RUF067 `__init__` module should not contain any code
@@ -115,20 +124,24 @@ RUF067 `__init__` module should not contain any code
 
 RUF067 `__init__` module should not contain any code
   --> __init__.py:8:1
+   |
  7 | __all__ = ["MY_CONSTANT"]
  8 | __all__ += ["foo"]
    | ^^^^^^^^^^^^^^^^^^
  9 | __all__: list[str] = __all__
 10 | __all__ = __all__ = __all__
+   |
 
 
 RUF067 `__init__` module should not contain any code
   --> __init__.py:9:1
+   |
  7 | __all__ = ["MY_CONSTANT"]
  8 | __all__ += ["foo"]
  9 | __all__: list[str] = __all__
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | __all__ = __all__ = __all__
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -140,6 +153,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | MY_CONSTANT = 5
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -150,6 +164,7 @@ RUF067 `__init__` module should not contain any code
 12 | MY_CONSTANT = 5
    | ^^^^^^^^^^^^^^^
 13 | """This is an important constant."""
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -160,6 +175,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 |
 15 | os.environ["FOO"] = 1
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -179,6 +195,7 @@ RUF067 `__init__` module should not contain any code
    | |_________________________^
 20 |
 21 |   def __getattr__(name):  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -191,6 +208,7 @@ RUF067 `__init__` module should not contain any code
    | |_______________^
 23 |
 24 |   __path__ = __import__('pkgutil').extend_path(__path__, __name__)  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -202,6 +220,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 |
 26 | if os.environ["FOO"] != "1":  # RUF067
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -214,6 +233,7 @@ RUF067 `__init__` module should not contain any code
    | |___________________^
 28 |
 29 |   if TYPE_CHECKING:  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -226,6 +246,7 @@ RUF067 `__init__` module should not contain any code
    | |___________________^
 31 |
 32 |   import typing
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -237,6 +258,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^
 33 |
 34 | if typing.TYPE_CHECKING: # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -249,6 +271,7 @@ RUF067 `__init__` module should not contain any code
    | |___________________^
 36 |
 37 |   __version__ = "1.2.3"  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -260,6 +283,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^
 38 |
 39 | def __dir__():  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -272,6 +296,7 @@ RUF067 `__init__` module should not contain any code
    | |__________________^
 41 |
 42 |   import pkgutil
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -283,6 +308,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^
 43 |
 44 | __path__ = pkgutil.extend_path(__path__, __name__)  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -293,6 +319,7 @@ RUF067 `__init__` module should not contain any code
 44 | __path__ = pkgutil.extend_path(__path__, __name__)  # ok
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 | __path__ = unknown.extend_path(__path__, __name__)  # also ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -303,6 +330,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 46 |
 47 | # any dunder-named assignment is allowed in non-strict mode
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -313,6 +341,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^
 49 | __submodules__ = []  # ok (e.g. mkinit)
 50 | __protected__ = []  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -324,6 +353,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^
 50 | __protected__ = []  # ok
 51 | __custom__: list[str] = []  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -335,6 +365,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^
 51 | __custom__: list[str] = []  # ok
 52 | __submodules__ += ["extra"]  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -345,6 +376,7 @@ RUF067 `__init__` module should not contain any code
 51 | __custom__: list[str] = []  # ok
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 | __submodules__ += ["extra"]  # ok
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -356,6 +388,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 53 |
 54 | foo = __submodules__ = []  # RUF067: not every target is a dunder
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -366,6 +399,7 @@ RUF067 `__init__` module should not contain any code
 54 | foo = __submodules__ = []  # RUF067: not every target is a dunder
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | __all__[0] = __version__ = "1"  # RUF067: subscript target is not a simple name
+   |
 
 
 RUF067 `__init__` module should not contain any code
@@ -376,6 +410,7 @@ RUF067 `__init__` module should not contain any code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 56 |
 57 | # also allow `__author__`
+   |
 
 
 RUF067 `__init__` module should not contain any code

@@ -10,6 +10,7 @@ UP024 [*] Replace aliased errors with `OSError`
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 |     pass
 7 | except (OSError, socket.error, KeyError):
+  |
 help: Replace with builtin `OSError`
   |
 4 |     pass
@@ -26,6 +27,7 @@ UP024 [*] Replace aliased errors with `OSError`
 7 | except (OSError, socket.error, KeyError):
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 |     pass
+  |
 help: Replace with builtin `OSError`
   |
 6 |     pass
@@ -47,6 +49,7 @@ UP024 [*] Replace aliased errors with `OSError`
 16 | | ):
    | |_^
 17 |       pass
+   |
 help: Replace with builtin `OSError`
    |
 11 |     pass

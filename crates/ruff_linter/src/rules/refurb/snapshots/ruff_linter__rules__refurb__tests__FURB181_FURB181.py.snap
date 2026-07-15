@@ -10,6 +10,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 20 | blake2s().digest().hex()
 21 | md5().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 18 |
@@ -26,6 +27,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 21 | md5().digest().hex()
 22 | sha1().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 19 | blake2b().digest().hex()
@@ -43,6 +45,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^
 22 | sha1().digest().hex()
 23 | sha224().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 20 | blake2s().digest().hex()
@@ -60,6 +63,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^
 23 | sha224().digest().hex()
 24 | sha256().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 21 | md5().digest().hex()
@@ -77,6 +81,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 24 | sha256().digest().hex()
 25 | sha384().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 22 | sha1().digest().hex()
@@ -94,6 +99,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 25 | sha384().digest().hex()
 26 | sha3_224().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 23 | sha224().digest().hex()
@@ -111,6 +117,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 26 | sha3_224().digest().hex()
 27 | sha3_256().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 24 | sha256().digest().hex()
@@ -128,6 +135,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 27 | sha3_256().digest().hex()
 28 | sha3_384().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 25 | sha384().digest().hex()
@@ -145,6 +153,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | sha3_384().digest().hex()
 29 | sha3_512().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 26 | sha3_224().digest().hex()
@@ -162,6 +171,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 29 | sha3_512().digest().hex()
 30 | sha512().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 27 | sha3_256().digest().hex()
@@ -179,6 +189,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 30 | sha512().digest().hex()
 31 | shake_128().digest(10).hex()
+   |
 help: Replace with `.hexdigest()`
    |
 28 | sha3_384().digest().hex()
@@ -196,6 +207,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 31 | shake_128().digest(10).hex()
 32 | shake_256().digest(10).hex()
+   |
 help: Replace with `.hexdigest()`
    |
 29 | sha3_512().digest().hex()
@@ -212,6 +224,7 @@ FURB181 Use of hashlib's `.digest().hex()`
 31 | shake_128().digest(10).hex()
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 32 | shake_256().digest(10).hex()
+   |
 help: Replace with `.hexdigest()`
 
 FURB181 Use of hashlib's `.digest().hex()`
@@ -223,6 +236,7 @@ FURB181 Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 33 |
 34 | hashlib.sha256().digest().hex()
+   |
 help: Replace with `.hexdigest()`
 
 FURB181 [*] Use of hashlib's `.digest().hex()`
@@ -234,6 +248,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 35 |
 36 | sha256(b"text").digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 33 |
@@ -251,6 +266,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 37 |
 38 | hash_algo().digest().hex()
+   |
 help: Replace with `.hexdigest()`
    |
 35 |
@@ -268,6 +284,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 39 |
 40 | # not yet supported
+   |
 help: Replace with `.hexdigest()`
    |
 37 |
@@ -287,6 +304,7 @@ FURB181 [*] Use of hashlib's `.digest().hex()`
 65 | |     .hex()
    | |__________^
 66 |   )
+   |
 help: Replace with `.hexdigest()`
    |
 60 | hashed = (

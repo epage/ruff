@@ -10,6 +10,7 @@ PLW0642 Reassigned `cls` variable in class method
   |         ^^^
 5 |         cls: Fruit = "apple"  # PLW0642
 6 |         cls += "orange"  # OK, augmented assignments are ignored
+  |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
@@ -21,6 +22,7 @@ PLW0642 Reassigned `cls` variable in class method
   |         ^^^
 6 |         cls += "orange"  # OK, augmented assignments are ignored
 7 |         *cls = "banana"  # PLW0642
+  |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
@@ -37,21 +39,25 @@ help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
   --> self_or_cls_assignment.py:8:9
+   |
  6 |         cls += "orange"  # OK, augmented assignments are ignored
  7 |         *cls = "banana"  # PLW0642
  8 |         cls, blah = "apple", "orange"  # PLW0642
    |         ^^^
  9 |         blah, (cls, blah2) = "apple", ("orange", "banana")  # PLW0642
 10 |         blah, [cls, blah2] = "apple", ("orange", "banana")  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
   --> self_or_cls_assignment.py:9:16
+   |
  7 |         *cls = "banana"  # PLW0642
  8 |         cls, blah = "apple", "orange"  # PLW0642
  9 |         blah, (cls, blah2) = "apple", ("orange", "banana")  # PLW0642
    |                ^^^
 10 |         blah, [cls, blah2] = "apple", ("orange", "banana")  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
@@ -63,6 +69,7 @@ PLW0642 Reassigned `cls` variable in class method
    |                ^^^
 11 |
 12 |     @classmethod
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in class method
@@ -74,6 +81,7 @@ PLW0642 Reassigned `cls` variable in class method
    |         ^^^
 15 |
 16 |     def print_color(self) -> None:
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -84,6 +92,7 @@ PLW0642 Reassigned `self` variable in instance method
    |         ^^^^
 18 |         self: Self = "red"  # PLW0642
 19 |         self += "blue"  # OK, augmented assignments are ignored
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -95,16 +104,19 @@ PLW0642 Reassigned `self` variable in instance method
    |         ^^^^
 19 |         self += "blue"  # OK, augmented assignments are ignored
 20 |         *self = "blue"  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
   --> self_or_cls_assignment.py:20:10
+   |
 18 |         self: Self = "red"  # PLW0642
 19 |         self += "blue"  # OK, augmented assignments are ignored
 20 |         *self = "blue"  # PLW0642
    |          ^^^^
 21 |         self, blah = "red", "blue"  # PLW0642
 22 |         blah, (self, blah2) = "apple", ("orange", "banana")  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -116,6 +128,7 @@ PLW0642 Reassigned `self` variable in instance method
    |         ^^^^
 22 |         blah, (self, blah2) = "apple", ("orange", "banana")  # PLW0642
 23 |         blah, [self, blah2] = "apple", ("orange", "banana")  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -126,6 +139,7 @@ PLW0642 Reassigned `self` variable in instance method
 22 |         blah, (self, blah2) = "apple", ("orange", "banana")  # PLW0642
    |                ^^^^
 23 |         blah, [self, blah2] = "apple", ("orange", "banana")  # PLW0642
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -137,6 +151,7 @@ PLW0642 Reassigned `self` variable in instance method
    |                ^^^^
 24 |
 25 |     def print_color(self, color, /) -> None:
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `self` variable in instance method
@@ -147,6 +162,7 @@ PLW0642 Reassigned `self` variable in instance method
    |         ^^^^
 27 |
 28 |     def ok(self) -> None:
+   |
 help: Consider using a different variable name
 
 PLW0642 Reassigned `cls` variable in `__new__` method

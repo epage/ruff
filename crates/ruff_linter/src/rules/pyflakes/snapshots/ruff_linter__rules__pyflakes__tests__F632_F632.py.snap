@@ -7,6 +7,7 @@ F632 [*] Use `==` to compare constant literals
 1 | if x is "abc":
   |    ^^^^^^^^^^
 2 |     pass
+  |
 help: Replace `is` with `==`
   |
   - if x is "abc":
@@ -22,6 +23,7 @@ F632 [*] Use `!=` to compare constant literals
 4 | if 123 is not y:
   |    ^^^^^^^^^^^^
 5 |     pass
+  |
 help: Replace `is not` with `!=`
   |
 3 |
@@ -40,6 +42,7 @@ F632 [*] Use `!=` to compare constant literals
 8 | |         not y:
   | |_____________^
 9 |       pass
+  |
 help: Replace `is not` with `!=`
   |
 6 |
@@ -57,6 +60,7 @@ F632 [*] Use `==` to compare constant literals
 11 | if "123" is x < 3:
    |    ^^^^^^^^^^^^^^
 12 |     pass
+   |
 help: Replace `is` with `==`
    |
 10 |
@@ -73,6 +77,7 @@ F632 [*] Use `==` to compare constant literals
 14 | if "123" != x is 3:
    |    ^^^^^^^^^^^^^^^
 15 |     pass
+   |
 help: Replace `is` with `==`
    |
 13 |
@@ -89,6 +94,7 @@ F632 [*] Use `==` to compare constant literals
 17 | if ("123" != x) is 3:
    |    ^^^^^^^^^^^^^^^^^
 18 |     pass
+   |
 help: Replace `is` with `==`
    |
 16 |
@@ -105,6 +111,7 @@ F632 [*] Use `==` to compare constant literals
 20 | if "123" != (x is 3):
    |              ^^^^^^
 21 |     pass
+   |
 help: Replace `is` with `==`
    |
 19 |
@@ -124,6 +131,7 @@ F632 [*] Use `!=` to compare constant literals
    | |______^
 25 |
 26 |   {2 is
+   |
 help: Replace `is not` with `!=`
    |
 22 |
@@ -144,12 +152,15 @@ F632 [*] Use `!=` to compare constant literals
    | |_______^
 28 |
 29 |   # Regression test for
+   |
 help: Replace `is not` with `!=`
+   |
 25 |
    - {2 is
    -  not ''}
 26 + {2 != ''}
 27 |
+   |
 
 F632 [*] Use `!=` to compare constant literals
   --> F632.py:30:4
@@ -158,6 +169,7 @@ F632 [*] Use `!=` to compare constant literals
 30 | if values[1is not None ] is not '-':
    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 31 |     pass
+   |
 help: Replace `is not` with `!=`
    |
 29 | # Regression test for
@@ -173,6 +185,7 @@ F632 [*] Use `!=` to compare constant literals
 30 | if values[1is not None ] is not '-':
    |           ^^^^^^^^^^^^
 31 |     pass
+   |
 help: Replace `is not` with `!=`
    |
 29 | # Regression test for

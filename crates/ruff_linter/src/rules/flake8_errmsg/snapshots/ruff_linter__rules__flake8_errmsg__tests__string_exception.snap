@@ -19,6 +19,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 EM101 [*] Exception must not use a string literal, assign to variable first
  --> EM101_byte_string.py:6:24
+  |
 5 | def f_byte_empty():
 6 |     raise RuntimeError(b"")
   |                        ^^^

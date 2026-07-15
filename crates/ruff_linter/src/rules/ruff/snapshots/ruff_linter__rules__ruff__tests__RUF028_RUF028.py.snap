@@ -10,6 +10,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be in an expres
   |         ^^^^^^^^^^
 4 |         1,
 5 |         2,
+  |
 help: Remove this comment
   |
 2 |     test_list = [
@@ -26,6 +27,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be on its own l
 12 |     # fmt: skip
    |     ^^^^^^^^^^^
 13 |     pass  # fmt: skip
+   |
 help: Remove this comment
    |
 11 | def fmt_skip_on_own_line():
@@ -42,6 +44,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be after a deco
    | ^^^^^^^^^^
 18 | @fmt_off_between_lists
 19 | def fmt_off_between_decorators():
+   |
 help: Remove this comment
    |
 16 | @fmt_skip_on_own_line
@@ -58,6 +61,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be after a deco
    | ^^^^^^^^^^
 25 | class FmtOffBetweenClassDecorators:
 26 |     ...
+   |
 help: Remove this comment
    |
 23 | @fmt_off_between_decorators
@@ -75,6 +79,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be directly abo
    |     ^^^^^^^^^^
 34 |     else:
 35 |         print("done")
+   |
 help: Remove this comment
    |
 32 |         print(x)
@@ -92,6 +97,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be directly abo
    |     ^^^^^^^^^^
 40 |     else:
 41 |         print("done")
+   |
 help: Remove this comment
    |
 38 |         # fmt: off
@@ -109,6 +115,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be directly abo
    |     ^^^^^^^^^^
 46 |     else:
 47 |         print("expected")
+   |
 help: Remove this comment
    |
 44 |     # fmt: on
@@ -126,7 +133,9 @@ RUF028 [*] This suppression comment is invalid because it cannot be after a deco
    |     ^^^^^^^^^^
 53 |     def cls_method_a(
 54 |         # fmt: off
+   |
 help: Remove this comment
+   |
 51 |     @classmethod
    -     # fmt: off
 52 |     def cls_method_a(
@@ -142,6 +151,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be in an expres
    |         ^^^^^^^^^^
 55 |         cls,
 56 |     ) -> None: # noqa: test # fmt: skip
+   |
 help: Remove this comment
    |
 53 |     def cls_method_a(
@@ -158,6 +168,7 @@ RUF028 [*] This suppression comment is invalid because it cannot be at the end o
 62 |     val = 5 # fmt: on
    |             ^^^^^^^^^
 63 |     pass # fmt: on
+   |
 help: Remove this comment
    |
 61 |     # fmt: off

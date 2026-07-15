@@ -8,3 +8,4 @@ D102 Missing docstring in public method
 16 |     def foo(self, value: str) -> None:
    |         ^^^
 17 |         pass
+   |

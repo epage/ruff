@@ -9,6 +9,7 @@ invalid-syntax: Expected `]`, found `(`
 4 | def foo[T1, T2():
   |               ^
 5 |     pass
+  |
 
 E302 Expected 2 blank lines, found 1
  --> E30_syntax_error.py:7:1
@@ -18,15 +19,18 @@ E302 Expected 2 blank lines, found 1
 7 | def bar():
   | ^^^
 8 |     pass
+  |
 help: Add missing blank line(s)
 
 invalid-syntax: Expected `)`, found newline
   --> E30_syntax_error.py:13:18
+   |
 12 | class Foo:
 13 |     def __init__(
    |                  ^
 14 |         pass
 15 |     def method():
+   |
 
 invalid-syntax: Expected `)`, found newline
   --> E30_syntax_error.py:18:11
@@ -43,3 +47,4 @@ invalid-syntax: Expected `)`, found newline
    |         ^
 22 |     def nested1():
 23 |         pass
+   |

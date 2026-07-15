@@ -10,6 +10,7 @@ TC002 [*] Move third-party import `pandas.DataFrame` into a type-checking block
    |                    ^^^^^^^^^
 13 |
 14 | if TYPE_CHECKING:
+   |
 help: Move into type-checking block
    |
 11 | from scipy.sparse import spmatrix

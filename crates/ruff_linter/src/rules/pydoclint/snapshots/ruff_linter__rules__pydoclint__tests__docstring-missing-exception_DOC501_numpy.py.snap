@@ -24,6 +24,7 @@ DOC501 Raised exception `FasterThanLightError` missing from docstring
    | |_______^
 50 |       try:
 51 |           return distance / time
+   |
 help: Add `FasterThanLightError` to the docstring
 
 DOC501 Raised exception `ValueError` missing from docstring
@@ -49,6 +50,7 @@ DOC501 Raised exception `ValueError` missing from docstring
    | |_______^
 73 |       try:
 74 |           return distance / time
+   |
 help: Add `ValueError` to the docstring
 
 DOC501 Raised exception `FasterThanLightError` missing from docstring
@@ -74,6 +76,7 @@ DOC501 Raised exception `FasterThanLightError` missing from docstring
    | |_______^
 73 |       try:
 74 |           return distance / time
+   |
 help: Add `FasterThanLightError` to the docstring
 
 DOC501 Raised exception `TypeError` missing from docstring
@@ -105,6 +108,7 @@ DOC501 Raised exception `TypeError` missing from docstring
     | |_______^
 104 |       try:
 105 |           return distance / time
+    |
 help: Add `TypeError` to the docstring
 
 DOC501 Raised exception `TypeError` missing from docstring
@@ -121,6 +125,7 @@ DOC501 Raised exception `TypeError` missing from docstring
     | |_______^
 146 |       if True:
 147 |           raise TypeError  # DOC501
+    |
 help: Add `TypeError` to the docstring
 
 DOC501 Raised exception `ValueError` missing from docstring
@@ -137,4 +142,5 @@ DOC501 Raised exception `ValueError` missing from docstring
     | |_______^
 146 |       if True:
 147 |           raise TypeError  # DOC501
+    |
 help: Add `ValueError` to the docstring

@@ -10,6 +10,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 |     MyError("This is a custom error")  # PLW0133
 28 |     MySubError("This is a custom error")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 25 | def func():
@@ -28,6 +29,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 36 |         MyError("This is an exception")  # PLW0133
 37 |         MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 34 |     try:
@@ -46,6 +48,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 47 |         MyError("This is an exception")  # PLW0133
 48 |         MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 45 |     if True:
@@ -64,6 +67,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 57 |             MyError("This is an exception")  # PLW0133
 58 |             MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 55 |         def __init__(self):
@@ -82,6 +86,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 |         MyError("This is an exception")  # PLW0133
 67 |         MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 64 |     def inner():
@@ -100,6 +105,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 77 |         MyError("This is an exception")  # PLW0133
 78 |         MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 75 |     while True:
@@ -118,6 +124,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 88 |             MyError("This is an exception")  # PLW0133
 89 |             MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 86 |         def method(self):
@@ -136,6 +143,7 @@ PLW0133 [*] Missing `raise` statement on exception
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 97 |         MyError("This is an exception")  # PLW0133
 98 |         MySubError("This is an exception")  # PLW0133
+   |
 help: Add `raise` keyword
    |
 95 |     with suppress(Exception):
@@ -154,6 +162,7 @@ PLW0133 [*] Missing `raise` statement on exception
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 105 |     (MyError("This is an exception"))  # PLW0133
 106 |     (MySubError("This is an exception"))  # PLW0133
+    |
 help: Add `raise` keyword
     |
 103 | def func():
@@ -172,6 +181,7 @@ PLW0133 [*] Missing `raise` statement on exception
     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 113 |     x = 1; (MyError("This is an exception")); y = 2  # PLW0133
 114 |     x = 1; (MySubError("This is an exception")); y = 2  # PLW0133
+    |
 help: Add `raise` keyword
     |
 111 | def func():
@@ -189,6 +199,7 @@ PLW0133 [*] Missing `raise` statement on exception
 120 |     UserWarning("This is a user warning")  # PLW0133
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 121 |     MyUserWarning("This is a custom user warning")  # PLW0133
+    |
 help: Add `raise` keyword
     |
 119 | def func():
@@ -207,6 +218,7 @@ PLW0133 [*] Missing `raise` statement on exception
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 128 |
 129 | PythonFinalizationError("Added in Python 3.13")  # PLW0133
+    |
 help: Add `raise` keyword
     |
 126 |
@@ -225,6 +237,7 @@ PLW0133 [*] Missing `raise` statement on exception
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 130 |
 131 | MyError("This is an exception")  # PLW0133
+    |
 help: Add `raise` keyword
     |
 128 |
@@ -243,6 +256,7 @@ PLW0133 [*] Missing `raise` statement on exception
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 138 |
 139 | MyUserWarning("This is a custom user warning")  # PLW0133
+    |
 help: Add `raise` keyword
     |
 136 |

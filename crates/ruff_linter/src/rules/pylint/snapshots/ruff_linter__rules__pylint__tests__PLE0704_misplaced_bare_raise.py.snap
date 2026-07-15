@@ -9,6 +9,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |     ^^^^^
 31 | except Exception:
 32 |     pass
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:36:9
@@ -19,6 +20,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |         ^^^^^
 37 |     except Exception:
 38 |         pass
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:41:5
@@ -28,6 +30,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |     ^^^^^
 42 |
 43 | def h():
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:47:17
@@ -38,6 +41,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |                 ^^^^^
 48 |     except Exception:
 49 |         pass
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:50:5
@@ -48,15 +52,18 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |     ^^^^^
 51 |
 52 | raise # [misplaced-bare-raise]
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:52:1
+   |
 50 |     raise # [misplaced-bare-raise]
 51 |
 52 | raise # [misplaced-bare-raise]
    | ^^^^^
 53 |
 54 | try:
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:58:9
@@ -67,6 +74,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |         ^^^^^
 59 |
 60 | try:
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:64:9
@@ -77,6 +85,7 @@ PLE0704 Bare `raise` statement is not inside an exception handler
    |         ^^^^^
 65 |
 66 | try:
+   |
 
 PLE0704 Bare `raise` statement is not inside an exception handler
   --> misplaced_bare_raise.py:71:5

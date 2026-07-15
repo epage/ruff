@@ -20,6 +20,7 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |_________________^
 51 |
 52 |       with pytest.warns(UserWarning):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:52:5
@@ -32,6 +33,7 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |_________________^
 55 |
 56 |       with pytest.warns(UserWarning):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:56:5
@@ -44,9 +46,11 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |_________________^
 59 |
 60 |       with pytest.warns(UserWarning):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:60:5
+   |
 58 |               foo()
 59 |
 60 | /     with pytest.warns(UserWarning):
@@ -55,9 +59,11 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |_________________^
 63 |
 64 |       with pytest.warns(UserWarning):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:64:5
+   |
 62 |               foo()
 63 |
 64 | /     with pytest.warns(UserWarning):
@@ -88,9 +94,11 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |___________________^
 86 |
 87 |       with pytest.warns(RuntimeError):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:87:5
+   |
 85 |               print()
 86 |
 87 | /     with pytest.warns(RuntimeError):
@@ -99,6 +107,7 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |______________________^
 90 |
 91 |       with pytest.warns(RuntimeError):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:91:5
@@ -111,6 +120,7 @@ PT031 `pytest.warns()` block should contain a single simple statement
    | |___________________^
 94 |
 95 |       with pytest.warns(RuntimeError):
+   |
 
 PT031 `pytest.warns()` block should contain a single simple statement
   --> PT031.py:95:5

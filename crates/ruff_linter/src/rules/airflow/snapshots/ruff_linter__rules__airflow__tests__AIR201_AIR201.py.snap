@@ -9,6 +9,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 18 |     bash_command="{{ ti.xcom_pull(task_ids='task_1') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 | )
+   |
 help: Replace with `task_1.output`
    |
 17 |     task_id="task_2",
@@ -26,6 +27,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 24 |     bash_command="{{ task_instance.xcom_pull(task_ids='task_1') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | )
+   |
 help: Replace with `task_1.output`
    |
 23 |     task_id="task_3",
@@ -43,6 +45,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 30 |     bash_command="{{ ti.xcom_pull('task_1') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 31 | )
+   |
 help: Replace with `task_1.output`
    |
 29 |     task_id="task_4",
@@ -60,6 +63,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 36 |     bash_command='{{ ti.xcom_pull(task_ids="task_1") }}',  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 37 | )
+   |
 help: Replace with `task_1.output`
    |
 35 |     task_id="task_5",
@@ -77,6 +81,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 42 |     bash_command="{{ti.xcom_pull(task_ids='task_1')}}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 43 | )
+   |
 help: Replace with `task_1.output`
    |
 41 |     task_id="task_6",
@@ -94,6 +99,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 48 |     bash_command="{{ ti.xcom_pull(task_id='task_1') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 49 | )
+   |
 help: Replace with `task_1.output`
    |
 47 |     task_id="task_7",
@@ -111,6 +117,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 54 |     external_task_id="{{ ti.xcom_pull(task_ids='task_1') }}",  # AIR201 (fix: task_1.output)
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | )
+   |
 help: Replace with `task_1.output`
    |
 53 |     task_id="task_8",
@@ -128,6 +135,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 60 |     endpoint="{{ ti.xcom_pull(task_ids='task_1') }}",  # AIR201 (fix: task_1.output)
    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 | )
+   |
 help: Replace with `task_1.output`
    |
 59 |     task_id="task_9",
@@ -145,6 +153,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 67 |     bash_command="{{ ti.xcom_pull(task_ids=['task_1']) }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 68 | )
+   |
 help: Replace with `task_1.output`
    |
 66 |     task_id="task_18",
@@ -162,6 +171,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 73 |     bash_command="{{ ti.xcom_pull(task_ids=('task_1',)) }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 74 | )
+   |
 help: Replace with `task_1.output`
    |
 72 |     task_id="task_19",
@@ -179,6 +189,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 79 |     bash_command="{{ ti.xcom_pull(task_ids='task_1', key='return_value') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 80 | )
+   |
 help: Replace with `task_1.output`
    |
 78 |     task_id="task_20",
@@ -196,6 +207,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 85 |     bash_command="{{ ti.xcom_pull(task_ids=['task_1'], key='return_value') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 86 | )
+   |
 help: Replace with `task_1.output`
    |
 84 |     task_id="task_21",
@@ -213,6 +225,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 91 |     bash_command='{{ task_instance.xcom_pull(task_ids=["task_1"], key="return_value") }}',  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 92 | )
+   |
 help: Replace with `task_1.output`
    |
 90 |     task_id="task_22",
@@ -230,6 +243,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "task_1" instead o
 97 |     bash_command="{{ ti.xcom_pull(key='return_value', task_ids='task_1') }}",  # AIR201 (fix: task_1.output)
    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 98 | )
+   |
 help: Replace with `task_1.output`
    |
 96 |     task_id="task_25",
@@ -247,6 +261,7 @@ AIR201 [*] Use the `.output` attribute on the task object for "extract_data" ins
 108 |     bash_command="{{ ti.xcom_pull(task_ids='extract_data') }}",  # AIR201 (fix: extract_data.output)
     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 109 | )
+    |
 help: Replace with `extract_data.output`
     |
 107 |     task_id="task_16",
@@ -264,4 +279,5 @@ AIR201 Use the `.output` attribute on the task object for "unknown_task" instead
 114 |     bash_command="{{ ti.xcom_pull(task_ids='unknown_task') }}",  # AIR201 (no fix)
     |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 115 | )
+    |
 help: Replace with `unknown_task.output`

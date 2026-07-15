@@ -9,6 +9,7 @@ I001 [*] Import block is un-sorted or un-formatted
   | |________^
 3 |   x = 1
 4 |   import os
+  |
 help: Organize imports
   |
 2 | import b
@@ -26,6 +27,7 @@ I001 [*] Import block is un-sorted or un-formatted
   | |__________^
 6 |   def f():
 7 |       pass
+  |
 help: Organize imports
   |
 5 | import sys
@@ -42,6 +44,7 @@ I001 [*] Import block is un-sorted or un-formatted
 15 | | import sys
    | |__________^
 16 |   """Docstring"""
+   |
 help: Organize imports
    |
 15 | import sys

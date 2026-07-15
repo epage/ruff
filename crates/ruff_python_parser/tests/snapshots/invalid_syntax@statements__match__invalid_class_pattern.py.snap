@@ -400,12 +400,14 @@ Module(
   |
 
 
+  |
 5 |     case Foo(x | y = 1):
 6 |         pass
 7 |     case Foo([x, y] = 1):
   |              ^^^^^^ Syntax Error: Expected an identifier for the keyword pattern
 8 |         pass
 9 |     case Foo({False: 0} = 1):
+  |
 
 
    |

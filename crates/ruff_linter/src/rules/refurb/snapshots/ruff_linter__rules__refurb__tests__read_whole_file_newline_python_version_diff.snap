@@ -17,6 +17,7 @@ FURB101 [*] `open` and `read` should be replaced by `Path("file.txt").read_text(
 4 | with open("file.txt", newline="\r\n") as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 |     x = f.read()
+  |
 help: Replace with `Path("file.txt").read_text(newline="\r\n")`
   |
 3 | # FURB101 (newline is supported in read_text on Python 3.13+)
@@ -35,6 +36,7 @@ FURB101 [*] `open` and `read` should be replaced by `Path("file.txt").read_text(
 8 | with open("file.txt", encoding="utf-8", newline="") as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 9 |     x = f.read()
+  |
 help: Replace with `Path("file.txt").read_text(encoding="utf-8", newline="")`
    |
 3  | # FURB101 (newline is supported in read_text on Python 3.13+)
@@ -57,6 +59,7 @@ FURB101 [*] `open` and `read` should be replaced by `Path("file.txt").read_text(
 12 | with open("file.txt", newline=None) as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 |     x = f.read()
+   |
 help: Replace with `Path("file.txt").read_text(newline=None)`
    |
 3  | # FURB101 (newline is supported in read_text on Python 3.13+)

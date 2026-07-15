@@ -10,6 +10,7 @@ PYI033 Don't use type comments
   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | B: TypeAlias = None  # type: str  # And here's an extra comment about why it's that type  # Y033 Do not use type comments in stubs (e.g…
 8 | C: TypeAlias = None  #type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
+  |
 
 PYI033 Don't use type comments
  --> PYI033.pyi:7:22
@@ -23,21 +24,25 @@ PYI033 Don't use type comments
 
 PYI033 Don't use type comments
   --> PYI033.pyi:8:22
+   |
  6 | A: TypeAlias = None  # type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
  7 | B: TypeAlias = None  # type: str  # And here's an extra comment about why it's that type  # Y033 Do not use type comments in stubs (e.…
  8 | C: TypeAlias = None  #type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | D: TypeAlias = None  #      type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
 10 | E: TypeAlias = None#    type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:9:22
+   |
  7 | …as = None  # type: str  # And here's an extra comment about why it's that type  # Y033 Do not use type comments in stubs (e.g. use "x…
  8 | …as = None  #type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
  9 | …as = None  #      type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | …as = None#    type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
 11 | …as = None#type:int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:10:20
@@ -47,6 +52,7 @@ PYI033 Don't use type comments
 10 | E: TypeAlias = None#    type: int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | F: TypeAlias = None#type:int  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:11:20
@@ -57,6 +63,7 @@ PYI033 Don't use type comments
    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |
 13 | def func(
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:14:12
@@ -66,6 +73,7 @@ PYI033 Don't use type comments
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |     arg2  # type: Sequence[bytes]  # And here's some more info about this arg  # Y033 Do not use type comments in stubs (e.g. use "x: …
 16 | ): ...
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:15:11
@@ -75,6 +83,7 @@ PYI033 Don't use type comments
 15 | …rg2  # type: Sequence[bytes]  # And here's some more info about this arg  # Y033 Do not use type comments in stubs (e.g. use "x: int" instead of "x = ... # type: int")
    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 | ….
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:19:29
@@ -84,6 +93,7 @@ PYI033 Don't use type comments
    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 | …
 21 | …ne  # type: ignore
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:29:22
@@ -93,6 +103,7 @@ PYI033 Don't use type comments
    |                      ^^^^^^^^^^^^^^^^^^^^^^^
 30 |
 31 | class Bar:
+   |
 
 PYI033 Don't use type comments
   --> PYI033.pyi:32:26
@@ -101,3 +112,4 @@ PYI033 Don't use type comments
 32 |     N: TypeAlias = None  # type: can't parse me either!
    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 33 |     # This whole line is commented out and indented # type: str
+   |

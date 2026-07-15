@@ -10,6 +10,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    |              ^^^^^^^^^^
 11 | ) -> None: ...
 12 | def f11(*, x: str = "x") -> None: ...  # OK
+   |
 help: Replace default value with `...`
    |
 9  |     x,
@@ -31,6 +32,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 42 |   ) -> None: ...
 43 |   def f153(
+   |
 help: Replace default value with `...`
    |
 37 |         int, int
@@ -64,6 +66,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 59 |   ) -> None: ...
 60 |   def f154(
+   |
 help: Replace default value with `...`
    |
 45 |         int
@@ -97,6 +100,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 67 |   ) -> None: ...
 68 |   def f141(
+   |
 help: Replace default value with `...`
    |
 62 |         str, tuple[str, ...]
@@ -120,6 +124,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 74 |   ) -> None: ...
 75 |   def f142(
+   |
 help: Replace default value with `...`
    |
 70 |         int
@@ -142,6 +147,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 81 |   ) -> None: ...
 82 |   def f16(
+   |
 help: Replace default value with `...`
    |
 77 |         int
@@ -164,6 +170,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |_____^
 88 |   ) -> None: ...
 89 |   def f17(
+   |
 help: Replace default value with `...`
    |
 84 |         bytes
@@ -185,6 +192,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |___________^
 92 |   ) -> None: ...
 93 |   def f18(
+   |
 help: Replace default value with `...`
    |
 89 | def f17(
@@ -205,6 +213,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
    | |____________^
 96 |   ) -> None: ...
 97 |   def f19(
+   |
 help: Replace default value with `...`
    |
 93 | def f18(
@@ -216,6 +225,7 @@ help: Replace default value with `...`
 
 PYI011 [*] Only simple default values allowed for typed arguments
    --> PYI011.pyi:98:17
+    |
  96 |   ) -> None: ...
  97 |   def f19(
  98 |       x: object = "foo"  # Error PYI011 Only simple default values allowed for typed arguments
@@ -224,6 +234,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     | |_______^
 100 |   ) -> None: ...
 101 |   def f20(
+    |
 help: Replace default value with `...`
    |
 97 | def f19(
@@ -244,6 +255,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     | |_______^
 104 |   ) -> None: ...
 105 |   def f21(
+    |
 help: Replace default value with `...`
     |
 101 | def f20(
@@ -264,6 +276,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     | |________^
 108 |   ) -> None: ...
 109 |   def f22(
+    |
 help: Replace default value with `...`
     |
 105 | def f21(
@@ -284,6 +297,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     | |__________^
 112 |   ) -> None: ...
 113 |   def f23(
+    |
 help: Replace default value with `...`
     |
 109 | def f22(
@@ -302,6 +316,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     |                ^^^
 139 | ) -> None: ...
 140 | def f32(
+    |
 help: Replace default value with `...`
     |
 137 | def f31(
@@ -319,6 +334,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     |                ^^^^^^
 142 | ) -> None: ...
 143 | def f33(
+    |
 help: Replace default value with `...`
     |
 140 | def f32(
@@ -336,6 +352,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     |                ^^^^^^^^^
 148 | ) -> None: ...
 149 | def f35(
+    |
 help: Replace default value with `...`
     |
 146 | def f34(
@@ -355,6 +372,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
     | |________^
 152 |   ) -> None: ...
 153 |   def f36(
+    |
 help: Replace default value with `...`
     |
 149 | def f35(
@@ -374,6 +392,7 @@ PYI011 [*] Only simple default values allowed for typed arguments
 160 | |     + "",
     | |________^
 161 |   ) -> None: ...
+    |
 help: Replace default value with `...`
     |
 158 |     *,

@@ -11,6 +11,7 @@ PLW0101 Unreachable code in `after_return`
    | |_____________________^
 20 |
 21 |   def after_raise():
+   |
 
 PLW0101 Unreachable code in `after_raise`
   --> unreachable.py:23:5
@@ -22,6 +23,7 @@ PLW0101 Unreachable code in `after_raise`
    | |_____________________^
 25 |
 26 |   def multiple_returns():
+   |
 
 PLW0101 Unreachable code in `multiple_returns`
   --> unreachable.py:28:5

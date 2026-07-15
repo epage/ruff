@@ -20,6 +20,7 @@ DOC502 Raised exception is not explicitly raised: `FasterThanLightError`
 18 | |     """
    | |_______^
 19 |       return distance / time
+   |
 help: Remove `FasterThanLightError` from the docstring
 
 DOC502 Raised exceptions are not explicitly raised: `FasterThanLightError`, `DivisionByZero`
@@ -42,6 +43,7 @@ DOC502 Raised exceptions are not explicitly raised: `FasterThanLightError`, `Div
 36 | |     """
    | |_______^
 37 |       return distance / time
+   |
 help: Remove `FasterThanLightError`, `DivisionByZero` from the docstring
 
 DOC502 Raised exception is not explicitly raised: `DivisionByZero`
@@ -65,4 +67,5 @@ DOC502 Raised exception is not explicitly raised: `DivisionByZero`
    | |_______^
 55 |       try:
 56 |           return distance / time
+   |
 help: Remove `DivisionByZero` from the docstring

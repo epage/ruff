@@ -8,9 +8,11 @@ F842 Local variable `name` is annotated but never used
 2 |     name: str
   |     ^^^^
 3 |     age: int
+  |
 
 F842 Local variable `age` is annotated but never used
  --> F842.py:3:5
+  |
 1 | def f():
 2 |     name: str
 3 |     age: int

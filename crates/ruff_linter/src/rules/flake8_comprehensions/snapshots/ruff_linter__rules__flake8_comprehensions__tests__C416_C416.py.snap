@@ -10,6 +10,7 @@ C416 [*] Unnecessary list comprehension (rewrite using `list()`)
   | ^^^^^^^^^^^^^^
 7 | {i for i in x}
 8 | {k: v for k, v in y}
+  |
 help: Rewrite using `list()`
   |
 5 |
@@ -27,6 +28,7 @@ C416 [*] Unnecessary set comprehension (rewrite using `set()`)
   | ^^^^^^^^^^^^^^
 8 | {k: v for k, v in y}
 9 | {k: v for k, v in d.items()}
+  |
 help: Rewrite using `set()`
   |
 6 | [i for i in x]
@@ -38,12 +40,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 C416 [*] Unnecessary dict comprehension (rewrite using `dict()`)
   --> C416.py:8:1
+   |
  6 | [i for i in x]
  7 | {i for i in x}
  8 | {k: v for k, v in y}
    | ^^^^^^^^^^^^^^^^^^^^
  9 | {k: v for k, v in d.items()}
 10 | [(k, v) for k, v in d.items()]
+   |
 help: Rewrite using `dict()`
   |
 7 | {i for i in x}
@@ -55,12 +59,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 C416 [*] Unnecessary dict comprehension (rewrite using `dict()`)
   --> C416.py:9:1
+   |
  7 | {i for i in x}
  8 | {k: v for k, v in y}
  9 | {k: v for k, v in d.items()}
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | [(k, v) for k, v in d.items()]
 11 | [(k, v) for [k, v] in d.items()]
+   |
 help: Rewrite using `dict()`
    |
 8  | {k: v for k, v in y}
@@ -79,6 +85,7 @@ C416 [*] Unnecessary list comprehension (rewrite using `list()`)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 | [(k, v) for [k, v] in d.items()]
 12 | {k: (a, b) for k, (a, b) in d.items()}
+   |
 help: Rewrite using `list()`
    |
 9  | {k: v for k, v in d.items()}
@@ -96,6 +103,7 @@ C416 [*] Unnecessary list comprehension (rewrite using `list()`)
 11 | [(k, v) for [k, v] in d.items()]
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | {k: (a, b) for k, (a, b) in d.items()}
+   |
 help: Rewrite using `list()`
    |
 10 | [(k, v) for k, v in d.items()]
@@ -113,6 +121,7 @@ C416 [*] Unnecessary list comprehension (rewrite using `list()`)
    |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
 26 |
 27 | zz = [[1], [2], [3]]
+   |
 help: Rewrite using `list()`
    |
 24 | # Regression test for: https://github.com/astral-sh/ruff/issues/7196

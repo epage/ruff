@@ -11,6 +11,7 @@ ASYNC110 Use `trio.Event` instead of awaiting `trio.sleep` in a `while` loop
 
 ASYNC110 Use `trio.Event` instead of awaiting `trio.sleep` in a `while` loop
   --> ASYNC110.py:12:5
+   |
 11 |   async def func():
 12 | /     while True:
 13 | |         await trio.sleep_until(10)
@@ -18,6 +19,7 @@ ASYNC110 Use `trio.Event` instead of awaiting `trio.sleep` in a `while` loop
 
 ASYNC110 Use `anyio.Event` instead of awaiting `anyio.sleep` in a `while` loop
   --> ASYNC110.py:22:5
+   |
 21 |   async def func():
 22 | /     while True:
 23 | |         await anyio.sleep(10)
@@ -25,6 +27,7 @@ ASYNC110 Use `anyio.Event` instead of awaiting `anyio.sleep` in a `while` loop
 
 ASYNC110 Use `anyio.Event` instead of awaiting `anyio.sleep` in a `while` loop
   --> ASYNC110.py:27:5
+   |
 26 |   async def func():
 27 | /     while True:
 28 | |         await anyio.sleep_until(10)
@@ -32,6 +35,7 @@ ASYNC110 Use `anyio.Event` instead of awaiting `anyio.sleep` in a `while` loop
 
 ASYNC110 Use `asyncio.Event` instead of awaiting `asyncio.sleep` in a `while` loop
   --> ASYNC110.py:37:5
+   |
 36 |   async def func():
 37 | /     while True:
 38 | |         await asyncio.sleep(10)

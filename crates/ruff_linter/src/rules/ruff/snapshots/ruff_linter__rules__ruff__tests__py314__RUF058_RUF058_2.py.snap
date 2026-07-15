@@ -9,6 +9,7 @@ RUF058 [*] `itertools.starmap` called on `zip` iterable
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 | starmap(func, zip(a, b, c, strict=False))
 7 | starmap(func, zip(a, b, c, strict=strict))
+  |
 help: Use `map` instead
   |
 4 | # Errors in Python 3.14+
@@ -25,12 +26,14 @@ RUF058 [*] `itertools.starmap` called on `zip` iterable
 6 | starmap(func, zip(a, b, c, strict=False))
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | starmap(func, zip(a, b, c, strict=strict))
+  |
 help: Use `map` instead
   |
 5 | starmap(func, zip(a, b, c, strict=True))
   - starmap(func, zip(a, b, c, strict=False))
 6 + map(func, a, b, c, strict=False)
 7 | starmap(func, zip(a, b, c, strict=strict))
+  |
 
 RUF058 [*] `itertools.starmap` called on `zip` iterable
  --> RUF058_2.py:7:1

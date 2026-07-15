@@ -1225,6 +1225,7 @@ watermelon
           | ^^^^^^^^
         6 | finch
         7 | gorilla
+          |
         ",
         );
 
@@ -1248,6 +1249,7 @@ watermelon
           | ^^^^^^^^
         6 | finch
         7 | gorilla
+          |
         ",
         );
 
@@ -1267,6 +1269,7 @@ watermelon
           | ^^^^^^^^
         6 | finch
         7 | gorilla
+          |
         ",
         );
     }
@@ -1291,6 +1294,7 @@ watermelon
           | ^
         2 | beetle
         3 | canary
+          |
         ",
         );
 
@@ -1309,6 +1313,7 @@ watermelon
           | ^ primary annotation message
         2 | beetle
         3 | canary
+          |
         ",
         );
     }
@@ -1331,6 +1336,7 @@ watermelon
           | ^^^^^^^^^^^^
         6 | ξξξξξξξξξξξξ
         7 | ππππππππππππ
+          |
         ",
         );
 
@@ -1342,11 +1348,13 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
          --> non-ascii:2:2
+          |
         1 | ☃☃☃☃☃☃☃☃☃☃☃☃
         2 | 💩💩💩💩💩💩💩💩💩💩💩💩
           |   ^^
         3 | ΔΔΔΔΔΔΔΔΔΔΔΔ
         4 | ββββββββββββ
+          |
         ",
         );
     }
@@ -1369,6 +1377,7 @@ watermelon
         5 | elephant
           | ^^^^^^^^
         6 | finch
+          |
         ",
         );
 
@@ -1399,6 +1408,7 @@ watermelon
           | ^^^^^^^^
         2 | beetle
         3 | canary
+          |
         ",
         );
 
@@ -1410,6 +1420,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:11:1
+           |
          9 | inchworm
         10 | jackrabbit
         11 | kangaroo
@@ -1425,6 +1436,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:5:1
+           |
          1 | aardvark
          2 | beetle
          3 | canary
@@ -1437,6 +1449,7 @@ watermelon
          9 | inchworm
         10 | jackrabbit
         11 | kangaroo
+           |
         ",
         );
     }
@@ -1506,6 +1519,7 @@ watermelon
         3 | canary
           | ^^^^^^
         4 | dog
+          |
         ",
         );
 
@@ -1531,6 +1545,7 @@ watermelon
         4 | dog
           | ^^^
         5 | elephant
+          |
         ",
         );
 
@@ -1561,6 +1576,7 @@ watermelon
         5 | elephant
           | ^^^^^^^^
         6 | finch
+          |
         ",
         );
 
@@ -1588,6 +1604,7 @@ watermelon
         6 | finch
         7 | gorilla
         8 | hippopotamus
+          |
         ",
         );
 
@@ -1601,6 +1618,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:1:1
+           |
          1 | aardvark
            | ^^^^^^^^
          2 | beetle
@@ -1614,6 +1632,7 @@ watermelon
          9 | inchworm
         10 | jackrabbit
         11 | kangaroo
+           |
         ",
         );
 
@@ -1630,12 +1649,15 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:1:1
+           |
          1 | aardvark
            | ^^^^^^^^
          2 | beetle
          3 | canary
          4 | dog
+           |
           ::: animals:9:1
+           |
          6 | finch
          7 | gorilla
          8 | hippopotamus
@@ -1643,6 +1665,7 @@ watermelon
            | ^^^^^^^^
         10 | jackrabbit
         11 | kangaroo
+           |
         ",
         );
     }
@@ -1664,10 +1687,12 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
          --> spacey-animals:8:1
+          |
         7 | dog
         8 | elephant
           | ^^^^^^^^
         9 | finch
+          |
         ",
         );
 
@@ -1685,6 +1710,7 @@ watermelon
            | ^^^^^^^^^^^^
         13 | inchworm
         14 | jackrabbit
+           |
         ",
         );
 
@@ -1696,11 +1722,13 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> spacey-animals:13:1
+           |
         11 | gorilla
         12 | hippopotamus
         13 | inchworm
            | ^^^^^^^^
         14 | jackrabbit
+           |
         ",
         );
     }
@@ -1778,6 +1806,7 @@ watermelon
           | ^^^^^^^^^^
         4 | lime
         5 | orange
+          |
         ",
         );
     }
@@ -1805,6 +1834,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         info: this is a helpful note
         ",
         );
@@ -1841,6 +1871,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         info: this is a helpful note
         info: another helpful note
         info: and another helpful note
@@ -1868,6 +1899,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         warning: sub-diagnostic message
          --> fruits:3:1
           |
@@ -1877,6 +1909,7 @@ watermelon
           | ^^^^^^^^^^
         4 | lime
         5 | orange
+          |
         ",
         );
     }
@@ -1902,6 +1935,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         warning: sub-diagnostic message
          --> fruits:3:1
           |
@@ -1911,8 +1945,10 @@ watermelon
           | ^^^^^^^^^^
         4 | lime
         5 | orange
+          |
         warning: sub-diagnostic message
           --> animals:11:1
+           |
          9 | inchworm
         10 | jackrabbit
         11 | kangaroo
@@ -1937,6 +1973,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         warning: sub-diagnostic message
           --> animals:11:1
            |
@@ -1953,6 +1990,7 @@ watermelon
           | ^^^^^^^^^^
         4 | lime
         5 | orange
+          |
         ",
         );
     }
@@ -1982,6 +2020,7 @@ watermelon
           | ^^^^^^
         4 | dog
         5 | elephant
+          |
         warning: sub-diagnostic message
          --> animals:3:1
           |
@@ -1991,6 +2030,7 @@ watermelon
           | ------
         4 | dog
         5 | elephant
+          |
         ",
         );
     }
@@ -2017,6 +2057,7 @@ watermelon
           | |_____^
         7 |   gorilla
         8 |   hippopotamus
+          |
         ",
         );
 
@@ -2039,6 +2080,7 @@ watermelon
           | |______^
         7 |   gorilla
         8 |   hippopotamus
+          |
         ",
         );
 
@@ -2059,6 +2101,7 @@ watermelon
           | |_^
         8 |   hippopotamus
         9 |   inchworm
+          |
         ",
         );
 
@@ -2069,6 +2112,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:5:4
+           |
          3 |   canary
          4 |   dog
          5 |   elephant
@@ -2079,6 +2123,7 @@ watermelon
            | |________^
          9 |   inchworm
         10 |   jackrabbit
+           |
         ",
         );
 
@@ -2089,6 +2134,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:5:4
+           |
          3 |   canary
          4 |   dog
          5 |   elephant
@@ -2099,6 +2145,7 @@ watermelon
            | |________-
          9 |   inchworm
         10 |   jackrabbit
+           |
         ",
         );
     }
@@ -2132,6 +2179,7 @@ watermelon
           | |________^
         8 |    hippopotamus
         9 |    inchworm
+          |
         ",
         );
 
@@ -2147,6 +2195,7 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
          --> animals:4:1
+          |
         2 |    beetle
         3 |    canary
         4 |    dog
@@ -2159,6 +2208,7 @@ watermelon
           | |________^
         8 |    hippopotamus
         9 |    inchworm
+          |
         ",
         );
 
@@ -2189,6 +2239,7 @@ watermelon
           |
         8 |    hippopotamus
         9 |    inchworm
+          |
         ",
         );
 
@@ -2222,6 +2273,7 @@ watermelon
           |  |_______^
         8 |    hippopotamus
         9 |    inchworm
+          |
         ",
         );
 
@@ -2250,6 +2302,7 @@ watermelon
           |  |_______^
         8 |    hippopotamus
         9 |    inchworm
+          |
         ",
         );
     }
@@ -2275,6 +2328,7 @@ watermelon
           |   ^^^^ giant land mammal
         6 | finch
         7 | gorilla
+          |
         ",
         );
 
@@ -2299,6 +2353,7 @@ watermelon
           |   but afraid of mice
         6 | finch
         7 | gorilla
+          |
         ",
         );
     }
@@ -2321,17 +2376,21 @@ watermelon
             @"
         error[test-diagnostic]: main diagnostic message
           --> animals:8:1
+           |
          6 | finch
          7 | gorilla
          8 | hippopotamus
            | ^^^^^^^^^^^^ primary
          9 | inchworm
         10 | jackrabbit
+           |
           ::: animals:1:1
+           |
          1 | aardvark
            | -------- secondary
          2 | beetle
          3 | canary
+           |
         ",
         );
 
@@ -2412,6 +2471,7 @@ watermelon
           | -------- secondary
         2 | beetle
         3 | canary
+          |
         ",
         );
 

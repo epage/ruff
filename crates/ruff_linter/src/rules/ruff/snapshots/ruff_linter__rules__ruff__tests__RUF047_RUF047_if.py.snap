@@ -19,6 +19,7 @@ help: Remove the `else` clause
 
 RUF047 [*] Empty `else` clause
   --> RUF047_if.py:11:1
+   |
  9 |   if this_comment():
 10 |       belongs_to()  # `if`
 11 | / else:
@@ -34,6 +35,7 @@ help: Remove the `else` clause
 
 RUF047 [*] Empty `else` clause
   --> RUF047_if.py:19:1
+   |
 17 |   elif the_same():
 18 |       as_if()
 19 | / else:
@@ -57,7 +59,9 @@ RUF047 [*] Empty `else` clause
    | |________^
 28 |
 29 |   if this_second_comment():
+   |
 help: Remove the `else` clause
+   |
 25 |       # `if`
    - else:
    -     pass
@@ -95,6 +99,7 @@ help: Remove the `else` clause
 
 RUF047 [*] Empty `else` clause
   --> RUF047_if.py:49:1
+   |
 47 | if of_course:
 48 |     this() # comment
 49 | else: ...

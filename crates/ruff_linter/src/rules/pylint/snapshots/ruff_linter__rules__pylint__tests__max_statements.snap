@@ -8,3 +8,4 @@ PLR0915 Too many statements (2 > 1)
   |     ^
 7 |     def g(x):
 8 |         pass
+  |

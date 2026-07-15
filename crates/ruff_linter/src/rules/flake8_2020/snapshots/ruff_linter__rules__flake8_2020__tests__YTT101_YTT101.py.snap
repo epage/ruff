@@ -10,6 +10,7 @@ YTT101 `sys.version[:3]` referenced (python3.10), use `sys.version_info`
   |       ^^^^^^^^^^^
 7 | print(version[:3])
 8 | print(v[:3])
+  |
 
 YTT101 `sys.version[:3]` referenced (python3.10), use `sys.version_info`
  --> YTT101.py:7:7
@@ -18,12 +19,15 @@ YTT101 `sys.version[:3]` referenced (python3.10), use `sys.version_info`
 7 | print(version[:3])
   |       ^^^^^^^
 8 | print(v[:3])
+  |
 
 YTT101 `sys.version[:3]` referenced (python3.10), use `sys.version_info`
   --> YTT101.py:8:7
+   |
  6 | print(sys.version[:3])
  7 | print(version[:3])
  8 | print(v[:3])
    |       ^
  9 |
 10 | # the tool is timid and only flags certain numeric slices
+   |

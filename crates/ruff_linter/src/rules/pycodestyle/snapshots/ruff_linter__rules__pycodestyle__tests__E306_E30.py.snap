@@ -10,6 +10,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^
 855 |         pass
 856 | # end
+    |
 help: Add missing blank line
     |
 853 |     x = 1
@@ -26,6 +27,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^
 863 |         pass
 864 | # end
+    |
 help: Add missing blank line
     |
 861 |     x = 1
@@ -42,6 +44,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^
 871 |         x = 1
 872 |         def c():
+    |
 help: Add missing blank line
     |
 869 |     x = 2
@@ -58,6 +61,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |         ^^^
 873 |             pass
 874 | # end
+    |
 help: Add missing blank line
     |
 871 |         x = 1
@@ -74,6 +78,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^^^
 881 |         pass
 882 |     x = 2
+    |
 help: Add missing blank line
     |
 879 |     x = 1
@@ -90,6 +95,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^
 884 |         pass
 885 | # end
+    |
 help: Add missing blank line
     |
 882 |     x = 2
@@ -105,6 +111,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
 892 |     def baz(): pass
     |     ^^^
 893 | # end
+    |
 help: Add missing blank line
     |
 891 |         pass
@@ -121,6 +128,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^
 900 |         pass
 901 | # end
+    |
 help: Add missing blank line
     |
 898 |     def bar(): pass
@@ -137,6 +145,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^
 908 |     def b():
 909 |         pass
+    |
 help: Add missing blank line
     |
 906 |     x = 2
@@ -153,6 +162,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^
 917 |     async def b():
 918 |         pass
+    |
 help: Add missing blank line
     |
 915 |     x = 2
@@ -169,6 +179,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |     ^^^^^
 926 |         pass
 927 | # end
+    |
 help: Add missing blank line
     |
 924 |     x = 2
@@ -185,6 +196,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
     |         ^^^
 984 |             loop.remove_reader(self._fd)
 985 |         loop.add_reader(self._fd, callback)
+    |
 help: Add missing blank line
     |
 982 |         loop = asyncio.get_event_loop()
@@ -201,6 +213,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
      |         ^^^
 1003 |             return 1
 1004 |         return 2
+     |
 help: Add missing blank line
      |
 1001 |         x = 1
@@ -217,6 +230,7 @@ E306 [*] Expected 1 blank line before a nested definition, found 0
      |             ^^^
 1010 |                 return 1
 1011 |             return 2
+     |
 help: Add missing blank line
      |
 1008 |             x = 1

@@ -9,6 +9,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("file.t
 3 | with Path("file.txt").open("w") as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |     f.write("test")
+  |
 help: Replace with `Path("file.txt").write_text("test")`
   |
 2 |
@@ -26,6 +27,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("file.t
 6 | with Path("file.txt").open("wb") as f:
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |     f.write(b"test")
+  |
 help: Replace with `Path("file.txt").write_bytes(b"test")`
   |
 5 |
@@ -37,11 +39,13 @@ help: Replace with `Path("file.txt").write_bytes(b"test")`
 
 FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("file.txt").write_text("test")`
   --> FURB103_1.py:9:6
+   |
  7 |     f.write(b"test")
  8 |
  9 | with Path("file.txt").open(mode="w") as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 |     f.write("test")
+   |
 help: Replace with `Path("file.txt").write_text("test")`
    |
 8  |
@@ -59,6 +63,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("file.t
 12 | with Path("file.txt").open("w", encoding="utf8") as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 |     f.write("test")
+   |
 help: Replace with `Path("file.txt").write_text("test", encoding="utf8")`
    |
 11 |
@@ -76,6 +81,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("file.t
 15 | with Path("file.txt").open("w", errors="ignore") as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |     f.write("test")
+   |
 help: Replace with `Path("file.txt").write_text("test", errors="ignore")`
    |
 14 |
@@ -93,6 +99,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path(foo()).
 18 | with Path(foo()).open("w") as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |     f.write("test")
+   |
 help: Replace with `Path(foo()).write_text("test")`
    |
 17 |
@@ -109,6 +116,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `p.write_text
 22 | with p.open("w") as f:
    |      ^^^^^^^^^^^^^^^^
 23 |     f.write("test")
+   |
 help: Replace with `p.write_text("test")`
    |
 21 | p = Path("file.txt")
@@ -126,6 +134,7 @@ FURB103 [*] `Path.open()` followed by `write()` can be replaced by `Path("foo", 
 25 | with Path("foo", "bar", "baz").open("w") as f:
    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 26 |     f.write("test")
+   |
 help: Replace with `Path("foo", "bar", "baz").write_text("test")`
    |
 24 |

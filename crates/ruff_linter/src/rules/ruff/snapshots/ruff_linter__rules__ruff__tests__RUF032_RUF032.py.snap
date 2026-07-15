@@ -10,6 +10,7 @@ RUF032 [*] `Decimal()` called with float literal argument
   |                 ^^^
 7 |
 8 | decimal.Decimal("0.0")
+  |
 help: Replace with string literal
   |
 5 |
@@ -28,6 +29,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |                 ^^^^
 13 |
 14 | decimal.Decimal("10.0")
+   |
 help: Replace with string literal
    |
 11 |
@@ -46,6 +48,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |                 ^^^^^
 19 |
 20 | decimal.Decimal("-10.0")
+   |
 help: Replace with string literal
    |
 17 |
@@ -64,6 +67,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |               ^^^
 34 |
 35 | val = Decimal("0.0")
+   |
 help: Replace with string literal
    |
 32 |
@@ -82,6 +86,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |               ^^^^
 40 |
 41 | val = Decimal("10.0")
+   |
 help: Replace with string literal
    |
 38 |
@@ -100,6 +105,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |               ^^^^^
 46 |
 47 | val = Decimal("-10.0")
+   |
 help: Replace with string literal
    |
 44 |
@@ -118,6 +124,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |               ^^^^^
 57 |
 58 | val = Decimal(-+--++--4.0) # Suggest `Decimal("-4.0")` 
+   |
 help: Replace with string literal
    |
 55 |
@@ -152,6 +159,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |                       ^^^
 89 |
 90 | val = decimal.Decimal("0.0")
+   |
 help: Replace with string literal
    |
 87 |
@@ -170,6 +178,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |                       ^^^^
 93 |
 94 | val = decimal.Decimal("10.0")
+   |
 help: Replace with string literal
    |
 91 |
@@ -188,6 +197,7 @@ RUF032 [*] `Decimal()` called with float literal argument
    |                       ^^^^^
 97 |
 98 | val = decimal.Decimal("-10.0")
+   |
 help: Replace with string literal
    |
 95 |

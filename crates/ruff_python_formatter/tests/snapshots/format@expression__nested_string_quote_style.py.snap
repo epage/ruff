@@ -401,6 +401,7 @@ error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python
    |                        ^
 29 | t'"double" quotes and {'nested string with "double" quotes'}'
 30 | f"'single' quotes and {"nested string with 'single' quotes"}'"  # syntax error pre-3.12
+   |
 warning: Only accept new syntax errors if they are also present in the input. The formatter should not introduce syntax errors.
 
 error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
@@ -412,6 +413,7 @@ error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python
    |                        ^
 31 | t"'single' quotes and {"nested string with 'single' quotes"}'"
 32 | f'"double" quotes and {"nested string with 'single' quotes"}'  # syntax error pre-3.12
+   |
 warning: Only accept new syntax errors if they are also present in the input. The formatter should not introduce syntax errors.
 
 
@@ -526,6 +528,7 @@ error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python
    |                        ^
 29 | t'"double" quotes and {'nested string with "double" quotes'}'
 30 | f"'single' quotes and {"nested string with 'single' quotes"}'"  # syntax error pre-3.12
+   |
 warning: Only accept new syntax errors if they are also present in the input. The formatter should not introduce syntax errors.
 
 error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
@@ -537,4 +540,5 @@ error[invalid-syntax]: Cannot reuse outer quote character in f-strings on Python
    |                        ^
 31 | t"'single' quotes and {"nested string with 'single' quotes"}'"
 32 | f'"double" quotes and {"nested string with 'single' quotes"}'  # syntax error pre-3.12
+   |
 warning: Only accept new syntax errors if they are also present in the input. The formatter should not introduce syntax errors.

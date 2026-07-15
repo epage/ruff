@@ -12,6 +12,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
   | |___^
 8 |
 9 |   l = []
+  |
 help: Replace single multiline quotes with double quotes
   |
 4 |
@@ -35,6 +36,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
    | |___^
 14 |       '''
 15 |       Single quotes multiline class docstring
+   |
 help: Replace single multiline quotes with double quotes
    |
 10 |
@@ -57,6 +59,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
    | |_______^
 21 |
 22 |       # The colon in the list indexing below is an edge case for the docstring scanner
+   |
 help: Replace single multiline quotes with double quotes
    |
 17 |
@@ -78,6 +81,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
    | |_____________________________________^
 25 |           val=l[Cls():3]):
 26 |           '''
+   |
 help: Replace single multiline quotes with double quotes
    |
 22 |     # The colon in the list indexing below is an edge case for the docstring scanner
@@ -99,6 +103,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
    | |___________^
 35 |
 36 |           if l:
+   |
 help: Replace single multiline quotes with double quotes
    |
 31 |
@@ -119,6 +124,7 @@ Q001 [*] Single quote multiline found but double quotes preferred
 39 | |             '''
    | |_______________^
 40 |               pass
+   |
 help: Replace single multiline quotes with double quotes
    |
 36 |         if l:

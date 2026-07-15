@@ -563,6 +563,7 @@ fn overrides_invalid_include_glob() -> anyhow::Result<()> {
       |            ^^^^^^^^^^^^^^^^ unclosed character class; missing ']'
     7 | [tool.ty.overrides.rules]
     8 | division-by-zero = "warn"
+      |
     "#);
 
     Ok(())
@@ -609,6 +610,7 @@ fn overrides_invalid_exclude_glob() -> anyhow::Result<()> {
       |            ^^^^^^^^^^^^^ Too many stars at position 1
     8 | [tool.ty.overrides.rules]
     9 | division-by-zero = "warn"
+      |
     "#);
 
     Ok(())
@@ -644,6 +646,7 @@ fn overrides_missing_include_exclude() -> anyhow::Result<()> {
     ----- stdout -----
     warning[unnecessary-overrides-section]: Unnecessary `overrides` section
      --> pyproject.toml:5:1
+      |
     5 | [[tool.ty.overrides]]
       | ^^^^^^^^^^^^^^^^^^^^^ This overrides section applies to all files
     info: It has no `include` or `exclude` option restricting the files
@@ -696,6 +699,7 @@ fn overrides_empty_include() -> anyhow::Result<()> {
     ----- stdout -----
     warning[empty-include]: Empty include matches no files
      --> pyproject.toml:6:11
+      |
     6 | include = []  # Empty include - won't match any files
       |           ^^ This `include` list is empty
     info: Remove the `include` option to match all files or add a pattern to match specific files
@@ -745,6 +749,7 @@ fn overrides_no_actual_overrides() -> anyhow::Result<()> {
     ----- stdout -----
     warning[useless-overrides-section]: Useless `overrides` section
      --> pyproject.toml:5:1
+      |
     5 | [[tool.ty.overrides]]
       | ^^^^^^^^^^^^^^^^^^^^^ This overrides section overrides no settings
     info: It has no `rules` or `analysis` table
@@ -805,12 +810,14 @@ fn overrides_unknown_rules() -> anyhow::Result<()> {
     ----- stdout -----
     error[division-by-zero]: Cannot divide object of type `Literal[4]` by zero
      --> main.py:2:5
+      |
     2 | y = 4 / 0
       |     ^^^^^
     info: rule `division-by-zero` was selected in the configuration file
 
     warning[unknown-rule]: Unknown rule `division-by-zer`. Did you mean `division-by-zero`?
       --> pyproject.toml:10:1
+       |
     10 | division-by-zer = "error"  # incorrect rule name
        | ^^^^^^^^^^^^^^^
 
@@ -886,6 +893,7 @@ fn cli_all_rules_warn() -> anyhow::Result<()> {
     ----- stdout -----
     warning[unresolved-reference]: Name `prin` used when not defined
      --> test.py:2:1
+      |
     2 | prin(x)  # unresolved-reference
       | ^^^^
     info: rule `unresolved-reference` was selected on the command line
@@ -937,6 +945,7 @@ fn cli_all_rules_precedence() -> anyhow::Result<()> {
     ----- stdout -----
     error[unresolved-reference]: Name `prin` used when not defined
      --> test.py:6:1
+      |
     6 | prin(y)  # unresolved-reference
       | ^^^^
     info: rule `unresolved-reference` was selected on the command line
@@ -1015,6 +1024,7 @@ fn configuration_all_rules() -> anyhow::Result<()> {
     ----- stdout -----
     error[unresolved-reference]: Name `prin` used when not defined
      --> test.py:6:1
+      |
     6 | prin(y)  # unresolved-reference
       | ^^^^
     info: rule `unresolved-reference` was selected in the configuration file
@@ -1065,6 +1075,7 @@ fn configuration_all_rules_with_rule_sorting_before_all() -> anyhow::Result<()> 
     ----- stdout -----
     error[abstract-method-in-final-class]: Final class `Derived` has unimplemented abstract methods
       --> test.py:6:5
+       |
      6 | /     @abstractmethod
      7 | |     def foo(self) -> int:
        | |________________________- `foo` declared as abstract on superclass `Base`
@@ -1126,6 +1137,7 @@ fn overrides_all_rules_with_rule_sorting_before_all() -> anyhow::Result<()> {
     ----- stdout -----
     error[abstract-method-in-final-class]: Final class `Derived` has unimplemented abstract methods
       --> src/test.py:6:5
+       |
      6 | /     @abstractmethod
      7 | |     def foo(self) -> int:
        | |________________________- `foo` declared as abstract on superclass `Base`
@@ -1187,18 +1199,21 @@ fn all_overrides() -> anyhow::Result<()> {
     ----- stdout -----
     error[division-by-zero]: Cannot divide object of type `Literal[4]` by zero
      --> main.py:2:5
+      |
     2 | y = 4 / 0  # division-by-zero: error (global)
       |     ^^^^^
     info: rule `division-by-zero` was selected in the configuration file
 
     error[unresolved-reference]: Name `prin` used when not defined
      --> main.py:4:1
+      |
     4 | prin(x)    # unresolved-reference: error (global)
       | ^^^^
     info: rule `unresolved-reference` was selected in the configuration file
 
     error[division-by-zero]: Cannot divide object of type `Literal[4]` by zero
      --> tests/test_main.py:2:5
+      |
     2 | y = 4 / 0  # division-by-zero: error (global)
       |     ^^^^^
     info: rule `division-by-zero` was selected in the configuration file

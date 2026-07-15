@@ -9,6 +9,7 @@ invalid-syntax: missing closing quote in string literal
   |    ^
 3 | "" ""
 4 | '' '' '
+  |
 
 invalid-syntax: missing closing quote in string literal
  --> ISC_syntax_error_2.py:4:7
@@ -19,6 +20,7 @@ invalid-syntax: missing closing quote in string literal
   |       ^
 5 | "" "" "
 6 | f"" f"
+  |
 
 invalid-syntax: missing closing quote in string literal
  --> ISC_syntax_error_2.py:5:7
@@ -29,14 +31,17 @@ invalid-syntax: missing closing quote in string literal
   |       ^
 6 | f"" f"
 7 | f"" f"" f"
+  |
 
 invalid-syntax: f-string: unterminated string
  --> ISC_syntax_error_2.py:6:7
+  |
 4 | '' '' '
 5 | "" "" "
 6 | f"" f"
   |       ^
 7 | f"" f"" f"
+  |
 
 invalid-syntax: f-string: unterminated string
  --> ISC_syntax_error_2.py:7:11

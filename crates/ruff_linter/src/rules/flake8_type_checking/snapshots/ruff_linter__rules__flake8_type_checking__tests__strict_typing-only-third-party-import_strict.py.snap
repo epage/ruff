@@ -10,6 +10,7 @@ TC002 [*] Move third-party import `pkg.A` into a type-checking block
    |                     ^
 28 |
 29 |     def test(value: A):
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -34,6 +35,7 @@ TC002 [*] Move third-party import `pkg.A` into a type-checking block
    |                     ^
 36 |
 37 |     def test(value: A):
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -59,6 +61,7 @@ TC002 [*] Move third-party import `pkg.bar.A` into a type-checking block
    |                         ^
 55 |
 56 |     def test(value: A):
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -82,6 +85,7 @@ TC002 [*] Move third-party import `pkg` into a type-checking block
 62 |     import pkg
    |            ^^^
 63 |     import pkg.bar as B
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -105,6 +109,7 @@ TC002 [*] Move third-party import `pkg.foo` into a type-checking block
 71 |     import pkg.foo as F
    |                       ^
 72 |     import pkg.foo.bar as B
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -128,6 +133,7 @@ TC002 [*] Move third-party import `pkg` into a type-checking block
 80 |     import pkg
    |            ^^^
 81 |     import pkg.foo.bar as B
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -151,6 +157,7 @@ TC002 [*] Move third-party import `pkg` into a type-checking block
 91 |     import pkg
    |            ^^^
 92 |     import pkgfoo.bar as B
+   |
 help: Move into type-checking block
    |
 1  | from __future__ import annotations
@@ -175,6 +182,7 @@ TC002 [*] Move third-party import `pkg.foo` into a type-checking block
     |                       ^
 102 |
 103 |     def test(value: F.Foo):
+    |
 help: Move into type-checking block
     |
 1   | from __future__ import annotations

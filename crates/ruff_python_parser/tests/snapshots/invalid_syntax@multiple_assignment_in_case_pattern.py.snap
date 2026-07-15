@@ -785,12 +785,14 @@ Module(
   |
 
 
+  |
 5 |     case {1: x, 2: x}: ...  # MatchMapping duplicate pattern
 6 |     case {1: x, **x}: ...  # MatchMapping duplicate in **rest
 7 |     case Class(x, x): ...  # MatchClass positional
   |                   ^ Syntax Error: multiple assignments to name `x` in pattern
 8 |     case Class(y=x, z=x): ...  # MatchClass keyword
 9 |     case [x] | {1: x} | Class(y=x, z=x): ...  # MatchOr
+  |
 
 
    |

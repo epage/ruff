@@ -8,6 +8,7 @@ Q002 Single quote docstring found but double quotes preferred
 2 |     ''"Start with empty string" ' and lint docstring safely'
   |     ^^
 3 |     ''' Not a docstring '''
+  |
 help: Replace single quotes docstring with double quotes
 
 Q002 [*] Single quote docstring found but double quotes preferred
@@ -17,6 +18,7 @@ Q002 [*] Single quote docstring found but double quotes preferred
 2 |     ''"Start with empty string" ' and lint docstring safely'
   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 |     ''' Not a docstring '''
+  |
 help: Replace single quotes docstring with double quotes
   |
 1 | class SingleLineDocstrings():
@@ -32,6 +34,7 @@ Q002 Single quote docstring found but double quotes preferred
 6 |         ''"Start with empty string" ' and lint docstring safely'
   |         ^^
 7 |         pass
+  |
 help: Replace single quotes docstring with double quotes
 
 Q002 [*] Single quote docstring found but double quotes preferred
@@ -41,14 +44,18 @@ Q002 [*] Single quote docstring found but double quotes preferred
 6 |         ''"Start with empty string" ' and lint docstring safely'
   |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |         pass
+  |
 help: Replace single quotes docstring with double quotes
+  |
 5 |     def foo(self, bar='''not a docstring'''):
   -         ''"Start with empty string" ' and lint docstring safely'
 6 +         ''"Start with empty string" " and lint docstring safely"
 7 |         pass
+  |
 
 Q002 Single quote docstring found but double quotes preferred
  --> docstring_singles_mixed_quotes_class_var_1.py:9:29
+  |
 7 |         pass
 8 |
 9 |     class Nested(foo()[:]): ''"Start with empty string" ' and lint docstring safely'; pass

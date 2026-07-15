@@ -9,6 +9,7 @@ PYI010 [*] Function body must contain only `...`
   |     ^^^^^^^^^^^^^
 7 |
 8 | def foo2():
+  |
 help: Replace function body with `...`
   |
 5 | def buzz():
@@ -19,11 +20,13 @@ help: Replace function body with `...`
 
 PYI010 [*] Function body must contain only `...`
   --> PYI010.pyi:9:5
+   |
  8 | def foo2():
  9 |     123  # ERROR PYI010
    |     ^^^
 10 |
 11 | def bizz():
+   |
 help: Replace function body with `...`
    |
 8  | def foo2():
@@ -40,6 +43,7 @@ PYI010 [*] Function body must contain only `...`
    |     ^^^^^^^
 13 |
 14 | def foo3():
+   |
 help: Replace function body with `...`
    |
 11 | def bizz():

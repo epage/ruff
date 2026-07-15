@@ -7,6 +7,7 @@ PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
 13 | def foo_no_return(arg: NoReturn):
    |                        ^^^^^^^^
 14 |     ...
+   |
 
 PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
   --> PYI050.py:18:10
@@ -16,6 +17,7 @@ PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 | ):
 20 |     ...
+   |
 
 PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
   --> PYI050.py:23:44
@@ -23,6 +25,7 @@ PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
 23 | def foo_no_return_kwarg(arg: int, *, arg2: NoReturn):
    |                                            ^^^^^^^^
 24 |     ...
+   |
 
 PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
   --> PYI050.py:27:47
@@ -30,6 +33,7 @@ PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
 27 | def foo_no_return_pos_only(arg: int, /, arg2: NoReturn):
    |                                               ^^^^^^^^
 28 |     ...
+   |
 
 PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
   --> PYI050.py:35:21
@@ -37,3 +41,4 @@ PYI050 Prefer `typing.Never` over `NoReturn` for argument annotations
 35 | def stringized(arg: "NoReturn"):
    |                     ^^^^^^^^^^
 36 |     ...
+   |

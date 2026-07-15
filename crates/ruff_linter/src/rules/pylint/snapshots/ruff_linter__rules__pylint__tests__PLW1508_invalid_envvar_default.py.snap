@@ -10,6 +10,7 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
   |                             ^^
 4 | goodVar = os.getenv("TESTING", None)
 5 | dictVarBad = os.getenv("AAA", {"a", 7})  # [invalid-envvar-default]
+  |
 
 PLW1508 Invalid type for environment variable default; expected `str` or `None`
  --> invalid_envvar_default.py:5:31
@@ -20,6 +21,7 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
   |                               ^^^^^^^^
 6 | print(os.getenv("TEST", False))  # [invalid-envvar-default]
 7 | os.getenv("AA", "GOOD")
+  |
 
 PLW1508 Invalid type for environment variable default; expected `str` or `None`
  --> invalid_envvar_default.py:6:25
@@ -30,6 +32,7 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
   |                         ^^^^^
 7 | os.getenv("AA", "GOOD")
 8 | os.getenv("AA", f"GOOD")
+  |
 
 PLW1508 Invalid type for environment variable default; expected `str` or `None`
   --> invalid_envvar_default.py:10:17
@@ -40,6 +43,7 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
    |                 ^^^^^^^^^^
 11 | os.getenv("AA", "GOOD %s" % "BAR")
 12 | os.getenv("B", Z)
+   |
 
 PLW1508 Invalid type for environment variable default; expected `str` or `None`
   --> invalid_envvar_default.py:14:17
@@ -50,6 +54,7 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
    |                 ^^^^^^^^^^^^^^^^^
 15 | os.environ.get("TEST", 12)  # [invalid-envvar-default]
 16 | os.environ.get("TEST", "AA" * 12)
+   |
 
 PLW1508 Invalid type for environment variable default; expected `str` or `None`
   --> invalid_envvar_default.py:15:24
@@ -60,3 +65,4 @@ PLW1508 Invalid type for environment variable default; expected `str` or `None`
    |                        ^^
 16 | os.environ.get("TEST", "AA" * 12)
 17 | os.environ.get("TEST", 13 * "AA")
+   |

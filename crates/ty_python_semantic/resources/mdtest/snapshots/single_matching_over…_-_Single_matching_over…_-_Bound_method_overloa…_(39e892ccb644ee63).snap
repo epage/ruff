@@ -57,10 +57,12 @@ info: parameter `self` has an incompatible type: `Other` is not assignable to `B
 ```
 error[invalid-argument-type]: Argument to bound method `Base.f` is incorrect
   --> src/mdtest_snippet.py:20:16
+   |
 20 | Base().f("ok", "bad")  # error: [invalid-argument-type]
    |                ^^^^^ Expected `int`, found `Literal["bad"]`
 info: Matching overload defined here
   --> src/mdtest_snippet.py:12:9
+   |
 12 |     def f(self, x: str, y: int) -> str: ...
    |         ^               ------ Parameter declared here
 info: Non-matching overloads for bound method `f`:

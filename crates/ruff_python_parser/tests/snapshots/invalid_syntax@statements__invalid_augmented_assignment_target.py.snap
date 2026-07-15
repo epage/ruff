@@ -1489,12 +1489,14 @@ Module(
   |
 
 
+  |
 5 | (x := 5) += 42
 6 | x + y += 42
 7 | -x += 42
   | ^^ Syntax Error: Invalid augmented assignment target
 8 | (lambda _: 1) += 42
 9 | a if b else c += 42
+  |
 
 
    |

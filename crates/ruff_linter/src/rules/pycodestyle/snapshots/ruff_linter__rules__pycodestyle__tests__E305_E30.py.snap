@@ -8,6 +8,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
 798 | fn()
     | ^^
 799 | # end
+    |
 help: Add missing blank line(s)
     |
 797 |     # another comment
@@ -22,6 +23,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
 809 | a = 1
     | ^
 810 | # end
+    |
 help: Add missing blank line(s)
     |
 808 |     # another comment
@@ -38,6 +40,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
     | ^^^
 822 |     fn()
 823 | except Exception:
+    |
 help: Add missing blank line(s)
     |
 820 |
@@ -53,6 +56,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
     | ^^
 834 |     a()
 835 | # end
+    |
 help: Add missing blank line(s)
     |
 831 |
@@ -69,6 +73,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
     | ^^
 847 |     main()
 848 | # end
+    |
 help: Add missing blank line(s)
     |
 845 |
@@ -83,6 +88,7 @@ E305 [*] Expected 2 blank lines after class or function definition, found (1)
 973 | BANANA = 100
     | ^^^^^^
 974 | APPLE = 200
+    |
 help: Add missing blank line(s)
     |
 971 |

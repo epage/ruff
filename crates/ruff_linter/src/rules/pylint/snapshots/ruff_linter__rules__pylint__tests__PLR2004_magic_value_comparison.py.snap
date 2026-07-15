@@ -9,6 +9,7 @@ PLR2004 Magic value used in comparison, consider replacing `10` with a constant 
 5 | if 10 > user_input:  # [magic-value-comparison]
   |    ^^
 6 |     pass
+  |
 
 PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
   --> magic_value_comparison.py:47:12
@@ -18,6 +19,7 @@ PLR2004 Magic value used in comparison, consider replacing `2` with a constant v
 47 | if argc != 2:  # [magic-value-comparison]
    |            ^
 48 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `-2` with a constant variable
   --> magic_value_comparison.py:50:12
@@ -27,6 +29,7 @@ PLR2004 Magic value used in comparison, consider replacing `-2` with a constant 
 50 | if argc != -2:  # [magic-value-comparison]
    |            ^^
 51 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `+2` with a constant variable
   --> magic_value_comparison.py:53:12
@@ -36,6 +39,7 @@ PLR2004 Magic value used in comparison, consider replacing `+2` with a constant 
 53 | if argc != +2:  # [magic-value-comparison]
    |            ^^
 54 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `-2.0` with a constant variable
   --> magic_value_comparison.py:56:12
@@ -45,6 +49,7 @@ PLR2004 Magic value used in comparison, consider replacing `-2.0` with a constan
 56 | if argc != -2.0:  # [magic-value-comparison]
    |            ^^^^
 57 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `+2.0` with a constant variable
   --> magic_value_comparison.py:59:12
@@ -54,6 +59,7 @@ PLR2004 Magic value used in comparison, consider replacing `+2.0` with a constan
 59 | if argc != +2.0:  # [magic-value-comparison]
    |            ^^^^
 60 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `3.141592653589793238` with a constant variable
   --> magic_value_comparison.py:80:21
@@ -63,6 +69,7 @@ PLR2004 Magic value used in comparison, consider replacing `3.141592653589793238
 80 | if pi_estimation == 3.141592653589793238:  # [magic-value-comparison]
    |                     ^^^^^^^^^^^^^^^^^^^^
 81 |     pass
+   |
 
 PLR2004 Magic value used in comparison, consider replacing `0x3` with a constant variable
   --> magic_value_comparison.py:86:21
@@ -72,3 +79,4 @@ PLR2004 Magic value used in comparison, consider replacing `0x3` with a constant
 86 | if pi_estimation == 0x3:  # [magic-value-comparison]
    |                     ^^^
 87 |     pass
+   |

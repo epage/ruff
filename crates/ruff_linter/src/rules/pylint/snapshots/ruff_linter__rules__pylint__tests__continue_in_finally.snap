@@ -10,6 +10,7 @@ PLE0116 `continue` not supported inside `finally` clause
   |         ^^^^^^^^
 6 |
 7 | while True:
+  |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:16:13
@@ -19,6 +20,7 @@ PLE0116 `continue` not supported inside `finally` clause
 16 |             continue  # [continue-in-finally]
    |             ^^^^^^^^
 17 |         pass
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:26:17
@@ -29,6 +31,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |                 ^^^^^^^^
 27 |
 28 | while True:
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:33:13
@@ -39,14 +42,17 @@ PLE0116 `continue` not supported inside `finally` clause
    |             ^^^^^^^^
 34 |
 35 | while True:
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:40:13
+   |
 38 |     finally:
 39 |         if True:
 40 |             continue  # [continue-in-finally]
    |             ^^^^^^^^
 41 |         continue  # [continue-in-finally]
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:41:9
@@ -57,6 +63,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |         ^^^^^^^^
 42 |
 43 |         def test():
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:49:17
@@ -68,12 +75,14 @@ PLE0116 `continue` not supported inside `finally` clause
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:56:9
+   |
 54 |         pass
 55 |     finally:
 56 |         continue  # [continue-in-finally]
    |         ^^^^^^^^
 57 |
 58 |         def test():
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:69:9
@@ -84,6 +93,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |         ^^^^^^^^
 70 |
 71 |         while True:
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:74:13
@@ -94,6 +104,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |             ^^^^^^^^
 75 |
 76 |         def test():
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:89:13
@@ -104,6 +115,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |             ^^^^^^^^
 90 |         else:
 91 |             continue  # [continue-in-finally]
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:91:13
@@ -114,6 +126,7 @@ PLE0116 `continue` not supported inside `finally` clause
    |             ^^^^^^^^
 92 |             for i in range(10):
 93 |                 pass
+   |
 
 PLE0116 `continue` not supported inside `finally` clause
   --> continue_in_finally.py:95:17

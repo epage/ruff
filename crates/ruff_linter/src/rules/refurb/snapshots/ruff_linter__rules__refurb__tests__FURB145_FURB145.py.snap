@@ -9,6 +9,7 @@ FURB145 [*] Prefer `copy` method over slicing
   |     ^^^^
 5 | b, c = 1, l[:]
 6 | d, e = l[:], 1
+  |
 help: Replace with `copy()`
   |
 3 | # Errors.
@@ -26,6 +27,7 @@ FURB145 [*] Prefer `copy` method over slicing
   |           ^^^^
 6 | d, e = l[:], 1
 7 | m = l[::]
+  |
 help: Replace with `copy()`
   |
 4 | a = l[:]
@@ -43,6 +45,7 @@ FURB145 [*] Prefer `copy` method over slicing
   |        ^^^^
 7 | m = l[::]
 8 | l[:]
+  |
 help: Replace with `copy()`
   |
 5 | b, c = 1, l[:]
@@ -60,6 +63,7 @@ FURB145 [*] Prefer `copy` method over slicing
   |     ^^^^^
 8 | l[:]
 9 | print(l[:])
+  |
 help: Replace with `copy()`
   |
 6 | d, e = l[:], 1
@@ -76,6 +80,7 @@ FURB145 [*] Prefer `copy` method over slicing
 8 | l[:]
   | ^^^^
 9 | print(l[:])
+  |
 help: Replace with `copy()`
   |
 7 | m = l[::]
@@ -86,12 +91,14 @@ help: Replace with `copy()`
 
 FURB145 [*] Prefer `copy` method over slicing
   --> FURB145.py:9:7
+   |
  7 | m = l[::]
  8 | l[:]
  9 | print(l[:])
    |       ^^^^
 10 |
 11 | # False negatives.
+   |
 help: Replace with `copy()`
    |
 8  | l[:]

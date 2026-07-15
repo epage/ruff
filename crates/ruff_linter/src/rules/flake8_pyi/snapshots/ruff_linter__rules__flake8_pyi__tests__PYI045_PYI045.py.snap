@@ -8,6 +8,7 @@ PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
 12 |     def __iter__(self) -> typing.Iterable[int]:
    |                           ^^^^^^^^^^^^^^^^^^^^
 13 |         ...
+   |
 
 PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
   --> PYI045.py:20:27
@@ -16,6 +17,7 @@ PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
 20 |     def __iter__(self) -> typing.Iterable:
    |                           ^^^^^^^^^^^^^^^
 21 |         ...
+   |
 
 PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
   --> PYI045.py:28:27
@@ -24,6 +26,7 @@ PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
 28 |     def __iter__(self) -> collections.abc.Iterable[int]:
    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 |         ...
+   |
 
 PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
   --> PYI045.py:36:27
@@ -32,6 +35,7 @@ PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
 36 |     def __iter__(self) -> collections.abc.Iterable:
    |                           ^^^^^^^^^^^^^^^^^^^^^^^^
 37 |         ...
+   |
 
 PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
   --> PYI045.py:44:27
@@ -40,6 +44,7 @@ PYI045 `__iter__` methods should return an `Iterator`, not an `Iterable`
 44 |     def __iter__(self) -> Iterable:
    |                           ^^^^^^^^
 45 |         ...
+   |
 
 PYI045 `__aiter__` methods should return an `AsyncIterator`, not an `AsyncIterable`
   --> PYI045.py:79:28
@@ -48,6 +53,7 @@ PYI045 `__aiter__` methods should return an `AsyncIterator`, not an `AsyncIterab
 79 |     def __aiter__(self) -> typing.AsyncIterable[int]:
    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^
 80 |         ...
+   |
 
 PYI045 `__aiter__` methods should return an `AsyncIterator`, not an `AsyncIterable`
   --> PYI045.py:84:28
@@ -56,3 +62,4 @@ PYI045 `__aiter__` methods should return an `AsyncIterator`, not an `AsyncIterab
 84 |     def __aiter__(self) -> typing.AsyncIterable:
    |                            ^^^^^^^^^^^^^^^^^^^^
 85 |         ...
+   |

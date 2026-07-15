@@ -9,9 +9,11 @@ N817 CamelCase `StillBad` imported as acronym `SB`
   |        ^^^^^^^^^^^^^^^^^^
 3 |
 4 | from mod import BadAllowed as BA
+  |
 
 N817 CamelCase `StillBad` imported as acronym `SB`
  --> N817.py:5:17
+  |
 4 | from mod import BadAllowed as BA
 5 | from mod import StillBad as SB
   |                 ^^^^^^^^^^^^^^

@@ -8,6 +8,7 @@ RUF100 [*] Unused blanket `noqa` directive
   | ^^^^^^
 2 | # noqa # comment
 3 | print()  # noqa
+  |
 help: Remove unused `noqa` directive
   |
   - # noqa
@@ -22,6 +23,7 @@ RUF100 [*] Unused blanket `noqa` directive
   | ^^^^^^
 3 | print()  # noqa
 4 | print()  # noqa # comment
+  |
 help: Remove unused `noqa` directive
   |
 1 | # noqa
@@ -39,6 +41,7 @@ RUF100 [*] Unused blanket `noqa` directive
   |          ^^^^^^
 4 | print()  # noqa # comment
 5 | print()  # noqa  # comment
+  |
 help: Remove unused `noqa` directive
   |
 2 | # noqa # comment
@@ -56,6 +59,7 @@ RUF100 [*] Unused blanket `noqa` directive
   |          ^^^^^^
 5 | print()  # noqa  # comment
 6 | print()  # noqa comment
+  |
 help: Remove unused `noqa` directive
   |
 3 | print()  # noqa
@@ -73,6 +77,7 @@ RUF100 [*] Unused blanket `noqa` directive
   |          ^^^^^^
 6 | print()  # noqa comment
 7 | print()  # noqa  comment
+  |
 help: Remove unused `noqa` directive
   |
 4 | print()  # noqa # comment
@@ -90,6 +95,7 @@ RUF100 [*] Unused blanket `noqa` directive
   |          ^^^^^^
 7 | print()  # noqa  comment
 8 | print(a)  # noqa
+  |
 help: Remove unused `noqa` directive
   |
 5 | print()  # noqa  # comment
@@ -107,6 +113,7 @@ RUF100 [*] Unused blanket `noqa` directive
   |          ^^^^^^
 8 | print(a)  # noqa
 9 | print(a)  # noqa # comment
+  |
 help: Remove unused `noqa` directive
   |
 6 | print()  # noqa comment
@@ -124,6 +131,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    | ^^^^^^^^^^^^^^^^^^
 15 | # noqa: E501, F821 # comment
 16 | print()  # noqa: E501, F821
+   |
 help: Remove unused `noqa` directive
    |
 13 |
@@ -139,6 +147,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    | ^^^^^^^^^^^^^^^^^^
 16 | print()  # noqa: E501, F821
 17 | print()  # noqa: E501, F821 # comment
+   |
 help: Remove unused `noqa` directive
    |
 14 | # noqa: E501, F821
@@ -156,6 +165,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    |          ^^^^^^^^^^^^^^^^^^
 17 | print()  # noqa: E501, F821 # comment
 18 | print()  # noqa: E501, F821  # comment
+   |
 help: Remove unused `noqa` directive
    |
 15 | # noqa: E501, F821 # comment
@@ -173,6 +183,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    |          ^^^^^^^^^^^^^^^^^^
 18 | print()  # noqa: E501, F821  # comment
 19 | print()  # noqa: E501, F821 comment
+   |
 help: Remove unused `noqa` directive
    |
 16 | print()  # noqa: E501, F821
@@ -190,6 +201,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    |          ^^^^^^^^^^^^^^^^^^
 19 | print()  # noqa: E501, F821 comment
 20 | print()  # noqa: E501, F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 17 | print()  # noqa: E501, F821 # comment
@@ -207,6 +219,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    |          ^^^^^^^^^^^^^^^^^^
 20 | print()  # noqa: E501, F821  comment
 21 | print(a)  # noqa: E501, F821
+   |
 help: Remove unused `noqa` directive
    |
 18 | print()  # noqa: E501, F821  # comment
@@ -224,6 +237,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`, `F821`)
    |          ^^^^^^^^^^^^^^^^^^
 21 | print(a)  # noqa: E501, F821
 22 | print(a)  # noqa: E501, F821 # comment
+   |
 help: Remove unused `noqa` directive
    |
 19 | print()  # noqa: E501, F821 comment
@@ -241,6 +255,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 22 | print(a)  # noqa: E501, F821 # comment
 23 | print(a)  # noqa: E501, F821  # comment
+   |
 help: Remove unused `noqa` directive
    |
 20 | print()  # noqa: E501, F821  comment
@@ -258,6 +273,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 23 | print(a)  # noqa: E501, F821  # comment
 24 | print(a)  # noqa: E501, F821 comment
+   |
 help: Remove unused `noqa` directive
    |
 21 | print(a)  # noqa: E501, F821
@@ -275,6 +291,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 24 | print(a)  # noqa: E501, F821 comment
 25 | print(a)  # noqa: E501, F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 22 | print(a)  # noqa: E501, F821 # comment
@@ -292,6 +309,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 25 | print(a)  # noqa: E501, F821  comment
 26 | print(a)  # noqa: E501,,F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 23 | print(a)  # noqa: E501, F821  # comment
@@ -309,6 +327,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 26 | print(a)  # noqa: E501,,F821  comment
 27 | print(a)  # noqa: E501, ,F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 24 | print(a)  # noqa: E501, F821 comment
@@ -326,6 +345,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^^
 27 | print(a)  # noqa: E501, ,F821  comment
 28 | print(a)  # noqa: E501 F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 25 | print(a)  # noqa: E501, F821  comment
@@ -342,6 +362,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
 27 | print(a)  # noqa: E501, ,F821  comment
    |           ^^^^^^^^^^^^^^^^^^^
 28 | print(a)  # noqa: E501 F821  comment
+   |
 help: Remove unused `noqa` directive
    |
 26 | print(a)  # noqa: E501,,F821  comment
@@ -359,6 +380,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |           ^^^^^^^^^^^^^^^^^
 29 |
 30 | print(a)  # comment with unicode µ    # noqa: E501
+   |
 help: Remove unused `noqa` directive
    |
 27 | print(a)  # noqa: E501, ,F821  comment
@@ -375,6 +397,7 @@ F821 Undefined name `a`
 30 | print(a)  # comment with unicode µ    # noqa: E501
    |       ^
 31 | print(a)  # comment with unicode µ    # noqa: E501, F821
+   |
 
 RUF100 [*] Unused `noqa` directive (unused: `E501`)
   --> RUF100_3.py:30:39
@@ -384,6 +407,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
 30 | print(a)  # comment with unicode µ    # noqa: E501
    |                                       ^^^^^^^^^^^^
 31 | print(a)  # comment with unicode µ    # noqa: E501, F821
+   |
 help: Remove unused `noqa` directive
    |
 29 |

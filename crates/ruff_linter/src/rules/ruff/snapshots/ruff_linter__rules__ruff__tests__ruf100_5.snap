@@ -9,6 +9,7 @@ ERA001 [*] Found commented-out code
 7 |     # "key3": 789,
   |     ^^^^^^^^^^^^^^
 8 | }
+  |
 help: Remove commented-out code
   |
 6 |     # "key2": 456,  # noqa
@@ -24,6 +25,7 @@ ERA001 [*] Found commented-out code
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 12 |
 13 | def f():
+   |
 help: Remove commented-out code
    |
 10 |
@@ -39,6 +41,7 @@ RUF100 [*] Unused `noqa` directive (unused: `E501`)
    |             ^^^^^^^^^^^^
 12 |
 13 | def f():
+   |
 help: Remove unused `noqa` directive
    |
 10 |
@@ -56,6 +59,7 @@ RUF100 [*] Unused `noqa` directive (non-enabled: `RET504`)
    |                  ^^^^^^^^^^^^^^
 17 |
 18 | def f():
+   |
 help: Remove unused `noqa` directive
    |
 15 |     # line below should autofix to `return data  # fmt: skip`
@@ -86,6 +90,7 @@ ERA001 [*] Found commented-out code
 25 | # )
    | ^^^
 26 | # )  # noqa: ERA001
+   |
 help: Remove commented-out code
    |
 24 | # Regression test for https://github.com/astral-sh/ruff/issues/25386
@@ -102,6 +107,7 @@ ERA001 [*] Found commented-out code
 28 | # (
    | ^^^
 29 | # (  # noqa: ERA001
+   |
 help: Remove commented-out code
    |
 27 |

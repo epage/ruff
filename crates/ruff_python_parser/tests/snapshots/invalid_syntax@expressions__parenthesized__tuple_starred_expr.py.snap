@@ -1340,20 +1340,24 @@ Module(
   |
 
 
+  |
 5 | (*not x, z, *not x)
 6 | (*x and y, z, *x and y)
 7 | (*x or y, z, *x or y)
   |   ^^^^^^ Syntax Error: Boolean expression cannot be used here
 8 | (*x if True else y, z, *x if True else y)
 9 | (*lambda x: x, z, *lambda x: x)
+  |
 
 
+  |
 5 | (*not x, z, *not x)
 6 | (*x and y, z, *x and y)
 7 | (*x or y, z, *x or y)
   |               ^^^^^^ Syntax Error: Boolean expression cannot be used here
 8 | (*x if True else y, z, *x if True else y)
 9 | (*lambda x: x, z, *lambda x: x)
+  |
 
 
    |

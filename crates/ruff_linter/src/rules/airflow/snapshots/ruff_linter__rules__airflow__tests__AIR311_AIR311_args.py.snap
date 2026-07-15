@@ -30,6 +30,7 @@ AIR311 `sla_miss_callback` is removed in Airflow 3.0; It still works in Airflow 
    |      ^^^^^^^^^^^^^^^^^
 17 | def decorator_sla_callback():
 18 |     pass
+   |
 
 AIR311 `sla` is removed in Airflow 3.0; It still works in Airflow 3.0 but is expected to be removed in a future version.
   --> AIR311_args.py:25:9
@@ -39,3 +40,4 @@ AIR311 `sla` is removed in Airflow 3.0; It still works in Airflow 3.0 but is exp
 25 |         sla=timedelta(seconds=10),
    |         ^^^
 26 |     )
+   |

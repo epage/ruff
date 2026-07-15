@@ -26,6 +26,7 @@ I001 [*] Import block is un-sorted or un-formatted
   | |__________________^
 3 |   # Newline should be added here
 4 |   def foo():
+  |
 help: Organize imports
  ::: cell 2
   |
@@ -45,6 +46,7 @@ I001 [*] Import block is un-sorted or un-formatted
   | |__________^
 3 |
 4 |   %matplotlib \
+  |
 help: Organize imports
  ::: cell 3
   |
@@ -52,6 +54,7 @@ help: Organize imports
 2 | from pathlib import Path
   - import sys
 3 |
+  |
 
 I001 [*] Import block is un-sorted or un-formatted
  --> isort.ipynb:cell 3:7:1

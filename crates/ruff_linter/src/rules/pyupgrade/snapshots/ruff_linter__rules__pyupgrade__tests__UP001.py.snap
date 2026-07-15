@@ -23,6 +23,7 @@ UP001 [*] `__metaclass__ = type` is implied
   |     ^^^^^^^^^^^^^^^^^^^^
 7 |
 8 |     def __init__(self) -> None:
+  |
 help: Remove `__metaclass__ = type`
   |
 5 | class B:

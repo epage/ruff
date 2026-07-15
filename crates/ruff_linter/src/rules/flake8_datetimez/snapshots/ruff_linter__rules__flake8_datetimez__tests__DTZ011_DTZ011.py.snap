@@ -9,10 +9,12 @@ DTZ011 `datetime.date.today()` used
   | ^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | from datetime import date
+  |
 help: Use `datetime.datetime.now(tz=...).date()` instead
 
 DTZ011 `datetime.date.today()` used
  --> DTZ011.py:9:1
+  |
 8 | # unqualified
 9 | date.today()
   | ^^^^^^^^^^^^

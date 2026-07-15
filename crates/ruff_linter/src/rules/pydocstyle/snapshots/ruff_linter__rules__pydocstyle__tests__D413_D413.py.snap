@@ -10,6 +10,7 @@ D413 [*] Missing blank line after last section ("Returns")
   | ^^^^^^^
 8 |     the value
 9 | """
+  |
 help: Add blank line after "Returns"
    |
 8  |     the value
@@ -26,6 +27,7 @@ D413 [*] Missing blank line after last section ("Returns")
    |     ^^^^^^^
 20 |         the value
 21 |     """
+   |
 help: Add blank line after "Returns"
    |
 20 |         the value
@@ -41,6 +43,7 @@ D413 [*] Missing blank line after last section ("Returns")
 58 |     Returns:
    |     ^^^^^^^
 59 |         the value"""
+   |
 help: Add blank line after "Returns"
    |
 58 |     Returns:
@@ -60,6 +63,7 @@ D413 [*] Missing blank line after last section ("Returns")
    |     ^^^^^^^
 70 |         the value
 71 |         """
+   |
 help: Add blank line after "Returns"
    |
 70 |         the value
@@ -79,6 +83,7 @@ D413 [*] Missing blank line after last section ("Raises")
    |     ^^^^^^
 78 |         ValueError: An error.
 79 |     """)
+   |
 help: Add blank line after "Raises"
    |
 78 |         ValueError: An error.

@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> force_to_top.py:1:1
+   |
  1 | / import lib6
  2 | | import lib2
  3 | | import lib5

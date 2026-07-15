@@ -9,6 +9,7 @@ TC003 [*] Move standard library import `pathlib.Path` into a type-checking block
   |                     ^^^^
 5 | from functools import singledispatchmethod
 6 | from typing import Union
+  |
 help: Move into type-checking block
   |
 3 | from collections.abc import MutableMapping, Mapping

@@ -9,6 +9,7 @@ PYI056 Calling `.append()` on `__all__` may not be supported by all type checker
   | ^^^^^^^^^^^^^^
 5 | __all__.extend(["E", "Foo"])
 6 | __all__.remove("A")
+  |
 
 PYI056 Calling `.extend()` on `__all__` may not be supported by all type checkers (use `+=` instead)
  --> PYI056.pyi:5:1
@@ -18,6 +19,7 @@ PYI056 Calling `.extend()` on `__all__` may not be supported by all type checker
 5 | __all__.extend(["E", "Foo"])
   | ^^^^^^^^^^^^^^
 6 | __all__.remove("A")
+  |
 
 PYI056 Calling `.remove()` on `__all__` may not be supported by all type checkers (use `+=` instead)
  --> PYI056.pyi:6:1
@@ -28,3 +30,4 @@ PYI056 Calling `.remove()` on `__all__` may not be supported by all type checker
   | ^^^^^^^^^^^^^^
 7 |
 8 | # OK
+  |

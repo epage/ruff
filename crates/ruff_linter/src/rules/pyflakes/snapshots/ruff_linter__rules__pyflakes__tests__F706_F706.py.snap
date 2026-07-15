@@ -10,5 +10,6 @@ F706 `return` statement outside of a function/method
 
 F706 `return` statement outside of a function/method
  --> F706.py:9:1
+  |
 9 | return 3
   | ^^^^^^^^

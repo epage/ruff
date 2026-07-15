@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/pydocstyle/mod.rs
 ---
 D412 [*] No blank lines allowed between a section header and its content ("Example")
   --> sphinx.py:13:5
+   |
 11 | def func():
 12 |     """
 13 |     Example:
@@ -16,6 +17,7 @@ help: Remove blank line(s)
 
 D412 [*] No blank lines allowed between a section header and its content ("Example")
   --> sphinx.py:24:5
+   |
 22 | def func():
 23 |     """
 24 |     Example:
@@ -36,6 +38,7 @@ D412 [*] No blank lines allowed between a section header and its content ("Examp
 47 |     Example
    |     ^^^^^^^
 48 |     -------
+   |
 help: Remove blank line(s)
    |
 49 |
@@ -51,6 +54,7 @@ D412 [*] No blank lines allowed between a section header and its content ("Examp
 59 |     Example
    |     ^^^^^^^
 60 |     -------
+   |
 help: Remove blank line(s)
    |
 61 |

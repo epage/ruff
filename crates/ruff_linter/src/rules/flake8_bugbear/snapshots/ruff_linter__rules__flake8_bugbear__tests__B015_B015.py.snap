@@ -10,9 +10,11 @@ B015 Pointless comparison. Did you mean to assign a value? Otherwise, prepend `a
   | ^^^^^^
 4 |
 5 | assert 1 in (1, 2)
+  |
 
 B015 Pointless comparison. Did you mean to assign a value? Otherwise, prepend `assert` or remove it.
  --> B015.py:7:1
+  |
 5 | assert 1 in (1, 2)
 6 |
 7 | 1 in (1, 2)
@@ -20,6 +22,7 @@ B015 Pointless comparison. Did you mean to assign a value? Otherwise, prepend `a
 
 B015 Pointless comparison at end of function scope. Did you mean to return the expression result?
   --> B015.py:17:5
+   |
 15 |     assert 1 in (1, 2)
 16 |
 17 |     1 in (1, 2)
@@ -27,10 +30,12 @@ B015 Pointless comparison at end of function scope. Did you mean to return the e
 
 B015 Pointless comparison. Did you mean to assign a value? Otherwise, prepend `assert` or remove it.
   --> B015.py:21:5
+   |
 20 | def test2():
 21 |     1 in (1, 2)
    |     ^^^^^^^^^^^
 22 |     return
+   |
 
 B015 Pointless comparison. Did you mean to assign a value? Otherwise, prepend `assert` or remove it.
   --> B015.py:29:5

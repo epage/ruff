@@ -9,6 +9,7 @@ F841 [*] Local variable `x` is assigned to but never used
 7 |     except Exception as x:
   |                         ^
 8 |         pass
+  |
 help: Remove assignment to unused variable `x`
   |
 6 |         1 / 0

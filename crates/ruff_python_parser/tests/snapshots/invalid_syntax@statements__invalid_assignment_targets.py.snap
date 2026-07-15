@@ -1585,12 +1585,14 @@ Module(
   |
 
 
+  |
 5 | 5 = 3
 6 |
 7 | 5 += 3
   | ^ Syntax Error: Invalid augmented assignment target
 8 |
 9 | (5): int = 3
+  |
 
 
    |

@@ -13,21 +13,25 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:8:1
+   |
  6 | # PD101
  7 | data.nunique() <= 1
  8 | data.nunique(dropna=True) <= 1
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 | data.nunique(dropna=False) <= 1
 10 | data.nunique() == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:9:1
+   |
  7 | data.nunique() <= 1
  8 | data.nunique(dropna=True) <= 1
  9 | data.nunique(dropna=False) <= 1
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 10 | data.nunique() == 1
 11 | data.nunique(dropna=True) == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:10:1
@@ -38,6 +42,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^
 11 | data.nunique(dropna=True) == 1
 12 | data.nunique(dropna=False) == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:11:1
@@ -48,6 +53,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 | data.nunique(dropna=False) == 1
 13 | data.nunique() != 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:12:1
@@ -58,6 +64,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 | data.nunique() != 1
 14 | data.nunique(dropna=True) != 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:13:1
@@ -68,6 +75,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^
 14 | data.nunique(dropna=True) != 1
 15 | data.nunique(dropna=False) != 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:14:1
@@ -78,6 +86,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 | data.nunique(dropna=False) != 1
 16 | data.nunique() > 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:15:1
@@ -88,6 +97,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 | data.nunique() > 1
 17 | data.dropna().nunique() == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:16:1
@@ -98,6 +108,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^
 17 | data.dropna().nunique() == 1
 18 | data[data.notnull()].nunique() == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:17:1
@@ -107,6 +118,7 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
 17 | data.dropna().nunique() == 1
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 18 | data[data.notnull()].nunique() == 1
+   |
 
 PD101 Using `series.nunique()` for checking that a series is constant is inefficient
   --> PD101.py:18:1
@@ -117,3 +129,4 @@ PD101 Using `series.nunique()` for checking that a series is constant is ineffic
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |
 20 | # No violation of this rule
+   |

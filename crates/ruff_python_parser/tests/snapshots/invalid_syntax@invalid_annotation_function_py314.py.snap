@@ -623,12 +623,14 @@ Module(
   |
 
 
+  |
 5 |     def i(x: (yield 1)): ...
 6 |     def k() -> (yield 1): ...
 7 |     def m(x: (yield from 1)): ...
   |               ^^^^^^^^^^^^ Syntax Error: yield expression cannot be used within a type annotation
 8 |     def o() -> (yield from 1): ...
 9 | async def outer():
+  |
 
 
    |

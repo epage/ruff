@@ -9,6 +9,7 @@ S105 Possible hardcoded password assigned to: "password"
    |            ^^^^^^^^
 14 | _pass = "s3cr3t"
 15 | passwd = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "_pass"
   --> S105.py:14:9
@@ -19,6 +20,7 @@ S105 Possible hardcoded password assigned to: "_pass"
    |         ^^^^^^^^
 15 | passwd = "s3cr3t"
 16 | pwd = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "passwd"
   --> S105.py:15:10
@@ -29,6 +31,7 @@ S105 Possible hardcoded password assigned to: "passwd"
    |          ^^^^^^^^
 16 | pwd = "s3cr3t"
 17 | secret = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "pwd"
   --> S105.py:16:7
@@ -39,6 +42,7 @@ S105 Possible hardcoded password assigned to: "pwd"
    |       ^^^^^^^^
 17 | secret = "s3cr3t"
 18 | token = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secret"
   --> S105.py:17:10
@@ -49,6 +53,7 @@ S105 Possible hardcoded password assigned to: "secret"
    |          ^^^^^^^^
 18 | token = "s3cr3t"
 19 | secrete = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:18:9
@@ -59,6 +64,7 @@ S105 Possible hardcoded password assigned to: "token"
    |         ^^^^^^^^
 19 | secrete = "s3cr3t"
 20 | safe = password = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secrete"
   --> S105.py:19:11
@@ -69,6 +75,7 @@ S105 Possible hardcoded password assigned to: "secrete"
    |           ^^^^^^^^
 20 | safe = password = "s3cr3t"
 21 | password = safe = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:20:19
@@ -79,6 +86,7 @@ S105 Possible hardcoded password assigned to: "password"
    |                   ^^^^^^^^
 21 | password = safe = "s3cr3t"
 22 | PASSWORD = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:21:19
@@ -89,6 +97,7 @@ S105 Possible hardcoded password assigned to: "password"
    |                   ^^^^^^^^
 22 | PASSWORD = "s3cr3t"
 23 | PassWord = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "PASSWORD"
   --> S105.py:22:12
@@ -99,6 +108,7 @@ S105 Possible hardcoded password assigned to: "PASSWORD"
    |            ^^^^^^^^
 23 | PassWord = "s3cr3t"
 24 | password: str = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "PassWord"
   --> S105.py:23:12
@@ -109,6 +119,7 @@ S105 Possible hardcoded password assigned to: "PassWord"
    |            ^^^^^^^^
 24 | password: str = "s3cr3t"
 25 | password: Final = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:24:17
@@ -118,15 +129,18 @@ S105 Possible hardcoded password assigned to: "password"
 24 | password: str = "s3cr3t"
    |                 ^^^^^^^^
 25 | password: Final = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:25:19
+   |
 23 | PassWord = "s3cr3t"
 24 | password: str = "s3cr3t"
 25 | password: Final = "s3cr3t"
    |                   ^^^^^^^^
 26 |
 27 | d["password"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:27:17
@@ -137,6 +151,7 @@ S105 Possible hardcoded password assigned to: "password"
    |                 ^^^^^^^^
 28 | d["pass"] = "s3cr3t"
 29 | d["passwd"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "pass"
   --> S105.py:28:13
@@ -146,6 +161,7 @@ S105 Possible hardcoded password assigned to: "pass"
    |             ^^^^^^^^
 29 | d["passwd"] = "s3cr3t"
 30 | d["pwd"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "passwd"
   --> S105.py:29:15
@@ -156,6 +172,7 @@ S105 Possible hardcoded password assigned to: "passwd"
    |               ^^^^^^^^
 30 | d["pwd"] = "s3cr3t"
 31 | d["secret"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "pwd"
   --> S105.py:30:12
@@ -166,6 +183,7 @@ S105 Possible hardcoded password assigned to: "pwd"
    |            ^^^^^^^^
 31 | d["secret"] = "s3cr3t"
 32 | d["token"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secret"
   --> S105.py:31:15
@@ -176,6 +194,7 @@ S105 Possible hardcoded password assigned to: "secret"
    |               ^^^^^^^^
 32 | d["token"] = "s3cr3t"
 33 | d["secrete"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:32:14
@@ -186,6 +205,7 @@ S105 Possible hardcoded password assigned to: "token"
    |              ^^^^^^^^
 33 | d["secrete"] = "s3cr3t"
 34 | safe = d["password"] = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secrete"
   --> S105.py:33:16
@@ -196,6 +216,7 @@ S105 Possible hardcoded password assigned to: "secrete"
    |                ^^^^^^^^
 34 | safe = d["password"] = "s3cr3t"
 35 | d["password"] = safe = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:34:24
@@ -205,6 +226,7 @@ S105 Possible hardcoded password assigned to: "password"
 34 | safe = d["password"] = "s3cr3t"
    |                        ^^^^^^^^
 35 | d["password"] = safe = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:35:24
@@ -221,6 +243,7 @@ S105 Possible hardcoded password assigned to: "password"
 39 |     password = "s3cr3t"
    |                ^^^^^^^^
 40 |     safe = password
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:43:20
@@ -229,6 +252,7 @@ S105 Possible hardcoded password assigned to: "password"
    |                    ^^^^^^^^
 44 | MyClass._pass = "s3cr3t"
 45 | MyClass.passwd = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "_pass"
   --> S105.py:44:17
@@ -238,6 +262,7 @@ S105 Possible hardcoded password assigned to: "_pass"
    |                 ^^^^^^^^
 45 | MyClass.passwd = "s3cr3t"
 46 | MyClass.pwd = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "passwd"
   --> S105.py:45:18
@@ -248,6 +273,7 @@ S105 Possible hardcoded password assigned to: "passwd"
    |                  ^^^^^^^^
 46 | MyClass.pwd = "s3cr3t"
 47 | MyClass.secret = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "pwd"
   --> S105.py:46:15
@@ -258,6 +284,7 @@ S105 Possible hardcoded password assigned to: "pwd"
    |               ^^^^^^^^
 47 | MyClass.secret = "s3cr3t"
 48 | MyClass.token = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secret"
   --> S105.py:47:18
@@ -268,6 +295,7 @@ S105 Possible hardcoded password assigned to: "secret"
    |                  ^^^^^^^^
 48 | MyClass.token = "s3cr3t"
 49 | MyClass.secrete = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:48:17
@@ -277,6 +305,7 @@ S105 Possible hardcoded password assigned to: "token"
 48 | MyClass.token = "s3cr3t"
    |                 ^^^^^^^^
 49 | MyClass.secrete = "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secrete"
   --> S105.py:49:19
@@ -287,6 +316,7 @@ S105 Possible hardcoded password assigned to: "secrete"
    |                   ^^^^^^^^
 50 |
 51 | password == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:51:13
@@ -297,6 +327,7 @@ S105 Possible hardcoded password assigned to: "password"
    |             ^^^^^^^^
 52 | _pass == "s3cr3t"
 53 | passwd == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "_pass"
   --> S105.py:52:10
@@ -306,6 +337,7 @@ S105 Possible hardcoded password assigned to: "_pass"
    |          ^^^^^^^^
 53 | passwd == "s3cr3t"
 54 | pwd == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "passwd"
   --> S105.py:53:11
@@ -316,6 +348,7 @@ S105 Possible hardcoded password assigned to: "passwd"
    |           ^^^^^^^^
 54 | pwd == "s3cr3t"
 55 | secret == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "pwd"
   --> S105.py:54:8
@@ -326,6 +359,7 @@ S105 Possible hardcoded password assigned to: "pwd"
    |        ^^^^^^^^
 55 | secret == "s3cr3t"
 56 | token == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secret"
   --> S105.py:55:11
@@ -336,6 +370,7 @@ S105 Possible hardcoded password assigned to: "secret"
    |           ^^^^^^^^
 56 | token == "s3cr3t"
 57 | secrete == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:56:10
@@ -346,6 +381,7 @@ S105 Possible hardcoded password assigned to: "token"
    |          ^^^^^^^^
 57 | secrete == "s3cr3t"
 58 | password == safe == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "secrete"
   --> S105.py:57:12
@@ -355,6 +391,7 @@ S105 Possible hardcoded password assigned to: "secrete"
 57 | secrete == "s3cr3t"
    |            ^^^^^^^^
 58 | password == safe == "s3cr3t"
+   |
 
 S105 Possible hardcoded password assigned to: "password"
   --> S105.py:58:21
@@ -365,6 +402,7 @@ S105 Possible hardcoded password assigned to: "password"
    |                     ^^^^^^^^
 59 |
 60 | if token == "1\n2":
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:60:13
@@ -374,6 +412,7 @@ S105 Possible hardcoded password assigned to: "token"
 60 | if token == "1\n2":
    |             ^^^^^^
 61 |     pass
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:63:13
@@ -383,6 +422,7 @@ S105 Possible hardcoded password assigned to: "token"
 63 | if token == "3\t4":
    |             ^^^^^^
 64 |     pass
+   |
 
 S105 Possible hardcoded password assigned to: "token"
   --> S105.py:66:13
@@ -392,3 +432,4 @@ S105 Possible hardcoded password assigned to: "token"
 66 | if token == "5\r6":
    |             ^^^^^^
 67 |     pass
+   |

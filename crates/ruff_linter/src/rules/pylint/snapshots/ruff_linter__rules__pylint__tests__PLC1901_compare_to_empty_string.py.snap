@@ -8,6 +8,7 @@ PLC1901 `x is ""` can be simplified to `not x` as an empty string is falsey
 7 |     if x is "" or x == "":
   |             ^^
 8 |         print("x is an empty string")
+  |
 
 PLC1901 `x == ""` can be simplified to `not x` as an empty string is falsey
  --> compare_to_empty_string.py:7:24
@@ -16,6 +17,7 @@ PLC1901 `x == ""` can be simplified to `not x` as an empty string is falsey
 7 |     if x is "" or x == "":
   |                        ^^
 8 |         print("x is an empty string")
+  |
 
 PLC1901 `y is not ""` can be simplified to `y` as an empty string is falsey
   --> compare_to_empty_string.py:10:17
@@ -25,6 +27,7 @@ PLC1901 `y is not ""` can be simplified to `y` as an empty string is falsey
 10 |     if y is not "" or y != "":
    |                 ^^
 11 |         print("y is not an empty string")
+   |
 
 PLC1901 `y != ""` can be simplified to `y` as an empty string is falsey
   --> compare_to_empty_string.py:10:28
@@ -34,6 +37,7 @@ PLC1901 `y != ""` can be simplified to `y` as an empty string is falsey
 10 |     if y is not "" or y != "":
    |                            ^^
 11 |         print("y is not an empty string")
+   |
 
 PLC1901 `"" != z` can be simplified to `z` as an empty string is falsey
   --> compare_to_empty_string.py:13:8
@@ -43,3 +47,4 @@ PLC1901 `"" != z` can be simplified to `z` as an empty string is falsey
 13 |     if "" != z:
    |        ^^
 14 |         print("z is an empty string")
+   |

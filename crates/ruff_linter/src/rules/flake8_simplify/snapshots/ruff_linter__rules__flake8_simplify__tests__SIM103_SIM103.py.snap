@@ -25,6 +25,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `a == b` directly
   --> SIM103.py:11:5
+   |
  9 |   def f():
 10 |       # SIM103
 11 | /     if a == b:
@@ -46,6 +47,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `bool(b)` directly
   --> SIM103.py:21:5
+   |
 19 |       if a:
 20 |           return 1
 21 | /     elif b:
@@ -67,6 +69,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `bool(b)` directly
   --> SIM103.py:32:9
+   |
 30 |           return 1
 31 |       else:
 32 | /         if b:
@@ -83,10 +86,12 @@ help: Replace with `return bool(b)`
    -             return False
 32 +         return bool(b)
 33 |
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `not a` directly
   --> SIM103.py:57:5
+   |
 55 |   def f():
 56 |       # SIM103
 57 | /     if a:
@@ -103,6 +108,7 @@ help: Replace with `return not a`
    -         return True
 57 +     return not a
 58 |
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 SIM103 Return the condition directly
@@ -119,6 +125,7 @@ help: Inline condition
 
 SIM103 [*] Return the condition `not (keys is not None and notice.key not in keys)` directly
   --> SIM103.py:91:5
+   |
 89 |   def f():
 90 |       # SIM103
 91 | /     if keys is not None and notice.key not in keys:
@@ -140,6 +147,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `bool(a)` directly
    --> SIM103.py:104:5
+    |
 102 |   def f():
 103 |       # SIM103
 104 | /     if a:
@@ -147,6 +155,7 @@ SIM103 [*] Return the condition `bool(a)` directly
 106 | |     return False
     | |________________^
 help: Replace with `return bool(a)`
+    |
 103 |     # SIM103
     -     if a:
     -         return True
@@ -223,6 +232,7 @@ SIM103 [*] Return the condition `10 not in a` directly
 131 | |     return True
     | |_______________^
 help: Replace with `return 10 not in a`
+    |
 128 | def f():
     -     if 10 in a:
     -         return False
@@ -234,12 +244,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `10 in a` directly
    --> SIM103.py:135:5
+    |
 134 |   def f():
 135 | /     if 10 not in a:
 136 | |         return False
 137 | |     return True
     | |_______________^
 help: Replace with `return 10 in a`
+    |
 134 | def f():
     -     if 10 not in a:
     -         return False
@@ -251,12 +263,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `a is not 10` directly
    --> SIM103.py:141:5
+    |
 140 |   def f():
 141 | /     if a is 10:
 142 | |         return False
 143 | |     return True
     | |_______________^
 help: Replace with `return a is not 10`
+    |
 140 | def f():
     -     if a is 10:
     -         return False
@@ -268,12 +282,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `a is 10` directly
    --> SIM103.py:147:5
+    |
 146 |   def f():
 147 | /     if a is not 10:
 148 | |         return False
 149 | |     return True
     | |_______________^
 help: Replace with `return a is 10`
+    |
 146 | def f():
     -     if a is not 10:
     -         return False
@@ -285,12 +301,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 SIM103 [*] Return the condition `a != 10` directly
    --> SIM103.py:153:5
+    |
 152 |   def f():
 153 | /     if a == 10:
 154 | |         return False
 155 | |     return True
     | |_______________^
 help: Replace with `return a != 10`
+    |
 152 | def f():
     -     if a == 10:
     -         return False

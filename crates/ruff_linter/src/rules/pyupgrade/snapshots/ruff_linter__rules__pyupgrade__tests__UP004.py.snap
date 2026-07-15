@@ -7,6 +7,7 @@ UP004 [*] Class `A` inherits from `object`
 5 | class A(object):
   |         ^^^^^^
 6 |     ...
+  |
 help: Remove `object` inheritance
   |
 4 |
@@ -23,6 +24,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 11 | ):
 12 |     ...
+   |
 help: Remove `object` inheritance
    |
 8  |
@@ -41,6 +43,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 17 |     #
 18 | ):
+   |
 help: Remove `object` inheritance
    |
 14 |
@@ -62,6 +65,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 25 | ):
 26 |     ...
+   |
 help: Remove `object` inheritance
    |
 21 |
@@ -83,6 +87,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 32 | ):
 33 |     ...
+   |
 help: Remove `object` inheritance
    |
 28 |
@@ -103,6 +108,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 38 |     #
 39 | ):
+   |
 help: Remove `object` inheritance
    |
 35 |
@@ -124,6 +130,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 46 |     #
 47 | ):
+   |
 help: Remove `object` inheritance
    |
 42 |
@@ -146,6 +153,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 54 |     #
 55 | ):
+   |
 help: Remove `object` inheritance
    |
 50 |
@@ -168,6 +176,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 62 |     #
 63 | ):
+   |
 help: Remove `object` inheritance
    |
 58 |
@@ -190,6 +199,7 @@ UP004 [*] Class `A` inherits from `object`
    |     ^^^^^^
 70 |     #
 71 | ):
+   |
 help: Remove `object` inheritance
    |
 66 |
@@ -209,6 +219,7 @@ UP004 [*] Class `B` inherits from `object`
 75 | class B(A, object):
    |            ^^^^^^
 76 |     ...
+   |
 help: Remove `object` inheritance
    |
 74 |
@@ -223,6 +234,7 @@ UP004 [*] Class `B` inherits from `object`
 79 | class B(object, A):
    |         ^^^^^^
 80 |     ...
+   |
 help: Remove `object` inheritance
    |
 78 |
@@ -239,6 +251,7 @@ UP004 [*] Class `B` inherits from `object`
    |     ^^^^^^
 85 |     A,
 86 | ):
+   |
 help: Remove `object` inheritance
    |
 83 | class B(
@@ -255,6 +268,7 @@ UP004 [*] Class `B` inherits from `object`
    |     ^^^^^^
 93 | ):
 94 |     ...
+   |
 help: Remove `object` inheritance
    |
 91 |     A,
@@ -264,11 +278,13 @@ help: Remove `object` inheritance
 
 UP004 [*] Class `B` inherits from `object`
    --> UP004.py:98:5
+    |
  97 | class B(
  98 |     object,
     |     ^^^^^^
  99 |     # Comment on A.
 100 |     A,
+    |
 help: Remove `object` inheritance
    |
 97 | class B(
@@ -286,6 +302,7 @@ UP004 [*] Class `B` inherits from `object`
     |     ^^^^^^
 109 | ):
 110 |     ...
+    |
 help: Remove `object` inheritance
     |
 107 |     A,
@@ -301,6 +318,7 @@ UP004 [*] Class `A` inherits from `object`
     |     ^^^^^^
 120 | ):
 121 |     ...
+    |
 help: Remove `object` inheritance
     |
 117 |
@@ -319,6 +337,7 @@ UP004 [*] Class `A` inherits from `object`
     |     ^^^^^^
 126 | ):
 127 |     ...
+    |
 help: Remove `object` inheritance
     |
 123 |
@@ -338,6 +357,7 @@ UP004 [*] Class `A` inherits from `object`
     |     ^^^^^^
 132 |     ,
 133 | ):
+    |
 help: Remove `object` inheritance
     |
 129 |
@@ -356,6 +376,7 @@ UP004 [*] Class `A` inherits from `object`
 137 | class A(object, object):
     |         ^^^^^^
 138 |     ...
+    |
 help: Remove `object` inheritance
     |
 136 |
@@ -370,6 +391,7 @@ UP004 [*] Class `A` inherits from `object`
 137 | class A(object, object):
     |                 ^^^^^^
 138 |     ...
+    |
 help: Remove `object` inheritance
     |
 136 |
@@ -385,6 +407,7 @@ UP004 [*] Class `A` inherits from `object`
 142 | class A(object):
     |         ^^^^^^
 143 |     ...
+    |
 help: Remove `object` inheritance
     |
 141 | @decorator()
@@ -400,6 +423,7 @@ UP004 [*] Class `A` inherits from `object`
 146 | class A(object):
     |         ^^^^^^
 147 |     ...
+    |
 help: Remove `object` inheritance
     |
 145 | @decorator()  # class A(object):
@@ -416,6 +440,7 @@ UP004 [*] Class `Unusual` inherits from `object`
 159 | class Unusual(builtins.object):
     |               ^^^^^^^^^^^^^^^
 160 |     ...
+    |
 help: Remove `object` inheritance
     |
 158 |

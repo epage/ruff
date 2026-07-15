@@ -9,6 +9,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^
 20 | getattr(foo, "_123abc")
 21 | getattr(foo, "__123abc__")
+   |
 help: Replace `getattr` with attribute access
    |
 18 | # Invalid usage
@@ -26,6 +27,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^
 21 | getattr(foo, "__123abc__")
 22 | getattr(foo, "abc123")
+   |
 help: Replace `getattr` with attribute access
    |
 19 | getattr(foo, "bar")
@@ -43,6 +45,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 | getattr(foo, "abc123")
 23 | getattr(foo, r"abc123")
+   |
 help: Replace `getattr` with attribute access
    |
 20 | getattr(foo, "_123abc")
@@ -60,6 +63,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^
 23 | getattr(foo, r"abc123")
 24 | _ = lambda x: getattr(x, "bar")
+   |
 help: Replace `getattr` with attribute access
    |
 21 | getattr(foo, "__123abc__")
@@ -77,6 +81,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^
 24 | _ = lambda x: getattr(x, "bar")
 25 | if getattr(x, "bar"):
+   |
 help: Replace `getattr` with attribute access
    |
 22 | getattr(foo, "abc123")
@@ -94,6 +99,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    |               ^^^^^^^^^^^^^^^^^
 25 | if getattr(x, "bar"):
 26 |     pass
+   |
 help: Replace `getattr` with attribute access
    |
 23 | getattr(foo, r"abc123")
@@ -111,6 +117,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    |    ^^^^^^^^^^^^^^^^^
 26 |     pass
 27 | getattr(1, "real")
+   |
 help: Replace `getattr` with attribute access
    |
 24 | _ = lambda x: getattr(x, "bar")
@@ -128,6 +135,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^
 28 | getattr(1., "real")
 29 | getattr(1.0, "real")
+   |
 help: Replace `getattr` with attribute access
    |
 26 |     pass
@@ -145,6 +153,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^
 29 | getattr(1.0, "real")
 30 | getattr(1j, "real")
+   |
 help: Replace `getattr` with attribute access
    |
 27 | getattr(1, "real")
@@ -162,6 +171,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^
 30 | getattr(1j, "real")
 31 | getattr(True, "real")
+   |
 help: Replace `getattr` with attribute access
    |
 28 | getattr(1., "real")
@@ -179,7 +189,9 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^
 31 | getattr(True, "real")
 32 | getattr(x := 1, "real")
+   |
 help: Replace `getattr` with attribute access
+   |
 29 | getattr(1.0, "real")
    - getattr(1j, "real")
 30 + (1j).real
@@ -195,6 +207,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^
 32 | getattr(x := 1, "real")
 33 | getattr(x + y, "real")
+   |
 help: Replace `getattr` with attribute access
    |
 30 | getattr(1j, "real")
@@ -212,6 +225,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^
 33 | getattr(x + y, "real")
 34 | getattr("foo"
+   |
 help: Replace `getattr` with attribute access
    |
 31 | getattr(True, "real")
@@ -229,6 +243,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^
 34 | getattr("foo"
 35 |         "bar", "real")
+   |
 help: Replace `getattr` with attribute access
    |
 32 | getattr(x := 1, "real")
@@ -246,12 +261,14 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
 35 | |         "bar", "real")
    | |______________________^
 help: Replace `getattr` with attribute access
+   |
 33 | getattr(x + y, "real")
    - getattr("foo"
    -         "bar", "real")
 34 + ("foo"
 35 +         "bar").real
 36 |
+   |
 
 B009 [*] Do not call `getattr` with a constant attribute value. It is not any safer than normal property access.
   --> B009_B010.py:58:8
@@ -261,6 +278,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    |        ^^^^^^^^^^^^^^^^^^^^^
 59 |
 60 | # Regression test for: https://github.com/astral-sh/ruff/issues/7455#issuecomment-1732387247
+   |
 help: Replace `getattr` with attribute access
    |
 57 | # Regression test for: https://github.com/astral-sh/ruff/issues/7455#issuecomment-1722458885
@@ -278,6 +296,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | |_____________________________________^
 67 |
 68 |   import builtins
+   |
 help: Replace `getattr` with attribute access
    |
 64 | # Regression test for: https://github.com/astral-sh/ruff/issues/7455#issuecomment-1739800901
@@ -296,6 +315,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 70 |
 71 | # Regression test for: https://github.com/astral-sh/ruff/issues/18353
+   |
 help: Replace `getattr` with attribute access
    |
 68 | import builtins
@@ -312,6 +332,7 @@ B009 [*] Do not call `getattr` with a constant attribute value. It is not any sa
 80 | getattr(foo, "ſ")
    | ^^^^^^^^^^^^^^^^^
 81 | setattr(foo, "ſ", 1)
+   |
 help: Replace `getattr` with attribute access
    |
 79 | # Example: the long s character "ſ" normalizes to "s" under NFKC.

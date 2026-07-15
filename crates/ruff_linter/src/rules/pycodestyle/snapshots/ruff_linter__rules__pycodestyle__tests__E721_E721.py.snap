@@ -9,6 +9,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
   |    ^^^^^^^^^^^^^^^^^^^^^
 3 |     pass
 4 | #: E721
+  |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
  --> E721.py:5:4
@@ -19,15 +20,18 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
   |    ^^^^^^^^^^^^^^^^^^^^^
 6 |     pass
 7 | #: E721
+  |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:8:4
+   |
  6 |     pass
  7 | #: E721
  8 | if type(res) == memoryview:
    |    ^^^^^^^^^^^^^^^^^^^^^^^
  9 |     pass
 10 | #: Okay
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:21:8
@@ -38,6 +42,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^^^
 22 | #: E721
 23 | assert type(res) == type([])
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:21:36
@@ -48,6 +53,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |                                    ^^^^^^^^^^^^^^^^^^^^^^^
 22 | #: E721
 23 | assert type(res) == type([])
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:23:8
@@ -58,6 +64,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^
 24 | #: E721
 25 | assert type(res) == type(())
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:25:8
@@ -68,6 +75,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^
 26 | #: E721
 27 | assert type(res) == type((0,))
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:27:8
@@ -78,6 +86,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^^
 28 | #: E721
 29 | assert type(res) == type((0))
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:29:8
@@ -88,6 +97,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^
 30 | #: E721
 31 | assert type(res) != type((1, ))
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:31:8
@@ -98,6 +108,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^^^
 32 | #: Okay
 33 | assert type(res) is type((1, ))
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:37:8
@@ -108,6 +119,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^
 38 | #: E201 E201 E202 E721
 39 | assert type(res) == type( ( ) )
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:39:8
@@ -118,6 +130,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |        ^^^^^^^^^^^^^^^^^^^^^^^^
 40 | #: E201 E202 E721
 41 | assert type(res) == type( (0, ) )
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:41:8
@@ -127,6 +140,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
 41 | assert type(res) == type( (0, ) )
    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
 42 | #:
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
   --> E721.py:59:4
@@ -137,6 +151,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
    |    ^^^^^^^^^^^^^^^^^
 60 |     pass
 61 | #: Okay
+   |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
    --> E721.py:140:1
@@ -146,6 +161,7 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
     | ^^^^^^^^^^^^^^
 141 |
 142 | import builtins
+    |
 
 E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
    --> E721.py:144:4
@@ -155,3 +171,4 @@ E721 Use `is` and `is not` for type comparisons, or `isinstance()` for isinstanc
 144 | if builtins.type(res) == memoryview:  # E721
     |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 145 |     pass
+    |

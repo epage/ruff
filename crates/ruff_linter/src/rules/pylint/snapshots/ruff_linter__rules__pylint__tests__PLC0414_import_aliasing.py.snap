@@ -10,6 +10,7 @@ PLC0414 [*] Import alias does not rename original package
   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 | from collections import OrderedDict as OrderedDict  # [useless-import-alias]
 8 | from collections import OrderedDict as o_dict
+  |
 help: Remove import alias
   |
 5 |
@@ -27,6 +28,7 @@ PLC0414 [*] Import alias does not rename original package
   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
 8 | from collections import OrderedDict as o_dict
 9 | import os.path as path  # [consider-using-from-import]
+  |
 help: Remove import alias
   |
 6 | import collections as collections  # [useless-import-alias]
@@ -45,6 +47,7 @@ PLC0414 [*] Import alias does not rename original package
    |               ^^^^^^^^^^
 17 | from . import bar as Bar
 18 | from . import bar
+   |
 help: Remove import alias
    |
 15 | from sys import version
@@ -63,6 +66,7 @@ PLC0414 [*] Import alias does not rename original package
    |                   ^^^^^^^^^^
 20 | from ..foo.bar import foobar as foobar  # [useless-import-alias]
 21 | from ..foo.bar import foobar as anotherfoobar
+   |
 help: Remove import alias
    |
 18 | from . import bar
@@ -81,6 +85,7 @@ PLC0414 [*] Import alias does not rename original package
    |                       ^^^^^^^^^^^^^^^^
 21 | from ..foo.bar import foobar as anotherfoobar
 22 | from . import foo as foo, foo2 as bar2  # [useless-import-alias]
+   |
 help: Remove import alias
    |
 19 | from ..foo import bar as bar  # [useless-import-alias]
@@ -99,6 +104,7 @@ PLC0414 [*] Import alias does not rename original package
    |               ^^^^^^^^^^
 23 | from . import foo as bar, foo2 as foo2  # [useless-import-alias]
 24 | from . import foo as bar, foo2 as bar2
+   |
 help: Remove import alias
    |
 21 | from ..foo.bar import foobar as anotherfoobar
@@ -117,6 +123,7 @@ PLC0414 [*] Import alias does not rename original package
    |                           ^^^^^^^^^^^^
 24 | from . import foo as bar, foo2 as bar2
 25 | from foo.bar import foobar as foobar  # [useless-import-alias]
+   |
 help: Remove import alias
    |
 22 | from . import foo as foo, foo2 as bar2  # [useless-import-alias]
@@ -135,6 +142,7 @@ PLC0414 [*] Import alias does not rename original package
    |                     ^^^^^^^^^^^^^^^^
 26 | from foo.bar import foobar as foo
 27 | from .foo.bar import f as foobar
+   |
 help: Remove import alias
    |
 24 | from . import foo as bar, foo2 as bar2

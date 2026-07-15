@@ -7,6 +7,7 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
 1 | x = "𝐁ad string"
   |      ^
 2 | y = "−"
+  |
 
 RUF002 Docstring contains ambiguous `）` (FULLWIDTH RIGHT PARENTHESIS). Did you mean `)` (RIGHT PARENTHESIS)?
  --> confusables.py:6:56
@@ -16,6 +17,7 @@ RUF002 Docstring contains ambiguous `）` (FULLWIDTH RIGHT PARENTHESIS). Did you
   |                                                        ^^
 7 |     # And here's a comment with an unusual punctuation mark: ᜵
 8 |     ...
+  |
 
 RUF003 Comment contains ambiguous `᜵` (PHILIPPINE SINGLE PUNCTUATION). Did you mean `/` (SOLIDUS)?
  --> confusables.py:7:62
@@ -25,6 +27,7 @@ RUF003 Comment contains ambiguous `᜵` (PHILIPPINE SINGLE PUNCTUATION). Did you
 7 |     # And here's a comment with an unusual punctuation mark: ᜵
   |                                                              ^
 8 |     ...
+  |
 
 RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you mean `B` (LATIN CAPITAL LETTER B)?
   --> confusables.py:17:6
@@ -32,6 +35,7 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
 17 | x = "𝐁ad string"
    |      ^
 18 | x = "−"
+   |
 
 RUF001 String contains ambiguous `α` (GREEK SMALL LETTER ALPHA). Did you mean `a` (LATIN SMALL LETTER A)?
   --> confusables.py:26:10
@@ -42,6 +46,7 @@ RUF001 String contains ambiguous `α` (GREEK SMALL LETTER ALPHA). Did you mean `
    |          ^
 27 |
 28 | # The two characters should be flagged here. The first character is a "word"
+   |
 
 RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean `P` (LATIN CAPITAL LETTER P)?
   --> confusables.py:31:6
@@ -52,6 +57,7 @@ RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean
    |      ^
 32 |
 33 | # Same test cases as above but using f-strings instead:
+   |
 
 RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
   --> confusables.py:31:7
@@ -62,6 +68,7 @@ RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
    |       ^
 32 |
 33 | # Same test cases as above but using f-strings instead:
+   |
 
 RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you mean `B` (LATIN CAPITAL LETTER B)?
   --> confusables.py:34:7
@@ -71,6 +78,7 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
    |       ^
 35 | x = f"−"
 36 | x = f"Русский"
+   |
 
 RUF001 String contains ambiguous `α` (GREEK SMALL LETTER ALPHA). Did you mean `a` (LATIN SMALL LETTER A)?
   --> confusables.py:37:11
@@ -80,6 +88,7 @@ RUF001 String contains ambiguous `α` (GREEK SMALL LETTER ALPHA). Did you mean `
 37 | x = f"βα Bαd"
    |           ^
 38 | x = f"Р усский"
+   |
 
 RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean `P` (LATIN CAPITAL LETTER P)?
   --> confusables.py:38:7
@@ -90,6 +99,7 @@ RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean
    |       ^
 39 |
 40 | # Nested f-strings
+   |
 
 RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
   --> confusables.py:38:8
@@ -100,6 +110,7 @@ RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
    |        ^
 39 |
 40 | # Nested f-strings
+   |
 
 RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you mean `B` (LATIN CAPITAL LETTER B)?
   --> confusables.py:41:7
@@ -109,6 +120,7 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
    |       ^
 42 |
 43 | # Comments inside f-strings
+   |
 
 RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
   --> confusables.py:41:21
@@ -118,6 +130,7 @@ RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
    |                     ^
 42 |
 43 | # Comments inside f-strings
+   |
 
 RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean `P` (LATIN CAPITAL LETTER P)?
   --> confusables.py:41:25
@@ -127,6 +140,7 @@ RUF001 String contains ambiguous `Р` (CYRILLIC CAPITAL LETTER ER). Did you mean
    |                         ^
 42 |
 43 | # Comments inside f-strings
+   |
 
 RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
   --> confusables.py:41:26
@@ -136,6 +150,7 @@ RUF001 String contains ambiguous ` ` (EN QUAD). Did you mean ` ` (SPACE)?
    |                          ^
 42 |
 43 | # Comments inside f-strings
+   |
 
 RUF003 Comment contains ambiguous `）` (FULLWIDTH RIGHT PARENTHESIS). Did you mean `)` (RIGHT PARENTHESIS)?
   --> confusables.py:44:68
@@ -145,6 +160,7 @@ RUF003 Comment contains ambiguous `）` (FULLWIDTH RIGHT PARENTHESIS). Did you m
    |                                                                    ^^
 45 | # And here's a comment with a greek alpha: ∗
 46 | foo # And here's a comment with an unusual punctuation mark: ᜵
+   |
 
 RUF003 Comment contains ambiguous `᜵` (PHILIPPINE SINGLE PUNCTUATION). Did you mean `/` (SOLIDUS)?
   --> confusables.py:46:62
@@ -154,6 +170,7 @@ RUF003 Comment contains ambiguous `᜵` (PHILIPPINE SINGLE PUNCTUATION). Did you
 46 | foo # And here's a comment with an unusual punctuation mark: ᜵
    |                                                              ^
 47 | }"
+   |
 
 RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you mean `B` (LATIN CAPITAL LETTER B)?
   --> confusables.py:58:6
@@ -163,6 +180,7 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
    |      ^
 59 |
 60 | from typing import Literal
+   |
 
 RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you mean `B` (LATIN CAPITAL LETTER B)?
   --> confusables.py:58:13
@@ -172,3 +190,4 @@ RUF001 String contains ambiguous `𝐁` (MATHEMATICAL BOLD CAPITAL B). Did you m
    |             ^
 59 |
 60 | from typing import Literal
+   |

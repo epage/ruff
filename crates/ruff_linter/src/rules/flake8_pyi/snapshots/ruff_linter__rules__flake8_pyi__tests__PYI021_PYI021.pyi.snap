@@ -8,6 +8,7 @@ PYI021 [*] Docstrings should not be included in stubs
   | ^^^^^^^^^
 2 |
 3 | def foo():
+  |
 help: Remove docstring
   |
   - """foo"""  # ERROR PYI021
@@ -24,6 +25,7 @@ PYI021 [*] Docstrings should not be included in stubs
   |     ^^^^^^^^^
 5 |
 6 | class Bar:
+  |
 help: Remove docstring
   |
 3 | def foo():
@@ -41,6 +43,7 @@ PYI021 [*] Docstrings should not be included in stubs
   |     ^^^^^^^^^
 8 |
 9 | class Qux:
+  |
 help: Remove docstring
   |
 6 | class Bar:
@@ -58,6 +61,7 @@ PYI021 [*] Docstrings should not be included in stubs
    |     ^^^^^^^^^
 11 |
 12 |     def __init__(self) -> None: ...
+   |
 help: Remove docstring
    |
 9  | class Qux:
@@ -78,6 +82,7 @@ PYI021 [*] Docstrings should not be included in stubs
    | |_______^
 19 |
 20 |       def __init__(self) -> None: ...
+   |
 help: Remove docstring
    |
 14 | class Baz:

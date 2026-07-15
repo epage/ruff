@@ -14,6 +14,7 @@ F811 [*] Redefinition of unused `BrokerUsecase` from line 2
 7 |     from faststream._internal.broker import BrokerUsecase
   |                                             ^^^^^^^^^^^^^ `BrokerUsecase` redefined here
 8 |     from faststream.specification.schema import Contact, License
+  |
 help: Remove definition: `BrokerUsecase`
   |
 6 |     # should detect -------------------------vvvvvvvvvvvvv

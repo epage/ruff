@@ -10,6 +10,7 @@ TC003 [*] Move standard library import `typing.Final` into a type-checking block
   |                    ^^^^^
 6 |
 7 | Const: Final[dict] = {}
+  |
 help: Move into type-checking block
    |
 4  |

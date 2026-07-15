@@ -9,9 +9,11 @@ YTT203 `sys.version_info[1]` compared to integer (python4), compare `sys.version
 4 | sys.version_info[1] >= 5
   | ^^^^^^^^^^^^^^^^^^^
 5 | version_info[1] < 6
+  |
 
 YTT203 `sys.version_info[1]` compared to integer (python4), compare `sys.version_info` to tuple
  --> YTT203.py:5:1
+  |
 4 | sys.version_info[1] >= 5
 5 | version_info[1] < 6
   | ^^^^^^^^^^^^^^^

@@ -13,6 +13,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | |___________^
 11 |
 12 |   "a,b,c,d".split(",")
+   |
 help: Replace with list literal
   |
 5 | # positives
@@ -34,6 +35,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^
 13 | "a,b,c,d".split(None)
 14 | "a,b,c,d".split(",", 1)
+   |
 help: Replace with list literal
    |
 11 |
@@ -50,6 +52,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^
 14 | "a,b,c,d".split(",", 1)
 15 | "a,b,c,d".split(None, 1)
+   |
 help: Replace with list literal
    |
 12 | "a,b,c,d".split(",")
@@ -67,6 +70,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 15 | "a,b,c,d".split(None, 1)
 16 | "a,b,c,d".split(sep=",")
+   |
 help: Replace with list literal
    |
 13 | "a,b,c,d".split(None)
@@ -84,6 +88,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 16 | "a,b,c,d".split(sep=",")
 17 | "a,b,c,d".split(sep=None)
+   |
 help: Replace with list literal
    |
 14 | "a,b,c,d".split(",", 1)
@@ -101,6 +106,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 17 | "a,b,c,d".split(sep=None)
 18 | "a,b,c,d".split(sep=",", maxsplit=1)
+   |
 help: Replace with list literal
    |
 15 | "a,b,c,d".split(None, 1)
@@ -118,6 +124,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 18 | "a,b,c,d".split(sep=",", maxsplit=1)
 19 | "a,b,c,d".split(sep=None, maxsplit=1)
+   |
 help: Replace with list literal
    |
 16 | "a,b,c,d".split(sep=",")
@@ -135,6 +142,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 | "a,b,c,d".split(sep=None, maxsplit=1)
 20 | "a,b,c,d".split(maxsplit=1, sep=",")
+   |
 help: Replace with list literal
    |
 17 | "a,b,c,d".split(sep=None)
@@ -152,6 +160,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 | "a,b,c,d".split(maxsplit=1, sep=",")
 21 | "a,b,c,d".split(maxsplit=1, sep=None)
+   |
 help: Replace with list literal
    |
 18 | "a,b,c,d".split(sep=",", maxsplit=1)
@@ -169,6 +178,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 | "a,b,c,d".split(maxsplit=1, sep=None)
 22 | "a,b,c,d".split(",", maxsplit=1)
+   |
 help: Replace with list literal
    |
 19 | "a,b,c,d".split(sep=None, maxsplit=1)
@@ -186,6 +196,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 22 | "a,b,c,d".split(",", maxsplit=1)
 23 | "a,b,c,d".split(None, maxsplit=1)
+   |
 help: Replace with list literal
    |
 20 | "a,b,c,d".split(maxsplit=1, sep=",")
@@ -203,6 +214,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | "a,b,c,d".split(None, maxsplit=1)
 24 | "a,b,c,d".split(maxsplit=1)
+   |
 help: Replace with list literal
    |
 21 | "a,b,c,d".split(maxsplit=1, sep=None)
@@ -220,6 +232,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 | "a,b,c,d".split(maxsplit=1)
 25 | "a,b,c,d".split(maxsplit=1.0)
+   |
 help: Replace with list literal
    |
 22 | "a,b,c,d".split(",", maxsplit=1)
@@ -237,6 +250,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 25 | "a,b,c,d".split(maxsplit=1.0)
 26 | "a,b,c,d".split(maxsplit=1)
+   |
 help: Replace with list literal
    |
 23 | "a,b,c,d".split(None, maxsplit=1)
@@ -254,6 +268,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 27 | "a,b,c,d".split(maxsplit=0)
 28 | "VERB AUX PRON ADP DET".split(" ")
+   |
 help: Replace with list literal
    |
 25 | "a,b,c,d".split(maxsplit=1.0)
@@ -271,6 +286,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | "VERB AUX PRON ADP DET".split(" ")
 29 | '   1   2   3   '.split()
+   |
 help: Replace with list literal
    |
 26 | "a,b,c,d".split(maxsplit=1)
@@ -288,6 +304,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 29 | '   1   2   3   '.split()
 30 | '1<>2<>3<4'.split('<>')
+   |
 help: Replace with list literal
    |
 27 | "a,b,c,d".split(maxsplit=0)
@@ -304,6 +321,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 29 | '   1   2   3   '.split()
    | ^^^^^^^^^^^^^^^^^^^^^^^^^
 30 | '1<>2<>3<4'.split('<>')
+   |
 help: Replace with list literal
    |
 28 | "VERB AUX PRON ADP DET".split(" ")
@@ -321,6 +339,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 31 |
 32 | " a*a a*a a ".split("*", -1)  # [" a", "a a", "a a "]
+   |
 help: Replace with list literal
    |
 29 | '   1   2   3   '.split()
@@ -338,6 +357,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 33 | "".split()  # []
 34 | """
+   |
 help: Replace with list literal
    |
 31 |
@@ -354,6 +374,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^
 34 | """
 35 | """.split()  # []
+   |
 help: Replace with list literal
    |
 32 | " a*a a*a a ".split("*", -1)  # [" a", "a a", "a a "]
@@ -372,6 +393,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | |___________^
 36 |   "       ".split()  # []
 37 |   "/abc/".split() # ["/abc/"]
+   |
 help: Replace with list literal
    |
 33 | "".split()  # []
@@ -390,6 +412,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^
 37 | "/abc/".split() # ["/abc/"]
 38 | ("a,b,c"
+   |
 help: Replace with list literal
    |
 35 | """.split()  # []
@@ -407,6 +430,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^
 38 | ("a,b,c"
 39 | # comment
+   |
 help: Replace with list literal
    |
 36 | "   	".split()  # []
@@ -427,6 +451,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | |________^
 41 |   )  # ["a,b,c"]
 42 |   ("a,b,c"
+   |
 help: Replace with list literal
    |
 37 | "/abc/".split() # ["/abc/"]
@@ -450,6 +475,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | |___________^
 45 |   ) # ["a", "b", "c"]
 46 |   ("a,"
+   |
 help: Replace with list literal
    |
 41 | )  # ["a,b,c"]
@@ -474,6 +500,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 50 | | .split(",")
    | |___________^
 51 |   ) # ["a", "b", "c"]
+   |
 help: Replace with list literal
    |
 45 | ) # ["a", "b", "c"]
@@ -496,6 +523,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 54 | |     "world".split()
    | |___________________^
 55 |   # ["hello", "world"]
+   |
 help: Replace with list literal
    |
 52 |
@@ -513,6 +541,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^
 59 | r"a \n b".split()  # [r"a", r"\n", r"b"]
 60 | ("a " "b").split()  # ["a", "b"]
+   |
 help: Replace with list literal
    |
 57 | # prefixes and isc
@@ -530,6 +559,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^
 60 | ("a " "b").split()  # ["a", "b"]
 61 | "a " "b".split()  # ["a", "b"]
+   |
 help: Replace with list literal
    |
 58 | u"a b".split()  # [u"a", u"b"]
@@ -547,6 +577,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^
 61 | "a " "b".split()  # ["a", "b"]
 62 | u"a " "b".split()  # [u"a", u"b"]
+   |
 help: Replace with list literal
    |
 59 | r"a \n b".split()  # [r"a", r"\n", r"b"]
@@ -564,6 +595,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^
 62 | u"a " "b".split()  # [u"a", u"b"]
 63 | "a " u"b".split()  # ["a", "b"]
+   |
 help: Replace with list literal
    |
 60 | ("a " "b").split()  # ["a", "b"]
@@ -581,6 +613,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^
 63 | "a " u"b".split()  # ["a", "b"]
 64 | u"a " r"\n".split()  # [u"a", u"\\n"]
+   |
 help: Replace with list literal
    |
 61 | "a " "b".split()  # ["a", "b"]
@@ -598,6 +631,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^
 64 | u"a " r"\n".split()  # [u"a", u"\\n"]
 65 | r"\n " u"\n".split()  # [r"\n"]
+   |
 help: Replace with list literal
    |
 62 | u"a " "b".split()  # [u"a", u"b"]
@@ -615,6 +649,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^
 65 | r"\n " u"\n".split()  # [r"\n"]
 66 | r"\n " "\n".split()  # [r"\n"]
+   |
 help: Replace with list literal
    |
 63 | "a " u"b".split()  # ["a", "b"]
@@ -632,6 +667,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^
 66 | r"\n " "\n".split()  # [r"\n"]
 67 | "a " r"\n".split()  # ["a", "\\n"]
+   |
 help: Replace with list literal
    |
 64 | u"a " r"\n".split()  # [u"a", u"\\n"]
@@ -648,6 +684,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 66 | r"\n " "\n".split()  # [r"\n"]
    | ^^^^^^^^^^^^^^^^^^^
 67 | "a " r"\n".split()  # ["a", "\\n"]
+   |
 help: Replace with list literal
    |
 65 | r"\n " u"\n".split()  # [r"\n"]
@@ -665,6 +702,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^
 68 |
 69 | "a,b,c".split(',', maxsplit=0) # ["a,b,c"]
+   |
 help: Replace with list literal
    |
 66 | r"\n " "\n".split()  # [r"\n"]
@@ -682,6 +720,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 70 | "a,b,c".split(',', maxsplit=-1)  # ["a", "b", "c"]
 71 | "a,b,c".split(',', maxsplit=-2)  # ["a", "b", "c"]
+   |
 help: Replace with list literal
    |
 68 |
@@ -698,6 +737,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 71 | "a,b,c".split(',', maxsplit=-2)  # ["a", "b", "c"]
 72 | "a,b,c".split(',', maxsplit=-0)  # ["a,b,c"]
+   |
 help: Replace with list literal
    |
 69 | "a,b,c".split(',', maxsplit=0) # ["a,b,c"]
@@ -714,6 +754,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 71 | "a,b,c".split(',', maxsplit=-2)  # ["a", "b", "c"]
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 72 | "a,b,c".split(',', maxsplit=-0)  # ["a,b,c"]
+   |
 help: Replace with list literal
    |
 70 | "a,b,c".split(',', maxsplit=-1)  # ["a", "b", "c"]
@@ -731,6 +772,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 73 |
 74 | # negatives
+   |
 help: Replace with list literal
    |
 71 | "a,b,c".split(',', maxsplit=-2)  # ["a", "b", "c"]
@@ -752,6 +794,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     | |___________^
 109 |
 110 |   # https://github.com/astral-sh/ruff/issues/18042
+    |
 help: Replace with list literal
     |
 102 | # another positive demonstrating quote preservation
@@ -772,6 +815,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
 111 | print("a,b".rsplit(","))
     |       ^^^^^^^^^^^^^^^^^
 112 | print("a,b,c".rsplit(",", 1))
+    |
 help: Replace with list literal
     |
 110 | # https://github.com/astral-sh/ruff/issues/18042
@@ -789,6 +833,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^
 113 |
 114 | # https://github.com/astral-sh/ruff/issues/18069
+    |
 help: Replace with list literal
     |
 111 | print("a,b".rsplit(","))
@@ -806,20 +851,24 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^
 117 | print("".split(sep=None, maxsplit=0))
 118 | print(" ".split(maxsplit=0))
+    |
 help: Replace with list literal
     |
 115 |
     - print("".split(maxsplit=0))
 116 + print([])
 117 | print("".split(sep=None, maxsplit=0))
+    |
 
 SIM905 [*] Consider using a list literal instead of `str.split`
    --> SIM905.py:117:7
+    |
 116 | print("".split(maxsplit=0))
 117 | print("".split(sep=None, maxsplit=0))
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 118 | print(" ".split(maxsplit=0))
 119 | print(" ".split(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 116 | print("".split(maxsplit=0))
@@ -837,6 +886,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^
 119 | print(" ".split(sep=None, maxsplit=0))
 120 | print(" x ".split(maxsplit=0))
+    |
 help: Replace with list literal
     |
 117 | print("".split(sep=None, maxsplit=0))
@@ -854,6 +904,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 120 | print(" x ".split(maxsplit=0))
 121 | print(" x ".split(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 118 | print(" ".split(maxsplit=0))
@@ -871,6 +922,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^
 121 | print(" x ".split(sep=None, maxsplit=0))
 122 | print("  x  ".split(maxsplit=0))
+    |
 help: Replace with list literal
     |
 119 | print(" ".split(sep=None, maxsplit=0))
@@ -888,6 +940,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 122 | print("  x  ".split(maxsplit=0))
 123 | print("  x  ".split(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 120 | print(" x ".split(maxsplit=0))
@@ -905,6 +958,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^
 123 | print("  x  ".split(sep=None, maxsplit=0))
 124 | print("".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 121 | print(" x ".split(sep=None, maxsplit=0))
@@ -922,21 +976,25 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 124 | print("".rsplit(maxsplit=0))
 125 | print("".rsplit(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 122 | print("  x  ".split(maxsplit=0))
     - print("  x  ".split(sep=None, maxsplit=0))
 123 + print(["x  "])
 124 | print("".rsplit(maxsplit=0))
+    |
 
 SIM905 [*] Consider using a list literal instead of `str.rsplit`
    --> SIM905.py:124:7
+    |
 122 | print("  x  ".split(maxsplit=0))
 123 | print("  x  ".split(sep=None, maxsplit=0))
 124 | print("".rsplit(maxsplit=0))
     |       ^^^^^^^^^^^^^^^^^^^^^
 125 | print("".rsplit(sep=None, maxsplit=0))
 126 | print(" ".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 123 | print("  x  ".split(sep=None, maxsplit=0))
@@ -954,6 +1012,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 126 | print(" ".rsplit(maxsplit=0))
 127 | print(" ".rsplit(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 124 | print("".rsplit(maxsplit=0))
@@ -971,6 +1030,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^
 127 | print(" ".rsplit(sep=None, maxsplit=0))
 128 | print(" x ".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 125 | print("".rsplit(sep=None, maxsplit=0))
@@ -988,6 +1048,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 128 | print(" x ".rsplit(maxsplit=0))
 129 | print(" x ".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 126 | print(" ".rsplit(maxsplit=0))
@@ -1005,6 +1066,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^
 129 | print(" x ".rsplit(maxsplit=0))
 130 | print(" x ".rsplit(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 127 | print(" ".rsplit(sep=None, maxsplit=0))
@@ -1022,6 +1084,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^
 130 | print(" x ".rsplit(sep=None, maxsplit=0))
 131 | print("  x  ".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 128 | print(" x ".rsplit(maxsplit=0))
@@ -1039,6 +1102,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 131 | print("  x  ".rsplit(maxsplit=0))
 132 | print("  x  ".rsplit(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 129 | print(" x ".rsplit(maxsplit=0))
@@ -1055,6 +1119,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
 131 | print("  x  ".rsplit(maxsplit=0))
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
 132 | print("  x  ".rsplit(sep=None, maxsplit=0))
+    |
 help: Replace with list literal
     |
 130 | print(" x ".rsplit(sep=None, maxsplit=0))
@@ -1072,6 +1137,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 133 |
 134 | # https://github.com/astral-sh/ruff/issues/19581 - embedded quotes in raw strings
+    |
 help: Replace with list literal
     |
 131 | print("  x  ".rsplit(maxsplit=0))
@@ -1148,6 +1214,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     | |_______________________________________^
 164 |
 165 |   # https://github.com/astral-sh/ruff/issues/19845
+    |
 help: Replace with list literal
     |
 159 |
@@ -1167,6 +1234,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 167 | print("\x1c\x1d\x1e\x1f>".split(maxsplit=0))
 168 | print("<\x1c\x1d\x1e\x1f".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 165 | # https://github.com/astral-sh/ruff/issues/19845
@@ -1183,6 +1251,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
 167 | print("\x1c\x1d\x1e\x1f>".split(maxsplit=0))
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 168 | print("<\x1c\x1d\x1e\x1f".rsplit(maxsplit=0))
+    |
 help: Replace with list literal
     |
 166 | print("S\x1cP\x1dL\x1eI\x1fT".split())
@@ -1200,6 +1269,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 169 |
 170 | # leading/trailing whitespace should not count towards maxsplit
+    |
 help: Replace with list literal
     |
 167 | print("\x1c\x1d\x1e\x1f>".split(maxsplit=0))
@@ -1216,6 +1286,7 @@ SIM905 [*] Consider using a list literal instead of `str.split`
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 172 | " a b c d ".rsplit(maxsplit=2)  # [" a b", "c", "d"]
 173 | "a  b".split(maxsplit=1)  # ["a", "b"]
+    |
 help: Replace with list literal
     |
 170 | # leading/trailing whitespace should not count towards maxsplit
@@ -1232,6 +1303,7 @@ SIM905 [*] Consider using a list literal instead of `str.rsplit`
 172 | " a b c d ".rsplit(maxsplit=2)  # [" a b", "c", "d"]
     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 173 | "a  b".split(maxsplit=1)  # ["a", "b"]
+    |
 help: Replace with list literal
     |
 171 | " a b c d ".split(maxsplit=2)  # ["a", "b", "c d "]

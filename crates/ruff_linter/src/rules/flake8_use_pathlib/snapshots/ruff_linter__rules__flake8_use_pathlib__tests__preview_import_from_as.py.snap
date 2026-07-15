@@ -10,6 +10,7 @@ PTH100 [*] `os.path.abspath()` should be replaced by `Path.resolve()`
    |     ^^^^^^^^
 15 | aa = xchmod(p)
 16 | aaa = xmkdir(p)
+   |
 help: Replace with `Path(...).resolve()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -32,6 +33,7 @@ PTH101 `os.chmod()` should be replaced by `Path.chmod()`
    |      ^^^^^^
 16 | aaa = xmkdir(p)
 17 | xmakedirs(p)
+   |
 help: Replace with `Path(...).chmod(...)`
 
 PTH102 [*] `os.mkdir()` should be replaced by `Path.mkdir()`
@@ -43,6 +45,7 @@ PTH102 [*] `os.mkdir()` should be replaced by `Path.mkdir()`
    |       ^^^^^^
 17 | xmakedirs(p)
 18 | xrename(p)
+   |
 help: Replace with `Path(...).mkdir()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -64,6 +67,7 @@ PTH103 [*] `os.makedirs()` should be replaced by `Path.mkdir(parents=True)`
    | ^^^^^^^^^
 18 | xrename(p)
 19 | xreplace(p)
+   |
 help: Replace with `Path(...).mkdir(parents=True)`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -85,6 +89,7 @@ PTH104 `os.rename()` should be replaced by `Path.rename()`
    | ^^^^^^^
 19 | xreplace(p)
 20 | xrmdir(p)
+   |
 help: Replace with `Path(...).rename(...)`
 
 PTH105 `os.replace()` should be replaced by `Path.replace()`
@@ -96,6 +101,7 @@ PTH105 `os.replace()` should be replaced by `Path.replace()`
    | ^^^^^^^^
 20 | xrmdir(p)
 21 | xremove(p)
+   |
 help: Replace with `Path(...).replace(...)`
 
 PTH106 [*] `os.rmdir()` should be replaced by `Path.rmdir()`
@@ -107,6 +113,7 @@ PTH106 [*] `os.rmdir()` should be replaced by `Path.rmdir()`
    | ^^^^^^
 21 | xremove(p)
 22 | xunlink(p)
+   |
 help: Replace with `Path(...).rmdir()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -128,6 +135,7 @@ PTH107 [*] `os.remove()` should be replaced by `Path.unlink()`
    | ^^^^^^^
 22 | xunlink(p)
 23 | xgetcwd(p)
+   |
 help: Replace with `Path(...).unlink()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -149,6 +157,7 @@ PTH108 [*] `os.unlink()` should be replaced by `Path.unlink()`
    | ^^^^^^^
 23 | xgetcwd(p)
 24 | b = xexists(p)
+   |
 help: Replace with `Path(...).unlink()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -170,6 +179,7 @@ PTH109 `os.getcwd()` should be replaced by `Path.cwd()`
    | ^^^^^^^
 24 | b = xexists(p)
 25 | bb = xexpanduser(p)
+   |
 help: Replace with `Path.cwd()`
 
 PTH110 [*] `os.path.exists()` should be replaced by `Path.exists()`
@@ -181,6 +191,7 @@ PTH110 [*] `os.path.exists()` should be replaced by `Path.exists()`
    |     ^^^^^^^
 25 | bb = xexpanduser(p)
 26 | bbb = xisdir(p)
+   |
 help: Replace with `Path(...).exists()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -202,6 +213,7 @@ PTH111 [*] `os.path.expanduser()` should be replaced by `Path.expanduser()`
    |      ^^^^^^^^^^^
 26 | bbb = xisdir(p)
 27 | bbbb = xisfile(p)
+   |
 help: Replace with `Path(...).expanduser()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -224,6 +236,7 @@ PTH112 [*] `os.path.isdir()` should be replaced by `Path.is_dir()`
    |       ^^^^^^
 27 | bbbb = xisfile(p)
 28 | bbbbb = xislink(p)
+   |
 help: Replace with `Path(...).is_dir()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -245,6 +258,7 @@ PTH113 [*] `os.path.isfile()` should be replaced by `Path.is_file()`
    |        ^^^^^^^
 28 | bbbbb = xislink(p)
 29 | xreadlink(p)
+   |
 help: Replace with `Path(...).is_file()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -266,6 +280,7 @@ PTH114 [*] `os.path.islink()` should be replaced by `Path.is_symlink()`
    |         ^^^^^^^
 29 | xreadlink(p)
 30 | xstat(p)
+   |
 help: Replace with `Path(...).is_symlink()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -287,6 +302,7 @@ PTH115 [*] `os.readlink()` should be replaced by `Path.readlink()`
    | ^^^^^^^^^
 30 | xstat(p)
 31 | xisabs(p)
+   |
 help: Replace with `Path(...).readlink()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -308,15 +324,18 @@ PTH116 `os.stat()` should be replaced by `Path.stat()`, `Path.owner()`, or `Path
    | ^^^^^
 31 | xisabs(p)
 32 | xjoin(p, q)
+   |
 
 PTH117 [*] `os.path.isabs()` should be replaced by `Path.is_absolute()`
   --> import_from_as.py:31:1
+   |
 29 | xreadlink(p)
 30 | xstat(p)
 31 | xisabs(p)
    | ^^^^^^
 32 | xjoin(p, q)
 33 | s.join((p, q))
+   |
 help: Replace with `Path(...).is_absolute()`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -338,6 +357,7 @@ PTH118 `os.path.join()` should be replaced by `Path` with `/` operator
    | ^^^^^
 33 | s.join((p, q))
 34 | s.join([p, q])
+   |
 
 PTH118 `os.sep.join()` should be replaced by `Path` with `/` operator
   --> import_from_as.py:33:1
@@ -348,6 +368,7 @@ PTH118 `os.sep.join()` should be replaced by `Path` with `/` operator
    | ^^^^^^
 34 | s.join([p, q])
 35 | xbasename(p)
+   |
 
 PTH118 `os.sep.join()` should be replaced by `Path` with `/` operator
   --> import_from_as.py:34:1
@@ -358,6 +379,7 @@ PTH118 `os.sep.join()` should be replaced by `Path` with `/` operator
    | ^^^^^^
 35 | xbasename(p)
 36 | xdirname(p)
+   |
 
 PTH119 [*] `os.path.basename()` should be replaced by `Path.name`
   --> import_from_as.py:35:1
@@ -368,6 +390,7 @@ PTH119 [*] `os.path.basename()` should be replaced by `Path.name`
    | ^^^^^^^^^
 36 | xdirname(p)
 37 | xsamefile(p)
+   |
 help: Replace with `Path(...).name`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -390,6 +413,7 @@ PTH120 [*] `os.path.dirname()` should be replaced by `Path.parent`
    | ^^^^^^^^
 37 | xsamefile(p)
 38 | xsplitext(p)
+   |
 help: Replace with `Path(...).parent`
    |
 9  | from os.path import samefile as xsamefile, splitext as xsplitext
@@ -411,6 +435,7 @@ PTH121 `os.path.samefile()` should be replaced by `Path.samefile()`
 37 | xsamefile(p)
    | ^^^^^^^^^
 38 | xsplitext(p)
+   |
 help: Replace with `Path(...).samefile()`
 
 PTH122 `os.path.splitext()` should be replaced by `Path.suffix`, `Path.stem`, and `Path.parent`

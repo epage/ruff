@@ -14,6 +14,7 @@ DOC402 `yield` is not documented in docstring
 8 | |     """
   | |_______^
 9 |       yield 'test'
+  |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -29,4 +30,5 @@ DOC402 `yield` is not documented in docstring
 49 | |         """
    | |___________^
 50 |           yield 'test'
+   |
 help: Add a "Yields" section to the docstring

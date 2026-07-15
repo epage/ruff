@@ -9,6 +9,7 @@ W605 [*] Invalid escape sequence: `\.`
   |           ^^
 5 |
 6 | #: W605:2:1
+  |
 help: Use a raw string literal
   |
 3 | #: W605:1:10
@@ -25,6 +26,7 @@ W605 [*] Invalid escape sequence: `\.`
 8 | \.png$
   | ^^
 9 | '''
+  |
 help: Use a raw string literal
   |
 6 | #: W605:2:1
@@ -41,6 +43,7 @@ W605 [*] Invalid escape sequence: `\_`
 13 |     f'\_'
    |       ^^
 14 | )
+   |
 help: Use a raw string literal
    |
 12 | f(
@@ -51,12 +54,14 @@ help: Use a raw string literal
 
 W605 [*] Invalid escape sequence: `\_`
   --> W605_1.py:20:6
+   |
 18 | multi-line
 19 | literal
 20 | with \_ somewhere
    |      ^^
 21 | in the middle
 22 | """
+   |
 help: Use a raw string literal
    |
 16 | #: W605:4:6
@@ -88,6 +93,7 @@ W605 [*] Invalid escape sequence: `\_`
    |             ^^
 44 | value = f'\{{1}}'
 45 | value = f'\{1}'
+   |
 help: Add backslash to escape sequence
    |
 42 |
@@ -104,6 +110,7 @@ W605 [*] Invalid escape sequence: `\{`
    |           ^^
 45 | value = f'\{1}'
 46 | value = f'{1:\}'
+   |
 help: Use a raw string literal
    |
 43 | regex = f'\\\_'
@@ -121,6 +128,7 @@ W605 [*] Invalid escape sequence: `\{`
    |           ^^
 46 | value = f'{1:\}'
 47 | value = f"{f"\{1}"}"
+   |
 help: Use a raw string literal
    |
 44 | value = f'\{{1}}'
@@ -138,6 +146,7 @@ W605 [*] Invalid escape sequence: `\}`
    |              ^^
 47 | value = f"{f"\{1}"}"
 48 | value = rf"{f"\{1}"}"
+   |
 help: Use a raw string literal
    |
 45 | value = f'\{1}'
@@ -154,6 +163,7 @@ W605 [*] Invalid escape sequence: `\{`
 47 | value = f"{f"\{1}"}"
    |              ^^
 48 | value = rf"{f"\{1}"}"
+   |
 help: Use a raw string literal
    |
 46 | value = f'{1:\}'
@@ -171,6 +181,7 @@ W605 [*] Invalid escape sequence: `\{`
    |               ^^
 49 |
 50 | # Okay
+   |
 help: Use a raw string literal
    |
 47 | value = f"{f"\{1}"}"
@@ -187,7 +198,9 @@ W605 [*] Invalid escape sequence: `\d`
    |         ^^
 58 | f"\n{{}}+-\d+"
 59 | f"\n{{}}�+-\d+"
+   |
 help: Use a raw string literal
+   |
 56 | # Regression tests for https://github.com/astral-sh/ruff/issues/10434
    - f"{{}}+-\d"
 57 + rf"{{}}+-\d"
@@ -202,6 +215,7 @@ W605 [*] Invalid escape sequence: `\d`
 58 | f"\n{{}}+-\d+"
    |           ^^
 59 | f"\n{{}}�+-\d+"
+   |
 help: Add backslash to escape sequence
    |
 57 | f"{{}}+-\d"
@@ -219,6 +233,7 @@ W605 [*] Invalid escape sequence: `\d`
    |            ^^
 60 |
 61 | # See https://github.com/astral-sh/ruff/issues/11491
+   |
 help: Add backslash to escape sequence
    |
 58 | f"\n{{}}+-\d+"
@@ -236,6 +251,7 @@ W605 [*] Invalid escape sequence: `\I`
    |                               ^^
 66 |
 67 | # Debug text (should trigger)
+   |
 help: Add backslash to escape sequence
    |
 64 | incomplete = 3
@@ -251,6 +267,7 @@ W605 [*] Invalid escape sequence: `\I`
 68 | t = f"{'\InHere'=}"
    |         ^^
 help: Use a raw string literal
+   |
 67 | # Debug text (should trigger)
    - t = f"{'\InHere'=}"
 68 + t = f"{r'\InHere'=}"
@@ -265,6 +282,7 @@ W605 [*] Invalid escape sequence: `\.`
    |           ^^
 74 |
 75 | #: W605:2:1
+   |
 help: Use a raw string literal
    |
 72 | #: W605:1:10
@@ -281,6 +299,7 @@ W605 [*] Invalid escape sequence: `\.`
 77 | \.png$
    | ^^
 78 | '''
+   |
 help: Use a raw string literal
    |
 75 | #: W605:2:1
@@ -297,6 +316,7 @@ W605 [*] Invalid escape sequence: `\_`
 82 |     t'\_'
    |       ^^
 83 | )
+   |
 help: Use a raw string literal
    |
 81 | f(
@@ -314,6 +334,7 @@ W605 [*] Invalid escape sequence: `\_`
    |      ^^
 90 | in the middle
 91 | """
+   |
 help: Use a raw string literal
    |
 85 | #: W605:4:6
@@ -345,6 +366,7 @@ W605 [*] Invalid escape sequence: `\_`
     |             ^^
 113 | value = t'\{{1}}'
 114 | value = t'\{1}'
+    |
 help: Add backslash to escape sequence
     |
 111 |
@@ -361,6 +383,7 @@ W605 [*] Invalid escape sequence: `\{`
     |           ^^
 114 | value = t'\{1}'
 115 | value = t'{1:\}'
+    |
 help: Use a raw string literal
     |
 112 | regex = t'\\\_'
@@ -378,21 +401,25 @@ W605 [*] Invalid escape sequence: `\{`
     |           ^^
 115 | value = t'{1:\}'
 116 | value = t"{t"\{1}"}"
+    |
 help: Use a raw string literal
     |
 113 | value = t'\{{1}}'
     - value = t'\{1}'
 114 + value = rt'\{1}'
 115 | value = t'{1:\}'
+    |
 
 W605 [*] Invalid escape sequence: `\}`
    --> W605_1.py:115:14
+    |
 113 | value = t'\{{1}}'
 114 | value = t'\{1}'
 115 | value = t'{1:\}'
     |              ^^
 116 | value = t"{t"\{1}"}"
 117 | value = rt"{t"\{1}"}"
+    |
 help: Use a raw string literal
     |
 114 | value = t'\{1}'
@@ -409,6 +436,7 @@ W605 [*] Invalid escape sequence: `\{`
 116 | value = t"{t"\{1}"}"
     |              ^^
 117 | value = rt"{t"\{1}"}"
+    |
 help: Use a raw string literal
     |
 115 | value = t'{1:\}'
@@ -426,6 +454,7 @@ W605 [*] Invalid escape sequence: `\{`
     |               ^^
 118 |
 119 | # Okay
+    |
 help: Use a raw string literal
     |
 116 | value = t"{t"\{1}"}"
@@ -442,6 +471,7 @@ W605 [*] Invalid escape sequence: `\d`
     |         ^^
 127 | t"\n{{}}+-\d+"
 128 | t"\n{{}}�+-\d+"
+    |
 help: Use a raw string literal
     |
 125 | # Regression tests for https://github.com/astral-sh/ruff/issues/10434
@@ -458,6 +488,7 @@ W605 [*] Invalid escape sequence: `\d`
 127 | t"\n{{}}+-\d+"
     |           ^^
 128 | t"\n{{}}�+-\d+"
+    |
 help: Add backslash to escape sequence
     |
 126 | t"{{}}+-\d"
@@ -475,6 +506,7 @@ W605 [*] Invalid escape sequence: `\d`
     |            ^^
 129 |
 130 | # See https://github.com/astral-sh/ruff/issues/11491
+    |
 help: Add backslash to escape sequence
     |
 127 | t"\n{{}}+-\d+"
@@ -492,6 +524,7 @@ W605 [*] Invalid escape sequence: `\I`
     |                               ^^
 135 |
 136 | # Debug text (should trigger)
+    |
 help: Add backslash to escape sequence
     |
 133 | incomplete = 3

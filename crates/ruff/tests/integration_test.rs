@@ -676,6 +676,7 @@ fn stdin_fix_when_not_fixable_should_still_print_contents() {
     3 | if (1, 2):
       |    ^^^^^^
     4 |      print(sys.version)
+      |
 
     Found 2 errors (1 fixed, 1 remaining).
     ");
@@ -835,6 +836,7 @@ fn stdin_parse_error() {
     ----- stdout -----
     invalid-syntax: Expected one or more symbol names after import
      --> -:1:16
+      |
     1 | from foo import
       |                ^
 
@@ -858,9 +860,11 @@ fn stdin_multiple_parse_error() {
     1 | from foo import
       |                ^
     2 | bar =
+      |
 
     invalid-syntax: Expected an expression
      --> -:2:6
+      |
     1 | from foo import
     2 | bar =
       |      ^
@@ -882,6 +886,7 @@ fn parse_error_not_included() {
     ----- stdout -----
     invalid-syntax: Expected an expression
      --> -:1:6
+      |
     1 | foo =
       |      ^
 
@@ -903,6 +908,7 @@ fn full_output_preview() {
     ----- stdout -----
     ambiguous-variable-name: Ambiguous variable name: `l`
      --> -:1:1
+      |
     1 | l = 1
       | ^
 
@@ -930,6 +936,7 @@ preview = true
     ----- stdout -----
     ambiguous-variable-name: Ambiguous variable name: `l`
      --> -:1:1
+      |
     1 | l = 1
       | ^
 
@@ -950,6 +957,7 @@ fn full_output_format() {
     ----- stdout -----
     E741 Ambiguous variable name: `l`
      --> -:1:1
+      |
     1 | l = 1
       | ^
 
@@ -1805,6 +1813,7 @@ fn check_input_from_argfile() -> Result<()> {
         ----- stdout -----
         F401 [*] `os` imported but unused
          --> /path/to/a.py:1:8
+          |
         1 | import os
           |        ^^
         help: Remove unused import: `os`
@@ -2371,6 +2380,7 @@ def log(x, base) -> float:
     2 | def log(x, base) -> float:
       |     ^^^
     3 |     """Calculate natural log of a value
+      |
 
     Found 1 error.
 
@@ -2403,6 +2413,7 @@ select = ["RUF017"]
     ----- stdout -----
     quadratic-list-summation: Avoid quadratic list summation
      --> -:3:1
+      |
     1 | x = [1, 2, 3]
     2 | y = [4, 5, 6]
     3 | sum([x, y], [])
@@ -2442,6 +2453,7 @@ unfixable = ["RUF"]
     ----- stdout -----
     quadratic-list-summation: Avoid quadratic list summation
      --> -:3:1
+      |
     1 | x = [1, 2, 3]
     2 | y = [4, 5, 6]
     3 | sum([x, y], [])
@@ -2470,6 +2482,7 @@ fn pyproject_toml_stdin_syntax_error() {
     ----- stdout -----
     RUF200 Failed to parse pyproject.toml: unclosed table, expected `]`
      --> pyproject.toml:1:9
+      |
     1 | [project
       |         ^
 
@@ -2494,6 +2507,7 @@ fn pyproject_toml_stdin_schema_error() {
     ----- stdout -----
     RUF200 Failed to parse pyproject.toml: invalid type: integer `1`, expected a string
      --> pyproject.toml:2:8
+      |
     1 | [project]
     2 | name = 1
       |        ^
@@ -2585,6 +2599,7 @@ fn pyproject_toml_stdin_schema_error_fix() {
     ----- stderr -----
     RUF200 Failed to parse pyproject.toml: invalid type: integer `1`, expected a string
      --> pyproject.toml:2:8
+      |
     1 | [project]
     2 | name = 1
       |        ^

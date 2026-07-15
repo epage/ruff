@@ -10,3 +10,4 @@ PYI008 Unrecognized platform `linus`
   |                    ^^^^^^^
 4 |
 5 | if sys.platform != "linux": ...  # OK
+  |

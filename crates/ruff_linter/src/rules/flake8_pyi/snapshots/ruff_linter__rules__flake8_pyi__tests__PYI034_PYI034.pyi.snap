@@ -10,6 +10,7 @@ PYI034 [*] `__new__` methods in classes like `Bad` usually return `self` at runt
    |         ^^^^^^^
 21 |         cls, *args: Any, **kwargs: Any
 22 |     ) -> Bad: ...  # Y034 "__new__" methods usually return "self" at runtime. Consider using "typing_extensions.Self" in "Bad.__new__"…
+   |
 help: Use `Self` as return type
    |
 21 |         cls, *args: Any, **kwargs: Any
@@ -28,6 +29,7 @@ PYI034 [*] `__enter__` methods in classes like `Bad` usually return `self` at ru
    |         ^^^^^^^^^
 36 |         self,
 37 |     ) -> Bad: ...  # Y034 "__enter__" methods in classes like "Bad" usually return "self" at runtime. Consider using "typing_extension…
+   |
 help: Use `Self` as return type
    |
 36 |         self,
@@ -46,6 +48,7 @@ PYI034 [*] `__aenter__` methods in classes like `Bad` usually return `self` at r
    |               ^^^^^^^^^^
 39 |         self,
 40 |     ) -> Bad: ...  # Y034 "__aenter__" methods in classes like "Bad" usually return "self" at runtime. Consider using "typing_extensio…
+   |
 help: Use `Self` as return type
    |
 39 |         self,
@@ -64,6 +67,7 @@ PYI034 [*] `__iadd__` methods in classes like `Bad` usually return `self` at run
    |         ^^^^^^^^
 42 |         self, other: Bad
 43 |     ) -> Bad: ...  # Y034 "__iadd__" methods in classes like "Bad" usually return "self" at runtime. Consider using "typing_extensions…
+   |
 help: Use `Self` as return type
    |
 42 |         self, other: Bad
@@ -81,6 +85,7 @@ PYI034 [*] `__iter__` methods in classes like `BadIterator1` usually return `sel
     |         ^^^^^^^^
 105 |         self,
 106 |     ) -> Iterator[
+    |
 help: Use `Self` as return type
     |
 105 |         self,
@@ -101,6 +106,7 @@ PYI034 [*] `__iter__` methods in classes like `BadIterator2` usually return `sel
     |         ^^^^^^^^
 114 |         self,
 115 |     ) -> Iterator[
+    |
 help: Use `Self` as return type
     |
 114 |         self,
@@ -121,6 +127,7 @@ PYI034 [*] `__iter__` methods in classes like `BadIterator3` usually return `sel
     |         ^^^^^^^^
 123 |         self,
 124 |     ) -> collections.abc.Iterator[
+    |
 help: Use `Self` as return type
     |
 123 |         self,
@@ -141,6 +148,7 @@ PYI034 [*] `__iter__` methods in classes like `BadIterator4` usually return `sel
     |         ^^^^^^^^
 131 |         self,
 132 |     ) -> Iterable[
+    |
 help: Use `Self` as return type
     |
 131 |         self,
@@ -160,6 +168,7 @@ PYI034 [*] `__aiter__` methods in classes like `BadAsyncIterator` usually return
     |         ^^^^^^^^^
 145 |         self,
 146 |     ) -> typing.AsyncIterator[
+    |
 help: Use `Self` as return type
     |
 145 |         self,
@@ -178,22 +187,26 @@ PYI034 [*] `__new__` methods in classes like `NonGeneric1` usually return `self`
 221 |     def __new__(cls: type[NonGeneric1], *args, **kwargs) -> NonGeneric1: ...
     |         ^^^^^^^
 222 |     def __enter__(self: NonGeneric1) -> NonGeneric1: ...
+    |
 help: Use `Self` as return type
     |
 220 | class NonGeneric1(tuple):
     -     def __new__(cls: type[NonGeneric1], *args, **kwargs) -> NonGeneric1: ...
 221 +     def __new__(cls, *args, **kwargs) -> typing.Self: ...
 222 |     def __enter__(self: NonGeneric1) -> NonGeneric1: ...
+    |
 note: This is an unsafe fix and may change runtime behavior
 
 PYI034 [*] `__enter__` methods in classes like `NonGeneric1` usually return `self` at runtime
    --> PYI034.pyi:222:9
+    |
 220 | class NonGeneric1(tuple):
 221 |     def __new__(cls: type[NonGeneric1], *args, **kwargs) -> NonGeneric1: ...
 222 |     def __enter__(self: NonGeneric1) -> NonGeneric1: ...
     |         ^^^^^^^^^
 223 |
 224 | class NonGeneric2(tuple):
+    |
 help: Use `Self` as return type
     |
 221 |     def __new__(cls: type[NonGeneric1], *args, **kwargs) -> NonGeneric1: ...
@@ -211,6 +224,7 @@ PYI034 [*] `__new__` methods in classes like `NonGeneric2` usually return `self`
     |         ^^^^^^^
 226 |
 227 | class Generic1[T](list):
+    |
 help: Use `Self` as return type
     |
 224 | class NonGeneric2(tuple):
@@ -227,6 +241,7 @@ PYI034 [*] `__new__` methods in classes like `Generic1` usually return `self` at
 228 |     def __new__(cls: type[Generic1]) -> Generic1: ...
     |         ^^^^^^^
 229 |     def __enter__(self: Generic1) -> Generic1: ...
+    |
 help: Use `Self` as return type
     |
 227 | class Generic1[T](list):
@@ -259,6 +274,7 @@ PYI034 [*] `__new__` methods in classes like `Generic2` usually return `self` at
 239 |     def __new__(cls: type[Generic2]) -> Generic2: ...
     |         ^^^^^^^
 240 |     def __enter__(self: Generic2) -> Generic2: ...
+    |
 help: Use `Self` as return type
     |
 238 | class Generic2(Generic[T]):
@@ -277,6 +293,7 @@ PYI034 [*] `__enter__` methods in classes like `Generic2` usually return `self` 
     |         ^^^^^^^^^
 241 |
 242 | class Generic3(tuple[*Ts]):
+    |
 help: Use `Self` as return type
     |
 239 |     def __new__(cls: type[Generic2]) -> Generic2: ...
@@ -293,7 +310,9 @@ PYI034 [*] `__new__` methods in classes like `Generic3` usually return `self` at
 243 |     def __new__(cls: type[Generic3]) -> Generic3: ...
     |         ^^^^^^^
 244 |     def __enter__(self: Generic3) -> Generic3: ...
+    |
 help: Use `Self` as return type
+    |
 242 | class Generic3(tuple[*Ts]):
     -     def __new__(cls: type[Generic3]) -> Generic3: ...
 243 +     def __new__(cls) -> typing.Self: ...
@@ -310,6 +329,7 @@ PYI034 [*] `__enter__` methods in classes like `Generic3` usually return `self` 
     |         ^^^^^^^^^
 245 |
 246 | class Generic4(collections.abc.Callable[P, ...]):
+    |
 help: Use `Self` as return type
     |
 243 |     def __new__(cls: type[Generic3]) -> Generic3: ...
@@ -326,6 +346,7 @@ PYI034 [*] `__new__` methods in classes like `Generic4` usually return `self` at
 247 |     def __new__(cls: type[Generic4]) -> Generic4: ...
     |         ^^^^^^^
 248 |     def __enter__(self: Generic4) -> Generic4: ...
+    |
 help: Use `Self` as return type
     |
 246 | class Generic4(collections.abc.Callable[P, ...]):
@@ -344,6 +365,7 @@ PYI034 [*] `__enter__` methods in classes like `Generic4` usually return `self` 
     |         ^^^^^^^^^
 249 |
 250 | from some_module import PotentialTypeVar
+    |
 help: Use `Self` as return type
     |
 247 |     def __new__(cls: type[Generic4]) -> Generic4: ...
@@ -360,6 +382,7 @@ PYI034 [*] `__new__` methods in classes like `Generic5` usually return `self` at
 253 |     def __new__(cls: type[Generic5]) -> Generic5: ...
     |         ^^^^^^^
 254 |     def __enter__(self: Generic5) -> Generic5: ...
+    |
 help: Use `Self` as return type
     |
 252 | class Generic5(list[PotentialTypeVar]):

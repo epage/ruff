@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/isort/mod.rs
 ---
 I001 [*] Import block is un-sorted or un-formatted
   --> force_single_line.py:1:1
+   |
  1 | / import sys, math
  2 | | from os import path, uname
  3 | | from json import detect_encoding

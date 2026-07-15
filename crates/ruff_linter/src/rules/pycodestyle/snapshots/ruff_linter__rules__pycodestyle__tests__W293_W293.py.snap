@@ -9,6 +9,7 @@ W293 [*] Blank line contains whitespace
 4 |     
   | ^^^^
 5 |     """\
+  |
 help: Remove whitespace from blank line
   |
 3 |     """底盘信息推送控制
@@ -20,6 +21,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 W293 [*] Blank line contains whitespace
   --> W293.py:10:1
+   |
  8 | """""" \
  9 |     \
 10 |     
@@ -42,6 +44,7 @@ W293 [*] Blank line contains whitespace
 16 |     
    | ^^^^
 17 | '''blank line with whitespace
+   |
 help: Remove whitespace from blank line
    |
 13 | "abc\
@@ -59,6 +62,7 @@ W293 [*] Blank line contains whitespace
 18 |  
    | ^
 19 | inside a multiline string'''
+   |
 help: Remove whitespace from blank line
    |
 17 | '''blank line with whitespace

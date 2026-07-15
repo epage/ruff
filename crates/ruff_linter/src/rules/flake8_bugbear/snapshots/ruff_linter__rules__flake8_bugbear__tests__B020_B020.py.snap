@@ -9,6 +9,7 @@ B020 Loop control variable `items` overrides iterable it iterates
 8 | for items in items:
   |     ^^^^^
 9 |     print(items)
+  |
 
 B020 Loop control variable `values` overrides iterable it iterates
   --> B020.py:21:10
@@ -18,6 +19,7 @@ B020 Loop control variable `values` overrides iterable it iterates
 21 | for key, values in values.items():
    |          ^^^^^^
 22 |     print(f"{key}, {values}")
+   |
 
 B020 Loop control variable `vars` overrides iterable it iterates
   --> B020.py:36:5
@@ -26,3 +28,4 @@ B020 Loop control variable `vars` overrides iterable it iterates
 36 | for vars in [i for i in vars]:
    |     ^^^^
 37 |     print(vars)
+   |

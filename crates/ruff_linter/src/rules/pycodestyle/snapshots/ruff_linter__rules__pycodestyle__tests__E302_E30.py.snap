@@ -10,6 +10,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 534 |     pass
 535 | # end
+    |
 help: Add missing blank line(s)
     |
 532 | """Main module."""
@@ -27,6 +28,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 541 |     return sys.path
 542 | # end
+    |
 help: Add missing blank line(s)
     |
 539 | import sys
@@ -44,6 +46,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^^^
 550 |     pass
 551 | # end
+    |
 help: Add missing blank line(s)
     |
 548 |
@@ -60,6 +63,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^^^
 561 |     pass
 562 | # end
+    |
 help: Add missing blank line(s)
     |
 559 |
@@ -76,6 +80,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^^^^^
 570 |     pass
 571 | # end
+    |
 help: Add missing blank line(s)
     |
 568 |
@@ -92,6 +97,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^^^^^
 579 |     pass
 580 | # end
+    |
 help: Add missing blank line(s)
     |
 577 |
@@ -107,6 +113,7 @@ E302 [*] Expected 2 blank lines, found 0
 586 | def baz(): pass
     | ^^^
 587 | # end
+    |
 help: Add missing blank line(s)
     |
 585 |     pass
@@ -124,6 +131,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 593 |     pass
 594 | # end
+    |
 help: Add missing blank line(s)
     |
 591 | def bar(): pass
@@ -140,6 +148,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^
 603 | def g():
 604 |     pass
+    |
 help: Add missing blank line(s)
     |
 600 |
@@ -155,6 +164,7 @@ E302 [*] Expected 2 blank lines, found 0
 624 | class B: ...
     | ^^^^^
 625 | # end
+    |
 help: Add missing blank line(s)
     |
 623 | class A:...
@@ -172,6 +182,7 @@ E302 [*] Expected 2 blank lines, found 1
     | ^^^
 635 |     ...
 636 | # end
+    |
 help: Add missing blank line(s)
     |
 633 |
@@ -188,6 +199,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 945 |     pass
 946 | # end
+    |
 help: Add missing blank line(s)
     |
 943 |     # comment
@@ -205,6 +217,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 954 |     pass
 955 | # end
+    |
 help: Add missing blank line(s)
     |
 952 |         # comment
@@ -222,6 +235,7 @@ E302 [*] Expected 2 blank lines, found 0
     | ^^^
 963 |     pass
 964 | # end
+    |
 help: Add missing blank line(s)
     |
 960 |     pass

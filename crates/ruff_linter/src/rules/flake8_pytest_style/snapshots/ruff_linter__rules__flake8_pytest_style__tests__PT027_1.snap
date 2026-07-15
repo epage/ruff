@@ -8,6 +8,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
 11 |         with self.assertRaises(ValueError):
    |              ^^^^^^^^^^^^^^^^^
 12 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 10 |     def test_errors(self):
@@ -24,6 +25,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
 15 |         with self.assertRaises(ValueError) as e:
    |              ^^^^^^^^^^^^^^^^^
 16 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 14 |     def test_rewrite_references(self):
@@ -46,6 +48,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
    |              ^^^^^^^^^^^^^^^^^
 23 |             self.assertRaises(ValueError) as e2:
 24 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 21 |     def test_rewrite_references_multiple_items(self):
@@ -69,6 +72,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
 23 |             self.assertRaises(ValueError) as e2:
    |             ^^^^^^^^^^^^^^^^^
 24 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 22 |         with self.assertRaises(ValueError) as e1, \
@@ -91,6 +95,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
    |              ^^^^^^^^^^^^^^^^^
 34 |             foo(self.assertRaises(ValueError)) as e2:
 35 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 32 |     def test_rewrite_references_multiple_items_nested(self):
@@ -114,6 +119,7 @@ PT027 [*] Use `pytest.raises` instead of unittest-style `assertRaises`
 34 |             foo(self.assertRaises(ValueError)) as e2:
    |                 ^^^^^^^^^^^^^^^^^
 35 |             raise ValueError
+   |
 help: Replace `assertRaises` with `pytest.raises`
    |
 33 |         with self.assertRaises(ValueError) as e1, \

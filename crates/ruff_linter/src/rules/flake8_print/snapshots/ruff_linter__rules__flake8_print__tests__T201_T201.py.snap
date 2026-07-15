@@ -10,6 +10,7 @@ T201 [*] `print` found
   | ^^^^^
 5 | print("Hello, world!", file=None)  # T201
 6 | print("Hello, world!", file=sys.stdout)  # T201
+  |
 help: Remove `print`
   |
 3 |
@@ -26,6 +27,7 @@ T201 [*] `print` found
   | ^^^^^
 6 | print("Hello, world!", file=sys.stdout)  # T201
 7 | print("Hello, world!", file=sys.stderr)  # T201
+  |
 help: Remove `print`
   |
 4 | print("Hello, world!")  # T201
@@ -42,6 +44,7 @@ T201 [*] `print` found
 6 | print("Hello, world!", file=sys.stdout)  # T201
   | ^^^^^
 7 | print("Hello, world!", file=sys.stderr)  # T201
+  |
 help: Remove `print`
   |
 5 | print("Hello, world!", file=None)  # T201
@@ -59,6 +62,7 @@ T201 [*] `print` found
   | ^^^^^
 8 |
 9 | with tempfile.NamedTemporaryFile() as fp:
+  |
 help: Remove `print`
   |
 6 | print("Hello, world!", file=sys.stdout)  # T201

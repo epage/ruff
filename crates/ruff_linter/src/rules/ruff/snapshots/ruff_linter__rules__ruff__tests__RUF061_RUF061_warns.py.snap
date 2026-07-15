@@ -24,6 +24,7 @@ RUF061 [*] Use context-manager form of `pytest.warns()`
 20 |     s = pytest.warns(UserWarning, raise_user_warning, "warning")
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |     print(s)
+   |
 help: Use `pytest.warns()` as a context-manager
    |
 19 | def test_error_assign():
@@ -36,6 +37,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF061 [*] Use context-manager form of `pytest.warns()`
   --> RUF061_warns.py:25:5
+   |
 24 | def test_error_lambda():
 25 |     pytest.warns(UserWarning, lambda: warnings.warn("", UserWarning))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

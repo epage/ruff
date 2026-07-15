@@ -10,6 +10,7 @@ F401 [*] `typing.Union` imported but unused
    |                        ^^^^^
 46 |
 47 |     from typing_extensions import TypeAliasType
+   |
 help: Remove unused import: `typing.Union`
    |
 44 | def f():
@@ -25,6 +26,7 @@ F401 [*] `typing.Union` imported but unused
    |                        ^^^^^
 59 |
 60 |     from typing_extensions import TypeAliasType
+   |
 help: Remove unused import: `typing.Union`
    |
 57 | def f():

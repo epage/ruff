@@ -10,6 +10,7 @@ I001 [*] Import block is un-sorted or un-formatted
    | |____________^
 17 |
 18 |       # isort: split
+   |
 help: Organize imports
    |
 14 | if True:
@@ -17,9 +18,11 @@ help: Organize imports
 16 |     import C
    -     import A
 17 |
+   |
 
 I001 [*] Import block is un-sorted or un-formatted
   --> split.py:20:5
+   |
 18 |       # isort: split
 19 |
 20 | /     import D
@@ -32,9 +35,11 @@ help: Organize imports
 21 |     import D
    -     import B
 22 |
+   |
 
 I001 [*] Import block is un-sorted or un-formatted
   --> split.py:30:1
+   |
 28 |   # isort: split
 29 |
 30 | / import d

@@ -24,6 +24,7 @@ help: Organize imports
 
 E302 [*] Expected 4 blank lines, found 2
  --> E30_isort.py:8:1
+  |
 8 | class MissingCommand(TypeError): ...  # noqa: N818
   | ^^^^^
 help: Add missing blank line(s)
@@ -43,14 +44,17 @@ E302 [*] Expected 2 blank lines, found 1
    | ^^^
 24 |
 25 | if TYPE_CHECKING:
+   |
 help: Add missing blank line(s)
    |
 22 |
 23 +
 24 | def __init__(self, backend_module: str, backend_obj: str | None) -> None: ...
+   |
 
 I001 [*] Import block is un-sorted or un-formatted
   --> E30_isort.py:26:5
+   |
 25 |   if TYPE_CHECKING:
 26 | /     import os
 27 | |
@@ -74,6 +78,7 @@ E302 [*] Expected 2 blank lines, found 1
 35 | def __call__(self, name: str, *args: Any, **kwargs: Any) -> Any:
    | ^^^
 36 |     ...
+   |
 help: Add missing blank line(s)
    |
 34 |
@@ -89,6 +94,7 @@ E302 [*] Expected 2 blank lines, found 1
 41 | def __call__2(self, name: str, *args: Any, **kwargs: Any) -> Any:
    | ^^^
 42 |     ...
+   |
 help: Add missing blank line(s)
    |
 40 |
@@ -98,10 +104,12 @@ help: Add missing blank line(s)
 
 I001 [*] Import block is un-sorted or un-formatted
   --> E30_isort.py:60:1
+   |
 60 | from typing import Any, Sequence
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 61 |
 62 | class MissingCommand(TypeError): ...  # noqa: N818
+   |
 help: Organize imports
    |
 61 |

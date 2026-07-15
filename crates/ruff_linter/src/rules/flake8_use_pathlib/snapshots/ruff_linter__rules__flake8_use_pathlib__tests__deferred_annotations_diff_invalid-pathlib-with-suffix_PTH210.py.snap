@@ -18,6 +18,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^
 22 | path.with_suffix("py")
 23 | path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -30,6 +31,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 28 | posix_path.with_suffix("py")
 29 | posix_path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -42,6 +44,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 34 | pure_path.with_suffix("py")
 35 | pure_path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -54,6 +57,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 40 | pure_posix_path.with_suffix("py")
 41 | pure_posix_path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -66,6 +70,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 46 | pure_windows_path.with_suffix("py")
 47 | pure_windows_path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -78,6 +83,7 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 | windows_path.with_suffix("py")
 53 | windows_path.with_suffix(r"s")
+   |
 help: Remove "." or extend to valid suffix
 
 
@@ -90,4 +96,5 @@ PTH210 Invalid suffix passed to `.with_suffix()`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 58 | Path().with_suffix("py")
 59 | PosixPath().with_suffix("py")
+   |
 help: Remove "." or extend to valid suffix

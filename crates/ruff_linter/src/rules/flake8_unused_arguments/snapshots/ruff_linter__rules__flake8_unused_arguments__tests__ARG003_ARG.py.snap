@@ -8,3 +8,4 @@ ARG003 Unused class method argument: `x`
 47 |     def f(cls, x):
    |                ^
 48 |         print("Hello, world!")
+   |

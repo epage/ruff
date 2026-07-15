@@ -9,6 +9,7 @@ PLE1310 String `strip` call contains duplicate characters
   |                     ^^^^^^^
 3 |
 4 | # PLE1310
+  |
 
 PLE1310 String `strip` call contains duplicate characters
  --> bad_str_strip_call.py:5:21
@@ -18,14 +19,17 @@ PLE1310 String `strip` call contains duplicate characters
   |                     ^^^^^^^
 6 |
 7 | # PLE1310
+  |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:8:21
+   |
  7 | # PLE1310
  8 | "Hello World".strip(u"Hello")
    |                     ^^^^^^^^
  9 |
 10 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:11:21
@@ -35,6 +39,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^
 12 |
 13 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:14:21
@@ -44,6 +49,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^^
 15 |
 16 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:17:21
@@ -53,6 +59,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^^^
 18 |
 19 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:20:21
@@ -62,6 +69,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^^
 21 |
 22 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:23:21
@@ -71,6 +79,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^^^
 24 |
 25 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:26:21
@@ -80,6 +89,7 @@ PLE1310 String `strip` call contains duplicate characters
    |                     ^^^^^^^^^^^^^^^^
 27 |
 28 | # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:30:5
@@ -91,6 +101,7 @@ PLE1310 String `strip` call contains duplicate characters
 32 | | """
    | |___^
 33 |   )
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:36:21
@@ -103,6 +114,7 @@ PLE1310 String `strip` call contains duplicate characters
    | |_____________________________^
 39 |
 40 |   # PLE1310
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:42:5
@@ -114,6 +126,7 @@ PLE1310 String `strip` call contains duplicate characters
 44 | |     "please?"
    | |_____________^
 45 |   )
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:49:5
@@ -125,14 +138,17 @@ PLE1310 String `strip` call contains duplicate characters
 51 | |     "please?"
    | |_____________^
 52 |   )
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:61:11
+   |
 60 | # PLE1310
 61 | u''.strip('http://')
    |           ^^^^^^^^^
 62 |
 63 | # PLE1310
+   |
 
 PLE1310 String `lstrip` call contains duplicate characters (did you mean `removeprefix`?)
   --> bad_str_strip_call.py:64:12
@@ -142,6 +158,7 @@ PLE1310 String `lstrip` call contains duplicate characters (did you mean `remove
    |            ^^^^^^^^^
 65 |
 66 | # PLE1310
+   |
 
 PLE1310 String `rstrip` call contains duplicate characters (did you mean `removesuffix`?)
   --> bad_str_strip_call.py:67:12
@@ -151,6 +168,7 @@ PLE1310 String `rstrip` call contains duplicate characters (did you mean `remove
    |            ^^^^^^^^^^
 68 |
 69 | # OK
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:79:10
@@ -160,6 +178,7 @@ PLE1310 String `strip` call contains duplicate characters
    |          ^^^^^^^^^^
 80 | ''.strip(r'\b\x09')
 81 | ''.strip('\\\x5C')
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:80:10
@@ -169,6 +188,7 @@ PLE1310 String `strip` call contains duplicate characters
 80 | ''.strip(r'\b\x09')
    |          ^^^^^^^^^
 81 | ''.strip('\\\x5C')
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:81:10
@@ -179,6 +199,7 @@ PLE1310 String `strip` call contains duplicate characters
    |          ^^^^^^^^
 82 |
 83 | # Errors: Type inference
+   |
 
 PLE1310 String `strip` call contains duplicate characters
   --> bad_str_strip_call.py:85:9
@@ -189,6 +210,7 @@ PLE1310 String `strip` call contains duplicate characters
    |         ^^^^^
 86 |
 87 | # Errors: Type inference (preview)
+   |
 
 PLE1310 String `rstrip` call contains duplicate characters (did you mean `removesuffix`?)
   --> bad_str_strip_call.py:89:12
@@ -198,6 +220,7 @@ PLE1310 String `rstrip` call contains duplicate characters (did you mean `remove
 89 | foo.rstrip("//")
    |            ^^^^
 90 | bar.lstrip(b"//")
+   |
 
 PLE1310 String `lstrip` call contains duplicate characters (did you mean `removeprefix`?)
   --> bad_str_strip_call.py:90:12

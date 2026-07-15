@@ -1671,12 +1671,14 @@ Module(
   |
 
 
+  |
 5 | def h[T](x: (yield 1)): ...
 6 | def j[T]() -> (yield 1): ...
 7 | def l[T](x: (yield from 1)): ...
   |              ^^^^^^^^^^^^ Syntax Error: yield expression cannot be used within a type annotation
 8 | def n[T]() -> (yield from 1): ...
 9 | def p[T: (yield 1)](): ...      # yield in TypeVar bound
+  |
 
 
    |

@@ -10,6 +10,7 @@ E402 Module level import not at top of file
    | ^^^^^^^^^^
 57 | #: E402
 58 | import foo
+   |
 
 E402 Module level import not at top of file
   --> E40.py:58:1
@@ -20,6 +21,7 @@ E402 Module level import not at top of file
    | ^^^^^^^^^^
 59 |
 60 | a = 1
+   |
 
 E402 Module level import not at top of file
   --> E40.py:62:1
@@ -30,13 +32,16 @@ E402 Module level import not at top of file
    | ^^^^^^^^^^
 63 |
 64 | #: E401
+   |
 
 E402 Module level import not at top of file
   --> E40.py:65:1
+   |
 64 | #: E401
 65 | import re as regex, string  # also with a comment!
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 | import re as regex, string; x = 1
+   |
 
 E402 Module level import not at top of file
   --> E40.py:66:1
@@ -47,6 +52,7 @@ E402 Module level import not at top of file
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 67 |
 68 | x = 1; import re as regex, string
+   |
 
 E402 Module level import not at top of file
   --> E40.py:68:8

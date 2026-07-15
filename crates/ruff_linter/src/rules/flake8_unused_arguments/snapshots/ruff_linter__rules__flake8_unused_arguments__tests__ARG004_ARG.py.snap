@@ -8,6 +8,7 @@ ARG004 Unused static method argument: `cls`
 51 |     def f(cls, x):
    |           ^^^
 52 |         print("Hello, world!")
+   |
 
 ARG004 Unused static method argument: `x`
   --> ARG.py:51:16
@@ -16,6 +17,7 @@ ARG004 Unused static method argument: `x`
 51 |     def f(cls, x):
    |                ^
 52 |         print("Hello, world!")
+   |
 
 ARG004 Unused static method argument: `x`
   --> ARG.py:55:11
@@ -24,6 +26,7 @@ ARG004 Unused static method argument: `x`
 55 |     def f(x):
    |           ^
 56 |         print("Hello, world!")
+   |
 
 ARG004 Unused static method argument: `x`
    --> ARG.py:213:22
@@ -33,3 +36,4 @@ ARG004 Unused static method argument: `x`
 213 |     def __new__(cls, x):
     |                      ^
 214 |         print("Hello, world!")
+    |

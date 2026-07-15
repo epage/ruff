@@ -10,6 +10,7 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 14 |     immutable_annotation: typing.Sequence[int] = []
 15 |     without_annotation = []
+   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:23:34
@@ -20,6 +21,7 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 24 |     immutable_annotation: Sequence[int] = []
 25 |     without_annotation = []
+   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:33:34
@@ -30,6 +32,7 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 34 |     immutable_annotation: Sequence[int] = []
 35 |     without_annotation = []
+   |
 
 RUF008 Do not use mutable default values for dataclass attributes
   --> RUF008_attrs.py:42:34
@@ -40,3 +43,4 @@ RUF008 Do not use mutable default values for dataclass attributes
    |                                  ^^
 43 |     immutable_annotation: Sequence[int] = []
 44 |     without_annotation = []
+   |

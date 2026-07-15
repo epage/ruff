@@ -3,12 +3,14 @@ source: crates/ruff_linter/src/rules/tryceratops/mod.rs
 ---
 TRY003 Avoid specifying long messages outside the exception class
   --> TRY003.py:8:15
+   |
  6 |     a = 1
  7 |     if a == 1:
  8 |         raise CustomException("Long message")
    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 |     elif a == 2:
 10 |         raise CustomException("Short")  # This is acceptable
+   |
 
 TRY003 Avoid specifying long messages outside the exception class
   --> TRY003.py:34:15
@@ -20,6 +22,7 @@ TRY003 Avoid specifying long messages outside the exception class
 
 TRY003 Avoid specifying long messages outside the exception class
   --> TRY003.py:39:15
+   |
 37 | def another_bad(a):
 38 |     if a % 2 == 0:
 39 |         raise BadArgCantBeEven(f"The argument {a} should not be odd.")

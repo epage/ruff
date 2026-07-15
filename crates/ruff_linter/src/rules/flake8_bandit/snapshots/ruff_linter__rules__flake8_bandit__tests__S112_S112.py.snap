@@ -11,6 +11,7 @@ S112 `try`-`except`-`continue` detected, consider logging the exception
   | |________________^
 6 |
 7 |       try:
+  |
 
 S112 `try`-`except`-`continue` detected, consider logging the exception
   --> S112.py:9:5
@@ -22,6 +23,7 @@ S112 `try`-`except`-`continue` detected, consider logging the exception
    | |________________^
 11 |
 12 |       try:
+   |
 
 S112 `try`-`except`-`continue` detected, consider logging the exception
   --> S112.py:14:5
@@ -33,6 +35,7 @@ S112 `try`-`except`-`continue` detected, consider logging the exception
    | |________________^
 16 |
 17 |       try:
+   |
 
 S112 `try`-`except`-`continue` detected, consider logging the exception
   --> S112.py:19:5
@@ -44,3 +47,4 @@ S112 `try`-`except`-`continue` detected, consider logging the exception
    | |________________^
 21 |
 22 |       try:
+   |

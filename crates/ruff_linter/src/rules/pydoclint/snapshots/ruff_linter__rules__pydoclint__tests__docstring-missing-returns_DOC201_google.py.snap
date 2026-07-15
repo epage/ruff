@@ -14,6 +14,7 @@ DOC201 `return` is not documented in docstring
 8 | |     """
   | |_______^
 9 |       return 'test'
+  |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -29,6 +30,7 @@ DOC201 `return` is not documented in docstring
 49 | |         """
    | |___________^
 50 |           return 'test'
+   |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -39,6 +41,7 @@ DOC201 `return` is not documented in docstring
 70 |         """Do something nested."""
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
 71 |         return 5
+   |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -49,6 +52,7 @@ DOC201 `return` is not documented in docstring
 120 |         """Lorem ipsum."""
     |         ^^^^^^^^^^^^^^^^^^
 121 |         return True
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -64,6 +68,7 @@ DOC201 `return` is not documented in docstring
     | |_______^
 183 |       if x < 0:
 184 |           return None
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -79,6 +84,7 @@ DOC201 `return` is not documented in docstring
     | |_______^
 196 |       if x < 0:
 197 |           return None
+    |
 help: Add a "Returns" section to the docstring
 
 DOC201 `return` is not documented in docstring
@@ -93,4 +99,5 @@ DOC201 `return` is not documented in docstring
 208 | |     """
     | |_______^
 209 |       return None
+    |
 help: Add a "Returns" section to the docstring

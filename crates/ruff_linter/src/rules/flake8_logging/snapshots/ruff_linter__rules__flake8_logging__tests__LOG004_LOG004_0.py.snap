@@ -10,6 +10,7 @@ LOG004 [*] `.exception()` call outside exception handlers
    | ^^^^^^^^^^^^^^^^^^^^^
 14 | logger.exception("")
 15 | exc("")
+   |
 help: Replace with `.error()`
    |
 12 |
@@ -26,11 +27,14 @@ LOG004 [*] `.exception()` call outside exception handlers
 14 | logger.exception("")
    | ^^^^^^^^^^^^^^^^^^^^
 15 | exc("")
+   |
 help: Replace with `.error()`
+   |
 13 | logging.exception("")
    - logger.exception("")
 14 + logger.error("")
 15 | exc("")
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 LOG004 `.exception()` call outside exception handlers
@@ -50,6 +54,7 @@ LOG004 [*] `.exception()` call outside exception handlers
    |     ^^^^^^^^^^^^^^^^^^^^^
 20 |     logger.exception("")
 21 |     exc("")
+   |
 help: Replace with `.error()`
    |
 18 | def _():
@@ -61,11 +66,13 @@ note: This is an unsafe fix and may change runtime behavior
 
 LOG004 [*] `.exception()` call outside exception handlers
   --> LOG004_0.py:20:5
+   |
 18 | def _():
 19 |     logging.exception("")
 20 |     logger.exception("")
    |     ^^^^^^^^^^^^^^^^^^^^
 21 |     exc("")
+   |
 help: Replace with `.error()`
    |
 19 |     logging.exception("")

@@ -272,6 +272,7 @@ class Sub17(Super2):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `method2`
   --> src/mdtest_snippet.pyi:43:9
+   |
 43 |     def method2(self, x): ...
    |         ---------------- `Super2.method2` defined here
 44 |
@@ -304,6 +305,7 @@ class Sub19(Super3):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `method3`
   --> src/mdtest_snippet.pyi:50:9
+   |
 50 |     def method3(self, *, x): ...
    |         ------------------- `Super3.method3` defined here
 51 |
@@ -335,6 +337,7 @@ class Sub21(Super4):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `method`
   --> src/mdtest_snippet.pyi:57:9
+   |
 57 |     def method(self, *args: int, **kwargs: str): ...
    |         --------------------------------------- `Super4.method` defined here
 58 |
@@ -356,6 +359,7 @@ class Sub22(Super4):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `method`
   --> src/mdtest_snippet.pyi:64:9
+   |
 64 |     def method(self, **kwargs): ...  # snapshot: invalid-method-override
    |         ^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `Super4.method`
    |
@@ -682,6 +686,7 @@ class ThirdChild(GradualParent):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `method`
  --> src/stub.pyi:4:9
+  |
 4 |     def method(self, x: int) -> None: ...
   |         ---------------------------- `Grandparent.method` defined here
 5 |
@@ -694,6 +699,7 @@ info: This violates the Liskov Substitution Principle
 
 error[invalid-method-override]: Invalid override of method `method`
   --> src/stub.pyi:17:9
+   |
 17 |     def method(self, x: int) -> None: ...  # snapshot: invalid-method-override
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `Parent.method`
    |
@@ -786,6 +792,7 @@ class D(C):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `get`
  --> src/other_stub.pyi:2:9
+  |
 2 |     def get(self, default): ...
   |         ------------------ `A.get` defined here
 3 |
@@ -985,6 +992,7 @@ class A(one.A):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `foo`
  --> src/two.pyi:4:9
+  |
 4 |     def foo(self, y): ...  # snapshot: invalid-method-override
   |         ^^^^^^^^^^^^ Definition is incompatible with `one.A.foo`
   |
@@ -1067,6 +1075,7 @@ class D(C):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `x`
  --> src/bar.pyi:4:9
+  |
 4 |     def x(self, y: int): ...
   |         --------------- `A.x` defined here
 5 |
@@ -1084,6 +1093,7 @@ info: This violates the Liskov Substitution Principle
 
 error[invalid-method-override]: Invalid override of method `x`
   --> src/bar.pyi:10:5
+   |
 10 |     x = foo.x
    |     --------- `C.x` defined here
 11 |
@@ -1111,6 +1121,7 @@ class Bad:
 ```snapshot
 error[invalid-method-override]: Invalid override of method `__eq__`
    --> src/mdtest_snippet.py:3:9
+    |
   3 |     def __eq__(self, other: "Bad") -> bool:  # snapshot: invalid-method-override
     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `object.__eq__`
     |
@@ -1198,6 +1209,7 @@ class Spam(Baz):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `_asdict`
   --> src/mdtest_snippet.pyi:41:9
+   |
 41 |     def _asdict(self) -> tuple[int, ...]: ...  # snapshot: invalid-method-override
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `Baz._asdict`
 info: incompatible return types: `tuple[int, ...]` is not assignable to `dict[str, Any]`
@@ -1246,6 +1258,7 @@ class BadTypesA(Parent):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `class_method`
   --> src/mdtest_snippet.pyi:21:9
+   |
 21 |     def class_method(cls, x: bool) -> object: ...  # snapshot: invalid-method-override
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `Parent.class_method`
    |
@@ -1357,6 +1370,7 @@ class BadChild3A(Parent):
 ```snapshot
 error[invalid-method-override]: Invalid override of method `class_method`
   --> src/mdtest_snippet.pyi:39:9
+   |
 39 |     def class_method(cls, x: int) -> int: ...  # snapshot: invalid-method-override
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Definition is incompatible with `Parent.class_method`
    |

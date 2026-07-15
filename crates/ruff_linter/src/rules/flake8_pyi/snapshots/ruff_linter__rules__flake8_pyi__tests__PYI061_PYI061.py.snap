@@ -7,6 +7,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 4 | def func1(arg1: Literal[None]):
   |                         ^^^^
 5 |     ...
+  |
 help: Replace with `None`
   |
 3 |
@@ -21,6 +22,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 8 | def func2(arg1: Literal[None] | int):
   |                         ^^^^
 9 |     ...
+  |
 help: Replace with `None`
   |
 7 |
@@ -35,6 +37,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 12 | def func3() -> Literal[None]:
    |                        ^^^^
 13 |     ...
+   |
 help: Replace with `None`
    |
 11 |
@@ -49,6 +52,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
 16 | def func4(arg1: Literal[int, None, float]):
    |                              ^^^^
 17 |     ...
+   |
 help: Replace with `Literal[...] | None`
    |
 15 |
@@ -63,6 +67,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 20 | def func5(arg1: Literal[None, None]):
    |                         ^^^^
 21 |     ...
+   |
 help: Replace with `None`
    |
 19 |
@@ -77,6 +82,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 20 | def func5(arg1: Literal[None, None]):
    |                               ^^^^
 21 |     ...
+   |
 help: Replace with `None`
    |
 19 |
@@ -94,6 +100,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |     ^^^^
 27 |     , "world"
 28 |     ]):
+   |
 help: Replace with `Literal[...] | None`
    |
 23 |
@@ -115,6 +122,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
    |     ^^^^
 34 |     ]):
 35 |     ...
+   |
 help: Replace with `None`
    |
 31 |
@@ -132,6 +140,7 @@ PYI061 Use `None` rather than `Literal[None]`
 38 | def func8(arg1: Literal[None] | None):
    |                         ^^^^
 39 |     ...
+   |
 help: Replace with `None`
 
 PYI061 [*] Use `None` rather than `Literal[None]`
@@ -140,6 +149,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 42 | def func9(arg1: Union[Literal[None], None]):
    |                               ^^^^
 43 |     ...
+   |
 help: Replace with `None`
    |
 41 |
@@ -155,6 +165,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 52 | Literal[None]  # Y061 None inside "Literal[]" expression. Replace with "None"
    |         ^^^^
 53 | Literal[True, None]  # Y061 None inside "Literal[]" expression. Replace with "Literal[True] | None"
+   |
 help: Replace with `None`
    |
 51 | # From flake8-pyi
@@ -172,6 +183,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |               ^^^^
 54 |
 55 | ###
+   |
 help: Replace with `Literal[...] | None`
    |
 52 | Literal[None]  # Y061 None inside "Literal[]" expression. Replace with "None"
@@ -188,6 +200,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 62 | Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
    |         ^^^^
 63 | Literal[1, None, "foo", None]  # Y061 None inside "Literal[]" expression. Replace with "Literal[1, 'foo'] | None"
+   |
 help: Replace with `None`
    |
 61 | # only emit Y061...
@@ -204,7 +217,9 @@ PYI061 [*] Use `None` rather than `Literal[None]`
 62 | Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
    |               ^^^^
 63 | Literal[1, None, "foo", None]  # Y061 None inside "Literal[]" expression. Replace with "Literal[1, 'foo'] | None"
+   |
 help: Replace with `None`
+   |
 61 | # only emit Y061...
    - Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
 62 + None  # Y061 None inside "Literal[]" expression. Replace with "None"
@@ -213,12 +228,14 @@ help: Replace with `None`
 
 PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]` 
   --> PYI061.py:63:12
+   |
 61 | # only emit Y061...
 62 | Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
 63 | Literal[1, None, "foo", None]  # Y061 None inside "Literal[]" expression. Replace with "Literal[1, 'foo'] | None"
    |            ^^^^
 64 |
 65 | # ... but if Y061 and Y062 both apply
+   |
 help: Replace with `Literal[...] | None`
    |
 62 | Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
@@ -236,6 +253,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |                         ^^^^
 64 |
 65 | # ... but if Y061 and Y062 both apply
+   |
 help: Replace with `Literal[...] | None`
    |
 62 | Literal[None, None]  # Y061 None inside "Literal[]" expression. Replace with "None"
@@ -282,6 +300,7 @@ PYI061 Use `None` rather than `Literal[None]`
    |            ^^^^
 73 | y: None | Literal[None]
 74 | z: Union[Literal[None], None]
+   |
 help: Replace with `None`
 
 PYI061 Use `None` rather than `Literal[None]`
@@ -292,6 +311,7 @@ PYI061 Use `None` rather than `Literal[None]`
 73 | y: None | Literal[None]
    |                   ^^^^
 74 | z: Union[Literal[None], None]
+   |
 help: Replace with `None`
 
 PYI061 [*] Use `None` rather than `Literal[None]`
@@ -303,6 +323,7 @@ PYI061 [*] Use `None` rather than `Literal[None]`
    |                  ^^^^
 75 |
 76 | a: int | Literal[None] | None
+   |
 help: Replace with `None`
    |
 73 | y: None | Literal[None]
@@ -320,6 +341,7 @@ PYI061 Use `None` rather than `Literal[None]`
    |                  ^^^^
 77 | b: None | Literal[None] | None
 78 | c: (None | Literal[None]) | None
+   |
 help: Replace with `None`
 
 PYI061 Use `None` rather than `Literal[None]`
@@ -330,6 +352,7 @@ PYI061 Use `None` rather than `Literal[None]`
    |                   ^^^^
 78 | c: (None | Literal[None]) | None
 79 | d: None | (Literal[None] | None)
+   |
 help: Replace with `None`
 
 PYI061 Use `None` rather than `Literal[None]`
@@ -341,15 +364,18 @@ PYI061 Use `None` rather than `Literal[None]`
    |                    ^^^^
 79 | d: None | (Literal[None] | None)
 80 | e: None | ((None | Literal[None]) | None) | None
+   |
 help: Replace with `None`
 
 PYI061 Use `None` rather than `Literal[None]`
   --> PYI061.py:79:20
+   |
 77 | b: None | Literal[None] | None
 78 | c: (None | Literal[None]) | None
 79 | d: None | (Literal[None] | None)
    |                    ^^^^
 80 | e: None | ((None | Literal[None]) | None) | None
+   |
 help: Replace with `None`
 
 PYI061 Use `None` rather than `Literal[None]`
@@ -361,6 +387,7 @@ PYI061 Use `None` rather than `Literal[None]`
    |                            ^^^^
 81 |
 82 | # Test cases for operator precedence issue (https://github.com/astral-sh/ruff/issues/20265)
+   |
 help: Replace with `None`
 
 PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]` 
@@ -371,6 +398,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |                  ^^^^
 84 | print(Literal[1, None].method())  # Should become (Literal[1] | None).method()
 85 | print(Literal[1, None][0])  # Should become (Literal[1] | None)[0]
+   |
 help: Replace with `Literal[...] | None`
    |
 82 | # Test cases for operator precedence issue (https://github.com/astral-sh/ruff/issues/20265)
@@ -388,6 +416,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |                  ^^^^
 85 | print(Literal[1, None][0])  # Should become (Literal[1] | None)[0]
 86 | print(Literal[1, None] + 1)  # Should become (Literal[1] | None) + 1
+   |
 help: Replace with `Literal[...] | None`
    |
 83 | print(Literal[1, None].__dict__)  # Should become (Literal[1] | None).__dict__
@@ -405,6 +434,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |                  ^^^^
 86 | print(Literal[1, None] + 1)  # Should become (Literal[1] | None) + 1
 87 | print(Literal[1, None] * 2)  # Should become (Literal[1] | None) * 2
+   |
 help: Replace with `Literal[...] | None`
    |
 84 | print(Literal[1, None].method())  # Should become (Literal[1] | None).method()
@@ -422,6 +452,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
    |                  ^^^^
 87 | print(Literal[1, None] * 2)  # Should become (Literal[1] | None) * 2
 88 | print((Literal[1, None]).__dict__)  # Should become ((Literal[1] | None)).__dict__
+   |
 help: Replace with `Literal[...] | None`
    |
 85 | print(Literal[1, None][0])  # Should become (Literal[1] | None)[0]
@@ -438,6 +469,7 @@ PYI061 [*] Use `Literal[...] | None` rather than `Literal[None, ...]`
 87 | print(Literal[1, None] * 2)  # Should become (Literal[1] | None) * 2
    |                  ^^^^
 88 | print((Literal[1, None]).__dict__)  # Should become ((Literal[1] | None)).__dict__
+   |
 help: Replace with `Literal[...] | None`
    |
 86 | print(Literal[1, None] + 1)  # Should become (Literal[1] | None) + 1

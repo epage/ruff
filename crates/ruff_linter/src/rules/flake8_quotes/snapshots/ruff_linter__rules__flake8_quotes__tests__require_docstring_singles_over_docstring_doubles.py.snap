@@ -10,6 +10,7 @@ Q002 [*] Double quote docstring found but single quotes preferred
   | |___^
 4 |
 5 |   """
+  |
 help: Replace double quotes docstring with single quotes
   |
   - """
@@ -30,6 +31,7 @@ Q002 [*] Double quote docstring found but single quotes preferred
    | |_______^
 15 |
 16 |       """
+   |
 help: Replace double quotes docstring with single quotes
    |
 11 | class Cls:
@@ -52,6 +54,7 @@ Q002 [*] Double quote docstring found but single quotes preferred
    | |___________^
 27 |
 28 |           some_expression = 'hello world'
+   |
 help: Replace double quotes docstring with single quotes
    |
 23 |         val=l[Cls():3]):

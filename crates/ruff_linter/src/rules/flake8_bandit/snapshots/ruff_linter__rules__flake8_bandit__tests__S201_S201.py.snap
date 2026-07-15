@@ -9,3 +9,4 @@ S201 Use of `debug=True` in Flask app detected
    |         ^^^^^^^^^^
 11 |
 12 | # Errors
+   |

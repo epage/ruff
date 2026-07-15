@@ -8,6 +8,7 @@ UP039 [*] Unnecessary parentheses after class definition
 2 | class A():
   |        ^^
 3 |     pass
+  |
 help: Remove parentheses
   |
 1 | # Errors
@@ -23,6 +24,7 @@ UP039 [*] Unnecessary parentheses after class definition
   |        ^^
 7 |     :
 8 |     pass
+  |
 help: Remove parentheses
   |
 5 |
@@ -38,6 +40,7 @@ UP039 [*] Unnecessary parentheses after class definition
 12 |         ():
    |         ^^
 13 |     pass
+   |
 help: Remove parentheses
    |
 11 | class A \
@@ -53,6 +56,7 @@ UP039 [*] Unnecessary parentheses after class definition
 17 | class A():
    |        ^^
 18 |     pass
+   |
 help: Remove parentheses
    |
 16 | @decorator()
@@ -68,7 +72,9 @@ UP039 [*] Unnecessary parentheses after class definition
 21 | class A():
    |        ^^
 22 |     pass
+   |
 help: Remove parentheses
+   |
 20 | @decorator
    - class A():
 21 + class A:

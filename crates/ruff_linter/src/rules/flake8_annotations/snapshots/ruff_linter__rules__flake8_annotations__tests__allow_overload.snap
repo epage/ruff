@@ -8,4 +8,5 @@ ANN201 Missing return type annotation for public function `bar`
 29 |     def bar(i):
    |         ^^^
 30 |         return i
+   |
 help: Add return type annotation

@@ -9,6 +9,7 @@ S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
 5 | with open("/tmp/abc", "w") as f:
   |           ^^^^^^^^^^
 6 |     f.write("def")
+  |
 
 S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
  --> S108.py:8:13
@@ -18,6 +19,7 @@ S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
 8 | with open(f"/tmp/abc", "w") as f:
   |             ^^^^^^^^
 9 |     f.write("def")
+  |
 
 S108 Probable insecure usage of temporary file or directory: "/var/tmp/123"
   --> S108.py:11:11
@@ -27,6 +29,7 @@ S108 Probable insecure usage of temporary file or directory: "/var/tmp/123"
 11 | with open("/var/tmp/123", "w") as f:
    |           ^^^^^^^^^^^^^^
 12 |     f.write("def")
+   |
 
 S108 Probable insecure usage of temporary file or directory: "/dev/shm/unit/test"
   --> S108.py:14:11
@@ -36,6 +39,7 @@ S108 Probable insecure usage of temporary file or directory: "/dev/shm/unit/test
 14 | with open("/dev/shm/unit/test", "w") as f:
    |           ^^^^^^^^^^^^^^^^^^^^
 15 |     f.write("def")
+   |
 
 S108 Probable insecure usage of temporary file or directory: "/foo/bar"
   --> S108.py:18:11
@@ -44,6 +48,7 @@ S108 Probable insecure usage of temporary file or directory: "/foo/bar"
 18 | with open("/foo/bar", "w") as f:
    |           ^^^^^^^^^^
 19 |     f.write("def")
+   |
 
 S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
   --> S108.py:22:11
@@ -52,6 +57,7 @@ S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
 22 | with open("/tmp/" "abc", "w") as f:
    |           ^^^^^^^^^^^^^
 23 |     f.write("def")
+   |
 
 S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
   --> S108.py:25:11
@@ -61,6 +67,7 @@ S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
 25 | with open("/tmp/abc" f"/tmp/abc", "w") as f:
    |           ^^^^^^^^^^
 26 |     f.write("def")
+   |
 
 S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
   --> S108.py:25:24
@@ -70,3 +77,4 @@ S108 Probable insecure usage of temporary file or directory: "/tmp/abc"
 25 | with open("/tmp/abc" f"/tmp/abc", "w") as f:
    |                        ^^^^^^^^
 26 |     f.write("def")
+   |

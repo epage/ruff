@@ -9,6 +9,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |     assert something and something_else and something_third
 16 |     assert something and not something_else
+   |
 help: Break down assertion into multiple parts
    |
 13 | def test_error():
@@ -28,6 +29,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |     assert something and not something_else
 17 |     assert something and (something_else or something_third)
+   |
 help: Break down assertion into multiple parts
    |
 14 |     assert something and something_else
@@ -47,6 +49,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |     assert something and (something_else or something_third)
 18 |     assert not something and something_else
+   |
 help: Break down assertion into multiple parts
    |
 15 |     assert something and something_else and something_third
@@ -66,6 +69,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 18 |     assert not something and something_else
 19 |     assert not (something or something_else)
+   |
 help: Break down assertion into multiple parts
    |
 16 |     assert something and not something_else
@@ -85,6 +89,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |     assert not (something or something_else)
 20 |     assert not (something or something_else or something_third)
+   |
 help: Break down assertion into multiple parts
    |
 17 |     assert something and (something_else or something_third)
@@ -104,6 +109,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 |     assert not (something or something_else or something_third)
 21 |     assert something and something_else == """error
+   |
 help: Break down assertion into multiple parts
    |
 18 |     assert not something and something_else
@@ -123,6 +129,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 21 |     assert something and something_else == """error
 22 |     message
+   |
 help: Break down assertion into multiple parts
    |
 19 |     assert not (something or something_else)
@@ -144,6 +151,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    | |_______^
 24 |       assert (
 25 |           something
+   |
 help: Break down assertion into multiple parts
    |
 20 |     assert not (something or something_else or something_third)
@@ -169,6 +177,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    | |_____^
 31 |
 32 |       # recursive case
+   |
 help: Break down assertion into multiple parts
    |
 23 |     """
@@ -183,10 +192,12 @@ note: This is an unsafe fix and may change runtime behavior
 
 PT018 [*] Assertion should be broken down into multiple parts
   --> PT018.py:33:5
+   |
 32 |     # recursive case
 33 |     assert not (a or not (b or c))
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 34 |     assert not (a or not (b and c))
+   |
 help: Break down assertion into multiple parts
    |
 32 |     # recursive case
@@ -206,7 +217,9 @@ PT018 [*] Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 35 |
 36 |     # detected, but no fix for messages
+   |
 help: Break down assertion into multiple parts
+   |
 33 |     assert not (a or not (b or c))
    -     assert not (a or not (b and c))
 34 +     assert not a
@@ -223,6 +236,7 @@ PT018 Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 38 |     assert not (something or something_else and something_third), "with message"
 39 |     # detected, but no fix for mixed conditions (e.g. `a or b and c`)
+   |
 help: Break down assertion into multiple parts
 
 PT018 Assertion should be broken down into multiple parts
@@ -234,10 +248,12 @@ PT018 Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 39 |     # detected, but no fix for mixed conditions (e.g. `a or b and c`)
 40 |     assert not (something or something_else and something_third)
+   |
 help: Break down assertion into multiple parts
 
 PT018 Assertion should be broken down into multiple parts
   --> PT018.py:40:5
+   |
 38 |     assert not (something or something_else and something_third), "with message"
 39 |     # detected, but no fix for mixed conditions (e.g. `a or b and c`)
 40 |     assert not (something or something_else and something_third)
@@ -251,6 +267,7 @@ PT018 [*] Assertion should be broken down into multiple parts
 44 | assert something and something_else  # Error
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 45 | assert something and something_else and something_third  # Error
+   |
 help: Break down assertion into multiple parts
    |
 43 | assert something  # OK
@@ -286,6 +303,7 @@ PT018 Assertion should be broken down into multiple parts
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 50 |
 51 |     x = 1; assert something and something_else
+   |
 help: Break down assertion into multiple parts
 
 PT018 Assertion should be broken down into multiple parts
@@ -297,6 +315,7 @@ PT018 Assertion should be broken down into multiple parts
    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 |
 53 |     x = 1; \
+   |
 help: Break down assertion into multiple parts
 
 PT018 Assertion should be broken down into multiple parts
@@ -320,6 +339,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    | |_____^
 64 |
 65 |       assert (not (
+   |
 help: Break down assertion into multiple parts
    |
 61 |         or self.find_graph_input(node.input[0])
@@ -345,6 +365,7 @@ PT018 [*] Assertion should be broken down into multiple parts
    | |______^
 70 |
 71 |       assert (not self.find_graph_output(node.output[0]) or
+   |
 help: Break down assertion into multiple parts
    |
 64 |

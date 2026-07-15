@@ -8,6 +8,7 @@ RUF038 [*] `Literal[True, False]` can be replaced with `bool`
   |                 ^^^^^^^^^^^^^^^^^^^^
 5 |
 6 | def func2(arg1: Literal[True, False, True]): ...
+  |
 help: Replace with `bool`
   |
 3 |
@@ -26,6 +27,7 @@ RUF038 [*] `Literal[True, False]` can be replaced with `bool`
   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 | def func3() -> Literal[True, False]: ...
+  |
 help: Replace with `bool`
   |
 5 |
@@ -37,12 +39,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 RUF038 [*] `Literal[True, False]` can be replaced with `bool`
   --> RUF038.pyi:8:16
+   |
  6 | def func2(arg1: Literal[True, False, True]): ...
  7 |
  8 | def func3() -> Literal[True, False]: ...
    |                ^^^^^^^^^^^^^^^^^^^^
  9 |
 10 | def func4(arg1: Literal[True, False] | bool): ...
+   |
 help: Replace with `bool`
   |
 7 |
@@ -61,6 +65,7 @@ RUF038 [*] `Literal[True, False]` can be replaced with `bool`
    |                 ^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | def func5(arg1: Literal[False, True]): ...
+   |
 help: Replace with `bool`
    |
 9  |
@@ -79,6 +84,7 @@ RUF038 [*] `Literal[True, False]` can be replaced with `bool`
    |                 ^^^^^^^^^^^^^^^^^^^^
 13 |
 14 | def func6(arg1: Literal[True, False, "hello", "world"]): ...
+   |
 help: Replace with `bool`
    |
 11 |
@@ -97,4 +103,5 @@ RUF038 `Literal[True, False, ...]` can be replaced with `Literal[...] | bool`
    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |
 16 | # ok
+   |
 help: Replace with `Literal[...] | bool`

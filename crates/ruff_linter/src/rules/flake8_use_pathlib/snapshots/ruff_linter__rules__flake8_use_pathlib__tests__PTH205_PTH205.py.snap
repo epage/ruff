@@ -8,6 +8,7 @@ PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
   | ^^^^^^^^^^^^^^^^
 7 | os.path.getctime(b"filename")
 8 | os.path.getctime(Path("filename"))
+  |
 help: Replace with `Path.stat(...).st_ctime`
 
 PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
@@ -17,26 +18,31 @@ PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
 7 | os.path.getctime(b"filename")
   | ^^^^^^^^^^^^^^^^
 8 | os.path.getctime(Path("filename"))
+  |
 help: Replace with `Path.stat(...).st_ctime`
 
 PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
   --> PTH205.py:8:1
+   |
  6 | os.path.getctime("filename")
  7 | os.path.getctime(b"filename")
  8 | os.path.getctime(Path("filename"))
    | ^^^^^^^^^^^^^^^^
  9 |
 10 | getctime("filename")
+   |
 help: Replace with `Path.stat(...).st_ctime`
 
 PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
   --> PTH205.py:10:1
+   |
  8 | os.path.getctime(Path("filename"))
  9 |
 10 | getctime("filename")
    | ^^^^^^^^
 11 | getctime(b"filename")
 12 | getctime(Path("filename"))
+   |
 help: Replace with `Path.stat(...).st_ctime`
 
 PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
@@ -46,6 +52,7 @@ PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`
 11 | getctime(b"filename")
    | ^^^^^^^^
 12 | getctime(Path("filename"))
+   |
 help: Replace with `Path.stat(...).st_ctime`
 
 PTH205 `os.path.getctime` should be replaced by `Path.stat().st_ctime`

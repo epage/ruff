@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/pyupgrade/mod.rs
 ---
 UP037 [*] Remove quotes from type annotation
  --> UP037_2.pyi:3:14
+  |
 1 | # https://github.com/astral-sh/ruff/issues/7102
 2 |
 3 | def f(a: Foo['SingleLine  # Comment']): ...
@@ -100,6 +101,7 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:28:10
+   |
 28 |   def f(a: '''list[int]
    |  __________^
 29 | |     ''' = []): ...
@@ -116,6 +118,7 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:32:4
+   |
 32 |   a: '''\\
    |  ____^
 33 | | list[int]''' = [42]
@@ -177,11 +180,13 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_2.pyi:49:4
+   |
 49 |   a: '''list
    |  ____^
 50 | | [int]''' = [42]
    | |________^
 help: Remove quotes
+   |
 48 |
    - a: '''list
    - [int]''' = [42]

@@ -8,6 +8,7 @@ C901 `trivial` is too complex (1 > 0)
 2 | def trivial():
   |     ^^^^^^^
 3 |     pass
+  |
 
 C901 `expr_as_statement` is too complex (1 > 0)
  --> C901.py:7:5
@@ -16,6 +17,7 @@ C901 `expr_as_statement` is too complex (1 > 0)
 7 | def expr_as_statement():
   |     ^^^^^^^^^^^^^^^^^
 8 |     0xF00D
+  |
 
 C901 `sequential` is too complex (1 > 0)
   --> C901.py:12:5
@@ -25,6 +27,7 @@ C901 `sequential` is too complex (1 > 0)
    |     ^^^^^^^^^^
 13 |     k = n + 4
 14 |     s = k + n
+   |
 
 C901 `if_elif_else_dead_path` is too complex (3 > 0)
   --> C901.py:19:5
@@ -34,6 +37,7 @@ C901 `if_elif_else_dead_path` is too complex (3 > 0)
    |     ^^^^^^^^^^^^^^^^^^^^^^
 20 |     if n > 3:
 21 |         return "bigger than three"
+   |
 
 C901 `nested_ifs` is too complex (3 > 0)
   --> C901.py:29:5
@@ -43,6 +47,7 @@ C901 `nested_ifs` is too complex (3 > 0)
    |     ^^^^^^^^^^
 30 |     if n > 3:
 31 |         if n > 4:
+   |
 
 C901 `for_loop` is too complex (2 > 0)
   --> C901.py:40:5
@@ -52,6 +57,7 @@ C901 `for_loop` is too complex (2 > 0)
    |     ^^^^^^^^
 41 |     for i in range(10):
 42 |         print(i)
+   |
 
 C901 `for_else` is too complex (2 > 0)
   --> C901.py:46:5
@@ -61,6 +67,7 @@ C901 `for_else` is too complex (2 > 0)
    |     ^^^^^^^^
 47 |     for i in mylist:
 48 |         print(i)
+   |
 
 C901 `recursive` is too complex (2 > 0)
   --> C901.py:54:5
@@ -70,6 +77,7 @@ C901 `recursive` is too complex (2 > 0)
    |     ^^^^^^^^^
 55 |     if n > 4:
 56 |         return f(n - 1)
+   |
 
 C901 `nested_functions` is too complex (3 > 0)
   --> C901.py:62:5
@@ -79,6 +87,7 @@ C901 `nested_functions` is too complex (3 > 0)
    |     ^^^^^^^^^^^^^^^^
 63 |     def a():
 64 |         def b():
+   |
 
 C901 `a` is too complex (2 > 0)
   --> C901.py:63:9
@@ -89,6 +98,7 @@ C901 `a` is too complex (2 > 0)
    |         ^
 64 |         def b():
 65 |             pass
+   |
 
 C901 `b` is too complex (1 > 0)
   --> C901.py:64:13
@@ -98,6 +108,7 @@ C901 `b` is too complex (1 > 0)
 64 |         def b():
    |             ^
 65 |             pass
+   |
 
 C901 `try_else` is too complex (4 > 0)
   --> C901.py:73:5
@@ -107,6 +118,7 @@ C901 `try_else` is too complex (4 > 0)
    |     ^^^^^^^^
 74 |     try:
 75 |         print(1)
+   |
 
 C901 `nested_try_finally` is too complex (1 > 0)
   --> C901.py:85:5
@@ -116,6 +128,7 @@ C901 `nested_try_finally` is too complex (1 > 0)
    |     ^^^^^^^^^^^^^^^^^^
 86 |     try:
 87 |         try:
+   |
 
 C901 `foobar` is too complex (3 > 0)
   --> C901.py:96:11
@@ -125,6 +138,7 @@ C901 `foobar` is too complex (3 > 0)
    |           ^^^^^^
 97 |     await whatever(a, b, c)
 98 |     if await b:
+   |
 
 C901 `annotated_assign` is too complex (1 > 0)
    --> C901.py:107:5
@@ -133,6 +147,7 @@ C901 `annotated_assign` is too complex (1 > 0)
 107 | def annotated_assign():
     |     ^^^^^^^^^^^^^^^^
 108 |     x: Any = None
+    |
 
 C901 `handle` is too complex (9 > 0)
    --> C901.py:113:9
@@ -143,6 +158,7 @@ C901 `handle` is too complex (9 > 0)
     |         ^^^^^^
 114 |         if args:
 115 |             return
+    |
 
 C901 `a` is too complex (1 > 0)
    --> C901.py:118:17
@@ -151,6 +167,7 @@ C901 `a` is too complex (1 > 0)
 118 |             def a(self):
     |                 ^
 119 |                 pass
+    |
 
 C901 `b` is too complex (2 > 0)
    --> C901.py:121:17
@@ -161,6 +178,7 @@ C901 `b` is too complex (2 > 0)
     |                 ^
 122 |                 if not args:
 123 |                     pass
+    |
 
 C901 `c` is too complex (1 > 0)
    --> C901.py:126:17
@@ -169,6 +187,7 @@ C901 `c` is too complex (1 > 0)
 126 |             def c(*args, **kwargs):
     |                 ^
 127 |                 pass
+    |
 
 C901 `error` is too complex (1 > 0)
    --> C901.py:129:17
@@ -178,6 +197,7 @@ C901 `error` is too complex (1 > 0)
 129 |             def error(self, message):
     |                 ^^^^^
 130 |                 pass
+    |
 
 C901 `info` is too complex (1 > 0)
    --> C901.py:132:17
@@ -187,6 +207,7 @@ C901 `info` is too complex (1 > 0)
 132 |             def info(self, message):
     |                 ^^^^
 133 |                 pass
+    |
 
 C901 `exception` is too complex (1 > 0)
    --> C901.py:135:17
@@ -196,3 +217,4 @@ C901 `exception` is too complex (1 > 0)
 135 |             def exception(self):
     |                 ^^^^^^^^^
 136 |                 pass
+    |

@@ -8,3 +8,4 @@ invalid-syntax: mapping pattern checks duplicate key `'key'`
 2 |     case {'key': 1, 'key': 2}:
   |                     ^^^^^
 3 |             pass
+  |

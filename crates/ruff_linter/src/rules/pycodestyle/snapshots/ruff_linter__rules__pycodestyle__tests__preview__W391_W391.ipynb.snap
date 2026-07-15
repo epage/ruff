@@ -12,6 +12,7 @@ W391 [*] Too many newlines at end of cell
   | |__^
 8 |
 9 |   1 + 1
+  |
 help: Remove trailing newlines
   |
 5 |
@@ -33,6 +34,7 @@ W391 [*] Too many newlines at end of cell
    | |__^
 15 |
 16 |   1+1
+   |
 help: Remove trailing newlines
    |
 11 |

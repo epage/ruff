@@ -19,6 +19,7 @@ F811 Redefinition of unused `bar` from line 3
    |     ^^^ `bar` redefined here
    |
   ::: F811_35.py:3:17
+   |
  1 | """Regression test for: https://github.com/astral-sh/ruff/issues/24915"""
  2 |
  3 | from foo import bar

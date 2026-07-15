@@ -296,6 +296,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:13:5
+           |
         13 |     color
            |     ^^^^^ Clicking here
         info: Found 2 type definitions
@@ -321,10 +322,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:8
+          |
         2 | import lib
           |        ^^^ Clicking here
         info: Found 1 type definition
          --> lib.py:1:1
+          |
         1 | a = 10
           | ------
         ");
@@ -344,10 +347,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:8
+          |
         2 | import lib.submod
           |        ^^^ Clicking here
         info: Found 1 type definition
          --> lib/__init__.py:1:1
+          |
         1 | b = 7
           | -----
         ");
@@ -367,10 +372,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:12
+          |
         2 | import lib.submod
           |            ^^^^^^ Clicking here
         info: Found 1 type definition
          --> lib/submod.py:1:1
+          |
         1 | a = 10
           | ------
         ");
@@ -389,10 +396,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:6
+          |
         2 | from lib import a
           |      ^^^ Clicking here
         info: Found 1 type definition
          --> lib.py:1:1
+          |
         1 | a = 10
           | ------
         ");
@@ -412,10 +421,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:6
+          |
         2 | from lib.submod import a
           |      ^^^ Clicking here
         info: Found 1 type definition
          --> lib/__init__.py:1:1
+          |
         1 | b = 7
           | -----
         ");
@@ -435,10 +446,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:10
+          |
         2 | from lib.submod import a
           |          ^^^^^^ Clicking here
         info: Found 1 type definition
          --> lib/submod.py:1:1
+          |
         1 | a = 10
           | ------
         ");
@@ -467,10 +480,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> lib/sub/__init__.py:2:11
+          |
         2 | from .bot.botmod import *
           |           ^^^^^^ Clicking here
         info: Found 1 type definition
          --> lib/sub/bot/botmod.py:1:1
+          |
         1 | botmod = 31
           | -----------
         ");
@@ -499,10 +514,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> lib/sub/__init__.py:2:7
+          |
         2 | from .bot.botmod import *
           |       ^^^ Clicking here
         info: Found 1 type definition
          --> lib/sub/bot/__init__.py:1:1
+          |
         1 | bot = 3
           | -------
         ");
@@ -531,10 +548,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> lib/sub/__init__.py:2:7
+          |
         2 | from .bot.botmod import *
           |       ^^^ Clicking here
         info: Found 1 type definition
          --> lib/sub/bot/__init__.py:1:1
+          |
         1 | bot = 3
           | -------
         ");
@@ -578,10 +597,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:4:1
+          |
         4 | lib
           | ^^^ Clicking here
         info: Found 1 type definition
          --> lib.py:1:1
+          |
         1 | a = 10
           | ------
         ");
@@ -600,10 +621,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:1
+           |
         LL | a
            | ^ Clicking here
         info: Found 1 type definition
           --> stdlib/builtins.pyi:LL:7
+           |
         LL | class str(Sequence[str]):
            |       ---
         ");
@@ -619,10 +642,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:10
+           |
         LL | a: str = "test"
            |          ^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/builtins.pyi:LL:7
+           |
         LL | class str(Sequence[str]):
            |       ---
         "#);
@@ -639,10 +664,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:34
+          |
         2 | type Alias[T: int = bool] = list[T]
           |                                  ^ Clicking here
         info: Found 1 type definition
          --> main.py:2:12
+          |
         2 | type Alias[T: int = bool] = list[T]
           |            -
         ");
@@ -659,10 +686,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:41
+          |
         2 | type Alias[**P = [int, str]] = Callable[P, int]
           |                                         ^ Clicking here
         info: Found 1 type definition
          --> main.py:2:14
+          |
         2 | type Alias[**P = [int, str]] = Callable[P, int]
           |              -
         ");
@@ -680,10 +709,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:31
+           |
         LL | type Alias[*Ts = ()] = tuple[*Ts]
            |                               ^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/_internal.pyi:LL:1
+           |
         LL | Todo: _SpecialForm
            | ----
         ");
@@ -704,10 +735,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:6:1
+          |
         6 | Alias
           | ^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:1
+          |
         4 | Alias = TypeAliasType("Alias", tuple[int, int])
           | -----
         "#);
@@ -727,10 +760,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:5
+          |
         2 | a: "MyClass" = 1
           |     ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -750,10 +785,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:12
+          |
         2 | a: "None | MyClass" = 1
           |            ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -773,6 +810,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:4
+           |
         LL | a: "None | MyClass" = 1
            |    ^^^^^^^^^^^^^^^^ Clicking here
         info: Found 2 type definitions
@@ -782,6 +820,7 @@ mod tests {
            |       -------
            |
           ::: stdlib/types.pyi:LL:7
+           |
         LL | class NoneType:
            |       --------
         "#);
@@ -801,10 +840,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:12
+          |
         2 | a: "None | MyClass" = 1
           |            ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -824,6 +865,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:4
+           |
         LL | a: "None | MyClass" = 1
            |    ^^^^^^^^^^^^^^^^ Clicking here
         info: Found 2 type definitions
@@ -833,6 +875,7 @@ mod tests {
            |       -------
            |
           ::: stdlib/types.pyi:LL:7
+           |
         LL | class NoneType:
            |       --------
         "#);
@@ -852,10 +895,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:4
+           |
         LL | a: "MyClass |" = 1
            |    ^^^^^^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         "#);
@@ -875,10 +920,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:5
+          |
         2 | a: "MyClass | No" = 1
           |     ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -898,10 +945,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:15
+           |
         LL | a: "MyClass | No" = 1
            |               ^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         "#);
@@ -918,10 +967,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:6
+           |
         LL | ab: "ab"
            |      ^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         "#);
@@ -938,10 +989,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:5
+           |
         LL | x: "foobar"
            |     ^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         "#);
@@ -961,10 +1014,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:11
+          |
         2 | x: "list['MyClass | int'] | None"
           |           ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -984,10 +1039,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:17
+          |
         2 | x: "list['int | MyClass'] | None"
           |                 ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -1007,10 +1064,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:26
+          |
         2 | x: "list['int | None'] | MyClass"
           |                          ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -1030,10 +1089,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:19
+          |
         2 | x: "list['int' | 'MyClass'] | None"
           |                   ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -1053,10 +1114,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:11
+          |
         2 | x: "list['MyClass' | 'str'] | None"
           |           ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -1076,10 +1139,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:13
+           |
         LL | x: """'list["MyClass" | "str"]' | None"""
            |             ^^^^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         "#);
@@ -1099,10 +1164,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
          --> main.py:2:31
+          |
         2 | x: """'list["int" | "str"]' | MyClass"""
           |                               ^^^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:4:7
+          |
         4 | class MyClass:
           |       -------
         "#);
@@ -1136,6 +1203,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:17
+           |
         LL |             x = ab
            |                 ^^ Clicking here
         info: Found 1 type definition
@@ -1174,6 +1242,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:17
+           |
         LL |             x = ab
            |                 ^^ Clicking here
         info: Found 1 type definition
@@ -1212,6 +1281,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:17
+           |
         LL |             x = ab
            |                 ^^ Clicking here
         info: Found 1 type definition
@@ -1262,6 +1332,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:17
+           |
         LL |             x = ab
            |                 ^^ Clicking here
         info: Found 1 type definition
@@ -1292,10 +1363,12 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:10:14
+           |
         10 |         case Click(x, button=ab):
            |              ^^^^^ Clicking here
         info: Found 1 type definition
          --> main.py:2:7
+          |
         2 | class Click:
           |       -----
         ");
@@ -1332,6 +1405,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:13
+          |
         2 | type Alias1[AB: int = bool] = tuple[AB, list[AB]]
           |             ^^ Clicking here
         info: Found 1 type definition
@@ -1353,6 +1427,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:2:37
+          |
         2 | type Alias1[AB: int = bool] = tuple[AB, list[AB]]
           |                                     ^^ Clicking here
         info: Found 1 type definition
@@ -1409,6 +1484,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:38
+           |
         LL | type Alias3[*AB = ()] = tuple[tuple[*AB], tuple[*AB]]
            |                                      ^^ Clicking here
         info: Found 1 type definition
@@ -1432,6 +1508,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @r#"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:6
+           |
         LL | test(a= "123")
            |      ^ Clicking here
         info: Found 1 type definition
@@ -1458,6 +1535,7 @@ mod tests {
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:6
+           |
         LL | test(a= 123)
            |      ^ Clicking here
         info: Found 1 type definition
@@ -1483,6 +1561,7 @@ f(**kwargs<CURSOR>)
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:5
+           |
         LL | f(**kwargs)
            |     ^^^^^^ Clicking here
         info: Found 1 type definition
@@ -1513,6 +1592,7 @@ def outer():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:16
+           |
         LL |         return x  # Should find the nonlocal x declaration in outer scope
            |                ^ Clicking here
         info: Found 1 type definition
@@ -1560,6 +1640,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:12
+           |
         LL |     return global_var  # Should find the global variable declaration
            |            ^^^^^^^^^^ Clicking here
         info: Found 1 type definition
@@ -1599,6 +1680,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:5
+           |
         LL |     a
            |     ^ Clicking here
         info: Found 1 type definition
@@ -1625,6 +1707,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:7:1
+          |
         7 | x.foo()
           | ^ Clicking here
         info: Found 1 type definition
@@ -1648,6 +1731,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> main.py:4:1
+          |
         4 | foo()
           | ^^^ Clicking here
         info: Found 1 type definition
@@ -1671,6 +1755,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:15
+           |
         LL |         print(a)
            |               ^ Clicking here
         info: Found 1 type definition
@@ -1693,6 +1778,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> main.py:LL:5
+           |
         LL |     a
            |     ^ Clicking here
         info: Found 2 type definitions
@@ -1700,6 +1786,7 @@ def function():
            |
         LL | class str(Sequence[str]):
            |       ---
+           |
           ::: stdlib/types.pyi:LL:7
            |
         LL | class NoneType:
@@ -1731,6 +1818,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> mypackage/__init__.py:4:5
+          |
         4 | x = subpkg
           |     ^^^^^^ Clicking here
         info: Found 1 type definition
@@ -1762,6 +1850,7 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> mypackage/__init__.py:2:7
+          |
         2 | from .subpkg.submod import val
           |       ^^^^^^ Clicking here
         info: Found 1 type definition
@@ -1793,10 +1882,12 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> mypackage/__init__.py:LL:5
+           |
         LL | x = submod
            |     ^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/ty_extensions/__init__.pyi:LL:1
+           |
         LL | Unknown: _SpecialForm
            | -------
         ");
@@ -1826,10 +1917,12 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> mypackage/__init__.py:2:14
+          |
         2 | from .subpkg.submod import val
           |              ^^^^^^ Clicking here
         info: Found 1 type definition
          --> mypackage/subpkg/submod.py:1:1
+          |
         1 | /
         2 | | val: int = 0
           | |_____________-
@@ -1859,10 +1952,12 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
          --> mypackage/__init__.py:2:7
+          |
         2 | from .subpkg import subpkg
           |       ^^^^^^ Clicking here
         info: Found 1 type definition
          --> mypackage/subpkg/__init__.py:1:1
+          |
         1 | /
         2 | | subpkg: int = 10
           | |_________________-
@@ -1892,10 +1987,12 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> mypackage/__init__.py:LL:21
+           |
         LL | from .subpkg import subpkg
            |                     ^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/builtins.pyi:LL:7
+           |
         LL | class int:
            |       ---
         ");
@@ -1924,10 +2021,12 @@ def function():
         assert_snapshot!(test.goto_type_definition(), @"
         info[goto-type definition]: Go to type definition
           --> mypackage/__init__.py:LL:5
+           |
         LL | x = subpkg
            |     ^^^^^^ Clicking here
         info: Found 1 type definition
           --> stdlib/builtins.pyi:LL:7
+           |
         LL | class int:
            |       ---
         ");

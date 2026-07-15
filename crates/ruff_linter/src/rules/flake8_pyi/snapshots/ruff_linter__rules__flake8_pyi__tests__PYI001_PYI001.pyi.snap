@@ -10,6 +10,7 @@ PYI001 Name of private `TypeVar` must start with `_`
   |     ^^^^^^^^^^^^
 4 |
 5 | TTuple = TypeVarTuple("TTuple")  # Error: TypeVarTuples must also start with _
+  |
 
 PYI001 Name of private `TypeVarTuple` must start with `_`
  --> PYI001.pyi:5:10
@@ -20,6 +21,7 @@ PYI001 Name of private `TypeVarTuple` must start with `_`
   |          ^^^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | P = ParamSpec("P")  # Error: ParamSpecs must start with _
+  |
 
 PYI001 Name of private `ParamSpec` must start with `_`
  --> PYI001.pyi:7:5
@@ -30,3 +32,4 @@ PYI001 Name of private `ParamSpec` must start with `_`
   |     ^^^^^^^^^^^^^^
 8 |
 9 | _T = TypeVar("_T")  # OK
+  |

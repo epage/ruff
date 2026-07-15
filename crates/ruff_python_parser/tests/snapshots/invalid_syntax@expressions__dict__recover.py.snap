@@ -491,12 +491,14 @@ Module(
   |
 
 
+  |
 5 | {1: 2,,3: 4}
 6 |
 7 | {1: 2,,}
   |       ^ Syntax Error: Expected an expression or a '}'
 8 |
 9 | # Missing comma
+  |
 
 
    |

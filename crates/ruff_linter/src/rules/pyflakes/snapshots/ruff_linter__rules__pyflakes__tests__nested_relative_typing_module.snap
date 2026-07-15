@@ -10,6 +10,7 @@ F821 Undefined name `foo`
 
 F821 Undefined name `foo`
   --> baz.py:33:17
+   |
 32 |     # F821
 33 |     x: Literal["foo"]
    |                 ^^^

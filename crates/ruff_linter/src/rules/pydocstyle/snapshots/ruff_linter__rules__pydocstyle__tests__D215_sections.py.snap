@@ -8,6 +8,7 @@ D215 [*] Section underline is over-indented ("Returns")
 159 |         -------
     |         ^^^^^^^
 160 |     A value of some sort.
+    |
 help: Remove over-indentation from "Returns" underline
     |
 158 |     Returns
@@ -23,6 +24,7 @@ D215 [*] Section underline is over-indented ("Returns")
 173 |         -------
     |         ^^^^^^^
 174 |     """
+    |
 help: Remove over-indentation from "Returns" underline
     |
 172 |     Returns

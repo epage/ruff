@@ -10,6 +10,7 @@ D405 [*] Section name should be properly capitalized ("returns")
    |     ^^^^^^^
 20 |     -------
 21 |     A value of some sort.
+   |
 help: Capitalize "returns"
    |
 18 |
@@ -26,6 +27,7 @@ D405 [*] Section name should be properly capitalized ("Short summary")
 218 |     Short summary
     |     ^^^^^^^^^^^^^
 219 |     -------------
+    |
 help: Capitalize "Short summary"
     |
 217 |
@@ -43,6 +45,7 @@ D405 [*] Section name should be properly capitalized ("returns")
     |     ^^^^^^^
 574 |         Here's another note.
 575 |     """
+    |
 help: Capitalize "returns"
     |
 572 |

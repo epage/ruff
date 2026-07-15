@@ -10,6 +10,7 @@ PYI064 [*] `Final[Literal[True]]` can be replaced with a bare `Final`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 | y: Final[Literal[None]] = None  # PYI064
 5 | z: Final[Literal[  # PYI064
+  |
 help: Replace with `Final`
   |
 2 |
@@ -26,6 +27,7 @@ PYI064 [*] `Final[Literal[None]]` can be replaced with a bare `Final`
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 5 | z: Final[Literal[  # PYI064
 6 |     "this is a really long literal, that won't be rendered in the issue text"
+  |
 help: Replace with `Final`
   |
 3 | x: Final[Literal[True]] = True  # PYI064
@@ -45,6 +47,7 @@ PYI064 [*] `Final[Literal[...]]` can be replaced with a bare `Final`
   | |______________________________________________________________________________^
 8 |
 9 |   # This should be fixable, and marked as safe
+  |
 help: Replace with `Final`
   |
 4 | y: Final[Literal[None]] = None  # PYI064
@@ -63,6 +66,7 @@ PYI064 [*] `Final[Literal[123]]` can be replaced with a bare `Final`
    | ^^^^^^^^^^^^^^^^^^^^^^^
 11 |
 12 | # This should not be fixable
+   |
 help: Replace with `Final`
    |
 9  | # This should be fixable, and marked as safe
@@ -79,4 +83,5 @@ PYI064 `Final[Literal[123]]` can be replaced with a bare `Final`
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 |
 15 | n1: Final[Literal[True, False]] = True # No issue here
+   |
 help: Replace with `Final`

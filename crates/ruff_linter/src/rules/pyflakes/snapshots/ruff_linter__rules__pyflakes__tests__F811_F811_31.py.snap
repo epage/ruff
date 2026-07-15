@@ -12,4 +12,5 @@ F811 Redefinition of unused `baz` from line 17
    |                             ^^^ `baz` redefined here
 20 | except ImportError:
 21 |     pass
+   |
 help: Remove definition: `baz`

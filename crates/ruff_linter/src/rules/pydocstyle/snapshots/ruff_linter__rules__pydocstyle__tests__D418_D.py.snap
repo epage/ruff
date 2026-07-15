@@ -9,6 +9,7 @@ D418 Function decorated with `@overload` shouldn't contain a docstring
    |         ^^^^^^^^^^^^^^^^^
 35 |         """Foo bar documentation."""
 36 |         ...
+   |
 
 D418 Function decorated with `@overload` shouldn't contain a docstring
   --> D.py:90:9
@@ -18,6 +19,7 @@ D418 Function decorated with `@overload` shouldn't contain a docstring
    |         ^^^^^^^^^^^^^^^^^^^^^^
 91 |         """Foo bar documentation."""
 92 |         ...
+   |
 
 D418 Function decorated with `@overload` shouldn't contain a docstring
    --> D.py:110:5
@@ -27,3 +29,4 @@ D418 Function decorated with `@overload` shouldn't contain a docstring
     |     ^^^^^^^^^^^^^^^
 111 |     """Foo bar documentation."""
 112 |     ...
+    |

@@ -15,6 +15,7 @@ I001 [*] Import block is un-sorted or un-formatted
    | |_^
 14 |
 15 |   pass
+   |
 help: Organize imports
    |
 7  |
@@ -45,6 +46,7 @@ I001 [*] Import block is un-sorted or un-formatted
    | |_^
 25 |
 26 |   pass
+   |
 help: Organize imports
    |
 16 |
@@ -67,6 +69,7 @@ I001 [*] Import block is un-sorted or un-formatted
    | |_^
 39 |
 40 |   pass
+   |
 help: Organize imports
    |
 34 |
@@ -90,7 +93,9 @@ I001 [*] Import block is un-sorted or un-formatted
    | |_^
 46 |
 47 |   pass
+   |
 help: Organize imports
+   |
 41 |
    - from mylib import (
    -     # some comment

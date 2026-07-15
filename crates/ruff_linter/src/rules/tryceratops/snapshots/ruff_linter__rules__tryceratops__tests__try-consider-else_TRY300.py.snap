@@ -10,3 +10,4 @@ TRY300 Consider moving this statement to an `else` block
    |         ^^^^^^^^
 21 |     except MyException:
 22 |         logger.exception("process failed")
+   |

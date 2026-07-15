@@ -9,6 +9,7 @@ D407 [*] Missing dashed underline after section ("Returns")
 44 |     Returns
    |     ^^^^^^^
 45 |     A value of some sort.
+   |
 help: Add dashed line under "Returns"
    |
 44 |     Returns
@@ -25,10 +26,13 @@ D407 [*] Missing dashed underline after section ("Returns")
    |     ^^^^^^^
 57 |
 58 |     """
+   |
 help: Add dashed line under "Returns"
+   |
 56 |     Returns
 57 +     -------
 58 |
+   |
 
 D407 [*] Missing dashed underline after section ("Returns")
   --> sections.py:67:5
@@ -54,6 +58,7 @@ D407 [*] Missing dashed underline after section ("Raises")
 227 |     Raises:
     |     ^^^^^^
 228 |     My attention.
+    |
 help: Add dashed line under "Raises"
     |
 227 |     Raises:
@@ -68,6 +73,7 @@ D407 [*] Missing dashed underline after section ("Parameters")
 522 |     ==========
     |     ^^^^^^^^^^
 523 |     """
+    |
 help: Add dashed line under "Parameters"
     |
 521 |     Parameters
@@ -83,6 +89,7 @@ D407 [*] Missing dashed underline after section ("Parameters")
 530 |     ===========
     |     ^^^^^^^^^^^
 531 |     """
+    |
 help: Add dashed line under "Parameters"
     |
 529 |     Parameters
@@ -100,6 +107,7 @@ D407 [*] Missing dashed underline after section ("Parameters")
     |    ^^^^^^^^^^
 614 |    -‐-----------------
 615 |    returns:
+    |
 help: Add dashed line under "Parameters"
     |
 613 |    Parameters

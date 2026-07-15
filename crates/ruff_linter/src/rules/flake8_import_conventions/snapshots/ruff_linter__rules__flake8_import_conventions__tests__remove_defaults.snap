@@ -10,6 +10,7 @@ ICN001 `altair` should be imported as `alt`
   |        ^^^^^^
 4 | import matplotlib.pyplot  # unconventional
 5 | import numpy  # not checked
+  |
 help: Alias `altair` to `alt`
 
 ICN001 `matplotlib.pyplot` should be imported as `plt`
@@ -20,6 +21,7 @@ ICN001 `matplotlib.pyplot` should be imported as `plt`
   |        ^^^^^^^^^^^^^^^^^
 5 | import numpy  # not checked
 6 | import pandas  # unconventional
+  |
 help: Alias `matplotlib.pyplot` to `plt`
 
 ICN001 `pandas` should be imported as `pd`
@@ -30,6 +32,7 @@ ICN001 `pandas` should be imported as `pd`
 6 | import pandas  # unconventional
   |        ^^^^^^
 7 | import seaborn  # unconventional
+  |
 help: Alias `pandas` to `pd`
 
 ICN001 `seaborn` should be imported as `sns`
@@ -41,16 +44,19 @@ ICN001 `seaborn` should be imported as `sns`
   |        ^^^^^^^
 8 |
 9 | import altair as altr  # unconventional
+  |
 help: Alias `seaborn` to `sns`
 
 ICN001 `altair` should be imported as `alt`
   --> remove_default.py:9:18
+   |
  7 | import seaborn  # unconventional
  8 |
  9 | import altair as altr  # unconventional
    |                  ^^^^
 10 | import matplotlib.pyplot as plot  # unconventional
 11 | import numpy as nmp  # not checked
+   |
 help: Alias `altair` to `alt`
 
 ICN001 `matplotlib.pyplot` should be imported as `plt`
@@ -61,6 +67,7 @@ ICN001 `matplotlib.pyplot` should be imported as `plt`
    |                             ^^^^
 11 | import numpy as nmp  # not checked
 12 | import pandas as pdas  # unconventional
+   |
 help: Alias `matplotlib.pyplot` to `plt`
 
 ICN001 `pandas` should be imported as `pd`
@@ -71,6 +78,7 @@ ICN001 `pandas` should be imported as `pd`
 12 | import pandas as pdas  # unconventional
    |                  ^^^^
 13 | import seaborn as sbrn  # unconventional
+   |
 help: Alias `pandas` to `pd`
 
 ICN001 `seaborn` should be imported as `sns`
@@ -82,4 +90,5 @@ ICN001 `seaborn` should be imported as `sns`
    |                   ^^^^
 14 |
 15 | import altair as alt  # conventional
+   |
 help: Alias `seaborn` to `sns`

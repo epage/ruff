@@ -8,6 +8,7 @@ invalid-syntax: yield expression cannot be used within a TypeVar bound
   |            ^^^^^^^
 2 |
 3 | type Y = (yield 1)
+  |
 
 invalid-syntax: yield expression cannot be used within a type alias
  --> resources/test/fixtures/semantic_errors/invalid_expression.py:3:11
@@ -18,6 +19,7 @@ invalid-syntax: yield expression cannot be used within a type alias
   |           ^^^^^^^
 4 |
 5 | def f[T](x: int) -> (y := 3): return x
+  |
 
 invalid-syntax: named expression cannot be used within a generic definition
  --> resources/test/fixtures/semantic_errors/invalid_expression.py:5:22
@@ -28,6 +30,7 @@ invalid-syntax: named expression cannot be used within a generic definition
   |                      ^^^^^^
 6 |
 7 | class C[T]((yield from [object])):
+  |
 
 invalid-syntax: yield expression cannot be used within a generic definition
  --> resources/test/fixtures/semantic_errors/invalid_expression.py:7:13
@@ -37,3 +40,4 @@ invalid-syntax: yield expression cannot be used within a generic definition
 7 | class C[T]((yield from [object])):
   |             ^^^^^^^^^^^^^^^^^^^
 8 |     pass
+  |

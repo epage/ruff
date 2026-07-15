@@ -21,6 +21,7 @@ D203 [*] 1 blank line required before class docstring
 192 |     """Leading and trailing space missing."""
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 193 |     pass
+    |
 help: Insert 1 blank line before class docstring
     |
 191 | class LeadingAndTrailingSpaceMissing:
@@ -43,6 +44,7 @@ D203 [*] 1 blank line required before class docstring
     | |_______^
 533 |
 534 |       def __init__(self, x):
+    |
 help: Insert 1 blank line before class docstring
     |
 525 | class Blah:  # noqa: D203,D213
@@ -58,7 +60,9 @@ D203 [*] 1 blank line required before class docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 650 |     def sort_services(self):
 651 |         pass
+    |
 help: Insert 1 blank line before class docstring
+    |
 648 | class StatementOnSameLineAsDocstring:
 649 +
 650 |     "After this docstring there's another statement on the same line separated by a semicolon." ; priorities=1
@@ -85,6 +89,7 @@ D203 [*] 1 blank line required before class docstring
     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 659 |     def sort_services(self):
 660 |         pass
+    |
 help: Insert 1 blank line before class docstring
     |
 657 | class CommentAfterDocstring:

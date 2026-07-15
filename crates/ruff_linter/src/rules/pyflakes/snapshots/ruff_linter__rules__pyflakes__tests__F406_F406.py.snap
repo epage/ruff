@@ -10,6 +10,7 @@ F406 `from F634 import *` only allowed at module level
 
 F406 `from F634 import *` only allowed at module level
  --> F406.py:9:5
+  |
 8 | class F:
 9 |     from F634 import *
   |     ^^^^^^^^^^^^^^^^^^

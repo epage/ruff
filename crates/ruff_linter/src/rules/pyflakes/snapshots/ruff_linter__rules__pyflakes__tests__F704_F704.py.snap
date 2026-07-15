@@ -10,10 +10,12 @@ F704 `yield` statement outside of a function
 
 F704 `yield` statement outside of a function
   --> F704.py:9:1
+   |
  9 | yield 3
    | ^^^^^^^
 10 | yield from 3
 11 | await f()
+   |
 
 F704 `yield from` statement outside of a function
   --> F704.py:10:1
@@ -22,6 +24,7 @@ F704 `yield from` statement outside of a function
 10 | yield from 3
    | ^^^^^^^^^^^^
 11 | await f()
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:11:1
@@ -32,6 +35,7 @@ F704 `await` statement outside of a function
    | ^^^^^^^^^
 12 |
 13 | def _():
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:27:2
@@ -41,6 +45,7 @@ F704 `await` statement outside of a function
    |  ^^^^^^^^^
 28 | {await cor async for cor in f()}  # F704
 29 | {await cor: 1 async for cor in f()}  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:28:2
@@ -51,6 +56,7 @@ F704 `await` statement outside of a function
    |  ^^^^^^^^^
 29 | {await cor: 1 async for cor in f()}  # F704
 30 | [await cor for cor in f()]  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:29:2
@@ -61,6 +67,7 @@ F704 `await` statement outside of a function
    |  ^^^^^^^^^
 30 | [await cor for cor in f()]  # F704
 31 | {await cor for cor in f()}  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:30:2
@@ -71,6 +78,7 @@ F704 `await` statement outside of a function
    |  ^^^^^^^^^
 31 | {await cor for cor in f()}  # F704
 32 | {await cor: 1 for cor in f()}  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:31:2
@@ -80,6 +88,7 @@ F704 `await` statement outside of a function
 31 | {await cor for cor in f()}  # F704
    |  ^^^^^^^^^
 32 | {await cor: 1 for cor in f()}  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:32:2
@@ -90,6 +99,7 @@ F704 `await` statement outside of a function
    |  ^^^^^^^^^
 33 |
 34 | # or in the iterator of an async generator, which is evaluated in the parent
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:36:23
@@ -99,6 +109,7 @@ F704 `await` statement outside of a function
 36 | (cor async for cor in await f())  # F704
    |                       ^^^^^^^^^
 37 | (await cor async for cor in [await c for c in f()])  # F704
+   |
 
 F704 `await` statement outside of a function
   --> F704.py:37:30
@@ -109,3 +120,4 @@ F704 `await` statement outside of a function
    |                              ^^^^^^^
 38 |
 39 | # this is also okay because the comprehension is within the generator scope
+   |

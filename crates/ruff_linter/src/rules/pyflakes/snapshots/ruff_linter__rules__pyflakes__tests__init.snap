@@ -8,4 +8,5 @@ F401 `os` imported but unused
   |        ^^
 2 |
 3 | print(__path__)
+  |
 help: Remove unused import: `os`

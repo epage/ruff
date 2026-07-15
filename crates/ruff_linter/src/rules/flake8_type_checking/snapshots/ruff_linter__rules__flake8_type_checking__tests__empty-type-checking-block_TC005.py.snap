@@ -17,11 +17,13 @@ help: Delete empty type-checking block
 
 TC005 [*] Found empty type-checking block
   --> TC005.py:9:9
+   |
  7 | def example():
  8 |     if TYPE_CHECKING:
  9 |         pass  # TC005
    |         ^^^^
 10 |     return
+   |
 help: Delete empty type-checking block
   |
 7 | def example():
@@ -38,6 +40,7 @@ TC005 [*] Found empty type-checking block
 15 |         pass  # TC005
    |         ^^^^
 16 |     x = 2
+   |
 help: Delete empty type-checking block
    |
 13 | class Test:
@@ -54,6 +57,7 @@ TC005 [*] Found empty type-checking block
    |     ^^^^
 32 |
 33 | # https://github.com/astral-sh/ruff/issues/11368
+   |
 help: Delete empty type-checking block
    |
 29 |

@@ -9,6 +9,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
 31 |     subprocess.Popen()  # ASYNC220
    |     ^^^^^^^^^^^^^^^^
 32 |     os.system()  # ASYNC221
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:73:5
@@ -18,6 +19,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
    |     ^^^^^^^^^
 74 |     os.spawnl(P_NOWAIT)  # ASYNC220
 75 |     os.spawnl(mode=os.P_NOWAIT)  # ASYNC220
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:74:5
@@ -28,6 +30,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
    |     ^^^^^^^^^
 75 |     os.spawnl(mode=os.P_NOWAIT)  # ASYNC220
 76 |     os.spawnl(mode=P_NOWAIT)  # ASYNC220
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:75:5
@@ -37,6 +40,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
 75 |     os.spawnl(mode=os.P_NOWAIT)  # ASYNC220
    |     ^^^^^^^^^
 76 |     os.spawnl(mode=P_NOWAIT)  # ASYNC220
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:76:5
@@ -47,6 +51,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
    |     ^^^^^^^^^
 77 |
 78 |     P_WAIT = os.P_WAIT
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:86:5
@@ -56,6 +61,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
    |     ^^^^^^^^^
 87 |     os.spawnl(1)  # ASYNC220
 88 |     os.spawnl(foo())  # ASYNC220
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:87:5
@@ -65,6 +71,7 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
 87 |     os.spawnl(1)  # ASYNC220
    |     ^^^^^^^^^
 88 |     os.spawnl(foo())  # ASYNC220
+   |
 
 ASYNC220 Async functions should not create subprocesses with blocking methods
   --> ASYNC22x.py:88:5
@@ -75,3 +82,4 @@ ASYNC220 Async functions should not create subprocesses with blocking methods
    |     ^^^^^^^^^
 89 |
 90 |     # ASYNC222
+   |

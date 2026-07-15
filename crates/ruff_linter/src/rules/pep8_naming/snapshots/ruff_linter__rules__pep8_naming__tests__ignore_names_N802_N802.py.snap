@@ -9,6 +9,7 @@ N802 Function name `stillBad` should be lowercase
 6 | def stillBad():
   |     ^^^^^^^^
 7 |     pass
+  |
 
 N802 Function name `stillBad` should be lowercase
   --> N802.py:13:9
@@ -18,4 +19,5 @@ N802 Function name `stillBad` should be lowercase
 13 |     def stillBad(self):
    |         ^^^^^^^^
 14 |         return super().tearDown()
+   |
 help: Consider adding `@typing.override` if this method overrides a method from a superclass

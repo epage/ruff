@@ -10,6 +10,7 @@ FURB103 [*] `open` and `write` should be replaced by `Path("file.txt").write_tex
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |     f.write("\n")
 5 | f = object()
+  |
 help: Replace with `Path("file.txt").write_text("\n", encoding="utf-8")`
   |
 2 | # should trigger
@@ -29,6 +30,7 @@ FURB103 [*] `open` and `write` should be replaced by `Path("file.txt").write_tex
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^
 17 |         f.write("\n")
 18 |     return (f.name for _ in [0])
+   |
 help: Replace with `Path("file.txt").write_text("\n")`
    |
 2  | # should trigger
@@ -51,6 +53,7 @@ FURB103 [*] `open` and `write` should be replaced by `Path("file.txt").write_tex
    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^
 24 |         f.write("\n")
 25 |     g = {f.name for _ in [0]}
+   |
 help: Replace with `Path("file.txt").write_text("\n")`
    |
 2  | # should trigger

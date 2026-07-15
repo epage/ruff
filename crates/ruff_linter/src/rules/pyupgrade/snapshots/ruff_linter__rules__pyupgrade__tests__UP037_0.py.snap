@@ -7,6 +7,7 @@ UP037 [*] Remove quotes from type annotation
 18 | def foo(var: "MyClass") -> "MyClass":
    |              ^^^^^^^^^
 19 |     x: "MyClass"
+   |
 help: Remove quotes
    |
 17 |
@@ -21,15 +22,18 @@ UP037 [*] Remove quotes from type annotation
 18 | def foo(var: "MyClass") -> "MyClass":
    |                            ^^^^^^^^^
 19 |     x: "MyClass"
+   |
 help: Remove quotes
    |
 17 |
    - def foo(var: "MyClass") -> "MyClass":
 18 + def foo(var: "MyClass") -> MyClass:
 19 |     x: "MyClass"
+   |
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_0.py:19:8
+   |
 18 | def foo(var: "MyClass") -> "MyClass":
 19 |     x: "MyClass"
    |        ^^^^^^^^^
@@ -47,6 +51,7 @@ UP037 [*] Remove quotes from type annotation
 22 | def foo(*, inplace: "bool"):
    |                     ^^^^^^
 23 |     pass
+   |
 help: Remove quotes
    |
 21 |
@@ -61,6 +66,7 @@ UP037 [*] Remove quotes from type annotation
 26 | def foo(*args: "str", **kwargs: "int"):
    |                ^^^^^
 27 |     pass
+   |
 help: Remove quotes
    |
 25 |
@@ -75,6 +81,7 @@ UP037 [*] Remove quotes from type annotation
 26 | def foo(*args: "str", **kwargs: "int"):
    |                                 ^^^^^
 27 |     pass
+   |
 help: Remove quotes
    |
 25 |
@@ -90,7 +97,9 @@ UP037 [*] Remove quotes from type annotation
    |          ^^^^^^^^^
 31 |
 32 | x: Callable[["MyClass"], None]
+   |
 help: Remove quotes
+   |
 29 |
    - x: Tuple["MyClass"]
 30 + x: Tuple[MyClass]
@@ -99,6 +108,7 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_0.py:32:14
+   |
 30 | x: Tuple["MyClass"]
 31 |
 32 | x: Callable[["MyClass"], None]
@@ -113,6 +123,7 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_0.py:36:8
+   |
 35 | class Foo(NamedTuple):
 36 |     x: "MyClass"
    |        ^^^^^^^^^
@@ -126,6 +137,7 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
   --> UP037_0.py:40:27
+   |
 39 | class D(TypedDict):
 40 |     E: TypedDict("E", foo="int", total=False)
    |                           ^^^^^
@@ -158,6 +170,7 @@ UP037 [*] Remove quotes from type annotation
    |              ^^^^^
 48 |
 49 | x: Arg("str", "name")
+   |
 help: Remove quotes
    |
 46 |
@@ -175,6 +188,7 @@ UP037 [*] Remove quotes from type annotation
    |        ^^^^^
 50 |
 51 | x: DefaultArg("str", "name")
+   |
 help: Remove quotes
    |
 48 |
@@ -192,6 +206,7 @@ UP037 [*] Remove quotes from type annotation
    |               ^^^^^
 52 |
 53 | x: NamedArg("str", "name")
+   |
 help: Remove quotes
    |
 50 |
@@ -209,6 +224,7 @@ UP037 [*] Remove quotes from type annotation
    |             ^^^^^
 54 |
 55 | x: DefaultNamedArg("str", "name")
+   |
 help: Remove quotes
    |
 52 |
@@ -226,6 +242,7 @@ UP037 [*] Remove quotes from type annotation
    |                    ^^^^^
 56 |
 57 | x: DefaultNamedArg("str", name="name")
+   |
 help: Remove quotes
    |
 54 |
@@ -243,6 +260,7 @@ UP037 [*] Remove quotes from type annotation
    |                    ^^^^^
 58 |
 59 | x: VarArg("str")
+   |
 help: Remove quotes
    |
 56 |
@@ -260,6 +278,7 @@ UP037 [*] Remove quotes from type annotation
    |           ^^^^^
 60 |
 61 | x: List[List[List["MyClass"]]]
+   |
 help: Remove quotes
    |
 58 |
@@ -277,6 +296,7 @@ UP037 [*] Remove quotes from type annotation
    |                   ^^^^^^^^^
 62 |
 63 | x: NamedTuple("X", [("foo", "int"), ("bar", "str")])
+   |
 help: Remove quotes
    |
 60 |
@@ -294,6 +314,7 @@ UP037 [*] Remove quotes from type annotation
    |                             ^^^^^
 64 |
 65 | x: NamedTuple("X", fields=[("foo", "int"), ("bar", "str")])
+   |
 help: Remove quotes
    |
 62 |
@@ -311,6 +332,7 @@ UP037 [*] Remove quotes from type annotation
    |                                             ^^^^^
 64 |
 65 | x: NamedTuple("X", fields=[("foo", "int"), ("bar", "str")])
+   |
 help: Remove quotes
    |
 62 |
@@ -328,6 +350,7 @@ UP037 [*] Remove quotes from type annotation
    |                             ^^^^^
 66 |
 67 | x: NamedTuple(typename="X", fields=[("foo", "int")])
+   |
 help: Remove quotes
    |
 64 |
@@ -345,6 +368,7 @@ UP037 [*] Remove quotes from type annotation
    |                                    ^^^^^
 66 |
 67 | x: NamedTuple(typename="X", fields=[("foo", "int")])
+   |
 help: Remove quotes
    |
 64 |
@@ -362,6 +386,7 @@ UP037 [*] Remove quotes from type annotation
    |                                             ^^^^^
 66 |
 67 | x: NamedTuple(typename="X", fields=[("foo", "int")])
+   |
 help: Remove quotes
    |
 64 |
@@ -379,6 +404,7 @@ UP037 [*] Remove quotes from type annotation
    |                                                    ^^^^^
 66 |
 67 | x: NamedTuple(typename="X", fields=[("foo", "int")])
+   |
 help: Remove quotes
    |
 64 |
@@ -396,6 +422,7 @@ UP037 [*] Remove quotes from type annotation
    |                        ^^^
 68 |
 69 | X: MyCallable("X")
+   |
 help: Remove quotes
    |
 66 |
@@ -413,6 +440,7 @@ UP037 [*] Remove quotes from type annotation
    |                                      ^^^^^
 68 |
 69 | X: MyCallable("X")
+   |
 help: Remove quotes
    |
 66 |
@@ -430,6 +458,7 @@ UP037 [*] Remove quotes from type annotation
    |                                             ^^^^^
 68 |
 69 | X: MyCallable("X")
+   |
 help: Remove quotes
    |
 66 |
@@ -440,11 +469,13 @@ help: Remove quotes
 
 UP037 [*] Remove quotes from type annotation
    --> UP037_0.py:112:12
+    |
 110 | # Handle end of line comment in string annotation
 111 | # See https://github.com/astral-sh/ruff/issues/15816
 112 | def f() -> "Literal[0]#":
     |            ^^^^^^^^^^^^^
 113 |     return 0
+    |
 help: Remove quotes
     |
 111 | # See https://github.com/astral-sh/ruff/issues/15816
@@ -462,6 +493,7 @@ UP037 [*] Remove quotes from type annotation
 115 | def g(x: "Literal['abc']#") -> None:
     |          ^^^^^^^^^^^^^^^^^
 116 |     return
+    |
 help: Remove quotes
     |
 114 |
@@ -483,6 +515,7 @@ UP037 [*] Remove quotes from type annotation
 121 | |     """:
     | |_______^
 122 |       return 0
+    |
 help: Remove quotes
     |
 117 |
@@ -503,6 +536,7 @@ UP037 [*] Remove quotes from type annotation
 125 | def foo(bar: "A\n#"): ...
     |              ^^^^^^
 126 | def foo(bar: "A\n#\n"): ...
+    |
 help: Remove quotes
     |
 124 | # https://github.com/astral-sh/ruff/issues/19835

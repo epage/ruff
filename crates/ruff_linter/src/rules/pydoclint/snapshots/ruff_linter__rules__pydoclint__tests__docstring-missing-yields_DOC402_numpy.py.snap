@@ -16,6 +16,7 @@ DOC402 `yield` is not documented in docstring
 10 | |     """
    | |_______^
 11 |       yield 'test'
+   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -33,6 +34,7 @@ DOC402 `yield` is not documented in docstring
 61 | |         """
    | |___________^
 62 |           yield 'test'
+   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -46,6 +48,7 @@ DOC402 `yield` is not documented in docstring
    | |_______^
 89 |       yield None
 90 |       yield 1
+   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -58,6 +61,7 @@ DOC402 `yield` is not documented in docstring
 97 | |     """
    | |_______^
 98 |       yield None
+   |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -71,6 +75,7 @@ DOC402 `yield` is not documented in docstring
     | |_______^
 122 |       yield None
 123 |       yield 1
+    |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -84,6 +89,7 @@ DOC402 `yield` is not documented in docstring
     | |_______^
 131 |       yield 1
 132 |       yield
+    |
 help: Add a "Yields" section to the docstring
 
 DOC402 `yield` is not documented in docstring
@@ -96,4 +102,5 @@ DOC402 `yield` is not documented in docstring
 139 | |     """
     | |_______^
 140 |       yield
+    |
 help: Add a "Yields" section to the docstring

@@ -9,6 +9,7 @@ F821 Undefined name `foo`
 30 |     bar = foo  # Still invalid even when `__future__.annotations` are enabled
    |           ^^^
 31 |     bar = "foo"  # always okay
+   |
 
 F821 Undefined name `baz`
   --> F821_27.py:34:8
@@ -17,6 +18,7 @@ F821 Undefined name `baz`
 34 | eggs = baz  # Still invalid even when `__future__.annotations` are enabled
    |        ^^^
 35 | eggs = "baz"  # always okay
+   |
 
 F821 Undefined name `DStr`
   --> F821_27.py:38:33
@@ -26,6 +28,7 @@ F821 Undefined name `DStr`
    |                                 ^^^^
 39 | MaybeDStr2: TypeAlias = Optional["DStr"]  # always okay
 40 | DStr: TypeAlias = Union[D, str]  # Still invalid even when `__future__.annotations` are enabled
+   |
 
 F821 Undefined name `D`
   --> F821_27.py:40:25
@@ -35,6 +38,7 @@ F821 Undefined name `D`
 40 | DStr: TypeAlias = Union[D, str]  # Still invalid even when `__future__.annotations` are enabled
    |                         ^
 41 | DStr2: TypeAlias = Union["D", str]  # always okay
+   |
 
 F821 Undefined name `Tree`
   --> F821_27.py:47:17
@@ -44,3 +48,4 @@ F821 Undefined name `Tree`
 47 | class Tree(list[Tree | Leaf]): ...  # Still invalid even when `__future__.annotations` are enabled
    |                 ^^^^
 48 | class Tree2(list["Tree | Leaf"]): ...  # always okay
+   |

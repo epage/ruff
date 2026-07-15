@@ -135,6 +135,7 @@ error[invalid-generic-class]: Type parameters without defaults cannot follow typ
 ```
 error[invalid-generic-class]: Cannot both inherit from subscripted `Protocol` and subscripted `Generic`
   --> src/mdtest_snippet.py:32:5
+   |
 32 |     Protocol[T1, T2, DefaultStrT, T3],
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove the type parameters from the `Protocol` base

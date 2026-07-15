@@ -10,6 +10,7 @@ YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
   | ^^^^^^^
 5 | sys.version < "3.5"
 6 | sys.version <= "3.5"
+  |
 
 YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
  --> YTT103.py:5:1
@@ -19,6 +20,7 @@ YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
   | ^^^^^^^^^^^
 6 | sys.version <= "3.5"
 7 | sys.version > "3.5"
+  |
 
 YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
  --> YTT103.py:6:1
@@ -29,14 +31,17 @@ YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
   | ^^^^^^^^^^^
 7 | sys.version > "3.5"
 8 | sys.version >= "3.5"
+  |
 
 YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
  --> YTT103.py:7:1
+  |
 5 | sys.version < "3.5"
 6 | sys.version <= "3.5"
 7 | sys.version > "3.5"
   | ^^^^^^^^^^^
 8 | sys.version >= "3.5"
+  |
 
 YTT103 `sys.version` compared to string (python3.10), use `sys.version_info`
  --> YTT103.py:8:1

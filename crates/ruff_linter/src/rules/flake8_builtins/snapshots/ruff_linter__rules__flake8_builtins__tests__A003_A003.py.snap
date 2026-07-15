@@ -10,13 +10,16 @@ A003 Python builtin is shadowed by method `property` from line 26
    |       ^^^^^^^^
 32 |     def f(self, x=[id]):
 33 |         return x
+   |
 
 A003 Python builtin is shadowed by class attribute `id` from line 29
   --> A003.py:32:20
+   |
 31 |     @[property][0]
 32 |     def f(self, x=[id]):
    |                    ^^
 33 |         return x
+   |
 
 A003 Python builtin is shadowed by class attribute `bin` from line 35
   --> A003.py:36:12

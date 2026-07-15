@@ -9,6 +9,7 @@ PLC0415 `import` should be at the top-level of a file
    |     ^^^^^^^^^^^^^^^
 11 |     import os, sys  # [import-outside-toplevel]
 12 |     import time as thyme  # [import-outside-toplevel]
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:11:5
@@ -19,6 +20,7 @@ PLC0415 `import` should be at the top-level of a file
    |     ^^^^^^^^^^^^^^
 12 |     import time as thyme  # [import-outside-toplevel]
 13 |     import random as rand, socket as sock  # [import-outside-toplevel]
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:12:5
@@ -29,23 +31,28 @@ PLC0415 `import` should be at the top-level of a file
    |     ^^^^^^^^^^^^^^^^^^^^
 13 |     import random as rand, socket as sock  # [import-outside-toplevel]
 14 |     from collections import defaultdict # [import-outside-toplevel]
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:13:5
+   |
 11 |     import os, sys  # [import-outside-toplevel]
 12 |     import time as thyme  # [import-outside-toplevel]
 13 |     import random as rand, socket as sock  # [import-outside-toplevel]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 14 |     from collections import defaultdict # [import-outside-toplevel]
 15 |     from math import sin as sign, cos as cosplay  # [import-outside-toplevel]
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:14:5
+   |
 12 |     import time as thyme  # [import-outside-toplevel]
 13 |     import random as rand, socket as sock  # [import-outside-toplevel]
 14 |     from collections import defaultdict # [import-outside-toplevel]
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |     from math import sin as sign, cos as cosplay  # [import-outside-toplevel]
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:15:5
@@ -63,6 +70,7 @@ PLC0415 `import` should be at the top-level of a file
    |     ^^^^^^^^^^^^^^^
 20 |
 21 |     def __init__(self):
+   |
 
 PLC0415 `import` should be at the top-level of a file
   --> import_outside_top_level.py:22:9

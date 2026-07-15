@@ -7,6 +7,7 @@ UP045 [*] Use `X | None` for type annotations
 5 | def f(x: Optional[str]) -> None:
   |          ^^^^^^^^^^^^^
 6 |     ...
+  |
 help: Convert to `X | None`
   |
 4 |
@@ -17,9 +18,11 @@ help: Convert to `X | None`
 
 UP045 [*] Use `X | None` for type annotations
   --> UP045_2.py:9:10
+   |
  9 | def f(x: typing.Optional[str]) -> None:
    |          ^^^^^^^^^^^^^^^^^^^^
 10 |     ...
+   |
 help: Convert to `X | None`
    |
 8  |

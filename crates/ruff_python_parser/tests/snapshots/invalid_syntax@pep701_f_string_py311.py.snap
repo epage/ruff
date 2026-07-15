@@ -984,44 +984,54 @@ Module(
   |
 
 
+  |
 5 |     bag['bag']                     # comment
 6 | }'''
 7 | f"{f"{f"{f"{f"{f"{1+1}"}"}"}"}"}"  # arbitrary nesting
   |                 ^ Syntax Error: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
 8 | f"{f'''{"nested"} inner'''} outer" # nested (triple) quotes
 9 | f"{
+  |
 
 
+  |
 5 |     bag['bag']                     # comment
 6 | }'''
 7 | f"{f"{f"{f"{f"{f"{1+1}"}"}"}"}"}"  # arbitrary nesting
   |              ^ Syntax Error: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
 8 | f"{f'''{"nested"} inner'''} outer" # nested (triple) quotes
 9 | f"{
+  |
 
 
+  |
 5 |     bag['bag']                     # comment
 6 | }'''
 7 | f"{f"{f"{f"{f"{f"{1+1}"}"}"}"}"}"  # arbitrary nesting
   |           ^ Syntax Error: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
 8 | f"{f'''{"nested"} inner'''} outer" # nested (triple) quotes
 9 | f"{
+  |
 
 
+  |
 5 |     bag['bag']                     # comment
 6 | }'''
 7 | f"{f"{f"{f"{f"{f"{1+1}"}"}"}"}"}"  # arbitrary nesting
   |        ^ Syntax Error: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
 8 | f"{f'''{"nested"} inner'''} outer" # nested (triple) quotes
 9 | f"{
+  |
 
 
+  |
 5 |     bag['bag']                     # comment
 6 | }'''
 7 | f"{f"{f"{f"{f"{f"{1+1}"}"}"}"}"}"  # arbitrary nesting
   |     ^ Syntax Error: Cannot reuse outer quote character in f-strings on Python 3.11 (syntax was added in Python 3.12)
 8 | f"{f'''{"nested"} inner'''} outer" # nested (triple) quotes
 9 | f"{
+  |
 
 
    |

@@ -10,6 +10,7 @@ TC008 [*] Remove quotes from type alias
    |                    ^^^^^^^^^^^^^^^^^^^^^^^
 11 |     e: TypeAlias = 'Annotated[int, 1 + 2]'  # TC008
 12 |     f: TypeAlias = 'dict[str, int | None]'  # OK
+   |
 help: Remove quotes
    |
 9  |     c: TypeAlias = 'int | None'  # OK
@@ -26,6 +27,7 @@ TC008 [*] Remove quotes from type alias
 11 |     e: TypeAlias = 'Annotated[int, 1 + 2]'  # TC008
    |                    ^^^^^^^^^^^^^^^^^^^^^^^
 12 |     f: TypeAlias = 'dict[str, int | None]'  # OK
+   |
 help: Remove quotes
    |
 10 |     d: TypeAlias = 'Annotated[int, 1 | 2]'  # TC008

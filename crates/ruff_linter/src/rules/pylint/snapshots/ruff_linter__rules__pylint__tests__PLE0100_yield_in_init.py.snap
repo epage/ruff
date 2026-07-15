@@ -3,6 +3,7 @@ source: crates/ruff_linter/src/rules/pylint/mod.rs
 ---
 PLE0100 `__init__` method is a generator
  --> yield_in_init.py:9:9
+  |
 7 | class A:
 8 |     def __init__(self):
 9 |         yield
@@ -17,3 +18,4 @@ PLE0100 `__init__` method is a generator
    |         ^^^^^^^^^^^^^^^^^^^^^
 15 |
 16 |     def gen(self):
+   |

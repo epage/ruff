@@ -8,6 +8,7 @@ N805 [*] First argument of a method should be named `self`
 7 |     def badAllowed(this):
   |                    ^^^^
 8 |         pass
+  |
 help: Rename `this` to `self`
   |
 6 | class Class:
@@ -25,6 +26,7 @@ N805 [*] First argument of a method should be named `self`
 10 |     def stillBad(this):
    |                  ^^^^
 11 |         pass
+   |
 help: Rename `this` to `self`
    |
 9  |
@@ -42,6 +44,7 @@ N805 [*] First argument of a method should be named `self`
 15 |         def badAllowed(this):
    |                        ^^^^
 16 |             pass
+   |
 help: Rename `this` to `self`
    |
 14 |
@@ -59,6 +62,7 @@ N805 [*] First argument of a method should be named `self`
 18 |         def stillBad(this):
    |                      ^^^^
 19 |             pass
+   |
 help: Rename `this` to `self`
    |
 17 |
@@ -75,6 +79,7 @@ N805 [*] First argument of a method should be named `self`
 22 |     def badAllowed(cls, my_field: str) -> str:
    |                    ^^^
 23 |         pass
+   |
 help: Rename `cls` to `self`
    |
 21 |     @pydantic.validator
@@ -91,6 +96,7 @@ N805 [*] First argument of a method should be named `self`
 26 |     def stillBad(cls, my_field: str) -> str:
    |                  ^^^
 27 |         pass
+   |
 help: Rename `cls` to `self`
    |
 25 |     @pydantic.validator
@@ -107,6 +113,7 @@ N805 [*] First argument of a method should be named `self`
 30 |     def badAllowed(cls, my_field: str) -> str:
    |                    ^^^
 31 |         pass
+   |
 help: Rename `cls` to `self`
    |
 29 |     @pydantic.validator("my_field")
@@ -123,6 +130,7 @@ N805 [*] First argument of a method should be named `self`
 34 |     def stillBad(cls, my_field: str) -> str:
    |                  ^^^
 35 |         pass
+   |
 help: Rename `cls` to `self`
    |
 33 |     @pydantic.validator("my_field")
@@ -139,6 +147,7 @@ N805 First argument of a method should be named `self`
 55 |     def badAllowed(this, blah, /, self, something: str):
    |                    ^^^^
 56 |         pass
+   |
 help: Rename `this` to `self`
 
 N805 First argument of a method should be named `self`
@@ -149,4 +158,5 @@ N805 First argument of a method should be named `self`
 58 |     def stillBad(this, blah, /, self, something: str):
    |                  ^^^^
 59 |         pass
+   |
 help: Rename `this` to `self`

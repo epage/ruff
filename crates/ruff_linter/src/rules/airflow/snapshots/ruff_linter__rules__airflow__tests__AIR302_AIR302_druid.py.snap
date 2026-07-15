@@ -9,6 +9,7 @@ AIR302 [*] `airflow.hooks.druid_hook.DruidDbApiHook` is moved into `apache-druid
 12 | DruidDbApiHook()
    | ^^^^^^^^^^^^^^
 13 | DruidHook()
+   |
 help: Install `apache-airflow-providers-apache-druid>=1.0.0` and use `DruidDbApiHook` from `airflow.providers.apache.druid.hooks.druid` instead.
    |
 3  | from airflow.hooks.druid_hook import (
@@ -29,6 +30,7 @@ AIR302 [*] `airflow.hooks.druid_hook.DruidHook` is moved into `apache-druid` pro
    | ^^^^^^^^^
 14 |
 15 | HiveToDruidOperator()
+   |
 help: Install `apache-airflow-providers-apache-druid>=1.0.0` and use `DruidHook` from `airflow.providers.apache.druid.hooks.druid` instead.
    |
 4  |     DruidDbApiHook,
@@ -49,13 +51,16 @@ AIR302 [*] `airflow.operators.hive_to_druid.HiveToDruidOperator` is moved into `
 15 | HiveToDruidOperator()
    | ^^^^^^^^^^^^^^^^^^^
 16 | HiveToDruidTransfer()
+   |
 help: Install `apache-airflow-providers-apache-druid>=1.0.0` and use `HiveToDruidOperator` from `airflow.providers.apache.druid.transfers.hive_to_druid` instead.
+   |
 7  | from airflow.operators.hive_to_druid import (
    -     HiveToDruidOperator,
 8  |     HiveToDruidTransfer,
 9  | )
 10 + from airflow.providers.apache.druid.transfers.hive_to_druid import HiveToDruidOperator
 11 |
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 AIR302 [*] `airflow.operators.hive_to_druid.HiveToDruidTransfer` is moved into `apache-druid` provider in Airflow 3.0;

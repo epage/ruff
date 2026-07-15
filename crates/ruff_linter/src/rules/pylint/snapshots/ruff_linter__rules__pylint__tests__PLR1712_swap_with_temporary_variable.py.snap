@@ -22,6 +22,7 @@ help: Use `x, y = y, x` instead
 
 PLR1712 [*] Unnecessary temporary variable
   --> swap_with_temporary_variable.py:11:9
+   |
  9 |   def foo(x: int, y: int):
 10 |       if x > 5:
 11 | /         temp: int = x
@@ -40,6 +41,7 @@ help: Use `x, y = y, x` instead
 
 PLR1712 [*] Unnecessary temporary variable
   --> swap_with_temporary_variable.py:18:5
+   |
 16 |   # unsafe fix because the swap statements contain a comment
 17 |   def bar(x: int, y: int):
 18 | /     temp: int = x  # comment

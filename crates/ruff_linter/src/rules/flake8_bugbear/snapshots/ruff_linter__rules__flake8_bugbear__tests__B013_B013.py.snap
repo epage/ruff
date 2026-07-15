@@ -10,6 +10,7 @@ B013 [*] A length-one tuple literal is redundant in exception handlers
   |        ^^^^^^^^^^^^^
 6 |     pass
 7 | except AttributeError:
+  |
 help: Replace with `except ValueError`
   |
 4 |     pass
@@ -26,6 +27,7 @@ B013 [*] A length-one tuple literal is redundant in exception handlers
 13 | except(ValueError,):
    |       ^^^^^^^^^^^^^
 14 |     pass
+   |
 help: Replace with `except ValueError`
    |
 12 |     pass
@@ -46,6 +48,7 @@ B013 [*] A length-one tuple literal is redundant in exception handlers
 28 | |         ):
    | |_________^
 29 |       ...
+   |
 help: Replace with `except ValueError`
    |
 24 |     ...

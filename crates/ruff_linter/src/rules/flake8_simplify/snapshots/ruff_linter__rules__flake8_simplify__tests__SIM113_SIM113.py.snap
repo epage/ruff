@@ -9,17 +9,21 @@ SIM113 Use `enumerate()` for index variable `idx` in `for` loop
 6 |         idx += 1
   |         ^^^^^^^^
 7 |         h(x)
+  |
 
 SIM113 Use `enumerate()` for index variable `idx` in `for` loop
   --> SIM113.py:17:9
+   |
 15 |         if g(x):
 16 |             break
 17 |         idx += 1
    |         ^^^^^^^^
 18 |         sum += h(x, idx)
+   |
 
 SIM113 Use `enumerate()` for index variable `idx` in `for` loop
   --> SIM113.py:27:9
+   |
 25 |         g(x)
 26 |         h(x, y)
 27 |         idx += 1
@@ -41,18 +45,22 @@ SIM113 Use `enumerate()` for index variable `idx` in `for` loop
 44 |         idx += 1
    |         ^^^^^^^^
 45 |         h(x)
+   |
 
 SIM113 Use `enumerate()` for index variable `i` in `for` loop
    --> SIM113.py:204:9
+    |
 202 |     for val in [1, 2, 3]:
 203 |         print(f"{i}: {val}")
 204 |         i += 1
     |         ^^^^^^
 205 |
 206 |     i = 0
+    |
 
 SIM113 Use `enumerate()` for index variable `i` in `for` loop
    --> SIM113.py:209:9
+    |
 207 |     for val in [1, 2, 3]:
 208 |         print(f"{i}: {val}")
 209 |         i += 1

@@ -10,6 +10,7 @@ TRY301 Abstract `raise` to an inner function
    |             ^^^^^^^^^^^^^^^^^^^^
 15 |
 16 |         raise MyException(a)
+   |
 
 TRY301 Abstract `raise` to an inner function
   --> TRY301.py:16:9
@@ -20,6 +21,7 @@ TRY301 Abstract `raise` to an inner function
    |         ^^^^^^^^^^^^^^^^^^^^
 17 |
 18 |         try:
+   |
 
 TRY301 Abstract `raise` to an inner function
   --> TRY301.py:21:17
@@ -30,6 +32,7 @@ TRY301 Abstract `raise` to an inner function
    |                 ^^^^^^^^^^^^^^^^^^^^
 22 |         except Exception:
 23 |             logger.exception("something failed")
+   |
 
 TRY301 Abstract `raise` to an inner function
   --> TRY301.py:32:13
@@ -40,6 +43,7 @@ TRY301 Abstract `raise` to an inner function
    |             ^^^^^^^^^^^^^^^^^^^^
 33 |
 34 |         raise MyException(a)
+   |
 
 TRY301 Abstract `raise` to an inner function
   --> TRY301.py:34:9
@@ -50,6 +54,7 @@ TRY301 Abstract `raise` to an inner function
    |         ^^^^^^^^^^^^^^^^^^^^
 35 |
 36 |         try:
+   |
 
 TRY301 Abstract `raise` to an inner function
   --> TRY301.py:39:17
@@ -60,3 +65,4 @@ TRY301 Abstract `raise` to an inner function
    |                 ^^^^^^^^^^^^^^^^^^^^
 40 |         except* Exception:
 41 |             logger.exception("something failed")
+   |

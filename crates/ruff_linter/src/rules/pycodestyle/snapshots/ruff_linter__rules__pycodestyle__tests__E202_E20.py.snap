@@ -9,6 +9,7 @@ E202 [*] Whitespace before ')'
    |                       ^
 20 | #: E202:1:22
 21 | spam(ham[1], {eggs: 2 })
+   |
 help: Remove whitespace before ')'
    |
 18 | #: E202:1:23
@@ -26,6 +27,7 @@ E202 [*] Whitespace before '}'
    |                      ^
 22 | #: E202:1:11
 23 | spam(ham[1 ], {eggs: 2})
+   |
 help: Remove whitespace before '}'
    |
 20 | #: E202:1:22
@@ -43,6 +45,7 @@ E202 [*] Whitespace before ']'
    |           ^
 24 | #: E202:1:23
 25 | spam(ham[1], {eggs: 2}    )
+   |
 help: Remove whitespace before ']'
    |
 22 | #: E202:1:11
@@ -60,6 +63,7 @@ E202 [*] Whitespace before ')'
    |                       ^^^^
 26 | #: E202:1:22
 27 | spam(ham[1], {eggs: 2    })
+   |
 help: Remove whitespace before ')'
    |
 24 | #: E202:1:23
@@ -77,6 +81,7 @@ E202 [*] Whitespace before '}'
    |                      ^^^^
 28 | #: E202:1:11
 29 | spam(ham[1    ], {eggs: 2})
+   |
 help: Remove whitespace before '}'
    |
 26 | #: E202:1:22
@@ -94,6 +99,7 @@ E202 [*] Whitespace before ']'
    |           ^^^^
 30 | #: Okay
 31 | spam(ham[1], {eggs: 2})
+   |
 help: Remove whitespace before ']'
    |
 28 | #: E202:1:11
@@ -110,6 +116,7 @@ E202 [*] Whitespace before ']'
 116 | f"{[ { {'a': 1} } ]}"
     |                  ^
 117 | f"normal { {f"{ { [1, 2] } }" } } normal"
+    |
 help: Remove whitespace before ']'
     |
 115 | f"{ {'a': 1} }"
@@ -126,6 +133,7 @@ E202 [*] Whitespace before ']'
     |            ^
 173 |
 174 | #: E203:1:10
+    |
 help: Remove whitespace before ']'
     |
 171 | #: E202:1:12
@@ -142,6 +150,7 @@ E202 [*] Whitespace before ']'
 195 | t"{[ { {'a': 1} } ]}"
     |                  ^
 196 | t"normal { {t"{ { [1, 2] } }" } } normal"
+    |
 help: Remove whitespace before ']'
     |
 194 | t"{ {'a': 1} }"

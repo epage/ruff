@@ -8,6 +8,7 @@ C418 [*] Unnecessary dict literal passed to `dict()` (remove the outer call to `
   | ^^^^^^^^
 2 | dict({'a': 1})
 3 | dict({'x': 1 for x in range(10)})
+  |
 help: Remove outer `dict()` call
   |
   - dict({})
@@ -24,6 +25,7 @@ C418 [*] Unnecessary dict literal passed to `dict()` (remove the outer call to `
   | ^^^^^^^^^^^^^^
 3 | dict({'x': 1 for x in range(10)})
 4 | dict(
+  |
 help: Remove outer `dict()` call
   |
 1 | dict({})
@@ -42,6 +44,7 @@ C418 [*] Unnecessary dict comprehension passed to `dict()` (remove the outer cal
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4 | dict(
 5 |     {'x': 1 for x in range(10)}
+  |
 help: Remove outer `dict()` call
   |
 2 | dict({'a': 1})
@@ -62,6 +65,7 @@ C418 [*] Unnecessary dict comprehension passed to `dict()` (remove the outer cal
   | |_^
 7 |
 8 |   dict({}, a=1)
+  |
 help: Remove outer `dict()` call
   |
 3 | dict({'x': 1 for x in range(10)})

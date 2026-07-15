@@ -8,6 +8,7 @@ ANN201 [*] Missing return type annotation for public function `foo`
 5 | def foo(a, b):
   |     ^^^
 6 |     pass
+  |
 help: Add return type annotation: `None`
   |
 4 | # Error
@@ -24,6 +25,7 @@ ANN001 Missing type annotation for function argument `a`
 5 | def foo(a, b):
   |         ^
 6 |     pass
+  |
 
 ANN001 Missing type annotation for function argument `b`
  --> annotation_presence.py:5:12
@@ -32,6 +34,7 @@ ANN001 Missing type annotation for function argument `b`
 5 | def foo(a, b):
   |            ^
 6 |     pass
+  |
 
 ANN201 [*] Missing return type annotation for public function `foo`
   --> annotation_presence.py:10:5
@@ -40,6 +43,7 @@ ANN201 [*] Missing return type annotation for public function `foo`
 10 | def foo(a: int, b):
    |     ^^^
 11 |     pass
+   |
 help: Add return type annotation: `None`
    |
 9  | # Error
@@ -56,6 +60,7 @@ ANN001 Missing type annotation for function argument `b`
 10 | def foo(a: int, b):
    |                 ^
 11 |     pass
+   |
 
 ANN001 Missing type annotation for function argument `b`
   --> annotation_presence.py:15:17
@@ -64,6 +69,7 @@ ANN001 Missing type annotation for function argument `b`
 15 | def foo(a: int, b) -> int:
    |                 ^
 16 |     pass
+   |
 
 ANN201 [*] Missing return type annotation for public function `foo`
   --> annotation_presence.py:20:5
@@ -72,6 +78,7 @@ ANN201 [*] Missing return type annotation for public function `foo`
 20 | def foo(a: int, b: int):
    |     ^^^
 21 |     pass
+   |
 help: Add return type annotation: `None`
    |
 19 | # Error
@@ -88,6 +95,7 @@ ANN201 [*] Missing return type annotation for public function `foo`
 25 | def foo():
    |     ^^^
 26 |     pass
+   |
 help: Add return type annotation: `None`
    |
 24 | # Error
@@ -104,6 +112,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
 45 | def foo(a: Any, *args: str, **kwargs: str) -> int:
    |            ^^^
 46 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
   --> annotation_presence.py:50:47
@@ -112,6 +121,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
 50 | def foo(a: int, *args: str, **kwargs: str) -> Any:
    |                                               ^^^
 51 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
   --> annotation_presence.py:55:24
@@ -120,6 +130,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
 55 | def foo(a: int, *args: Any, **kwargs: Any) -> int:
    |                        ^^^
 56 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
   --> annotation_presence.py:55:39
@@ -128,6 +139,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
 55 | def foo(a: int, *args: Any, **kwargs: Any) -> int:
    |                                       ^^^
 56 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
   --> annotation_presence.py:60:24
@@ -136,6 +148,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
 60 | def foo(a: int, *args: Any, **kwargs: str) -> int:
    |                        ^^^
 61 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
   --> annotation_presence.py:65:39
@@ -144,6 +157,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
 65 | def foo(a: int, *args: str, **kwargs: Any) -> int:
    |                                       ^^^
 66 |     pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
   --> annotation_presence.py:79:29
@@ -152,6 +166,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
 79 |     def foo(self: "Foo", a: Any, *params: str, **options: str) -> int:
    |                             ^^^
 80 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
   --> annotation_presence.py:83:67
@@ -160,6 +175,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `foo`
 83 |     def foo(self: "Foo", a: int, *params: str, **options: str) -> Any:
    |                                                                   ^^^
 84 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*params`
   --> annotation_presence.py:87:43
@@ -168,6 +184,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*params`
 87 |     def foo(self: "Foo", a: int, *params: Any, **options: Any) -> int:
    |                                           ^^^
 88 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**options`
   --> annotation_presence.py:87:59
@@ -176,6 +193,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**options`
 87 |     def foo(self: "Foo", a: int, *params: Any, **options: Any) -> int:
    |                                                           ^^^
 88 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*params`
   --> annotation_presence.py:91:43
@@ -184,6 +202,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*params`
 91 |     def foo(self: "Foo", a: int, *params: Any, **options: str) -> int:
    |                                           ^^^
 92 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**options`
   --> annotation_presence.py:95:59
@@ -192,32 +211,39 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**options`
 95 |     def foo(self: "Foo", a: int, *params: str, **options: Any) -> int:
    |                                                           ^^^
 96 |         pass
+   |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:149:10
+    |
 148 | # ANN401
 149 | def f(a: Any | int) -> None: ...
     |          ^^^^^^^^^
 150 | def f(a: int | Any) -> None: ...
 151 | def f(a: Union[str, bytes, Any]) -> None: ...
+    |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:150:10
+    |
 148 | # ANN401
 149 | def f(a: Any | int) -> None: ...
 150 | def f(a: int | Any) -> None: ...
     |          ^^^^^^^^^
 151 | def f(a: Union[str, bytes, Any]) -> None: ...
 152 | def f(a: Optional[Any]) -> None: ...
+    |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:151:10
+    |
 149 | def f(a: Any | int) -> None: ...
 150 | def f(a: int | Any) -> None: ...
 151 | def f(a: Union[str, bytes, Any]) -> None: ...
     |          ^^^^^^^^^^^^^^^^^^^^^^
 152 | def f(a: Optional[Any]) -> None: ...
 153 | def f(a: Annotated[Any, ...]) -> None: ...
+    |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:152:10
@@ -228,6 +254,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
     |          ^^^^^^^^^^^^^
 153 | def f(a: Annotated[Any, ...]) -> None: ...
 154 | def f(a: "Union[str, bytes, Any]") -> None: ...
+    |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:153:10
@@ -237,6 +264,7 @@ ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
 153 | def f(a: Annotated[Any, ...]) -> None: ...
     |          ^^^^^^^^^^^^^^^^^^^
 154 | def f(a: "Union[str, bytes, Any]") -> None: ...
+    |
 
 ANN401 Dynamically typed expressions (typing.Any) are disallowed in `a`
    --> annotation_presence.py:154:10
@@ -254,6 +282,7 @@ ANN204 [*] Missing return type annotation for special method `__init__`
 159 |     def __init__(self: "Foo", foo: int):
     |         ^^^^^^^^
 160 |        ...
+    |
 help: Add return type annotation: `None`
     |
 158 |     @decorator()
@@ -271,6 +300,7 @@ ANN204 [*] Missing return type annotation for special method `__init__`
 165 |     def __init__(self):
     |         ^^^^^^^^
 166 |         print(f"{self.attr=}")
+    |
 help: Add return type annotation: `None`
     |
 164 | class Class:

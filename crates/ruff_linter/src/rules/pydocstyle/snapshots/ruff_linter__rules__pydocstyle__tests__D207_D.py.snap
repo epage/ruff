@@ -10,15 +10,18 @@ D207 [*] Docstring is under-indented
     | ^
 233 |
 234 |     """
+    |
 help: Increase indentation
     |
 231 |
     - Description.
 232 +     Description.
 233 |
+    |
 
 D207 [*] Docstring is under-indented
    --> D.py:244:1
+    |
 242 |     Description.
 243 |
 244 | """
@@ -39,11 +42,14 @@ D207 [*] Docstring is under-indented
 440 |     Second Line
     | ^
 441 |     """
+    |
 help: Increase indentation
+    |
 439 |
     -     Second Line
 440 +                                     Second Line
 441 |     """
+    |
 
 D207 [*] Docstring is under-indented
    --> D.py:441:1

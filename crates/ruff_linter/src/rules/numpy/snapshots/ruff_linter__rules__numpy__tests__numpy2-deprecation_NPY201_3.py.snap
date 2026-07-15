@@ -10,6 +10,7 @@ NPY201 [*] `np.DTypePromotionError` will be removed in NumPy 2.0. Use `numpy.exc
   |     ^^^^^^^^^^^^^^^^^^^^^^
 5 |
 6 |     np.ModuleDeprecationWarning
+  |
 help: Replace with `numpy.exceptions.DTypePromotionError`
   |
 1 + from numpy.exceptions import DTypePromotionError
@@ -30,6 +31,7 @@ NPY201 [*] `np.ModuleDeprecationWarning` will be removed in NumPy 2.0. Use `nump
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 7 |
 8 |     np.RankWarning
+  |
 help: Replace with `numpy.exceptions.ModuleDeprecationWarning`
   |
 1 + from numpy.exceptions import ModuleDeprecationWarning
@@ -43,12 +45,14 @@ help: Replace with `numpy.exceptions.ModuleDeprecationWarning`
 
 NPY201 [*] `np.RankWarning` will be removed in NumPy 2.0. Use `numpy.exceptions.RankWarning` on NumPy 2.0, or ignore this warning on earlier versions.
   --> NPY201_3.py:8:5
+   |
  6 |     np.ModuleDeprecationWarning
  7 |
  8 |     np.RankWarning
    |     ^^^^^^^^^^^^^^
  9 |
 10 |     np.TooHardError
+   |
 help: Replace with `numpy.exceptions.RankWarning` (requires NumPy 2.0 or greater)
    |
 1  + from numpy.exceptions import RankWarning
@@ -70,6 +74,7 @@ NPY201 [*] `np.TooHardError` will be removed in NumPy 2.0. Use `numpy.exceptions
    |     ^^^^^^^^^^^^^^^
 11 |
 12 |     np.VisibleDeprecationWarning
+   |
 help: Replace with `numpy.exceptions.TooHardError`
    |
 1  + from numpy.exceptions import TooHardError
@@ -90,7 +95,9 @@ NPY201 [*] `np.VisibleDeprecationWarning` will be removed in NumPy 2.0. Use `num
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 13 |
 14 |     np.chararray
+   |
 help: Replace with `numpy.exceptions.VisibleDeprecationWarning`
+   |
 1  + from numpy.exceptions import VisibleDeprecationWarning
 2  | def func():
 --------------------------------------------------------------------------------
@@ -98,6 +105,7 @@ help: Replace with `numpy.exceptions.VisibleDeprecationWarning`
    -     np.VisibleDeprecationWarning
 13 +     VisibleDeprecationWarning
 14 |
+   |
 
 NPY201 [*] `np.chararray` will be removed in NumPy 2.0. Use `numpy.char.chararray` instead.
   --> NPY201_3.py:14:5
@@ -108,6 +116,7 @@ NPY201 [*] `np.chararray` will be removed in NumPy 2.0. Use `numpy.char.chararra
    |     ^^^^^^^^^^^^
 15 |
 16 |     np.format_parser
+   |
 help: Replace with `numpy.char.chararray`
    |
 1  + from numpy.char import chararray

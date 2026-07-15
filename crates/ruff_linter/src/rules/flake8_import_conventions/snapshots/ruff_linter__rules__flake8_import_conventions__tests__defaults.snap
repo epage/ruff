@@ -9,6 +9,7 @@ ICN001 [*] `altair` should be imported as `alt`
   |            ^^^^^^
 7 |     import matplotlib.pyplot
 8 |     import numpy
+  |
 help: Alias `altair` to `alt`
   |
 5 | def unconventional():
@@ -27,16 +28,19 @@ ICN001 `matplotlib.pyplot` should be imported as `plt`
   |            ^^^^^^^^^^^^^^^^^
 8 |     import numpy
 9 |     import pandas
+  |
 help: Alias `matplotlib.pyplot` to `plt`
 
 ICN001 [*] `numpy` should be imported as `np`
   --> defaults.py:8:12
+   |
  6 |     import altair
  7 |     import matplotlib.pyplot
  8 |     import numpy
    |            ^^^^^
  9 |     import pandas
 10 |     import seaborn
+   |
 help: Alias `numpy` to `np`
   |
 7 |     import matplotlib.pyplot
@@ -48,12 +52,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 ICN001 [*] `pandas` should be imported as `pd`
   --> defaults.py:9:12
+   |
  7 |     import matplotlib.pyplot
  8 |     import numpy
  9 |     import pandas
    |            ^^^^^^
 10 |     import seaborn
 11 |     import tkinter
+   |
 help: Alias `pandas` to `pd`
    |
 8  |     import numpy
@@ -72,11 +78,14 @@ ICN001 [*] `seaborn` should be imported as `sns`
    |            ^^^^^^^
 11 |     import tkinter
 12 |     import networkx
+   |
 help: Alias `seaborn` to `sns`
+   |
 9  |     import pandas
    -     import seaborn
 10 +     import seaborn as sns
 11 |     import tkinter
+   |
 note: This is an unsafe fix and may change runtime behavior
 
 ICN001 [*] `tkinter` should be imported as `tk`
@@ -87,6 +96,7 @@ ICN001 [*] `tkinter` should be imported as `tk`
 11 |     import tkinter
    |            ^^^^^^^
 12 |     import networkx
+   |
 help: Alias `tkinter` to `tk`
    |
 10 |     import seaborn
@@ -120,6 +130,7 @@ ICN001 [*] `altair` should be imported as `alt`
    |                      ^^^^
 17 |     import matplotlib.pyplot as plot
 18 |     import numpy as nmp
+   |
 help: Alias `altair` to `alt`
    |
 15 | def unconventional_aliases():
@@ -138,6 +149,7 @@ ICN001 [*] `matplotlib.pyplot` should be imported as `plt`
    |                                 ^^^^
 18 |     import numpy as nmp
 19 |     import pandas as pdas
+   |
 help: Alias `matplotlib.pyplot` to `plt`
    |
 16 |     import altair as altr
@@ -156,6 +168,7 @@ ICN001 [*] `numpy` should be imported as `np`
    |                     ^^^
 19 |     import pandas as pdas
 20 |     import seaborn as sbrn
+   |
 help: Alias `numpy` to `np`
    |
 17 |     import matplotlib.pyplot as plot
@@ -167,12 +180,14 @@ note: This is an unsafe fix and may change runtime behavior
 
 ICN001 [*] `pandas` should be imported as `pd`
   --> defaults.py:19:22
+   |
 17 |     import matplotlib.pyplot as plot
 18 |     import numpy as nmp
 19 |     import pandas as pdas
    |                      ^^^^
 20 |     import seaborn as sbrn
 21 |     import tkinter as tkr
+   |
 help: Alias `pandas` to `pd`
    |
 18 |     import numpy as nmp
@@ -191,6 +206,7 @@ ICN001 [*] `seaborn` should be imported as `sns`
    |                       ^^^^
 21 |     import tkinter as tkr
 22 |     import networkx as nxy
+   |
 help: Alias `seaborn` to `sns`
    |
 19 |     import pandas as pdas
@@ -208,6 +224,7 @@ ICN001 [*] `tkinter` should be imported as `tk`
 21 |     import tkinter as tkr
    |                       ^^^
 22 |     import networkx as nxy
+   |
 help: Alias `tkinter` to `tk`
    |
 20 |     import seaborn as sbrn

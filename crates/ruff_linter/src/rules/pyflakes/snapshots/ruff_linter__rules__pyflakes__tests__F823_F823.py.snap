@@ -16,6 +16,7 @@ F823 Local variable `my_var` referenced before assignment
 32 |         print(my_var)
    |               ^^^^^^
 33 |         my_var = 1
+   |
 
 F823 Local variable `my_var` referenced before assignment
   --> F823.py:40:15
@@ -24,6 +25,7 @@ F823 Local variable `my_var` referenced before assignment
 40 |         print(my_var)
    |               ^^^^^^
 41 |         my_var = 1
+   |
 
 F823 Local variable `sys` referenced before assignment
   --> F823.py:48:11
@@ -33,6 +35,7 @@ F823 Local variable `sys` referenced before assignment
    |           ^^^
 49 |
 50 |     try:
+   |
 
 F823 Local variable `sys` referenced before assignment
   --> F823.py:62:11
@@ -42,3 +45,4 @@ F823 Local variable `sys` referenced before assignment
    |           ^^^
 63 |
 64 |     for sys in range(5):
+   |

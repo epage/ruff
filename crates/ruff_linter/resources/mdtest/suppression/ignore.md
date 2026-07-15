@@ -448,6 +448,7 @@ import math
 ```snapshot
 error[RUF103]: Invalid suppression comment: no matching 'disable' comment
   --> src/mdtest_snippet.py:12:1
+   |
 12 | # ruff:enable[F401]
    | ^^^^^^^^^^^^^^^^^^^
 help: Remove suppression comment
@@ -486,6 +487,7 @@ import pathlib
 ```snapshot
 error[RUF102]: Invalid rule code in suppression: not-a-rule
  --> src/mdtest_snippet.py:2:30
+  |
 2 | # ruff:ignore[unused-import, not-a-rule]
   |                              ^^^^^^^^^^
 help: Add non-Ruff rule codes to the `lint.external` configuration option
@@ -518,6 +520,7 @@ math.cos(1)
 ```snapshot
 error[RUF100]: Unused suppression (unused: `unused-import`)
  --> src/mdtest_snippet.py:8:14
+  |
 8 | import math  # ruff:ignore[unused-import]
   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
@@ -541,9 +544,11 @@ import pathlib
 ```snapshot
 error[RUF100]: Unused suppression (unused: `unused-import`)
   --> src/mdtest_snippet.py:12:1
+   |
 12 | # ruff:ignore[F401, unused-import]
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
+   |
 11 | # snapshot: unused-noqa
    - # ruff:ignore[F401, unused-import]
 12 + # ruff:ignore[F401]
@@ -576,9 +581,11 @@ import sys  # explanation # ruff:ignore # another
 ```snapshot
 error[RUF103]: Invalid suppression comment: missing suppression codes like `[E501, ...]`
  --> src/mdtest_snippet.py:4:27
+  |
 4 | import sys  # explanation # ruff:ignore # another
   |                           ^^^^^^^^^^^^^^
 help: Remove suppression comment
+  |
 3 | # error: [unused-import]
   - import sys  # explanation # ruff:ignore # another
 4 + import sys  # explanation # another
@@ -624,9 +631,11 @@ import sys
 ```snapshot
 error[RUF103]: Invalid suppression comment: trailing comments are only supported for ruff:ignore suppressions
  --> src/mdtest_snippet.py:2:15
+  |
 2 | # explanation # ruff:disable[F401]
   |               ^^^^^^^^^^^^^^^^^^^^
 help: Remove suppression comment
+  |
 1 | # snapshot: invalid-suppression-comment
   - # explanation # ruff:disable[F401]
 2 + # explanation
@@ -700,9 +709,11 @@ undefined_name
 ```snapshot
 error[RUF100]: Unused suppression (unused: `E501`)
  --> src/mdtest_snippet.py:3:1
+  |
 3 | # ruff:ignore[E501] # ruff:file-ignore[F821]
   | ^^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
+  |
 2 | # error: [invalid-suppression-comment]
   - # ruff:ignore[E501] # ruff:file-ignore[F821]
 3 + # ruff:file-ignore[F821]
@@ -728,6 +739,7 @@ undefined_name
 ```snapshot
 error[RUF100]: Unused suppression (unused: `E501`)
   --> src/mdtest_snippet.py:8:1
+   |
  8 | # ruff:disable[E501] # ruff:ignore[F821]
    | ^^^^^^^^^^^^^^^^^^^^^
  9 | # error: [undefined-name]
@@ -735,6 +747,7 @@ error[RUF100]: Unused suppression (unused: `E501`)
 11 | # ruff:enable[E501]
    | -------------------
 help: Remove unused suppression
+   |
 7  | # error: [unused-noqa] "F821"
    - # ruff:disable[E501] # ruff:ignore[F821]
 8  + # ruff:ignore[F821]
@@ -765,6 +778,7 @@ value = 1
 ```snapshot
 error[RUF100]: Unused suppression (unused: `E501`)
  --> src/mdtest_snippet.py:2:1
+  |
 2 | # ruff:disable[E501]
   | ^^^^^^^^^^^^^^^^^^^^
 3 | value = 1
@@ -777,6 +791,7 @@ help: Remove unused suppression
 2 | value = 1
   - # ruff:enable[E501] # TODO # ruff:ignore[FIX002]
 3 + # TODO # ruff:ignore[FIX002]
+  |
 note: This is an unsafe fix and may change runtime behavior
 ```
 
@@ -801,6 +816,7 @@ undefined_name
 ```snapshot
 error[RUF100]: Unused suppression (unused: `E501`)
  --> src/mdtest_snippet.py:3:1
+  |
 3 | # ruff:ignore[E501, F821] # ruff:file-ignore[F401]
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
@@ -809,6 +825,7 @@ help: Remove unused suppression
   - # ruff:ignore[E501, F821] # ruff:file-ignore[F401]
 3 + # ruff:ignore[F821] # ruff:file-ignore[F401]
 4 | undefined_name
+  |
 ```
 
 ## `invalid-rule-code`
@@ -832,6 +849,7 @@ undefined_name
 ```snapshot
 error[RUF102]: Invalid rule code in suppression: XYZ
  --> src/mdtest_snippet.py:3:15
+  |
 3 | # ruff:ignore[XYZ] # ruff:file-ignore[F821]
   |               ^^^
 help: Add non-Ruff rule codes to the `lint.external` configuration option
@@ -841,6 +859,7 @@ help: Remove the suppression comment
   - # ruff:ignore[XYZ] # ruff:file-ignore[F821]
 3 + # ruff:file-ignore[F821]
 4 | # error: [undefined-name]
+  |
 note: This is an unsafe fix and may change runtime behavior
 ```
 
@@ -866,6 +885,7 @@ def f():
 ```snapshot
 error[RUF103]: Invalid suppression comment: trailing comments are only supported for ruff:ignore suppressions
  --> src/mdtest_snippet.py:4:19
+  |
 4 |     # explanation # ruff:file-ignore[F401] # ruff:ignore[F401]
   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove suppression comment
@@ -874,6 +894,7 @@ help: Remove suppression comment
   -     # explanation # ruff:file-ignore[F401] # ruff:ignore[F401]
 4 +     # explanation # ruff:ignore[F401]
 5 |     # error: [unused-import]
+  |
 note: This is an unsafe fix and may change runtime behavior
 ```
 
@@ -890,6 +911,7 @@ undefined_name
 ```snapshot
 error[RUF103]: Invalid suppression comment: missing suppression codes like `[E501, ...]`
  --> src/mdtest_snippet.py:9:15
+  |
 9 | # explanation # ruff:ignore # ruff:ignore[F821]
   |               ^^^^^^^^^^^^^^
 help: Remove suppression comment
@@ -922,6 +944,7 @@ import sys  # explanation # ruff:ignore[F401 F841] # another
 ```snapshot
 error[RUF103]: Invalid suppression comment: unknown ruff directive
  --> src/mdtest_snippet.py:2:26
+  |
 2 | import os  # explanation # ruff:unknown[F401] # another
   |                          ^^^^^^^^^^^^^^^^^^^^^
 help: Remove suppression comment
@@ -930,11 +953,13 @@ help: Remove suppression comment
   - import os  # explanation # ruff:unknown[F401] # another
 2 + import os  # explanation # another
 3 | # snapshot: invalid-suppression-comment
+  |
 note: This is an unsafe fix and may change runtime behavior
 
 
 error[RUF103]: Invalid suppression comment: missing comma between codes
  --> src/mdtest_snippet.py:4:27
+  |
 4 | import sys  # explanation # ruff:ignore[F401 F841] # another
   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^
 help: Remove suppression comment
@@ -942,6 +967,7 @@ help: Remove suppression comment
 3 | # snapshot: invalid-suppression-comment
   - import sys  # explanation # ruff:ignore[F401 F841] # another
 4 + import sys  # explanation # another
+  |
 note: This is an unsafe fix and may change runtime behavior
 ```
 
@@ -981,6 +1007,7 @@ value = 1  # before # ruff:ignore[F401]
 ```snapshot
 error[RUF100]: Unused suppression (non-enabled: `F401`)
  --> src/mdtest_snippet.py:2:21
+  |
 2 | value = 1  # before # ruff:ignore[F401] # after
   |                     ^^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
@@ -995,6 +1022,7 @@ note: This is an unsafe fix and may change runtime behavior
 
 error[RUF100]: Unused suppression (non-enabled: `F401`)
  --> src/mdtest_snippet.py:5:21
+  |
 5 | value = 1  # before # ruff:ignore[F401]
   |                     ^^^^^^^^^^^^^^^^^^^
 help: Remove unused suppression
@@ -1002,6 +1030,7 @@ help: Remove unused suppression
 4 | # snapshot: unused-noqa
   - value = 1  # before # ruff:ignore[F401]
 5 + value = 1  # before
+  |
 note: This is an unsafe fix and may change runtime behavior
 ```
 

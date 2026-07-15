@@ -8,6 +8,7 @@ D107 Missing docstring in `__init__`
 60 |     def __init__(self=None):
    |         ^^^^^^^^
 61 |         pass
+   |
 
 D107 Missing docstring in `__init__`
    --> D.py:534:9
@@ -17,3 +18,4 @@ D107 Missing docstring in `__init__`
 534 |     def __init__(self, x):
     |         ^^^^^^^^
 535 |         pass
+    |

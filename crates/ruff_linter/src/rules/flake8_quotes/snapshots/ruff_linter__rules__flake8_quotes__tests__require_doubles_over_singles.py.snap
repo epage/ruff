@@ -8,6 +8,7 @@ Q000 [*] Single quotes found but double quotes preferred
   |                         ^^^^^^^^^^^^^^^^^^^^^
 2 | this_should_be_linted = u'double quote string'
 3 | this_should_be_linted = f'double quote string'
+  |
 help: Replace single quotes with double quotes
   |
   - this_should_be_linted = 'single quote string'
@@ -23,6 +24,7 @@ Q000 [*] Single quotes found but double quotes preferred
   |                         ^^^^^^^^^^^^^^^^^^^^^^
 3 | this_should_be_linted = f'double quote string'
 4 | this_should_be_linted = f'double {"quote"} string'
+  |
 help: Replace single quotes with double quotes
   |
 1 | this_should_be_linted = 'single quote string'
@@ -39,6 +41,7 @@ Q000 [*] Single quotes found but double quotes preferred
 3 | this_should_be_linted = f'double quote string'
   |                         ^^^^^^^^^^^^^^^^^^^^^^
 4 | this_should_be_linted = f'double {"quote"} string'
+  |
 help: Replace single quotes with double quotes
   |
 2 | this_should_be_linted = u'double quote string'

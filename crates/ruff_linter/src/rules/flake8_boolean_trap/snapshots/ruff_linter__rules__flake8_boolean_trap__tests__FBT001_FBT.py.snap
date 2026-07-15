@@ -10,6 +10,7 @@ FBT001 Boolean-typed positional argument in function definition
   |     ^^^^^^^^^^^^^^^^
 5 |     posonly_boolstrhint: "bool",
 6 |     /,
+  |
 
 FBT001 Boolean-typed positional argument in function definition
  --> FBT.py:5:5
@@ -20,6 +21,7 @@ FBT001 Boolean-typed positional argument in function definition
   |     ^^^^^^^^^^^^^^^^^^^
 6 |     /,
 7 |     offset,
+  |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:10:5
@@ -30,6 +32,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
 11 |     posorkw_nonvalued_boolstrhint: "bool",
 12 |     posorkw_boolvalued_nohint=True,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:11:5
@@ -40,6 +43,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |     posorkw_boolvalued_nohint=True,
 13 |     posorkw_boolvalued_nonboolhint: int = True,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:14:5
@@ -50,6 +54,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 |     posorkw_boolvalued_boolstrhint: "bool" = True,
 16 |     posorkw_nonboolvalued_nohint=1,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:15:5
@@ -60,6 +65,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 16 |     posorkw_nonboolvalued_nohint=1,
 17 |     posorkw_nonboolvalued_nonboolhint: int = 2,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:18:5
@@ -70,6 +76,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 19 |     posorkw_nonboolvalued_boolstrhint: "bool" = 4,
 20 |     *,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:19:5
@@ -80,6 +87,7 @@ FBT001 Boolean-typed positional argument in function definition
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 20 |     *,
 21 |     kwonly_nonvalued_nohint,
+   |
 
 FBT001 Boolean-typed positional argument in function definition
   --> FBT.py:93:19
@@ -88,6 +96,7 @@ FBT001 Boolean-typed positional argument in function definition
 93 |     def foo(self, value: bool) -> None:
    |                   ^^^^^
 94 |         pass
+   |
 help: Consider adding `@typing.override` if changing the function signature would violate the Liskov Substitution Principle
 
 FBT001 Boolean-typed positional argument in function definition
@@ -96,6 +105,7 @@ FBT001 Boolean-typed positional argument in function definition
 103 | def func(x: Union[list, Optional[int | str | float | bool]]):
     |          ^
 104 |     pass
+    |
 
 FBT001 Boolean-typed positional argument in function definition
    --> FBT.py:107:10
@@ -103,3 +113,4 @@ FBT001 Boolean-typed positional argument in function definition
 107 | def func(x: bool | str):
     |          ^
 108 |     pass
+    |

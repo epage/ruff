@@ -10,6 +10,7 @@ TD007 Missing space after colon in TODO
   |   ^^^^
 6 | # TODO (evanrittenhouse):this doesn't either
 7 | # TODO:neither does this
+  |
 
 TD007 Missing space after colon in TODO
  --> TD007.py:6:3
@@ -20,6 +21,7 @@ TD007 Missing space after colon in TODO
   |   ^^^^
 7 | # TODO:neither does this
 8 | # FIXME:and lastly neither does this
+  |
 
 TD007 Missing space after colon in TODO
  --> TD007.py:7:3
@@ -34,17 +36,21 @@ TD007 Missing space after colon in TODO
 
 TD007 Missing space after colon in TODO
   --> TD007.py:8:3
+   |
  6 | # TODO (evanrittenhouse):this doesn't either
  7 | # TODO:neither does this
  8 | # FIXME:and lastly neither does this
    |   ^^^^^
  9 | # foo # TODO:this is really the last one
 10 | # TODO this colon doesn't terminate the tag, so don't check it. https://www.google.com
+   |
 
 TD007 Missing space after colon in TODO
   --> TD007.py:9:9
+   |
  7 | # TODO:neither does this
  8 | # FIXME:and lastly neither does this
  9 | # foo # TODO:this is really the last one
    |         ^^^^
 10 | # TODO this colon doesn't terminate the tag, so don't check it. https://www.google.com
+   |

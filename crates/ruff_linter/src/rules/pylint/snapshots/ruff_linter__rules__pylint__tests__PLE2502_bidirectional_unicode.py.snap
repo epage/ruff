@@ -9,6 +9,7 @@ PLE2502 Contains control characters that can permit obfuscated code
   | ^^^^^^^^^^^^^^
 3 |
 4 | # E2502
+  |
 
 PLE2502 Contains control characters that can permit obfuscated code
  --> bidirectional_unicode.py:5:1
@@ -18,14 +19,17 @@ PLE2502 Contains control characters that can permit obfuscated code
   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | # E2502
+  |
 
 PLE2502 Contains control characters that can permit obfuscated code
   --> bidirectional_unicode.py:8:1
+   |
  7 | # E2502
  8 | another = "x؜" * 50  #    "؜x" is assigned
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  9 |
 10 | # E2502
+   |
 
 PLE2502 Contains control characters that can permit obfuscated code
   --> bidirectional_unicode.py:11:1
@@ -34,6 +38,7 @@ PLE2502 Contains control characters that can permit obfuscated code
 11 | if access_level != "none��":  # Check if admin ��' and access_level != 'user
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 12 |     print("You are an admin.")
+   |
 
 PLE2502 Contains control characters that can permit obfuscated code
   --> bidirectional_unicode.py:17:1
@@ -44,3 +49,4 @@ PLE2502 Contains control characters that can permit obfuscated code
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 18 |     return
 19 |     bank[account] -= amount
+   |

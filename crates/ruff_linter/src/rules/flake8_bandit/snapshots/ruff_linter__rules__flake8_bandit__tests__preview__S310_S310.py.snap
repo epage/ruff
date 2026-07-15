@@ -19,6 +19,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 52 | url = "https://example.com/api"
 53 | urllib.request.Request(url)
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -30,6 +31,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 54 |
 55 | # Test resolved f-strings and concatenated string literals
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -40,6 +42,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
 57 | urllib.request.urlopen(fstring_url)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 58 | urllib.request.Request(fstring_url)
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -51,14 +54,17 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 59 |
 60 | concatenated_url = "https://" + "example.com/data.csv"
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
   --> S310.py:61:1
+   |
 60 | concatenated_url = "https://" + "example.com/data.csv"
 61 | urllib.request.urlopen(concatenated_url)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 62 | urllib.request.Request(concatenated_url)
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -70,6 +76,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 63 |
 64 | nested_concatenated = "http://" + "example.com" + "/data.csv"
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -79,6 +86,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
 65 | urllib.request.urlopen(nested_concatenated)
    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 | urllib.request.Request(nested_concatenated)
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -99,6 +107,7 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
 46 | map(urllib.request.urlopen, [])
    |     ^^^^^^^^^^^^^^^^^^^^^^
 47 | foo = urllib.request.urlopen
+   |
 
 
 S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom schemes is often unexpected.
@@ -110,3 +119,4 @@ S310 Audit URL open for permitted schemes. Allowing use of `file:` or custom sch
    |       ^^^^^^^^^^^^^^^^^^^^^^
 48 |
 49 | # https://github.com/astral-sh/ruff/issues/21462
+   |

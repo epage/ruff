@@ -7,6 +7,7 @@ UP044 [*] Use `*` for unpacking
 6 | class C(Generic[Unpack[Shape]]):
   |                 ^^^^^^^^^^^^^
 7 |     pass
+  |
 help: Convert to `*` for unpacking
   |
 5 |
@@ -22,6 +23,7 @@ UP044 [*] Use `*` for unpacking
 10 | class D(Generic[Unpack[Shape]]):
    |                 ^^^^^^^^^^^^^
 11 |     pass
+   |
 help: Convert to `*` for unpacking
    |
 9  |
@@ -37,6 +39,7 @@ UP044 [*] Use `*` for unpacking
 14 | def f(*args: Unpack[tuple[int, ...]]):
    |              ^^^^^^^^^^^^^^^^^^^^^^^
 15 |     pass
+   |
 help: Convert to `*` for unpacking
    |
 13 |
@@ -52,6 +55,7 @@ UP044 [*] Use `*` for unpacking
 18 | def f(*args: Unpack[other.Type]):
    |              ^^^^^^^^^^^^^^^^^^
 19 |     pass
+   |
 help: Convert to `*` for unpacking
    |
 17 |
@@ -67,6 +71,7 @@ UP044 [*] Use `*` for unpacking
 22 | def f(*args: Generic[int, Unpack[int]]):
    |                           ^^^^^^^^^^^
 23 |     pass
+   |
 help: Convert to `*` for unpacking
    |
 21 |

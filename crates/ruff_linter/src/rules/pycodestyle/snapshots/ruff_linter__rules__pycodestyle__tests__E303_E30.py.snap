@@ -8,6 +8,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^
 618 |         return 22
 619 | # end
+    |
 help: Remove extraneous blank line(s)
     |
 615 |
@@ -22,6 +23,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^^^^^^^^^^^^^^^^^
 645 |
 646 |     def inner():  # E306 not expected (pycodestyle detects E306)
+    |
 help: Remove extraneous blank line(s)
     |
 642 |
@@ -36,6 +38,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^^^^^^^^^^^^^^^^^
 657 |     def inner():  # E306 not expected (pycodestyle detects E306)
 658 |         pass
+    |
 help: Remove extraneous blank line(s)
     |
 654 |
@@ -49,6 +52,7 @@ E303 [*] Too many blank lines (3)
 667 | print()
     | ^^^^^
 668 | # end
+    |
 help: Remove extraneous blank line(s)
     |
 665 |
@@ -63,7 +67,9 @@ E303 [*] Too many blank lines (3)
     | ^^^^^^^^^
 677 |
 678 | print()
+    |
 help: Remove extraneous blank line(s)
+    |
 674 |
     -
 675 | # comment
@@ -88,6 +94,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^^^^^^^^^^^^^^^
 691 |
 692 |     print()
+    |
 help: Remove extraneous blank line(s)
     |
 688 |
@@ -103,6 +110,7 @@ E303 [*] Too many blank lines (3)
 703 | | """
     | |___^
 704 |   # end
+    |
 help: Remove extraneous blank line(s)
     |
 699 |
@@ -117,10 +125,13 @@ E303 [*] Too many blank lines (2)
     |     ^^^
 714 |         pass
 715 | # end
+    |
 help: Remove extraneous blank line(s)
+    |
 711 |
     -
 712 |     def b(self):
+    |
 
 E303 [*] Too many blank lines (2)
    --> E30.py:723:5
@@ -128,6 +139,7 @@ E303 [*] Too many blank lines (2)
 723 |     a = 2
     |     ^
 724 | # end
+    |
 help: Remove extraneous blank line(s)
     |
 721 |
@@ -154,6 +166,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^^^^^^^^^^^^^^^
 735 |
 736 |     def test(self): pass
+    |
 help: Remove extraneous blank line(s)
     |
 732 |
@@ -168,6 +181,7 @@ E303 [*] Too many blank lines (2)
     |     ^^^
 749 |         pass
 750 | # end
+    |
 help: Remove extraneous blank line(s)
     |
 746 |
@@ -181,6 +195,7 @@ E303 [*] Too many blank lines (2)
 758 |     pass
     |     ^^^^
 759 | # end
+    |
 help: Remove extraneous blank line(s)
     |
 756 |

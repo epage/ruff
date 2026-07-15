@@ -9,6 +9,7 @@ PLE0237 Attribute `surname` is not defined in class's `__slots__`
 6 |         self.surname = surname  # [assigning-non-slot]
   |         ^^^^^^^^^^^^
 7 |         self.setup()
+  |
 
 PLE0237 Attribute `middle_name` is not defined in class's `__slots__`
   --> non_slot_assignment.py:18:9
@@ -18,6 +19,7 @@ PLE0237 Attribute `middle_name` is not defined in class's `__slots__`
 18 |         self.middle_name = middle_name  # [assigning-non-slot]
    |         ^^^^^^^^^^^^^^^^
 19 |         self.setup()
+   |
 
 PLE0237 Attribute `middle_name` is not defined in class's `__slots__`
   --> non_slot_assignment.py:42:9
@@ -27,3 +29,4 @@ PLE0237 Attribute `middle_name` is not defined in class's `__slots__`
 42 |         self.middle_name = middle_name  # [assigning-non-slot]
    |         ^^^^^^^^^^^^^^^^
 43 |         self.setup()
+   |

@@ -10,6 +10,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 15 | ) -> str:
 16 |     return param
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -32,6 +33,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 23 | ) -> str:
 24 |     return auth
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -54,6 +56,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 31 | ) -> dict:
 32 |     return data
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -76,6 +79,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 39 | ) -> str:
 40 |     return session
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -98,6 +102,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^
 47 | ) -> str:
 48 |     return id
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -120,6 +125,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 55 | ) -> str:
 56 |     return param
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -142,6 +148,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 66 | ) -> str:
 67 |     return param
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -164,6 +171,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 74 | ) -> str:
 75 |     return param or "empty"
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -186,6 +194,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 82 |     # Second param should not be fixed because of the preceding default
 83 |     required_param: str = Query(..., description="Required"),
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query
@@ -208,6 +217,7 @@ FAST002 FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 84 |     # Third param should be fixed with default preserved
 85 |     another_optional_param: int = Query(42, description="Another optional"),
+   |
 help: Replace with `typing_extensions.Annotated`
 info: Automatic fix is unavailable because a required parameter would follow an optional parameter. Consider reordering arguments to enable the fix.
 
@@ -220,6 +230,7 @@ FAST002 [*] FastAPI dependency without `Annotated`
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 86 | ) -> str:
 87 |     return f"{required_param}-{optional_param}-{another_optional_param}"
+   |
 help: Replace with `typing_extensions.Annotated`
    |
 3  | from fastapi import Body, Cookie, FastAPI, Header, Query

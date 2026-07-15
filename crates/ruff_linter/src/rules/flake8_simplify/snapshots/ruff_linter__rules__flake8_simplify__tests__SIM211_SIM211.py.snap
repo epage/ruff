@@ -8,6 +8,7 @@ SIM211 [*] Use `not ...` instead of `False if ... else True`
   |     ^^^^^^^^^^^^^^^^^^^^
 2 |
 3 | a = False if b != c else True  # SIM211
+  |
 help: Replace with `not ...`
   |
   - a = False if b else True  # SIM211
@@ -25,6 +26,7 @@ SIM211 [*] Use `not ...` instead of `False if ... else True`
   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
 4 |
 5 | a = False if b + c else True  # SIM211
+  |
 help: Replace with `not ...`
   |
 2 |
@@ -43,6 +45,7 @@ SIM211 [*] Use `not ...` instead of `False if ... else True`
   |     ^^^^^^^^^^^^^^^^^^^^^^^^
 6 |
 7 | a = True if b else False  # OK
+  |
 help: Replace with `not ...`
   |
 4 |

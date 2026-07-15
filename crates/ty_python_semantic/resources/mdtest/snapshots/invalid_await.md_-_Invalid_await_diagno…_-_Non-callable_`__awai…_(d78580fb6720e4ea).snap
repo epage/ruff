@@ -62,6 +62,7 @@ error[invalid-await]: `DeepInheritedNonCallableAwait` is not awaitable
    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
   ::: src/mdtest_snippet.py:7:5
+   |
  7 |     __await__ = 42
    |     --------- attribute defined here
 info: `__await__` is not callable
@@ -71,6 +72,7 @@ info: `__await__` is not callable
 ```
 error[invalid-await]: `A | B` is not awaitable
   --> src/mdtest_snippet.py:23:11
+   |
 23 |     await x  # error: [invalid-await]
    |           ^
 info: `__await__` is not callable

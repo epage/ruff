@@ -10,6 +10,7 @@ AIR312 [*] `airflow.hooks.filesystem.FSHook` is deprecated and moved into `stand
    | ^^^^^^
 14 | PackageIndexHook()
 15 | SubprocessHook()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `FSHook` from `airflow.providers.standard.hooks.filesystem` instead.
    |
 2  |
@@ -29,6 +30,7 @@ AIR312 [*] `airflow.hooks.package_index.PackageIndexHook` is deprecated and move
 14 | PackageIndexHook()
    | ^^^^^^^^^^^^^^^^
 15 | SubprocessHook()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PackageIndexHook` from `airflow.providers.standard.hooks.package_index` instead.
    |
 3  | from airflow.hooks.filesystem import FSHook
@@ -50,6 +52,7 @@ AIR312 [*] `airflow.hooks.subprocess.SubprocessHook` is deprecated and moved int
    | ^^^^^^^^^^^^^^
 16 |
 17 | BashOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `SubprocessHook` from `airflow.providers.standard.hooks.subprocess` instead.
    |
 4  | from airflow.hooks.package_index import PackageIndexHook
@@ -71,6 +74,7 @@ AIR312 [*] `airflow.operators.bash.BashOperator` is deprecated and moved into `s
    | ^^^^^^^^^^^^
 18 | BranchDateTimeOperator()
 19 | TriggerDagRunOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BashOperator` from `airflow.providers.standard.operators.bash` instead.
    |
 5  | from airflow.hooks.subprocess import SubprocessHook
@@ -91,6 +95,7 @@ AIR312 [*] `airflow.operators.datetime.BranchDateTimeOperator` is deprecated and
    | ^^^^^^^^^^^^^^^^^^^^^^
 19 | TriggerDagRunOperator()
 20 | EmptyOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BranchDateTimeOperator` from `airflow.providers.standard.operators.datetime` instead.
    |
 6  | from airflow.operators.bash import BashOperator
@@ -112,6 +117,7 @@ AIR312 [*] `airflow.operators.trigger_dagrun.TriggerDagRunOperator` is deprecate
 19 | TriggerDagRunOperator()
    | ^^^^^^^^^^^^^^^^^^^^^
 20 | EmptyOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.2` and use `TriggerDagRunOperator` from `airflow.providers.standard.operators.trigger_dagrun` instead.
    |
 9  | from airflow.operators.latest_only import LatestOnlyOperator
@@ -131,6 +137,7 @@ AIR312 [*] `airflow.operators.empty.EmptyOperator` is deprecated and moved into 
    | ^^^^^^^^^^^^^
 21 |
 22 | LatestOnlyOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.2` and use `EmptyOperator` from `airflow.providers.standard.operators.empty` instead.
    |
 7  | from airflow.operators.datetime import BranchDateTimeOperator
@@ -151,6 +158,7 @@ AIR312 [*] `airflow.operators.latest_only.LatestOnlyOperator` is deprecated and 
 22 | LatestOnlyOperator()
    | ^^^^^^^^^^^^^^^^^^
 23 | BranchDayOfWeekOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `LatestOnlyOperator` from `airflow.providers.standard.operators.latest_only` instead.
    |
 8  | from airflow.operators.empty import EmptyOperator
@@ -170,6 +178,7 @@ AIR312 [*] `airflow.operators.weekday.BranchDayOfWeekOperator` is deprecated and
    | ^^^^^^^^^^^^^^^^^^^^^^^
 24 |
 25 | from airflow.operators.python import (
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BranchDayOfWeekOperator` from `airflow.providers.standard.operators.weekday` instead.
    |
 10 | from airflow.operators.trigger_dagrun import TriggerDagRunOperator
@@ -188,6 +197,7 @@ AIR312 [*] `airflow.operators.python.BranchPythonOperator` is deprecated and mov
    | ^^^^^^^^^^^^^^^^^^^^
 35 | PythonOperator()
 36 | PythonVirtualenvOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BranchPythonOperator` from `airflow.providers.standard.operators.python` instead.
    |
 25 | from airflow.operators.python import (
@@ -208,6 +218,7 @@ AIR312 [*] `airflow.operators.python.PythonOperator` is deprecated and moved int
    | ^^^^^^^^^^^^^^
 36 | PythonVirtualenvOperator()
 37 | ShortCircuitOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PythonOperator` from `airflow.providers.standard.operators.python` instead.
    |
 26 |     BranchPythonOperator,
@@ -228,6 +239,7 @@ AIR312 [*] `airflow.operators.python.PythonVirtualenvOperator` is deprecated and
 36 | PythonVirtualenvOperator()
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 37 | ShortCircuitOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PythonVirtualenvOperator` from `airflow.providers.standard.operators.python` instead.
    |
 27 |     PythonOperator,
@@ -250,6 +262,7 @@ AIR312 [*] `airflow.operators.python.ShortCircuitOperator` is deprecated and mov
    | ^^^^^^^^^^^^^^^^^^^^
 38 |
 39 | BashSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `ShortCircuitOperator` from `airflow.providers.standard.operators.python` instead.
    |
 28 |     PythonVirtualenvOperator,
@@ -271,6 +284,7 @@ AIR312 [*] `airflow.sensors.bash.BashSensor` is deprecated and moved into `stand
    | ^^^^^^^^^^
 40 | DateTimeSensor()
 41 | from airflow.sensors.date_time import DateTimeSensorAsync
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BashSensor` from `airflow.providers.standard.sensor.bash` instead.
    |
 30 | )
@@ -289,6 +303,7 @@ AIR312 [*] `airflow.sensors.date_time.DateTimeSensor` is deprecated and moved in
    | ^^^^^^^^^^^^^^
 41 | from airflow.sensors.date_time import DateTimeSensorAsync
 42 | from airflow.sensors.external_task import (
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `DateTimeSensor` from `airflow.providers.standard.sensors.date_time` instead.
    |
 31 | from airflow.sensors.bash import BashSensor
@@ -307,6 +322,7 @@ AIR312 [*] `airflow.operators.python.BranchPythonOperator` is deprecated and mov
    | ^^^^^^^^^^^^^^^^^^^^
 50 | PythonOperator()
 51 | PythonVirtualenvOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `BranchPythonOperator` from `airflow.providers.standard.operators.python` instead.
    |
 25 | from airflow.operators.python import (
@@ -327,6 +343,7 @@ AIR312 [*] `airflow.operators.python.PythonOperator` is deprecated and moved int
    | ^^^^^^^^^^^^^^
 51 | PythonVirtualenvOperator()
 52 | ShortCircuitOperator()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PythonOperator` from `airflow.providers.standard.operators.python` instead.
    |
 26 |     BranchPythonOperator,
@@ -348,6 +365,7 @@ AIR312 [*] `airflow.operators.python.PythonVirtualenvOperator` is deprecated and
    | ^^^^^^^^^^^^^^^^^^^^^^^^
 52 | ShortCircuitOperator()
 53 | DateTimeSensorAsync()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PythonVirtualenvOperator` from `airflow.providers.standard.operators.python` instead.
    |
 27 |     PythonOperator,
@@ -369,6 +387,7 @@ AIR312 [*] `airflow.operators.python.ShortCircuitOperator` is deprecated and mov
    | ^^^^^^^^^^^^^^^^^^^^
 53 | DateTimeSensorAsync()
 54 | ExternalTaskMarker()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `ShortCircuitOperator` from `airflow.providers.standard.operators.python` instead.
    |
 28 |     PythonVirtualenvOperator,
@@ -390,6 +409,7 @@ AIR312 [*] `airflow.sensors.date_time.DateTimeSensorAsync` is deprecated and mov
    | ^^^^^^^^^^^^^^^^^^^
 54 | ExternalTaskMarker()
 55 | ExternalTaskSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `DateTimeSensorAsync` from `airflow.providers.standard.sensors.date_time` instead.
    |
 40 | DateTimeSensor()
@@ -411,6 +431,7 @@ AIR312 [*] `airflow.sensors.external_task.ExternalTaskMarker` is deprecated and 
    | ^^^^^^^^^^^^^^^^^^
 55 | ExternalTaskSensor()
 56 | FileSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `ExternalTaskMarker` from `airflow.providers.standard.sensors.external_task` instead.
    |
 42 | from airflow.sensors.external_task import (
@@ -433,6 +454,7 @@ AIR312 [*] `airflow.sensors.external_task.ExternalTaskSensor` is deprecated and 
    | ^^^^^^^^^^^^^^^^^^
 56 | FileSensor()
 57 | PythonSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `ExternalTaskSensor` from `airflow.providers.standard.sensors.external_task` instead.
    |
 43 |     ExternalTaskMarker,
@@ -453,6 +475,7 @@ AIR312 [*] `airflow.sensors.filesystem.FileSensor` is deprecated and moved into 
 56 | FileSensor()
    | ^^^^^^^^^^
 57 | PythonSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.2` and use `FileSensor` from `airflow.providers.standard.sensors.filesystem` instead.
    |
 45 | )
@@ -472,6 +495,7 @@ AIR312 [*] `airflow.sensors.python.PythonSensor` is deprecated and moved into `s
    | ^^^^^^^^^^^^
 58 |
 59 | from airflow.sensors.time_sensor import (
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `PythonSensor` from `airflow.providers.standard.sensors.python` instead.
    |
 46 | from airflow.sensors.filesystem import FileSensor
@@ -489,6 +513,7 @@ AIR312 [*] `airflow.sensors.time_sensor.TimeSensor` is deprecated and moved into
 64 | TimeSensor()
    | ^^^^^^^^^^
 65 | TimeSensorAsync()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `TimeSensor` from `airflow.providers.standard.sensors.time` instead.
    |
 59 | from airflow.sensors.time_sensor import (
@@ -508,6 +533,7 @@ AIR312 [*] `airflow.sensors.time_sensor.TimeSensorAsync` is deprecated and moved
    | ^^^^^^^^^^^^^^^
 66 |
 67 | from airflow.sensors.time_delta import (
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `TimeSensorAsync` from `airflow.providers.standard.sensors.time` instead.
    |
 60 |     TimeSensor,
@@ -527,7 +553,9 @@ AIR312 [*] `airflow.sensors.time_delta.TimeDeltaSensor` is deprecated and moved 
    | ^^^^^^^^^^^^^^^
 83 | TimeDeltaSensorAsync()
 84 | DayOfWeekSensor()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `TimeDeltaSensor` from `airflow.providers.standard.sensors.time_delta` instead.
+   |
 67 | from airflow.sensors.time_delta import (
    -     TimeDeltaSensor,
 68 |     TimeDeltaSensorAsync,
@@ -546,6 +574,7 @@ AIR312 [*] `airflow.sensors.time_delta.TimeDeltaSensorAsync` is deprecated and m
    | ^^^^^^^^^^^^^^^^^^^^
 84 | DayOfWeekSensor()
 85 | DagStateTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `TimeDeltaSensorAsync` from `airflow.providers.standard.sensors.time_delta` instead.
    |
 68 |     TimeDeltaSensor,
@@ -567,6 +596,7 @@ AIR312 [*] `airflow.sensors.weekday.DayOfWeekSensor` is deprecated and moved int
    | ^^^^^^^^^^^^^^^
 85 | DagStateTrigger()
 86 | WorkflowTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.1` and use `DayOfWeekSensor` from `airflow.providers.standard.sensors.weekday` instead.
    |
 70 | )
@@ -588,6 +618,7 @@ AIR312 [*] `airflow.triggers.external_task.DagStateTrigger` is deprecated and mo
    | ^^^^^^^^^^^^^^^
 86 | WorkflowTrigger()
 87 | FileTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `DagStateTrigger` from `airflow.providers.standard.triggers.external_task` instead.
    |
 72 | from airflow.triggers.external_task import (
@@ -609,6 +640,7 @@ AIR312 [*] `airflow.triggers.external_task.WorkflowTrigger` is deprecated and mo
    | ^^^^^^^^^^^^^^^
 87 | FileTrigger()
 88 | DateTimeTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `WorkflowTrigger` from `airflow.providers.standard.triggers.external_task` instead.
    |
 73 |     DagStateTrigger,
@@ -630,6 +662,7 @@ AIR312 [*] `airflow.triggers.file.FileTrigger` is deprecated and moved into `sta
    | ^^^^^^^^^^^
 88 | DateTimeTrigger()
 89 | TimeDeltaTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `FileTrigger` from `airflow.providers.standard.triggers.file` instead.
    |
 75 | )
@@ -651,6 +684,7 @@ AIR312 [*] `airflow.triggers.temporal.DateTimeTrigger` is deprecated and moved i
 88 | DateTimeTrigger()
    | ^^^^^^^^^^^^^^^
 89 | TimeDeltaTrigger()
+   |
 help: Install `apache-airflow-providers-standard>=0.0.3` and use `DateTimeTrigger` from `airflow.providers.standard.triggers.temporal` instead.
    |
 77 | from airflow.triggers.temporal import (

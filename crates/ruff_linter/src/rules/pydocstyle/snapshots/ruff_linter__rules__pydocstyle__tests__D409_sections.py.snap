@@ -8,6 +8,7 @@ D409 [*] Section underline should match the length of its name ("Returns")
 111 |     --
     |     ^^
 112 |     A value of some sort.
+    |
 help: Adjust underline length to match "Returns"
     |
 110 |     Returns
@@ -24,6 +25,7 @@ D409 [*] Section underline should match the length of its name ("Returns")
     |     ^^^^^^
 226 |     Many many wonderful things.
 227 |     Raises:
+    |
 help: Adjust underline length to match "Returns"
     |
 224 |     Returns
@@ -40,6 +42,7 @@ D409 [*] Section underline should match the length of its name ("Other Parameter
     |     ^^^^^^^^^^
 590 |     other_parameters:
 591 |         A dictionary of string attributes
+    |
 help: Adjust underline length to match "Other Parameters"
     |
 588 |     Other Parameters

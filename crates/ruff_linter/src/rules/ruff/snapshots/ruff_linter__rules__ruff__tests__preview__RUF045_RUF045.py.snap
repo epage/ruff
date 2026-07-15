@@ -3,21 +3,25 @@ source: crates/ruff_linter/src/rules/ruff/mod.rs
 ---
 RUF045 Assignment without annotation found in dataclass body
   --> RUF045.py:8:5
+   |
  6 | class C:
  7 |     # Errors
  8 |     no_annotation = r"foo"
    |     ^^^^^^^^^^^^^
  9 |     missing = MISSING
 10 |     field = field()
+   |
 help: Use `ClassVar[...]`
 
 RUF045 Assignment without annotation found in dataclass body
   --> RUF045.py:9:5
+   |
  7 |     # Errors
  8 |     no_annotation = r"foo"
  9 |     missing = MISSING
    |     ^^^^^^^
 10 |     field = field()
+   |
 help: Use `ClassVar[...]`
 
 RUF045 Assignment without annotation found in dataclass body
@@ -29,4 +33,5 @@ RUF045 Assignment without annotation found in dataclass body
    |     ^^^^^
 11 |
 12 |     # No errors
+   |
 help: Use `ClassVar[...]`

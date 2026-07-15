@@ -10,6 +10,7 @@ B026 Star-arg unpacking after a keyword argument is strongly discouraged
    |                ^^^^^^^^^^^^^^^
 17 | foo(bam="bam", *bar_baz)
 18 | foo(baz="baz", bam="bam", *["bar"])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:17:16
@@ -20,6 +21,7 @@ B026 Star-arg unpacking after a keyword argument is strongly discouraged
    |                ^^^^^^^^
 18 | foo(baz="baz", bam="bam", *["bar"])
 19 | foo(bar="bar", baz="baz", bam="bam", *[])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:18:27
@@ -30,6 +32,7 @@ B026 Star-arg unpacking after a keyword argument is strongly discouraged
    |                           ^^^^^^^^
 19 | foo(bar="bar", baz="baz", bam="bam", *[])
 20 | foo(bam="bam", *["bar"], *["baz"])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:19:38
@@ -40,14 +43,17 @@ B026 Star-arg unpacking after a keyword argument is strongly discouraged
    |                                      ^^^
 20 | foo(bam="bam", *["bar"], *["baz"])
 21 | foo(*["bar"], bam="bam", *["baz"])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:20:16
+   |
 18 | foo(baz="baz", bam="bam", *["bar"])
 19 | foo(bar="bar", baz="baz", bam="bam", *[])
 20 | foo(bam="bam", *["bar"], *["baz"])
    |                ^^^^^^^^
 21 | foo(*["bar"], bam="bam", *["baz"])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:20:26
@@ -57,6 +63,7 @@ B026 Star-arg unpacking after a keyword argument is strongly discouraged
 20 | foo(bam="bam", *["bar"], *["baz"])
    |                          ^^^^^^^^
 21 | foo(*["bar"], bam="bam", *["baz"])
+   |
 
 B026 Star-arg unpacking after a keyword argument is strongly discouraged
   --> B026.py:21:26

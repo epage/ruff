@@ -10,6 +10,7 @@ D214 [*] Section is over-indented ("Returns")
   |     ^^^^^^^
 4 | -----
 5 |     valid returns
+  |
 help: Remove over-indentation from "Returns"
   |
 2 |
@@ -27,6 +28,7 @@ D214 [*] Section is over-indented ("Args")
   |     ^^^^
 8 | -----
 9 |     valid args
+  |
 help: Remove over-indentation from "Args"
   |
 6 |
